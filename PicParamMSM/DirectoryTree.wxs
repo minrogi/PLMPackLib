@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?include $(sys.CURRENTDIR)\Config.wxi?>
+  <!--Directories-->
+	<Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="MergeRedirectFolder">
+        <Directory Id="REPORTTEMPLATES" Name="ReportTemplates" />
+        <Directory Id="SAMPLES" Name="Samples" />
+        <Directory Id="Bin32" Name="Bin32">
+          <Directory Id="Log" Name="Log"/>
+        </Directory>
+        <Directory Id="Data" Name="Data">
+          <Directory Id="Database" Name="Database"/>
+          <Directory Id="Documents" Name="Documents"/>
+          <Directory Id="Thumbnails" Name="Thumbnails"/>
+        </Directory>
+      </Directory>
+      <Directory Id="ProgramMenuFolder" Name="Programs" ShortName="PMenu">
+        <Directory Id="ProgramMenuDir" Name="treeDiM" ShortName="treeDiM" />
+      </Directory>
+      <Directory Id="DesktopFolder"/>
+    </Directory>
+	</Fragment>
+</Wix>

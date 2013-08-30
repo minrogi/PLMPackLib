@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+	<data name="pbCut.TabIndex" type="System.Int32, mscorlib">
+		<value>5</value>
+	</data>
+	<assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+	<data name="lblValueFormat.Size" type="System.Drawing.Size, System.Drawing">
+		<value>53, 13</value>
+	</data>
+	<data name="tabControlData.TabIndex" type="System.Int32, mscorlib">
+		<value>19</value>
+	</data>
+	<data name="&gt;&gt;groupBoxSepator.Name" xml:space="preserve">
+    <value>groupBoxSepator</value>
+  </data>
+	<data name="&gt;&gt;groupBoxSepator.Parent" xml:space="preserve">
+    <value>tabLength</value>
+  </data>
+	<data name="lblValueLength.Size" type="System.Drawing.Size, System.Drawing">
+		<value>39, 13</value>
+	</data>
+	<data name="lblValueLengthCut.Size" type="System.Drawing.Size, System.Drawing">
+		<value>39, 13</value>
+	</data>
+	<assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+	<data name="groupBoxSepator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+		<value>Top, Left, Right</value>
+	</data>
+	<data name="&gt;&gt;lblValueLengthTotal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="lblAreaValue.Location" type="System.Drawing.Point, System.Drawing">
+		<value>103, 7</value>
+	</data>
+	<data name="&gt;&gt;lblValueWidth.Parent" xml:space="preserve">
+    <value>tabBoundingBox</value>
+  </data>
+	<data name="&gt;&gt;lblValueFormat.Name" xml:space="preserve">
+    <value>lblValueFormat</value>
+  </data>
+	<data name="lblValueLength.Location" type="System.Drawing.Point, System.Drawing">
+		<value>110, 8</value>
+	</data>
+	<data name="lblNameArea.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="&gt;&gt;lblAreaValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;lblValueLengthCut.Name" xml:space="preserve">
+    <value>lblValueLengthCut</value>
+  </data>
+	<data name="&gt;&gt;lblNameTotal.Name" xml:space="preserve">
+    <value>lblNameTotal</value>
+  </data>
+	<data name="&gt;&gt;lblNameLength.Parent" xml:space="preserve">
+    <value>tabBoundingBox</value>
+  </data>
+	<data name="&gt;&gt;lblValueLength.Parent" xml:space="preserve">
+    <value>tabBoundingBox</value>
+  </data>
+	<data name="lblNameEfficiency.Size" type="System.Drawing.Size, System.Drawing">
+		<value>53, 13</value>
+	</data>
+	<data name="&gt;&gt;lblNameEfficiency.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="lblValueWidth.Text" xml:space="preserve">
+    <value>: 0.0 m</value>
+  </data>
+	<data name="lblNameWidth.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="&gt;&gt;lblValueFormat.Parent" xml:space="preserve">
+    <value>tabArea</value>
+  </data>
+	<data name="lblNameTotal.TabIndex" type="System.Int32, mscorlib">
+		<value>9</value>
+	</data>
+	<data name="lblValueLengthFold.TabIndex" type="System.Int32, mscorlib">
+		<value>3</value>
+	</data>
+	<data name="&gt;&gt;pbFold.Name" xml:space="preserve">
+    <value>pbFold</value>
+  </data>
+	<data name="lblValueEfficiency.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="&gt;&gt;lblValueFormat.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="lblNameLength.Size" type="System.Drawing.Size, System.Drawing">
+		<value>40, 13</value>
+	</data>
+	<data name="&gt;&gt;lblValueLengthCut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;lblNameTotal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;groupBoxSepator.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+	<data name="tabControlData.Location" type="System.Drawing.Point, System.Drawing">
+		<value>0, 0</value>
+	</data>
+	<data name="&gt;&gt;lblValueLengthTotal.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+	<data name="lblNameArea.Text" xml:space="preserve">
+    <value>Area</value>
+  </data>
+	<data name="&gt;&gt;pbFold.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="lblNameLength.TabIndex" type="System.Int32, mscorlib">
+		<value>13</value>
+	</data>
+	<data name="&gt;&gt;lblValueWidth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="tabControlData.Size" type="System.Drawing.Size, System.Drawing">
+		<value>214, 146</value>
+	</data>
+	<data name="tabLength.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+		<value>3, 3, 3, 3</value>
+	</data>
+	<data name="&gt;&gt;lblValueLengthFold.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+	<data name="tabArea.Size" type="System.Drawing.Size, System.Drawing">
+		<value>206, 120</value>
+	</data>
+	<data name="tabLength.Location" type="System.Drawing.Point, System.Drawing">
+		<value>4, 22</value>
+	</data>
+	<data name="&gt;&gt;lblNameFormat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="lblAreaValue.Size" type="System.Drawing.Size, System.Drawing">
+		<value>42, 13</value>
+	</data>
+	<data name="tabBoundingBox.Location" type="System.Drawing.Point, System.Drawing">
+		<value>4, 22</value>
+	</data>
+	<data name="lblValueLengthCut.TabIndex" type="System.Int32, mscorlib">
+		<value>1</value>
+	</data>
+	<data name="&gt;&gt;lblValueLengthFold.Name" xml:space="preserve">
+    <value>lblValueLengthFold</value>
+  </data>
+	<data name="lblValueEfficiency.Location" type="System.Drawing.Point, System.Drawing">
+		<value>103, 44</value>
+	</data>
+	<data name="tabArea.TabIndex" type="System.Int32, mscorlib">
+		<value>2</value>
+	</data>
+	<data name="lblNameEfficiency.Text" xml:space="preserve">
+    <value>Efficiency</value>
+  </data>
+	<data name="&gt;&gt;lblValueEfficiency.Parent" xml:space="preserve">
+    <value>tabArea</value>
+  </data>
+	<data name="&gt;&gt;lblNameTotal.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="lblValueLength.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="&gt;&gt;tabControlData.Name" xml:space="preserve">
+    <value>tabControlData</value>
+  </data>
+	<data name="&gt;&gt;lblNameWidth.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+	<data name="&gt;&gt;lblValueWidth.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="pbFold.Location" type="System.Drawing.Point, System.Drawing">
+		<value>6, 26</value>
+	</data>
+	<data name="pbFold.Size" type="System.Drawing.Size, System.Drawing">
+		<value>91, 13</value>
+	</data>
+	<data name="&gt;&gt;lblNameFormat.Name" xml:space="preserve">
+    <value>lblNameFormat</value>
+  </data>
+	<data name="lblValueLengthTotal.Text" xml:space="preserve">
+    <value>: 0.0 m</value>
+  </data>
+	<data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+		<value>6, 13</value>
+	</data>
+	<data name="&gt;&gt;lblValueLengthTotal.Parent" xml:space="preserve">
+    <value>tabLength</value>
+  </data>
+	<data name="&gt;&gt;lblAreaValue.Name" xml:space="preserve">
+    <value>lblAreaValue</value>
+  </data>
+	<data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FactoryDataCtrl</value>
+  </data>
+	<data name="&gt;&gt;pbCut.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="&gt;&gt;tabBoundingBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="lblValueEfficiency.TabIndex" type="System.Int32, mscorlib">
+		<value>14</value>
+	</data>
+	<data name="&gt;&gt;lblNameLength.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="&gt;&gt;lblNameLength.Name" xml:space="preserve">
+    <value>lblNameLength</value>
+  </data>
+	<data name="lblValueFormat.Location" type="System.Drawing.Point, System.Drawing">
+		<value>103, 25</value>
+	</data>
+	<data name="&gt;&gt;lblNameWidth.Name" xml:space="preserve">
+    <value>lblNameWidth</value>
+  </data>
+	<data name="lblValueLengthFold.Location" type="System.Drawing.Point, System.Drawing">
+		<value>103, 26</value>
+	</data>
+	<data name="&gt;&gt;lblValueWidth.Name" xml:space="preserve">
+    <value>lblValueWidth</value>
+  </data>
+	<data name="&gt;&gt;tabControlData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="lblValueLength.Text" xml:space="preserve">
+    <value>: 0.0 m</value>
+  </data>
+	<data name="lblAreaValue.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="tabArea.Text" xml:space="preserve">
+    <value>Area</value>
+  </data>
+	<data name="&gt;&gt;tabLength.Name" xml:space="preserve">
+    <value>tabLength</value>
+  </data>
+	<data name="lblAreaValue.TabIndex" type="System.Int32, mscorlib">
+		<value>8</value>
+	</data>
+	<data name="&gt;&gt;lblNameEfficiency.Name" xml:space="preserve">
+    <value>lblNameEfficiency</value>
+  </data>
+	<data name="lblValueFormat.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="&gt;&gt;lblValueEfficiency.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;tabArea.Name" xml:space="preserve">
+    <value>tabArea</value>
+  </data>
+	<data name="tabArea.Location" type="System.Drawing.Point, System.Drawing">
+		<value>4, 22</value>
+	</data>
+	<data name="&gt;&gt;lblNameFormat.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+	<data name="lblValueWidth.Location" type="System.Drawing.Point, System.Drawing">
+		<value>110, 25</value>
+	</data>
+	<data name="lblValueLengthFold.Text" xml:space="preserve">
+    <value>: 0.0 m</value>
+  </data>
+	<data name="lblNameWidth.Size" type="System.Drawing.Size, System.Drawing">
+		<value>35, 13</value>
+	</data>
+	<data name="lblNameFormat.Size" type="System.Drawing.Size, System.Drawing">
+		<value>39, 13</value>
+	</data>
+	<data name="lblNameFormat.Location" type="System.Drawing.Point, System.Drawing">
+		<value>7, 25</value>
+	</data>
+	<data name="lblValueLengthCut.Location" type="System.Drawing.Point, System.Drawing">
+		<value>103, 7</value>
+	</data>
+	<data name="&gt;&gt;pbCut.Name" xml:space="preserve">
+    <value>pbCut</value>
+  </data>
+	<data name="lblValueLengthCut.Text" xml:space="preserve">
+    <value>: 0.0 m</value>
+  </data>
+	<data name="lblValueWidth.TabIndex" type="System.Int32, mscorlib">
+		<value>16</value>
+	</data>
+	<data name="&gt;&gt;lblNameFormat.Parent" xml:space="preserve">
+    <value>tabArea</value>
+  </data>
+	<data name="&gt;&gt;lblValueLengthTotal.Name" xml:space="preserve">
+    <value>lblValueLengthTotal</value>
+  </data>
+	<data name="&gt;&gt;lblValueEfficiency.Name" xml:space="preserve">
+    <value>lblValueEfficiency</value>
+  </data>
+	<data name="lblNameLength.Text" xml:space="preserve">
+    <value>Length</value>
+  </data>
+	<data name="tabLength.Size" type="System.Drawing.Size, System.Drawing">
+		<value>206, 120</value>
+	</data>
+	<data name="&gt;&gt;tabLength.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;lblValueLength.Name" xml:space="preserve">
+    <value>lblValueLength</value>
+  </data>
+	<data name="&gt;&gt;lblAreaValue.Parent" xml:space="preserve">
+    <value>tabArea</value>
+  </data>
+	<data name="groupBoxSepator.Size" type="System.Drawing.Size, System.Drawing">
+		<value>190, 4</value>
+	</data>
+	<data name="tabControlData.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+		<value>Fill</value>
+	</data>
+	<data name="&gt;&gt;pbCut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="lblValueFormat.TabIndex" type="System.Int32, mscorlib">
+		<value>12</value>
+	</data>
+	<data name="&gt;&gt;lblNameArea.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+	<data name="tabLength.Text" xml:space="preserve">
+    <value>Lengths</value>
+  </data>
+	<data name="&gt;&gt;tabControlData.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="&gt;&gt;tabArea.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;lblAreaValue.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+	<data name="lblValueEfficiency.Text" xml:space="preserve">
+    <value>: 0.0%</value>
+  </data>
+	<data name="tabLength.TabIndex" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="&gt;&gt;lblNameArea.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;pbFold.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="pbCut.Size" type="System.Drawing.Size, System.Drawing">
+		<value>91, 13</value>
+	</data>
+	<data name="&gt;&gt;lblNameTotal.Parent" xml:space="preserve">
+    <value>tabLength</value>
+  </data>
+	<data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+		<value>214, 146</value>
+	</data>
+	<data name="&gt;&gt;lblValueLengthFold.Parent" xml:space="preserve">
+    <value>tabLength</value>
+  </data>
+	<data name="tabBoundingBox.Size" type="System.Drawing.Size, System.Drawing">
+		<value>206, 120</value>
+	</data>
+	<data name="lblValueFormat.Text" xml:space="preserve">
+    <value>: 0.0 * 0.0</value>
+  </data>
+	<data name="lblNameFormat.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="groupBoxSepator.TabIndex" type="System.Int32, mscorlib">
+		<value>11</value>
+	</data>
+	<data name="tabArea.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+		<value>3, 3, 3, 3</value>
+	</data>
+	<data name="lblNameEfficiency.TabIndex" type="System.Int32, mscorlib">
+		<value>13</value>
+	</data>
+	<data name="lblValueLengthTotal.TabIndex" type="System.Int32, mscorlib">
+		<value>4</value>
+	</data>
+	<data name="&gt;&gt;tabBoundingBox.Parent" xml:space="preserve">
+    <value>tabControlData</value>
+  </data>
+	<data name="lblNameWidth.Text" xml:space="preserve">
+    <value>Width</value>
+  </data>
+	<data name="&gt;&gt;lblValueLengthCut.Parent" xml:space="preserve">
+    <value>tabLength</value>
+  </data>
+	<data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="lblValueLengthTotal.Location" type="System.Drawing.Point, System.Drawing">
+		<value>103, 57</value>
+	</data>
+	<data name="tabBoundingBox.Text" xml:space="preserve">
+    <value>Bounding box</value>
+  </data>
+	<data name="lblNameArea.TabIndex" type="System.Int32, mscorlib">
+		<value>10</value>
+	</data>
+	<data name="lblValueLengthFold.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="&gt;&gt;lblValueEfficiency.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="lblNameFormat.Text" xml:space="preserve">
+    <value>Format</value>
+  </data>
+	<data name="lblAreaValue.Text" xml:space="preserve">
+    <value>: 0.0 m²</value>
+  </data>
+	<data name="lblValueLength.TabIndex" type="System.Int32, mscorlib">
+		<value>15</value>
+	</data>
+	<data name="lblValueLengthTotal.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="&gt;&gt;lblValueLength.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="&gt;&gt;lblNameLength.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="lblNameArea.Location" type="System.Drawing.Point, System.Drawing">
+		<value>7, 7</value>
+	</data>
+	<data name="tabBoundingBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+		<value>3, 3, 3, 3</value>
+	</data>
+	<data name="&gt;&gt;lblNameEfficiency.Parent" xml:space="preserve">
+    <value>tabArea</value>
+  </data>
+	<data name="lblNameWidth.TabIndex" type="System.Int32, mscorlib">
+		<value>14</value>
+	</data>
+	<data name="&gt;&gt;lblNameWidth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="lblNameTotal.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="groupBoxSepator.Location" type="System.Drawing.Point, System.Drawing">
+		<value>6, 45</value>
+	</data>
+	<data name="lblNameWidth.Location" type="System.Drawing.Point, System.Drawing">
+		<value>10, 27</value>
+	</data>
+	<data name="lblNameEfficiency.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="lblNameEfficiency.Location" type="System.Drawing.Point, System.Drawing">
+		<value>7, 44</value>
+	</data>
+	<data name="&gt;&gt;groupBoxSepator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;lblNameEfficiency.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="lblValueLengthTotal.Size" type="System.Drawing.Size, System.Drawing">
+		<value>39, 13</value>
+	</data>
+	<data name="lblNameLength.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="&gt;&gt;lblValueLengthCut.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+	<data name="lblNameTotal.Location" type="System.Drawing.Point, System.Drawing">
+		<value>6, 57</value>
+	</data>
+	<data name="&gt;&gt;lblValueLength.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="lblNameArea.Size" type="System.Drawing.Size, System.Drawing">
+		<value>29, 13</value>
+	</data>
+	<data name="lblValueWidth.Size" type="System.Drawing.Size, System.Drawing">
+		<value>39, 13</value>
+	</data>
+	<data name="&gt;&gt;tabBoundingBox.Name" xml:space="preserve">
+    <value>tabBoundingBox</value>
+  </data>
+	<data name="pbCut.Location" type="System.Drawing.Point, System.Drawing">
+		<value>6, 7</value>
+	</data>
+	<data name="lblNameTotal.Text" xml:space="preserve">
+    <value>Total</value>
+  </data>
+	<data name="&gt;&gt;tabBoundingBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="lblValueLengthFold.Size" type="System.Drawing.Size, System.Drawing">
+		<value>39, 13</value>
+	</data>
+	<data name="lblValueEfficiency.Size" type="System.Drawing.Size, System.Drawing">
+		<value>36, 13</value>
+	</data>
+	<data name="&gt;&gt;tabControlData.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+	<data name="lblNameFormat.TabIndex" type="System.Int32, mscorlib">
+		<value>11</value>
+	</data>
+	<data name="&gt;&gt;lblNameArea.Name" xml:space="preserve">
+    <value>lblNameArea</value>
+  </data>
+	<data name="tabBoundingBox.TabIndex" type="System.Int32, mscorlib">
+		<value>1</value>
+	</data>
+	<data name="&gt;&gt;pbCut.Parent" xml:space="preserve">
+    <value>tabLength</value>
+  </data>
+	<data name="&gt;&gt;tabLength.Parent" xml:space="preserve">
+    <value>tabControlData</value>
+  </data>
+	<data name="&gt;&gt;tabLength.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="lblNameTotal.Size" type="System.Drawing.Size, System.Drawing">
+		<value>31, 13</value>
+	</data>
+	<data name="&gt;&gt;lblValueLengthFold.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;pbFold.Parent" xml:space="preserve">
+    <value>tabLength</value>
+  </data>
+	<data name="&gt;&gt;tabArea.Parent" xml:space="preserve">
+    <value>tabControlData</value>
+  </data>
+	<data name="lblValueLengthCut.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="pbFold.TabIndex" type="System.Int32, mscorlib">
+		<value>6</value>
+	</data>
+	<data name="&gt;&gt;lblNameArea.Parent" xml:space="preserve">
+    <value>tabArea</value>
+  </data>
+	<data name="pbCut.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+		<value>NoControl</value>
+	</data>
+	<data name="lblValueWidth.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="&gt;&gt;lblNameWidth.Parent" xml:space="preserve">
+    <value>tabBoundingBox</value>
+  </data>
+	<data name="&gt;&gt;tabArea.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="lblNameLength.Location" type="System.Drawing.Point, System.Drawing">
+		<value>10, 9</value>
+	</data>
+	<data name="&gt;&gt;lblValueFormat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+		<value>True</value>
+	</metadata>
+	<metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+		<value>fr-FR</value>
+	</metadata>
+</root>

@@ -1,0 +1,717 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D1EA66EA-9A50-46A5-985E-2DAC49F01A1B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PicParam</RootNamespace>
+    <AssemblyName>PLMPackLib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <ApplicationIcon>plmpacklib.ICO</ApplicationIcon>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DbLinq">
+      <HintPath>..\ThirdPartyComponents\DbLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdPartyComponents\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Sharp3D.Math, Version=6.0.12.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Sharp3D.Math\Sharp3D.Math\Main\Sharp3D.Math\bin\Release\Sharp3D.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite, Version=1.0.84.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdPartyComponents\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TreeDim.StackBuilder.GUIExtension">
+      <HintPath>..\..\StackBuilder\TreeDim.StackBuilder.GUIExtension\bin\Release\TreeDim.StackBuilder.GUIExtension.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBoxForm.Designer.cs">
+      <DependentUpon>AboutBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationAvailabilityChecker.cs" />
+    <Compile Include="CardboardFormatLoaderImpl.cs" />
+    <Compile Include="FormEditDatabasePath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditDatabasePath.Designer.cs">
+      <DependentUpon>FormEditDatabasePath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWorkerThreadTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWorkerThreadTask.Designer.cs">
+      <DependentUpon>FormWorkerThreadTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListBoxLibraries.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComponentLoaderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentLoaderControl.Designer.cs">
+      <DependentUpon>ComponentLoaderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentSearchMethod.cs" />
+    <Compile Include="OptionPanelComputing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OptionPanelComputing.Designer.cs">
+      <DependentUpon>OptionPanelComputing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionPanelDatabase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OptionPanelDatabase.Designer.cs">
+      <DependentUpon>OptionPanelDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBrowseFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBrowseFile.Designer.cs">
+      <DependentUpon>FormBrowseFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditDefaultParamValues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditDefaultParamValues.Designer.cs">
+      <DependentUpon>FormEditDefaultParamValues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditMajorations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditMajorations.Designer.cs">
+      <DependentUpon>FormEditMajorations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditMaterials.Designer.cs">
+      <DependentUpon>FormEditMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditProfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditProfiles.Designer.cs">
+      <DependentUpon>FormEditProfiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExportFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExportFile.Designer.cs">
+      <DependentUpon>FormExportFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateCardboardFormat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateCardboardFormat.Designer.cs">
+      <DependentUpon>FormCreateCardboardFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateBranch.Designer.cs">
+      <DependentUpon>FormCreateBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateCardboardProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateCardboardProfile.Designer.cs">
+      <DependentUpon>FormCreateCardboardProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateDocument.Designer.cs">
+      <DependentUpon>FormCreateDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditCardboardFormats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditCardboardFormats.Designer.cs">
+      <DependentUpon>FormEditCardboardFormats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPluginEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPluginEditor.Designer.cs">
+      <DependentUpon>FormPluginEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRenameNode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRenameNode.Designer.cs">
+      <DependentUpon>FormRenameNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DocumentTreeView.Designer.cs">
+      <DependentUpon>DocumentTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentTreeBranchView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DocumentTreeBranchView.Designer.cs">
+      <DependentUpon>DocumentTreeBranchView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionPanelThumbnail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OptionPanelThumbnail.Designer.cs">
+      <DependentUpon>OptionPanelThumbnail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionPanelWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OptionPanelWindow.Designer.cs">
+      <DependentUpon>OptionPanelWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsFormPLMPackLib.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionsFormPLMPackLib.Designer.cs">
+      <DependentUpon>OptionsFormPLMPackLib.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileLoaderImpl.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBoxForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentLoaderControl.fr-FR.resx">
+      <DependentUpon>ComponentLoaderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentLoaderControl.ja-JP.resx">
+      <DependentUpon>ComponentLoaderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentTreeBranchView.ja-JP.resx">
+      <DependentUpon>DocumentTreeBranchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditDatabasePath.fr-FR.resx">
+      <DependentUpon>FormEditDatabasePath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditDatabasePath.resx">
+      <DependentUpon>FormEditDatabasePath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditDefaultParamValues.fr-FR.resx">
+      <DependentUpon>FormEditDefaultParamValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditDefaultParamValues.ja-JP.resx">
+      <DependentUpon>FormEditDefaultParamValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditMajorations.fr-FR.resx">
+      <DependentUpon>FormEditMajorations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditMajorations.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormEditMajorations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditMaterials.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormEditMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditProfiles.fr.resx">
+      <DependentUpon>FormEditProfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditProfiles.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormEditProfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportFile.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormExportFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateBranch.resx">
+      <DependentUpon>FormCreateBranch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateCardboardProfile.resx">
+      <DependentUpon>FormCreateCardboardProfile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateDocument.resx">
+      <DependentUpon>FormCreateDocument.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWorkerThreadTask.resx">
+      <DependentUpon>FormWorkerThreadTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentTreeView.resx">
+      <DependentUpon>DocumentTreeView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentTreeBranchView.resx">
+      <DependentUpon>DocumentTreeBranchView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelComputing.fr-FR.resx">
+      <DependentUpon>OptionPanelComputing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelComputing.ja-JP.resx">
+      <DependentUpon>OptionPanelComputing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelComputing.resx">
+      <DependentUpon>OptionPanelComputing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelDatabase.fr-FR.resx">
+      <DependentUpon>OptionPanelDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelDatabase.ja-JP.resx">
+      <DependentUpon>OptionPanelDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelThumbnail.fr.resx">
+      <DependentUpon>OptionPanelThumbnail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelThumbnail.resx">
+      <DependentUpon>OptionPanelThumbnail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelWindow.fr.resx">
+      <DependentUpon>OptionPanelWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelWindow.resx">
+      <DependentUpon>OptionPanelWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsFormPLMPackLib.fr-FR.resx">
+      <DependentUpon>OptionsFormPLMPackLib.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="StartPageControl.fr-FR.resx">
+      <DependentUpon>StartPageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartPageControl.resx">
+      <DependentUpon>StartPageControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.fr-FR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.fr-FR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartPageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StartPageControl.Designer.cs">
+      <DependentUpon>StartPageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DesLib4NET\DesLib4NET.csproj">
+      <Project>{7CDEDAAE-8156-4835-9837-55C7CDC67070}</Project>
+      <Name>DesLib4NET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dxflib4NET\Dxflib4NET.csproj">
+      <Project>{248A3C5D-E69F-4416-B55A-B3F798BE367B}</Project>
+      <Name>Dxflib4NET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OptionsLib\OptionsLib.csproj">
+      <Project>{5035348F-344F-4822-823E-6CB4D79D80D7}</Project>
+      <Name>OptionsLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.DAL.LibrairyLoader\Pic.DAL.LibraryLoader.csproj">
+      <Project>{91058110-CAB9-4C53-AD27-536407982F17}</Project>
+      <Name>Pic.DAL.LibraryLoader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.DAL\Pic.DAL.Sqlite.csproj">
+      <Project>{692F0E45-DE1A-448F-A347-75007E199AD5}</Project>
+      <Name>Pic.DAL.Sqlite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.Factory2D.Control\Pic.Factory2D.Control.csproj">
+      <Project>{B885460B-F114-4B34-8963-9B1CBACB5D8B}</Project>
+      <Name>Pic.Factory2D.Control</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.Factory2D\Pic.Factory2D.csproj">
+      <Project>{18305BA6-E8D3-4E21-8C28-1B1A4AB42CAC}</Project>
+      <Name>Pic.Factory2D</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.Plugin.GeneratorCtrl1\Pic.Plugin.GeneratorCtrl.csproj">
+      <Project>{48F945EB-35D7-4052-8DA1-16A62A725FBC}</Project>
+      <Name>Pic.Plugin.GeneratorCtrl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.Plugin.Host\Pic.Plugin.Host.csproj">
+      <Project>{120B7826-6403-41BF-AEF9-61FE400CF0F9}</Project>
+      <Name>Pic.Plugin.Host</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.Plugin.PluginInterface\Pic.Plugin.PluginInterface.csproj">
+      <Project>{F7AF3588-4E47-464A-8729-3FDBC471D00C}</Project>
+      <Name>Pic.Plugin.PluginInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.Plugin.Tools\Pic.Plugin.Tools.csproj">
+      <Project>{3B400C41-D6B3-4683-8450-85AED44FAA52}</Project>
+      <Name>Pic.Plugin.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.Plugin.ViewCtrl\Pic.Plugin.ViewCtrl.csproj">
+      <Project>{14D171D4-D040-446D-9F24-B8D48E63B4BA}</Project>
+      <Name>Pic.Plugin.ViewCtrl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TreeDim.UserControls\TreeDim.UserControls.csproj">
+      <Project>{D75634E3-34AA-4418-A6B6-3647BFF90606}</Project>
+      <Name>TreeDim.UserControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PicParamAbout.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButtonCotation.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButtonExport.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButtonCotation_Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButtonReflectionX_Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButtonReflectionY_Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButtonExport_Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PICPARAM.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ComponentLoaderControl.resx">
+      <DependentUpon>ComponentLoaderControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateCardboardFormat.resx">
+      <DependentUpon>FormCreateCardboardFormat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditCardboardFormats.resx">
+      <DependentUpon>FormEditCardboardFormats.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\BMP.BMP" />
+    <EmbeddedResource Include="Resources\CLSDFOLD.BMP" />
+    <EmbeddedResource Include="Resources\DEFAULTTHUMBNAIL.BMP" />
+    <EmbeddedResource Include="Resources\DOC.BMP" />
+    <EmbeddedResource Include="Resources\OPENFOLD.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutBoxForm.fr-FR.resx">
+      <DependentUpon>AboutBoxForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutBoxForm.ja-JP.resx">
+      <DependentUpon>AboutBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBrowseFile.resx">
+      <DependentUpon>FormBrowseFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateBranch.fr-FR.resx">
+      <DependentUpon>FormCreateBranch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateBranch.ja-JP.resx">
+      <DependentUpon>FormCreateBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateCardboardFormat.fr-FR.resx">
+      <DependentUpon>FormCreateCardboardFormat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateCardboardFormat.ja-JP.resx">
+      <DependentUpon>FormCreateCardboardFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateCardboardProfile.fr-FR.resx">
+      <DependentUpon>FormCreateCardboardProfile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateCardboardProfile.ja-JP.resx">
+      <DependentUpon>FormCreateCardboardProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateDocument.fr-FR.resx">
+      <DependentUpon>FormCreateDocument.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateDocument.ja-JP.resx">
+      <DependentUpon>FormCreateDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditDefaultParamValues.resx">
+      <DependentUpon>FormEditDefaultParamValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditCardboardFormats.fr-FR.resx">
+      <DependentUpon>FormEditCardboardFormats.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditCardboardFormats.ja-JP.resx">
+      <DependentUpon>FormEditCardboardFormats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditMajorations.ja-JP.resx">
+      <DependentUpon>FormEditMajorations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditMaterials.fr-FR.resx">
+      <DependentUpon>FormEditMaterials.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditMaterials.ja-JP.resx">
+      <DependentUpon>FormEditMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditProfiles.fr-FR.resx">
+      <DependentUpon>FormEditProfiles.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditProfiles.ja-JP.resx">
+      <DependentUpon>FormEditProfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportFile.fr-FR.resx">
+      <DependentUpon>FormExportFile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportFile.ja-JP.resx">
+      <DependentUpon>FormExportFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPluginEditor.fr-FR.resx">
+      <DependentUpon>FormPluginEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPluginEditor.ja-JP.resx">
+      <DependentUpon>FormPluginEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPluginEditor.resx">
+      <DependentUpon>FormPluginEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRenameNode.fr-FR.resx">
+      <DependentUpon>FormRenameNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRenameNode.ja-JP.resx">
+      <DependentUpon>FormRenameNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRenameNode.resx">
+      <DependentUpon>FormRenameNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.fr-FR.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.ja-JP.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelDatabase.resx">
+      <DependentUpon>OptionPanelDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsFormPLMPackLib.resx">
+      <DependentUpon>OptionsFormPLMPackLib.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.fr-FR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.fr-FR.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PDF.BMP" />
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButtonLayout.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="plmpacklib.ICO" />
+    <None Include="Resources\StartPage.png" />
+    <None Include="app.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\toolStripButtonEditParameters.Image.png" />
+    <None Include="Resources\cotationShortLinesToolStripMenuItem.png" />
+    <None Include="Resources\cotationsToolStripMenuItem.Image.png" />
+    <None Include="Resources\dxf_icon.bmp" />
+    <None Include="Resources\COMPONENT.bmp" />
+    <None Include="Resources\toolStripEditComponentCode.Image.png" />
+    <None Include="Resources\PICGEOM_16x16.bmp" />
+    <None Include="Resources\PICGEOM.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Acrobat">
+      <Guid>{E64169B3-3592-47D2-816E-602C5C13F328}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="FileViewLib">
+      <Guid>{BE79C475-D632-4A57-91B3-DA044FA27CDA}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

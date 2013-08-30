@@ -1,0 +1,51 @@
+        public ParameterStack Parameters
+        {
+            get
+            {
+                ParameterStack stack = new ParameterStack();
+                stack.AddDoubleParameter("a0", "Start angle", 0.0, 0.0);
+                stack.AddDoubleParameter("a1", "End angle", 90.0, 0.0);
+                stack.AddBoolParameter("bbox", "Show bounding box", false);
+                return stack;
+            }
+        }
+
+        public void CreateFactoryEntities(PicFactory factory, ParameterStack stack)
+        {
+            if (factory != null)
+            {
+                // free variables
+                double a0 = stack.GetDoubleParameterValue("a0");
+                double a1 = stack.GetDoubleParameterValue("a1");
+                bool bbox = stack.GetBoolParameterValue("bbox");
+
+                if (bbox)
+                {
+                    factory.AddSegment(PicGraphics.LT.LT_CUT, 0, 0
+                        , 100.0		// x0
+                        , -100.0	// y0
+                        , 100.0		// x1
+                        , 100.0		// y1
+                        );
+                    factory.AddSegment(PicGraphics.LT.LT_CUT, 0, 0
+                        , 100.0		// x0
+                        , 100.0		// y0
+                        , -100.0	// x1
+                        , 100.0		// y1
+                        );
+                    factory.AddSegment(PicGraphics.LT.LT_CUT, 0, 0
+                        , -100.0	// x0
+                        , 100.0		// y0
+                        , -100.0	// x1
+                        , -100.0	// y1
+                        );
+                    factory.AddSegment(PicGraphics.LT.LT_CUT, 0, 0
+                        , -100.0	// x0
+                        , -100.0	// y0
+                        , 100.0		// x1
+                        , -100.0	// y1
+                        );
+                }
+                factory.AddNewArc(PicGraphics.LT.LT_CUT, new Vector2D(0.0, 0.0), 100.0, a0, a1);
+            }
+        }

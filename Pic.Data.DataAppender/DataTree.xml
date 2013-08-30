@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Branch Name="Parametric components" Description="Parametric components">
+  <Branch Name="Test" Description="Test components">
+    <Leaf Name="Test arc" Description ="Component used to test arc with various start and end angles" FileName="Arc.dll" />
+    <Leaf Name="Simple rectangle" Description="A simple rectangle with rounded corners" FileName="SimpleRectangle.dll"/>
+  </Branch>
+  <Branch Name="Fefco" Description="Fefco basic type groups">
+    <Branch Name="Commercial rolls and sheets" Description="Commercial rolls and sheets" BmpFileName=""></Branch>
+    <Branch Name="Slotted-type boxes" Description="Slotted type boxes consits of basically one piece with a glued, stitched or taped manufacturers joint and top and bottom flaps." BmpFileName=""></Branch>
+    <Branch Name="Telescope-type boxes" Description="Telescope-type boxes consist of more than one piece and are characterised by a lid and/or bottom telescoping over the body of the box." BmpFileName=""></Branch>
+    <Branch Name="Folder-type boxes and trays" Description="Folder-type boxes and trays usually consist of only one piece of board." BmpFileName=""></Branch>
+    <Branch Name="Slide type boxes" Description="Slide-type boxes consist of several pieces of liners and sleeves sliding in different directions into each other." BmpFileName=""></Branch>
+    <Branch Name="Rigid type boxes" Description="Rigid type boxes consist of two separate end piece and a body and require stitching or a similar operation before they can be used." BmpFileName=""></Branch>
+    <Branch Name="Ready-glued cases" Description="Ready glued cases consist of basically one piece, are shipped flat and ready to use by simple setting up." BmpFileName=""></Branch>
+    <Branch Name="Interior fitments" Description="Interior fitments such as inside liners, pads, partitions, dividers etc., whether tied to case design or as singular items." BmpFileName=""></Branch>
+  </Branch>
+  <Branch Name="Paper bags" Description="Paper bags"> 
+  </Branch>
+</Branch>

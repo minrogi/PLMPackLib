@@ -1,0 +1,5 @@
+DEL /s /q ".\PicParamData\Documents"
+DEL /s /q ".\PicParamData\Database"
+mkdir ".\PicParamData\Documents"
+mkdir ".\PicParamData\Database"
+copy /Y PicParamCopy.db ".\PicParamData\Database\PicParam.db"

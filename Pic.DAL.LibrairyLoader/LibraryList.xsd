@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LibraryList"
+    targetNamespace="http://www.treedim.com/LibraryList.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://www.treedim.com/LibraryList.xsd"
+    xmlns:mstns="http://www.treedim.com/LibraryList.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <!-- BEGIN PLMPackLib libraries Schema -->
+  <xs:annotation>
+    <xs:documentation>
+      PLMPackLib libraries Schema
+      Version 6.0.0.1 (March, 2013)
+    </xs:documentation>
+  </xs:annotation>
+  <!-- import needed for xml:base attribute -->
+  <!-- Primitive Types -->
+  <xs:simpleType name="string">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="int">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:simpleType name="date">
+    <xs:restriction base ="xs:date"/>
+  </xs:simpleType>
+  <!-- Library element -->
+  <xs:element name="Library">
+    <xs:complexType>
+      <xs:attribute name="Name" type="string" use="required"/>
+      <xs:attribute name="Description" type="string" use="required"/>
+      <xs:attribute name="Author" type="string" use="optional"/>
+      <xs:attribute name="FileName" type="string" use="required"/>
+      <xs:attribute name="ThumbnailPath" type="string" use="required"/>
+      <xs:attribute name="DateCreated" type="date" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <!-- List of libraries -->
+  <xs:element name="ListOfLibraries">
+    <xs:annotation>
+      <xs:appinfo>enable-xmlns</xs:appinfo>
+      <xs:documentation>
+        The ListOfLibraries declares the root element of the document that comprises
+        the list of libraries.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Library" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="Author" type="string" use="optional"/>
+      <xs:attribute name="DateCreated" type="date" use="required"/>
+      <xs:attribute name="DateModified" type="date" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <!-- END PLMPackLib libraries Schema -->
+</xs:schema>

@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<Database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="main" EntityNamespace="Pic.DAL" ContextNamespace="Pic.DAL" Class="Main" BaseType="DbLinq.Data.Linq.DataContext" Provider="SQLite" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="main.CardboardFormat" Member="CardboardFormats">
+    <Type Name="CardboardFormat">
+      <Column Name="Description" Member="Description" Storage="_description" Type="System.String" DbType="nvarchar" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="ID" Member="ID" Storage="_id" Type="System.Int32" DbType="integer" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Length" Member="Length" Storage="_length" Type="System.Single" DbType="real" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="Name" Member="Name" Storage="_name" Type="System.String" DbType="nvarchar(50)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="Width" Member="Width" Storage="_width" Type="System.Single" DbType="real" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="main.CardboardProfile" Member="CardboardProfiles">
+    <Type Name="CardboardProfile">
+      <Association Name="fk_CardboardQuality_0" Member="CardboardQualities" Storage="_cardboardQualities" Type="CardboardQuality" ThisKey="ID" OtherKey="CardboardProfileID" Cardinality="One" DeleteRule="NO ACTION" />
+      <Association Name="fk_MajorationSet_1" Member="MajOrationSets" Storage="_majOrationSets" Type="MajorationSet" ThisKey="ID" OtherKey="CardboardProfileID" Cardinality="One" DeleteRule="NO ACTION" />
+      <Column Name="Code" Member="Code" Storage="_code" Type="System.String" DbType="char(10)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="ID" Member="ID" Storage="_id" Type="System.Int32" DbType="integer" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Member="Name" Storage="_name" Type="System.String" DbType="nvarchar(50)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="Thickness" Member="Thickness" Storage="_thickness" Type="System.Single" DbType="real" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="main.CardboardQuality" Member="CardboardQualities">
+    <Type Name="CardboardQuality">
+      <Association Name="fk_CardboardQuality_0" Member="CardboardProfile" Storage="_cardboardProfile" Type="CardboardProfile" ThisKey="CardboardProfileID" OtherKey="ID" IsForeignKey="true" Cardinality="Many" />
+      <Column Name="CardboardProfileID" Member="CardboardProfileID" Storage="_cardboardProfileID" Type="System.Int32" DbType="integer" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="Description" Member="Description" Storage="_description" Type="System.String" DbType="nvarchar" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="ECT" Member="EcT" Storage="_ecT" Type="System.Single" DbType="real" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="ID" Member="ID" Storage="_id" Type="System.Int32" DbType="integer" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Member="Name" Storage="_name" Type="System.String" DbType="nvarchar(50)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="RigidityX" Member="RigidityX" Storage="_rigidityX" Type="System.Single" DbType="real" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="RigidityY" Member="RigidityY" Storage="_rigidityY" Type="System.Single" DbType="real" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="SurfacicMass" Member="SurfacicMass" Storage="_surfacicMass" Type="System.Single" DbType="real" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="YoungModulus" Member="YoungModulus" Storage="_youngModulus" Type="System.Single" DbType="real" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="main.Component" Member="Components">
+    <Type Name="Component">
+      <Association Name="fk_Component_0" Member="Document" Storage="_document" Type="Document" ThisKey="DocumentID" OtherKey="ID" IsForeignKey="true" Cardinality="Many" />
+      <Association Name="fk_ComponentDependancy_0" Member="ComponentDependAnCY" Storage="_componentDependAnCy" Type="ComponentDependancy" ThisKey="ID" OtherKey="DependsOfID" Cardinality="One" DeleteRule="NO ACTION" />
+      <Association Name="fk_ComponentDependancy_1" Member="ComponentDependAnCY1" Storage="_componentDependAnCy1" Type="ComponentDependancy" ThisKey="ID" OtherKey="ComponentID" Cardinality="One" DeleteRule="NO ACTION" />
+      <Association Name="fk_MajorationSet_0" Member="MajOrationSets" Storage="_majOrationSets" Type="MajorationSet" ThisKey="ID" OtherKey="ComponentID" Cardinality="One" DeleteRule="NO ACTION" />
+      <Column Name="DocumentID" Member="DocumentID" Storage="_documentID" Type="System.Int32" DbType="integer" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="Guid" Member="Guid" Storage="_guid" Type="System.Guid" DbType="guid" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="ID" Member="ID" Storage="_id" Type="System.Int32" DbType="integer" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="main.ComponentDependancy" Member="ComponentDependancy">
+    <Type Name="ComponentDependancy">
+      <Association Name="fk_ComponentDependancy_0" Member="Component" Storage="_component" Type="Component" ThisKey="DependsOfID" OtherKey="ID" IsForeignKey="true" Cardinality="Many" />
+      <Association Name="fk_ComponentDependancy_1" Member="Component1" Storage="_component1" Type="Component" ThisKey="ComponentID" OtherKey="ID" IsForeignKey="true" Cardinality="Many" />
+      <Column Name="ComponentID" Member="ComponentID" Storage="_componentID" Type="System.Int32" DbType="integer" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DependsOfID" Member="DependsOfID" Storage="_dependsOfID" Type="System.Int32" DbType="integer" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="main.DataVersion" Member="DataVersions">
+    <Type Name="DataVersion">
+      <Column Name="Name" Member="Name" Storage="_name" Type="System.String" DbType="nvarchar(50)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="Value" Member="Value" Storage="_value" Type="System.String" DbType="nvarchar(50)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="main.Document" Member="Documents">
+    <Type Name="Document">
+      <Association Name="fk_Component_0" Member="Components" Storage="_components" Type="Component" ThisKey="ID" OtherKey="DocumentID" Cardinality="One" DeleteRule="NO ACTION" />
+      <Association Name="fk_Document_0" Member="DocumentType" Storage="_documentType" Type="DocumentType" ThisKey="DocumentTypeID" OtherKey="ID" IsForeignKey="true" Cardinality="Many" />
+      <Association Name="fk_Document_1" Member="File" Storage="_file" Type="File" ThisKey="FileID" OtherKey="ID" IsForeignKey="true" Cardinality="Many" />
+      <Association Name="fk_TreeNodeDocument_1" Member="TreeNodeDocuments" Storage="_treeNodeDocuments" Type="TreeNodeDocument" ThisKey="ID" OtherKey="DocumentID" Cardinality="One" DeleteRule="NO ACTION" />
+      <Column Name="Description" Member="Description" Storage="_description" Type="System.String" DbType="nvarchar" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="DocumentTypeID" Member="DocumentTypeID" Storage="_documentTypeID" Type="System.Int32" DbType="integer" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="FileID" Member="FileID" Storage="_fileID" Type="System.Int32" DbType="integer" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="Guid" Member="Guid" Storage="_guid" Type="System.Guid" DbType="guid" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="ID" Member="ID" Storage="_id" Type="System.Int32" DbType="integer" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Member="Name" Storage="_name" Type="System.String" DbType="nvarchar(50)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="main.DocumentType" Member="DocumentTypes">
+    <Type Name="DocumentType">
+      <Association Name="fk_Document_0" Member="Documents" Storage="_documents" Type="Document" ThisKey="ID" OtherKey="DocumentTypeID" Cardinality="One" DeleteRule="NO ACTION" />
+      <Column Name="Application" Member="Application" Storage="_application" Type="System.String" DbType="nvarchar(50)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="Description" Member="Description" Storage="_description" Type="System.String" DbType="nvarchar" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="ID" Member="ID" Storage="_id" Type="System.Int32" DbType="integer" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Member="Name" Storage="_name" Type="System.String" DbType="nvarchar(50)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="main.File" Member="Files">
+    <Type Name="File">
+      <Association Name="fk_Document_1" Member="Documents" Storage="_documents" Type="Document" ThisKey="ID" OtherKey="FileID" Cardinality="One" DeleteRule="NO ACTION" />
+      <Association Name="fk_Thumbnail_0" Member="Thumbnail" Storage="_thumbnail" Type="Thumbnail" ThisKey="ID" OtherKey="FileID" Cardinality="One" DeleteRule="NO ACTION" />
+      <Column Name="DateCreated" Member="DateCreated" Storage="_dateCreated" Type="System.DateTime" DbType="datetime" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="Extension" Member="Extension" Storage="_extension" Type="System.String" DbType="char(10)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="Guid" Member="Guid" Storage="_guid" Type="System.Guid" DbType="guid" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="ID" Member="ID" Storage="_id" Type="System.Int32" DbType="integer" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="main.Majoration" Member="Majoration">
+    <Type Name="Majoration">
+      <Association Name="fk_Majoration_0" Member="MajOrationSet" Storage="_majOrationSet" Type="MajorationSet" ThisKey="MajorationSetID" OtherKey="ID" IsForeignKey="true" Cardinality="Many" />
+      <Column Name="MajorationSetID" Member="MajorationSetID" Storage="_majorationSetID" Type="System.Int32" DbType="integer" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Member="Name" Storage="_name" Type="System.String" DbType="nvarchar(50)" IsPrimaryKey="true" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="Value" Member="Value" Storage="_value" Type="System.Single" DbType="real" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="main.MajorationSet" Member="MajorationSets">
+    <Type Name="MajorationSet">
+      <Association Name="fk_Majoration_0" Member="MajOrations" Storage="_majOrations" Type="Majoration" ThisKey="ID" OtherKey="MajorationSetID" Cardinality="One" DeleteRule="NO ACTION" />
+      <Association Name="fk_MajorationSet_0" Member="Component" Storage="_component" Type="Component" ThisKey="ComponentID" OtherKey="ID" IsForeignKey="true" Cardinality="Many" />
+      <Association Name="fk_MajorationSet_1" Member="CardboardProfile" Storage="_cardboardProfile" Type="CardboardProfile" ThisKey="CardboardProfileID" OtherKey="ID" IsForeignKey="true" Cardinality="Many" />
+      <Column Name="CardboardProfileID" Member="CardboardProfileID" Storage="_cardboardProfileID" Type="System.Int32" DbType="integer" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="ComponentID" Member="ComponentID" Storage="_componentID" Type="System.Int32" DbType="integer" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="ID" Member="ID" Storage="_id" Type="System.Int32" DbType="integer" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="main.ParamDefaultValue" Member="ParamDefaultValues">
+    <Type Name="ParamDefaultValue">
+      <Column Name="ComponentID" Member="ComponentID" Storage="_componentID" Type="System.Int32" DbType="integer" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="Name" Member="Name" Storage="_name" Type="System.String" DbType="nvarchar(50)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="Value" Member="Value" Storage="_value" Type="System.Single" DbType="real" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="main.sysdiagrams" Member="SysDiagrams">
+    <Type Name="SysDiagram">
+      <Column Name="definition" Member="Definition" Storage="_definition" Type="System.Byte[]" DbType="blob" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="diagram_id" Member="DiagramID" Storage="_diagramID" Type="System.Int32" DbType="integer" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Member="Name" Storage="_name" Type="System.String" DbType="nvarchar(128)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="principal_id" Member="PrincipalID" Storage="_principalID" Type="System.Int32" DbType="integer" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="version" Member="Version" Storage="_version" Type="System.Int32" DbType="integer" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="main.Thumbnail" Member="Thumbnail">
+    <Type Name="Thumbnail">
+      <Association Name="fk_Thumbnail_0" Member="File" Storage="_file" Type="File" ThisKey="FileID" OtherKey="ID" IsForeignKey="true" Cardinality="Many" />
+      <Association Name="fk_TreeNode_1" Member="TreeNodes" Storage="_treeNodes" Type="TreeNode" ThisKey="ID" OtherKey="ThumbnailID" Cardinality="One" DeleteRule="NO ACTION" />
+      <Column Name="FileID" Member="FileID" Storage="_fileID" Type="System.Int32" DbType="integer" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="Height" Member="Height" Storage="_height" Type="System.Int32" DbType="integer" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="ID" Member="ID" Storage="_id" Type="System.Int32" DbType="integer" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MimeType" Member="MimeType" Storage="_mimeType" Type="System.String" DbType="nvarchar(50)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="ThumbCache" Member="ThumbCache" Storage="_thumbCache" Type="System.Byte[]" DbType="blob(2147483647)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="Width" Member="Width" Storage="_width" Type="System.Int32" DbType="integer" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="main.TreeNode" Member="TreeNodes">
+    <Type Name="TreeNode">
+      <Association Name="fk_TreeNode_0" Member="ParentNodeIDTreeNode" Storage="_parentNodeIdtReeNode" Type="TreeNode" ThisKey="ParentNodeID" OtherKey="ID" IsForeignKey="true" Cardinality="Many" />
+      <Association Name="fk_TreeNode_0" Member="TreeNodes" Storage="_treeNodes" Type="TreeNode" ThisKey="ID" OtherKey="ParentNodeID" Cardinality="One" DeleteRule="NO ACTION" />
+      <Association Name="fk_TreeNode_1" Member="Thumbnail" Storage="_thumbnail" Type="Thumbnail" ThisKey="ThumbnailID" OtherKey="ID" IsForeignKey="true" Cardinality="Many" />
+      <Association Name="fk_TreeNodeDocument_0" Member="TreeNodeDocuments" Storage="_treeNodeDocuments" Type="TreeNodeDocument" ThisKey="ID" OtherKey="TreeNodeID" Cardinality="One" DeleteRule="NO ACTION" />
+      <Column Name="Description" Member="Description" Storage="_description" Type="System.String" DbType="nvarchar" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="ID" Member="ID" Storage="_id" Type="System.Int32" DbType="integer" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Member="Name" Storage="_name" Type="System.String" DbType="nvarchar(50)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="ParentNodeID" Member="ParentNodeID" Storage="_parentNodeID" Type="System.Int32" DbType="integer" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="ThumbnailID" Member="ThumbnailID" Storage="_thumbnailID" Type="System.Int32" DbType="integer" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="main.TreeNodeDocument" Member="TreeNodeDocuments">
+    <Type Name="TreeNodeDocument">
+      <Association Name="fk_TreeNodeDocument_0" Member="TreeNode" Storage="_treeNode" Type="TreeNode" ThisKey="TreeNodeID" OtherKey="ID" IsForeignKey="true" Cardinality="Many" />
+      <Association Name="fk_TreeNodeDocument_1" Member="Document" Storage="_document" Type="Document" ThisKey="DocumentID" OtherKey="ID" IsForeignKey="true" Cardinality="Many" />
+      <Column Name="DocumentID" Member="DocumentID" Storage="_documentID" Type="System.Int32" DbType="integer" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+      <Column Name="ID" Member="ID" Storage="_id" Type="System.Int32" DbType="integer" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TreeNodeID" Member="TreeNodeID" Storage="_treeNodeID" Type="System.Int32" DbType="integer" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

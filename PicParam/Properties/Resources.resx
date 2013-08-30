@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="CLSDFOLD" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk32AAAAAAAAAHYAAAAoAAAAEAAAABAAAAABAAQAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/AwMD/AAD//wD/AP8A/////wAA//8A/////wD/////////
+        ///////////////////wAAAAAAAAD3d3d3d3d3cPf7i4uLi4tw9/i4uLi4uHD3+4uLi4uLcPf4uLi4uL
+        hw9/uLi4uLi3D3+Li4uLi4cPf7i4uLi4tw9////////3D3i4uLh3d3f/94uLh///////d3d/////////
+        ////////
+</value>
+  </data>
+  <data name="COMPONENT" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////JBzt
+        JBztJBztJBzt////////////////////////////////////////////////JBztAPL/APL/JBzt////
+        ////////////////////////////////////JBztJBztJBztAPL/APL/JBztJBztJBzt////////////
+        JBztJBztJBztJBztJBztJBztAPL/JBzt821N821NJBztAPL/JBzt////////////JBztAPL/821NAPL/
+        APL/821N821N821NAPL/APL/821N821NJBzt////////JBzt821NAPL/821NAPL/APL/821NAPL/821N
+        APL/APL/821NAPL/JBzt////////JBzt821NAPL/821NAPL/APL/821NAPL/821NAPL/APL/821NAPL/
+        JBzt////////JBzt821NAPL/821NAPL/APL/821NAPL/821NAPL/APL/821NAPL/JBzt////////////
+        JBzt821N821NAPL/APL/821N821N821NAPL/APL/821NAPL/JBzt////////////JBztAPL/JBzt821N
+        821NJBztAPL/JBztJBztJBztJBztJBztJBzt////////////JBztJBztJBztAPL/APL/JBztJBztJBzt
+        ////////////////////////////////////////JBztJBztJBztJBzt////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////
+</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DEFAULTTHUMBNAIL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DEFAULTTHUMBNAIL.BMP;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DOC" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk32AAAAAAAAAHYAAAAoAAAAEAAAABAAAAABAAQAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/AwMD/AAD//wD/AP8A/////wAA//8A/////wD////////4
+        iIiIiIiP8zMzMzMzM4/w/w/w/w/wn/AAAAAAAAC5//mZmZ+bu7n/+bu7n5u7uf/5u7ufmbu5d3m7u5//
+        mZl4ibu7kA///3iHu7uQb///eIh7u5/m//94iIeZn/5v/3iIiID//+b/eIiIgP///m9wAAAA////////
+        ////////
+</value>
+  </data>
+  <data name="DXF" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk0mBAAAAAAAADYAAAAoAAAAEgAAABIAAAABABgAAAAAAAAAAADEDgAAxA4AAAAAAAAAAAAA////////
+        /////////////////////////////////////////////////////////////////v//////////////
+        ///MrIbMrIbMrIbMrIbMrIbMrIbMrIbMrIbMrIbMrIbMrIbMrIbMrIb////+/////////////////8ys
+        hvLr5PLr5PLr5PLr5PLr5PLr5PLr5PLr5PLr5PLr5PLr5Myshv////7/////h2hHh2hHh2hHh2hHh2hH
+        h2hHh2hHh2hHh2hHh2hHh2hHh2hHh2hHh2hH8uvkzKyG/////v////+HaEf///////+HaEeHaEf///+H
+        aEeHaEf///+HaEf///+HaEeHaEeHaEfy6+TMrIb////+/////4doR////4doR////4doR////4doR4do
+        R////4doR////4doR4doR4doR/Lr5Myshv////7/////h2hH////h2hH////h2hHh2hH////////h2hH
+        h2hH////////h2hHh2hH8uvkzKyG/////v////+HaEf///+HaEf///+HaEf///+HaEeHaEf///+HaEf/
+        //+HaEeHaEeHaEfy6+TMrIb////+/////4doR////////4doR4doR////4doR4doR////4doR///////
+        /////4doR/Lr5Myshv////7/////h2hHh2hHh2hHh2hHh2hHh2hHh2hHh2hHh2hHh2hHh2hHh2hHh2hH
+        h2hH8uvkzKyG/////v/////////////////MrIby6+Ty6+Ty6+Ty6+Ty6+Ty6+Ty6+Ty6+Ty6+Ty6+Ty
+        6+TMrIb////+/////////////////8yshvLr5PLr5PLr5PLr5PLr5PLr5PLr5PLr5PLr5PLr5PLr5Mys
+        hv////7/////////////////zKyG8uvk8uvk8uvk8uvk8uvk8uvk8uvkzKyGzKyGzKyGzKyGzKyG////
+        /v/////////////////MrIby6+Ty6+Ty6+Ty6+Ty6+Ty6+Ty6+TMrIbl1cLl1cLl1cLMrIb////+////
+        /////////////8yshvLr5PLr5PLr5PLr5PLr5PLr5PLr5MyshuXVwuXVwsyshv////////7/////////
+        ////////zKyG8uvk8uvk8uvk8uvk8uvk8uvk8uvkzKyG5dXCzKyG/////////////v//////////////
+        ///MrIbMrIbMrIbMrIbMrIbMrIbMrIbMrIbMrIbMrIb////////////////+////////////////////
+        //////////////////////////////////////////////////////7/
+</value>
+  </data>
+  <data name="ID_ABOUT" xml:space="preserve">
+    <value>About {0}...</value>
+  </data>
+  <data name="ID_APPLICATIONEXITING" xml:space="preserve">
+    <value>{0} will now exit...</value>
+  </data>
+  <data name="ID_APPLICATIONMUSTRESTART" xml:space="preserve">
+    <value>{0} will need to be restarted. Now closing...</value>
+  </data>
+  <data name="ID_CANCELTOOLONG" xml:space="preserve">
+    <value>This model constains more than {0} segments. Processing will require too much time.  To increase maximum number of segments, use Tools&gt;Options&gt;Computing options...</value>
+  </data>
+  <data name="ID_CLEARDATABASEWARNING" xml:space="preserve">
+    <value>You are about to clear the database content. Are you sure?</value>
+  </data>
+  <data name="ID_DATABASENOTFOUND" xml:space="preserve">
+    <value>Database file could not be found at the following path: {0}\n Would you like to restore a database archive?</value>
+  </data>
+  <data name="ID_DATABASEOVERWRITE" xml:space="preserve">
+    <value>Documents sharing the same position in the tree than those available in the library will be overwritten.\nAny modifications will be lost. Continue?</value>
+  </data>
+  <data name="ID_EDITCOMPONENT" xml:space="preserve">
+    <value>Edit component {0}...</value>
+  </data>
+  <data name="ID_FILENOTFOUND_DEFAULTIMAGE" xml:space="preserve">
+    <value>Default image file could not be found at the following path: {0}</value>
+  </data>
+  <data name="ID_FILENOTFOUND_PDFTHUMBNAILIMAGE" xml:space="preserve">
+    <value>Pdf thumb image file could not be found at the following path: {0}</value>
+  </data>
+  <data name="ID_MERGEFAILURE" xml:space="preserve">
+    <value>Failed to merge database for the following reason: {0}</value>
+  </data>
+  <data name="ID_RESTOREFAILURE" xml:space="preserve">
+    <value>Failed to restore database for the following reason: {0}</value>
+  </data>
+  <data name="ID_RESTOREWARNING" xml:space="preserve">
+    <value>Please, be aware that this operation will overwrite your current database. Continue?</value>
+  </data>
+  <data name="ID_TREEMENUBACKUP" xml:space="preserve">
+    <value>Backup branch {0}</value>
+  </data>
+  <data name="ID_TREEMENUDELETE" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="ID_TREEMENUNEWBRANCH" xml:space="preserve">
+    <value>New branch...</value>
+  </data>
+  <data name="ID_TREEMENUNEWDOCUMENT" xml:space="preserve">
+    <value>New document...</value>
+  </data>
+  <data name="ID_TREEMENURENAME" xml:space="preserve">
+    <value>Rename...</value>
+  </data>
+  <data name="ID_TREEWARNING_CANNOTMOVENODE" xml:space="preserve">
+    <value>Node {0} can not be moved under node {1} as this last one is a child.  </value>
+  </data>
+  <data name="ID_TREEWARNING_DELETEBRANCH" xml:space="preserve">
+    <value>Delete branch {0}?</value>
+  </data>
+  <data name="ID_TREEWARNING_DELETEDOCUMENT" xml:space="preserve">
+    <value>Delete document {0}?</value>
+  </data>
+  <data name="ID_TREEWARNING_MOVENODE" xml:space="preserve">
+    <value>Do you really want to move node "{0}" under node "{1}"?</value>
+  </data>
+  <data name="ID_VERSION" xml:space="preserve">
+    <value>Version {0}</value>
+  </data>
+  <data name="OPENFOLD" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk32AAAAAAAAAHYAAAAoAAAAEAAAABAAAAABAAQAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/AwMD/AAD//wD/AP8A/////wAA//8A/////wD/////////
+        ////////////////////8AAAAAAAAP93d3d3d3cA/3+4uLi4twD3+4uLi4uAcPf4uLi4uHBwf4uLi4uL
+        B3B///////cIcHd3d3d3d3tw9/i4uLi4uHD3+4uLj///cPf4uLj3d3d//3///3//////93d3////////
+        ////////
+</value>
+  </data>
+  <data name="PDF" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk32AAAAAAAAAHYAAAAoAAAAEAAAABAAAAABAAQAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/8DAwP+AgID/AAD//wD/AP8A/////wAA//8A/////wD////////w
+        AAAAAAAA//D///////D/8Pl/////8P/w/3f////w//D/9/d3d/D/8P//l5d/8P/w//+J///w//D//3f/
+        //D/8P//h///8P/w//93//9wERERERH/93CZmZmZkXiHcJmZmZmRj/eAmZmZmZF/dw//8P///3dw///w
+        gzMzMw//
+</value>
+  </data>
+  <data name="PicParamAbout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicParamAbout.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

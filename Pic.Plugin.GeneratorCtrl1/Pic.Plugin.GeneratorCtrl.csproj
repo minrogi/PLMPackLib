@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48F945EB-35D7-4052-8DA1-16A62A725FBC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pic.Plugin.GeneratorCtrl</RootNamespace>
+    <AssemblyName>Pic.Plugin.GeneratorCtrl</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdPartyComponents\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.TextEditor, Version=3.2.0.5698, Culture=neutral, PublicKeyToken=4d61825e8dd49f1a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdPartyComponents\ICSharpCode.TextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdPartyComponents\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PluginLibraryBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PluginLibraryBrowser.Designer.cs">
+      <DependentUpon>PluginLibraryBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginLibraryBrowserCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PluginLibraryBrowserCtrl.Designer.cs">
+      <DependentUpon>PluginLibraryBrowserCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PluginViewer.Designer.cs">
+      <DependentUpon>PluginViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratorCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GeneratorCtrl.Designer.cs">
+      <DependentUpon>GeneratorCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PluginLibraryBrowser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PluginLibraryBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PluginLibraryBrowserCtrl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PluginLibraryBrowserCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PluginViewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PluginViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneratorCtrl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GeneratorCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pic.Factory2D\Pic.Factory2D.csproj">
+      <Project>{18305BA6-E8D3-4E21-8C28-1B1A4AB42CAC}</Project>
+      <Name>Pic.Factory2D</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.Plugin.Generator\Pic.Plugin.Generator.csproj">
+      <Project>{013D495C-FD49-4568-8472-11CBF544093D}</Project>
+      <Name>Pic.Plugin.Generator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.Plugin.Host\Pic.Plugin.Host.csproj">
+      <Project>{120B7826-6403-41BF-AEF9-61FE400CF0F9}</Project>
+      <Name>Pic.Plugin.Host</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.Plugin.PluginInterface\Pic.Plugin.PluginInterface.csproj">
+      <Project>{F7AF3588-4E47-464A-8729-3FDBC471D00C}</Project>
+      <Name>Pic.Plugin.PluginInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.Plugin.Tools\Pic.Plugin.Tools.csproj">
+      <Project>{3B400C41-D6B3-4683-8450-85AED44FAA52}</Project>
+      <Name>Pic.Plugin.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.Plugin.ViewCtrl\Pic.Plugin.ViewCtrl.csproj">
+      <Project>{14D171D4-D040-446D-9F24-B8D48E63B4BA}</Project>
+      <Name>Pic.Plugin.ViewCtrl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TreeDim.UserControls\TreeDim.UserControls.csproj">
+      <Project>{D75634E3-34AA-4418-A6B6-3647BFF90606}</Project>
+      <Name>TreeDim.UserControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic.Plugin.GeneratorCtrl.dll.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

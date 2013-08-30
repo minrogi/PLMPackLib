@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Pic.Factory2D.PicEntity">
+    <Position X="0.75" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Pic.Factory2D.PicEntity.eCode">
+        <TypeIdentifier>
+          <NewMemberFileName>PicEntity.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AEACAQAAAAAAAAgEgABgEgAAAAAAAIAAAAAgAACAABA=</HashCode>
+      <FileName>PicEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pic.Factory2D.PicFactory">
+    <Position X="17.25" Y="2.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AATIABkgACIYAlAEABBgRAAAAAggAAEEEAAAEABAAAA=</HashCode>
+      <FileName>PicFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pic.Factory2D.PicFactoryVisitor">
+    <Position X="17.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAEAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>PicFactoryVisitor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pic.Factory2D.PicPoint">
+    <Position X="3.5" Y="4" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CAAAACAAAAAAAAAEEAAAAARAACAAAAAAQAAAAACBABA=</HashCode>
+      <FileName>PicPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pic.Factory2D.PicSegment">
+    <Position X="5.25" Y="4" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAYACAAAAAAAAAEEAAAAgRAQCAAAAAAAAAAgACAABA=</HashCode>
+      <FileName>PicSegment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pic.Factory2D.PicArc">
+    <Position X="7" Y="4" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CAAIAGCEAgEAAEAEFAAAAiRAACCBAAAAAAACAQGIEFA=</HashCode>
+      <FileName>PicArc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pic.Factory2D.PicTypedDrawable">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAIAEAAAAAAAAAAAAAAAAJAAAIAAAAFAAAAAAAAAAA=</HashCode>
+      <FileName>PicTypedDrawable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pic.Factory2D.PicDrawable">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAgAAEAAAAAQAACIAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>PicDrawable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pic.Factory2D.PicNurb">
+    <Position X="8.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAUEAAAAgRAACAAAAAAAAAAAACAABA=</HashCode>
+      <FileName>PicNurb.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pic.Factory2D.PicCotation">
+    <Position X="10.5" Y="4" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Pic.Factory2D.PicCotation.CotType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PicCotation.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAIAAAgCAAAEAA=</HashCode>
+      <FileName>PicCotation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pic.Factory2D.PicCotationHorizontal">
+    <Position X="15" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAEAAAAAAAAAAAAAAAgAAAgAACAADA=</HashCode>
+      <FileName>PicCotationHorizontal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pic.Factory2D.PicCotationVertical">
+    <Position X="15" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAEAAAAAAAAAAAAAAAgAAAgAACAADA=</HashCode>
+      <FileName>PicCotationVertical.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pic.Factory2D.PicCotationRadius">
+    <Position X="12.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAEEAAAAARAACAAAAAAAAAgAACAABA=</HashCode>
+      <FileName>PicCotationRadius.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pic.Factory2D.PicCotationDistance">
+    <Position X="12.75" Y="6.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAAYASAAAAAAAAQEMAAAAgRAQCAAAAAgAAAgAACAgLA=</HashCode>
+      <FileName>PicCotationDistance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pic.Factory2D.PicVisitorBoundingBox">
+    <Position X="17.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAUAAAAAAAAAAAAIEAAAAIAAAAAAAAAg=</HashCode>
+      <FileName>PicVisitorBoundingBox.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pic.Factory2D.PicVisitorDesOutput">
+    <Position X="26.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACABAQAAAAAAAAAAAAAEAAAAEAAAAAAAAAg=</HashCode>
+      <FileName>PicVisitorDesOutput.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pic.Factory2D.PicVisitorDieCutLength">
+    <Position X="19" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAQAAAAAAAAAAAIAEABAAAAAAAAAAAAg=</HashCode>
+      <FileName>PicVisitorDieCutLength.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pic.Factory2D.PicVisitorOutput" Collapsed="true">
+    <Position X="26.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAABAEAAgAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PicVisitorOutput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pic.Factory2D.PicVisitorDxfOutput">
+    <Position X="28.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACABAQAAAAAAAAAAABgEAAAAAAAAAAAABAg=</HashCode>
+      <FileName>PicVisitorDxfOutput.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pic.Factory2D.PicVisitorAutoQuotationEntities">
+    <Position X="20.75" Y="11.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAQAAAAAAAAAAAAAEAAAAAAEQAAAAAAg=</HashCode>
+      <FileName>PicAutoQuotation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pic.Factory2D.PicVisitorTransform">
+    <Position X="23.5" Y="11.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAQAAAQAAAAAAAAAEAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>PicVisitorTransform.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pic.Factory2D.PicTool">
+    <Position X="17.25" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PicTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pic.Factory2D.PicToolArea">
+    <Position X="17.25" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAIAAAEIAAAAAAAAAAAAEAAABIAAAQQAAEAE=</HashCode>
+      <FileName>PicToolArea.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pic.Factory2D.PicToolRound">
+    <Position X="19" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAIAAAAAAQAQAAAAAAAAAAAAAAAARgA=</HashCode>
+      <FileName>PicToolRound.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

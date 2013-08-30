@@ -1,0 +1,33 @@
+Author:
+-------
+TreeDim\François Gasnier
+
+Web sites:
+----------
+http://www.treedim.com/
+http://www.picador.fr/
+
+
+Created: 2009/05/19
+Last update: 2011/12/01
+
+Prerequisites:
+--------------
+- VS2010 SP1,
+- DockPanel Suite for .Net 2.0 (Version 2.3.1.0)
+- log4net 1.2.10.0
+- netDxf 0.1.2.0
+- iTextSharp 5.0.1.1
+- ICSharpCode.SharpZipLib 0.85.5.452
+- Plossum CommandLine.dll 0.3.0.14
+- System.Data.SQLite.DLL 1.0.66.0
+
+- Wix ToolSet v3.7
+(Home page: http://wix.codeplex.com/)
+
+Registering Plugin.Generator.ctrl
+---------------------------------
+- In a Visual Studio Command Promp: Goto \PicSharp\Pic.Plugin.GeneratorCtrl1\bin\x86\Release
+- Type:
+regasm Pic.Plugin.GeneratorCtrl.dll /tlb:Pic.Plugin.GeneratorCtrl.tlb
+

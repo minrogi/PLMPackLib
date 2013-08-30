@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?include $(sys.CURRENTDIR)\Config.wxi?>
+<!--Compiling OS-->
+<?define OS="win32"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension" xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
+  <Module Id="MergeModule1" Language="1033" Version="$(var.ProductVersion)">
+    <Package Id="9bce66d3-fd89-4e0f-ad33-64d4d0ed0ae2"
+             Description="$(var.Package_Description)"
+             Comments="$(var.Package_Comments)"
+             Languages="1033"
+             Manufacturer="$(var.ProductManufacturer)" 
+             InstallerVersion="200" />
+    <!-- Forcibly overwriting preexisting files during installation -->
+    <Property Id="REINSTALLMODE" Value="amus" />
+    <!-- Performs a file search on  PicParam.db
+    Property is later used as a condition of custom action 'ZipExtractCA'-->
+    <Property Id="DATABASEEXISTS">
+      <DirectorySearch Id="DirSearch" Path="C:\wPicador\Data\Database" Depth="0">
+        <FileSearch Name="PicParam.db" />
+      </DirectorySearch>
+    </Property>
+    <!--.NET framework property-->
+    <PropertyRef Id="NETFRAMEWORK40FULL" />
+    <!--*********** Application files : BEGIN ******************************-->
+    <!--Log-->
+    <DirectoryRef Id="Log">
+      <Component Id="LogFiles" Guid="D52EA0A5-0294-4B26-AB76-EA9FC77D072E">
+        <File Source="..\ZipExtract\ZipExtract.txt" />
+        <File Source="..\PicParam\PLMPackLib.txt" />
+      </Component>
+    </DirectoryRef>
+    <!--Thumbnails-->
+    <DirectoryRef Id="Thumbnails">
+      <Component Id="ThumbsBMP" Guid="{65B5C2FE-0C78-4E83-8F36-FF5AF5EE1643}">
+        <File Source="..\Pic.DAL\Thumbnails\Ai.bmp" KeyPath="yes"/>
+        <File Source="..\Pic.DAL\Thumbnails\ARD.bmp"/>
+        <File Source="..\Pic.DAL\Thumbnails\Calc.bmp"/>
+        <File Source="..\Pic.DAL\Thumbnails\Excel.bmp"/>
+        <File Source="..\Pic.DAL\Thumbnails\Folder.bmp"/>
+        <File Source="..\Pic.DAL\Thumbnails\Image.bmp"/>
+        <File Source="..\Pic.DAL\Thumbnails\pdf.bmp"/>
+        <File Source="..\Pic.DAL\Thumbnails\Powerpoint.bmp"/>
+        <File Source="..\Pic.DAL\Thumbnails\Word.bmp"/>
+        <File Source="..\Pic.DAL\Thumbnails\Writer.bmp"/>
+        <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
+      </Component>
+    </DirectoryRef>
+    <!-- PicFactory -->
+    <DirectoryRef Id="Bin32">
+      <Component Id="PicFactory" Guid="2A9DA2E0-6D10-4546-A77D-93358938AD7E">
+        <File Source="..\PicParam\bin\x86\Release\Pic.Factory2D.dll" KeyPath="yes" />
+        <File Source="..\PicParam\bin\x86\Release\Sharp3D.Math.dll" />
+        <File Source="..\PicParam\bin\x86\Release\Pic.Factory2D.Control.dll" />
+        <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
+      </Component>
+      <!-- log4net -->
+      <Component Id="log4net" Guid="D27E7869-FFFB-479f-B351-0A416C5E45E0">
+        <File Source="..\PicParam\bin\x86\Release\log4net.dll" KeyPath="yes" />
+        <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
+      </Component>
+      <!-- Plugins -->
+      <Component Id="Plugins" Guid="06C3FD13-8AD2-409c-8FA1-68A507518E32">
+        <File Source="..\PicParam\bin\x86\Release\Pic.Plugin.Tools.dll" />
+        <File Source="..\PicParam\bin\x86\Release\Pic.Plugin.PluginInterface.dll" />
+        <File Source="..\PicParam\bin\x86\Release\Pic.Plugin.Host.dll" />
+        <File Source="..\PicParam\bin\x86\Release\Pic.Plugin.ViewCtrl.dll" KeyPath="yes" />
+        <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
+      </Component>
+      <!-- SQLite -->
+      <Component Id="SQLite" Guid="1415A3ED-72E6-4631-85EC-75A5948C846B">
+        <File Source="..\ThirdPartyComponents\System.Data.SQLite.dll" KeyPath="yes" />
+        <File Source="..\ThirdPartyComponents\System.Data.SQLite.Linq.dll" />
+        <File Source="..\ThirdPartyComponents\DbLinq.dll" />
+        <File Source="..\ThirdPartyComponents\DbLinq.Sqlite.dll" />
+        <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
+      </Component>
+      <!-- DAL -->
+      <Component Id="DAL" Guid="FDDD2AC0-2504-4F5E-8432-91FCC14B7E9B">
+        <File Source="..\PicParam\bin\x86\Release\Pic.DAL.dll" />
+        <File Source="..\PicParam\bin\x86\Release\Pic.DAL.LibraryLoader.dll" />
+        <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
+      </Component>
+      <!-- ImportExport -->
+      <Component Id="ImportExport" Guid="B3AD303A-D350-4c42-92D0-F2B41DDF31C1">
+        <File Source="..\PicParam\bin\x86\Release\DesLib4NET.dll" />
+        <File Source="..\PicParam\bin\x86\Release\Dxflib4NET.dll" />
+        <File Source="..\PicParam\bin\x86\Release\PdfSharp.dll" />
+        <File Source="..\PicParam\bin\x86\Release\netDxf.dll" />
+        <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
+      </Component>
+      <!-- TreeDim.UserControls -->
+      <Component Id="TreeDim.UserControls" Guid="820C1AE3-CD17-4130-8709-9B37931744B2">
+        <File Source="..\PicParam\bin\x86\Release\TreeDim.UserControls.dll" />
+        <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
+      </Component>
+      <!-- OptionsLib -->
+      <Component Id="OptionsLib.dll" Guid="87701D44-970F-40a9-841B-D72AE3533937">
+        <File Source="..\PicParam\bin\x86\Release\OptionsLib.dll" />
+        <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
+      </Component>
+      <!-- PicParamDesktop.exe -->
+      <Component Id="PicParamDesktop" Guid="89E0D0DB-262B-476C-BA8A-A7328A83FB4B">
+        <File Source="..\PicParam\bin\x86\Release\PLMPackLib.exe" KeyPath="yes" Checksum="yes">
+          <Shortcut Id="startMenuAdv" Directory="ProgramMenuDir" Advertise="yes" Name="PLMPackLib" WorkingDirectory="Bin32" Icon="Icon.exe">
+            <Icon Id="Icon.exe" SourceFile="..\PicParam\bin\x86\Release\PLMPackLib.exe" />
+          </Shortcut>
+        </File>
+        <RemoveFolder Id="DeleteShortcutFolder" Directory="ProgramMenuDir" On="uninstall" />
+        <!--update config file-->
+        <util:XmlFile Id="ModifyThumbsPLMPackLibExeConfig" Action="setValue"
+                      ElementPath="/configuration/CustomSection/@thumbnailsPath" File="[Bin32]PLMPackLib.exe.config" Value="[Thumbnails]" />
+        <util:XmlFile Id="ModifyEmptyDbPLMPackLibExeConfig" Action="setValue"
+                      ElementPath="/configuration/applicationSettings/Pic.DAL.Properties.Settings/setting[\[]@name='EmptyDBFilePath'[\]]/value" File="[Bin32]PLMPackLib.exe.config" Value="[Database]PicParamEmpty.db" />
+        <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
+      </Component>
+      <Component Id="PLMPackLibExeConfigModif1" Guid="12C76669-4212-4707-9B5B-79836D494FA6">
+        <Condition>NOT DATABASEEXISTS</Condition>
+        <File Id="PLMPackLib.exe.config1" Source="..\PicParam\bin\x86\Release\PLMPackLib.exe.config" KeyPath="yes" Checksum="yes">
+          <Permission ChangePermission="yes" GenericAll="yes" User="Everyone" TakeOwnership="yes" Write="yes" WriteAttributes="yes" WriteExtendedAttributes="yes" />
+        </File>
+        <util:XmlFile Id="ModifyDDirPLMPackLibExeConfig1" Action="setValue"
+                      File="[Bin32]PLMPackLib.exe.config" ElementPath="/configuration/CustomSection/@dataDirectory" Value="[Data]" />
+        <util:XmlFile Id="SetDatabasePath1" Action="setValue"
+                      File="[Bin32]PLMPackLib.exe.config" ElementPath="configuration/connectionStrings/add" Name="connectionString" Value="metadata=res://*/ModelSQLite.csdl|res://*/ModelSQLite.ssdl|res://*/ModelSQLite.msl;provider=System.Data.SQLite;provider connection string=&quot;data source=[Bin32]StackBuilder.db&quot;" />
+        <util:XmlFile Id="SetInitialReportTemplatePath1" Action="setValue"
+                      File="[Bin32]PLMPackLib.exe.config" ElementPath="/configuration/applicationSettings/TreeDim.StackBuilder.GUIExtension.Properties.Settings/setting[\[]@name='ReportTemplatePath'[\]]/value" Value="[REPORTTEMPLATES]" />
+      </Component>
+      <Component Id="PLMPacKLibExeConfigModif2" Guid="591C2993-7297-476C-AE06-5FC354CFF4FA">
+        <Condition>DATABASEEXISTS</Condition>
+        <File Id="PLMPackLib.exe.config2" Source="..\PicParam\bin\x86\Release\PLMPackLib.exe.config" KeyPath="yes" Checksum="yes">
+          <Permission ChangePermission="yes" GenericAll="yes" User="Everyone" TakeOwnership="yes" Write="yes" WriteAttributes="yes" WriteExtendedAttributes="yes" />
+        </File>
+        <util:XmlFile Id="ModifyDDirPLMPackLibExeConfig2" Action="setValue"
+                      File="[Bin32]PLMPackLib.exe.config" ElementPath="/configuration/CustomSection/@dataDirectory" Value="C:\wPicador\Data\" />
+        <util:XmlFile Id="SetDatabasePath2" Action="setValue"
+                      File="[Bin32]PLMPackLib.exe.config" ElementPath="configuration/connectionStrings/add" Name="connectionString" Value="metadata=res://*/ModelSQLite.csdl|res://*/ModelSQLite.ssdl|res://*/ModelSQLite.msl;provider=System.Data.SQLite;provider connection string=&quot;data source=[Bin32]StackBuilder.db&quot;" />
+        <util:XmlFile Id="SetInitialReportTemplatePath2" Action="setValue"
+                      File="[Bin32]PLMPackLib.exe.config" ElementPath="/configuration/applicationSettings/TreeDim.StackBuilder.GUIExtension.Properties.Settings/setting[\[]@name='ReportTemplatePath'[\]]/value" Value="[REPORTTEMPLATES]" />
+      </Component>
+      <!-- ComponentGeneratorCtrl -->
+      <Component Id="ComponentGeneratorCtrl" Guid="BDB88E5F-CF98-4ac4-805D-2D880D258454">
+        <File Id="GeneratorCtrl.dll.config" Source="..\Pic.Plugin.GeneratorCtrl1\bin\x86\Release\Pic.Plugin.GeneratorCtrl.dll.config" />
+        <File Source="..\Pic.Plugin.GeneratorCtrl1\bin\x86\Release\Pic.Plugin.Generator.dll" />
+        <File Source="..\ThirdPartyComponents\ICSharpCode.TextEditor.dll" />
+        <util:XmlFile Id="ModDDirGeneratorCtrlDllConfig" Action="setValue"
+                      File="[Bin32]Pic.Plugin.GeneratorCtrl.dll.config" ElementPath="/configuration/CustomSection/@dataDirectory" Value="[Data]" />
+        <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
+      </Component>
+      <!-- DataInstall -->
+      <Component Id="DataInstall" Guid="DCD995DE-68CA-42B2-BD79-0610B0E71277">
+        <File Id="ZipExtractExe" Source="..\ZipExtract\Bin\x86\Release\ZipExtract.exe" />
+        <File Id="ZipExtractExeConfig" Source="..\ZipExtract\Bin\x86\Release\ZipExtract.exe.config" />
+        <File Id="ICSharpCodeSharpZipLibdll" Source="..\ThirdPartyComponents\ICSharpCode.SharpZipLib.dll" />
+        <File Id="PlossumCommandLineDll" Source="..\ThirdPartyComponents\Plossum CommandLine.dll" />
+        <File Id="C5Dll" Source="..\ThirdPartyComponents\C5.dll" />
+        <util:XmlFile Id="ModifyEmptyDbZipExtractExeConfig" Action="setValue" File="[Bin32]ZipExtract.exe.config"
+                      ElementPath="/configuration/applicationSettings/Pic.DAL.Properties.Settings/setting[\[]@name='EmptyDBFilePath'[\]]/value" Value="[Database]PicParamEmpty.db"/>
+        <util:XmlFile Id="ModifyDDirZipExtractExeConfig" Action="setValue" File="[Bin32]ZipExtract.exe.config"
+                      ElementPath="/configuration/CustomSection/@dataDirectory" Value="[Data]" />
+        <util:XmlFile Id="ModifyThumbsZipExtractExeConfig" Action="setValue" File="[Bin32]ZipExtract.exe.config"
+                      ElementPath="/configuration/CustomSection/@thumbnailsPath" Value="[Thumbnails]" />
+        <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
+      </Component>
+      <!-- French resources -->
+      <Directory Id="fr_FR" Name="fr-FR">
+        <Component Id="resources_fr" Guid="{4B44F047-B8CC-4eb3-A297-5CFB20E4FC81}">
+          <File Id="PLMPackLib.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\PLMPackLib.resources.dll" KeyPath="yes" Checksum="yes" />
+          <File Id="Pic.Factory2D.Control.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\Pic.Factory2D.Control.resources.dll" />
+          <File Id="OptionsLib.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\OptionsLib.resources.dll" />
+          <File Id="TreeDim.UserControls.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\TreeDim.UserControls.resources.dll" />
+          <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
+        </Component>
+      </Directory>
+      <!-- End french resources -->
+      <!-- Japanese resources-->
+      <Directory Id="ja_JP" Name="ja-JP">
+        <Component Id="resources_jp" Guid="{5832F6A8-4532-4CB6-A0BD-C0CC12A02E14}">
+          <File Id="PLMPackLib.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\PLMPackLib.resources.dll" KeyPath="yes" Checksum="yes" />
+          <File Id="Pic.Factory2D.Control.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\Pic.Factory2D.Control.resources.dll" />
+          <File Id="OptionsLib.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\OptionsLib.resources.dll" />
+          <File Id="TreeDim.UserControls.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\TreeDim.UserControls.resources.dll" />
+          <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
+        </Component>
+      </Directory>
+      <!--End japanese resources-->
+    </DirectoryRef>
+
+    <!--Data directory-->
+    <DirectoryRef Id="Documents">
+      <Component Id="DocumentsFolder" Guid="{290F30F9-D979-4794-8F94-0B338FE77BA0}">
+        <CreateFolder>
+          <util:PermissionEx User="Everyone" GenericAll="yes" />
+        </CreateFolder>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="Database">
+      <Component Id="DatabaseFolder" Guid="{F2C5FDD7-B01D-405B-8B3D-AFDB0493729E}">
+        <CreateFolder>
+          <util:PermissionEx User="Everyone" GenericAll="yes" />
+        </CreateFolder>
+        <File Source="..\PicSharpDb\PicParamEmpty.db" KeyPath="yes" Checksum="yes" />
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="Data">
+      <Component Id="FileRepository" Guid="BEEA8E6F-43CB-451A-B205-4BB68C7BA57C">
+        <File Source="..\PicSharpDb\PackLib_DB_Install.zip" />
+        <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
+      </Component>
+    </DirectoryRef>
+    <!-- ProgramMenuFolder -->
+    <DirectoryRef Id="DesktopFolder">
+      <Component Id="DesktopShortcutComp" Guid="{28CF1E86-4236-4cd8-8AED-0CB95B579C25}">
+        <Shortcut Id="DesktopShortCut" Name="PackLib" Description="Package Library Application" Target="[Bin32]PLMPackLib.exe" Icon="Icon.exe" />
+        <RegistryValue Root="HKCU" Key="Picador Windows\PackLib" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+        <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
+      </Component>
+    </DirectoryRef>
+    <ComponentRef Id="cmp021B803BA0D718F306F7F4F945D49351" />
+    <ComponentRef Id="cmp59BC269C61774B2F844FC5C7A1044574" />
+    <!--********** Application files : END *********************************-->
+    <CustomAction Id="ZipExtractCA" FileKey="ZipExtractExe" Execute="deferred" ExeCommand="/m restore /f &quot;[Data]PackLib_DB_Install.zip&quot; /d &quot;[Data]\&quot;" />
+    <InstallExecuteSequence>
+      <Custom Action="ZipExtractCA" Before="InstallFinalize">$DataInstall&gt;2 AND (Installed OR NETFRAMEWORK40FULL) AND (NOT DATABASEEXISTS)</Custom>
+    </InstallExecuteSequence>
+  </Module>
+</Wix>

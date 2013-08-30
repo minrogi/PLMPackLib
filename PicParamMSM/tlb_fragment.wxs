@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="Bin32">
+            <Component Id="cmp021B803BA0D718F306F7F4F945D49351" Guid="{477CB687-2C2F-4d17-875C-911DC11FA0C4}">
+                <File Id="filF93600A67D214F2543CD88834F8E99AB" KeyPath="yes" Source="..\Pic.Plugin.GeneratorCtrl1\bin\x86\Release\Pic.Plugin.GeneratorCtrl.tlb">
+                    <TypeLib Id="{9A6FA780-C745-41E9-ACA7-E558F09A5CD4}" Description="PicParam component generator" HelpDirectory="Bin32" Language="0" MajorVersion="6" MinorVersion="0">
+                        <Interface Id="{141E0B79-D5B4-3836-873B-C9B7B02C960B}" Name="_GeneratorCtrlEventArgs" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{2556C421-B82E-3EBE-B200-90B8C4A1ED22}" Name="_ComponentSelectHandler" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{7DCC2AC8-85C6-4EDE-860B-6B793B0C4F89}" Name="IGeneratorCtrl" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{AB919F98-3D20-3A47-A428-B3553E967EFE}" Name="_PluginLibraryBrowserCtrl" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{D079CA4D-C458-3C8F-BFC9-EE2D18E05820}" Name="_PluginLibraryBrowser" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{E0C35559-2DC8-36E3-A021-005BCCE07432}" Name="_GeneratorCtlrHandler" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{EE095B32-7F59-3AE6-A445-0C1655F94EE2}" Name="_PluginEventArgs" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{F22CD3E0-5F8D-3856-A6E7-2E66998E601F}" Name="_PluginViewer" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                    </TypeLib>
+                </File>
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+</Wix>

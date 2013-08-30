@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension" xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
+    <!--definitions : beg-->
+    <?define SkuName = "PLMPackLib"?>
+    <!-- This is application version number, update for each release -->
+    <!-- For a major upgrade 3 things should change: ProductId (*), PackageId (*) and Version-->
+    <?define Version="6.0.14.0"?>
+    <!--Major, Minor, Build-->
+    <?define RTMProductVersion="0.0.0"?>
+    <?define UpgradeCode="85B2DB64-71DA-437b-BD2F-6A1511265E15"?>
+    <?define Manufacturer="treeDiM"?>
+    <?define AppName="PLMPackLib"?>
+    <!--definitions : end-->
+    <Product Id="*" Name="PLMPackLib" Language="1033" Version="$(var.Version)" Manufacturer="$(var.Manufacturer)" UpgradeCode="$(var.UpgradeCode)">
+        <Package Id="*" Description="PLMPackLib : Parametric cardboard design" InstallerVersion="300" Compressed="yes" Manufacturer="$(var.Manufacturer)" Comments="$(var.Version)" Platform="x86" ReadOnly="yes" ShortNames="no" Keywords="Installer,MSI,Database" />
+        <Media Id="1" Cabinet="media1.cab" EmbedCab="yes" />
+        <!-- Launch conditions -->
+        <Condition Message="You have to be a local administrator to install $(var.AppName).">Privileged</Condition>
+        <Condition Message="Windows XP or Windows Server 2003 or later is required."><![CDATA[VersionNT >= 501]]></Condition>
+        <Condition Message="This setup requires the .NET Framework 4.0 or higher."><![CDATA[MsiNetAssemblySupport >= "4.0.0.0"]]></Condition>
+        <!--Application files-->
+        <Property Id="ROOTDRIVE"><![CDATA[C:\]]></Property>
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="ProgramFilesFolder">
+                <Directory Id="CompanyDir" Name="$(var.Manufacturer)">
+                    <Directory Id="PLMPackDir" Name="PLMPack">
+                        <Directory Id="INSTALLLOCATION" Name="PLMPackLib">
+                            <Merge Id="PLMPackLibMSM" Language="1033" DiskId="1" SourceFile="..\PicParamMSM\bin\Release\PLMPackLibMSM.msm" />
+                            <Merge Id="StackBuilderGUIExtMSM" Language="1033" DiskId="1" SourceFile="..\..\StackBuilder\StackBuilderGUIExtMSM\bin\release\StackBuilderGUIExtMSM.msm" />
+                        </Directory>
+                    </Directory>
+                </Directory>
+            </Directory>
+        </Directory>
+        <Feature Id="PLMPackLib" Title="PLMPackLib" Level="1" Absent="disallow" Display="expand" ConfigurableDirectory="INSTALLLOCATION">
+            <MergeRef Id="PLMPackLibMSM" Primary="yes" />
+            <MergeRef Id="StackBuilderGUIExtMSM" Primary="yes" />
+        </Feature>
+        <!--Properties-->
+        <Property Id="INSTALLDESKTOPSHORTCUT" Value="1" />
+        <Property Id="WIXUI_INSTALLDIR" Value="INSTALLLOCATION" />
+        <Property Id="ALLUSERS" Value="1" />
+        <!--Upgrade table-->
+        <Property Id="PROJECT_UPGRADE" Secure="yes" />
+        <Property Id="PROJECT_DOWNGRADE" Secure="yes" />
+        <Upgrade Id="$(var.UpgradeCode)">
+            <UpgradeVersion Minimum="0.0.0.0" IncludeMinimum="yes" Maximum="$(var.Version)" IncludeMaximum="no" OnlyDetect="no" Property="PROJECT_UPGRADE" />
+            <UpgradeVersion Minimum="$(var.Version)" IncludeMinimum="no" OnlyDetect="yes" Property="PROJECT_DOWNGRADE" />
+        </Upgrade>
+        <!--UI-->
+        <UI>
+            <!-- Add UI to the installer -->
+            <UIRef Id="WixUI_InstallDir" />
+            <!-- Trigger custom action -->
+            <Publish Dialog="ExitDialog" Control="Finish" Event="DoAction" Value="LaunchApplication">WIXUI_EXITDIALOGOPTIONALCHECKBOX = 1 and NOT Installed</Publish>
+        </UI>
+        <Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="Launch PLMPackLib" />
+        <!--UI-->
+        <!-- Add UI to the installer -->
+        <WixVariable Id="WixUIBannerBmp" Value="WixUIBannerBmp.bmp" />
+        <WixVariable Id="WixUIDialogBmp" Value="WixUIDialogBmp.bmp" />
+        <WixVariable Id="WixUILicenseRtf" Value="License.rtf" />
+        <!--Include 'Start' custom action-->
+        <Property Id="WixShellExecTarget" Value="[#PLMPackLib.exe]" />
+        <CustomAction Id="LaunchApplication" BinaryKey="WixCA" DllEntry="WixShellExec" Impersonate="yes" />
+        <!-- Prevent downgrade custom action -->
+        <CustomAction Id="NoDownGrade" Error="A later version of [ProductName] is already installed." />
+        <!-- Install execute sequence -->
+        <InstallExecuteSequence>
+            <LaunchConditions After="AppSearch" />
+            <Custom Action="NoDownGrade" After="FindRelatedProducts"><![CDATA[PROJECT_DOWNGRADE]]></Custom>
+            <RemoveExistingProducts After="InstallFinalize" />
+        </InstallExecuteSequence>
+        <!-- Install execute sequence -->
+        <!--Icon-->
+        <Icon Id="PLMPackLib.ico" SourceFile="..\PicParam\Resources\PLMPackLib.ico" />
+        <Property Id="ARPPRODUCTICON" Value="PLMPackLib.ico" />
+        <!---->
+    </Product>
+</Wix>

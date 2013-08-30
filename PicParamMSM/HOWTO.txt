@@ -1,0 +1,19 @@
+Author: François Gasnier
+Date: 24/03/2011
+
+Subject: How to regenerate wix fragment for COM interop com registration ?
+--------------------------------------------------------------------------
+The solution is fairly simple: generate the TLB for the interop assembly using RegAsm and then run Heat against the assembly and the TLB:
+
+RegAsm.exe InteropAssembly.dll /tlb
+Heat.exe file InteropAssembly.dll /out asm_fragment.wxs
+Heat.exe file InteropAssembly.tlb /out tlb_fragment.wxs
+
+Copy the two WiX fragments in the .wxs files to your WiX source and edit them as required.
+
+Date: 07/04/2013
+
+Subject: Actually used command lines:
+-------------------------------------
+"C:\Program Files (x86)\Wix Toolset v3.7\bin\heat.exe" file "K:\Codeplex\PLMPackLib\PicParam\bin\x86\Release\Pic.Plugin.GeneratorCtrl.dll" -o "K:\codeplex\plmpacklib\PicParamMSM\asm_fragment.wxs"
+"C:\Program Files (x86)\Wix Toolset v3.7\bin\heat.exe" file "K:\Codeplex\PLMPackLib\PicParam\bin\x86\Release\Pic.Plugin.GeneratorCtrl.tlb" -o "K:\codeplex\plmpacklib\PicParamMSM\tlb_fragment.wxs"

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Product manufacturer -->
+<?define ProductManufacturer = "treeDiM"?>
+<!-- Product version -->
+<?define ProductVersion = "6.0.14.0"?>
+<!-- Company URL -->
+<?define CompanyURL = "http://www.picador.fr/" ?>
+<!-- Package_Description -->
+<?define Package_Description = "PLMPackLib merge module" ?>
+<!-- Package_Comments -->
+<?define Package_Comments = "Requires .NET 4.0 framework"?>
+<Include>
+</Include>

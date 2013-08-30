@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="bnCancel.Text" xml:space="preserve">
+    <value>&amp;Annuler</value>
+  </data>
+	<assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+	<data name="cbAllowRowRotation.Location" type="System.Drawing.Point, System.Drawing">
+		<value>7, 19</value>
+	</data>
+	<data name="cbAllowRowRotation.Size" type="System.Drawing.Size, System.Drawing">
+		<value>208, 17</value>
+	</data>
+	<data name="cbAllowRowRotation.Text" xml:space="preserve">
+    <value>Permettre les rotation dans les rangées</value>
+  </data>
+	<data name="cbAllowColumnRotation.Location" type="System.Drawing.Point, System.Drawing">
+		<value>7, 42</value>
+	</data>
+	<data name="cbAllowColumnRotation.Size" type="System.Drawing.Size, System.Drawing">
+		<value>218, 17</value>
+	</data>
+	<data name="cbAllowColumnRotation.Text" xml:space="preserve">
+    <value>Permettre les rotations dans les colonnes</value>
+  </data>
+	<data name="lblCardboardFormat.Size" type="System.Drawing.Size, System.Drawing">
+		<value>72, 13</value>
+	</data>
+	<data name="lblCardboardFormat.Text" xml:space="preserve">
+    <value>Format carton</value>
+  </data>
+	<data name="bnEditCardboardFormats.Location" type="System.Drawing.Point, System.Drawing">
+		<value>210, 33</value>
+	</data>
+	<data name="bnEditCardboardFormats.Size" type="System.Drawing.Size, System.Drawing">
+		<value>200, 23</value>
+	</data>
+	<data name="bnEditCardboardFormats.Text" xml:space="preserve">
+    <value>&amp;Editer les formats de carton...</value>
+  </data>
+	<data name="nudOffsetY.Location" type="System.Drawing.Point, System.Drawing">
+		<value>77, 39</value>
+	</data>
+	<data name="nudOffsetY.Size" type="System.Drawing.Size, System.Drawing">
+		<value>66, 20</value>
+	</data>
+	<data name="nudOffsetX.Location" type="System.Drawing.Point, System.Drawing">
+		<value>77, 16</value>
+	</data>
+	<data name="lbOffsetY.Location" type="System.Drawing.Point, System.Drawing">
+		<value>9, 42</value>
+	</data>
+	<data name="lbOffsetX.Location" type="System.Drawing.Point, System.Drawing">
+		<value>9, 19</value>
+	</data>
+	<data name="tabAllowedPatterns.Text" xml:space="preserve">
+    <value>Placements autorisés</value>
+  </data>
+	<data name="tabMargins.Text" xml:space="preserve">
+    <value>Marges</value>
+  </data>
+	<data name="nudMinDistance.Location" type="System.Drawing.Point, System.Drawing">
+		<value>194, 134</value>
+	</data>
+	<data name="nudMinDistance.Size" type="System.Drawing.Size, System.Drawing">
+		<value>68, 20</value>
+	</data>
+	<data name="nudMinDistance.TabIndex" type="System.Int32, mscorlib">
+		<value>15</value>
+	</data>
+	<data name="&gt;&gt;nudMinDistance.Name" xml:space="preserve">
+    <value>nudMinDistance</value>
+  </data>
+	<data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+		<value>70, 13</value>
+	</data>
+	<data name="label9.Text" xml:space="preserve">
+    <value>Espace entre</value>
+  </data>
+	<data name="labelLeastMarginRightLeft.Location" type="System.Drawing.Point, System.Drawing">
+		<value>266, 104</value>
+	</data>
+	<data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+		<value>100, 44</value>
+	</data>
+	<data name="nudLeftRightRemaining.Size" type="System.Drawing.Size, System.Drawing">
+		<value>68, 20</value>
+	</data>
+	<data name="$this.Text" xml:space="preserve">
+    <value>Paramètres d'imposition...</value>
+  </data>
+	<data name="lbRemainingLeftRight.Text" xml:space="preserve">
+		<value>Marge droite minimale</value>
+	</data>
+	<data name="lbRemainingBottomTop.Text" xml:space="preserve">
+		<value>Marge minimale haute</value>
+	</data>
+	<data name="label4.Text" xml:space="preserve">
+		<value>marge</value>
+	</data>
+	<data name="cbRightLeft.Items" xml:space="preserve">
+		<value>Gauche</value>
+	</data>
+	<data name="cbRightLeft.Items1" xml:space="preserve">
+		<value>Droite</value>
+	</data>
+	<data name="cbRightLeft.Items2" xml:space="preserve">
+		<value>Distribué</value>
+	</data>
+	<data name="label2.Text" xml:space="preserve">
+		<value>marge</value>
+	</data>
+	<data name="cbTopBottom.Items" xml:space="preserve">
+		<value>Bas</value>
+	</data>
+	<data name="cbTopBottom.Items1" xml:space="preserve">
+		<value>Haut</value>
+	</data>
+	<data name="cbTopBottom.Items2" xml:space="preserve">
+		<value>Distribué</value>
+	</data>
+	<data name="bnOk.Text" xml:space="preserve">
+		<value>&amp;OK</value>
+	</data>
+	<data name="lbOffsetY.Text" xml:space="preserve">
+		<value>Offset X</value>
+	</data>
+	<data name="lbOffsetX.Text" xml:space="preserve">
+		<value>Offset Y</value>
+	</data>
+	<data name="tabOffsets.Text" xml:space="preserve">
+		<value>Offsets</value>
+	</data>
+</root>

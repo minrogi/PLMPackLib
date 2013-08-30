@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{672D8664-0A6D-4B38-AB51-3BAA1D238019}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pic.Data</RootNamespace>
+    <AssemblyName>Pic.Data.DocumentTree</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Microsoft Enterprise Library\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComponentSearchMethodDB.cs" />
+    <Compile Include="FormCreateBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateBranch.Designer.cs">
+      <DependentUpon>FormCreateBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateDocument.Designer.cs">
+      <DependentUpon>FormCreateDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pic.Data.DocumentTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pic.Data.DocumentTreeView.Designer.cs">
+      <DependentUpon>Pic.Data.DocumentTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pic.Data.DocumentTreeBranchView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pic.Data.DocumentTreeBranchView.Designer.cs">
+      <DependentUpon>Pic.Data.DocumentTreeBranchView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pic.Data.ThumbnailGeneratorPlugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pic.Data.DocumentTreeView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Pic.Data.DocumentTreeView.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pic.Data.DocumentTreeBranchView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Pic.Data.DocumentTreeBranchView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pic.Data.PersistedObjects\Pic.Data.PersistedObjects.csproj">
+      <Project>{E014B8DF-FFB5-480E-BA97-8BF96DF61E15}</Project>
+      <Name>Pic.Data.PersistedObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.Factory2D\Pic.Factory2D.csproj">
+      <Project>{18305BA6-E8D3-4E21-8C28-1B1A4AB42CAC}</Project>
+      <Name>Pic.Factory2D</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.Plugin.Host\Pic.Plugin.Host.csproj">
+      <Project>{120B7826-6403-41BF-AEF9-61FE400CF0F9}</Project>
+      <Name>Pic.Plugin.Host</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.Plugin.PluginInterface\Pic.Plugin.PluginInterface.csproj">
+      <Project>{F7AF3588-4E47-464A-8729-3FDBC471D00C}</Project>
+      <Name>Pic.Plugin.PluginInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.Plugin.Tools\Pic.Plugin.Tools.csproj">
+      <Project>{3B400C41-D6B3-4683-8450-85AED44FAA52}</Project>
+      <Name>Pic.Plugin.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TreeDim.UserControls\TreeDim.UserControls.csproj">
+      <Project>{D75634E3-34AA-4418-A6B6-3647BFF90606}</Project>
+      <Name>TreeDim.UserControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\OPENFOLD.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\BMP.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CLSDFOLD.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormCreateBranch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormCreateBranch.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateDocument.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormCreateDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DOC.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\DEFAULTTHUMBNAIL.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

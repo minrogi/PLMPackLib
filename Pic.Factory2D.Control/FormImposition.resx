@@ -1,0 +1,1004 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pbCut.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;toolStripButtonExport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSplitButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCardboardEfficiency.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblCardboardEfficiency.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblValueFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonClose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="lblFormat.Text" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="lblValueLengthCut.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="buttonClose.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblValueLengthCut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="&gt;&gt;toolStripExportDXF.Name" xml:space="preserve">
+    <value>toolStripExportDXF</value>
+  </data>
+  <data name="lblValueCardboardFormat.Text" xml:space="preserve">
+    <value>: 0.0 x 0.0 (0.0)</value>
+  </data>
+  <data name="lblCardboardEfficiency.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="buttonClose.Text" xml:space="preserve">
+    <value>&amp;Close</value>
+  </data>
+  <data name="&gt;&gt;lblValueLengthTotal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripExportDXF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 22</value>
+  </data>
+  <data name="lblValueArea.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;toolStripExportPDF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="grpbArea.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="toolStripButtonExport.Text" xml:space="preserve">
+    <value>Export...</value>
+  </data>
+  <data name="toolStripButtonPicGEOM.Text" xml:space="preserve">
+    <value>Ouvrir avec PicGEOM</value>
+  </data>
+  <data name="&gt;&gt;lblValueFormat.Name" xml:space="preserve">
+    <value>lblValueFormat</value>
+  </data>
+  <data name="lblValueCardboardEfficiency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 42</value>
+  </data>
+  <data name="lblValueCardboardFormat.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormImposition</value>
+  </data>
+  <data name="&gt;&gt;lblCardboardEfficiency.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblNameNumbers.Text" xml:space="preserve">
+    <value>Numbers</value>
+  </data>
+  <data name="listBoxSolutions.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;grpbLengthes.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="toolStripButtonPicGEOM.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAFESURBVFhH5VcLDoMgDPXonM2D4SwCQj/YVlmWaUIwG+17
+        vH7AZXnhs+17htE95UfPbNHwAI6RkEh/rOu6aQfsAtYa0E/wEGQCI4eF3NPggFkVyO84FFWdGeCEQCNt
+        F5pZ4BKBr4FLISCyxz1U3GDyZphwXJ7hHKDgcQfnBq1pMzhWQA8OhHoCBFxbqqQPlIRjd90qgQlAk8l1
+        rgXvFMhGqclcgvcKbE2Hszapvg8kcEg4Ke68Aql3NM3K0CRPGStzLYGMYt4xexi1MTuSKyYVhjNzspm2
+        XnaAjbQKoCro3Ch7Bs/3LgHRXqvYHQKXthoSl05KJSBnXjsSB68jr92PEhBOP5zdLfvHFPDUMth4CXhu
+        wy6b2t5R8pbb7fQ5ERC+C7yqW+xY8HQchzB/jC61rngKV/ihL/UlRfuF5Flnidn/r/0AVaGA7Q38jgkA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="toolStripButtonPicGEOM.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="&gt;&gt;factoryViewer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="toolStripButtonExport.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="&gt;&gt;lblNameTotal.Name" xml:space="preserve">
+    <value>lblNameTotal</value>
+  </data>
+  <data name="&gt;&gt;lblValueCardboardFormat.Parent" xml:space="preserve">
+    <value>grpbCardboardFormat</value>
+  </data>
+  <data name="lblValueCardboardFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 23</value>
+  </data>
+  <data name="grpbArea.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 77</value>
+  </data>
+  <data name="lblSolutions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>500, 7</value>
+  </data>
+  <data name="lblValueArea.Text" xml:space="preserve">
+    <value>: 0.0 m²</value>
+  </data>
+  <data name="&gt;&gt;lblSolutions.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblValueCardboardFormat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpbCardboardFormat.Name" xml:space="preserve">
+    <value>grpbCardboardFormat</value>
+  </data>
+  <data name="pbFold.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="lblNameEfficiency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="&gt;&gt;lblNameEfficiency.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="toolStripButtonExport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 36</value>
+  </data>
+  <data name="grpbArea.Text" xml:space="preserve">
+    <value>Cutting area</value>
+  </data>
+  <data name="toolStripExportDXF.Text" xml:space="preserve">
+    <value>DXF</value>
+  </data>
+  <data name="&gt;&gt;lblValueFormat.Parent" xml:space="preserve">
+    <value>grpbArea</value>
+  </data>
+  <data name="&gt;&gt;listBoxSolutions.Name" xml:space="preserve">
+    <value>listBoxSolutions</value>
+  </data>
+  <data name="&gt;&gt;listBoxSolutions.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblNameArea.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;lblValueArea.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblNameTotal.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lblValueLengthFold.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pbFold.Name" xml:space="preserve">
+    <value>pbFold</value>
+  </data>
+  <data name="lblValueEfficiency.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblValueFormat.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="toolStripExportPDF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 22</value>
+  </data>
+  <data name="listBoxSolutions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 204</value>
+  </data>
+  <data name="grpbArea.Location" type="System.Drawing.Point, System.Drawing">
+    <value>500, 462</value>
+  </data>
+  <data name="&gt;&gt;lblValueLengthCut.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblValueArea.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpbArea.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listBoxSolutions.ItemHeight" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;lblFormat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblValueLengthCut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNameTotal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblValueArea.Parent" xml:space="preserve">
+    <value>grpbArea</value>
+  </data>
+  <data name="listBoxSolutions.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;lblValueLengthTotal.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblValueFormat.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;pbFold.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblValueArea.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblValueCardboardEfficiency.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="factoryViewer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="toolStripImposition.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="grpbLengthes.Text" xml:space="preserve">
+    <value>Lengthes</value>
+  </data>
+  <data name="grpbLengthes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>500, 374</value>
+  </data>
+  <data name="lblValueCardboardFormat.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;toolStripExportDES.Name" xml:space="preserve">
+    <value>toolStripExportDES</value>
+  </data>
+  <data name="grpbCardboardFormat.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;buttonClose.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="toolStripExportPDF.Text" xml:space="preserve">
+    <value>PDF</value>
+  </data>
+  <data name="&gt;&gt;grpbArea.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblNameFormat.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;lblValueCardboardEfficiency.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblNameFormat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblValueEfficiency.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;lblValueCardboardEfficiency.Name" xml:space="preserve">
+    <value>lblValueCardboardEfficiency</value>
+  </data>
+  <data name="lblValueLengthCut.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblNameEfficiency.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNameNumbers.Name" xml:space="preserve">
+    <value>lblNameNumbers</value>
+  </data>
+  <data name="&gt;&gt;lblValueLengthFold.Name" xml:space="preserve">
+    <value>lblValueLengthFold</value>
+  </data>
+  <data name="lblValueEfficiency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 55</value>
+  </data>
+  <data name="&gt;&gt;grpbCardboardFormat.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="buttonClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 23</value>
+  </data>
+  <data name="lblNameEfficiency.Text" xml:space="preserve">
+    <value>Efficiency</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;lblValueEfficiency.Parent" xml:space="preserve">
+    <value>grpbArea</value>
+  </data>
+  <data name="&gt;&gt;lblNameNumbers.Parent" xml:space="preserve">
+    <value>grpbCardboardFormat</value>
+  </data>
+  <data name="grpbLengthes.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;lblNameNumbers.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;factoryViewer.Type" xml:space="preserve">
+    <value>Pic.Factory2D.Control.FactoryViewer, Pic.Factory2D.Control, Version=1.0.4370.24101, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="grpbArea.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;grpbLengthes.Name" xml:space="preserve">
+    <value>grpbLengthes</value>
+  </data>
+  <data name="lblValueArea.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblValueCardboardFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 13</value>
+  </data>
+  <data name="pbFold.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
+  </data>
+  <data name="&gt;&gt;lblNameFormat.Name" xml:space="preserve">
+    <value>lblNameFormat</value>
+  </data>
+  <data name="lblValueLengthTotal.Text" xml:space="preserve">
+    <value>: 0.0 m</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;lblValueLengthTotal.Parent" xml:space="preserve">
+    <value>grpbLengthes</value>
+  </data>
+  <data name="&gt;&gt;lblSolutions.Name" xml:space="preserve">
+    <value>lblSolutions</value>
+  </data>
+  <data name="&gt;&gt;pbCut.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblCardboardEfficiency.Parent" xml:space="preserve">
+    <value>grpbCardboardFormat</value>
+  </data>
+  <data name="&gt;&gt;lblCardboardEfficiency.Name" xml:space="preserve">
+    <value>lblCardboardEfficiency</value>
+  </data>
+  <data name="&gt;&gt;lblNameArea.Parent" xml:space="preserve">
+    <value>grpbArea</value>
+  </data>
+  <data name="lblValueEfficiency.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;lblFormat.Name" xml:space="preserve">
+    <value>lblFormat</value>
+  </data>
+  <data name="lblValueLengthTotal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;toolStripExportDES.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblValueArea.Name" xml:space="preserve">
+    <value>lblValueArea</value>
+  </data>
+  <data name="lblValueFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 36</value>
+  </data>
+  <data name="&gt;&gt;factoryViewer.Name" xml:space="preserve">
+    <value>factoryViewer</value>
+  </data>
+  <data name="lblValueCardboardFormat.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="lblValueLengthFold.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 38</value>
+  </data>
+  <data name="grpbCardboardFormat.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="lblNameArea.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCardboardEfficiency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 42</value>
+  </data>
+  <data name="&gt;&gt;grpbLengthes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNameTotal.Parent" xml:space="preserve">
+    <value>grpbLengthes</value>
+  </data>
+  <data name="lblValueNumbers.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;lblValueCardboardEfficiency.Parent" xml:space="preserve">
+    <value>grpbCardboardFormat</value>
+  </data>
+  <data name="lblFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="lblCardboardEfficiency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="lblNameNumbers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 62</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="factoryViewer.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblValueNumbers.Name" xml:space="preserve">
+    <value>lblValueNumbers</value>
+  </data>
+  <data name="&gt;&gt;toolStripImposition.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;toolStripImposition.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblNameEfficiency.Name" xml:space="preserve">
+    <value>lblNameEfficiency</value>
+  </data>
+  <data name="lblValueFormat.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;toolStripExportPDF.Name" xml:space="preserve">
+    <value>toolStripExportPDF</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblValueEfficiency.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listBoxSolutions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>500, 42</value>
+  </data>
+  <data name="&gt;&gt;buttonClose.Name" xml:space="preserve">
+    <value>buttonClose</value>
+  </data>
+  <data name="&gt;&gt;toolStripButtonPicGEOM.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="grpbLengthes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 85</value>
+  </data>
+  <data name="lblFormat.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblValueLengthFold.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="lblValueLengthFold.Text" xml:space="preserve">
+    <value>: 0.0 m</value>
+  </data>
+  <data name="lblValueCardboardEfficiency.Text" xml:space="preserve">
+    <value>: 0.0%</value>
+  </data>
+  <data name="lblNameFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 36</value>
+  </data>
+  <data name="lblSolutions.Text" xml:space="preserve">
+    <value>Solutions</value>
+  </data>
+  <data name="lblNameFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="lblValueEfficiency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 13</value>
+  </data>
+  <data name="toolStripImposition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>689, 39</value>
+  </data>
+  <data name="lblValueLengthCut.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 20</value>
+  </data>
+  <data name="&gt;&gt;pbCut.Name" xml:space="preserve">
+    <value>pbCut</value>
+  </data>
+  <data name="lblValueLengthCut.Text" xml:space="preserve">
+    <value>: 0.0 m</value>
+  </data>
+  <data name="lblNameNumbers.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;lblNameFormat.Parent" xml:space="preserve">
+    <value>grpbArea</value>
+  </data>
+  <data name="&gt;&gt;lblValueLengthTotal.Name" xml:space="preserve">
+    <value>lblValueLengthTotal</value>
+  </data>
+  <data name="pbCut.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;lblValueEfficiency.Name" xml:space="preserve">
+    <value>lblValueEfficiency</value>
+  </data>
+  <data name="&gt;&gt;lblValueNumbers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblValueNumbers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="&gt;&gt;toolStripButtonPicGEOM.Name" xml:space="preserve">
+    <value>toolStripButtonPicGEOM</value>
+  </data>
+  <data name="&gt;&gt;toolStripButtonExport.Name" xml:space="preserve">
+    <value>toolStripButtonExport</value>
+  </data>
+  <data name="toolStripExportDES.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 22</value>
+  </data>
+  <data name="&gt;&gt;lblFormat.Parent" xml:space="preserve">
+    <value>grpbCardboardFormat</value>
+  </data>
+  <data name="toolStripButtonPicGEOM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripImposition.Text" xml:space="preserve">
+    <value>toolStripImposition</value>
+  </data>
+  <data name="lblValueArea.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 13</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Imposition...</value>
+  </data>
+  <data name="lblValueNumbers.Text" xml:space="preserve">
+    <value>: 0 (0x0)</value>
+  </data>
+  <data name="&gt;&gt;lblValueNumbers.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 23</value>
+  </data>
+  <data name="&gt;&gt;pbCut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblValueFormat.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;lblNameArea.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblNameFormat.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pbFold.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 38</value>
+  </data>
+  <data name="lblValueEfficiency.Text" xml:space="preserve">
+    <value>: 0.0%</value>
+  </data>
+  <data name="&gt;&gt;lblNameArea.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbFold.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblValueNumbers.Parent" xml:space="preserve">
+    <value>grpbCardboardFormat</value>
+  </data>
+  <data name="pbCut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
+  </data>
+  <data name="lblCardboardEfficiency.Text" xml:space="preserve">
+    <value>Efficiency</value>
+  </data>
+  <data name="lblNameNumbers.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblValueLengthFold.Parent" xml:space="preserve">
+    <value>grpbLengthes</value>
+  </data>
+  <data name="lblValueFormat.Text" xml:space="preserve">
+    <value>: 0.0 x 0.0</value>
+  </data>
+  <data name="lblNameFormat.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblFormat.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;toolStripImposition.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblNameEfficiency.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;grpbCardboardFormat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSolutions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 39</value>
+  </data>
+  <data name="lblFormat.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="lblSolutions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="&gt;&gt;lblValueLengthCut.Parent" xml:space="preserve">
+    <value>grpbLengthes</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblSolutions.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;toolStripExportDXF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblValueLengthTotal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 62</value>
+  </data>
+  <data name="factoryViewer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>495, 531</value>
+  </data>
+  <data name="lblNameArea.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblValueLengthFold.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblValueEfficiency.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblNameFormat.Text" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="listBoxSolutions.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="pbFold.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="grpbCardboardFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 86</value>
+  </data>
+  <data name="lblValueLengthTotal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblValueLengthFold.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblValueCardboardFormat.Name" xml:space="preserve">
+    <value>lblValueCardboardFormat</value>
+  </data>
+  <data name="lblValueNumbers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 62</value>
+  </data>
+  <data name="&gt;&gt;buttonClose.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNameNumbers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="grpbLengthes.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="grpbCardboardFormat.Text" xml:space="preserve">
+    <value>Cardboard format</value>
+  </data>
+  <data name="&gt;&gt;grpbArea.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;buttonClose.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblValueNumbers.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;grpbCardboardFormat.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lblValueNumbers.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="lblNameTotal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNameEfficiency.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="lblSolutions.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblValueCardboardEfficiency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 13</value>
+  </data>
+  <data name="lblNameEfficiency.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNameEfficiency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 55</value>
+  </data>
+  <data name="&gt;&gt;listBoxSolutions.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblNameNumbers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 13</value>
+  </data>
+  <data name="lblValueLengthTotal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="lblNameArea.Text" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="&gt;&gt;lblSolutions.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblValueCardboardFormat.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblValueLengthCut.Name" xml:space="preserve">
+    <value>lblValueLengthCut</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>689, 576</value>
+  </data>
+  <data name="lblNameTotal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 62</value>
+  </data>
+  <data name="toolStripExportDES.Text" xml:space="preserve">
+    <value>DES</value>
+  </data>
+  <data name="&gt;&gt;toolStripImposition.Name" xml:space="preserve">
+    <value>toolStripImposition</value>
+  </data>
+  <data name="lblNameArea.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 13</value>
+  </data>
+  <data name="&gt;&gt;lblValueCardboardEfficiency.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="factoryViewer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 42</value>
+  </data>
+  <data name="&gt;&gt;listBoxSolutions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNameTotal.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pbCut.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 20</value>
+  </data>
+  <data name="lblNameTotal.Text" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="&gt;&gt;factoryViewer.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;grpbArea.Name" xml:space="preserve">
+    <value>grpbArea</value>
+  </data>
+  <data name="buttonClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>611, 550</value>
+  </data>
+  <data name="lblNameNumbers.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblValueLengthFold.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="lblNameFormat.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="toolStripImposition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;pbCut.Parent" xml:space="preserve">
+    <value>grpbLengthes</value>
+  </data>
+  <data name="lblSolutions.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="lblNameTotal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="lblNameTotal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;lblValueLengthFold.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbFold.Parent" xml:space="preserve">
+    <value>grpbLengthes</value>
+  </data>
+  <data name="lblValueCardboardEfficiency.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="toolStripButtonExport.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="&gt;&gt;grpbLengthes.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblValueLengthCut.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblValueLengthTotal.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblNameArea.Name" xml:space="preserve">
+    <value>lblNameArea</value>
+  </data>
+  <data name="grpbCardboardFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>502, 285</value>
+  </data>
+  <data name="&gt;&gt;lblValueFormat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNameEfficiency.Parent" xml:space="preserve">
+    <value>grpbArea</value>
+  </data>
+  <data name="lblNameArea.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 18</value>
+  </data>
+  <data name="lblValueArea.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 18</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="toolStripImposition.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+</root>
