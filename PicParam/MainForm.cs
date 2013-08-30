@@ -235,12 +235,13 @@ namespace PicParam
             try
             {
                 // form
-                if (DialogResult.No == MessageBox.Show(PicParam.Properties.Resources.ID_CLEARDATABASEWARNING))
-                    return;
-                // start thread
-                FormWorkerThreadTask.Execute(new Pic.DAL.TPTClearDatabase());
-                // refresh tree
-                _treeViewCtrl.RefreshTree();
+                if (DialogResult.Yes == MessageBox.Show(PicParam.Properties.Resources.ID_CLEARDATABASEWARNING))
+                {
+                    // start thread
+                    FormWorkerThreadTask.Execute(new Pic.DAL.TPTClearDatabase());
+                    // refresh tree
+                    _treeViewCtrl.RefreshTree();
+                }
             }
             catch (Exception ex)
             {
