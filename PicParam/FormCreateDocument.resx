@@ -520,7 +520,7 @@
     <value>componentLoaderControl</value>
   </data>
   <data name="&gt;&gt;componentLoaderControl.Type" xml:space="preserve">
-    <value>PicParam.ComponentLoaderControl, PLMPackLib, Version=6.0.14.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>PicParam.ComponentLoaderControl, PLMPackLib, Version=6.0.15.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;componentLoaderControl.Parent" xml:space="preserve">
     <value>$this</value>

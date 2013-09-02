@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionPanelWindow));
             this.checkBoxMaximized = new System.Windows.Forms.CheckBox();
+            this.checkBoxCenteredTitleBar = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // checkBoxMaximized
@@ -38,11 +39,18 @@
             this.checkBoxMaximized.Name = "checkBoxMaximized";
             this.checkBoxMaximized.UseVisualStyleBackColor = true;
             // 
+            // checkBoxCenteredTitleBar
+            // 
+            resources.ApplyResources(this.checkBoxCenteredTitleBar, "checkBoxCenteredTitleBar");
+            this.checkBoxCenteredTitleBar.Name = "checkBoxCenteredTitleBar";
+            this.checkBoxCenteredTitleBar.UseVisualStyleBackColor = true;
+            // 
             // OptionPanelWindow
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CategoryPath = "Options\\Window";
+            this.Controls.Add(this.checkBoxCenteredTitleBar);
             this.Controls.Add(this.checkBoxMaximized);
             this.DisplayName = "Window";
             this.Name = "OptionPanelWindow";
@@ -55,5 +63,6 @@
         #endregion
 
         private System.Windows.Forms.CheckBox checkBoxMaximized;
+        private System.Windows.Forms.CheckBox checkBoxCenteredTitleBar;
     }
 }

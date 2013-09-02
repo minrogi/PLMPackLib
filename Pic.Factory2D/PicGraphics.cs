@@ -116,7 +116,7 @@ namespace Pic
             }
             #endregion
 
-            #region Implémentatioin IDisposable
+            #region Implement IDisposable
             public virtual void Dispose()
             { 
             }

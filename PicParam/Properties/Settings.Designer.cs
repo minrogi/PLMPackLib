@@ -83,18 +83,6 @@ namespace PicParam.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int ThumbnailAnnotationMode {
-            get {
-                return ((int)(this["ThumbnailAnnotationMode"]));
-            }
-            set {
-                this["ThumbnailAnnotationMode"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("11")]
         public int ThumbnailAnnotationFont {
             get {
@@ -135,6 +123,30 @@ namespace PicParam.Properties {
             }
             set {
                 this["StartMaximized"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int ThumbnailAnnotationMode {
+            get {
+                return ((int)(this["ThumbnailAnnotationMode"]));
+            }
+            set {
+                this["ThumbnailAnnotationMode"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ShowCenteredTitle {
+            get {
+                return ((bool)(this["ShowCenteredTitle"]));
+            }
+            set {
+                this["ShowCenteredTitle"] = value;
             }
         }
     }

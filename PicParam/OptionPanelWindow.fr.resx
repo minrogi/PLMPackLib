@@ -130,6 +130,12 @@
   <data name="checkBoxMaximized.Text" xml:space="preserve">
     <value>Maximiser au démarrage</value>
   </data>
+  <data name="checkBoxCenteredTitleBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 17</value>
+  </data>
+  <data name="checkBoxCenteredTitleBar.Text" xml:space="preserve">
+    <value>Affichage du titre centré</value>
+  </data>
   <data name="$this.AccessibleDescription" xml:space="preserve">
     <value>Paramétrage de l'affichage</value>
   </data>

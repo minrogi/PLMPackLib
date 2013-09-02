@@ -44,6 +44,8 @@ namespace PicParam
                 AfterExpand += new TreeViewEventHandler(DocumentTreeView_AfterExpand);
                 AfterSelect += new TreeViewEventHandler(DocumentTreeView_AfterSelect);
 
+                MouseDown += new MouseEventHandler(DocumentTreeView_MouseDown);
+
                 this.AllowDrop = true;
                 ItemDrag += new ItemDragEventHandler(DocumentTreeView_ItemDrag);
                 DragEnter += new DragEventHandler(DocumentTreeView_DragEnter);
@@ -69,6 +71,7 @@ namespace PicParam
                 _log.Debug(ex.ToString());
             }
         }
+
         #endregion
 
         #region Drag and drop handling
@@ -330,6 +333,15 @@ namespace PicParam
             catch (System.Exception ex)
             {
                 _log.Error(ex.ToString());
+            }
+        }
+
+        void DocumentTreeView_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Right)
+            {
+                TreeNode tn = GetNodeAt(e.Location);
+                SelectedNode = tn;
             }
         }
         #endregion

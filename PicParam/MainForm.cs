@@ -161,6 +161,28 @@ namespace PicParam
         {
             toolStripButtonEditParameters.Enabled = hasDependancy && _pluginViewCtrl.Visible;
         }
+
+        private void UpdateTextPosition(object sender, EventArgs e)
+        {
+            // exit when in design mode
+            if ((this.DesignMode)||!(Settings.Default.ShowCenteredTitle)) return;
+            // measure text length and compute starting point of text
+            Graphics g = this.CreateGraphics();
+            double startingPoint = (this.Width / 2) - (g.MeasureString(this.Text.Trim(), this.Font).Width / 2);
+            double widthOfASpace = g.MeasureString(" ", this.Font).Width;
+            string tmp = " ";
+            double tmpWidth = 0;
+
+            // loop adds space characters until researched text starting point is reached
+            int iTextLength = this.Text.Length;
+            while ((tmpWidth + widthOfASpace) < startingPoint)
+            {
+                if (tmp.Length < 255 - iTextLength)
+                    tmp += " ";
+                tmpWidth += widthOfASpace;
+            }
+            this.Text = tmp + this.Text.Trim();
+        }
         #endregion
 
         #region Menu event handlers
@@ -177,11 +199,6 @@ namespace PicParam
             form.ShowDialog();
         }
         #endregion
-        private void editProfilesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormEditProfiles form = new FormEditProfiles();
-            form.ShowDialog();
-        }
         #region Database
         /// <summary>
         /// Backup
@@ -249,6 +266,12 @@ namespace PicParam
             }
         }
         #endregion
+        #region toolStripMenuItemClick
+        private void editProfilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormEditProfiles form = new FormEditProfiles();
+            form.ShowDialog();
+        }
         private void toolStripMenuItemBrowseFile_Click(object sender, EventArgs e)
         {
             try
@@ -267,7 +290,6 @@ namespace PicParam
 				_log.Error(ex.ToString());                
             }
         }
-
         private void customizeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -293,6 +315,7 @@ namespace PicParam
                 _log.Error(ex.ToString());
             }
         }
+        #endregion
         #endregion
 
         #region Export toolbar event handler
@@ -701,8 +724,10 @@ namespace PicParam
 
         private void OnSelectionChanged(object sender, NodeEventArgs e, string name)
         {
+
             // changed caption
             Text = Application.ProductName + " - " + name;
+            UpdateTextPosition(null, null);
 
             // show/hide controls
             _startPageCtrl.Visible      = false;
@@ -804,7 +829,5 @@ namespace PicParam
         [NonSerialized]protected ProfileLoaderImpl _profileLoaderImpl;
         protected string _docName;
         #endregion
-
-
     }
 }

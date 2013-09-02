@@ -17,9 +17,6 @@
     <Setting Name="FormEditDefaultParamValueSettings" Type="PicParam.WindowSettings" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="ThumbnailAnnotationMode" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
-    </Setting>
     <Setting Name="ThumbnailAnnotationFont" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">11</Value>
     </Setting>
@@ -31,6 +28,12 @@
     </Setting>
     <Setting Name="StartMaximized" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ThumbnailAnnotationMode" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="ShowCenteredTitle" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

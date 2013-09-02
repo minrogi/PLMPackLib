@@ -117,60 +117,90 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="checkBoxMaximized.AccessibleDescription" xml:space="preserve">
-    <value>Check so that the application is maximised at startup</value>
-  </data>
-  <data name="checkBoxMaximized.AccessibleName" xml:space="preserve">
-    <value>Check so that the application is maximised at startup</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="checkBoxMaximized.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="checkBoxMaximized.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="checkBoxMaximized.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 17</value>
-  </data>
-  <data name="checkBoxMaximized.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="checkBoxMaximized.Text" xml:space="preserve">
-    <value>Show maximized at startup</value>
-  </data>
-  <data name="&gt;&gt;checkBoxMaximized.Name" xml:space="preserve">
-    <value>checkBoxMaximized</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
   <data name="&gt;&gt;checkBoxMaximized.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;checkBoxMaximized.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;checkBoxMaximized.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="$this.AccessibleDescription" xml:space="preserve">
     <value>View settings</value>
   </data>
-  <data name="$this.AccessibleName" xml:space="preserve">
-    <value>View settings</value>
+  <data name="checkBoxMaximized.Text" xml:space="preserve">
+    <value>Show maximized at startup</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>GLib.Options.OptionsPanel, OptionsLib, Version=6.0.15.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>OptionPanelWindow</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>GLib.Options.OptionsPanel, OptionsLib, Version=6.0.12.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;checkBoxCenteredTitleBar.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="checkBoxCenteredTitleBar.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxCenteredTitleBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="checkBoxMaximized.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 17</value>
+  </data>
+  <data name="checkBoxCenteredTitleBar.Text" xml:space="preserve">
+    <value>Show centered text in title bar</value>
+  </data>
+  <data name="checkBoxMaximized.AccessibleName" xml:space="preserve">
+    <value>Check so that the application is maximised at startup</value>
+  </data>
+  <data name="checkBoxCenteredTitleBar.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;checkBoxMaximized.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="checkBoxMaximized.AccessibleDescription" xml:space="preserve">
+    <value>Check so that the application is maximised at startup</value>
+  </data>
+  <data name="&gt;&gt;checkBoxMaximized.Name" xml:space="preserve">
+    <value>checkBoxMaximized</value>
+  </data>
+  <data name="&gt;&gt;checkBoxCenteredTitleBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="checkBoxMaximized.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 3</value>
+  </data>
+  <data name="checkBoxMaximized.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;checkBoxCenteredTitleBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="checkBoxMaximized.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkBoxCenteredTitleBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 26</value>
+  </data>
+  <data name="$this.AccessibleName" xml:space="preserve">
+    <value>View settings</value>
+  </data>
+  <data name="&gt;&gt;checkBoxCenteredTitleBar.Name" xml:space="preserve">
+    <value>checkBoxCenteredTitleBar</value>
+  </data>
+  <data name="&gt;&gt;checkBoxMaximized.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>fr-FR</value>
+  </metadata>
 </root>
