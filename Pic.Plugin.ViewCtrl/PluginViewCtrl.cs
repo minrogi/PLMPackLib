@@ -973,14 +973,13 @@ namespace Pic.Plugin.ViewCtrl
             if (null == stack) return false;
             // load some parameters from majorations
             if (null != _profileLoader)
+            {
                 foreach (Parameter param in stack.ParameterList)
                 {
                     if (_profileLoader.HasParameter(param))
-                    {
-                        ParameterDouble paramDouble = param as ParameterDouble;
-                        _profileLoader.GetParameterValue(paramDouble);
-                    }
+                        stack.SetDoubleParameter(param.Name, _profileLoader.GetParameterDValue(param.Name));
                 }
+            }
             // load other parameters
             foreach (Control ctrl in Panel2.Controls)
             {
@@ -1236,6 +1235,7 @@ namespace Pic.Plugin.ViewCtrl
         #endregion
 
         #region Public methods
+        public abstract double Thickness { get; }
         public bool HasParameter(Pic.Plugin.Parameter param)
         {
             if (null == _majorationList)
@@ -1243,13 +1243,23 @@ namespace Pic.Plugin.ViewCtrl
             return _majorationList.ContainsKey(param.Name);
         }
 
-        public void GetParameterValue(Pic.Plugin.Parameter param)
+        public void GetParameterValue(ref Pic.Plugin.Parameter param)
         {
             if (null == _majorationList)
                 _majorationList = LoadMajorationList();
             ParameterDouble parameterDouble = param as ParameterDouble;
             if (null != parameterDouble)
                 parameterDouble.Value = _majorationList[param.Name];
+        }
+
+        public double GetParameterDValue(string name)
+        {
+            if (null == _majorationList)
+                _majorationList = LoadMajorationList();
+            if (_majorationList.ContainsKey(name))
+                return _majorationList[name];
+            else
+                throw new Exception(string.Format("ProfileLoader : No majoration with name = {0}!", name));
         }
         #endregion
 
@@ -1302,9 +1312,12 @@ namespace Pic.Plugin.ViewCtrl
         #endregion
 
         #region Data members
-        protected Profile _selectedProfile;
+        // list of profiles
         protected Profile[] _profiles;
+        // selected profile
+        protected Profile _selectedProfile;
         protected Dictionary<string, double> _majorationList;
+        // logging
         protected static readonly ILog _log = LogManager.GetLogger(typeof(PluginViewCtrl));
         #endregion
     }

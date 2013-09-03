@@ -450,6 +450,16 @@ namespace Pic.Plugin
             get { return _parameterList; }
             set { _parameterList = value; }
         }
+        public int Count
+        {
+            get
+            {
+                if (null != _parameterList)
+                    return _parameterList.Count;
+                else
+                    return 0;
+            }
+        }
         #endregion
 
         #region Adding parameter

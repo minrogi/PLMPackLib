@@ -30,7 +30,8 @@ namespace PicParam
         }
         #endregion
 
-        public override void BuildCardboardProfile()
+        #region ProfileLoader overrides
+         public override void BuildCardboardProfile()
         {
             PPDataContext db = new PPDataContext();
             CardboardProfile[] profiles = CardboardProfile.GetAll(db);
@@ -41,8 +42,7 @@ namespace PicParam
             _majorationList = null;
         }
 
-        #region ProfileLoader overrides
-        public override void EditMajorations()
+       public override void EditMajorations()
         {
             // show majoration edit form
             FormEditMajorations dlg = new FormEditMajorations(_comp.ID, _selectedProfile, this);

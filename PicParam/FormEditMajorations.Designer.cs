@@ -32,11 +32,9 @@
             this.bnEditProfiles = new System.Windows.Forms.Button();
             this.lblProfile = new System.Windows.Forms.Label();
             this.comboBoxProfile = new System.Windows.Forms.ComboBox();
-            this.pictureBoxHelp = new System.Windows.Forms.PictureBox();
             this.bnOK = new System.Windows.Forms.Button();
             this.bnApply = new System.Windows.Forms.Button();
             this.bnCancel = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHelp)).BeginInit();
             this.SuspendLayout();
             // 
             // bnEditProfiles
@@ -58,12 +56,6 @@
             this.comboBoxProfile.FormattingEnabled = true;
             this.comboBoxProfile.Name = "comboBoxProfile";
             this.comboBoxProfile.SelectedIndexChanged += new System.EventHandler(this.comboBoxProfile_selectedIndexChanged);
-            // 
-            // pictureBoxHelp
-            // 
-            resources.ApplyResources(this.pictureBoxHelp, "pictureBoxHelp");
-            this.pictureBoxHelp.Name = "pictureBoxHelp";
-            this.pictureBoxHelp.TabStop = false;
             // 
             // bnOK
             // 
@@ -96,7 +88,6 @@
             this.Controls.Add(this.bnCancel);
             this.Controls.Add(this.bnApply);
             this.Controls.Add(this.bnOK);
-            this.Controls.Add(this.pictureBoxHelp);
             this.Controls.Add(this.comboBoxProfile);
             this.Controls.Add(this.lblProfile);
             this.Controls.Add(this.bnEditProfiles);
@@ -105,7 +96,6 @@
             this.Name = "FormEditMajorations";
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.EditMajorationsForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHelp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,7 +106,6 @@
         private System.Windows.Forms.Button bnEditProfiles;
         private System.Windows.Forms.Label lblProfile;
         private System.Windows.Forms.ComboBox comboBoxProfile;
-        private System.Windows.Forms.PictureBox pictureBoxHelp;
         private System.Windows.Forms.Button bnOK;
         private System.Windows.Forms.Button bnApply;
         private System.Windows.Forms.Button bnCancel;

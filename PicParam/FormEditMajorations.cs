@@ -44,7 +44,7 @@ namespace PicParam
             int offsetX = 110, offsetY = 29;
             int tabIndex = bnCancel.TabIndex;
             int iCount = 0;
-            for (int i = 1; i < 16; ++i)
+            for (int i = 1; i < stack.Count; ++i)
             {
                 string paramName = string.Format("m{0}", i);
                 if (!stack.HasParameter(paramName))
@@ -54,8 +54,8 @@ namespace PicParam
                 lbl.Name = string.Format("lbl_m{0}", i);
                 lbl.Text = string.Format("m{0}", i);
                 lbl.Location = new Point(
-                    lblX + (iCount / 4) * offsetX
-                    , lblY + (iCount % 4) * offsetY);
+                    lblX + (iCount / 5) * offsetX
+                    , lblY + (iCount % 5) * offsetY);
                 lbl.Size = new Size(30, 13);
                 lbl.TabIndex = ++tabIndex;
                 this.Controls.Add(lbl);
@@ -68,8 +68,8 @@ namespace PicParam
                 nud.DecimalPlaces = 3;
                 nud.Value = (decimal)stack.GetDoubleParameterValue(paramName);
                 nud.Location = new Point(
-                    lblX + (iCount / 4) * offsetX + lbl.Size.Width + 1
-                    , lblY + (iCount % 4) * offsetY);
+                    lblX + (iCount / 5) * offsetX + lbl.Size.Width + 1
+                    , lblY + (iCount % 5) * offsetY);
                 nud.Size = new Size(60, 20);
                 nud.TabIndex = ++tabIndex;
                 nud.ValueChanged += new EventHandler(nudValueChanged);
