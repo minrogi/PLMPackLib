@@ -26,7 +26,7 @@
                     <Directory Id="PLMPackDir" Name="PLMPack">
                         <Directory Id="INSTALLLOCATION" Name="PLMPackLib">
                             <Merge Id="PLMPackLibMSM" Language="1033" DiskId="1" SourceFile="..\PicParamMSM\bin\Release\PLMPackLibMSM.msm" />
-                            <Merge Id="StackBuilderGUIExtMSM" Language="1033" DiskId="1" SourceFile="..\..\StackBuilder\StackBuilderGUIExtMSM\bin\release\StackBuilderGUIExtMSM.msm" />
+                            <Merge Id="StackBuilderGUIExtMSM" Language="1033" DiskId="1" SourceFile="..\..\..\Codeplex\StackBuilder\StackBuilderGUIExtMSM\bin\release\StackBuilderGUIExtMSM.msm" />
                         </Directory>
                     </Directory>
                 </Directory>

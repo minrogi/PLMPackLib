@@ -71,6 +71,13 @@ namespace PicParam
             }
             return _majorationList;
         }
+        public override double Thickness
+        {
+            get
+            {
+                return _cardboardProfiles[Selected.ToString()].Thickness;
+            }
+        }
         #endregion
 
         #region Data members
