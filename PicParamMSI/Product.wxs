@@ -4,7 +4,7 @@
     <?define SkuName = "PLMPackLib"?>
     <!-- This is application version number, update for each release -->
     <!-- For a major upgrade 3 things should change: ProductId (*), PackageId (*) and Version-->
-    <?define Version="6.0.15.0"?>
+    <?define Version="6.0.16.0"?>
     <!--Major, Minor, Build-->
     <?define RTMProductVersion="0.0.0"?>
     <?define UpgradeCode="85B2DB64-71DA-437b-BD2F-6A1511265E15"?>

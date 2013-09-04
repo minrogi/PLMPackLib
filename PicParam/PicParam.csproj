@@ -80,10 +80,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\ThirdPartyComponents\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="Sharp3D.Math, Version=6.0.12.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Sharp3D.Math\Sharp3D.Math\Main\Sharp3D.Math\bin\Release\Sharp3D.Math.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core">
@@ -100,7 +96,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="TreeDim.StackBuilder.GUIExtension">
-      <HintPath>..\..\StackBuilder\TreeDim.StackBuilder.GUIExtension\bin\Release\TreeDim.StackBuilder.GUIExtension.dll</HintPath>
+      <HintPath>..\..\..\Codeplex\StackBuilder\TreeDim.StackBuilder.GUIExtension\bin\Release\TreeDim.StackBuilder.GUIExtension.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -416,6 +412,10 @@
     <Compile Include="WindowSettings.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Codeplex\Sharp3D.Math\Sharp3D.Math\Main\Sharp3D.Math\Sharp3D.Math.csproj">
+      <Project>{8F9BA4D3-D6AF-42A6-B74F-0DF6568C148B}</Project>
+      <Name>Sharp3D.Math</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DesLib4NET\DesLib4NET.csproj">
       <Project>{7CDEDAAE-8156-4835-9837-55C7CDC67070}</Project>
       <Name>DesLib4NET</Name>

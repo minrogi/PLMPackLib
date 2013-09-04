@@ -650,7 +650,7 @@ namespace PicParam
                 if (_pluginViewCtrl.GetDimensions(ref length, ref width, ref height))
                 {
                     TreeDim.StackBuilder.GUIExtension.Palletization palletization = new Palletization();
-                    palletization.StartCaseOptimization(_pluginViewCtrl.LoadedComponentName, length, width, height);
+                    //palletization.StartCaseOptimization(_pluginViewCtrl.LoadedComponentName, length, width, height);
                 }
             }
             catch (Exception ex)
