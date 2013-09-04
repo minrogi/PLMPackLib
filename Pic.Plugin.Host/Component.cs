@@ -183,12 +183,13 @@ namespace Pic.Plugin
             // adding thickness parameters 
             // these parameters are always available but are not shown in the list of parameters in the plugin viewer
             // ep1 and th1 are reserved name
+            double defaultThickness = Pic.Plugin.Host.Properties.Settings.Default.Thickness;
             if (!stackOut.HasParameter("ep1"))
                 stackOut.AddDoubleParameter("ep1", "Epaisseur"
-                    , null != stackIn && stackIn.HasParameter("ep1") ? stackIn.GetDoubleParameterValue("ep1") : 1.0);
+                    , null != stackIn && stackIn.HasParameter("ep1") ? stackIn.GetDoubleParameterValue("ep1") : defaultThickness);
             if (!stackOut.HasParameter("th1"))
                 stackOut.AddDoubleParameter("th1", "Thickness"
-                    , null != stackIn && stackIn.HasParameter("th1") ? stackIn.GetDoubleParameterValue("th1") : 1.0);
+                    , null != stackIn && stackIn.HasParameter("th1") ? stackIn.GetDoubleParameterValue("th1") : defaultThickness);
 
             return stackOut;
         }
