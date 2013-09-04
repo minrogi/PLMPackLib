@@ -83,7 +83,7 @@ namespace PicParam.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("11")]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
         public int ThumbnailAnnotationFont {
             get {
                 return ((int)(this["ThumbnailAnnotationFont"]));
