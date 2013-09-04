@@ -252,8 +252,10 @@ namespace PicParam
             try
             {
                 // form
-                if (DialogResult.Yes == MessageBox.Show(PicParam.Properties.Resources.ID_CLEARDATABASEWARNING))
-                {
+                if (DialogResult.Yes == MessageBox.Show(PicParam.Properties.Resources.ID_CLEARDATABASEWARNING,
+                    ProductName,
+                    MessageBoxButtons.YesNo))
+                {   // answered 'Yes' 
                     // start thread
                     FormWorkerThreadTask.Execute(new Pic.DAL.TPTClearDatabase());
                     // refresh tree
