@@ -18,7 +18,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="ThumbnailAnnotationFont" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">11</Value>
+      <Value Profile="(Default)">10</Value>
     </Setting>
     <Setting Name="StartPageUrl" Type="System.String" Scope="Application">
       <Value Profile="(Default)">http://www.plmpack.com/packlib/packlib_start_page.htm</Value>
