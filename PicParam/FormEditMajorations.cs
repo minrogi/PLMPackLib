@@ -44,15 +44,14 @@ namespace PicParam
             int offsetX = 110, offsetY = 29;
             int tabIndex = bnCancel.TabIndex;
             int iCount = 0;
-            for (int i = 1; i < stack.Count; ++i)
+            foreach (Parameter param in stack.ParameterList)
             {
-                string paramName = string.Format("m{0}", i);
-                if (!stack.HasParameter(paramName))
-                    continue;
+                // only shows majorations
+                if (!param.IsMajoration) continue;
 
                 Label lbl = new Label();
-                lbl.Name = string.Format("lbl_m{0}", i);
-                lbl.Text = string.Format("m{0}", i);
+                lbl.Name = string.Format("lbl_{0}", param.Name);
+                lbl.Text = param.Name;
                 lbl.Location = new Point(
                     lblX + (iCount / 5) * offsetX
                     , lblY + (iCount % 5) * offsetY);
@@ -61,12 +60,12 @@ namespace PicParam
                 this.Controls.Add(lbl);
 
                 NumericUpDown nud = new NumericUpDown();
-                nud.Name = string.Format("nud_m{0}", i);
+                nud.Name = string.Format("nud_{0}", param.Name);
                 nud.Increment = 1.0M;
                 nud.Minimum = -10000.0M;
                 nud.Maximum = 10000.0M;
                 nud.DecimalPlaces = 3;
-                nud.Value = (decimal)stack.GetDoubleParameterValue(paramName);
+                nud.Value = (decimal)stack.GetDoubleParameterValue(param.Name);
                 nud.Location = new Point(
                     lblX + (iCount / 5) * offsetX + lbl.Size.Width + 1
                     , lblY + (iCount % 5) * offsetY);

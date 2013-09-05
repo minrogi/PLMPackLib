@@ -123,16 +123,16 @@ namespace Pic.Plugin
         /// </summary>
         abstract public bool IsValid { get; }
         /// <summary>
-        /// a parameter is a majoration if its name is m + an integer between 1 and 16
+        /// a parameter is a majoration if:
+        /// - its name starts with "m", 
+        /// - next characters can be parsed as an integer
         /// </summary>
         public bool IsMajoration
         {
             get
             {
-                for (int i = 1; i <= 16; ++i)
-                    if (0 == string.Compare(Name, string.Format("m{0}", i), true))
-                        return true;
-                return false;
+                int iIndex = 0;
+                return (Name.StartsWith("m") && Int32.TryParse(Name.Substring(1), out iIndex));
             }
         }
 		#endregion
@@ -587,6 +587,17 @@ namespace Pic.Plugin
                 foreach (Parameter p in _parameterList)
                     if (p.IsMajoration) return true;
                 return false;
+            }
+        }
+
+        public int MajorationCount
+        {
+            get
+            {
+                int majoCount = 0;
+                foreach (Parameter p in _parameterList)
+                    majoCount += p.IsMajoration ? 1 : 0;
+                return majoCount;
             }
         }
 		#endregion

@@ -80,8 +80,9 @@ namespace PicParam
                         _dictParamDefaultValues[paramDouble.Name] = paramDouble.ValueDefault;
                 }
                 // insert majoration label and textbox controls
-                int lblX = 16, lblY = 51;
-                int offsetX = 100, offsetY = 29;
+                const int lblX = 16, lblY = 51;
+                const int offsetX = 100, offsetY = 29;
+                const int lbSizeX = 34, lbSizeY = 14;
                 int tabIndex = comboBoxProfile.TabIndex;
 
                 groupBoxMajorations.Controls.Clear();
@@ -94,25 +95,23 @@ namespace PicParam
                     groupBoxMajorations.Controls.Add(comboBoxProfile);
 
                     int iCount = 0;
-                    for (int i = 1; i < 16; ++i)
+                    foreach (Parameter param in stack)
                     {
-                        string paramName = string.Format("m{0}", i);
-                        if (!stack.HasParameter(paramName))
-                            continue;
+                        if (!param.IsMajoration)    continue;
                         // label
                         Label lbl = new Label();
-                        lbl.Name = string.Format("lbl_m{0}", i);
-                        lbl.Text = string.Format("m{0}", i);
+                        lbl.Name = string.Format("lbl_{0}", param.Name);
+                        lbl.Text = param.Name;
                         lbl.Location = new Point(
                             lblX + (iCount / 4) * offsetX
                             , lblY + (iCount % 4) * offsetY);
-                        lbl.Size = new Size(24, 13);
+                        lbl.Size = new Size(lbSizeX, lbSizeY);
                         lbl.TabIndex = ++tabIndex;
                         groupBoxMajorations.Controls.Add(lbl);
                         // text box
                         TextBox tb = new TextBox();
-                        tb.Name = string.Format("tb_m{0}", i);
-                        tb.Text = string.Format("{0:0.##}", stack.GetDoubleParameterValue(paramName));
+                        tb.Name = string.Format("tb_{0}", param.Name);
+                        tb.Text = string.Format("{0:0.##}", stack.GetDoubleParameterValue(param.Name));
                         tb.Location = new Point(
                             lblX + (iCount / 4) * offsetX + lbl.Size.Width + 1
                             , lblY + (iCount % 4) * offsetY);
