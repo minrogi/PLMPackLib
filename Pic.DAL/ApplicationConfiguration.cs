@@ -97,6 +97,19 @@ namespace Pic.DAL
                 this["applicationDes3"] = value;
             }
         }
+        [ConfigurationProperty("appOceProCut", DefaultValue = "OceProCut", IsRequired = false, IsKey = false)]
+        [StringValidator(InvalidCharacters = "~!@#$%^&*[]{};'\"|", MinLength = 1, MaxLength = 255)]
+        public string AppOceProCut
+        {
+            get
+            {
+                return (string)this["OceProCut"];
+            }
+            set
+            {
+                this["OceProCut"] = value;
+            }
+        }
         [ConfigurationProperty("applicationDxf", DefaultValue = "applicationDxf", IsRequired = false, IsKey = false)]
         [StringValidator(InvalidCharacters = "~!@#$%^&*[]{};'\"|", MinLength = 1, MaxLength = 255)]
         public string ApplicationDxf

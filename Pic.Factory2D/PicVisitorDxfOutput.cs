@@ -31,11 +31,28 @@ namespace Pic.Factory2D
         { 
             switch (lType)
             {
-                case PicGraphics.LT.LT_CUT: return "L5-113";
-                case PicGraphics.LT.LT_CREASING: return "L8-123";
-                case PicGraphics.LT.LT_COTATION: return "LDM-4";
+                case PicGraphics.LT.LT_CUT:             return "L5-113";
+                case PicGraphics.LT.LT_PERFOCREASING:   return "L6-133";
+                case PicGraphics.LT.LT_CONSTRUCTION:    return "LCN-27";
+                case PicGraphics.LT.LT_PERFO:           return "EC1-193";
+                case PicGraphics.LT.LT_HALFCUT:         return "LI5-103";
+                case PicGraphics.LT.LT_CREASING:        return "L8-123";
+                case PicGraphics.LT.LT_AXIS:            return "L2-106";
+                case PicGraphics.LT.LT_COTATION:        return "LDM-4";
+                case PicGraphics.LT.LT_GRID:            return "L2-106";
                 default:    return "";
             }
+
+            // **
+            // "Cut", "L5-113"
+            // "Perfo-Crease", "L6-133"
+            // "Construction", "LCN-27"
+            // "Perfo", "EC1-193"
+            // "Half-Cut", "LI5-103"
+            // "Crease", "L8-123"
+            // "Axis", "L2-106"
+            // "Dimension", "LDM-4"
+            // **
         }
         #endregion
 

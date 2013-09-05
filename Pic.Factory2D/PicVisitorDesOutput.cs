@@ -30,10 +30,14 @@ namespace Pic.Factory2D
         {
             switch (lType)
             {
-                case PicGraphics.LT.LT_CUT: return 1;
-                case PicGraphics.LT.LT_CREASING: return 6;
-                case PicGraphics.LT.LT_COTATION: return 8;
-                case PicGraphics.LT.LT_PERFO: return 1;
+                case PicGraphics.LT.LT_CUT:             return 1;
+                case PicGraphics.LT.LT_PERFOCREASING:   return 2;
+                case PicGraphics.LT.LT_CONSTRUCTION:    return 3;
+                case PicGraphics.LT.LT_PERFO:           return 4;
+                case PicGraphics.LT.LT_HALFCUT:         return 5;
+                case PicGraphics.LT.LT_CREASING:        return 6;
+                case PicGraphics.LT.LT_AXIS:            return 7;
+                case PicGraphics.LT.LT_COTATION:        return 8;
                 default:
                     throw new Exception("LineType export not implemented!");
             }

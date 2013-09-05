@@ -51,7 +51,10 @@ namespace Pic.Factory2D
         /// <param name="segment">segment to insert</param>
         public void AddSegment(DES_Segment segment)
         {
-            PicSegment picSegment = _factory.AddSegment(DesPenToLineType(segment._pen), new Vector2D(segment.X1, segment.Y1), new Vector2D(segment.X2, segment.Y2));
+            PicSegment picSegment = _factory.AddSegment(
+                DesPenToLineType(segment._pen),
+                new Vector2D(segment.X1, segment.Y1),
+                new Vector2D(segment.X2, segment.Y2));
             picSegment.Group = segment._grp;
             picSegment.Layer = segment._layer;
         }
@@ -80,11 +83,12 @@ namespace Pic.Factory2D
 	        }
 
             PicArc picArc = _factory.AddArc(
-                DesPenToLineType(arc._pen)
-                , new Vector2D(arc._x, arc._y)
-                , (double)arc._dim
-                , (double)angle0
-                , (double)angle1);
+                DesPenToLineType(arc._pen),
+                new Vector2D(arc._x, arc._y),
+                (double)arc._dim,
+                (double)angle0,
+                (double)angle1
+                );
             picArc.Group = arc._grp;
             picArc.Layer = arc._layer;
         }

@@ -40,13 +40,35 @@ namespace Pic.Factory2D
 
             _ltToPen.Add(LT.LT_CUT, new Pen(System.Drawing.ColorTranslator.FromWin32(255), 1.0f));
             _ltToPen.Add(LT.LT_PERFOCREASING, new Pen(System.Drawing.ColorTranslator.FromWin32(16711680), 1.0f));
+            float[] dashValuesPerfoCreasing = { 14.0f, 3.0f };
+            _ltToPen[LT.LT_PERFOCREASING].DashPattern = dashValuesPerfoCreasing;
             _ltToPen.Add(LT.LT_CONSTRUCTION, new Pen(System.Drawing.ColorTranslator.FromWin32(7798903), 1.0f));
             _ltToPen.Add(LT.LT_PERFO, new Pen(System.Drawing.ColorTranslator.FromWin32(255), 1.0f));
+            float[] dashValuesPerfo = { 14.0f, 3.0f };
+            _ltToPen[LT.LT_PERFO].DashPattern = dashValuesPerfo;
             _ltToPen.Add(LT.LT_HALFCUT, new Pen(System.Drawing.ColorTranslator.FromWin32(16776960), 1.0f));
             _ltToPen.Add(LT.LT_CREASING, new Pen(System.Drawing.ColorTranslator.FromWin32(16711680), 1.0f));
             _ltToPen.Add(LT.LT_AXIS, new Pen(System.Drawing.ColorTranslator.FromWin32(16711680), 1.0f));
-            _ltToPen.Add(LT.LT_COTATION, new Pen(Color.Green/*System.Drawing.ColorTranslator.FromWin32(8453888)*/, 1.0f));
+            float[] dashValuesAxis = { 3.0f, 4.0f, 10.0f, 4.0f };
+            _ltToPen[LT.LT_AXIS].DashPattern = dashValuesAxis;
+            _ltToPen.Add(LT.LT_COTATION, new Pen(System.Drawing.ColorTranslator.FromWin32(8453888), 1.0f));
             _ltToPen.Add(LT.LT_GRID, new Pen(System.Drawing.ColorTranslator.FromWin32(8388608), 1.0f));
+
+
+            // **
+            // (1) :    spen="0,0,12,2,255,Coupant";
+            // (2) :    spen="1,0,14,3,16711680,Perfo. Rainant";
+            // (3) :    spen="0,1,5,6,7798903,Construction.";
+            // (4) :    spen="1,0,4,1,255,Perfo";
+            // (5) :    spen="0,0,11,5,16776960,Mi-chair";
+            // (6) :    spen="0,0,14,3,16711680,Rainant";
+            // (7) :    spen="3,0,9,3,16711680,Axe";
+            // (8) :    spen="0,0,2,4,8453888,Cotation";
+            // (9) :    spen="0,0,7,0,8421504,Origine";
+            //(10) :    spen="0,0,1,0,8388608,Grille";
+            //(11) :    spen="0,0,10,0,16742777,Ponts";
+            //default:  spen="0,0,10,0,33023,Defaut";
+            // **
         }
         /// <summary>
         /// Draw a point (actually a small cross) using defined line type
@@ -109,7 +131,7 @@ namespace Pic.Factory2D
             switch (font)
             { 
                 case TextType.FT_COTATION:
-                    tb = new SolidBrush(Color.Green);
+                    tb = new SolidBrush(System.Drawing.ColorTranslator.FromWin32(8453888));
                     break;
                 default:
                     throw new Exception("Unknown text type");

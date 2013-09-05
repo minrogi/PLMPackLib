@@ -388,6 +388,10 @@ namespace PicParam
         {
             ExportAndOpen("des", Pic.DAL.ApplicationConfiguration.CustomSection.AppPicador3D);
         }
+        private void toolStripButtonOceProCut_Click(object sender, EventArgs e)
+        {
+            ExportAndOpen("ai", (Pic.DAL.ApplicationConfiguration.CustomSection.AppOceProCut));
+        }
         private void toolStripButtonDXF_Click(object sender, EventArgs e)
         {
             if (!System.IO.File.Exists(Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationDxf))
@@ -406,6 +410,8 @@ namespace PicParam
             }
             ExportAndOpen("dxf", Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationDxf);
         }
+
+
         private void ExportAndOpen(string sExt, string sPathExectable)
         {
             try
@@ -831,5 +837,7 @@ namespace PicParam
         [NonSerialized]protected ProfileLoaderImpl _profileLoaderImpl;
         protected string _docName;
         #endregion
+
+
     }
 }
