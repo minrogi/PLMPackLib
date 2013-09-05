@@ -442,6 +442,8 @@ namespace PicParam
             if (null == parentNode)
                 parentNode = InsertNodeAndParents(Pic.DAL.SQLite.TreeNode.GetById(db, tn.ParentNodeID.Value), db);
             Pic.DAL.SQLite.TreeBuilder treeBuilder = new Pic.DAL.SQLite.TreeBuilder();
+            // remove _DUMMY_ tree node
+            parentNode.Nodes.Clear();
             treeBuilder.PopulateChildren(this, parentNode, tn.ParentNodeID.Value);
 
             return FindNode(null, new NodeTag(NodeTag.NodeType.NT_TREENODE, tn.ID));
