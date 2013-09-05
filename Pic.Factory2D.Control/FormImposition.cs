@@ -222,6 +222,10 @@ namespace Pic.Factory2D.Control
                     p.Start();
                 }
             }
+            catch (Win32Exception ex)
+            {
+                MessageBox.Show(ex.Message, Application.ProductName);
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
