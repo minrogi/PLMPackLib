@@ -206,6 +206,7 @@ namespace PicParam
             treeNodeNew.ToolTipText = node.Description;
             treeNodeNew.ContextMenuStrip = node.IsDocument ? GetLeafMenu() : GetBranchMenu();
             TreeNode treeNodeParent = parentObj as TreeNode;
+            
             if (null == treeNodeParent)
                 Nodes.Add(treeNodeNew);
             else
@@ -700,10 +701,13 @@ namespace PicParam
                 {
                     // insert document in treeview
                     List<Pic.DAL.SQLite.TreeNode> tnodes = Pic.DAL.SQLite.TreeNode.GetByDocumentId(db, dlg.DocumentID);
-                    if (tnodes.Count > 0)
-                        InsertTreeNode(SelectedNode, tnodes[0]);
+                    // (re)populate parent node
+                    PopulateChildren(SelectedNode);
                     // select current node
-                    SelectedNode = FindNode(null, new NodeTag(NodeTag.NodeType.NT_DOCUMENT, tnodes[0].ID));
+                    NodeTag newDocTag = new NodeTag(NodeTag.NodeType.NT_DOCUMENT, tnodes[0].ID);
+                    SelectedNode = FindNode(null, newDocTag);  // <- for some reasons, this does not work
+                    // however, we can force document opening with the following line
+                    SelectionChanged(this, new NodeEventArgs(newDocTag.TreeNode, newDocTag.Type), newDocTag.Name);
                 }
             }
             catch (System.Exception ex)
