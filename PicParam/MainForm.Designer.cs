@@ -86,12 +86,11 @@
             this.toolStripButtonPicGEOM = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPicDecoup = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPicador3D = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonOceProCut = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonDXF = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonCaseOptimization = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPalletization = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButtonOceProCut = new System.Windows.Forms.ToolStripButton();
             this.openFileDialogRestore = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogBackup = new System.Windows.Forms.SaveFileDialog();
             this.toolStripContainerDefault.BottomToolStripPanel.SuspendLayout();
@@ -526,12 +525,11 @@
             this.toolStripButtonPicGEOM,
             this.toolStripButtonPicDecoup,
             this.toolStripButtonPicador3D,
+            this.toolStripButtonOceProCut,
             this.toolStripButtonDXF,
             this.toolStripSeparator7,
             this.toolStripButtonCaseOptimization,
-            this.toolStripButtonPalletization,
-            this.toolStripSeparator12,
-            this.toolStripButtonOceProCut});
+            this.toolStripButtonPalletization});
             this.toolStripExport.Name = "toolStripExport";
             // 
             // toolStripButtonPicGEOM
@@ -554,6 +552,13 @@
             resources.ApplyResources(this.toolStripButtonPicador3D, "toolStripButtonPicador3D");
             this.toolStripButtonPicador3D.Name = "toolStripButtonPicador3D";
             this.toolStripButtonPicador3D.Click += new System.EventHandler(this.toolStripButtonPicador3D_Click);
+            // 
+            // toolStripButtonOceProCut
+            // 
+            this.toolStripButtonOceProCut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.toolStripButtonOceProCut, "toolStripButtonOceProCut");
+            this.toolStripButtonOceProCut.Name = "toolStripButtonOceProCut";
+            this.toolStripButtonOceProCut.Click += new System.EventHandler(this.toolStripButtonOceProCut_Click);
             // 
             // toolStripButtonDXF
             // 
@@ -580,18 +585,6 @@
             resources.ApplyResources(this.toolStripButtonPalletization, "toolStripButtonPalletization");
             this.toolStripButtonPalletization.Name = "toolStripButtonPalletization";
             this.toolStripButtonPalletization.Click += new System.EventHandler(this.toolStripButtonPalletization_Click);
-            // 
-            // toolStripSeparator12
-            // 
-            this.toolStripSeparator12.Name = "toolStripSeparator12";
-            resources.ApplyResources(this.toolStripSeparator12, "toolStripSeparator12");
-            // 
-            // toolStripButtonOceProCut
-            // 
-            this.toolStripButtonOceProCut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.toolStripButtonOceProCut, "toolStripButtonOceProCut");
-            this.toolStripButtonOceProCut.Name = "toolStripButtonOceProCut";
-            this.toolStripButtonOceProCut.Click += new System.EventHandler(this.toolStripButtonOceProCut_Click);
             // 
             // saveFileDialogBackup
             // 
@@ -694,7 +687,6 @@
         private System.Windows.Forms.ToolStripContainer toolStripContainerDefault;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
         private System.Windows.Forms.ToolStripMenuItem defineDatabasePathToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
         private System.Windows.Forms.ToolStripButton toolStripButtonOceProCut;
     }
 }

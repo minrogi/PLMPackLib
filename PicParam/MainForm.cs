@@ -501,7 +501,8 @@ namespace PicParam
                 toolStripButtonExport.Enabled = buttonsEnabled;
                 toolStripButtonPicGEOM.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("PicGEOM");
                 toolStripButtonPicDecoup.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("PicDecoup");
-                toolStripButtonPicador3D.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("Picador3D"); 
+                toolStripButtonPicador3D.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("Picador3D");
+                toolStripButtonOceProCut.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("OceProCut");
                 toolStripButtonDXF.Enabled = buttonsEnabled;
                 // "File" menu items
                 exportToolStripMenuItem.Enabled = buttonsEnabled;
@@ -714,6 +715,8 @@ namespace PicParam
 
                 // show start page
                 ShowStartPage(this);
+                // update tool bars
+                UpdateToolCommands();
             }
             catch (System.Exception ex)
             {
@@ -837,7 +840,5 @@ namespace PicParam
         [NonSerialized]protected ProfileLoaderImpl _profileLoaderImpl;
         protected string _docName;
         #endregion
-
-
     }
 }

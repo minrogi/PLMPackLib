@@ -313,7 +313,7 @@
     <value>_pluginViewCtrl</value>
   </data>
   <data name="&gt;&gt;_pluginViewCtrl.Type" xml:space="preserve">
-    <value>Pic.Plugin.ViewCtrl.PluginViewCtrl, Pic.Plugin.ViewCtrl, Version=1.0.4995.29325, Culture=neutral, PublicKeyToken=null</value>
+    <value>Pic.Plugin.ViewCtrl.PluginViewCtrl, Pic.Plugin.ViewCtrl, Version=1.0.4997.19418, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_pluginViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -337,7 +337,7 @@
     <value>_factoryViewCtrl</value>
   </data>
   <data name="&gt;&gt;_factoryViewCtrl.Type" xml:space="preserve">
-    <value>Pic.Factory2D.Control.FactoryViewerBase, Pic.Factory2D.Control, Version=1.0.4995.29325, Culture=neutral, PublicKeyToken=null</value>
+    <value>Pic.Factory2D.Control.FactoryViewerBase, Pic.Factory2D.Control, Version=1.0.4997.19418, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_factoryViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -1061,6 +1061,29 @@
   <data name="toolStripButtonPicador3D.Text" xml:space="preserve">
     <value>Open with Picador3D</value>
   </data>
+  <data name="toolStripButtonOceProCut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG1SURBVFhH7ZQ9TsQwEIVzBI5AQ0/BARAngBPACRAHoKCn
+        oKaipaOjpaKm4ABI1KBdED/iRxg+k4fGjk0cKZstsiM9xXkz9jyPx67ullbckKhiSwUNgTr9/ASAhQDQ
+        q4D75TX3NZm615PTpD+FhoDp+pZ7v7j8axLGcHFcCs8Hh+7j6jrpyyEQMFnd8Dsgqbi3s3MvplREVwQC
+        KB0CKKXlbVkfd3bd582tF8VXwp729oOqsRm7Rg6BAMrHopYTD3TGVMXGI4LEHAE8nGLa0EkAuycRu7V+
+        EsNbQ6iNyaFxBEyOy6cjaBPwsLkd8CVobULdCMqsI5CfMvOvI0Bk16sYCAAspqQYY3Yuf9yE8sVNGDdy
+        Dg0BQ2NcAmjSl6PjgAsE2LPHSrtaryX2X/OxfuxvCFAAi+q/XtvfBN4DxnxpNJqPrucG6TaoUZkLD8dm
+        +GL2GhcJIIE4JSYB5YQDdh2QElBUAS/xx0jKJCbAy68FxPcuIA5QIsapCvAKxkdAiYkjXu9DLwJIEvcA
+        PIngMM3X84w4vggQl+2BeWAhYNwCaMjxCvDJsZRz1qhT/1oqYFaoUxqrqm8t47ERtV1J4gAAAABJRU5E
+        rkJggg==
+</value>
+  </data>
+  <data name="toolStripButtonOceProCut.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="toolStripButtonOceProCut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripButtonOceProCut.Text" xml:space="preserve">
+    <value>Send to Océ Pro Cut</value>
+  </data>
   <data name="toolStripButtonDXF.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -1161,37 +1184,11 @@
   <data name="toolStripButtonPalletization.ToolTipText" xml:space="preserve">
     <value>Perform Case/Pallet analysis with StackBuilder</value>
   </data>
-  <data name="toolStripSeparator12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 39</value>
-  </data>
-  <data name="toolStripButtonOceProCut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG1SURBVFhH7ZQ9TsQwEIVzBI5AQ0/BARAngBPACRAHoKCn
-        oKaipaOjpaKm4ABI1KBdED/iRxg+k4fGjk0cKZstsiM9xXkz9jyPx67ullbckKhiSwUNgTr9/ASAhQDQ
-        q4D75TX3NZm615PTpD+FhoDp+pZ7v7j8axLGcHFcCs8Hh+7j6jrpyyEQMFnd8Dsgqbi3s3MvplREVwQC
-        KB0CKKXlbVkfd3bd582tF8VXwp729oOqsRm7Rg6BAMrHopYTD3TGVMXGI4LEHAE8nGLa0EkAuycRu7V+
-        EsNbQ6iNyaFxBEyOy6cjaBPwsLkd8CVobULdCMqsI5CfMvOvI0Bk16sYCAAspqQYY3Yuf9yE8sVNGDdy
-        Dg0BQ2NcAmjSl6PjgAsE2LPHSrtaryX2X/OxfuxvCFAAi+q/XtvfBN4DxnxpNJqPrucG6TaoUZkLD8dm
-        +GL2GhcJIIE4JSYB5YQDdh2QElBUAS/xx0jKJCbAy68FxPcuIA5QIsapCvAKxkdAiYkjXu9DLwJIEvcA
-        PIngMM3X84w4vggQl+2BeWAhYNwCaMjxCvDJsZRz1qhT/1oqYFaoUxqrqm8t47ERtV1J4gAAAABJRU5E
-        rkJggg==
-</value>
-  </data>
-  <data name="toolStripButtonOceProCut.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>White</value>
-  </data>
-  <data name="toolStripButtonOceProCut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 36</value>
-  </data>
-  <data name="toolStripButtonOceProCut.Text" xml:space="preserve">
-    <value>Send to Océ Pro Cut</value>
-  </data>
   <data name="toolStripExport.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 63</value>
   </data>
   <data name="toolStripExport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 39</value>
+    <value>270, 39</value>
   </data>
   <data name="toolStripExport.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1654,6 +1651,12 @@
   <data name="&gt;&gt;toolStripButtonPicador3D.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;toolStripButtonOceProCut.Name" xml:space="preserve">
+    <value>toolStripButtonOceProCut</value>
+  </data>
+  <data name="&gt;&gt;toolStripButtonOceProCut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolStripButtonDXF.Name" xml:space="preserve">
     <value>toolStripButtonDXF</value>
   </data>
@@ -1676,18 +1679,6 @@
     <value>toolStripButtonPalletization</value>
   </data>
   <data name="&gt;&gt;toolStripButtonPalletization.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator12.Name" xml:space="preserve">
-    <value>toolStripSeparator12</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripButtonOceProCut.Name" xml:space="preserve">
-    <value>toolStripButtonOceProCut</value>
-  </data>
-  <data name="&gt;&gt;toolStripButtonOceProCut.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;openFileDialogRestore.Name" xml:space="preserve">

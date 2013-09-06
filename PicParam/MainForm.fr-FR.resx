@@ -546,6 +546,20 @@
   <data name="toolStripButtonPicador3D.Text" xml:space="preserve">
     <value>Ouvrir avec Picador3D</value>
   </data>
+  <data name="toolStripButtonOceProCut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG1SURBVFhH7ZQ9TsQwEIVzBI5AQ0/BARAngBPACRAHoKCn
+        oKaipaOjpaKm4ABI1KBdED/iRxg+k4fGjk0cKZstsiM9xXkz9jyPx67ullbckKhiSwUNgTr9/ASAhQDQ
+        q4D75TX3NZm615PTpD+FhoDp+pZ7v7j8axLGcHFcCs8Hh+7j6jrpyyEQMFnd8Dsgqbi3s3MvplREVwQC
+        KB0CKKXlbVkfd3bd582tF8VXwp729oOqsRm7Rg6BAMrHopYTD3TGVMXGI4LEHAE8nGLa0EkAuycRu7V+
+        EsNbQ6iNyaFxBEyOy6cjaBPwsLkd8CVobULdCMqsI5CfMvOvI0Bk16sYCAAspqQYY3Yuf9yE8sVNGDdy
+        Dg0BQ2NcAmjSl6PjgAsE2LPHSrtaryX2X/OxfuxvCFAAi+q/XtvfBN4DxnxpNJqPrucG6TaoUZkLD8dm
+        +GL2GhcJIIE4JSYB5YQDdh2QElBUAS/xx0jKJCbAy68FxPcuIA5QIsapCvAKxkdAiYkjXu9DLwJIEvcA
+        PIngMM3X84w4vggQl+2BeWAhYNwCaMjxCvDJsZRz1qhT/1oqYFaoUxqrqm8t47ERtV1J4gAAAABJRU5E
+        rkJggg==
+</value>
+  </data>
   <data name="toolStripButtonDXF.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
