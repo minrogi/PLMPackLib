@@ -27,17 +27,16 @@ namespace PicParam
         private void OptionPanelDatabase_Load(object sender, EventArgs e)
         {
             fileSelect.Filter = "SQLite database (*.db)|*.db";
-            fileSelect.FileName = Path.Combine(Pic.DAL.ApplicationConfiguration.CustomSection.DataDirectory, @"Database\PicParam.db");
+            fileSelect.FileName = Pic.DAL.ApplicationConfiguration.CustomSection.DatabasePath;
             this._OptionsForm.OptionsSaving += new EventHandler(_OptionsForm_OptionsSaving);
         }
 
         void _OptionsForm_OptionsSaving(object sender, EventArgs e)
         {
-            string dirPath = Path.GetDirectoryName(fileSelect.FileName);
-            if (!Path.Equals(Pic.DAL.ApplicationConfiguration.CustomSection.DataDirectory, dirPath)
+            if (!Path.Equals(Pic.DAL.ApplicationConfiguration.CustomSection.DatabasePath, fileSelect.FileName)
                 && File.Exists(fileSelect.FileName) )
             {
-                Pic.DAL.ApplicationConfiguration.SaveDataDirectory(dirPath);
+                Pic.DAL.ApplicationConfiguration.SaveDatabasePath(fileSelect.FileName);
                 this.ApplicationMustRestart = true;
             }
         }

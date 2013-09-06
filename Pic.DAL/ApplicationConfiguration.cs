@@ -45,17 +45,17 @@ namespace Pic.DAL
         #endregion
 
         #region Configuration properties
-        [ConfigurationProperty("dataDirectory", DefaultValue = @"C:\Picador\PicParam", IsRequired = true, IsKey = false)]
+        [ConfigurationProperty("databaseFile", DefaultValue = @"C:\Picador\PicParam\Database\PicParam.db", IsRequired = true, IsKey = false)]
         [StringValidator(InvalidCharacters = "~!@#$%^&*[]{};'\"|", MinLength = 1, MaxLength = 255)]
-        public string DataDirectory
+        public string DatabasePath
         {
             get
             {
-                return (string)this["dataDirectory"];
+                return (string)this["databaseFile"];
             }
             set
             {
-                this["dataDirectory"] = value;
+                this["databaseFile"] = value;
             }
         }
         [ConfigurationProperty("applicationDes", DefaultValue = "PicGEOM.exe", IsRequired = false, IsKey = false)]
@@ -103,11 +103,11 @@ namespace Pic.DAL
         {
             get
             {
-                return (string)this["OceProCut"];
+                return (string)this["appOceProCut"];
             }
             set
             {
-                this["OceProCut"] = value;
+                this["appOceProCut"] = value;
             }
         }
         [ConfigurationProperty("applicationDxf", DefaultValue = "applicationDxf", IsRequired = false, IsKey = false)]
@@ -136,30 +136,23 @@ namespace Pic.DAL
                 this["thumbnailsPath"] = value;
             }
         }
-        public string DatabasePath
-        {
-            get
-            {
-                return Path.Combine(this.DataDirectory, @"Database\PicParam.db");
-            }
-        }
         public string RepositoryPath
         {
             get
             {
-                return Path.Combine(this.DataDirectory, @"Documents\");
+                return Path.Combine(Path.GetDirectoryName(this.DatabasePath), @"..\Documents\");
             }
         }
         #endregion
 
         #region Saving
-        public static void SaveDataDirectory(string dataDirectory)
+        public static void SaveDatabasePath(string databasePath)
         {
             Configuration cfg = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
             ApplicationConfiguration section = cfg.GetSection("CustomSection") as ApplicationConfiguration;
             if (section != null)
             {
-                section.DataDirectory = dataDirectory;
+                section.DatabasePath = databasePath;
                 cfg.Save(ConfigurationSaveMode.Modified);
 
                 ConfigurationManager.RefreshSection("CustomSection");

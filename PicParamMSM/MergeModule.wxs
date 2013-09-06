@@ -119,7 +119,7 @@
           <Permission ChangePermission="yes" GenericAll="yes" User="Everyone" TakeOwnership="yes" Write="yes" WriteAttributes="yes" WriteExtendedAttributes="yes" />
         </File>
         <util:XmlFile Id="ModifyDDirPLMPackLibExeConfig1" Action="setValue"
-                      File="[Bin32]PLMPackLib.exe.config" ElementPath="/configuration/CustomSection/@dataDirectory" Value="[Data]" />
+                      File="[Bin32]PLMPackLib.exe.config" ElementPath="/configuration/CustomSection/@databaseFile" Value="[Data]\Database\PicParam.db" />
         <util:XmlFile Id="SetDatabasePath1" Action="setValue"
                       File="[Bin32]PLMPackLib.exe.config" ElementPath="configuration/connectionStrings/add" Name="connectionString" Value="metadata=res://*/ModelSQLite.csdl|res://*/ModelSQLite.ssdl|res://*/ModelSQLite.msl;provider=System.Data.SQLite;provider connection string=&quot;data source=[Bin32]StackBuilder.db&quot;" />
         <util:XmlFile Id="SetInitialReportTemplatePath1" Action="setValue"
@@ -131,7 +131,7 @@
           <Permission ChangePermission="yes" GenericAll="yes" User="Everyone" TakeOwnership="yes" Write="yes" WriteAttributes="yes" WriteExtendedAttributes="yes" />
         </File>
         <util:XmlFile Id="ModifyDDirPLMPackLibExeConfig2" Action="setValue"
-                      File="[Bin32]PLMPackLib.exe.config" ElementPath="/configuration/CustomSection/@dataDirectory" Value="C:\wPicador\Data\" />
+                      File="[Bin32]PLMPackLib.exe.config" ElementPath="/configuration/CustomSection/@databaseFile" Value="C:\wPicador\Data\Database\PicParam.db" />
         <util:XmlFile Id="SetDatabasePath2" Action="setValue"
                       File="[Bin32]PLMPackLib.exe.config" ElementPath="configuration/connectionStrings/add" Name="connectionString" Value="metadata=res://*/ModelSQLite.csdl|res://*/ModelSQLite.ssdl|res://*/ModelSQLite.msl;provider=System.Data.SQLite;provider connection string=&quot;data source=[Bin32]StackBuilder.db&quot;" />
         <util:XmlFile Id="SetInitialReportTemplatePath2" Action="setValue"
@@ -143,7 +143,7 @@
         <File Source="..\Pic.Plugin.GeneratorCtrl1\bin\x86\Release\Pic.Plugin.Generator.dll" />
         <File Source="..\ThirdPartyComponents\ICSharpCode.TextEditor.dll" />
         <util:XmlFile Id="ModDDirGeneratorCtrlDllConfig" Action="setValue"
-                      File="[Bin32]Pic.Plugin.GeneratorCtrl.dll.config" ElementPath="/configuration/CustomSection/@dataDirectory" Value="[Data]" />
+                      File="[Bin32]Pic.Plugin.GeneratorCtrl.dll.config" ElementPath="/configuration/CustomSection/@databaseFile" Value="[Data]\Database\PicParam.db" />
         <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
       </Component>
       <!-- DataInstall -->
@@ -156,7 +156,7 @@
         <util:XmlFile Id="ModifyEmptyDbZipExtractExeConfig" Action="setValue" File="[Bin32]ZipExtract.exe.config"
                       ElementPath="/configuration/applicationSettings/Pic.DAL.Properties.Settings/setting[\[]@name='EmptyDBFilePath'[\]]/value" Value="[Database]PicParamEmpty.db"/>
         <util:XmlFile Id="ModifyDDirZipExtractExeConfig" Action="setValue" File="[Bin32]ZipExtract.exe.config"
-                      ElementPath="/configuration/CustomSection/@dataDirectory" Value="[Data]" />
+                      ElementPath="/configuration/CustomSection/@databaseFile" Value="[Data]\Database\PicParam.db" />
         <util:XmlFile Id="ModifyThumbsZipExtractExeConfig" Action="setValue" File="[Bin32]ZipExtract.exe.config"
                       ElementPath="/configuration/CustomSection/@thumbnailsPath" Value="[Thumbnails]" />
         <Condition>Installed OR NETFRAMEWORK40FULL</Condition>

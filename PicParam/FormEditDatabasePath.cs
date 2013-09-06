@@ -24,7 +24,7 @@ namespace PicParam
         #region Load/Close
         private void FormEditDatabasePath_Load(object sender, EventArgs e)
         {
-            fileSelect.FileName = Path.Combine(Pic.DAL.ApplicationConfiguration.CustomSection.DataDirectory, @"Database\PicParam.db");
+            fileSelect.FileName = Pic.DAL.ApplicationConfiguration.CustomSection.DatabasePath;
             fileSelect.Filter = "SQLite database (*.db)|*.db";
             fileSelect.FileNameChanged += new EventHandler(fileSelect_FileNameChanged);
         }
@@ -37,10 +37,10 @@ namespace PicParam
         }
         private void bnOK_Click(object sender, EventArgs e)
         {
-            if (Path.Equals(Pic.DAL.ApplicationConfiguration.CustomSection.DataDirectory, Path.GetDirectoryName(fileSelect.FileName)))
+            if (!Path.Equals(Pic.DAL.ApplicationConfiguration.CustomSection.DatabasePath, Path.GetDirectoryName(fileSelect.FileName)))
             {
                 MessageBox.Show(string.Format(PicParam.Properties.Resources.ID_APPLICATIONEXITING, Application.ProductName));
-                Pic.DAL.ApplicationConfiguration.CustomSection.DataDirectory = Path.GetDirectoryName(fileSelect.FileName);
+                Pic.DAL.ApplicationConfiguration.SaveDatabasePath( fileSelect.FileName );
                 Application.Restart();
                 Application.ExitThread();
             }

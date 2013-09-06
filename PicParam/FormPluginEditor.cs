@@ -26,7 +26,7 @@ namespace PicParam
             // set component search method
             _generatorCtrl.ComponentSearchMethod = new PicParam.ComponentSearchMethodDB();
             _generatorCtrl.PluginValidated += new Pic.Plugin.GeneratorCtrl.GeneratorCtrl.GeneratorCtlrHandler(_generatorCtrl_PluginValidated);
-            _generatorCtrl.setComponentDirectory(Pic.DAL.ApplicationConfiguration.CustomSection.DataDirectory);
+            _generatorCtrl.setComponentDirectory(Pic.DAL.ApplicationConfiguration.CustomSection.DatabasePath);
         }
 
         #endregion
