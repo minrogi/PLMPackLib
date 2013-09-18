@@ -138,7 +138,7 @@ namespace Pic.DAL
             MergeCardboardProfiles(dbFrom, dbTo, callback);
             // merge document types
             MergeDocumentTypes(dbFrom, dbTo, callback);
-
+            // merge treeNode recursively
             MergeTreeNodesRecursively(dbFrom, dbTo, nodeFrom, nodeTo, callback);
         }
 
@@ -583,13 +583,8 @@ namespace Pic.DAL
                         {
                             if (null != callback) callback.Info(string.Format("Branch {0} already exists.Skipping...", childFrom.Name));
                             childTo = nodeTo.GetChild(dbTo2, childFrom.Name);
+                            ClearExistingDocumentsRecursively(dbFrom, childFrom, childTo, callback);
                         }
-                        else
-                        {
-                            if (null != callback) callback.Info(string.Format("Inserting branch {0}...", childFrom.Name));
-                            childTo = nodeTo.CreateChild(dbTo2, childFrom.Name, childFrom.Description, thumbnailPath);
-                        }
-                        ClearExistingDocumentsRecursively(dbFrom, childFrom, childTo, callback);
                     }
                 }
             }

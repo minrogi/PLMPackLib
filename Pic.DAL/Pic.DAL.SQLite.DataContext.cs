@@ -677,7 +677,7 @@
 
         public bool HasChild(PPDataContext db, string name)
         {
-            return (TreeNodes.Count(tn => tn.Name.ToLower() == name.ToLower()) > 0);
+            return (TreeNodes.Count(tn => tn.Name.ToLower() == name.ToLower() && tn.ParentNodeID == ID) > 0);
         }
 
         public TreeNode GetChild(PPDataContext db, string name)
