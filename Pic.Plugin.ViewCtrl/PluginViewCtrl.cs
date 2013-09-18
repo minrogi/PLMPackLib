@@ -619,9 +619,11 @@ namespace Pic.Plugin.ViewCtrl
         public static List<FileFormat> GetExportFormatList()
         {
             List<FileFormat> list = new List<FileFormat>();
-            list.Add(new Pic.Factory2D.FileFormat("treeDim Picador", "des", ""));
-            list.Add(new Pic.Factory2D.FileFormat("AutoCAD dxf", "dxf", ""));
-            list.Add(new Pic.Factory2D.FileFormat("Adobe Acrobat", "pdf", ""));
+            list.Add(new Pic.Factory2D.FileFormat("treeDim Picador" , "des", ""));
+            list.Add(new Pic.Factory2D.FileFormat("AutoCAD dxf"     , "dxf", ""));
+            list.Add(new Pic.Factory2D.FileFormat("Adobe Acrobat"   , "pdf", ""));
+            list.Add(new Pic.Factory2D.FileFormat("Adobe Illustrator", "ai", ""));
+            list.Add(new Pic.Factory2D.FileFormat("Common File Format 2", "cf2", ""));
             return list;
         }
 
@@ -677,6 +679,14 @@ namespace Pic.Plugin.ViewCtrl
                 graphics.Title = "Pdf export";
                 factory.Draw(graphics, filter);
                 return graphics.GetResultByteArray();
+            }
+            else if ("ai" == fileFormat || "cf2" == fileFormat)
+            {
+                Pic.Factory2D.PicVisitorDiecutOutput visitor = new Pic.Factory2D.PicVisitorDiecutOutput(fileFormat);
+                visitor.Author = "treeDiM";
+                // process visitor
+                factory.ProcessVisitor(visitor, filter);
+                return visitor.GetResultByteArray();
             }
             else
                 throw new Exception("Invalid file format:" + fileFormat);

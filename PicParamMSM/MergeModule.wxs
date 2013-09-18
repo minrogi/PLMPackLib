@@ -86,6 +86,7 @@
         <File Source="..\PicParam\bin\x86\Release\Dxflib4NET.dll" />
         <File Source="..\PicParam\bin\x86\Release\PdfSharp.dll" />
         <File Source="..\PicParam\bin\x86\Release\netDxf.dll" />
+        <File Source="..\PicParam\bin\x86\Release\treeDiM.DiecutLib.dll" />
         <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
       </Component>
       <!-- TreeDim.UserControls -->
@@ -184,7 +185,6 @@
       </Directory>
       <!--End japanese resources-->
     </DirectoryRef>
-
     <!--Data directory-->
     <DirectoryRef Id="Documents">
       <Component Id="DocumentsFolder" Guid="{290F30F9-D979-4794-8F94-0B338FE77BA0}">

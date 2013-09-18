@@ -92,6 +92,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Xml" />
+    <Reference Include="treeDiM.DiecutLib">
+      <HintPath>..\ThirdPartyComponents\treeDiM.DiecutLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileFormat.cs" />
@@ -124,6 +127,7 @@
     <Compile Include="PicTool.cs" />
     <Compile Include="PicToolArea.cs" />
     <Compile Include="PicToolRound.cs" />
+    <Compile Include="PicVisitorDiecutOutput.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>

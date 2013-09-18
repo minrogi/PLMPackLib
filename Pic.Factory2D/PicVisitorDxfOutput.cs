@@ -13,8 +13,8 @@ namespace Pic.Factory2D
     public class PicVisitorDxfOutput: PicVisitorOutput, IDisposable
     {
         #region Private fields
-        DL_Dxf dxf;
-        DL_Writer dw;
+        private DL_Dxf dxf;
+        private DL_Writer dw;
         #endregion
 
         #region Public constructor

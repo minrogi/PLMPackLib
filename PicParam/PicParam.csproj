@@ -17,7 +17,7 @@
     <UpgradeBackupLocation />
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <ApplicationIcon>plmpacklib.ICO</ApplicationIcon>
+    <ApplicationIcon>Resources\plmpacklib.ICO</ApplicationIcon>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -95,6 +95,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="treeDiM.DiecutLib">
+      <HintPath>..\ThirdPartyComponents\treeDiM.DiecutLib.dll</HintPath>
+    </Reference>
     <Reference Include="TreeDim.StackBuilder.GUIExtension">
       <HintPath>..\..\..\Codeplex\StackBuilder\TreeDim.StackBuilder.GUIExtension\bin\Release\TreeDim.StackBuilder.GUIExtension.dll</HintPath>
     </Reference>
@@ -668,7 +671,7 @@
     <None Include="Resources\toolStripButtonLayout.Image.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="plmpacklib.ICO" />
+    <Content Include="Resources\plmpacklib.ICO" />
     <None Include="Resources\StartPage.png" />
     <None Include="app.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
