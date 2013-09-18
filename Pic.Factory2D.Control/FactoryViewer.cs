@@ -251,6 +251,16 @@ namespace Pic.Factory2D.Control
                         byteArray = graphics.GetResultByteArray();
                     }
                 }
+                else if ("ai" == fileFormat || "cf2" == fileFormat)
+                { 
+                    using (Pic.Factory2D.PicVisitorDiecutOutput visitor = new PicVisitorDiecutOutput(fileFormat))
+                    {
+                        visitor.Author = "treeDim";
+                        visitor.Title = System.IO.Path.GetFileNameWithoutExtension(filePath);
+                        _factory.ProcessVisitor(visitor, filter);
+                        byteArray = visitor.GetResultByteArray();
+                    }
+                }
                 else
                     throw new Exception("Invalid file format:" + fileFormat);
                 // write byte array to stream

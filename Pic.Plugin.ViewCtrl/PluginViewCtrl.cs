@@ -668,7 +668,6 @@ namespace Pic.Plugin.ViewCtrl
             {
                 Pic.Factory2D.PicVisitorOutput visitor = new Pic.Factory2D.PicVisitorDxfOutput();
                 visitor.Author = "treeDiM";
-
                 factory.ProcessVisitor(visitor, filter);
                 return visitor.GetResultByteArray();
             }
@@ -684,6 +683,7 @@ namespace Pic.Plugin.ViewCtrl
             {
                 Pic.Factory2D.PicVisitorDiecutOutput visitor = new Pic.Factory2D.PicVisitorDiecutOutput(fileFormat);
                 visitor.Author = "treeDiM";
+                visitor.Title = "PLMPackLib";
                 // process visitor
                 factory.ProcessVisitor(visitor, filter);
                 return visitor.GetResultByteArray();

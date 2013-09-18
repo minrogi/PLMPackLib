@@ -87,6 +87,7 @@
         <File Source="..\PicParam\bin\x86\Release\PdfSharp.dll" />
         <File Source="..\PicParam\bin\x86\Release\netDxf.dll" />
         <File Source="..\PicParam\bin\x86\Release\treeDiM.DiecutLib.dll" />
+        <File Source="..\PicParam\bin\x86\Release\Resource_AI5.txt"/>
         <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
       </Component>
       <!-- TreeDim.UserControls -->

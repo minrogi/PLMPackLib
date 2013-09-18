@@ -17,43 +17,52 @@ namespace Pic.Factory2D
         #region Public constructor
         public PicVisitorDiecutOutput(string fileExt)
         {
-            _exporter = ExporterSet.GetExporterFromExtension("."+fileExt);
+            _exporter = ExporterSet.GetExporterFromExtension("."+ fileExt);
         }
         #endregion
 
         #region Helpers
+        ExpPen.ToolAttribute LineTypeToExpPen(PicGraphics.LT lineType)
+        {
+            ExpPen.ToolAttribute toolAttribute;
+            switch (lineType)
+            {
+                case PicGraphics.LT.LT_CUT: toolAttribute = ExpPen.ToolAttribute.LT_CUT; break;
+                case PicGraphics.LT.LT_CREASING: toolAttribute = ExpPen.ToolAttribute.LT_CREASING; break;
+                case PicGraphics.LT.LT_PERFOCREASING: toolAttribute = ExpPen.ToolAttribute.LT_PERFOCREASING; break;
+                case PicGraphics.LT.LT_HALFCUT: toolAttribute = ExpPen.ToolAttribute.LT_HALFCUT; break;
+                case PicGraphics.LT.LT_COTATION: toolAttribute = ExpPen.ToolAttribute.LT_COTATION; break;
+                case PicGraphics.LT.LT_CONSTRUCTION: toolAttribute = ExpPen.ToolAttribute.LT_CONSTRUCTION; break;
+                default: toolAttribute = ExpPen.ToolAttribute.LT_CONSTRUCTION; break;
+            }
+            return toolAttribute;        
+        }
         #endregion
 
         #region PicFactoryVisitor overrides
         public override void Initialize(PicFactory factory)
         {
-            // create pens
-            _lineType2ExpPen[PicGraphics.LT.LT_CUT] = _exporter.CreatePen("Cut", ExpPen.ToolAttribute.LT_CUT);
-            _lineType2ExpPen[PicGraphics.LT.LT_CREASING] = _exporter.CreatePen("Crease", ExpPen.ToolAttribute.LT_CREASING);
-            _lineType2ExpPen[PicGraphics.LT.LT_PERFOCREASING] = _exporter.CreatePen("Perfocreasing", ExpPen.ToolAttribute.LT_PERFOCREASING);
-            _lineType2ExpPen[PicGraphics.LT.LT_HALFCUT] = _exporter.CreatePen("HalfCut", ExpPen.ToolAttribute.LT_HALFCUT);
-            _lineType2ExpPen[PicGraphics.LT.LT_COTATION] = _exporter.CreatePen("Cotation", ExpPen.ToolAttribute.LT_COTATION);
-            _lineType2ExpPen[PicGraphics.LT.LT_CONSTRUCTION] = _exporter.CreatePen("Construction", ExpPen.ToolAttribute.LT_CONSTRUCTION);
-            // layers
-            _layer = _exporter.CreateLayer("Layer1");
-            
         }
         public override void ProcessEntity(PicEntity entity)
         {
             PicTypedDrawable drawable = entity as PicTypedDrawable;
             ExpBlock block = _exporter.GetBlock("default");
+            ExpLayer layer = null;
             ExpPen pen = null;
             if (null != drawable)
-                pen = _lineType2ExpPen[drawable.LineType];
+            {
+                pen = _exporter.GetPenByAttribute(LineTypeToExpPen(drawable.LineType));
+                layer = _exporter.GetLayerByName(string.Format("Layer {0}", drawable.Layer));
+            }
             PicSegment seg = entity as PicSegment;
             if (null != seg)
             {
-                _exporter.AddSegment(block, _layer, pen, seg.Pt0.X, seg.Pt0.Y, seg.Pt1.X, seg.Pt1.Y);
+                _exporter.AddSegment(block, layer, pen, seg.Pt0.X, seg.Pt0.Y, seg.Pt1.X, seg.Pt1.Y);
             }
             PicArc arc = entity as PicArc;
             if (null != arc)
             {
-                _exporter.AddArc(block, _layer, pen, arc.Center.X, arc.Center.Y, arc.Radius, arc.AngleBeg, arc.AngleEnd);           
+                _exporter.AddArc(block, layer, pen, arc.Center.X, arc.Center.Y, arc.Radius, arc.AngleBeg, arc.AngleEnd);           
             }
         }
         public override void Finish()
@@ -69,11 +78,6 @@ namespace Pic.Factory2D
         {
             return _exporter.GetResultByteArray();
         }
-        #endregion
-
-        #region Data members
-        private Dictionary<PicGraphics.LT, ExpPen> _lineType2ExpPen = new Dictionary<PicGraphics.LT, ExpPen>();
-        private ExpLayer _layer = null;
         #endregion
     }
 }
