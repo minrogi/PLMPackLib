@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 using System.Reflection;
 
 using Sharp3D.Math.Core;
@@ -157,10 +158,10 @@ namespace Pic.Factory2D.Control
         }
         public bool Export(string filePath)
         {
-            return WriteExportFile(filePath, System.IO.Path.GetExtension(filePath).Substring(1));
+            return WriteExportFile(filePath, System.IO.Path.GetExtension(filePath));
         }
 
-        public bool WriteExportFile(string filePath, string fileFormat)
+        public bool WriteExportFile(string filePath, string fileExt)
         {
             try
             {
@@ -174,10 +175,12 @@ namespace Pic.Factory2D.Control
                 box.AddMarginHorizontal(box.Width * 0.01);
                 box.AddMarginVertical(box.Height * 0.01);
 
+                string fileFormat = fileExt.TrimStart('.').ToLower();
+
                 byte[] byteArray;
                 // get file content
-                if ("des" == fileFormat.ToLower())
-                {
+                if (string.Equals("des", fileFormat))
+                {   // DES
                     using (Pic.Factory2D.PicVisitorDesOutput visitor = new Pic.Factory2D.PicVisitorDesOutput())
                     {
                         visitor.Author = "treeDiM";
@@ -185,8 +188,8 @@ namespace Pic.Factory2D.Control
                         byteArray = visitor.GetResultByteArray();
                     }
                 }
-                else if ("dxf" == fileFormat.ToLower())
-                {
+                else if (string.Equals("dxf", fileFormat))
+                {   // DXF
                     using (Pic.Factory2D.PicVisitorDxfOutput visitor = new Pic.Factory2D.PicVisitorDxfOutput())
                     {
                         visitor.Author = "treeDiM";
@@ -194,14 +197,24 @@ namespace Pic.Factory2D.Control
                         byteArray = visitor.GetResultByteArray();
                     }
                 }
-                else if ("pdf" == fileFormat.ToLower())
-                {
+                else if (string.Equals("pdf", fileFormat))
+                {   // PDF
                     using (Pic.Factory2D.PicGraphicsPdf graphics = new PicGraphicsPdf(box))
                     {
-                        graphics.Author = "treeDiM";
-                        graphics.Title = "Pdf export";
+                        graphics.Author = Application.ProductName + "(" + Application.CompanyName + ")";
+                        graphics.Title = Path.GetFileNameWithoutExtension(filePath);
                         _factory.Draw(graphics, filter);
                         byteArray = graphics.GetResultByteArray();
+                    }
+                }
+                else if (string.Equals("ai", fileFormat) || string.Equals("cf2", fileFormat))
+                { // AI || CF2
+                    using (Pic.Factory2D.PicVisitorDiecutOutput visitor = new PicVisitorDiecutOutput(fileExt))
+                    {
+                        visitor.Author = Application.ProductName + "(" + Application.CompanyName + ")";
+                        visitor.Title = Path.GetFileNameWithoutExtension(filePath);
+                        _factory.ProcessVisitor(visitor, filter);
+                        byteArray = visitor.GetResultByteArray();
                     }
                 }
                 else

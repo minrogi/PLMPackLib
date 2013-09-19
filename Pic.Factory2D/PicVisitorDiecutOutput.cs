@@ -17,7 +17,7 @@ namespace Pic.Factory2D
         #region Public constructor
         public PicVisitorDiecutOutput(string fileExt)
         {
-            _exporter = ExporterSet.GetExporterFromExtension("."+ fileExt);
+            _exporter = ExporterSet.GetExporterFromExtension(fileExt);
         }
         #endregion
 
@@ -46,7 +46,7 @@ namespace Pic.Factory2D
         public override void ProcessEntity(PicEntity entity)
         {
             PicTypedDrawable drawable = entity as PicTypedDrawable;
-            ExpBlock block = _exporter.GetBlock("default");
+            ExpBlock defblock = _exporter.GetBlock("default");
             ExpLayer layer = null;
             ExpPen pen = null;
             if (null != drawable)
@@ -57,12 +57,22 @@ namespace Pic.Factory2D
             PicSegment seg = entity as PicSegment;
             if (null != seg)
             {
-                _exporter.AddSegment(block, layer, pen, seg.Pt0.X, seg.Pt0.Y, seg.Pt1.X, seg.Pt1.Y);
+                _exporter.AddSegment(defblock, layer, pen, seg.Pt0.X, seg.Pt0.Y, seg.Pt1.X, seg.Pt1.Y);
             }
             PicArc arc = entity as PicArc;
             if (null != arc)
             {
-                _exporter.AddArc(block, layer, pen, arc.Center.X, arc.Center.Y, arc.Radius, arc.AngleBeg, arc.AngleEnd);           
+                _exporter.AddArc(defblock, layer, pen, arc.Center.X, arc.Center.Y, arc.Radius, arc.AngleBeg, arc.AngleEnd);           
+            }
+            PicBlock block = entity as PicBlock;
+            if (null != block)
+            {
+                //_exporter.AddBlock();
+            }
+            PicBlockRef blockRef = entity as PicBlockRef;
+            if (null != blockRef)
+            {
+                //_exporter.AddBlockRef();
             }
         }
         public override void Finish()

@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Threading;
+using System.IO;
 
 using Pic.DAL.SQLite;
 using Pic.Plugin;
@@ -378,19 +379,38 @@ namespace PicParam
 
         private void toolStripButtonPicGEOM_Click(object sender, EventArgs e)
         {
-            ExportAndOpen("des", Pic.DAL.ApplicationConfiguration.CustomSection.AppPicGEOM);
+            ExportAndOpenExtension("des", Pic.DAL.ApplicationConfiguration.CustomSection.AppPicGEOM);
         }
         private void toolStripButtonPicDecoup_Click(object sender, EventArgs e)
         {
-            ExportAndOpen("des", Pic.DAL.ApplicationConfiguration.CustomSection.AppPicdecoup);
+            ExportAndOpenExtension("des", Pic.DAL.ApplicationConfiguration.CustomSection.AppPicdecoup);
         }
         private void toolStripButtonPicador3D_Click(object sender, EventArgs e) 
         {
-            ExportAndOpen("des", Pic.DAL.ApplicationConfiguration.CustomSection.AppPicador3D);
+            ExportAndOpenExtension("des", Pic.DAL.ApplicationConfiguration.CustomSection.AppPicador3D);
         }
         private void toolStripButtonOceProCut_Click(object sender, EventArgs e)
         {
-            ExportAndOpen("ai", (Pic.DAL.ApplicationConfiguration.CustomSection.AppOceProCut));
+            try
+            {
+                // set default file path
+                string filePath = Path.Combine(Settings.Default.FileExportDirectory, DocumentName);
+                filePath = Path.ChangeExtension(filePath, "ai");
+                // initialize SaveFileDialog
+                SaveFileDialog fd = new SaveFileDialog();
+                fd.FileName = filePath;
+                fd.Filter = "Adobe Illustrator (*.ai)|*.ai|All Files|*.*";
+                // show save file dialog
+                if (DialogResult.OK == fd.ShowDialog())
+                    ExportAndOpen(fd.FileName, (Pic.DAL.ApplicationConfiguration.CustomSection.AppOceProCut));
+                // save directory
+                Settings.Default.FileExportDirectory = Path.GetDirectoryName(fd.FileName);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void toolStripButtonDXF_Click(object sender, EventArgs e)
         {
@@ -408,34 +428,41 @@ namespace PicParam
                 else
                     return;
             }
-            ExportAndOpen("dxf", Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationDxf);
+            ExportAndOpenExtension("dxf", Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationDxf);
         }
 
-
-        private void ExportAndOpen(string sExt, string sPathExectable)
+        private void ExportAndOpen(string filePath, string sPathExectable)
         {
-            try
+            // write file
+            if (_pluginViewCtrl.Visible)
+                _pluginViewCtrl.WriteExportFile(filePath, Path.GetExtension(filePath));
+            else if (_factoryViewCtrl.Visible)
+                _factoryViewCtrl.WriteExportFile(filePath, Path.GetExtension(filePath));
+            
+            // test if executing application is available
+            if (System.IO.File.Exists(sPathExectable))
             {
-                // build temp file path
-                string tempFilePath = System.IO.Path.ChangeExtension(System.IO.Path.GetTempFileName(), sExt);
-                // write file
-                if (_pluginViewCtrl.Visible)
-                    _pluginViewCtrl.WriteExportFile(tempFilePath, sExt);
-                else if (_factoryViewCtrl.Visible)
-                    _factoryViewCtrl.WriteExportFile(tempFilePath, sExt);
                 // open using existing file path
                 using (System.Diagnostics.Process proc = new System.Diagnostics.Process())
                 {
                     proc.StartInfo.FileName = sPathExectable;
-                    proc.StartInfo.Arguments = "\"" + tempFilePath + "\"";
+                    proc.StartInfo.Arguments = "\"" + filePath + "\"";
                     proc.Start();
                 }
             }
-            catch (Exception ex)
-            {
-                _log.Error(ex.ToString());
-            }        
-        
+            else
+                MessageBox.Show(
+                    string.Format("It appears that the following path does not point to a valid application:\n {0}", sPathExectable),
+                    Application.ProductName,
+                    MessageBoxButtons.OK );
+        }
+
+        private void ExportAndOpenExtension(string sExt, string sPathExectable)
+        {
+            // build temp file path
+            string tempFilePath = System.IO.Path.ChangeExtension(System.IO.Path.GetTempFileName(), sExt);
+
+            ExportAndOpen(tempFilePath, sPathExectable);
         }
         #endregion
 
@@ -502,7 +529,7 @@ namespace PicParam
                 toolStripButtonPicGEOM.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("PicGEOM");
                 toolStripButtonPicDecoup.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("PicDecoup");
                 toolStripButtonPicador3D.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("Picador3D");
-                toolStripButtonOceProCut.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("OceProCut");
+                toolStripButtonOceProCut.Enabled = buttonsEnabled; //&& ApplicationAvailabilityChecker.IsAvailable("OceProCut");
                 toolStripButtonDXF.Enabled = buttonsEnabled;
                 // "File" menu items
                 exportToolStripMenuItem.Enabled = buttonsEnabled;

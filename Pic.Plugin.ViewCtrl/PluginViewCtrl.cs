@@ -627,16 +627,16 @@ namespace Pic.Plugin.ViewCtrl
             return list;
         }
 
-        public void WriteExportFile(string filePath, string fileFormat)
+        public void WriteExportFile(string filePath, string fileExt)
         {
             // get export byte array
-            byte[] byteArray = GetExportFile(fileFormat, CurrentParameterStack);
+            byte[] byteArray = GetExportFile(fileExt, CurrentParameterStack);
             // write byte array to stream
             using (System.IO.FileStream fstream = new FileStream(filePath, FileMode.Create))
                 fstream.Write(byteArray, 0, byteArray.GetLength(0));
         }
 
-        public byte[] GetExportFile(string fileFormat, Pic.Plugin.ParameterStack stack)
+        public byte[] GetExportFile(string fileExt, Pic.Plugin.ParameterStack stack)
         {
             // build factory
             Pic.Factory2D.PicFactory factory = new Pic.Factory2D.PicFactory();
@@ -655,36 +655,39 @@ namespace Pic.Plugin.ViewCtrl
             box.AddMarginHorizontal(box.Width * 0.05);
             box.AddMarginVertical(box.Height * 0.05);
 
+            string author = Application.ProductName + " (" + Application.CompanyName + ")";
+            string title = Application.ProductName + " export";
+            string fileFormat = fileExt.StartsWith(".") ? fileExt.Substring(1) : fileExt;
+            fileFormat = fileFormat.ToLower();
+
             // get file content
-            if ("des" == fileFormat)
+            if (string.Equals("des", fileFormat))
             {
                 Pic.Factory2D.PicVisitorDesOutput visitor = new Pic.Factory2D.PicVisitorDesOutput();
-                visitor.Author = "treeDiM";
-                // process visitor
+                visitor.Author = author;
                 factory.ProcessVisitor(visitor, filter);
                 return visitor.GetResultByteArray();
             }
-            else if ("dxf" == fileFormat)
+            else if (string.Equals("dxf", fileFormat))
             {
                 Pic.Factory2D.PicVisitorOutput visitor = new Pic.Factory2D.PicVisitorDxfOutput();
-                visitor.Author = "treeDiM";
+                visitor.Author = author;
                 factory.ProcessVisitor(visitor, filter);
                 return visitor.GetResultByteArray();
             }
-            else if ("pdf" == fileFormat)
+            else if (string.Equals("pdf", fileFormat))
             {
                 Pic.Factory2D.PicGraphicsPdf graphics = new PicGraphicsPdf(box);
-                graphics.Author = "treeDiM";
-                graphics.Title = "Pdf export";
+                graphics.Author = author;
+                graphics.Title = title;
                 factory.Draw(graphics, filter);
                 return graphics.GetResultByteArray();
             }
-            else if ("ai" == fileFormat || "cf2" == fileFormat)
+            else if (string.Equals("ai", fileFormat) || string.Equals("cf2", fileFormat))
             {
                 Pic.Factory2D.PicVisitorDiecutOutput visitor = new Pic.Factory2D.PicVisitorDiecutOutput(fileFormat);
-                visitor.Author = "treeDiM";
-                visitor.Title = "PLMPackLib";
-                // process visitor
+                visitor.Author = author;
+                visitor.Title = title;
                 factory.ProcessVisitor(visitor, filter);
                 return visitor.GetResultByteArray();
             }

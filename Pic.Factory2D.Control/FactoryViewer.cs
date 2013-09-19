@@ -204,10 +204,10 @@ namespace Pic.Factory2D.Control
 
         public bool Export(string filePath)
         {
-            return WriteExportFile(filePath, System.IO.Path.GetExtension(filePath).Substring(1));
+            return WriteExportFile(filePath, System.IO.Path.GetExtension(filePath));
         }
 
-        public bool WriteExportFile(string filePath, string fileFormat)
+        public bool WriteExportFile(string filePath, string fileExt)
         {
             try
             {
@@ -221,13 +221,17 @@ namespace Pic.Factory2D.Control
                 box.AddMarginHorizontal(box.Width * 0.01);
                 box.AddMarginVertical(box.Height * 0.01);
 
+                string author = Application.ProductName + " (" + Application.CompanyName + ")";
+                string title = System.IO.Path.GetFileNameWithoutExtension(filePath);
+                string fileFormat = fileExt.TrimStart('.').ToLower();
+
                 byte[] byteArray;
                 // get file content
                 if ("des" == fileFormat)
                 {
                     using (Pic.Factory2D.PicVisitorDesOutput visitor = new Pic.Factory2D.PicVisitorDesOutput())
                     {
-                        visitor.Author = "treeDiM";
+                        visitor.Author = author;
                         _factory.ProcessVisitor(visitor, filter);
                         byteArray = visitor.GetResultByteArray();
                     }
@@ -236,7 +240,7 @@ namespace Pic.Factory2D.Control
                 {
                     using (Pic.Factory2D.PicVisitorDxfOutput visitor = new Pic.Factory2D.PicVisitorDxfOutput())
                     {
-                        visitor.Author = "treeDiM";
+                        visitor.Author = author;
                         _factory.ProcessVisitor(visitor, filter);
                         byteArray = visitor.GetResultByteArray();
                     }
@@ -245,24 +249,24 @@ namespace Pic.Factory2D.Control
                 {
                     using (Pic.Factory2D.PicGraphicsPdf graphics = new PicGraphicsPdf(box))
                     {
-                        graphics.Author = "treeDiM";
-                        graphics.Title = "Pdf export";
+                        graphics.Author = author;
+                        graphics.Title = title;
                         _factory.Draw(graphics, filter);
                         byteArray = graphics.GetResultByteArray();
                     }
                 }
                 else if ("ai" == fileFormat || "cf2" == fileFormat)
                 { 
-                    using (Pic.Factory2D.PicVisitorDiecutOutput visitor = new PicVisitorDiecutOutput(fileFormat))
+                    using (Pic.Factory2D.PicVisitorDiecutOutput visitor = new PicVisitorDiecutOutput(fileExt))
                     {
-                        visitor.Author = "treeDim";
-                        visitor.Title = System.IO.Path.GetFileNameWithoutExtension(filePath);
+                        visitor.Author = author;
+                        visitor.Title = title;
                         _factory.ProcessVisitor(visitor, filter);
                         byteArray = visitor.GetResultByteArray();
                     }
                 }
                 else
-                    throw new Exception("Invalid file format:" + fileFormat);
+                    throw new Exception("Invalid file format: " + fileFormat);
                 // write byte array to stream
                 using (System.IO.FileStream fstream = new System.IO.FileStream(filePath, System.IO.FileMode.Create))
                     fstream.Write(byteArray, 0, byteArray.GetLength(0));
