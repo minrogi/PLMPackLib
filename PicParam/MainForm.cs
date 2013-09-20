@@ -402,7 +402,7 @@ namespace PicParam
                 fd.Filter = "Adobe Illustrator (*.ai)|*.ai|All Files|*.*";
                 // show save file dialog
                 if (DialogResult.OK == fd.ShowDialog())
-                    ExportAndOpen(fd.FileName, (Pic.DAL.ApplicationConfiguration.CustomSection.AppOceProCut));
+                    ExportAndOpen(fd.FileName, string.Empty );
                 // save directory
                 Settings.Default.FileExportDirectory = Path.GetDirectoryName(fd.FileName);
 
@@ -438,7 +438,9 @@ namespace PicParam
                 _pluginViewCtrl.WriteExportFile(filePath, Path.GetExtension(filePath));
             else if (_factoryViewCtrl.Visible)
                 _factoryViewCtrl.WriteExportFile(filePath, Path.GetExtension(filePath));
-            
+            // if executable path is empty, then exit
+            if (string.IsNullOrEmpty(sPathExectable))
+                return;
             // test if executing application is available
             if (System.IO.File.Exists(sPathExectable))
             {
