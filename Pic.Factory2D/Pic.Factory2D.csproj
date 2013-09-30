@@ -92,9 +92,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Xml" />
-    <Reference Include="treeDiM.DiecutLib">
-      <HintPath>..\ThirdPartyComponents\treeDiM.DiecutLib.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileFormat.cs" />
@@ -147,6 +144,10 @@
     <ProjectReference Include="..\..\..\Codeplex\Sharp3D.Math\Sharp3D.Math\Main\Sharp3D.Math\Sharp3D.Math.csproj">
       <Project>{8F9BA4D3-D6AF-42A6-B74F-0DF6568C148B}</Project>
       <Name>Sharp3D.Math</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DXF2Diecut\treeDiM.DiecutLib\treeDiM.DiecutLib.csproj">
+      <Project>{2ED1AE54-3230-480E-A77F-3EE234766182}</Project>
+      <Name>treeDiM.DiecutLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\DesLib4NET\DesLib4NET.csproj">
       <Project>{7CDEDAAE-8156-4835-9837-55C7CDC67070}</Project>

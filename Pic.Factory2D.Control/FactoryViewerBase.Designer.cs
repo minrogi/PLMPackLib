@@ -46,6 +46,8 @@
             this.impositionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cf2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +111,8 @@
             resources.ApplyResources(this.exportToolStripMenuItem, "exportToolStripMenuItem");
             this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dxfToolStripMenuItem,
+            this.aiToolStripMenuItem,
+            this.cf2ToolStripMenuItem,
             this.pdfToolStripMenuItem,
             this.desToolStripMenuItem});
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
@@ -153,6 +157,18 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
+            // aiToolStripMenuItem
+            // 
+            resources.ApplyResources(this.aiToolStripMenuItem, "aiToolStripMenuItem");
+            this.aiToolStripMenuItem.Name = "aiToolStripMenuItem";
+            this.aiToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
+            // 
+            // cf2ToolStripMenuItem
+            // 
+            resources.ApplyResources(this.cf2ToolStripMenuItem, "cf2ToolStripMenuItem");
+            this.cf2ToolStripMenuItem.Name = "cf2ToolStripMenuItem";
+            this.cf2ToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
+            // 
             // FactoryViewerBase
             // 
             resources.ApplyResources(this, "$this");
@@ -181,5 +197,7 @@
         private System.Windows.Forms.ToolStripMenuItem desToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem impositionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cf2ToolStripMenuItem;
     }
 }

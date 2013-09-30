@@ -527,7 +527,7 @@ namespace Pic.Factory2D
             // block
             PicBlock block = factory.AddBlock(_container, pos0.Transformation);
             // blockrefs
-            for (int i = 1; i < _positions.Count; ++i ) // do not insert first position as the block is now displayed
+            for (int i = 1; i < _positions.Count; ++i) // do not insert first position as the block is now displayed
             {
                 BPosition pos = _positions[i];
                 factory.AddBlockRef(block, pos.Transformation * pos0.Transformation.Inverse());

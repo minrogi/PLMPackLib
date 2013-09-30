@@ -42,11 +42,44 @@ namespace Pic.Factory2D
         #region PicFactoryVisitor overrides
         public override void Initialize(PicFactory factory)
         {
+            _exporter.Initialize();
         }
         public override void ProcessEntity(PicEntity entity)
         {
             PicTypedDrawable drawable = entity as PicTypedDrawable;
-            ExpBlock defblock = _exporter.GetBlock("default");
+            if (entity is PicSegment || entity is PicArc)
+            {
+                ExpBlock defblock = _exporter.GetBlockOrCreate("default");
+                ExportEntity(defblock, entity);
+            }
+
+            PicBlock block = entity as PicBlock;
+            if (null != block)
+            {
+                // create block
+                ExpBlock expBlock = _exporter.CreateBlock(string.Format("Block_{0}", block.Id));
+                // create _x=0.0 _y=0.0 
+                ExpBlockRef expBlockRef = _exporter.CreateBlockRef(expBlock);
+                // create entities
+                foreach (PicEntity blockEntity in block.Entities)
+                    ExportEntity(expBlock, blockEntity);
+            }
+            PicBlockRef blockRef = entity as PicBlockRef;
+            if (null != blockRef)
+            {
+                // retrieve previously created block
+                ExpBlock expBlock = _exporter.GetBlock(string.Format("Block_{0}", blockRef.Block.Id));
+                ExpBlockRef expBlockRef = _exporter.CreateBlockRef(expBlock);
+                expBlockRef._x = blockRef.Position.X;
+                expBlockRef._y = blockRef.Position.Y;
+                expBlockRef._dir = blockRef.Angle;
+                expBlockRef._scaleX = 1.0;
+                expBlockRef._scaleY = 1.0;
+            }
+        }
+        public void ExportEntity(ExpBlock block, PicEntity entity)
+        {
+            PicTypedDrawable drawable = entity as PicTypedDrawable;
             ExpLayer layer = null;
             ExpPen pen = null;
             if (null != drawable)
@@ -56,23 +89,14 @@ namespace Pic.Factory2D
             }
             PicSegment seg = entity as PicSegment;
             if (null != seg)
-            {
-                _exporter.AddSegment(defblock, layer, pen, seg.Pt0.X, seg.Pt0.Y, seg.Pt1.X, seg.Pt1.Y);
-            }
+                _exporter.AddSegment(block, layer, pen, seg.Pt0.X, seg.Pt0.Y, seg.Pt1.X, seg.Pt1.Y);
             PicArc arc = entity as PicArc;
             if (null != arc)
             {
-                _exporter.AddArc(defblock, layer, pen, arc.Center.X, arc.Center.Y, arc.Radius, arc.AngleBeg, arc.AngleEnd);           
-            }
-            PicBlock block = entity as PicBlock;
-            if (null != block)
-            {
-                //_exporter.AddBlock();
-            }
-            PicBlockRef blockRef = entity as PicBlockRef;
-            if (null != blockRef)
-            {
-                //_exporter.AddBlockRef();
+                // using dxf conversions
+                double ang = arc.AngleEnd - arc.AngleBeg, angd = arc.AngleBeg, ango = arc.AngleEnd - arc.AngleBeg;
+                if (ang < 0.0) {   angd += ang; ango = -ang;   } else ango = ang;
+                _exporter.AddArc(block, layer, pen, arc.Center.X, arc.Center.Y, arc.Radius, angd, angd+ango);
             }
         }
         public override void Finish()

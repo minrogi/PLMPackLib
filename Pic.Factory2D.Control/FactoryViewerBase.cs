@@ -291,8 +291,9 @@ namespace Pic.Factory2D.Control
                         , Application.ProductName
                         , MessageBoxButtons.OK);
                 }
-                catch (Exception /*ex*/)
+                catch (Exception ex)
                 {
+                    MessageBox.Show(ex.ToString());
                 }
             }
         }
@@ -475,6 +476,14 @@ namespace Pic.Factory2D.Control
                 else if ("PDF" == item.Text)
                 {
                     saveFileDialog.Filter = "Adobe pdf|*.pdf|All Files|*.*";
+                }
+                else if ("AI" == item.Text)
+                {
+                    saveFileDialog.Filter = "Adobe Illustrator|*.ai|All Files|*.*";
+                }
+                else if ("CF2" == item.Text)
+                {
+                    saveFileDialog.Filter = "Common File Format 2|*.cf2|All Files|*.*";
                 }
                 if (DialogResult.OK == saveFileDialog.ShowDialog())
                     Export(saveFileDialog.FileName);

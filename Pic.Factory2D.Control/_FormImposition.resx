@@ -805,30 +805,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;grpbCardboardFormat.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="factoryViewer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="factoryViewer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-1, 42</value>
-  </data>
-  <data name="factoryViewer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>495, 531</value>
-  </data>
-  <data name="factoryViewer.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;factoryViewer.Name" xml:space="preserve">
-    <value>factoryViewer</value>
-  </data>
-  <data name="&gt;&gt;factoryViewer.Type" xml:space="preserve">
-    <value>Pic.Factory2D.Control.FactoryViewer, Pic.Factory2D.Control, Version=1.0.5017.29079, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;factoryViewer.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;factoryViewer.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <metadata name="toolStripImposition.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -869,16 +845,10 @@
   <data name="toolStripExportDXF.Text" xml:space="preserve">
     <value>DXF</value>
   </data>
-  <data name="toolStripExportPDF.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="toolStripExportAI.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
   </data>
-  <data name="toolStripExportPDF.Text" xml:space="preserve">
-    <value>PDF</value>
-  </data>
-  <data name="toolStriExportAI.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="toolStriExportAI.Text" xml:space="preserve">
+  <data name="toolStripExportAI.Text" xml:space="preserve">
     <value>AI</value>
   </data>
   <data name="toolStripExportCF2.Size" type="System.Drawing.Size, System.Drawing">
@@ -886,6 +856,12 @@
   </data>
   <data name="toolStripExportCF2.Text" xml:space="preserve">
     <value>CF2</value>
+  </data>
+  <data name="toolStripExportPDF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="toolStripExportPDF.Text" xml:space="preserve">
+    <value>PDF</value>
   </data>
   <data name="toolStripButtonExport.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1000,22 +976,22 @@
   <data name="&gt;&gt;toolStripExportDXF.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripExportPDF.Name" xml:space="preserve">
-    <value>toolStripExportPDF</value>
+  <data name="&gt;&gt;toolStripExportAI.Name" xml:space="preserve">
+    <value>toolStripExportAI</value>
   </data>
-  <data name="&gt;&gt;toolStripExportPDF.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStriExportAI.Name" xml:space="preserve">
-    <value>toolStriExportAI</value>
-  </data>
-  <data name="&gt;&gt;toolStriExportAI.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolStripExportAI.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripExportCF2.Name" xml:space="preserve">
     <value>toolStripExportCF2</value>
   </data>
   <data name="&gt;&gt;toolStripExportCF2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripExportPDF.Name" xml:space="preserve">
+    <value>toolStripExportPDF</value>
+  </data>
+  <data name="&gt;&gt;toolStripExportPDF.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

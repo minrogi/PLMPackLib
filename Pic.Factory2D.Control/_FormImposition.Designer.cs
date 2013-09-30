@@ -53,16 +53,15 @@
             this.lblCardboardEfficiency = new System.Windows.Forms.Label();
             this.lblValueCardboardFormat = new System.Windows.Forms.Label();
             this.lblFormat = new System.Windows.Forms.Label();
-            this.factoryViewer = new Pic.Factory2D.Control.FactoryViewer();
             this.toolStripImposition = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonPicGEOM = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonExport = new System.Windows.Forms.ToolStripSplitButton();
             this.toolStripExportDES = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripExportDXF = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripExportPDF = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStriExportAI = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripExportAI = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripExportCF2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripExportPDF = new System.Windows.Forms.ToolStripMenuItem();
             this.grpbLengthes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFold)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCut)).BeginInit();
@@ -222,16 +221,6 @@
             resources.ApplyResources(this.lblFormat, "lblFormat");
             this.lblFormat.Name = "lblFormat";
             // 
-            // factoryViewer
-            // 
-            resources.ApplyResources(this.factoryViewer, "factoryViewer");
-            this.factoryViewer.Name = "factoryViewer";
-            this.factoryViewer.ReflectionX = false;
-            this.factoryViewer.ReflectionY = false;
-            this.factoryViewer.ShowAboutMenu = false;
-            this.factoryViewer.ShowCotations = false;
-            this.factoryViewer.ShowNestingMenu = false;
-            // 
             // toolStripImposition
             // 
             this.toolStripImposition.ImageScalingSize = new System.Drawing.Size(32, 32);
@@ -261,9 +250,9 @@
             this.toolStripButtonExport.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripExportDES,
             this.toolStripExportDXF,
-            this.toolStripExportPDF,
-            this.toolStriExportAI,
-            this.toolStripExportCF2});
+            this.toolStripExportAI,
+            this.toolStripExportCF2,
+            this.toolStripExportPDF});
             resources.ApplyResources(this.toolStripButtonExport, "toolStripButtonExport");
             this.toolStripButtonExport.Name = "toolStripButtonExport";
             // 
@@ -279,23 +268,21 @@
             resources.ApplyResources(this.toolStripExportDXF, "toolStripExportDXF");
             this.toolStripExportDXF.Click += new System.EventHandler(this.toolStripExport_Click);
             // 
-            // toolStripExportPDF
+            // toolStripExportAI
             // 
-            this.toolStripExportPDF.Name = "toolStripExportPDF";
-            resources.ApplyResources(this.toolStripExportPDF, "toolStripExportPDF");
-            this.toolStripExportPDF.Click += new System.EventHandler(this.toolStripExport_Click);
-            // 
-            // toolStriExportAI
-            // 
-            this.toolStriExportAI.Name = "toolStriExportAI";
-            resources.ApplyResources(this.toolStriExportAI, "toolStriExportAI");
-            this.toolStriExportAI.Click += new System.EventHandler(this.toolStripExport_Click);
+            this.toolStripExportAI.Name = "toolStripExportAI";
+            resources.ApplyResources(this.toolStripExportAI, "toolStripExportAI");
             // 
             // toolStripExportCF2
             // 
             this.toolStripExportCF2.Name = "toolStripExportCF2";
             resources.ApplyResources(this.toolStripExportCF2, "toolStripExportCF2");
-            this.toolStripExportCF2.Click += new System.EventHandler(this.toolStripExport_Click);
+            // 
+            // toolStripExportPDF
+            // 
+            this.toolStripExportPDF.Name = "toolStripExportPDF";
+            resources.ApplyResources(this.toolStripExportPDF, "toolStripExportPDF");
+            this.toolStripExportPDF.Click += new System.EventHandler(this.toolStripExport_Click);
             // 
             // FormImposition
             // 
@@ -309,7 +296,6 @@
             this.Controls.Add(this.listBoxSolutions);
             this.Controls.Add(this.lblSolutions);
             this.Controls.Add(this.buttonClose);
-            this.Controls.Add(this.factoryViewer);
             this.Controls.Add(this.grpbCardboardFormat);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -362,8 +348,8 @@
         private System.Windows.Forms.ToolStripSplitButton toolStripButtonExport;
         private System.Windows.Forms.ToolStripMenuItem toolStripExportDES;
         private System.Windows.Forms.ToolStripMenuItem toolStripExportDXF;
-        private System.Windows.Forms.ToolStripMenuItem toolStripExportPDF;
-        private System.Windows.Forms.ToolStripMenuItem toolStriExportAI;
+        private System.Windows.Forms.ToolStripMenuItem toolStripExportAI;
         private System.Windows.Forms.ToolStripMenuItem toolStripExportCF2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripExportPDF;
     }
 }

@@ -117,6 +117,9 @@ namespace Pic.Factory2D
             }
             SetModified();
         }
+
+        public List<PicEntity> Entities
+        { get { return _entities; } }
         #endregion
 
         #region IDisposable implementation
