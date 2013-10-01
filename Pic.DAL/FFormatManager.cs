@@ -54,7 +54,7 @@ namespace Pic.DAL
     public class FormatDXF : FormatHandler
     {
         public override bool CanGenerateThumbnail { get { return true; } }
-        public override string ThumbnailName { get { return ""; } }
+        public override string ThumbnailName { get { return "dxf.bmp"; } }
         public override string FilterString { get { return "Autocad (*.dxf)|*.dxf|"; } }
         public override string[] SupportedExtensions { get { return new string[] { "dxf" }; } }
         public override string Name { get { return "autodesk dxf"; } }
@@ -65,11 +65,11 @@ namespace Pic.DAL
     public class FormatCF2 : FormatHandler
     {
         public override bool CanGenerateThumbnail { get { return true; } }
-        public override string ThumbnailName { get { return ""; } }
-        public override string FilterString { get { return "Common File Format (*.cf2)|*.cf2|"; } }
+        public override string ThumbnailName { get { return "cf2.bmp"; } }
+        public override string FilterString { get { return "Common File Format 2 (*.cf2)|*.cf2|"; } }
         public override string[] SupportedExtensions { get { return new string[] { "cf2" }; } }
-        public override string Name { get { return "CF2"; } }
-        public override string Description { get { return "Common File Format"; } }
+        public override string Name { get { return "CFF2"; } }
+        public override string Description { get { return "Common File Format 2"; } }
         public override string Application { get { return "Picador"; } }
     }
     public class FormatAI : FormatHandler
@@ -81,6 +81,16 @@ namespace Pic.DAL
         public override string Name { get { return "Adobe Illustrator"; } }
         public override string Description { get { return "Adobe Illustrator"; } }
         public override string Application { get { return "Illustrator"; } }
+    }
+    public class FormatEPS : FormatHandler
+    {
+        public override bool CanGenerateThumbnail { get { return false; } }
+        public override string ThumbnailName { get { return "eps.bmp"; } }
+        public override string FilterString { get { return "Encapsulated Postscripts (*.eps)|*.eps|"; } }
+        public override string[] SupportedExtensions { get { return new string[] { "eps" }; } }
+        public override string Name { get { return "Encapsulated Postscripts"; } }
+        public override string Description { get { return "Encapsulated Postscripts"; } }
+        public override string Application { get { return "Postscript"; } }
     }
     public class FormatImage : FormatHandler
     {
@@ -236,6 +246,7 @@ namespace Pic.DAL
             , new FormatDXF()
             , new FormatCF2()
             , new FormatAI()
+            , new FormatEPS()
             , new FormatPDF()
             , new FormatImage()
             , new FormatWORD()

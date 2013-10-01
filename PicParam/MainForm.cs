@@ -136,6 +136,11 @@ namespace PicParam
 
         private void LoadUnknownFileFormat(string filePath)
         {
+            // build new file path
+            string filePathCopy = Path.Combine(Path.GetTempPath(), Path.GetFileName(filePath));
+            // copy file
+            System.IO.File.Copy(filePath, filePathCopy, true);
+            // open using shell execute 'Open'
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.UseShellExecute = true;
             startInfo.Verb = "Open";

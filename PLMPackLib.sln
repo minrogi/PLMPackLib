@@ -102,8 +102,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sharp3D.Math", "..\..\Codep
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{F3F0BB51-0EC8-45F1-854C-7AF430E0B66D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "treeDiM.DiecutLib", "..\DXF2Diecut\treeDiM.DiecutLib\treeDiM.DiecutLib.csproj", "{2ED1AE54-3230-480E-A77F-3EE234766182}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -448,16 +446,6 @@ Global
 		{8F9BA4D3-D6AF-42A6-B74F-0DF6568C148B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{8F9BA4D3-D6AF-42A6-B74F-0DF6568C148B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{8F9BA4D3-D6AF-42A6-B74F-0DF6568C148B}.Release|x86.ActiveCfg = Release|Any CPU
-		{2ED1AE54-3230-480E-A77F-3EE234766182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2ED1AE54-3230-480E-A77F-3EE234766182}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2ED1AE54-3230-480E-A77F-3EE234766182}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{2ED1AE54-3230-480E-A77F-3EE234766182}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{2ED1AE54-3230-480E-A77F-3EE234766182}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{2ED1AE54-3230-480E-A77F-3EE234766182}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2ED1AE54-3230-480E-A77F-3EE234766182}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2ED1AE54-3230-480E-A77F-3EE234766182}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{2ED1AE54-3230-480E-A77F-3EE234766182}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{2ED1AE54-3230-480E-A77F-3EE234766182}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -188,20 +188,22 @@ namespace PicParam
         #region Pic.DAL.SQLite.TreeInterface implementation
         public void Initialize()
         {
-            // do not insert anything while designing the UI
-            if (this.DesignMode) return;
             // turn off visual updating
             BeginUpdate();
             // clear tree
             Nodes.Clear();
-            // insert startpage node
-            TreeNode treeNodeStartPage = new TreeNode("Start Page", 6, 6);
-            treeNodeStartPage.Tag = new StartPageTag();
-            Nodes.Add(treeNodeStartPage);
-            // insert download node
-            TreeNode treeNodeDownloadPage = new TreeNode("Download", 7, 7);
-            treeNodeDownloadPage.Tag = new DownloadPageTag();
-            Nodes.Add(treeNodeDownloadPage);
+            // do not insert anything while designing the UI
+            if (!this.DesignMode)
+            {
+                // insert startpage node
+                TreeNode treeNodeStartPage = new TreeNode("Start Page", 6, 6);
+                treeNodeStartPage.Tag = new StartPageTag();
+                Nodes.Add(treeNodeStartPage);
+                // insert download node
+                TreeNode treeNodeDownloadPage = new TreeNode("Download", 7, 7);
+                treeNodeDownloadPage.Tag = new DownloadPageTag();
+                Nodes.Add(treeNodeDownloadPage);
+            }
         }
         public void Finish()
         {
@@ -260,10 +262,10 @@ namespace PicParam
         #region Event handlers
         public void CollapseRoot()
         {
-            if (Nodes.Count > 1 && 0 == string.Compare(Nodes[1].Text, "Root")) {
-                Nodes[1].Nodes.Clear();
-                Nodes[1].Nodes.Add(new TreeNode("_DUMMY_", 0, 0));
-                Nodes[1].Collapse();
+            if (Nodes.Count > 1 && 0 == string.Compare(Nodes[2].Text, "Root")) {
+                Nodes[2].Nodes.Clear();
+                Nodes[2].Nodes.Add(new TreeNode("_DUMMY_", 0, 0));
+                Nodes[2].Collapse();
             }
         }
         /// <summary>
@@ -272,10 +274,10 @@ namespace PicParam
         public void CollapseRootChildrens()
         {
             // collapse each child of the "Root" node
-            if (Nodes.Count > 1 && 0 == string.Compare(Nodes[1].Text, "Root"))
+            if (Nodes.Count > 1 && 0 == string.Compare(Nodes[2].Text, "Root"))
             {
                 // root node
-                TreeNode rootNode = Nodes[1];
+                TreeNode rootNode = Nodes[2];
                 // collapse each node
                 foreach (TreeNode tn in rootNode.Nodes)
                     tn.Collapse();
@@ -499,7 +501,7 @@ namespace PicParam
                 Dictionary<string, int> format2iconDictionnary = new Dictionary<string, int>()
                 {
                     {"parametric component" , 2},
-                    {"treeDim des"          , 3},
+                    {"treedim des"          , 3},
                     {"autodesk dxf"         , 4},
                     {"adobe acrobat"        , 5},
                     {"adobe illustrator"    , 8},

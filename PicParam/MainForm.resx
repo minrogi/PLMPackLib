@@ -193,7 +193,7 @@
     <value>_treeViewCtrl</value>
   </data>
   <data name="&gt;&gt;_treeViewCtrl.Type" xml:space="preserve">
-    <value>PicParam.DocumentTreeView, PLMPackLib, Version=6.0.16.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>PicParam.DocumentTreeView, PLMPackLib, Version=6.0.20.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_treeViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel1</value>
@@ -256,7 +256,7 @@
     <value>_branchViewCtrl</value>
   </data>
   <data name="&gt;&gt;_branchViewCtrl.Type" xml:space="preserve">
-    <value>PicParam.DocumentTreeBranchView, PLMPackLib, Version=6.0.16.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>PicParam.DocumentTreeBranchView, PLMPackLib, Version=6.0.20.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_branchViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -313,7 +313,7 @@
     <value>_pluginViewCtrl</value>
   </data>
   <data name="&gt;&gt;_pluginViewCtrl.Type" xml:space="preserve">
-    <value>Pic.Plugin.ViewCtrl.PluginViewCtrl, Pic.Plugin.ViewCtrl, Version=1.0.4997.19418, Culture=neutral, PublicKeyToken=null</value>
+    <value>Pic.Plugin.ViewCtrl.PluginViewCtrl, Pic.Plugin.ViewCtrl, Version=1.0.5022.23121, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_pluginViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -337,7 +337,7 @@
     <value>_factoryViewCtrl</value>
   </data>
   <data name="&gt;&gt;_factoryViewCtrl.Type" xml:space="preserve">
-    <value>Pic.Factory2D.Control.FactoryViewerBase, Pic.Factory2D.Control, Version=1.0.4997.19418, Culture=neutral, PublicKeyToken=null</value>
+    <value>Pic.Factory2D.Control.FactoryViewerBase, Pic.Factory2D.Control, Version=1.0.5022.23121, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_factoryViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -364,13 +364,37 @@
     <value>_startPageCtrl</value>
   </data>
   <data name="&gt;&gt;_startPageCtrl.Type" xml:space="preserve">
-    <value>PicParam.StartPageControl, PLMPackLib, Version=6.0.16.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>PicParam.StartPageControl, PLMPackLib, Version=6.0.20.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_startPageCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
   </data>
   <data name="&gt;&gt;_startPageCtrl.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="_downloadPageCtrl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_downloadPageCtrl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="_downloadPageCtrl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>500, 503</value>
+  </data>
+  <data name="_downloadPageCtrl.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;_downloadPageCtrl.Name" xml:space="preserve">
+    <value>_downloadPageCtrl</value>
+  </data>
+  <data name="&gt;&gt;_downloadPageCtrl.Type" xml:space="preserve">
+    <value>PicParam.DownloadPageControl, PLMPackLib, Version=6.0.20.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_downloadPageCtrl.Parent" xml:space="preserve">
+    <value>_splitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;_downloadPageCtrl.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;_splitContainer.Panel2.Name" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -465,6 +489,120 @@
   <data name="menuStripMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>None</value>
   </data>
+  <data name="menuStripMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStripMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>640, 24</value>
+  </data>
+  <data name="menuStripMain.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="menuStripMain.Text" xml:space="preserve">
+    <value>Standard</value>
+  </data>
+  <data name="&gt;&gt;menuStripMain.Name" xml:space="preserve">
+    <value>menuStripMain</value>
+  </data>
+  <data name="&gt;&gt;menuStripMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStripMain.Parent" xml:space="preserve">
+    <value>toolStripContainerDefault.TopToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;menuStripMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="toolStripMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 24</value>
+  </metadata>
+  <data name="toolStripMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="toolStripMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 24</value>
+  </data>
+  <data name="toolStripMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 39</value>
+  </data>
+  <data name="toolStripMain.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="toolStripMain.Text" xml:space="preserve">
+    <value>Main toolbar</value>
+  </data>
+  <data name="&gt;&gt;toolStripMain.Name" xml:space="preserve">
+    <value>toolStripMain</value>
+  </data>
+  <data name="&gt;&gt;toolStripMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMain.Parent" xml:space="preserve">
+    <value>toolStripContainerDefault.TopToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;toolStripMain.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="toolStripExport.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>126, 24</value>
+  </metadata>
+  <data name="toolStripExport.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="toolStripExport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 63</value>
+  </data>
+  <data name="toolStripExport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>276, 39</value>
+  </data>
+  <data name="toolStripExport.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="toolStripExport.Text" xml:space="preserve">
+    <value>Export toolbar</value>
+  </data>
+  <data name="&gt;&gt;toolStripExport.Name" xml:space="preserve">
+    <value>toolStripExport</value>
+  </data>
+  <data name="&gt;&gt;toolStripExport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripExport.Parent" xml:space="preserve">
+    <value>toolStripContainerDefault.TopToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;toolStripExport.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainerDefault.TopToolStripPanel.Name" xml:space="preserve">
+    <value>toolStripContainerDefault.TopToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainerDefault.TopToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainerDefault.TopToolStripPanel.Parent" xml:space="preserve">
+    <value>toolStripContainerDefault</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainerDefault.TopToolStripPanel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainerDefault.Name" xml:space="preserve">
+    <value>toolStripContainerDefault</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainerDefault.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainerDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainerDefault.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
   <data name="exportToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -521,11 +659,11 @@
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
+  <data name="viewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
   </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>File</value>
+  <data name="viewToolStripMenuItem.Text" xml:space="preserve">
+    <value>View</value>
   </data>
   <data name="cotationsToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -597,11 +735,11 @@
   <data name="reflectionYToolStripMenuItem.Text" xml:space="preserve">
     <value>Reflection Y</value>
   </data>
-  <data name="viewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
+  <data name="databaseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 20</value>
   </data>
-  <data name="viewToolStripMenuItem.Text" xml:space="preserve">
-    <value>View</value>
+  <data name="databaseToolStripMenuItem.Text" xml:space="preserve">
+    <value>Database</value>
   </data>
   <data name="backupToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 22</value>
@@ -636,11 +774,11 @@
   <data name="defineDatabasePathToolStripMenuItem.Text" xml:space="preserve">
     <value>Define database path...</value>
   </data>
-  <data name="databaseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 20</value>
+  <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
   </data>
-  <data name="databaseToolStripMenuItem.Text" xml:space="preserve">
-    <value>Database</value>
+  <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Tools</value>
   </data>
   <data name="editprofilesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 22</value>
@@ -683,53 +821,17 @@
   <data name="customizeToolStripMenuItem.Text" xml:space="preserve">
     <value>Customize...</value>
   </data>
-  <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 20</value>
-  </data>
-  <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Tools</value>
-  </data>
-  <data name="aboutTreeDimPicParamToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 22</value>
-  </data>
-  <data name="aboutTreeDimPicParamToolStripMenuItem.Text" xml:space="preserve">
-    <value>About TreeDim PLMPackLib...</value>
-  </data>
   <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
   </data>
   <data name="helpToolStripMenuItem.Text" xml:space="preserve">
     <value>Help</value>
   </data>
-  <data name="menuStripMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="aboutTreeDimPicParamToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 22</value>
   </data>
-  <data name="menuStripMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>640, 24</value>
-  </data>
-  <data name="menuStripMain.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="menuStripMain.Text" xml:space="preserve">
-    <value>Standard</value>
-  </data>
-  <data name="&gt;&gt;menuStripMain.Name" xml:space="preserve">
-    <value>menuStripMain</value>
-  </data>
-  <data name="&gt;&gt;menuStripMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuStripMain.Parent" xml:space="preserve">
-    <value>toolStripContainerDefault.TopToolStripPanel</value>
-  </data>
-  <data name="&gt;&gt;menuStripMain.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="toolStripMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 24</value>
-  </metadata>
-  <data name="toolStripMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>None</value>
+  <data name="aboutTreeDimPicParamToolStripMenuItem.Text" xml:space="preserve">
+    <value>About TreeDim PLMPackLib...</value>
   </data>
   <data name="toolStripButtonRoot.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -754,7 +856,7 @@
     <value>36, 36</value>
   </data>
   <data name="toolStripButtonRoot.Text" xml:space="preserve">
-    <value>toolStripButtonRoot</value>
+    <value>Go to Root node...</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 39</value>
@@ -966,36 +1068,6 @@
   <data name="toolStripButtonHelp.Text" xml:space="preserve">
     <value>Help</value>
   </data>
-  <data name="toolStripMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 24</value>
-  </data>
-  <data name="toolStripMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>366, 39</value>
-  </data>
-  <data name="toolStripMain.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="toolStripMain.Text" xml:space="preserve">
-    <value>Main toolbar</value>
-  </data>
-  <data name="&gt;&gt;toolStripMain.Name" xml:space="preserve">
-    <value>toolStripMain</value>
-  </data>
-  <data name="&gt;&gt;toolStripMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripMain.Parent" xml:space="preserve">
-    <value>toolStripContainerDefault.TopToolStripPanel</value>
-  </data>
-  <data name="&gt;&gt;toolStripMain.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="toolStripExport.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>126, 24</value>
-  </metadata>
-  <data name="toolStripExport.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>None</value>
-  </data>
   <data name="toolStripButtonPicGEOM.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -1087,39 +1159,16 @@
   <data name="toolStripButtonDXF.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
-        vR8F/yRhOAAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH2SURBVFhH7Ze/S0JRFMedmpqiP6EaHMuCIAiitSHQIRSa
+        okIsqC2KGoKGICJaJNJJsV9DJUVDNjkETdXSUEEUFISkJSL9uL3v8x69iu/2nt6owS8cvO/e7z3n8867
+        +NRWquagh1UbTUHPtX3TVcdTWhMStIdHmPtw3nI4o7MFiID73r7qqudpzQubR4+XGL+0pEQmVdQJLR4t
+        Q1QDkMym9cLe2DJrCw0XINacDdzys1QA+E5WWCLzyhxhDhHwJFr8A43cJpcKANqffs+wzojXGoQKAPEQ
+        u6JzOYAcRJJbjVUNwMfXJ+vdmSwULBPcaiyYKgWQCTlrAKYBurfGi77hVESHdjBNA7SGhnTzbwQvYyyY
+        /hXAXepJ3/SSfWMXzzds8Syizx/cnuprGPfvzeie6fi6vo4xKXIVy+dC8GljwSQCYM5/vs96tifyyfGJ
+        axqLMOQZPFpgCPgoF+WTCqZSACSla9wRFQMYOgMPimGOAMhfGliTCiYZgFiAukBA4jpJ3Ivg08aCSQaA
+        duMsYEzdgGdMewNijgCUPgK0GgcNn7jGYaODh8J0BhzabwCxQ+UCa1LBJALQHeJZxx8uGYpjHmPqBD0K
+        ACoHUB28jLFg+nOArg0f69udUhp0U7yMsWCqvY5rADWASv+cygI5TQP8ZvAyXDbbN1bRVVji13WwAAAA
+        AElFTkSuQmCC
 </value>
   </data>
   <data name="toolStripButtonDXF.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -1184,54 +1233,6 @@
   <data name="toolStripButtonPalletization.ToolTipText" xml:space="preserve">
     <value>Perform Case/Pallet analysis with StackBuilder</value>
   </data>
-  <data name="toolStripExport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 63</value>
-  </data>
-  <data name="toolStripExport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 39</value>
-  </data>
-  <data name="toolStripExport.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="toolStripExport.Text" xml:space="preserve">
-    <value>Export toolbar</value>
-  </data>
-  <data name="&gt;&gt;toolStripExport.Name" xml:space="preserve">
-    <value>toolStripExport</value>
-  </data>
-  <data name="&gt;&gt;toolStripExport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripExport.Parent" xml:space="preserve">
-    <value>toolStripContainerDefault.TopToolStripPanel</value>
-  </data>
-  <data name="&gt;&gt;toolStripExport.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;toolStripContainerDefault.TopToolStripPanel.Name" xml:space="preserve">
-    <value>toolStripContainerDefault.TopToolStripPanel</value>
-  </data>
-  <data name="&gt;&gt;toolStripContainerDefault.TopToolStripPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripContainerDefault.TopToolStripPanel.Parent" xml:space="preserve">
-    <value>toolStripContainerDefault</value>
-  </data>
-  <data name="&gt;&gt;toolStripContainerDefault.TopToolStripPanel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;toolStripContainerDefault.Name" xml:space="preserve">
-    <value>toolStripContainerDefault</value>
-  </data>
-  <data name="&gt;&gt;toolStripContainerDefault.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripContainerDefault.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;toolStripContainerDefault.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="openFileDialogRestore.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>145, 4</value>
   </metadata>
@@ -1240,6 +1241,9 @@
   </metadata>
   <data name="saveFileDialogBackup.Filter" xml:space="preserve">
     <value>Backup file (*.zip)|*.zip</value>
+  </data>
+  <data name="toolStripSeparator12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 39</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1692,6 +1696,12 @@
   </data>
   <data name="&gt;&gt;saveFileDialogBackup.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator12.Name" xml:space="preserve">
+    <value>toolStripSeparator12</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>
