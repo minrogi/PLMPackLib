@@ -118,22 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>407, 70</value>
-  </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 59</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>Télécharger et mettre à jour</value>
-  </data>
-  <data name="bnMerge.Location" type="System.Drawing.Point, System.Drawing">
-    <value>407, 8</value>
-  </data>
-  <data name="bnMerge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 59</value>
-  </data>
-  <data name="bnMerge.Text" xml:space="preserve">
-    <value>Télécharger et ajouter</value>
+  <data name="webBrowserStartPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>500, 500</value>
   </data>
 </root>

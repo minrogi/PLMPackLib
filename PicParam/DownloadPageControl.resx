@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,73 +117,115 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.Language" type="System.Globalization.CultureInfo, mscorlib">
-    <value>Japanese (Japan)</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bnMerge.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
-  <data name="$this.Localizable" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="bnMerge.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="$this.TrayLargeIcon" type="System.Boolean, mscorlib">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bnMerge.Location" type="System.Drawing.Point, System.Drawing">
+    <value>406, 2</value>
+  </data>
+  <data name="bnMerge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 59</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bnMerge.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="bnMerge.Text" xml:space="preserve">
+    <value>Télécharger et ajouter</value>
+  </data>
+  <data name="&gt;&gt;bnMerge.Name" xml:space="preserve">
+    <value>bnMerge</value>
+  </data>
+  <data name="&gt;&gt;bnMerge.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bnMerge.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bnMerge.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="bnOverwrite.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="bnOverwrite.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="bnOverwrite.Location" type="System.Drawing.Point, System.Drawing">
+    <value>406, 65</value>
+  </data>
+  <data name="bnOverwrite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 59</value>
+  </data>
+  <data name="bnOverwrite.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="bnOverwrite.Text" xml:space="preserve">
+    <value>Télécharger et mettre à jour</value>
+  </data>
+  <data name="&gt;&gt;bnOverwrite.Name" xml:space="preserve">
+    <value>bnOverwrite</value>
+  </data>
+  <data name="&gt;&gt;bnOverwrite.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bnOverwrite.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bnOverwrite.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="listBoxLibraries.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="listBoxLibraries.IntegralHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="listBoxLibraries.ItemHeight" type="System.Int32, mscorlib">
+    <value>153</value>
+  </data>
+  <data name="listBoxLibraries.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="listBoxLibraries.Size" type="System.Drawing.Size, System.Drawing">
+    <value>400, 500</value>
+  </data>
+  <data name="listBoxLibraries.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;listBoxLibraries.Name" xml:space="preserve">
+    <value>listBoxLibraries</value>
+  </data>
+  <data name="&gt;&gt;listBoxLibraries.Type" xml:space="preserve">
+    <value>ListBoxLibraries, PLMPackLib, Version=6.0.19.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;listBoxLibraries.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;listBoxLibraries.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 413</value>
+    <value>500, 503</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>DocumentTreeView</value>
+    <value>DownloadPageControl</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CLSDFOLD" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\CLSDFOLD.BMP;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DXF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\dxf_icon.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="OPENFOLD" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\OPENFOLD.BMP;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\PDF.BMP;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="COMPONENT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\COMPONENT.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DOC" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\DOC.BMP;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="STARTPAGE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\StartPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AI" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ai_small.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ARD" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ard_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CALC" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\calc_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DOWNLOAD" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\download.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMAGE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\image_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MSEXCEL" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Excel_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MSPPT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ppt_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MSWORD" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\word_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WRITER" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\writer_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

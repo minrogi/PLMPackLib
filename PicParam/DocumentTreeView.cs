@@ -39,6 +39,15 @@ namespace PicParam
                 ImageList.Images.Add((System.Drawing.Image)(resources.GetObject("DXF"))); // 4
                 ImageList.Images.Add((System.Drawing.Image)(resources.GetObject("PDF"))); // 5
                 ImageList.Images.Add((System.Drawing.Image)(resources.GetObject("STARTPAGE"))); // 6
+                ImageList.Images.Add((System.Drawing.Image)(resources.GetObject("DOWNLOAD"))); // 7
+                ImageList.Images.Add((System.Drawing.Image)(resources.GetObject("AI"))); // 8
+                ImageList.Images.Add((System.Drawing.Image)(resources.GetObject("IMAGE"))); // 9
+                ImageList.Images.Add((System.Drawing.Image)(resources.GetObject("MSWORD"))); // 10
+                ImageList.Images.Add((System.Drawing.Image)(resources.GetObject("MSEXCEL"))); // 11
+                ImageList.Images.Add((System.Drawing.Image)(resources.GetObject("MSPPT"))); // 12
+                ImageList.Images.Add((System.Drawing.Image)(resources.GetObject("WRITER"))); // 13
+                ImageList.Images.Add((System.Drawing.Image)(resources.GetObject("CALC"))); // 14
+                ImageList.Images.Add((System.Drawing.Image)(resources.GetObject("ARD"))); // 15
 
                 // events
                 AfterExpand += new TreeViewEventHandler(DocumentTreeView_AfterExpand);
@@ -187,7 +196,12 @@ namespace PicParam
             Nodes.Clear();
             // insert startpage node
             TreeNode treeNodeStartPage = new TreeNode("Start Page", 6, 6);
+            treeNodeStartPage.Tag = new StartPageTag();
             Nodes.Add(treeNodeStartPage);
+            // insert download node
+            TreeNode treeNodeDownloadPage = new TreeNode("Download", 7, 7);
+            treeNodeDownloadPage.Tag = new DownloadPageTag();
+            Nodes.Add(treeNodeDownloadPage);
         }
         public void Finish()
         {
@@ -320,8 +334,12 @@ namespace PicParam
                 NodeTag currentTag = GetCurrentTag();
                 if (null == currentTag)
                 {
-                    if (null != StartPageSelected)
+                    StartPageTag startPageTag = e.Node.Tag as StartPageTag;
+                    if (null != StartPageSelected && null != startPageTag)
                         StartPageSelected(this);
+                    DownloadPageTag downloadPageTag = e.Node.Tag as DownloadPageTag;
+                    if (null != DownloadPageSelected && null != downloadPageTag)
+                        DownloadPageSelected(this);
                 }
                 else if (null != SelectionChanged && !_preventEventTriggering)
                     SelectionChanged(this, new NodeEventArgs(currentTag.TreeNode, currentTag.Type), currentTag.Name);
@@ -476,12 +494,28 @@ namespace PicParam
             {
                 Pic.DAL.SQLite.PPDataContext db = new Pic.DAL.SQLite.PPDataContext();
                 Pic.DAL.SQLite.Document doc = tn.Documents(db)[0];
-                string docTypeName = doc.DocumentType.Name;
-                if (string.Equals("Parametric Component", docTypeName, StringComparison.CurrentCultureIgnoreCase)) return 2;
-                else if (string.Equals("treeDim des", docTypeName, StringComparison.CurrentCultureIgnoreCase)) return 3;
-                else if (string.Equals("autodesk dxf", docTypeName, StringComparison.CurrentCultureIgnoreCase)) return 4;
-                else if (string.Equals("Adobe Acrobat", docTypeName, StringComparison.CurrentCultureIgnoreCase)) return 5;
-                else return 2;
+                string docTypeName = doc.DocumentType.Name.ToLower();
+
+                Dictionary<string, int> format2iconDictionnary = new Dictionary<string, int>()
+                {
+                    {"parametric component" , 2},
+                    {"treeDim des"          , 3},
+                    {"autodesk dxf"         , 4},
+                    {"adobe acrobat"        , 5},
+                    {"adobe illustrator"    , 8},
+                    {"raster image"         , 9},
+                    {"ms word"              , 10},
+                    {"ms excel"             , 11},
+                    {"ms powerpoint"        , 12},
+                    {"open office write"    , 13},
+                    {"open office calc"     , 14},
+                    {"artioscad"            , 15}
+                };
+
+                if (format2iconDictionnary.ContainsKey(docTypeName))
+                    return format2iconDictionnary[docTypeName];
+                else
+                    return 0;
             }
             else
                 return 0;
@@ -703,11 +737,14 @@ namespace PicParam
                     List<Pic.DAL.SQLite.TreeNode> tnodes = Pic.DAL.SQLite.TreeNode.GetByDocumentId(db, dlg.DocumentID);
                     // (re)populate parent node
                     PopulateChildren(SelectedNode);
-                    // select current node
-                    NodeTag newDocTag = new NodeTag(NodeTag.NodeType.NT_DOCUMENT, tnodes[0].ID);
-                    SelectedNode = FindNode(null, newDocTag);  // <- for some reasons, this does not work
-                    // however, we can force document opening with the following line
-                    SelectionChanged(this, new NodeEventArgs(newDocTag.TreeNode, newDocTag.Type), newDocTag.Name);
+                    if (dlg.OpenInsertedDocument)
+                    {
+                        // select current node
+                        NodeTag newDocTag = new NodeTag(NodeTag.NodeType.NT_DOCUMENT, tnodes[0].ID);
+                        SelectedNode = FindNode(null, newDocTag);  // <- for some reasons, this does not work
+                        // however, we can force document opening with the following line
+                        SelectionChanged(this, new NodeEventArgs(newDocTag.TreeNode, newDocTag.Type), newDocTag.Name);
+                    }
                 }
             }
             catch (System.Exception ex)
@@ -750,6 +787,7 @@ namespace PicParam
 
         #region Delegates
         public delegate void StartPageSelectHandler(object sender);
+        public delegate void DownloadPageSelectHandler(object sender);
         public delegate void SelectionChangedHandler(object sender, NodeEventArgs e, string name);
         public delegate void LeafSelectHandler(object sender, NodeEventArgs e);
         public delegate void NodeDroppedHandler(object sender, NodeDroppedArgs e);
@@ -757,6 +795,7 @@ namespace PicParam
 
         #region Events
         public event StartPageSelectHandler StartPageSelected;
+        public event DownloadPageSelectHandler DownloadPageSelected;
         public event SelectionChangedHandler SelectionChanged;
         public event NodeDroppedHandler NodeDropped;
         #endregion
@@ -789,6 +828,8 @@ namespace PicParam
     #endregion
 
     #region Class NodeTag to be used as a TreeNode tag
+    public class StartPageTag { }
+    public class DownloadPageTag { }
     public class NodeTag
     {
         #region Enums

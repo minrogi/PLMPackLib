@@ -108,6 +108,12 @@
     </Compile>
     <Compile Include="ApplicationAvailabilityChecker.cs" />
     <Compile Include="CardboardFormatLoaderImpl.cs" />
+    <Compile Include="DownloadPageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DownloadPageControl.Designer.cs">
+      <DependentUpon>DownloadPageControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEditDatabasePath.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DocumentTreeBranchView.ja-JP.resx">
       <DependentUpon>DocumentTreeBranchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadPageControl.resx">
+      <DependentUpon>DownloadPageControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditDatabasePath.fr-FR.resx">
       <DependentUpon>FormEditDatabasePath.cs</DependentUpon>
@@ -672,6 +681,15 @@
     <None Include="Resources\toolStripButtonLayout.Image.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\writer_small.png" />
+    <None Include="Resources\word_small.png" />
+    <None Include="Resources\ppt_small.png" />
+    <None Include="Resources\ard_small.png" />
+    <None Include="Resources\calc_small.png" />
+    <None Include="Resources\Excel_small.png" />
+    <None Include="Resources\image_small.png" />
+    <None Include="Resources\download.bmp" />
+    <None Include="Resources\ai_small.bmp" />
     <Content Include="Resources\plmpacklib.ICO" />
     <None Include="Resources\StartPage.png" />
     <None Include="app.config">

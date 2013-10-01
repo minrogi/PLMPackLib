@@ -27,6 +27,7 @@ namespace Pic.DAL
         public abstract string Name { get; }
         public abstract string Description { get; }
         public abstract string Application { get; }
+        public virtual bool OpenInPLMPackLib { get { return false; } }
     }
     public class FormatDLL : FormatHandler
     {
@@ -37,6 +38,7 @@ namespace Pic.DAL
         public override string Name { get { return "Parametric Component"; } }
         public override string Description { get { return "treeDim PLMPackLib component"; } }
         public override string Application { get { return "PLMPackLib"; } }
+        public override bool OpenInPLMPackLib { get { return true; } }
     }
     public class FormatDES : FormatHandler
     {
@@ -47,6 +49,7 @@ namespace Pic.DAL
         public override string Name { get { return "treeDim des"; } }
         public override string Description { get { return "treeDim des drawing"; } }
         public override string Application { get { return "Picador"; } }
+        public override bool OpenInPLMPackLib { get { return true; } }
     }
     public class FormatDXF : FormatHandler
     {
@@ -57,6 +60,7 @@ namespace Pic.DAL
         public override string Name { get { return "autodesk dxf"; } }
         public override string Description { get { return "Autodesk data exchange format"; } }
         public override string Application { get { return "AutoCAD"; } }
+        public override bool OpenInPLMPackLib { get { return true; } }
     }
     public class FormatCF2 : FormatHandler
     {
@@ -87,6 +91,7 @@ namespace Pic.DAL
         public override string Name { get { return "raster image"; } }
         public override string Description { get { return "Raster image"; } }
         public override string Application { get { return "Picture viewer"; } }
+        public override bool OpenInPLMPackLib { get { return true; } }
     }
     public class FormatPDF : FormatHandler
     {
@@ -97,6 +102,7 @@ namespace Pic.DAL
         public override string Name { get { return "Adobe Acrobat"; } }
         public override string Description { get { return "Adobe Portable Document Format"; } }
         public override string Application { get { return "Adobe acrobat reader"; } }
+        public override bool OpenInPLMPackLib { get { return true; } }
     }
     public class FormatWORD : FormatHandler
     {
@@ -117,6 +123,16 @@ namespace Pic.DAL
         public override string Name { get { return "MS Excel"; } }
         public override string Description { get { return "Microsoft Office Excel"; } }
         public override string Application { get { return "MS Excel"; } }
+    }
+    public class FormatPPT : FormatHandler
+    {
+        public override bool CanGenerateThumbnail { get { return false; } }
+        public override string ThumbnailName { get { return "Powerpoint.bmp"; } }
+        public override string FilterString { get { return "Microsoft Powerpoint (*.ppt)|*.ppt|"; } }
+        public override string[] SupportedExtensions { get { return new string[] { "ppt" }; } }
+        public override string Name { get { return "MS Powerpoint"; } }
+        public override string Description { get { return "Microsoft Powerpoint"; } }
+        public override string Application { get { return "MS Powerpoint"; } }
     }
     public class FormatWRITE : FormatHandler
     {

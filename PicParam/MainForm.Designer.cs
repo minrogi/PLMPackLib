@@ -38,6 +38,7 @@
             this._pluginViewCtrl = new Pic.Plugin.ViewCtrl.PluginViewCtrl();
             this._factoryViewCtrl = new Pic.Factory2D.Control.FactoryViewerBase();
             this._startPageCtrl = new PicParam.StartPageControl();
+            this._downloadPageCtrl = new PicParam.DownloadPageControl();
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -151,6 +152,7 @@
             this._splitContainer.Panel2.Controls.Add(this._pluginViewCtrl);
             this._splitContainer.Panel2.Controls.Add(this._factoryViewCtrl);
             this._splitContainer.Panel2.Controls.Add(this._startPageCtrl);
+            this._splitContainer.Panel2.Controls.Add(this._downloadPageCtrl);
             // 
             // _treeViewCtrl
             // 
@@ -628,6 +630,7 @@
         private Pic.Factory2D.Control.FactoryViewerBase _factoryViewCtrl;
         private System.Windows.Forms.WebBrowser _webBrowser4PDF;
         private PicParam.StartPageControl _startPageCtrl;
+        private PicParam.DownloadPageControl _downloadPageCtrl;
 
         private System.Windows.Forms.MenuStrip menuStripMain;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;

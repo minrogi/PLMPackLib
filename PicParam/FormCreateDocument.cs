@@ -72,29 +72,13 @@ namespace PicParam
                     || string.Equals(fileExt, "gif", StringComparison.CurrentCultureIgnoreCase))
                     _successfullyLoaded = LoadImage(filePath);
                 else
-                {
-                    FormatHandler fHandler = FFormatManager.GetFormatHandlerFromFileExt(fileExt);
-                    if (null == fHandler)
-                    {
-                        _log.Warn(string.Format("Unhandled file format : {0}", filePath));
-                        return;
-                    }
-                    ProcessStartInfo startInfo = new ProcessStartInfo();
-                    startInfo.UseShellExecute = true;
-                    startInfo.Verb = "Open";
-                    startInfo.CreateNoWindow = false;
-                    startInfo.WindowStyle = ProcessWindowStyle.Normal;
-                    startInfo.FileName = filePath;
-                    using (Process p = new Process())
-                    {
-                        p.StartInfo = startInfo;
-                        p.Start();
-                    }
+                {                    
+                    // instead of preview, load image
+                    _successfullyLoaded = LoadMiscellaneousFormat(filePath);
                 }
             }
             enableDisableOkButton();
         }
-
 
         private void textBox_TextChanged(object sender, EventArgs e)
         {   enableDisableOkButton();   }
@@ -133,8 +117,7 @@ namespace PicParam
                     if (textBoxName.Text.Length == 0)
                         textBoxName.Text = componentLoaderControl.ComponentName;
                     if (textBoxDescription.Text.Length == 0)
-                        textBoxDescription.Text = componentLoaderControl.ComponentDescription;
-                    
+                        textBoxDescription.Text = componentLoaderControl.ComponentDescription;                    
                 }
                 return true;
             }
@@ -194,12 +177,40 @@ namespace PicParam
             {
                 pb4ImageFiles.Visible = true;
                 pb4ImageFiles.ImageLocation = filePath;
+
+                if (textBoxName.Text.Length == 0)
+                    textBoxName.Text = System.IO.Path.GetFileNameWithoutExtension(filePath);
+                if (textBoxDescription.Text.Length == 0)
+                    textBoxDescription.Text = System.IO.Path.GetFileNameWithoutExtension(filePath);
             }
             catch (Exception ex)
             {
                 _log.Error(ex.ToString());
             }
             return true;        
+        }
+
+        private bool LoadMiscellaneousFormat(string filePath)
+        {
+            try
+            {
+                FormatHandler fHandler = FFormatManager.GetFormatHandlerFromFilePath(filePath);
+                if (null == fHandler)
+                    return false;
+
+                pb4ImageFiles.Visible = true;
+                pb4ImageFiles.ImageLocation = fHandler.ThumbnailFile;
+
+                if (textBoxName.Text.Length == 0)
+                    textBoxName.Text = System.IO.Path.GetFileNameWithoutExtension(filePath);
+                if (textBoxDescription.Text.Length == 0)
+                    textBoxDescription.Text = System.IO.Path.GetFileNameWithoutExtension(filePath);
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.ToString());
+            }
+            return true;
         }
 
         private bool LoadDrawing(string filePath)
@@ -293,24 +304,19 @@ namespace PicParam
                     // save document ID to be used later
                     // -> to retrieve document tree node
                     _documentId = component.DocumentID;
+                    _openInsertedDocument = true;
                 }
                 else
                 {
-                    Pic.DAL.SQLite.DocumentType docType = null;
-                    if (string.Equals("des", fileExt, StringComparison.CurrentCultureIgnoreCase))
-                    {
-                        docType = Pic.DAL.SQLite.DocumentType.GetByName(db, "treeDim des");
-                        if (null == docType)
-                            docType = Pic.DAL.SQLite.DocumentType.CreateNew(db, "treeDim des", "treeDim des drawing", "Picador");
-                    }
-                    else
-                    {
-                        FormatHandler fHandler = FFormatManager.GetFormatHandlerFromFileExt(fileExt);
-                        docType = Pic.DAL.SQLite.DocumentType.GetByName(db, fHandler.Name);
-                        if (null == docType)
-                            docType = Pic.DAL.SQLite.DocumentType.CreateNew(db, fHandler.Name, fHandler.Description, fHandler.Application);
-                    }
-
+                    // get a format handler
+                    FormatHandler fHandler = FFormatManager.GetFormatHandlerFromFileExt(fileExt);
+                    if (null == fHandler)
+                        throw new Pic.DAL.SQLite.ExceptionDAL(string.Format("No valid format handler from file extension: {0}", fileExt) );
+                    // get document type
+                    Pic.DAL.SQLite.DocumentType docType = Pic.DAL.SQLite.DocumentType.GetByName(db, fHandler.Name);
+                    if (null == docType)
+                        docType = Pic.DAL.SQLite.DocumentType.CreateNew(db, fHandler.Name, fHandler.Description, fHandler.Application);
+                    // insert document in database
                     Pic.DAL.SQLite.Document document = treeNode.InsertDocument(
                         db
                         , filePath
@@ -320,6 +326,7 @@ namespace PicParam
                         , ThumbnailPath);
                     // save document ID
                     _documentId = document.ID;
+                    _openInsertedDocument = fHandler.OpenInPLMPackLib;
                 }                
             }
             catch (Pic.DAL.SQLite.ExceptionDAL ex)
@@ -362,6 +369,10 @@ namespace PicParam
         public int DocumentID
         {
             get { return _documentId; }
+        }
+        public bool OpenInsertedDocument
+        {
+            get { return _openInsertedDocument; }
         }
         private bool ThumbnailCallBack()
         {
@@ -434,6 +445,7 @@ namespace PicParam
         protected static readonly ILog _log = LogManager.GetLogger(typeof(FormCreateDocument));
         private NodeTag _nodeTag;
         private int _documentId;
+        private bool _openInsertedDocument = false;
         private bool _successfullyLoaded;
         private const int _thumbnailWidth = 150;
         Dictionary<string, string> FileExt2Thumbnail = new Dictionary<string, string>();

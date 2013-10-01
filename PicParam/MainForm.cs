@@ -32,6 +32,7 @@ namespace PicParam
             this.Text = Application.ProductName;
 
             _startPageCtrl.TreeViewCtrl = _treeViewCtrl;
+            _downloadPageCtrl.TreeViewCtrl = _treeViewCtrl;
 
             // set export application
             ApplicationAvailabilityChecker.AppendApplication("PicGEOM", Pic.DAL.ApplicationConfiguration.CustomSection.AppPicGEOM);
@@ -47,6 +48,7 @@ namespace PicParam
         {
             base.OnResize(e);
             _splitContainer.SplitterDistance = 200;
+            _downloadPageCtrl.Size = this._splitContainer.Panel2.Size;
         }
 
         /// <summary>
@@ -132,7 +134,7 @@ namespace PicParam
             _webBrowser4PDF.Visible = true;
         }
 
-        private void LoadUnknownFileFrame(string filePath)
+        private void LoadUnknownFileFormat(string filePath)
         {
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.UseShellExecute = true;
@@ -728,6 +730,7 @@ namespace PicParam
                 _pluginViewCtrl.SearchMethod = new ComponentSearchMethodDB();
 
                 _treeViewCtrl.StartPageSelected += new DocumentTreeView.StartPageSelectHandler(ShowStartPage);
+                _treeViewCtrl.DownloadPageSelected += new DocumentTreeView.DownloadPageSelectHandler(ShowDownloadPage); 
 
                 _treeViewCtrl.SelectionChanged += new DocumentTreeView.SelectionChangedHandler(_branchViewCtrl.OnSelectionChanged);
                 _treeViewCtrl.SelectionChanged += new DocumentTreeView.SelectionChangedHandler(OnSelectionChanged);
@@ -801,7 +804,7 @@ namespace PicParam
                 else if (string.Equals("raster image", docTypeName, StringComparison.CurrentCultureIgnoreCase))
                     LoadImageFile(filePath);
                 else
-                    LoadUnknownFileFrame(filePath);
+                    LoadUnknownFileFormat(filePath);
             }
             // update toolbar
             UpdateToolCommands();
@@ -849,6 +852,17 @@ namespace PicParam
                 return;
             _startPageCtrl.Url = new Uri(Properties.Settings.Default.StartPageUrl);
             _startPageCtrl.Visible = true;
+            _branchViewCtrl.Visible = false;
+            _pluginViewCtrl.Visible = false;
+            _factoryViewCtrl.Visible = false;
+            _webBrowser4PDF.Visible = false;
+        }
+        private void ShowDownloadPage(object sender)
+        {
+            if (!IsWebSiteReachable)
+                return;
+            _downloadPageCtrl.Visible = true;
+            _startPageCtrl.Visible = false;
             _branchViewCtrl.Visible = false;
             _pluginViewCtrl.Visible = false;
             _factoryViewCtrl.Visible = false;

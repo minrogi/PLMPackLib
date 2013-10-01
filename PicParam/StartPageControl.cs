@@ -37,77 +37,9 @@ namespace PicParam
         #endregion
 
         #region Event handlers
-        private void listBoxLibraries_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            bnMerge.Enabled = -1 != listBoxLibraries.SelectedIndex;
-        }
-        private void bnMerge_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                // collapse tree and replace "Root" childrens with _DUMMY_ element
-                _treeViewCtrl.CollapseRoot();
-                // get listbox selected index
-                int iSel = listBoxLibraries.SelectedIndex;
-                if (-1 == iSel) return;
-                // download
-                if (libFetcher.DownloadLibraryAndMerge(iSel))
-                {}
-            }
-            catch (Exception ex)
-            {
-                _log.Error(ex.ToString());
-            }
-        }
-        private void bnOverwrite_Click(object sender, EventArgs e)
-        {
-            // warning message
-            if (DialogResult.No == MessageBox.Show(
-                PicParam.Properties.Resources.ID_DATABASEOVERWRITE
-                , Application.ProductName, MessageBoxButtons.YesNo))
-                return;
-
-            try
-            {
-                // collapse tree and replace "Root" childrens with _DUMMY_ element
-                _treeViewCtrl.CollapseRoot();
-                // get listbox selected index
-                int iSel = listBoxLibraries.SelectedIndex;
-                if (-1 == iSel) return;
-                // download
-                if (libFetcher.DownloadLibraryAndOverwrite(iSel))
-                {}
-            }
-            catch (Exception ex)
-            {
-                _log.Error(ex.ToString());
-            }        
-        }
         #endregion
 
         #region User control override
-        protected override void OnLoad(EventArgs e)
-        {
-            try
-            {
-                if (IsWebSiteReachable)
-                {
-                    libFetcher = new LibraryFetcher();
-                    // fill fetcher
-                    List<Library> libraries = libFetcher.Libraries;
-                    foreach (Library lib in libraries)
-                        listBoxLibraries.Items.Add(lib);
-                    if (listBoxLibraries.Items.Count > 0)
-                        listBoxLibraries.SelectedIndex = 0;
-                }
-            }
-            catch (Exception ex)
-            {
-                _log.Error(ex.Message);
-            }
-
-            base.OnLoad(e);
-        }
         /// <summary>
         /// This property is aimed at finding out if the machine is connected to the web
         /// It actually checks if StartPageUrl define in configutation file can still be reached
@@ -133,7 +65,6 @@ namespace PicParam
 
         #region Data members
         protected static readonly ILog _log = LogManager.GetLogger(typeof(StartPageControl));
-        private LibraryFetcher libFetcher;
         private DocumentTreeView _treeViewCtrl;
         #endregion
     }
