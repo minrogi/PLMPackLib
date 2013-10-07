@@ -118,15 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="bnMerge.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
   <data name="bnMerge.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bnMerge.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 2</value>
+    <value>3, 3</value>
   </data>
   <data name="bnMerge.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 59</value>
@@ -136,7 +133,7 @@
     <value>2</value>
   </data>
   <data name="bnMerge.Text" xml:space="preserve">
-    <value>Télécharger et ajouter</value>
+    <value>Download and add</value>
   </data>
   <data name="&gt;&gt;bnMerge.Name" xml:space="preserve">
     <value>bnMerge</value>
@@ -150,14 +147,11 @@
   <data name="&gt;&gt;bnMerge.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="bnOverwrite.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
   <data name="bnOverwrite.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="bnOverwrite.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 65</value>
+    <value>3, 65</value>
   </data>
   <data name="bnOverwrite.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 59</value>
@@ -166,7 +160,7 @@
     <value>3</value>
   </data>
   <data name="bnOverwrite.Text" xml:space="preserve">
-    <value>Télécharger et mettre à jour</value>
+    <value>Download and update</value>
   </data>
   <data name="&gt;&gt;bnOverwrite.Name" xml:space="preserve">
     <value>bnOverwrite</value>
@@ -190,10 +184,10 @@
     <value>153</value>
   </data>
   <data name="listBoxLibraries.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>95, 0</value>
   </data>
   <data name="listBoxLibraries.Size" type="System.Drawing.Size, System.Drawing">
-    <value>400, 500</value>
+    <value>424, 500</value>
   </data>
   <data name="listBoxLibraries.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -220,7 +214,7 @@
     <value>True</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>500, 503</value>
+    <value>524, 500</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>DownloadPageControl</value>
