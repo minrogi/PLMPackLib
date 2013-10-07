@@ -175,9 +175,9 @@
     <value>Ce modèle comprend plus de {0} segments. Le calcul va demander trop de temps. Pour augmenter le nombre maximum de segments, utiliser Outils&gt;Options&gt;Options de calcul...</value>
   </data>
   <data name="ID_DATABASEOVERWRITE" xml:space="preserve">
-    <value>Les documents se trouvant à la même position dans l'arbre actuel et dans la librairie en cours d'installation seront écrasés.  Toutes les modifications seont perdues. Continuer?</value>
+    <value>Les documents se trouvant à la même position dans l'arbre actuel et dans la librairie en cours d'installation seront écrasés.  Toutes les modifications seront perdues. Continuer?</value>
   </data>
   <data name="ID_CLEARDATABASEWARNING" xml:space="preserve">
-    <value>You are about to clear the database content. Are you sure?</value>
+    <value>Vous êtes sur le point d'effacer le contenu de la base de données. Etes vous sûr?</value>
   </data>
 </root>
