@@ -234,6 +234,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\CursorPan.cur" />
+    <None Include="Resources\ProCut.png" />
+    <None Include="Resources\ExportDXF.png" />
+    <None Include="Resources\ExportCFF2.png" />
+    <None Include="Resources\ExportAi.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

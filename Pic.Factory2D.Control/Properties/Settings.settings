@@ -26,5 +26,8 @@
     <Setting Name="ImpositionRemainingMarginLeftRight" Type="System.Decimal" Scope="User">
       <Value Profile="(Default)">5</Value>
     </Setting>
+    <Setting Name="FileExportDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

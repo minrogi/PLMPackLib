@@ -95,10 +95,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="treeDiM.DiecutLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ThirdPartyComponents\treeDiM.DiecutLib.dll</HintPath>
-    </Reference>
     <Reference Include="TreeDim.StackBuilder.GUIExtension">
       <HintPath>..\..\..\Codeplex\StackBuilder\TreeDim.StackBuilder.GUIExtension\bin\Release\TreeDim.StackBuilder.GUIExtension.dll</HintPath>
     </Reference>
@@ -248,6 +244,12 @@
     <Compile Include="DocumentTreeBranchView.Designer.cs">
       <DependentUpon>DocumentTreeBranchView.cs</DependentUpon>
     </Compile>
+    <Compile Include="OptionPanelOutputFileOpening.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OptionPanelOutputFileOpening.Designer.cs">
+      <DependentUpon>OptionPanelOutputFileOpening.cs</DependentUpon>
+    </Compile>
     <Compile Include="OptionPanelThumbnail.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -281,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DocumentTreeBranchView.ja-JP.resx">
       <DependentUpon>DocumentTreeBranchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadPageControl.fr-FR.resx">
+      <DependentUpon>DownloadPageControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadPageControl.resx">
       <DependentUpon>DownloadPageControl.cs</DependentUpon>
@@ -362,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelDatabase.ja-JP.resx">
       <DependentUpon>OptionPanelDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelOutputFileOpening.resx">
+      <DependentUpon>OptionPanelOutputFileOpening.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelThumbnail.fr.resx">
       <DependentUpon>OptionPanelThumbnail.cs</DependentUpon>
@@ -688,8 +696,9 @@
     <None Include="Resources\calc_small.png" />
     <None Include="Resources\Excel_small.png" />
     <None Include="Resources\image_small.png" />
-    <None Include="Resources\download.bmp" />
-    <None Include="Resources\ai_small.bmp" />
+    <None Include="Resources\Download_32x32.png" />
+    <None Include="Resources\ExportAi.png" />
+    <None Include="Resources\ExportCFF2.png" />
     <Content Include="Resources\plmpacklib.ICO" />
     <None Include="Resources\StartPage.png" />
     <None Include="app.config">

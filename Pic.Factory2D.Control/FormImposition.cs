@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.IO;
 
 using Pic.Factory2D;
 using Pic.Factory2D.Control;
@@ -203,12 +204,32 @@ namespace Pic.Factory2D.Control
         #region ToolStrip / Menu
         private void toolStripButtonPicGEOM_Click(object sender, EventArgs e)
         {
+            SaveAndOpenShellExecute("des");
+        }
+
+        private void toolStripButtonDXF_Click(object sender, EventArgs e)
+        {
+            SaveAndOpenShellExecute("dxf");
+        }
+
+        private void toolStripButtonAI_Click(object sender, EventArgs e)
+        {
+            SaveAndOpenShellExecute("ai");
+        }
+
+        private void toolStripButtonCFF2_Click(object sender, EventArgs e)
+        {
+            SaveAndOpenShellExecute("cf2");
+        }
+
+        private void SaveAndOpenShellExecute(string fileExt)
+        {
             try
             {
                 // build temp file path
                 string tempFilePath = System.IO.Path.ChangeExtension(System.IO.Path.GetTempFileName(), "des");
                 // write file
-                factoryViewer.WriteExportFile(tempFilePath, "des");
+                factoryViewer.WriteExportFile(tempFilePath, fileExt);
                 // open using existing file path
                 ProcessStartInfo startInfo = new ProcessStartInfo();
                 startInfo.UseShellExecute = true;
@@ -229,6 +250,21 @@ namespace Pic.Factory2D.Control
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }        
+        }
+
+        private void toolStripButtonOceProCut_Click(object sender, EventArgs e)
+        {
+           // initialize SaveFileDialog
+            SaveFileDialog fd = new SaveFileDialog();
+            fd.FileName = Properties.Settings.Default.FileExportDirectory;
+            fd.Filter = "Adobe Illustrator (*.ai)|*.ai|All Files|*.*";
+            fd.FilterIndex = 0;
+            // show save file dialog
+            if (DialogResult.OK == fd.ShowDialog())
+            {
+                factoryViewer.WriteExportFile(fd.FileName, "des");
+                Properties.Settings.Default.FileExportDirectory = Path.GetDirectoryName(fd.FileName);
             }
         }
 

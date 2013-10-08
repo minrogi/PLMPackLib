@@ -52,7 +52,6 @@ namespace Pic.Factory2D
                 ExpBlock defblock = _exporter.GetBlockOrCreate("default");
                 ExportEntity(defblock, entity);
             }
-
             PicBlock block = entity as PicBlock;
             if (null != block)
             {
@@ -107,9 +106,16 @@ namespace Pic.Factory2D
         } 
         #endregion
 
-        #region Public methods
+        #region PicVisitorOutput override
         public override byte[] GetResultByteArray()
         {
+            // if no blockref were created, create one from default block
+            if (0 == _exporter._blockRefs.Count)
+            {
+                ExpBlock defblock = _exporter.GetBlockOrCreate("default");
+                _exporter.CreateBlockRef(defblock);
+            }
+            // generate and return file content
             return _exporter.GetResultByteArray();
         }
         #endregion

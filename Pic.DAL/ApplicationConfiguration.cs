@@ -97,30 +97,43 @@ namespace Pic.DAL
                 this["applicationDes3"] = value;
             }
         }
-        [ConfigurationProperty("appOceProCut", DefaultValue = "OceProCut", IsRequired = false, IsKey = false)]
+        [ConfigurationProperty("applicationDXF", DefaultValue = "applicationDXF", IsRequired = false, IsKey = false)]
         [StringValidator(InvalidCharacters = "~!@#$%^&*[]{};'\"|", MinLength = 1, MaxLength = 255)]
-        public string AppOceProCut
+        public string ApplicationDXF
         {
             get
             {
-                return (string)this["appOceProCut"];
+                return (string)this["applicationDXF"];
             }
             set
             {
-                this["appOceProCut"] = value;
+                this["applicationDXF"] = value;
             }
         }
-        [ConfigurationProperty("applicationDxf", DefaultValue = "applicationDxf", IsRequired = false, IsKey = false)]
+        [ConfigurationProperty("applicationAI", DefaultValue = "applicationAI", IsRequired = false, IsKey = false)]
         [StringValidator(InvalidCharacters = "~!@#$%^&*[]{};'\"|", MinLength = 1, MaxLength = 255)]
-        public string ApplicationDxf
+        public string ApplicationAI
         {
             get
             {
-                return (string)this["applicationDxf"];
+                return (string)this["applicationAI"];
             }
             set
             {
-                this["applicationDxf"] = value;
+                this["applicationAI"] = value;
+            }
+        }
+        [ConfigurationProperty("applicationCF2", DefaultValue = "applicationCF2", IsRequired = false, IsKey = false)]
+        [StringValidator(InvalidCharacters = "~!@#$%^&*[]{};'\"|", MinLength = 1, MaxLength = 255)]
+        public string ApplicationCF2
+        {
+            get
+            {
+                return (string)this["applicationCF2"];
+            }
+            set
+            {
+                this["applicationCF2"] = value;
             }
         }
         [ConfigurationProperty("thumbnailsPath", DefaultValue = @"K:\Codeplex\PLMPackLib\Pic.DAL\Thumbnails", IsRequired = true, IsKey = false)]

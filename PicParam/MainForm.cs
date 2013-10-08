@@ -352,7 +352,7 @@ namespace PicParam
                             }
                             else if ("dxf" == form.ActualFileExtension)
                             {
-                                proc.StartInfo.FileName = Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationDxf;
+                                proc.StartInfo.FileName = Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationDXF;
                                 proc.StartInfo.Arguments = "\"" + form.FilePath + "\"";
                             }
                             else if ("pdf" == form.ActualFileExtension)
@@ -383,7 +383,6 @@ namespace PicParam
                 _log.Error(ex.ToString());
             }
         }
-
         private void toolStripButtonPicGEOM_Click(object sender, EventArgs e)
         {
             ExportAndOpenExtension("des", Pic.DAL.ApplicationConfiguration.CustomSection.AppPicGEOM);
@@ -396,6 +395,60 @@ namespace PicParam
         {
             ExportAndOpenExtension("des", Pic.DAL.ApplicationConfiguration.CustomSection.AppPicador3D);
         }
+        private void toolStripButtonDXF_Click(object sender, EventArgs e)
+        {
+            if (!System.IO.File.Exists(Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationDXF))
+            {
+                OpenFileDialog fd = new OpenFileDialog();
+                fd.InitialDirectory = Environment.CurrentDirectory;
+                fd.RestoreDirectory = true;
+                fd.Filter = "Executable (*.exe)|*.exe|All Files|*.*";
+                fd.FilterIndex = 1;
+                fd.Multiselect = false;
+                fd.CheckFileExists = true;
+                if (DialogResult.OK == fd.ShowDialog())
+                    Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationDXF = fd.FileName;
+                else
+                    return;
+            }
+            ExportAndOpenExtension("dxf", Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationDXF);
+        }
+        private void toolStripButtonAI_Click(object sender, EventArgs e)
+        {
+            if (!System.IO.File.Exists(Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationAI))
+            {
+                OpenFileDialog fd = new OpenFileDialog();
+                fd.InitialDirectory = Environment.CurrentDirectory;
+                fd.RestoreDirectory = true;
+                fd.Filter = "Executable (*.exe)|*.exe|All Files|*.*";
+                fd.FilterIndex = 1;
+                fd.Multiselect = false;
+                fd.CheckFileExists = true;
+                if (DialogResult.OK == fd.ShowDialog())
+                    Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationAI = fd.FileName;
+                else
+                    return;
+            }
+            ExportAndOpenExtension("ai", Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationAI);
+        }
+        private void toolStripButtonCFF2_Click(object sender, EventArgs e)
+        {
+            if (!System.IO.File.Exists(Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationCF2))
+            {
+                OpenFileDialog fd = new OpenFileDialog();
+                fd.InitialDirectory = Environment.CurrentDirectory;
+                fd.RestoreDirectory = true;
+                fd.Filter = "Executable (*.exe)|*.exe|All Files|*.*";
+                fd.FilterIndex = 1;
+                fd.Multiselect = false;
+                fd.CheckFileExists = true;
+                if (DialogResult.OK == fd.ShowDialog())
+                    Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationCF2 = fd.FileName;
+                else
+                    return;
+            }
+            ExportAndOpenExtension("cf2", Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationCF2);
+        }
         private void toolStripButtonOceProCut_Click(object sender, EventArgs e)
         {
             try
@@ -407,6 +460,7 @@ namespace PicParam
                 SaveFileDialog fd = new SaveFileDialog();
                 fd.FileName = filePath;
                 fd.Filter = "Adobe Illustrator (*.ai)|*.ai|All Files|*.*";
+                fd.FilterIndex = 0;
                 // show save file dialog
                 if (DialogResult.OK == fd.ShowDialog())
                     ExportAndOpen(fd.FileName, string.Empty );
@@ -418,24 +472,6 @@ namespace PicParam
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-        private void toolStripButtonDXF_Click(object sender, EventArgs e)
-        {
-            if (!System.IO.File.Exists(Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationDxf))
-            {
-                OpenFileDialog fd = new OpenFileDialog();
-                fd.InitialDirectory = Environment.CurrentDirectory;
-                fd.RestoreDirectory = true;
-                fd.Filter = "Executable (*.exe)|*.exe|All Files|*.*";
-                fd.FilterIndex = 1;
-                fd.Multiselect = false;
-                fd.CheckFileExists = true;
-                if (DialogResult.OK == fd.ShowDialog())
-                    Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationDxf = fd.FileName;
-                else
-                    return;
-            }
-            ExportAndOpenExtension("dxf", Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationDxf);
         }
 
         private void ExportAndOpen(string filePath, string sPathExectable)
@@ -645,6 +681,17 @@ namespace PicParam
             try
             {
                 _treeViewCtrl.CollapseRootChildrens();                
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.ToString());
+            }
+        }
+        private void toolStripButtonDownload_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _treeViewCtrl.SelectedNode = _treeViewCtrl.Nodes[1];
             }
             catch (Exception ex)
             {
