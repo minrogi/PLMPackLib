@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCompany("treeDiM")]
 [assembly: AssemblyProduct("Pic.Plugin.GeneratorCtrl.Test")]
 [assembly: AssemblyCopyright("Copyright ©  2011")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("treeDiM")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
@@ -21,13 +21,3 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("2bbdb6da-34a8-49cc-b3d5-88b17402377a")]
-
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-[assembly: AssemblyVersion("6.0.22.0")]
-[assembly: AssemblyFileVersion("6.0.22.0")]

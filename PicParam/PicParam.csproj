@@ -100,6 +100,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
     <Compile Include="AboutBoxForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +292,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadPageControl.resx">
       <DependentUpon>DownloadPageControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditDatabasePath.fr-FR.resx">
       <DependentUpon>FormEditDatabasePath.cs</DependentUpon>
@@ -667,6 +671,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelDatabase.resx">
       <DependentUpon>OptionPanelDatabase.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsFormPLMPackLib.resx">
       <DependentUpon>OptionsFormPLMPackLib.cs</DependentUpon>
