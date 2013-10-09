@@ -31,6 +31,6 @@ using log4net.Config;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("6.0.20.0")]
-[assembly: AssemblyFileVersion("6.0.20.0")]
+[assembly: AssemblyVersion("6.0.22.0")]
+[assembly: AssemblyFileVersion("6.0.22.0")]
 [assembly: XmlConfigurator()]

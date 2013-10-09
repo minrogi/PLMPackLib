@@ -352,7 +352,10 @@ namespace PicParam
                             }
                             else if ("dxf" == form.ActualFileExtension)
                             {
-                                proc.StartInfo.FileName = Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationDXF;
+                                string appDXF = Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationDXF;
+                                if (string.IsNullOrEmpty(appDXF) || !System.IO.File.Exists(appDXF))
+                                    return;
+                                proc.StartInfo.FileName = appDXF;
                                 proc.StartInfo.Arguments = "\"" + form.FilePath + "\"";
                             }
                             else if ("pdf" == form.ActualFileExtension)
@@ -574,8 +577,10 @@ namespace PicParam
                 toolStripButtonPicGEOM.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("PicGEOM");
                 toolStripButtonPicDecoup.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("PicDecoup");
                 toolStripButtonPicador3D.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("Picador3D");
-                toolStripButtonOceProCut.Enabled = buttonsEnabled; //&& ApplicationAvailabilityChecker.IsAvailable("OceProCut");
+                toolStripButtonOceProCut.Enabled = buttonsEnabled;
                 toolStripButtonDXF.Enabled = buttonsEnabled;
+                toolStripButtonAI.Enabled = buttonsEnabled;
+                toolStripButtonCFF2.Enabled = buttonsEnabled;
                 // "File" menu items
                 exportToolStripMenuItem.Enabled = buttonsEnabled;
                 toolStripMenuItemPicGEOM.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("PicGEOM");

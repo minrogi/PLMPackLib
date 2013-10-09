@@ -69,6 +69,7 @@ namespace Pic.DAL
             set
             {
                 this["applicationDes"] = value;
+                this.CurrentConfiguration.Save(ConfigurationSaveMode.Modified);
             }
         }
         [ConfigurationProperty("appPicDecoupe", DefaultValue = "applicationPicdecoupe", IsRequired = false, IsKey = false)]
@@ -82,6 +83,7 @@ namespace Pic.DAL
             set
             {
                 this["appPicDecoupe"] = value;
+                this.CurrentConfiguration.Save(ConfigurationSaveMode.Modified);
             }
         }
         [ConfigurationProperty("applicationDes3", DefaultValue = "applicationDes3", IsRequired = false, IsKey = false)]
@@ -95,10 +97,11 @@ namespace Pic.DAL
             set
             {
                 this["applicationDes3"] = value;
+                this.CurrentConfiguration.Save(ConfigurationSaveMode.Modified);
             }
         }
         [ConfigurationProperty("applicationDXF", DefaultValue = "applicationDXF", IsRequired = false, IsKey = false)]
-        [StringValidator(InvalidCharacters = "~!@#$%^&*[]{};'\"|", MinLength = 1, MaxLength = 255)]
+        [StringValidator(InvalidCharacters = "~!@#$%^&*[]{};'\"|", MinLength = 0, MaxLength = 255)]
         public string ApplicationDXF
         {
             get
@@ -108,10 +111,11 @@ namespace Pic.DAL
             set
             {
                 this["applicationDXF"] = value;
+                this.CurrentConfiguration.Save(ConfigurationSaveMode.Modified);
             }
         }
         [ConfigurationProperty("applicationAI", DefaultValue = "applicationAI", IsRequired = false, IsKey = false)]
-        [StringValidator(InvalidCharacters = "~!@#$%^&*[]{};'\"|", MinLength = 1, MaxLength = 255)]
+        [StringValidator(InvalidCharacters = "~!@#$%^&*[]{};'\"|", MinLength = 0, MaxLength = 255)]
         public string ApplicationAI
         {
             get
@@ -121,10 +125,11 @@ namespace Pic.DAL
             set
             {
                 this["applicationAI"] = value;
+                this.CurrentConfiguration.Save(ConfigurationSaveMode.Modified);
             }
         }
         [ConfigurationProperty("applicationCF2", DefaultValue = "applicationCF2", IsRequired = false, IsKey = false)]
-        [StringValidator(InvalidCharacters = "~!@#$%^&*[]{};'\"|", MinLength = 1, MaxLength = 255)]
+        [StringValidator(InvalidCharacters = "~!@#$%^&*[]{};'\"|", MinLength = 0, MaxLength = 255)]
         public string ApplicationCF2
         {
             get
@@ -134,6 +139,7 @@ namespace Pic.DAL
             set
             {
                 this["applicationCF2"] = value;
+                this.CurrentConfiguration.Save(ConfigurationSaveMode.Modified);
             }
         }
         [ConfigurationProperty("thumbnailsPath", DefaultValue = @"K:\Codeplex\PLMPackLib\Pic.DAL\Thumbnails", IsRequired = true, IsKey = false)]
@@ -147,6 +153,7 @@ namespace Pic.DAL
             set
             {
                 this["thumbnailsPath"] = value;
+                this.CurrentConfiguration.Save(ConfigurationSaveMode.Modified);
             }
         }
         public string RepositoryPath
