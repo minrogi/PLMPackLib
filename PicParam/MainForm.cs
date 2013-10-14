@@ -35,9 +35,9 @@ namespace PicParam
             _downloadPageCtrl.TreeViewCtrl = _treeViewCtrl;
 
             // set export application
-            ApplicationAvailabilityChecker.AppendApplication("PicGEOM", Pic.DAL.ApplicationConfiguration.CustomSection.AppPicGEOM);
-            ApplicationAvailabilityChecker.AppendApplication("PicDecoupe", Pic.DAL.ApplicationConfiguration.CustomSection.AppPicdecoup);
-            ApplicationAvailabilityChecker.AppendApplication("Picador3D", Pic.DAL.ApplicationConfiguration.CustomSection.AppPicador3D);
+            ApplicationAvailabilityChecker.AppendApplication("PicGEOM", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppDES);
+            ApplicationAvailabilityChecker.AppendApplication("PicDecoupe", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppPicDecoupeDES);
+            ApplicationAvailabilityChecker.AppendApplication("Picador3D", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppPic3DDES);
 
             _pluginViewCtrl.DependancyStatusChanged += new Pic.Plugin.ViewCtrl.PluginViewCtrl.DependancyStatusChangedHandler(DependancyStatusChanged);
         }
@@ -310,7 +310,9 @@ namespace PicParam
                 if (DialogResult.OK == dres)
                 {
                     // need to force saving of Pic.Factory2D.Properties.Settings
-                    Pic.Factory2D.Properties.Settings.Default.Save();
+                    Pic.Factory2D.Control.Properties.Settings.Default.Save();
+                    // need to force saving of Pic.Factory2D.Properties.Settings
+                    Pic.Factory2D.Control.Properties.Settings.Default.Save();
                     // if need to restart application, indicate the user that the application will need to restart before exiting
                     if (form.ApplicationMustRestart)
                     {
@@ -345,17 +347,23 @@ namespace PicParam
                     {
                         using (System.Diagnostics.Process proc = new System.Diagnostics.Process())
                         {
-                            if ("des" == form.ActualFileExtension)
+                            if ("des" == form.ActualFileExtension
+                                || "dxf" == form.ActualFileExtension
+                                || "ai" == form.ActualFileExtension
+                                || "cf2" == form.ActualFileExtension)
                             {
-                                proc.StartInfo.FileName = Pic.DAL.ApplicationConfiguration.CustomSection.AppPicGEOM;
-                                proc.StartInfo.Arguments = "\"" + form.FilePath + "\"";
-                            }
-                            else if ("dxf" == form.ActualFileExtension)
-                            {
-                                string appDXF = Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationDXF;
-                                if (string.IsNullOrEmpty(appDXF) || !System.IO.File.Exists(appDXF))
+                                string applicationPath = string.Empty;
+                                switch (form.ActualFileExtension)
+                                {
+                                    case "des": applicationPath = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppDES; break;
+                                    case "dxf": applicationPath = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppDXF; break;
+                                    case "ai": applicationPath = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppAI; break;
+                                    case "cf2": applicationPath = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppCF2; break;
+                                    default: break;
+                                }
+                                if (string.IsNullOrEmpty(applicationPath) || !System.IO.File.Exists(applicationPath))
                                     return;
-                                proc.StartInfo.FileName = appDXF;
+                                proc.StartInfo.FileName = applicationPath;
                                 proc.StartInfo.Arguments = "\"" + form.FilePath + "\"";
                             }
                             else if ("pdf" == form.ActualFileExtension)
@@ -388,70 +396,83 @@ namespace PicParam
         }
         private void toolStripButtonPicGEOM_Click(object sender, EventArgs e)
         {
-            ExportAndOpenExtension("des", Pic.DAL.ApplicationConfiguration.CustomSection.AppPicGEOM);
+            ExportAndOpenExtension("des", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppDES);
         }
         private void toolStripButtonPicDecoup_Click(object sender, EventArgs e)
         {
-            ExportAndOpenExtension("des", Pic.DAL.ApplicationConfiguration.CustomSection.AppPicdecoup);
+            ExportAndOpenExtension("des", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppPicDecoupeDES);
         }
         private void toolStripButtonPicador3D_Click(object sender, EventArgs e) 
         {
-            ExportAndOpenExtension("des", Pic.DAL.ApplicationConfiguration.CustomSection.AppPicador3D);
+            ExportAndOpenExtension("des", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppPic3DDES);
         }
         private void toolStripButtonDXF_Click(object sender, EventArgs e)
         {
-            if (!System.IO.File.Exists(Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationDXF))
+            string appDXF = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppDXF;
+            if (!string.IsNullOrEmpty(appDXF) && System.IO.File.Exists(appDXF))
+                ExportAndOpenExtension("dxf", appDXF);
+            else
             {
-                OpenFileDialog fd = new OpenFileDialog();
-                fd.InitialDirectory = Environment.CurrentDirectory;
-                fd.RestoreDirectory = true;
-                fd.Filter = "Executable (*.exe)|*.exe|All Files|*.*";
-                fd.FilterIndex = 1;
-                fd.Multiselect = false;
-                fd.CheckFileExists = true;
+                // set default file path
+                string filePath = Path.Combine(Settings.Default.FileExportDirectory, DocumentName);
+                filePath = Path.ChangeExtension(filePath, "dxf");
+                // initialize SaveFileDialog
+                SaveFileDialog fd = new SaveFileDialog();
+                fd.FileName = filePath;
+                fd.Filter = "Autodesk dxf (*.dxf)|*.dxf|All Files|*.*";
+                fd.FilterIndex = 0;
+                // show save file dialog
                 if (DialogResult.OK == fd.ShowDialog())
-                    Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationDXF = fd.FileName;
-                else
-                    return;
+                    ExportAndOpen(fd.FileName, string.Empty);
+                // save directory
+                Settings.Default.FileExportDirectory = Path.GetDirectoryName(fd.FileName);
             }
-            ExportAndOpenExtension("dxf", Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationDXF);
         }
         private void toolStripButtonAI_Click(object sender, EventArgs e)
         {
-            if (!System.IO.File.Exists(Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationAI))
+            string appAI = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppAI;
+            if (!string.IsNullOrEmpty(appAI) && System.IO.File.Exists(appAI))
+                ExportAndOpenExtension("ai", appAI);
+            else
             {
-                OpenFileDialog fd = new OpenFileDialog();
-                fd.InitialDirectory = Environment.CurrentDirectory;
-                fd.RestoreDirectory = true;
-                fd.Filter = "Executable (*.exe)|*.exe|All Files|*.*";
-                fd.FilterIndex = 1;
-                fd.Multiselect = false;
-                fd.CheckFileExists = true;
+                // set default file path
+                string filePath = Path.Combine(Settings.Default.FileExportDirectory, DocumentName);
+                filePath = Path.ChangeExtension(filePath, "ai");
+                // initialize SaveFileDialog
+                SaveFileDialog fd = new SaveFileDialog();
+                fd.FileName = filePath;
+                fd.Filter = "Adobe Illustrator (*.ai)|*.ai|All Files|*.*";
+                fd.FilterIndex = 0;
+                // show save file dialog
                 if (DialogResult.OK == fd.ShowDialog())
-                    Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationAI = fd.FileName;
-                else
-                    return;
+                    ExportAndOpen(fd.FileName, string.Empty);
+                // save directory
+                Settings.Default.FileExportDirectory = Path.GetDirectoryName(fd.FileName);
             }
-            ExportAndOpenExtension("ai", Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationAI);
         }
         private void toolStripButtonCFF2_Click(object sender, EventArgs e)
         {
-            if (!System.IO.File.Exists(Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationCF2))
+            string appCF2 = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppCF2;
+            if (!string.IsNullOrEmpty(appCF2) && System.IO.File.Exists(appCF2))
+                ExportAndOpenExtension("ai", appCF2);
+            else
             {
-                OpenFileDialog fd = new OpenFileDialog();
-                fd.InitialDirectory = Environment.CurrentDirectory;
-                fd.RestoreDirectory = true;
-                fd.Filter = "Executable (*.exe)|*.exe|All Files|*.*";
-                fd.FilterIndex = 1;
-                fd.Multiselect = false;
-                fd.CheckFileExists = true;
+                // set default file path
+                string filePath = Path.Combine(Settings.Default.FileExportDirectory, DocumentName);
+                filePath = Path.ChangeExtension(filePath, "cf2");
+                // initialize SaveFileDialog
+                SaveFileDialog fd = new SaveFileDialog();
+                fd.FileName = filePath;
+                fd.Filter = "Common File Format (*.cf2)|*.cf2|All Files|*.*";
+                fd.FilterIndex = 0;
+                // show save file dialog
                 if (DialogResult.OK == fd.ShowDialog())
-                    Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationCF2 = fd.FileName;
-                else
-                    return;
+                    ExportAndOpen(fd.FileName, string.Empty);
+                // save directory
+                Settings.Default.FileExportDirectory = Path.GetDirectoryName(fd.FileName);
             }
-            ExportAndOpenExtension("cf2", Pic.DAL.ApplicationConfiguration.CustomSection.ApplicationCF2);
         }
+
         private void toolStripButtonOceProCut_Click(object sender, EventArgs e)
         {
             try
@@ -484,11 +505,8 @@ namespace PicParam
                 _pluginViewCtrl.WriteExportFile(filePath, Path.GetExtension(filePath));
             else if (_factoryViewCtrl.Visible)
                 _factoryViewCtrl.WriteExportFile(filePath, Path.GetExtension(filePath));
-            // if executable path is empty, then exit
-            if (string.IsNullOrEmpty(sPathExectable))
-                return;
             // test if executing application is available
-            if (System.IO.File.Exists(sPathExectable))
+            if (!string.IsNullOrEmpty(sPathExectable) && System.IO.File.Exists(sPathExectable))
             {
                 // open using existing file path
                 using (System.Diagnostics.Process proc = new System.Diagnostics.Process())
@@ -498,18 +516,12 @@ namespace PicParam
                     proc.Start();
                 }
             }
-            else
-                MessageBox.Show(
-                    string.Format("It appears that the following path does not point to a valid application:\n {0}", sPathExectable),
-                    Application.ProductName,
-                    MessageBoxButtons.OK );
         }
 
         private void ExportAndOpenExtension(string sExt, string sPathExectable)
         {
             // build temp file path
             string tempFilePath = System.IO.Path.ChangeExtension(System.IO.Path.GetTempFileName(), sExt);
-
             ExportAndOpen(tempFilePath, sPathExectable);
         }
         #endregion

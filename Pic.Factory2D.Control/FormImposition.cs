@@ -204,44 +204,38 @@ namespace Pic.Factory2D.Control
         #region ToolStrip / Menu
         private void toolStripButtonPicGEOM_Click(object sender, EventArgs e)
         {
-            SaveAndOpenShellExecute("des");
+            ExportAndOpenExtension("des");
         }
 
         private void toolStripButtonDXF_Click(object sender, EventArgs e)
         {
-            SaveAndOpenShellExecute("dxf");
+            ExportAndOpenExtension("dxf");
         }
 
         private void toolStripButtonAI_Click(object sender, EventArgs e)
         {
-            SaveAndOpenShellExecute("ai");
+            ExportAndOpenExtension("ai");
         }
 
         private void toolStripButtonCFF2_Click(object sender, EventArgs e)
         {
-            SaveAndOpenShellExecute("cf2");
+            ExportAndOpenExtension("cf2");
         }
 
-        private void SaveAndOpenShellExecute(string fileExt)
+        private void ExportAndOpenExtension(string fileExt)
         {
             try
             {
-                // build temp file path
-                string tempFilePath = System.IO.Path.ChangeExtension(System.IO.Path.GetTempFileName(), "des");
-                // write file
-                factoryViewer.WriteExportFile(tempFilePath, fileExt);
-                // open using existing file path
-                ProcessStartInfo startInfo = new ProcessStartInfo();
-                startInfo.UseShellExecute = true;
-                startInfo.Verb = "Open";
-                startInfo.CreateNoWindow = false;
-                startInfo.WindowStyle = ProcessWindowStyle.Normal;
-                startInfo.FileName = tempFilePath;
-                using (Process p = new Process())
+                string applicationPath = string.Empty;
+                switch (fileExt)
                 {
-                    p.StartInfo = startInfo;
-                    p.Start();
+                    case "des": applicationPath = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppDES; break;
+                    case "dxf": applicationPath = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppDXF; break;
+                    case "ai": applicationPath = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppAI; break;
+                    case "cf2": applicationPath = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppCF2; break;
+                    default: break;
                 }
+                ExportAndOpen(fileExt, applicationPath);
             }
             catch (Win32Exception ex)
             {
@@ -251,6 +245,47 @@ namespace Pic.Factory2D.Control
             {
                 MessageBox.Show(ex.ToString());
             }        
+        }
+
+        private void ExportAndOpen(string fileExt, string sPathExectable)
+        {
+            if (!string.IsNullOrEmpty(sPathExectable) && System.IO.File.Exists(sPathExectable))
+            {
+                // build temp file path
+                string tempFilePath = System.IO.Path.ChangeExtension(System.IO.Path.GetTempFileName(), fileExt);
+                factoryViewer.WriteExportFile(tempFilePath, fileExt);
+                // open using existing file path
+                using (System.Diagnostics.Process proc = new System.Diagnostics.Process())
+                {
+                    proc.StartInfo.FileName = sPathExectable;
+                    proc.StartInfo.Arguments = "\"" + tempFilePath + "\"";
+                    proc.Start();
+                }
+            }
+            else
+            {
+                string fileExportDir = Pic.Factory2D.Control.Properties.Settings.Default.FileExportDirectory;
+                SaveFileDialog fd = new SaveFileDialog();
+                fd.DefaultExt = fileExt;
+                fd.InitialDirectory = fileExportDir;
+                fd.Filter = "PicGEOM (*.des)|*.des"
+                            + "|Autodesk dxf (*.dxf)|*.dxf"
+                            + "|Adobe Illustrator (*.ai)|*.ai"
+                            + "|Common File Format (*.cf2)|*.cf2"
+                            + "|All Files|*.*";
+                switch (fileExt)
+                {
+                    case "des": fd.FilterIndex = 0; break;
+                    case "dxf": fd.FilterIndex = 1; break;
+                    case "ai": fd.FilterIndex = 2; break;
+                    case "cf2": fd.FilterIndex = 3; break;
+                    default: break;
+                }
+
+                if (DialogResult.OK == fd.ShowDialog())
+                    factoryViewer.WriteExportFile(fd.FileName, fileExt);
+            }
+        
         }
 
         private void toolStripButtonOceProCut_Click(object sender, EventArgs e)

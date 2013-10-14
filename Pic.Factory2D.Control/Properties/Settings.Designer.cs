@@ -13,7 +13,7 @@ namespace Pic.Factory2D.Control.Properties {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "10.0.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+    public sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
         
@@ -128,6 +128,78 @@ namespace Pic.Factory2D.Control.Properties {
             }
             set {
                 this["FileExportDirectory"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string FileOutputAppDXF {
+            get {
+                return ((string)(this["FileOutputAppDXF"]));
+            }
+            set {
+                this["FileOutputAppDXF"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string FileOutputAppAI {
+            get {
+                return ((string)(this["FileOutputAppAI"]));
+            }
+            set {
+                this["FileOutputAppAI"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string FileOutputAppCF2 {
+            get {
+                return ((string)(this["FileOutputAppCF2"]));
+            }
+            set {
+                this["FileOutputAppCF2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\wpicador\\Bin32\\PicGEOM.exe")]
+        public string FileOutputAppDES {
+            get {
+                return ((string)(this["FileOutputAppDES"]));
+            }
+            set {
+                this["FileOutputAppDES"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\wpicador\\Bin\\Picador3D.exe")]
+        public string FileOutputAppPic3DDES {
+            get {
+                return ((string)(this["FileOutputAppPic3DDES"]));
+            }
+            set {
+                this["FileOutputAppPic3DDES"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\wpicador\\Bin32\\PDecoup.exe")]
+        public string FileOutputAppPicDecoupeDES {
+            get {
+                return ((string)(this["FileOutputAppPicDecoupeDES"]));
+            }
+            set {
+                this["FileOutputAppPicDecoupeDES"] = value;
             }
         }
     }

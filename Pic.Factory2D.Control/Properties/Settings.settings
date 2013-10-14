@@ -29,5 +29,23 @@
     <Setting Name="FileExportDirectory" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="FileOutputAppDXF" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FileOutputAppAI" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FileOutputAppCF2" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FileOutputAppDES" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\wpicador\Bin32\PicGEOM.exe</Value>
+    </Setting>
+    <Setting Name="FileOutputAppPic3DDES" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\wpicador\Bin\Picador3D.exe</Value>
+    </Setting>
+    <Setting Name="FileOutputAppPicDecoupeDES" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\wpicador\Bin32\PDecoup.exe</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
