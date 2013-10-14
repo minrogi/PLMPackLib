@@ -275,17 +275,16 @@ namespace Pic.Factory2D.Control
                             + "|All Files|*.*";
                 switch (fileExt)
                 {
-                    case "des": fd.FilterIndex = 0; break;
-                    case "dxf": fd.FilterIndex = 1; break;
-                    case "ai": fd.FilterIndex = 2; break;
-                    case "cf2": fd.FilterIndex = 3; break;
+                    case "des": fd.FilterIndex = 1; break;
+                    case "dxf": fd.FilterIndex  = 2; break;
+                    case "ai": fd.FilterIndex   = 3; break;
+                    case "cf2": fd.FilterIndex = 4; break;
                     default: break;
                 }
-
+                // shaow SaveFileDialog
                 if (DialogResult.OK == fd.ShowDialog())
                     factoryViewer.WriteExportFile(fd.FileName, fileExt);
-            }
-        
+            }        
         }
 
         private void toolStripButtonOceProCut_Click(object sender, EventArgs e)
