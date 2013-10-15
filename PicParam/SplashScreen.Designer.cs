@@ -37,6 +37,7 @@
             // lblVersion
             // 
             resources.ApplyResources(this.lblVersion, "lblVersion");
+            this.lblVersion.BackColor = System.Drawing.Color.Transparent;
             this.lblVersion.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.lblVersion.Name = "lblVersion";
             // 
@@ -59,7 +60,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.TransparencyKey = System.Drawing.Color.White;
+            this.TransparencyKey = System.Drawing.Color.Black;
             this.ResumeLayout(false);
             this.PerformLayout();
 

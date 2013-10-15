@@ -404,6 +404,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SplashScreen.ja-JP.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StartPageControl.fr-FR.resx">
       <DependentUpon>StartPageControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -698,6 +701,8 @@
     <None Include="Resources\toolStripButtonLayout.Image.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\splashpic.png" />
+    <None Include="Resources\splashpic_ocecanon.png" />
     <None Include="Resources\writer_small.png" />
     <None Include="Resources\word_small.png" />
     <None Include="Resources\ppt_small.png" />

@@ -20,6 +20,7 @@ namespace PicParam
         // Threading
         static SplashScreen ms_frmSplash = null;
         static Thread ms_oThread = null;
+        private bool _transparent = false;
         #endregion
 
         #region Static members
@@ -60,9 +61,12 @@ namespace PicParam
 
             if (null != this.BackgroundImage)
             {
+                Bitmap b = PicParam.Properties.Settings.Default.UseRebrandedVersion
+                    ? PicParam.Properties.Resources.splashpic_ocecanon
+                    : PicParam.Properties.Resources.splashpic;
                 // make lower right pixel color transparent
-                Bitmap b = new Bitmap(this.BackgroundImage);
-                b.MakeTransparent(b.GetPixel(1, 1));
+                if (Transparent)
+                    b.MakeTransparent(b.GetPixel(1, 1));
                 this.BackgroundImage = b;
             }
 
@@ -89,6 +93,11 @@ namespace PicParam
         {
             set { timerClose.Interval = value; }
             get { return timerClose.Interval; }
+        }
+        public bool Transparent
+        {
+            get { return _transparent; }
+            set { _transparent = value; }
         }
         #endregion
 

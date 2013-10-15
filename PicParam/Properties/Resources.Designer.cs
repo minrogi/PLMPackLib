@@ -322,5 +322,19 @@ namespace PicParam.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        internal static System.Drawing.Bitmap splashpic {
+            get {
+                object obj = ResourceManager.GetObject("splashpic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap splashpic_ocecanon {
+            get {
+                object obj = ResourceManager.GetObject("splashpic_ocecanon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

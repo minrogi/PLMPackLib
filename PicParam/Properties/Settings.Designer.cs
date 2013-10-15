@@ -149,5 +149,14 @@ namespace PicParam.Properties {
                 this["ShowCenteredTitle"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UseRebrandedVersion {
+            get {
+                return ((bool)(this["UseRebrandedVersion"]));
+            }
+        }
     }
 }

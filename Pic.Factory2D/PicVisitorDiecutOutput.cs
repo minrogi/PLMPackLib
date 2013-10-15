@@ -43,6 +43,10 @@ namespace Pic.Factory2D
         public override void Initialize(PicFactory factory)
         {
             _exporter.Initialize();
+            // 
+            PicVisitorBoundingBox visitor = new PicVisitorBoundingBox();
+            factory.ProcessVisitor(visitor);
+            _exporter.SetBoundingBox(visitor.Box.XMin, visitor.Box.YMin, visitor.Box.XMax, visitor.Box.YMax);
         }
         public override void ProcessEntity(PicEntity entity)
         {
