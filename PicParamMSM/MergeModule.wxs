@@ -10,6 +10,7 @@
              Languages="1033"
              Manufacturer="$(var.ProductManufacturer)" 
              InstallerVersion="200" />
+    <Property Id="REBRANDED" Value="False"/>
     <!-- Forcibly overwriting preexisting files during installation -->
     <Property Id="REINSTALLMODE" Value="amus" />
     <!-- Performs a file search on  PicParam.db
@@ -127,7 +128,7 @@
         <util:XmlFile Id="SetInitialReportTemplatePath1" Action="setValue"
                       File="[Bin32]PLMPackLib.exe.config" ElementPath="/configuration/applicationSettings/TreeDim.StackBuilder.GUIExtension.Properties.Settings/setting[\[]@name='ReportTemplatePath'[\]]/value" Value="[REPORTTEMPLATES]" />
       </Component>
-      <Component Id="PLMPacKLibExeConfigModif2" Guid="591C2993-7297-476C-AE06-5FC354CFF4FA">
+      <Component Id="PLMPackLibExeConfigModif2" Guid="591C2993-7297-476C-AE06-5FC354CFF4FA">
         <Condition>DATABASEEXISTS</Condition>
         <File Id="PLMPackLib.exe.config2" Source="..\PicParam\bin\x86\Release\PLMPackLib.exe.config" KeyPath="yes" Checksum="yes">
           <Permission ChangePermission="yes" GenericAll="yes" User="Everyone" TakeOwnership="yes" Write="yes" WriteAttributes="yes" WriteExtendedAttributes="yes" />
@@ -138,6 +139,11 @@
                       File="[Bin32]PLMPackLib.exe.config" ElementPath="configuration/connectionStrings/add" Name="connectionString" Value="metadata=res://*/ModelSQLite.csdl|res://*/ModelSQLite.ssdl|res://*/ModelSQLite.msl;provider=System.Data.SQLite;provider connection string=&quot;data source=[Bin32]StackBuilder.db&quot;" />
         <util:XmlFile Id="SetInitialReportTemplatePath2" Action="setValue"
                       File="[Bin32]PLMPackLib.exe.config" ElementPath="/configuration/applicationSettings/TreeDim.StackBuilder.GUIExtension.Properties.Settings/setting[\[]@name='ReportTemplatePath'[\]]/value" Value="[REPORTTEMPLATES]" />
+      </Component>
+      <Component Id="PLMPackLibExeConfigRebranding" Guid="AEFBF0C6-D6B6-44EC-AC72-B0985F0221BE" KeyPath="yes">
+        <Condition>REBRANDED</Condition>
+        <util:XmlFile Id="ModifyRebrandedPLMPackLibExeConfig" Action="setValue"
+                     File="[Bin32]PLMPackLib.exe.config" ElementPath="/configuration/applicationSettings/PicParam.Properties.Settings/setting/@UseRebrandedVersion" Value="True" />
       </Component>
       <!-- ComponentGeneratorCtrl -->
       <Component Id="ComponentGeneratorCtrl" Guid="BDB88E5F-CF98-4ac4-805D-2D880D258454">
