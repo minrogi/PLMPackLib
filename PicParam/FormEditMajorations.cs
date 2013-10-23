@@ -61,10 +61,10 @@ namespace PicParam
 
                 NumericUpDown nud = new NumericUpDown();
                 nud.Name = string.Format("nud_{0}", param.Name);
-                nud.Increment = 1.0M;
-                nud.Minimum = -10000.0M;
+                nud.Increment = 0.1M;
+                nud.Minimum = 0.0M;
                 nud.Maximum = 10000.0M;
-                nud.DecimalPlaces = 3;
+                nud.DecimalPlaces = 1;
                 nud.Value = (decimal)stack.GetDoubleParameterValue(param.Name);
                 nud.Location = new Point(
                     lblX + (iCount / 5) * offsetX + lbl.Size.Width + 1
@@ -106,8 +106,20 @@ namespace PicParam
 
         private void UpdateMajorationValues()
         {
+            // rounding to be applied while building majoration dictionary
+            Pic.DAL.SQLite.Component.MajoRounding majoRounding = Pic.DAL.SQLite.Component.MajoRounding.ROUDING_FIRSTDECIMALNEAREST;
+            switch (Properties.Settings.Default.MajorationRounding)
+            {
+                case 0: majoRounding = Pic.DAL.SQLite.Component.MajoRounding.ROUDING_FIRSTDECIMALNEAREST; break;
+                case 1: majoRounding = Pic.DAL.SQLite.Component.MajoRounding.ROUNDING_HALFNEAREST; break;
+                case 2: majoRounding = Pic.DAL.SQLite.Component.MajoRounding.ROUNDING_HALFTOP; break;
+                case 3: majoRounding = Pic.DAL.SQLite.Component.MajoRounding.ROUDING_INT; break;
+                default: break;
+            }
+            // retrieve majoration from database
             PPDataContext db = new PPDataContext();
-            Dictionary<string, double> dictMajo = Pic.DAL.SQLite.Component.GetDefaultMajorations(db, _componentId, _profile);
+            Dictionary<string, double> dictMajo = Pic.DAL.SQLite.Component.GetDefaultMajorations(db, _componentId, _profile, majoRounding);
+            // update nud control values
             foreach (Control ctrl in Controls)
             {
                 NumericUpDown nud = ctrl as NumericUpDown;

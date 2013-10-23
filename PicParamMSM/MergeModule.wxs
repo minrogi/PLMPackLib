@@ -10,7 +10,6 @@
              Languages="1033"
              Manufacturer="$(var.ProductManufacturer)" 
              InstallerVersion="200" />
-    <Property Id="REBRANDED" Value="False"/>
     <!-- Forcibly overwriting preexisting files during installation -->
     <Property Id="REINSTALLMODE" Value="amus" />
     <!-- Performs a file search on  PicParam.db
@@ -143,7 +142,7 @@
       <Component Id="PLMPackLibExeConfigRebranding" Guid="AEFBF0C6-D6B6-44EC-AC72-B0985F0221BE" KeyPath="yes">
         <Condition>REBRANDED</Condition>
         <util:XmlFile Id="ModifyRebrandedPLMPackLibExeConfig" Action="setValue"
-                     File="[Bin32]PLMPackLib.exe.config" ElementPath="/configuration/applicationSettings/PicParam.Properties.Settings/setting/@UseRebrandedVersion" Value="True" />
+                     File="[Bin32]PLMPackLib.exe.config" ElementPath="/configuration/applicationSettings/PicParam.Properties.Settings/setting[\[]@name='UseRebrandedVersion'[\]]/value" Value="True" />
       </Component>
       <!-- ComponentGeneratorCtrl -->
       <Component Id="ComponentGeneratorCtrl" Guid="BDB88E5F-CF98-4ac4-805D-2D880D258454">

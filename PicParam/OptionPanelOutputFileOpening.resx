@@ -169,7 +169,7 @@
     <value>fileSelectOutputDXF</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputDXF.Type" xml:space="preserve">
-    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=6.0.25.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=6.0.26.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputDXF.Parent" xml:space="preserve">
     <value>$this</value>
@@ -226,7 +226,7 @@
     <value>fileSelectOutputAI</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputAI.Type" xml:space="preserve">
-    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=6.0.25.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=6.0.26.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputAI.Parent" xml:space="preserve">
     <value>$this</value>
@@ -234,34 +234,34 @@
   <data name="&gt;&gt;fileSelectOutputAI.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="checkBoxCF2.AutoSize" type="System.Boolean, mscorlib">
+  <data name="checkBoxAppCF2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="checkBoxCF2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="checkBoxAppCF2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="checkBoxCF2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="checkBoxAppCF2.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 109</value>
   </data>
-  <data name="checkBoxCF2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="checkBoxAppCF2.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 17</value>
   </data>
-  <data name="checkBoxCF2.TabIndex" type="System.Int32, mscorlib">
+  <data name="checkBoxAppCF2.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="checkBoxCF2.Text" xml:space="preserve">
+  <data name="checkBoxAppCF2.Text" xml:space="preserve">
     <value>Application to open CF2 files</value>
   </data>
-  <data name="&gt;&gt;checkBoxCF2.Name" xml:space="preserve">
-    <value>checkBoxCF2</value>
+  <data name="&gt;&gt;checkBoxAppCF2.Name" xml:space="preserve">
+    <value>checkBoxAppCF2</value>
   </data>
-  <data name="&gt;&gt;checkBoxCF2.Type" xml:space="preserve">
+  <data name="&gt;&gt;checkBoxAppCF2.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;checkBoxCF2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;checkBoxAppCF2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;checkBoxCF2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;checkBoxAppCF2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="fileSelectOutputCF2.AccessibleDescription" xml:space="preserve">
@@ -286,7 +286,7 @@
     <value>fileSelectOutputCF2</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputCF2.Type" xml:space="preserve">
-    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=6.0.25.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=6.0.26.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputCF2.Parent" xml:space="preserve">
     <value>$this</value>
@@ -297,6 +297,12 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.AccessibleDescription" xml:space="preserve">
+    <value>Applications to open exported files</value>
+  </data>
+  <data name="$this.AccessibleName" xml:space="preserve">
+    <value>Applications exported files</value>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>

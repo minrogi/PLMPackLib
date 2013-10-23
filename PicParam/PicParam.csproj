@@ -247,6 +247,12 @@
     <Compile Include="DocumentTreeBranchView.Designer.cs">
       <DependentUpon>DocumentTreeBranchView.cs</DependentUpon>
     </Compile>
+    <Compile Include="OptionPanelMajorations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OptionPanelMajorations.Designer.cs">
+      <DependentUpon>OptionPanelMajorations.cs</DependentUpon>
+    </Compile>
     <Compile Include="OptionPanelOutputFileOpening.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -371,6 +377,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelDatabase.ja-JP.resx">
       <DependentUpon>OptionPanelDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelMajorations.fr-FR.resx">
+      <DependentUpon>OptionPanelMajorations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelMajorations.resx">
+      <DependentUpon>OptionPanelMajorations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelOutputFileOpening.fr-FR.resx">
       <DependentUpon>OptionPanelOutputFileOpening.cs</DependentUpon>

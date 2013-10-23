@@ -117,107 +117,164 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;rbRounding4.Name" xml:space="preserve">
+    <value>rbRounding4</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="rbRounding3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 17</value>
+  </data>
+  <data name="rbRounding4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 17</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="rbRounding1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;rbRounding2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
-  <data name="&gt;&gt;bnOverwrite.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="gbRounding.Size" type="System.Drawing.Size, System.Drawing">
+    <value>478, 124</value>
   </data>
-  <data name="listBoxLibraries.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 0</value>
+  <data name="$this.AccessibleDescription" xml:space="preserve">
+    <value>Rounding mode to be used while computing undefined majorations</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="bnOverwrite.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="rbRounding2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 47</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="rbRounding4.Text" xml:space="preserve">
+    <value>+/- 1 mm (nearest)</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>DownloadPageControl</value>
+  <data name="rbRounding1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 22</value>
   </data>
-  <data name="&gt;&gt;bnMerge.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;listBoxLibraries.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="listBoxLibraries.Size" type="System.Drawing.Size, System.Drawing">
-    <value>424, 500</value>
-  </data>
-  <data name="bnOverwrite.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 65</value>
-  </data>
-  <data name="&gt;&gt;bnMerge.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bnOverwrite.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="bnOverwrite.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 59</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="listBoxLibraries.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="listBoxLibraries.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;bnOverwrite.Name" xml:space="preserve">
-    <value>bnOverwrite</value>
-  </data>
-  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bnMerge.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="bnMerge.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="bnOverwrite.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="bnOverwrite.Text" xml:space="preserve">
-    <value>Download and update</value>
-  </data>
-  <data name="bnMerge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 59</value>
-  </data>
-  <data name="&gt;&gt;listBoxLibraries.Type" xml:space="preserve">
-    <value>ListBoxLibraries, PLMPackLib, Version=6.0.26.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="bnMerge.TabIndex" type="System.Int32, mscorlib">
+  <data name="rbRounding3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;bnOverwrite.Parent" xml:space="preserve">
+  <data name="&gt;&gt;gbRounding.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;bnMerge.Name" xml:space="preserve">
-    <value>bnMerge</value>
-  </data>
-  <data name="listBoxLibraries.ItemHeight" type="System.Int32, mscorlib">
-    <value>153</value>
-  </data>
-  <data name="&gt;&gt;listBoxLibraries.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;rbRounding4.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;listBoxLibraries.Name" xml:space="preserve">
-    <value>listBoxLibraries</value>
+  <data name="rbRounding3.Text" xml:space="preserve">
+    <value>+/- 0.5 mm (top)</value>
   </data>
-  <data name="&gt;&gt;bnMerge.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="gbRounding.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 11</value>
   </data>
-  <data name="bnMerge.Text" xml:space="preserve">
-    <value>Download and add</value>
+  <data name="&gt;&gt;rbRounding3.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="listBoxLibraries.IntegralHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;rbRounding2.Name" xml:space="preserve">
+    <value>rbRounding2</value>
+  </data>
+  <data name="gbRounding.Text" xml:space="preserve">
+    <value>Rounding mode used while computing undefined majorations</value>
+  </data>
+  <data name="rbRounding4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="rbRounding3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 72</value>
+  </data>
+  <data name="&gt;&gt;rbRounding4.Parent" xml:space="preserve">
+    <value>gbRounding</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gbRounding.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;rbRounding1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbRounding.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rbRounding2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>GLib.Options.OptionsPanel, OptionsLib, Version=6.0.18.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;rbRounding3.Parent" xml:space="preserve">
+    <value>gbRounding</value>
+  </data>
+  <data name="rbRounding2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 17</value>
+  </data>
+  <data name="&gt;&gt;rbRounding3.Name" xml:space="preserve">
+    <value>rbRounding3</value>
+  </data>
+  <data name="&gt;&gt;rbRounding1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;rbRounding3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gbRounding.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;rbRounding1.Parent" xml:space="preserve">
+    <value>gbRounding</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>OptionPanelMajorations</value>
+  </data>
+  <data name="rbRounding1.Text" xml:space="preserve">
+    <value>+/- 0.1 mm</value>
+  </data>
+  <data name="rbRounding2.Text" xml:space="preserve">
+    <value>+/- 0.5 mm (nearest)</value>
+  </data>
+  <data name="rbRounding2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;gbRounding.Name" xml:space="preserve">
+    <value>gbRounding</value>
+  </data>
+  <data name="rbRounding1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="$this.AccessibleName" xml:space="preserve">
+    <value>Majorations</value>
+  </data>
+  <data name="&gt;&gt;rbRounding2.Parent" xml:space="preserve">
+    <value>gbRounding</value>
+  </data>
+  <data name="&gt;&gt;rbRounding1.Name" xml:space="preserve">
+    <value>rbRounding1</value>
+  </data>
+  <data name="rbRounding4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 97</value>
+  </data>
+  <data name="rbRounding3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;rbRounding2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rbRounding4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;gbRounding.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>524, 500</value>
+    <value>500, 215</value>
+  </data>
+  <data name="rbRounding1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 17</value>
+  </data>
+  <data name="&gt;&gt;rbRounding4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -94,6 +94,9 @@ namespace PicParam
             set { timerClose.Interval = value; }
             get { return timerClose.Interval; }
         }
+        /// <summary>
+        /// set / get transparency
+        /// </summary>
         public bool Transparent
         {
             get { return _transparent; }

@@ -158,5 +158,17 @@ namespace PicParam.Properties {
                 return ((bool)(this["UseRebrandedVersion"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int MajorationRounding {
+            get {
+                return ((int)(this["MajorationRounding"]));
+            }
+            set {
+                this["MajorationRounding"] = value;
+            }
+        }
     }
 }

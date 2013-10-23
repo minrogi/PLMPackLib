@@ -41,12 +41,12 @@
             // 
             // gbAnnotations
             // 
-            resources.ApplyResources(this.gbAnnotations, "gbAnnotations");
             this.gbAnnotations.Controls.Add(this.nudFontSize);
             this.gbAnnotations.Controls.Add(this.lbFontSize);
             this.gbAnnotations.Controls.Add(this.rbAnnotations3);
             this.gbAnnotations.Controls.Add(this.rbAnnotations2);
             this.gbAnnotations.Controls.Add(this.rbAnnotations1);
+            resources.ApplyResources(this.gbAnnotations, "gbAnnotations");
             this.gbAnnotations.Name = "gbAnnotations";
             this.gbAnnotations.TabStop = false;
             // 

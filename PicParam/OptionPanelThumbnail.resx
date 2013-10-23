@@ -117,64 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbFontSize.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="nudFontSize.Location" type="System.Drawing.Point, System.Drawing">
     <value>123, 78</value>
   </data>
-  <data name="&gt;&gt;rbAnnotations1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="rbAnnotations2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 17</value>
-  </data>
-  <data name="&gt;&gt;lbFontSize.Parent" xml:space="preserve">
-    <value>gbAnnotations</value>
-  </data>
-  <data name="&gt;&gt;rbAnnotations1.Name" xml:space="preserve">
-    <value>rbAnnotations1</value>
-  </data>
-  <data name="&gt;&gt;rbAnnotations3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbAnnotations3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>GLib.Options.OptionsPanel, OptionsLib, Version=6.0.18.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="rbAnnotations1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 17</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>OptionPanelThumbnail</value>
-  </data>
-  <data name="&gt;&gt;lbFontSize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbFontSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 82</value>
-  </data>
-  <data name="rbAnnotations1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 21</value>
-  </data>
-  <data name="&gt;&gt;nudFontSize.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="nudFontSize.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 20</value>
   </data>
-  <data name="&gt;&gt;lbFontSize.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="nudFontSize.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="gbAnnotations.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 112</value>
+  <data name="&gt;&gt;nudFontSize.Name" xml:space="preserve">
+    <value>nudFontSize</value>
   </data>
   <data name="&gt;&gt;nudFontSize.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -182,80 +137,134 @@
   <data name="&gt;&gt;nudFontSize.Parent" xml:space="preserve">
     <value>gbAnnotations</value>
   </data>
-  <data name="rbAnnotations1.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;nudFontSize.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="rbAnnotations3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gbAnnotations.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 8</value>
-  </data>
-  <data name="rbAnnotations3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 55</value>
-  </data>
-  <data name="rbAnnotations2.Text" xml:space="preserve">
-    <value>Use black font on image background</value>
-  </data>
-  <data name="&gt;&gt;lbFontSize.Name" xml:space="preserve">
-    <value>lbFontSize</value>
   </data>
   <data name="lbFontSize.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;rbAnnotations3.Name" xml:space="preserve">
-    <value>rbAnnotations3</value>
-  </data>
-  <data name="rbAnnotations3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;rbAnnotations2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbAnnotations2.Name" xml:space="preserve">
-    <value>rbAnnotations2</value>
-  </data>
-  <data name="rbAnnotations3.Text" xml:space="preserve">
-    <value>Use white font on black background</value>
-  </data>
-  <data name="rbAnnotations1.Text" xml:space="preserve">
-    <value>Show no button annotations</value>
-  </data>
-  <data name="&gt;&gt;rbAnnotations3.Parent" xml:space="preserve">
-    <value>gbAnnotations</value>
-  </data>
-  <data name="rbAnnotations3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 17</value>
-  </data>
-  <data name="rbAnnotations2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="lbFontSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 82</value>
   </data>
   <data name="lbFontSize.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 13</value>
   </data>
-  <data name="nudFontSize.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="lbFontSize.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="lbFontSize.Text" xml:space="preserve">
+    <value>Font size</value>
+  </data>
+  <data name="&gt;&gt;lbFontSize.Name" xml:space="preserve">
+    <value>lbFontSize</value>
+  </data>
+  <data name="&gt;&gt;lbFontSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbFontSize.Parent" xml:space="preserve">
+    <value>gbAnnotations</value>
+  </data>
+  <data name="&gt;&gt;lbFontSize.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="rbAnnotations3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbAnnotations3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 55</value>
+  </data>
+  <data name="rbAnnotations3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 17</value>
+  </data>
+  <data name="rbAnnotations3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="rbAnnotations3.Text" xml:space="preserve">
+    <value>Use white font on black background</value>
+  </data>
+  <data name="&gt;&gt;rbAnnotations3.Name" xml:space="preserve">
+    <value>rbAnnotations3</value>
+  </data>
+  <data name="&gt;&gt;rbAnnotations3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbAnnotations3.Parent" xml:space="preserve">
+    <value>gbAnnotations</value>
+  </data>
+  <data name="&gt;&gt;rbAnnotations3.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="rbAnnotations2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;rbAnnotations2.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="rbAnnotations2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 38</value>
+  </data>
+  <data name="rbAnnotations2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 17</value>
+  </data>
+  <data name="rbAnnotations2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="rbAnnotations2.Text" xml:space="preserve">
+    <value>Use black font on image background</value>
+  </data>
+  <data name="&gt;&gt;rbAnnotations2.Name" xml:space="preserve">
+    <value>rbAnnotations2</value>
+  </data>
+  <data name="&gt;&gt;rbAnnotations2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;rbAnnotations2.Parent" xml:space="preserve">
     <value>gbAnnotations</value>
   </data>
-  <data name="&gt;&gt;gbAnnotations.Name" xml:space="preserve">
+  <data name="&gt;&gt;rbAnnotations2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="rbAnnotations1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbAnnotations1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 21</value>
+  </data>
+  <data name="rbAnnotations1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 17</value>
+  </data>
+  <data name="rbAnnotations1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="rbAnnotations1.Text" xml:space="preserve">
+    <value>Show no button annotations</value>
+  </data>
+  <data name="&gt;&gt;rbAnnotations1.Name" xml:space="preserve">
+    <value>rbAnnotations1</value>
+  </data>
+  <data name="&gt;&gt;rbAnnotations1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbAnnotations1.Parent" xml:space="preserve">
     <value>gbAnnotations</value>
   </data>
   <data name="&gt;&gt;rbAnnotations1.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;nudFontSize.Name" xml:space="preserve">
-    <value>nudFontSize</value>
+  <data name="gbAnnotations.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 8</value>
+  </data>
+  <data name="gbAnnotations.Size" type="System.Drawing.Size, System.Drawing">
+    <value>334, 112</value>
+  </data>
+  <data name="gbAnnotations.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gbAnnotations.Text" xml:space="preserve">
+    <value>Thumbnail annotation</value>
+  </data>
+  <data name="&gt;&gt;gbAnnotations.Name" xml:space="preserve">
+    <value>gbAnnotations</value>
+  </data>
+  <data name="&gt;&gt;gbAnnotations.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;gbAnnotations.Parent" xml:space="preserve">
     <value>$this</value>
@@ -263,28 +272,25 @@
   <data name="&gt;&gt;gbAnnotations.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="rbAnnotations1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbAnnotations2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 38</value>
-  </data>
-  <data name="lbFontSize.Text" xml:space="preserve">
-    <value>Font size</value>
-  </data>
-  <data name="gbAnnotations.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;rbAnnotations1.Parent" xml:space="preserve">
-    <value>gbAnnotations</value>
-  </data>
-  <data name="gbAnnotations.Text" xml:space="preserve">
-    <value>Thumbnail annotation</value>
-  </data>
-  <data name="&gt;&gt;gbAnnotations.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.AccessibleDescription" xml:space="preserve">
+    <value>Thumbnail settings</value>
+  </data>
+  <data name="$this.AccessibleName" xml:space="preserve">
+    <value>Thumbnails</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>OptionPanelThumbnail</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>GLib.Options.OptionsPanel, OptionsLib, Version=6.0.18.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
 </root>

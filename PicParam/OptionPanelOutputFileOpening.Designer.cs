@@ -59,10 +59,10 @@
             resources.ApplyResources(this.fileSelectOutputAI, "fileSelectOutputAI");
             this.fileSelectOutputAI.Name = "fileSelectOutputAI";
             // 
-            // checkBoxCF2
+            // checkBoxAppCF2
             // 
-            resources.ApplyResources(this.checkBoxAppCF2, "checkBoxCF2");
-            this.checkBoxAppCF2.Name = "checkBoxCF2";
+            resources.ApplyResources(this.checkBoxAppCF2, "checkBoxAppCF2");
+            this.checkBoxAppCF2.Name = "checkBoxAppCF2";
             this.checkBoxAppCF2.UseVisualStyleBackColor = true;
             // 
             // fileSelectOutputCF2

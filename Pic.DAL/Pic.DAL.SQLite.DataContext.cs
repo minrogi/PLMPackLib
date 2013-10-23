@@ -956,6 +956,16 @@
     #region Component
     public partial class Component
     {
+        #region Enums
+        public enum MajoRounding
+        { 
+            ROUDING_FIRSTDECIMALNEAREST
+            , ROUNDING_HALFNEAREST
+            , ROUNDING_HALFTOP
+            , ROUDING_INT
+        }
+        #endregion
+
         public static Component GetById(PPDataContext db, int id)
         {
             return db.Components.SingleOrDefault(c => c.ID == id);
@@ -985,7 +995,7 @@
             return db.MajorationSets.SingleOrDefault(mjs => mjs.CardboardProfileID == profile.ID && mjs.ComponentID == this.ID);
         }
 
-        public static Dictionary<string, double> GetDefaultMajorations(PPDataContext db, int componentId, CardboardProfile profile)
+        public static Dictionary<string, double> GetDefaultMajorations(PPDataContext db, int componentId, CardboardProfile profile, MajoRounding rounding)
         {
             if (null == profile)
                 throw new ExceptionDAL("Profile is null reference!");
@@ -1009,7 +1019,30 @@
                 dict.Add("th1", profile.Thickness);
                 dict.Add("ep1", profile.Thickness);
                 foreach (Majoration maj in nearestSet.Majorations)
-                    dict.Add(maj.Name, maj.Value * coef);
+                {
+                    double valueMaj = maj.Value * coef;
+                    if (Math.Abs(coef - 1.0) > 1.0e-3)
+                    {
+                        switch (rounding)
+                        {
+                            case MajoRounding.ROUDING_FIRSTDECIMALNEAREST:
+                                valueMaj = Math.Round(valueMaj * 10) / 10.0;
+                                break;
+                            case MajoRounding.ROUNDING_HALFNEAREST:
+                                valueMaj = Math.Round(valueMaj * 2) / 2.0;
+                                break;
+                            case MajoRounding.ROUNDING_HALFTOP:
+                                valueMaj = Math.Ceiling(valueMaj * 2) / 2;
+                                break;
+                            case MajoRounding.ROUDING_INT:
+                                valueMaj = Math.Round(valueMaj);
+                                break;
+                            default:
+                                break; // no rounding
+                        }
+                    }
+                    dict.Add(maj.Name, valueMaj);
+                }
             }
             return dict;
         }

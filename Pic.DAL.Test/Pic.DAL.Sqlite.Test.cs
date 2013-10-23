@@ -186,7 +186,7 @@ namespace Pic.DAL.SQLite
                     CardboardProfile profile3 = CardboardProfile.GetByName(db, "P3");
                     if (null == profile3)
                         profile3 = CardboardProfile.CreateNew(db, "P3", "P3", 3.0f);
-                    Dictionary<string, double> defaultMajorations = Component.GetDefaultMajorations(db, component.ID, profile3);
+                    Dictionary<string, double> defaultMajorations = Component.GetDefaultMajorations(db, component.ID, profile3, Component.MajoRounding.ROUDING_FIRSTDECIMALNEAREST);
                     component.InsertNewMajorationSet(db, profile3.Name, defaultMajorations);
                     defaultMajorations["m1"] = 100.0;
                     defaultMajorations["m2"] = 100.0;
