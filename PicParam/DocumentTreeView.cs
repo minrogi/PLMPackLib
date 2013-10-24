@@ -269,7 +269,8 @@ namespace PicParam
             }
         }
         /// <summary>
-        /// 
+        /// Collapse all nodes
+        /// except the Root node itself
         /// </summary>
         public void CollapseRootChildrens()
         {
@@ -281,6 +282,8 @@ namespace PicParam
                 // collapse each node
                 foreach (TreeNode tn in rootNode.Nodes)
                     tn.Collapse();
+                // expand root node only
+                rootNode.Expand();
                 // select root node
                 if (null != rootNode)
                     SelectedNode = rootNode;

@@ -1167,8 +1167,9 @@ namespace Pic.Plugin.ViewCtrl
                 _computeBbox = true;
                 Panel1.Invalidate();
             }
-            catch (Exception /*ex*/)
-            { 
+            catch (Exception ex)
+            {
+                _log.Error(ex.ToString());
             }
         }
 
@@ -1178,11 +1179,13 @@ namespace Pic.Plugin.ViewCtrl
             {
                 if (null != _profileLoader)
                     _profileLoader.EditMajorations();
+                SetParametersDirty();
                 Panel1.Invalidate();                
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                _log.Error(ex.ToString());
+                MessageBox.Show(ex.Message);
             }
         }
 

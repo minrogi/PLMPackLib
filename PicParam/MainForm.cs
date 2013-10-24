@@ -843,6 +843,7 @@ namespace PicParam
 
             // show/hide controls
             _startPageCtrl.Visible      = false;
+            _downloadPageCtrl.Visible   = false;
             _branchViewCtrl.Visible     = (NodeTag.NodeType.NT_TREENODE == e.Type);
             _pluginViewCtrl.Visible     = false;
             _factoryViewCtrl.Visible    = false;
