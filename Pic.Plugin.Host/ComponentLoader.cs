@@ -226,40 +226,42 @@ namespace Pic.Plugin
         public ParameterStack GetInitializedParameterStack(IPlugin plugin)
         {
             // check if already available in cache
-            ParameterStack stack = ComponentLoader.GetStackFromCache(plugin.Guid);
-            if (null != stack)
-                return stack;
-
-            if (!(_searchMethod is IComponentSearchMethod))
-                throw new PluginException("Component loader was not initialized with a valid plugin search method.");
-
-            if (string.Equals(plugin.Version, "1.0.0.0", StringComparison.InvariantCultureIgnoreCase))
-                stack = plugin.Parameters;
-            else if (string.Equals(plugin.Version, "2.0.0.0", StringComparison.InvariantCultureIgnoreCase))
+            ParameterStack stack = null;
+            stack = ComponentLoader.GetStackFromCache(plugin.Guid);
+            if (null == stack)
             {
-                IPluginExt2 pluginExt2 = plugin as IPluginExt2;
-                if (null != pluginExt2)
-                    stack = pluginExt2.BuildParameterStack(null);                
-            }
-            foreach (Parameter param in stack)
-            {
-                try
+                if (!(_searchMethod is IComponentSearchMethod))
+                    throw new PluginException("Component loader was not initialized with a valid plugin search method.");
+
+                if (string.Equals(plugin.Version, "1.0.0.0", StringComparison.InvariantCultureIgnoreCase))
+                    stack = plugin.Parameters;
+                else if (string.Equals(plugin.Version, "2.0.0.0", StringComparison.InvariantCultureIgnoreCase))
                 {
-                    ParameterDouble pd = param as ParameterDouble;
-                    if (null != pd) stack.SetDoubleParameter(pd.Name, _searchMethod.GetDoubleParameterDefaultValue(plugin.Guid, pd.Name));
-                    ParameterBool pb = param as ParameterBool;
-                    if (null != pb) stack.SetBoolParameter(pb.Name, _searchMethod.GetBoolParameterDefaultValue(plugin.Guid, pb.Name));
-                    ParameterInt pi = param as ParameterInt;
-                    if (null != pi) stack.SetIntParameter(pi.Name, _searchMethod.GetIntParameterDefaultValue(plugin.Guid, pi.Name));
-                    ParameterMulti pm = param as ParameterMulti;
-                    if (null != pm) stack.SetMultiParameter(pm.Name, _searchMethod.GetMultiParameterDefaultValue(plugin.Guid, pm.Name));
+                    IPluginExt2 pluginExt2 = plugin as IPluginExt2;
+                    if (null != pluginExt2)
+                        stack = pluginExt2.BuildParameterStack(null);
                 }
-                catch (Exception ex)
-                { throw new PluginException(ex.Message); }
+                foreach (Parameter param in stack)
+                {
+                    try
+                    {
+                        ParameterDouble pd = param as ParameterDouble;
+                        if (null != pd) stack.SetDoubleParameter(pd.Name, _searchMethod.GetDoubleParameterDefaultValue(plugin.Guid, pd.Name));
+                        ParameterBool pb = param as ParameterBool;
+                        if (null != pb) stack.SetBoolParameter(pb.Name, _searchMethod.GetBoolParameterDefaultValue(plugin.Guid, pb.Name));
+                        ParameterInt pi = param as ParameterInt;
+                        if (null != pi) stack.SetIntParameter(pi.Name, _searchMethod.GetIntParameterDefaultValue(plugin.Guid, pi.Name));
+                        ParameterMulti pm = param as ParameterMulti;
+                        if (null != pm) stack.SetMultiParameter(pm.Name, _searchMethod.GetMultiParameterDefaultValue(plugin.Guid, pm.Name));
+                    }
+                    catch (Exception /*ex*/)
+                    {
+                    }
+                }
+                // save in cache
+                ComponentLoader.InsertParameterStackInCache(plugin.Guid, stack);
             }
-            // save in cache
-            ComponentLoader.InsertParameterStackInCache(plugin.Guid, stack);
-            return stack;
+            return stack.Clone();
         }
         #endregion
 

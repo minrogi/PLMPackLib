@@ -169,7 +169,7 @@
     <value>fileSelectOutputDXF</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputDXF.Type" xml:space="preserve">
-    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=6.0.27.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=6.0.28.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputDXF.Parent" xml:space="preserve">
     <value>$this</value>
@@ -226,7 +226,7 @@
     <value>fileSelectOutputAI</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputAI.Type" xml:space="preserve">
-    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=6.0.27.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=6.0.28.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputAI.Parent" xml:space="preserve">
     <value>$this</value>
@@ -286,7 +286,7 @@
     <value>fileSelectOutputCF2</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputCF2.Type" xml:space="preserve">
-    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=6.0.27.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=6.0.28.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputCF2.Parent" xml:space="preserve">
     <value>$this</value>

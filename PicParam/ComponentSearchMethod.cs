@@ -42,7 +42,8 @@ namespace PicParam
             catch (Exception ex)
             {
                 _log.Error(ex.Message);
-                return 0;
+                // rethrow exception
+                throw ex;
             }
         }
         public int GetIntParameterDefaultValue(Guid guid, string name)

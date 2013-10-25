@@ -1132,11 +1132,26 @@
         public void UpdateDefaultParamValueSet(PPDataContext db, Dictionary<string, double> dictNameValues)
         {
             var paramDefaultValues = db.ParamDefaultValues.Where(pdf => pdf.ComponentID == this.ID);
-            foreach (ParamDefaultValue p in paramDefaultValues)
+            // loop through all parameters found in parameter list
+            foreach (string name in dictNameValues.Keys)
             {
-                if (dictNameValues.ContainsKey(p.Name))
-                    p.Value = (float)dictNameValues[p.Name];
-
+                bool found = false;
+                foreach (ParamDefaultValue p in paramDefaultValues)
+                {
+                    if (p.Name == name)
+                    {
+                        p.Value = (float)dictNameValues[p.Name];
+                        found = true;
+                    }
+                }
+                if (!found) // if parameter was not found in the database, create it
+                {
+                    ParamDefaultValue pdf = new ParamDefaultValue();
+                    pdf.ComponentID = this.ID;
+                    pdf.Name = name;
+                    pdf.Value = (float)dictNameValues[name];
+                    db.ParamDefaultValues.InsertOnSubmit(pdf);
+                }
             }
             db.SubmitChanges();
         }

@@ -135,6 +135,10 @@ namespace Pic.Plugin
                 return (Name.StartsWith("m") && Int32.TryParse(Name.Substring(1), out iIndex));
             }
         }
+        /// <summary>
+        /// copy property generate a clone
+        /// </summary>
+        public abstract Parameter Clone();
 		#endregion
 	}
 
@@ -214,6 +218,16 @@ namespace Pic.Plugin
             get { return (!_hasValueMin || _valueMin <= _value) && (!_hasValueMax && _value <= _valueMax); }
         }
         #endregion
+
+        #region Override parameter
+        public override Parameter Clone()
+        {
+            ParameterDouble param =  new ParameterDouble(Name, Description, _hasValueMin, _valueMin, _hasValueMax, _valueMax, _valueDefault);
+            param._value = _value;
+            return param;
+        }
+        #endregion
+
 	}
 
     [Serializable]
@@ -285,6 +299,13 @@ namespace Pic.Plugin
             get { return (!_hasValueMin || _valueMin <= _value) && (!_hasValueMax && _value <= _valueMax); }
         }
 		#endregion
+
+        #region Override parameter
+        public override Parameter Clone()
+        {
+            return new ParameterInt(Name, Description, _hasValueMin, _valueMin, _hasValueMax, _valueMax, _value);
+        }
+        #endregion
     }
 
     [Serializable]
@@ -326,6 +347,13 @@ namespace Pic.Plugin
             get { return true; }
         }
 		#endregion
+
+        #region Override parameter
+        public override Parameter Clone()
+        {
+            return new ParameterBool(Name, Description, _value);
+        }
+        #endregion
 	}
     [Serializable]
     [XmlInclude(typeof(ParameterString))]
@@ -364,6 +392,13 @@ namespace Pic.Plugin
         public override bool IsValid
         {
             get { return _allowEmpty || _value.Length > 0; }
+        }
+        #endregion
+
+        #region Override parameter
+        public override Parameter Clone()
+        {
+            return new ParameterString(Name, Description, _value);
         }
         #endregion
     }
@@ -409,7 +444,13 @@ namespace Pic.Plugin
         }
         public string[] DisplayList
         {
-            get { return _valueList.ToArray(); }
+            get { return _displayList.ToArray(); }
+        }
+        #endregion
+        #region Override parameter
+        public override Parameter Clone()
+        {
+            return new ParameterMulti(Name, Description, _displayList.ToArray(), _valueList.ToArray(), _value);
         }
         #endregion
     }
@@ -460,9 +501,20 @@ namespace Pic.Plugin
                     return 0;
             }
         }
+        public ParameterStack Clone()
+        {
+            ParameterStack stackCopy = new ParameterStack();
+            foreach (Parameter p in _parameterList)
+                stackCopy.AddParameter(p.Clone());
+            return stackCopy;
+        }
         #endregion
 
         #region Adding parameter
+        public void AddParameter(Parameter p)
+        {
+            _parameterList.Add(p);
+        }
         public void AddDoubleParameter(string name, string description, double valueDefaut, double valueMin, double valueMax)
         {
             AddDoubleParameter(name, description, valueDefaut, true, valueMin, true, valueMax);

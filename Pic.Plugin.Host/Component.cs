@@ -200,14 +200,20 @@ namespace Pic.Plugin
             {
                 foreach (Parameter p in parameters)
                 {
-                    ParameterDouble pd = p as ParameterDouble;
-                    if (null != pd) parameters.SetDoubleParameter(pd.Name, compSearchMethod.GetDoubleParameterDefaultValue(Guid, pd.Name));
-                    ParameterBool pb = p as ParameterBool;
-                    if (null != pb) parameters.SetBoolParameter(pb.Name, compSearchMethod.GetBoolParameterDefaultValue(Guid, pb.Name));
-                    ParameterInt pi = p as ParameterInt;
-                    if (null != pi) parameters.SetIntegerParameter(pb.Name, compSearchMethod.GetIntParameterDefaultValue(Guid, pi.Name));
-                    ParameterMulti pm = p as ParameterMulti;
-                    if (null != pm) parameters.SetMultiParameter(pm.Name, 0);
+                    try
+                    {
+                        ParameterDouble pd = p as ParameterDouble;
+                        if (null != pd) parameters.SetDoubleParameter(pd.Name, compSearchMethod.GetDoubleParameterDefaultValue(Guid, pd.Name));
+                        ParameterBool pb = p as ParameterBool;
+                        if (null != pb) parameters.SetBoolParameter(pb.Name, compSearchMethod.GetBoolParameterDefaultValue(Guid, pb.Name));
+                        ParameterInt pi = p as ParameterInt;
+                        if (null != pi) parameters.SetIntegerParameter(pb.Name, compSearchMethod.GetIntParameterDefaultValue(Guid, pi.Name));
+                        ParameterMulti pm = p as ParameterMulti;
+                        if (null != pm) parameters.SetMultiParameter(pm.Name, 0);
+                    }
+                    catch (Exception /*ex*/)
+                    {
+                    }
                 }
             }
             return parameters;
