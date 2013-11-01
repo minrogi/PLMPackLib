@@ -603,7 +603,6 @@ namespace PicParam
                 ToolStripMenuItem deleteLabel = new ToolStripMenuItem();
                 deleteLabel.Text = PicParam.Properties.Resources.ID_TREEMENUDELETE;
                 deleteLabel.Click += new EventHandler(deleteNode);
-                // add the menu items to the menu.
                 _leafMenu.Items.AddRange(
                     new ToolStripItem[]{
                         renameBranchLabel
@@ -611,12 +610,76 @@ namespace PicParam
                         , deleteLabel
                     }
                     );
+                if (Properties.Settings.Default.DebugMode)
+                {
+                    // -> separator 2
+                    System.Windows.Forms.ToolStripSeparator separator2 = new System.Windows.Forms.ToolStripSeparator();
+                    // -> send path to clipboard
+                    ToolStripMenuItem menuItemSendPathToClipboard = new ToolStripMenuItem();
+                    menuItemSendPathToClipboard.Text = PicParam.Properties.Resources.ID_TREEMENUSENDPATHTOCLIPBOARD;
+                    menuItemSendPathToClipboard.Click += new EventHandler(sendPathToClipboard);
+                    // -> select in windows explorer
+                    ToolStripMenuItem menuItemSelectInWindowsExplorer = new ToolStripMenuItem();
+                    menuItemSelectInWindowsExplorer.Text = PicParam.Properties.Resources.ID_TREEMENUSELECTINEXPLORER;
+                    menuItemSelectInWindowsExplorer.Click += new EventHandler(selectInWindowsExplorer);
+                    // add the menu items to the menu.
+                    _leafMenu.Items.AddRange(new ToolStripItem[]{
+                        separator2
+                        , menuItemSendPathToClipboard
+                        , menuItemSelectInWindowsExplorer
+                    }
+                    );
+                }
             }
             return _leafMenu;
         }
         #endregion
 
         #region Context menu event handlers
+        private string GetSelectedNodePath()
+        {
+            // retrieve database node
+            Pic.DAL.SQLite.PPDataContext db = new Pic.DAL.SQLite.PPDataContext();
+            NodeTag tag = GetCurrentTag();
+            Pic.DAL.SQLite.TreeNode tn = Pic.DAL.SQLite.TreeNode.GetById(db, tag.TreeNode);
+            if (!tn.IsDocument) return string.Empty;
+            // get document
+            Pic.DAL.SQLite.Document doc = tn.Documents(db)[0];
+            return doc.File.Path(db);
+        }
+
+        private void sendPathToClipboard(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Windows.Forms.Clipboard.SetText(GetSelectedNodePath());
+            }
+            catch (System.Exception ex)
+            {
+                Debug.Fail(ex.ToString());
+                _log.Debug(ex.ToString());
+            }
+        }
+
+        private void selectInWindowsExplorer(object sender, EventArgs e)
+        {
+            try
+            {
+                // get selected node file path
+                string fileToSelect = GetSelectedNodePath();
+                if (string.IsNullOrEmpty(fileToSelect)) return;
+                // open "windows explorer" with the file selected
+                ProcessStartInfo pfi = new ProcessStartInfo(
+                    "explorer.exe", string.Format("/Select, {0}", fileToSelect));
+                System.Diagnostics.Process.Start(pfi);
+            }
+            catch (System.Exception ex)
+            {
+                Debug.Fail(ex.ToString());
+                _log.Debug(ex.ToString());
+            }
+        }
+
         private void deleteNode(object sender, EventArgs e)
         {
             try

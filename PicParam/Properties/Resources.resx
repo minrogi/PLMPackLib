@@ -234,6 +234,12 @@
   <data name="ID_TREEMENURENAME" xml:space="preserve">
     <value>Rename...</value>
   </data>
+  <data name="ID_TREEMENUSELECTINEXPLORER" xml:space="preserve">
+    <value>Open containing folder</value>
+  </data>
+  <data name="ID_TREEMENUSENDPATHTOCLIPBOARD" xml:space="preserve">
+    <value>Send actual document path to clipboard</value>
+  </data>
   <data name="ID_TREEWARNING_CANNOTMOVENODE" xml:space="preserve">
     <value>Node {0} can not be moved under node {1} as this last one is a child.  </value>
   </data>

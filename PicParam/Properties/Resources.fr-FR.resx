@@ -180,4 +180,10 @@
   <data name="ID_CLEARDATABASEWARNING" xml:space="preserve">
     <value>Vous êtes sur le point d'effacer le contenu de la base de données. Etes vous sûr?</value>
   </data>
+  <data name="ID_TREEMENUSELECTINEXPLORER" xml:space="preserve">
+    <value>Sélectionner dans le dossier</value>
+  </data>
+  <data name="ID_TREEMENUSENDPATHTOCLIPBOARD" xml:space="preserve">
+    <value>Envoyer le chemin fichier vers le presse-papier</value>
+  </data>
 </root>
