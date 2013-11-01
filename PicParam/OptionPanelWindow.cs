@@ -11,10 +11,13 @@ namespace PicParam
 {
     public partial class OptionPanelWindow : GLib.Options.OptionsPanel
     {
+        #region Constructor
         public OptionPanelWindow()
         {
             InitializeComponent();
         }
+        #endregion
+        #region Load & Save handlers
         private void OptionPanelWindow_Load(object sender, EventArgs e)
         {
             checkBoxMaximized.Checked = Properties.Settings.Default.StartMaximized;
@@ -26,5 +29,6 @@ namespace PicParam
             Properties.Settings.Default.StartMaximized = checkBoxMaximized.Checked;
             Properties.Settings.Default.ShowCenteredTitle = checkBoxCenteredTitleBar.Checked;
         }
+        #endregion
     }
 }

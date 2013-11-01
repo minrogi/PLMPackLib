@@ -24,6 +24,7 @@ namespace PicParam
             Panels.Add(new OptionPanelThumbnail());
             Panels.Add(new OptionPanelOutputFileOpening());
             Panels.Add(new OptionPanelMajorations());
+            Panels.Add(new OptionPanelDebug());
         }
     }
 }

@@ -96,7 +96,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="TreeDim.StackBuilder.GUIExtension">
-      <HintPath>..\..\..\Codeplex\StackBuilder\TreeDim.StackBuilder.GUIExtension\bin\Release\TreeDim.StackBuilder.GUIExtension.dll</HintPath>
+      <HintPath>..\..\StackBuilder\TreeDim.StackBuilder.GUIExtension\bin\Release\TreeDim.StackBuilder.GUIExtension.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -247,6 +247,12 @@
     <Compile Include="DocumentTreeBranchView.Designer.cs">
       <DependentUpon>DocumentTreeBranchView.cs</DependentUpon>
     </Compile>
+    <Compile Include="OptionPanelDebug.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OptionPanelDebug.Designer.cs">
+      <DependentUpon>OptionPanelDebug.cs</DependentUpon>
+    </Compile>
     <Compile Include="OptionPanelMajorations.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -378,6 +384,12 @@
     <EmbeddedResource Include="OptionPanelDatabase.ja-JP.resx">
       <DependentUpon>OptionPanelDatabase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelDebug.fr-FR.resx">
+      <DependentUpon>OptionPanelDebug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelDebug.resx">
+      <DependentUpon>OptionPanelDebug.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelMajorations.fr-FR.resx">
       <DependentUpon>OptionPanelMajorations.cs</DependentUpon>
     </EmbeddedResource>
@@ -457,10 +469,6 @@
     <Compile Include="WindowSettings.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Codeplex\Sharp3D.Math\Sharp3D.Math\Main\Sharp3D.Math\Sharp3D.Math.csproj">
-      <Project>{8F9BA4D3-D6AF-42A6-B74F-0DF6568C148B}</Project>
-      <Name>Sharp3D.Math</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DesLib4NET\DesLib4NET.csproj">
       <Project>{7CDEDAAE-8156-4835-9837-55C7CDC67070}</Project>
       <Name>DesLib4NET</Name>

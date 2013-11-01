@@ -193,6 +193,9 @@ $RECYCLE.BIN/
 *.cf2
 *.dll
 
+[Dd]ocuments/
+[Dd]atabase/
+
 #############
 ## Python
 #############
