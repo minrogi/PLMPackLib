@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashScreen));
             this.lblVersion = new System.Windows.Forms.Label();
-            this.timerClose = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // lblVersion
@@ -40,12 +38,6 @@
             this.lblVersion.BackColor = System.Drawing.Color.Transparent;
             this.lblVersion.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.lblVersion.Name = "lblVersion";
-            // 
-            // timerClose
-            // 
-            this.timerClose.Enabled = true;
-            this.timerClose.Interval = 2000;
-            this.timerClose.Tick += new System.EventHandler(this.timerClose_Tick);
             // 
             // SplashScreen
             // 
@@ -70,6 +62,5 @@
         #endregion
 
         private System.Windows.Forms.Label lblVersion;
-        private System.Windows.Forms.Timer timerClose;
     }
 }

@@ -6,6 +6,8 @@ using System.Diagnostics;
 
 using log4net;
 using log4net.Config;
+
+using Microsoft.VisualBasic.ApplicationServices; // WindowsFormsApplicationBase
 #endregion
 
 namespace PicParam
@@ -18,7 +20,7 @@ namespace PicParam
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
             // set up a simple configuration
             try
@@ -59,9 +61,7 @@ namespace PicParam
 
                 if (bSuccess)
                 {   // database and default pictures available -> show mainform
-
-                    SplashScreen.ShowSplashScreen();
-                    Application.Run(new MainForm());                
+                    new PLMPackLibApp().Run(args);
                 }
                 else
                 {   // not available -> show error message, log and terminate application
@@ -75,6 +75,19 @@ namespace PicParam
                 Debug.Fail(ex.ToString());
                 _log.Error(ex.ToString());
             }
+        }
+    }
+
+    class PLMPackLibApp : WindowsFormsApplicationBase
+    {
+        protected override void OnCreateSplashScreen()
+        {
+            this.SplashScreen = new SplashScreen();
+        }
+        protected override void OnCreateMainForm()
+        {
+            // Then create the main form, the splash screen will close automatically
+            this.MainForm = new MainForm();
         }
     }
 }
