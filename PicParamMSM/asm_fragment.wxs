@@ -11,21 +11,21 @@
                 </Class>
                 <File Id="fil3D40F4970EE966FAF18BEE1AD0D12B21" KeyPath="yes" Source="..\Pic.Plugin.GeneratorCtrl1\bin\x86\Release\Pic.Plugin.GeneratorCtrl.dll" />
                 <RegistryValue Root="HKCR" Key="CLSID\{AE77B256-5C3E-47CE-96A5-8E1852E2403F}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-                <RegistryValue Root="HKCR" Key="CLSID\{AE77B256-5C3E-47CE-96A5-8E1852E2403F}\InprocServer32\6.0.28.0" Name="Class" Value="Pic.Plugin.GeneratorCtrl.GeneratorCtrl" Type="string" Action="write" />
-                <RegistryValue Root="HKCR" Key="CLSID\{AE77B256-5C3E-47CE-96A5-8E1852E2403F}\InprocServer32\6.0.28.0" Name="Assembly" Value="Pic.Plugin.GeneratorCtrl, Version=6.0.28.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
-                <RegistryValue Root="HKCR" Key="CLSID\{AE77B256-5C3E-47CE-96A5-8E1852E2403F}\InprocServer32\6.0.28.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-                <RegistryValue Root="HKCR" Key="CLSID\{AE77B256-5C3E-47CE-96A5-8E1852E2403F}\InprocServer32\6.0.28.0" Name="CodeBase" Value="file:///[#fil3D40F4970EE966FAF18BEE1AD0D12B21]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{AE77B256-5C3E-47CE-96A5-8E1852E2403F}\InprocServer32\6.0.29.0" Name="Class" Value="Pic.Plugin.GeneratorCtrl.GeneratorCtrl" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{AE77B256-5C3E-47CE-96A5-8E1852E2403F}\InprocServer32\6.0.29.0" Name="Assembly" Value="Pic.Plugin.GeneratorCtrl, Version=6.0.29.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{AE77B256-5C3E-47CE-96A5-8E1852E2403F}\InprocServer32\6.0.29.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{AE77B256-5C3E-47CE-96A5-8E1852E2403F}\InprocServer32\6.0.29.0" Name="CodeBase" Value="file:///[#fil3D40F4970EE966FAF18BEE1AD0D12B21]" Type="string" Action="write" />
                 <RegistryValue Root="HKCR" Key="CLSID\{AE77B256-5C3E-47CE-96A5-8E1852E2403F}\InprocServer32" Name="Class" Value="Pic.Plugin.GeneratorCtrl.GeneratorCtrl" Type="string" Action="write" />
-                <RegistryValue Root="HKCR" Key="CLSID\{AE77B256-5C3E-47CE-96A5-8E1852E2403F}\InprocServer32" Name="Assembly" Value="Pic.Plugin.GeneratorCtrl, Version=6.0.28.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{AE77B256-5C3E-47CE-96A5-8E1852E2403F}\InprocServer32" Name="Assembly" Value="Pic.Plugin.GeneratorCtrl, Version=6.0.29.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
                 <RegistryValue Root="HKCR" Key="CLSID\{AE77B256-5C3E-47CE-96A5-8E1852E2403F}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
                 <RegistryValue Root="HKCR" Key="CLSID\{AE77B256-5C3E-47CE-96A5-8E1852E2403F}\InprocServer32" Name="CodeBase" Value="file:///[#fil3D40F4970EE966FAF18BEE1AD0D12B21]" Type="string" Action="write" />
                 <RegistryValue Root="HKCR" Key="CLSID\{EFE8BAE4-277D-36C9-853A-05FF5DB9C2C3}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-                <RegistryValue Root="HKCR" Key="CLSID\{EFE8BAE4-277D-36C9-853A-05FF5DB9C2C3}\InprocServer32\6.0.28.0" Name="Class" Value="Pic.Plugin.GeneratorCtrl.PluginLibraryBrowserCtrl" Type="string" Action="write" />
-                <RegistryValue Root="HKCR" Key="CLSID\{EFE8BAE4-277D-36C9-853A-05FF5DB9C2C3}\InprocServer32\6.0.28.0" Name="Assembly" Value="Pic.Plugin.GeneratorCtrl, Version=6.0.28.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
-                <RegistryValue Root="HKCR" Key="CLSID\{EFE8BAE4-277D-36C9-853A-05FF5DB9C2C3}\InprocServer32\6.0.28.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-                <RegistryValue Root="HKCR" Key="CLSID\{EFE8BAE4-277D-36C9-853A-05FF5DB9C2C3}\InprocServer32\6.0.28.0" Name="CodeBase" Value="file:///[#fil3D40F4970EE966FAF18BEE1AD0D12B21]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{EFE8BAE4-277D-36C9-853A-05FF5DB9C2C3}\InprocServer32\6.0.29.0" Name="Class" Value="Pic.Plugin.GeneratorCtrl.PluginLibraryBrowserCtrl" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{EFE8BAE4-277D-36C9-853A-05FF5DB9C2C3}\InprocServer32\6.0.29.0" Name="Assembly" Value="Pic.Plugin.GeneratorCtrl, Version=6.0.29.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{EFE8BAE4-277D-36C9-853A-05FF5DB9C2C3}\InprocServer32\6.0.29.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{EFE8BAE4-277D-36C9-853A-05FF5DB9C2C3}\InprocServer32\6.0.29.0" Name="CodeBase" Value="file:///[#fil3D40F4970EE966FAF18BEE1AD0D12B21]" Type="string" Action="write" />
                 <RegistryValue Root="HKCR" Key="CLSID\{EFE8BAE4-277D-36C9-853A-05FF5DB9C2C3}\InprocServer32" Name="Class" Value="Pic.Plugin.GeneratorCtrl.PluginLibraryBrowserCtrl" Type="string" Action="write" />
-                <RegistryValue Root="HKCR" Key="CLSID\{EFE8BAE4-277D-36C9-853A-05FF5DB9C2C3}\InprocServer32" Name="Assembly" Value="Pic.Plugin.GeneratorCtrl, Version=6.0.28.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{EFE8BAE4-277D-36C9-853A-05FF5DB9C2C3}\InprocServer32" Name="Assembly" Value="Pic.Plugin.GeneratorCtrl, Version=6.0.29.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
                 <RegistryValue Root="HKCR" Key="CLSID\{EFE8BAE4-277D-36C9-853A-05FF5DB9C2C3}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
                 <RegistryValue Root="HKCR" Key="CLSID\{EFE8BAE4-277D-36C9-853A-05FF5DB9C2C3}\InprocServer32" Name="CodeBase" Value="file:///[#fil3D40F4970EE966FAF18BEE1AD0D12B21]" Type="string" Action="write" />
             </Component>

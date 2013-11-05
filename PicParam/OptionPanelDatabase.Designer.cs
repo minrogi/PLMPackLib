@@ -38,6 +38,10 @@
             resources.ApplyResources(this.fileSelect, "fileSelect");
             this.fileSelect.Name = "fileSelect";
             // 
+            // folderBrowserDlg
+            // 
+            resources.ApplyResources(this.folderBrowserDlg, "folderBrowserDlg");
+            // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
@@ -47,10 +51,10 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CategoryPath = "Options\\Database";
+            this.CategoryPath = "Options\\Base de données";
             this.Controls.Add(this.label1);
             this.Controls.Add(this.fileSelect);
-            this.DisplayName = "Storage info";
+            this.DisplayName = "Base de données";
             this.MinimumSize = new System.Drawing.Size(300, 100);
             this.Name = "OptionPanelDatabase";
             this.Load += new System.EventHandler(this.OptionPanelDatabase_Load);

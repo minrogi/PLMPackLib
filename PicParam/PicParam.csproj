@@ -104,11 +104,11 @@
     <Compile Include="..\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="AboutBoxForm.cs">
+    <Compile Include="FormAboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutBoxForm.Designer.cs">
-      <DependentUpon>AboutBoxForm.cs</DependentUpon>
+    <Compile Include="FormAboutBox.Designer.cs">
+      <DependentUpon>FormAboutBox.cs</DependentUpon>
     </Compile>
     <Compile Include="ApplicationAvailabilityChecker.cs" />
     <Compile Include="CardboardFormatLoaderImpl.cs" />
@@ -140,6 +140,12 @@
       <DependentUpon>ComponentLoaderControl.cs</DependentUpon>
     </Compile>
     <Compile Include="ComponentSearchMethod.cs" />
+    <Compile Include="OptionPanelComponentViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OptionPanelComponentViewer.Designer.cs">
+      <DependentUpon>OptionPanelComponentViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="OptionPanelComputing.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -287,9 +293,9 @@
     <Compile Include="ProfileLoaderImpl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AboutBoxForm.resx">
+    <EmbeddedResource Include="FormAboutBox.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>AboutBoxForm.cs</DependentUpon>
+      <DependentUpon>FormAboutBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ComponentLoaderControl.fr-FR.resx">
       <DependentUpon>ComponentLoaderControl.cs</DependentUpon>
@@ -369,6 +375,12 @@
     <EmbeddedResource Include="DocumentTreeBranchView.resx">
       <DependentUpon>DocumentTreeBranchView.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelComponentViewer.fr-FR.resx">
+      <DependentUpon>OptionPanelComponentViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelComponentViewer.resx">
+      <DependentUpon>OptionPanelComponentViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelComputing.fr-FR.resx">
       <DependentUpon>OptionPanelComputing.cs</DependentUpon>
@@ -599,12 +611,12 @@
     <EmbeddedResource Include="Resources\OPENFOLD.BMP" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AboutBoxForm.fr-FR.resx">
-      <DependentUpon>AboutBoxForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormAboutBox.fr-FR.resx">
+      <DependentUpon>FormAboutBox.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="AboutBoxForm.ja-JP.resx">
-      <DependentUpon>AboutBoxForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormAboutBox.ja-JP.resx">
+      <DependentUpon>FormAboutBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBrowseFile.resx">
       <DependentUpon>FormBrowseFile.cs</DependentUpon>

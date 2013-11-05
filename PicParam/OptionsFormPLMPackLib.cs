@@ -19,6 +19,7 @@ namespace PicParam
         {
             InitializeComponent();
             Panels.Add(new OptionPanelWindow());
+            Panels.Add(new OptionPanelComponentViewer());
             Panels.Add(new OptionPanelDatabase());
             Panels.Add(new OptionPanelComputing());
             Panels.Add(new OptionPanelThumbnail());

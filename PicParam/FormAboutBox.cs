@@ -7,9 +7,9 @@ using System.Reflection;
 
 namespace PicParam
 {
-    partial class AboutBoxForm : Form
+    partial class FormAboutBox : Form
     {
-        public AboutBoxForm()
+        public FormAboutBox()
         {
             InitializeComponent();
 

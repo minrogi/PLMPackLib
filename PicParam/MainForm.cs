@@ -203,7 +203,7 @@ namespace PicParam
         #region Help
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AboutBoxForm form = new AboutBoxForm();
+            FormAboutBox form = new FormAboutBox();
             form.ShowDialog();
         }
         #endregion
@@ -313,6 +313,8 @@ namespace PicParam
                     Pic.Factory2D.Control.Properties.Settings.Default.Save();
                     // need to force saving of Pic.Factory2D.Properties.Settings
                     Pic.Factory2D.Control.Properties.Settings.Default.Save();
+                    // need to force saving of Pic.Plugin.ViewCtrl.Properties.Settings
+                    Pic.Plugin.ViewCtrl.Properties.Settings.Default.Save();
                     // if need to restart application, indicate the user that the application will need to restart before exiting
                     if (form.ApplicationMustRestart)
                     {

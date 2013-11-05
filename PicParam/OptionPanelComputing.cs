@@ -15,11 +15,13 @@ namespace PicParam
 {
     public partial class OptionPanelComputing : GLib.Options.OptionsPanel
     {
+        #region Constructor
         public OptionPanelComputing()
         {
             InitializeComponent();
         }
-
+        #endregion
+        #region Load & Save handlers
         private void OptionPanelComputing_Load(object sender, EventArgs e)
         {
             this.nudMaxNumberOfEntities.Value = (decimal)Pic.Factory2D.Properties.Settings.Default.AreaMaxNoSegments;
@@ -30,5 +32,6 @@ namespace PicParam
         {
             Pic.Factory2D.Properties.Settings.Default.AreaMaxNoSegments = Convert.ToInt32(nudMaxNumberOfEntities.Value);
         }
+        #endregion
     }
 }

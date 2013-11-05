@@ -67,7 +67,16 @@ namespace Pic.Plugin.ViewCtrl
         public event DependancyStatusChangedHandler DependancyStatusChanged;
         // log4net
         protected static readonly ILog _log = LogManager.GetLogger(typeof(PluginViewCtrl));
-        #endregion
+        // *** parameter animation ***
+        protected ParameterStack tempParameterStack = null;
+        protected string _parameterName = string.Empty;
+        protected int _timerStep = 0;
+        protected int _noStepsTimer = 10;
+        protected double _parameterInitialValue = 0.0;
+        // timer
+        protected Timer timer = null;
+        // *** parameter animation ***
+       #endregion
 
         #region Browsable events
         [Category("Configuration"), Browsable(true), Description("Event raised by user click on Close button")]
@@ -90,12 +99,27 @@ namespace Pic.Plugin.ViewCtrl
                 InitializeComponent();
 
                 this.SplitterWidth = 1;
+
+                if (Properties.Settings.Default.AllowParameterAnimation)
+                {
+                    // *** timer used for parameter animation
+                    timer = new Timer();
+                    timer.Interval = 100;
+                    timer.Tick += new EventHandler(_timer_Tick);
+                    _noStepsTimer = Properties.Settings.Default.NumberOfAnimationSteps;
+                }
+                else
+                {
+                    timer = null;
+                }
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
         }
+
         protected override void  InitLayout()
         {
  	         base.InitLayout();
@@ -106,7 +130,6 @@ namespace Pic.Plugin.ViewCtrl
             Panel1.MouseDown += new MouseEventHandler(Panel1_MouseDown);
             Panel1.MouseMove += new MouseEventHandler(Panel1_MouseMove);
             Panel1.MouseWheel += new MouseEventHandler(Panel1_MouseWheel);
-            Panel2.MouseEnter += new EventHandler(Panel2_MouseEnter);
 
             _computeBbox = true;
 
@@ -122,7 +145,6 @@ namespace Pic.Plugin.ViewCtrl
             // splitter
             this.SplitterWidth = 1;
         }
-
         void PicGlobalCotationProperties_Modified()
         {
             Refresh();
@@ -222,7 +244,6 @@ namespace Pic.Plugin.ViewCtrl
                     Component.CreateFactoryEntities(factory, CurrentParameterStack);
                     if (_reflectionX) factory.ProcessVisitor(new PicVisitorTransform(Transform2D.ReflectionX));
                     if (_reflectionY) factory.ProcessVisitor(new PicVisitorTransform(Transform2D.ReflectionY));
-
                     // build imposition solutions
                     _impositionTool = new ImpositionTool(factory);
                     // -> margins
@@ -238,15 +259,13 @@ namespace Pic.Plugin.ViewCtrl
                     _impositionTool.ImpositionOffset = new Vector2D(formSettings.OffsetX, formSettings.OffsetY);
                     // -> cardboard format
                     _impositionTool.CardboardFormat = formSettings.CardboardFormat;
-
                     // instantiate ProgressWindow and launch process
                     ProgressWindow progress = new ProgressWindow();
                     System.Threading.ThreadPool.QueueUserWorkItem(new System.Threading.WaitCallback(GenerateImpositionSolutions), progress);
                     progress.ShowDialog();
-
+                    // show dialog
                     if (null != _solutions && _solutions.Count > 0)
                     {
-
                         Pic.Factory2D.Control.FormImposition form = new Pic.Factory2D.Control.FormImposition();
                         form.Solutions = _solutions;
                         form.Format = formSettings.CardboardFormat;
@@ -548,6 +567,11 @@ namespace Pic.Plugin.ViewCtrl
         {
             if (null == Component || DesignMode)
                 return;
+            RePaint(e, null != tempParameterStack ? tempParameterStack : CurrentParameterStack);
+        }
+
+        private void RePaint(PaintEventArgs e, ParameterStack stack)
+        { 
             try
             {
                 // instantiate PicGraphics
@@ -563,7 +587,7 @@ namespace Pic.Plugin.ViewCtrl
                 using (Pic.Factory2D.PicFactory factory = new Pic.Factory2D.PicFactory())
                 {
                     // create entities
-                    Component.CreateFactoryEntities(factory, CurrentParameterStack);
+                    Component.CreateFactoryEntities(factory, stack);
                     if (_reflectionX) factory.ProcessVisitor(new PicVisitorTransform(Transform2D.ReflectionX));
                     if (_reflectionY) factory.ProcessVisitor(new PicVisitorTransform(Transform2D.ReflectionY));
 
@@ -605,7 +629,7 @@ namespace Pic.Plugin.ViewCtrl
             {
                 _picGraphics.ShowMessage(ex.ToString());
                 _log.Error(ex.ToString());
-            }
+            }        
         }
 
         /// <summary>
@@ -788,8 +812,8 @@ namespace Pic.Plugin.ViewCtrl
                 nudThickness.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
                 nudThickness.ValueChanged += new EventHandler(ParameterChanged);
                 nudThickness.LostFocus += new EventHandler(nud_LostFocus);
-                nudThickness.GotFocus += new EventHandler(nud_Enter);
-                nudThickness.Click += new EventHandler(nud_Enter);
+                nudThickness.GotFocus += new EventHandler(nud_GotFocus);
+                nudThickness.Click += new EventHandler(nud_GotFocus);
                 nudThickness.TabIndex = ++tabIndex;
                 Panel2.Controls.Add(nudThickness);
 
@@ -832,8 +856,10 @@ namespace Pic.Plugin.ViewCtrl
                     nud.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
                     nud.ValueChanged += new EventHandler(ParameterChanged);
                     nud.LostFocus += new EventHandler(nud_LostFocus);
-                    nud.GotFocus += new EventHandler(nud_Enter);
-                    nud.Click +=new EventHandler(nud_Enter);
+                    nud.GotFocus += new EventHandler(nud_GotFocus);
+                    nud.Click +=new EventHandler(nud_GotFocus);
+                    if (null != timer)
+                        nud.MouseEnter += new EventHandler(nud_MouseEnter);
                     nud.TabIndex = ++tabIndex;
                     Panel2.Controls.Add(nud);
                 }
@@ -940,6 +966,7 @@ namespace Pic.Plugin.ViewCtrl
             SetParametersDirty();
         }
 
+
         /// <summary>
         /// gets outer dimensions of a case
         /// </summary>
@@ -965,7 +992,7 @@ namespace Pic.Plugin.ViewCtrl
             }
         }
 
-        void nud_Enter(object sender, EventArgs e)
+        void nud_GotFocus(object sender, EventArgs e)
         {
             NumericUpDown nud = sender as NumericUpDown;
             nud.Select(0, nud.ToString().Length);
@@ -1217,6 +1244,49 @@ namespace Pic.Plugin.ViewCtrl
             // send event so that container is notified that the user has pressed Validate
             if (null != ValidateClicked)
                 ValidateClicked(this, e);
+        }
+        #endregion
+
+        #region Nud enter event handler
+        void nud_MouseEnter(object sender, EventArgs e)
+        {
+            NumericUpDown nudControl = sender as NumericUpDown;
+            if (null != nudControl && null != timer)
+            {
+                // copies parameter stack
+                tempParameterStack = CurrentParameterStack.Clone();
+                // retrieve parameter name
+                _parameterName = nudControl.Name.Substring(3);
+                // retrieve initial value for parameter
+                _parameterInitialValue = tempParameterStack.GetDoubleParameterValue(_parameterName);
+                // start timer
+                _timerStep = 0;
+                timer.Start();
+            }
+        }
+
+        void _timer_Tick(object sender, EventArgs e)
+        {
+            ++_timerStep;
+            if (_timerStep < _noStepsTimer)
+            {
+                double parameterValue = 0;
+                int iStep = _timerStep < _noStepsTimer / 2 ? _timerStep : _noStepsTimer - 1 - _timerStep;
+                if (_parameterInitialValue > 10)
+                    parameterValue = _parameterInitialValue + iStep * 0.1 * _parameterInitialValue;
+                else if (_parameterInitialValue <= 10)
+                    parameterValue = _parameterInitialValue + iStep * 2;
+
+                tempParameterStack.SetDoubleParameter(_parameterName, parameterValue);
+                Panel1.Invalidate();
+            }
+            else
+            {   // reset original parameter stack + stop timer
+                tempParameterStack = null;
+                timer.Stop();
+                // redraw a last timer
+                Panel1.Invalidate();
+            }
         }
         #endregion
     }
