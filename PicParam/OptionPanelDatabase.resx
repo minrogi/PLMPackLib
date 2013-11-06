@@ -138,7 +138,7 @@
     <value>1</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>GLib.Options.OptionsPanel, OptionsLib, Version=6.0.18.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>GLib.Options.OptionsPanel, OptionsLib, Version=6.0.29.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Database file</value>

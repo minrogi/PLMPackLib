@@ -120,6 +120,24 @@
   <data name="statusStrip1.Text" xml:space="preserve">
     <value>Etat</value>
   </data>
+  <data name="_treeViewCtrl.Nodes" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAAB1TeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5UcmVlTm9kZQgAAAAEVGV4dAROYW1lCUlzQ2hlY2tlZApJbWFnZUluZGV4
+        CEltYWdlS2V5ElNlbGVjdGVkSW1hZ2VJbmRleBBTZWxlY3RlZEltYWdlS2V5CkNoaWxkQ291bnQBAQAA
+        AQABAAEICAgCAAAABgMAAAAKU3RhcnQgUGFnZQYEAAAAAAD/////CQQAAAD/////CQQAAAAAAAAACw==
+</value>
+  </data>
+  <data name="_treeViewCtrl.Nodes1" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAAB1TeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5UcmVlTm9kZQgAAAAEVGV4dAROYW1lCUlzQ2hlY2tlZApJbWFnZUluZGV4
+        CEltYWdlS2V5ElNlbGVjdGVkSW1hZ2VJbmRleBBTZWxlY3RlZEltYWdlS2V5CkNoaWxkQ291bnQBAQAA
+        AQABAAEICAgCAAAABgMAAAAIRG93bmxvYWQGBAAAAAAA/////wkEAAAA/////wkEAAAAAAAAAAs=
+</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="exportToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -518,11 +536,29 @@
   <data name="toolStripButtonHelp.Text" xml:space="preserve">
     <value>Afficher l'aide en ligne</value>
   </data>
-  <data name="toolStripMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>433, 39</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="toolStripMain.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="toolStripMain.Text" xml:space="preserve">
     <value>Barre d'outils principale</value>
+  </data>
+  <data name="toolStripEditDLL.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACCSURBVFhH7ZQBCoAgDEV3rh3I8+w0XsbDrJkWJFYQuqD+
+        AxEH+/8rKgEAAHiCxqB5Igoa1UiifLEuXQP5X4AkXA2rqGeAo3k7JgdQaw+bWYirkKmrcK1ND3Ai5HYH
+        WqNStcKN4bgAuxCrpDdOwNpd70Bvx66voBcg8+o/AAAAH4doAZJYsQQQdnODAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="toolStripDebug.Location" type="System.Drawing.Point, System.Drawing">
+    <value>454, 24</value>
+  </data>
+  <data name="toolStripDebug.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="toolStripDebug.Text" xml:space="preserve">
+    <value>Débogage</value>
   </data>
   <data name="toolStripButtonPicGEOM.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -571,15 +607,15 @@
   <data name="toolStripButtonDXF.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH4SURBVFhH7Ze/S0JRFMedmpqivyCowbEsCIIgWhsCHaQH
-        TVEhFtQWRQ1BQxARLZLipNivoZKiIZscgqZqaaggCgpC0hKRftze93WPXsX3ek9v1PC+cPC+e7/3nM87
-        7+JTR7mawwqrNZrCypVzw1PHU1oTErRHR9jAwbzlcMdnixBB751z1VPP05oXNo8eLTF+aUmpXKakE2o8
-        WIaoBSCdz2qFfYll1hYZLkKsuRu45WfJAPAfr7BU7oW5ohwipKRaAt5GbjOWDADan33Lsc6YzxqEDADx
-        EHvic98AiKCS5lZ91QLw/vnBercniwUrBLfqC6ZqAYyEnDaAaYDuzfGSbzgZ0aEeTNMArZEhzfwbwcvo
-        C6Z/BXCbedQ2Pedf2fnTNVs8jWnz+zcn2hrG/bszmmc6GdLWMSbFLhOFXAg+rS+YRADMBc72WM/WRCE5
-        PnFNYxGGPIOHCwwBH+WifIaCqRwASekad0TFAIbOwINimCMA8pcH1gwFkxGAWIC6QEDiOknci+DT+oLJ
-        CADtxlnAmLoBz5j6BsQcAUh9BGg1Dho+cY3DRgcPhekMuNTfAGKHKgXWDAWTCEB3iGedvL9gKI55jKkT
-        9CgAKB1AdvAy+oLpzwG61v2sb2dKatBN8TL6gsl+HdsANkC1f06NAjlNA/xm8DJcDscXp09VTG8VFvYA
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH4SURBVFhH7Ze/S0JRFMedmpqif6ChBseyIAiCaG0IdJAe
+        NEWFWFBbFDUEDUFEtJiIk2K/hkqKhmxyCJqqpaGCKCgISUtE+nF739c9ehXf6z29UcP7wsH77v3ecz7v
+        vItPHeVqDius1mgKK1fODU8dT2lNSNAeHWEDB/OWwx2fLUIEvXfOVU89T2te2Dx6tMT4pSWlcpmSTqjx
+        YBmiFoB0PqsV9iWWWVtkuAgRdDdwy8+SAeA/XmGp3AtzRTlESEm1BLyN3GYsGQC0P/uWY50xnzUIGQDi
+        IfbE574BEGtKmlv1VQvA++cH692eLBasENyqL5iqBTASctoApgG6N8dLvuFkRId6ME0DtEaGNPNvBC+j
+        L5j+FcBt5lHb9Jx/ZedP12zxNKbN79+caGsY9+/OaJ7pZEhbx5gUu0wUciH4tL5gEgEwFzjbYz1bE4Xk
+        +MQ1jUUY8gweLjAEfJSL8hkKpnIAJKVr3BEVAxg6Aw+KYY4AyF8eWDMUTEYAYgHqAgGJ6yRxL4JP6wsm
+        IwC0G2cBY+oGPGPqGxBzBCD1EaDVOGj4xDUOGx08FKYz4FJ/A4gdqhRYMxRMIgDdIZ518v6CoTjmMaZO
+        0KMAoHQA2cHL6AumPwfoWvezvp0pqUE3xcvoCyb7dWwD2ADV/jk1CuQ0DfCbwctwORxfX6FVR27b0Z0A
         AAAASUVORK5CYII=
 </value>
   </data>
@@ -665,6 +701,12 @@
   </data>
   <data name="toolStripButtonPalletization.Text" xml:space="preserve">
     <value>Analyser caisse/palette avec StackBuilder...</value>
+  </data>
+  <data name="toolStripExport.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="toolStripExport.Text" xml:space="preserve">
+    <value>Outils export</value>
   </data>
   <data name="saveFileDialogBackup.Filter" xml:space="preserve">
     <value>Fichier de sauvegarde (*.zip)|*.zip</value>

@@ -327,15 +327,35 @@ namespace Pic.Plugin.GeneratorCtrl
                 // send event if no errors were found
                 if (res.Errors.Count == 0)
                 {
-                    using (PluginViewer frmPluginViewer = new PluginViewer(new ComponentSearchDirectory(Path.Combine(_localPluginDirectory, "Library")), res.PathToAssembly))
+                    using (PluginViewer frmPluginViewer = new PluginViewer(_componentSearchMethod, res.PathToAssembly))
                     {
                         if (frmPluginViewer.ShowDialog() == DialogResult.OK)
                         {
-                            File.Copy(
-                                res.PathToAssembly
-                                , OutputPath
-                                , true /*overwrite*/
-                                );
+                            try
+                            {
+                                File.Copy(
+                                    res.PathToAssembly
+                                    , OutputPath
+                                    , true /*overwrite*/
+                                    );
+                            }
+                            catch (System.IO.IOException /*ex*/)
+                            {
+                                MessageBox.Show(string.Format("File {0} appears to be locked. Please, provide a different path for copy", OutputPath), Application.ProductName, MessageBoxButtons.OK);
+                                OpenFileDialog fd = new OpenFileDialog();
+                                fd.FileName = OutputPath;
+                                fd.Filter = "Component (*.dll)|*.dll|All Files|*.*";
+                                fd.FilterIndex = 0;
+
+                                if (DialogResult.OK == fd.ShowDialog())
+                                    File.Copy(
+                                        res.PathToAssembly
+                                        , fd.FileName
+                                        , true /*overwrite*/
+                                        );
+                                else
+                                    return;
+                            }
                             // emit event if an event handler was defined
                             if (null != PluginValidated)
                                 PluginValidated(this, new GeneratorCtrlEventArgs(OutputPath));

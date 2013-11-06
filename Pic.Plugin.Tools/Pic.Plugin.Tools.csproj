@@ -85,10 +85,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Codeplex\Sharp3D.Math\Sharp3D.Math\Main\Sharp3D.Math\Sharp3D.Math.csproj">
-      <Project>{8F9BA4D3-D6AF-42A6-B74F-0DF6568C148B}</Project>
-      <Name>Sharp3D.Math</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Dxflib4NET\Dxflib4NET.csproj">
       <Project>{248A3C5D-E69F-4416-B55A-B3F798BE367B}</Project>
       <Name>Dxflib4NET</Name>
@@ -104,6 +100,10 @@
     <ProjectReference Include="..\Pic.Plugin.PluginInterface\Pic.Plugin.PluginInterface.csproj">
       <Project>{F7AF3588-4E47-464A-8729-3FDBC471D00C}</Project>
       <Name>Pic.Plugin.PluginInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sharp3D.Math\Sharp3D.Math.csproj">
+      <Project>{24D95CE6-335E-4B4B-95C9-AAC4D89E4D93}</Project>
+      <Name>Sharp3D.Math</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -784,8 +784,12 @@ namespace PicParam
         {
             try
             {
-                // load settings
-                ToolStripManager.LoadSettings(this, this.Name);
+                if (!Properties.Settings.Default.DebugMode)
+                {
+                    // load settings
+                    ToolStripManager.LoadSettings(this, this.Name);
+                }
+                toolStripDebug.Visible = Properties.Settings.Default.DebugMode;
 
                 // --- instantiate and start splach screen thread
                 // cardboard format loader
@@ -947,6 +951,30 @@ namespace PicParam
         {
             if (_pluginViewCtrl.Visible)
                 _pluginViewCtrl.Refresh();
+        }
+        #endregion
+
+        #region Debug tools
+        private void toolStripEditDLL_Click(object sender, EventArgs e)
+        {
+            // open file dialog
+            OpenFileDialog fd = new OpenFileDialog();
+            fd.Filter = "Component (*.dll)|*.dll|All Files|*.*";
+            fd.FilterIndex = 0;
+            if (DialogResult.OK == fd.ShowDialog())
+            {
+                // make a copy
+                string filePathCopy = Path.ChangeExtension(Path.GetTempFileName(), "dll");
+                System.IO.File.Copy(fd.FileName, filePathCopy, true);
+                // form plugin editor
+                FormPluginEditor editorForm = new FormPluginEditor();
+                editorForm.PluginPath = filePathCopy;
+                editorForm.OutputPath = fd.FileName;
+                if (DialogResult.OK == editorForm.ShowDialog()) {}
+                // try and delete copy file
+                try { System.IO.File.Delete(filePathCopy); }
+                catch (Exception /*ex*/) {}
+            }
         }
         #endregion
 

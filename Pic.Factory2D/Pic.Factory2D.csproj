@@ -148,10 +148,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Codeplex\Sharp3D.Math\Sharp3D.Math\Main\Sharp3D.Math\Sharp3D.Math.csproj">
-      <Project>{8F9BA4D3-D6AF-42A6-B74F-0DF6568C148B}</Project>
-      <Name>Sharp3D.Math</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DesLib4NET\DesLib4NET.csproj">
       <Project>{7CDEDAAE-8156-4835-9837-55C7CDC67070}</Project>
       <Name>DesLib4NET</Name>
@@ -159,6 +155,10 @@
     <ProjectReference Include="..\Dxflib4NET\Dxflib4NET.csproj">
       <Project>{248A3C5D-E69F-4416-B55A-B3F798BE367B}</Project>
       <Name>Dxflib4NET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sharp3D.Math\Sharp3D.Math.csproj">
+      <Project>{24D95CE6-335E-4B4B-95C9-AAC4D89E4D93}</Project>
+      <Name>Sharp3D.Math %28Common\Sharp3D.Math%29</Name>
     </ProjectReference>
     <ProjectReference Include="..\TreeDim.UserControls\TreeDim.UserControls.csproj">
       <Project>{D75634E3-34AA-4418-A6B6-3647BFF90606}</Project>
