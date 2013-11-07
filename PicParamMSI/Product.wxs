@@ -10,9 +10,10 @@
     <?define UpgradeCode="85B2DB64-71DA-437b-BD2F-6A1511265E15"?>
     <?define Manufacturer="treeDiM"?>
     <?define AppName="PLMPackLib"?>
+
     <!--definitions : end-->
     <Product Id="*" Name="PLMPackLib" Language="1033" Version="$(var.Version)" Manufacturer="$(var.Manufacturer)" UpgradeCode="$(var.UpgradeCode)">
-        <Package Id="*" Description="PLMPackLib : Parametric cardboard design" InstallerVersion="300" Compressed="yes" Manufacturer="$(var.Manufacturer)" Comments="$(var.Version)" Platform="x86" ReadOnly="yes" ShortNames="no" Keywords="Installer,MSI,Database" />
+        <Package Id="*" Description="PLMPackLib : Parametric cardboard design" InstallerVersion="500" Compressed="yes" Manufacturer="$(var.Manufacturer)" Comments="$(var.Version)" Platform="x86" ReadOnly="yes" ShortNames="no" Keywords="Installer,MSI,Database" />
         <Media Id="1" Cabinet="media1.cab" EmbedCab="yes" />
         <!-- Launch conditions -->
         <Condition Message="You have to be a local administrator to install $(var.AppName).">Privileged</Condition>
@@ -26,7 +27,7 @@
                     <Directory Id="PLMPackDir" Name="PLMPack">
                         <Directory Id="INSTALLLOCATION" Name="PLMPackLib">
                             <Merge Id="PLMPackLibMSM" Language="1033" DiskId="1" SourceFile="..\PicParamMSM\bin\Release\PLMPackLibMSM.msm" />
-                            <Merge Id="StackBuilderGUIExtMSM" Language="1033" DiskId="1" SourceFile="..\..\..\StackBuilder\StackBuilderGUIExtMSM\bin\release\StackBuilderGUIExtMSM.msm" />
+                            <Merge Id="StackBuilderGUIExtMSM" Language="1033" DiskId="1" SourceFile="..\..\..\..\StackBuilder\StackBuilderGUIExtMSM\bin\release\StackBuilderGUIExtMSM.msm" />
                         </Directory>
                     </Directory>
                 </Directory>
@@ -51,6 +52,7 @@
         <UI>
             <!-- Add UI to the installer -->
             <UIRef Id="WixUI_InstallDir" />
+            <DialogRef Id="UserRegistrationDlg" />
             <!-- Trigger custom action -->
             <Publish Dialog="ExitDialog" Control="Finish" Event="DoAction" Value="LaunchApplication">WIXUI_EXITDIALOGOPTIONALCHECKBOX = 1 and NOT Installed</Publish>
         </UI>
