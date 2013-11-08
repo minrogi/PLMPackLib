@@ -796,6 +796,16 @@
             get { return (TreeNodeDocuments.Count > 0); }
         }
 
+        public bool IsComponent
+        {
+            get
+            {
+                if (0 == TreeNodeDocuments.Count)
+                    return false; // -> is branch node
+                return string.Equals(TreeNodeDocuments[0].Document.DocumentType.Name, "Parametric component");
+            }
+        }
+
         public bool IsDescendantOf(PPDataContext db, TreeNode tn)
         {
             if (tn.ID == ID)

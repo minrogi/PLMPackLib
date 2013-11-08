@@ -107,7 +107,7 @@ namespace Pic.DAL
     {
         public override bool CanGenerateThumbnail { get { return false; } }
         public override string ThumbnailName { get { return "pdf.bmp"; } }
-        public override string FilterString { get { return "Adobe Acrobat (*.pdf)|*.pdf|"; } }
+        public override string FilterString { get { return "Adobe Acrobat Reader (*.pdf)|*.pdf|"; } }
         public override string[] SupportedExtensions { get { return new string[] { "pdf" }; } }
         public override string Name { get { return "Adobe Acrobat"; } }
         public override string Description { get { return "Adobe Portable Document Format"; } }

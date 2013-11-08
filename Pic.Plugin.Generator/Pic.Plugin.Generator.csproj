@@ -83,7 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\SharedAssemblyInfo.cs">
-      <Link>SharedAssemblyInfo.cs</Link>
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="PluginGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,6 +104,20 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pic.Plugin.Host\Pic.Plugin.Host.csproj">
+      <Project>{120B7826-6403-41BF-AEF9-61FE400CF0F9}</Project>
+      <Name>Pic.Plugin.Host</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.Plugin.PluginInterface\Pic.Plugin.PluginInterface.csproj">
+      <Project>{F7AF3588-4E47-464A-8729-3FDBC471D00C}</Project>
+      <Name>Pic.Plugin.PluginInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.Plugin.Tools\Pic.Plugin.Tools.csproj">
+      <Project>{3B400C41-D6B3-4683-8450-85AED44FAA52}</Project>
+      <Name>Pic.Plugin.Tools</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

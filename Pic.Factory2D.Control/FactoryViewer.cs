@@ -509,7 +509,7 @@ namespace Pic.Factory2D.Control
                                         "Autocad dxf (*.dxf)|*.dxf|" +
                                         "Adobe Illustrator (*.ai)|*.ai|" +
                                         "Common File Format2 (*.cf2)|*.cf2|" +
-                                        "Adobe pdf (*.pdf)|*.pdf|" +
+                                        "Adobe Acrobat Reader (*.pdf)|*.pdf|" +
                                         "All Files (*.*)|*.*";
             // filter index
             if (string.Equals("DES", fileExt))

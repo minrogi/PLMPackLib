@@ -329,7 +329,5 @@ namespace Pic.Plugin
         {
         }
         #endregion
-
-
     }
 }

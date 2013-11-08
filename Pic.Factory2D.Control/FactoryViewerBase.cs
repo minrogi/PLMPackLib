@@ -475,7 +475,7 @@ namespace Pic.Factory2D.Control
                 }
                 else if ("PDF" == item.Text)
                 {
-                    saveFileDialog.Filter = "Adobe pdf|*.pdf|All Files|*.*";
+                    saveFileDialog.Filter = "Adobe Acrobat Reader (*.pdf)|*.pdf|All Files|*.*";
                 }
                 else if ("AI" == item.Text)
                 {

@@ -125,6 +125,8 @@ namespace PicParam
             _webBrowser4PDF.Url = new Uri(filePath);
             _webBrowser4PDF.Size = this._splitContainer.Panel2.Size;
             _webBrowser4PDF.Visible = true;
+            // show export button
+            toolStripButtonExport.Visible = true;
         }
 
         private void LoadImageFile(string filePath)
@@ -337,56 +339,80 @@ namespace PicParam
         {
             try
             {
-                FormExportFile form = new FormExportFile();
-                form.FileName = DocumentName;
-                if (DialogResult.OK == form.ShowDialog())
+                // #### actually exported file from _pluginViewCtrl or _factoryViewCtrl
+                if (_pluginViewCtrl.Visible || _factoryViewCtrl.Visible)
                 {
-                    if (_pluginViewCtrl.Visible)
-                        _pluginViewCtrl.WriteExportFile(form.FilePath, form.ActualFileExtension);
-                    else if (_factoryViewCtrl.Visible)
-                        _factoryViewCtrl.WriteExportFile(form.FilePath, form.ActualFileExtension);
-                    if (form.OpenFile)
+                    FormExportFile form = new FormExportFile();
+                    form.FileName = DocumentName;
+                    if (DialogResult.OK == form.ShowDialog())
                     {
-                        using (System.Diagnostics.Process proc = new System.Diagnostics.Process())
+                        if (_pluginViewCtrl.Visible)
+                            _pluginViewCtrl.WriteExportFile(form.FilePath, form.ActualFileExtension);
+                        else if (_factoryViewCtrl.Visible)
+                            _factoryViewCtrl.WriteExportFile(form.FilePath, form.ActualFileExtension);
+                        else if (_webBrowser4PDF.Visible)
                         {
-                            if ("des" == form.ActualFileExtension
-                                || "dxf" == form.ActualFileExtension
-                                || "ai" == form.ActualFileExtension
-                                || "cf2" == form.ActualFileExtension)
+                            if (null != _treeViewCtrl.SelectedNode)
                             {
-                                string applicationPath = string.Empty;
-                                switch (form.ActualFileExtension)
-                                {
-                                    case "des": applicationPath = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppDES; break;
-                                    case "dxf": applicationPath = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppDXF; break;
-                                    case "ai": applicationPath = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppAI; break;
-                                    case "cf2": applicationPath = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppCF2; break;
-                                    default: break;
-                                }
-                                if (string.IsNullOrEmpty(applicationPath) || !System.IO.File.Exists(applicationPath))
-                                    return;
-                                proc.StartInfo.FileName = applicationPath;
-                                proc.StartInfo.Arguments = "\"" + form.FilePath + "\"";
                             }
-                            else if ("pdf" == form.ActualFileExtension)
-                            {
-                                proc.StartInfo.FileName = form.FilePath;
-                                // actually using shell execute
-                                proc.StartInfo.UseShellExecute = true;
-                                proc.StartInfo.Verb = "open";
-                            }
-                            // checking if called application can be found
-                            if (!proc.StartInfo.UseShellExecute && !System.IO.File.Exists(proc.StartInfo.FileName))
-                            {
-                                MessageBox.Show(string.Format("Application {0} could not be found!"
-                                    , proc.StartInfo.FileName)
-                                    , Application.ProductName
-                                    , MessageBoxButtons.OK
-                                    , MessageBoxIcon.Error);
-                                return;
-                            }
-                            proc.Start();
                         }
+                        if (form.OpenFile)
+                        {
+                            using (System.Diagnostics.Process proc = new System.Diagnostics.Process())
+                            {
+                                if ("des" == form.ActualFileExtension
+                                    || "dxf" == form.ActualFileExtension
+                                    || "ai" == form.ActualFileExtension
+                                    || "cf2" == form.ActualFileExtension)
+                                {
+                                    string applicationPath = string.Empty;
+                                    switch (form.ActualFileExtension)
+                                    {
+                                        case "des": applicationPath = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppDES; break;
+                                        case "dxf": applicationPath = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppDXF; break;
+                                        case "ai": applicationPath = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppAI; break;
+                                        case "cf2": applicationPath = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppCF2; break;
+                                        default: break;
+                                    }
+                                    if (string.IsNullOrEmpty(applicationPath) || !System.IO.File.Exists(applicationPath))
+                                        return;
+                                    proc.StartInfo.FileName = applicationPath;
+                                    proc.StartInfo.Arguments = "\"" + form.FilePath + "\"";
+                                }
+                                else if ("pdf" == form.ActualFileExtension)
+                                {
+                                    proc.StartInfo.FileName = form.FilePath;
+                                    // actually using shell execute
+                                    proc.StartInfo.UseShellExecute = true;
+                                    proc.StartInfo.Verb = "open";
+                                }
+                                // checking if called application can be found
+                                if (!proc.StartInfo.UseShellExecute && !System.IO.File.Exists(proc.StartInfo.FileName))
+                                {
+                                    MessageBox.Show(string.Format("Application {0} could not be found!"
+                                        , proc.StartInfo.FileName)
+                                        , Application.ProductName
+                                        , MessageBoxButtons.OK
+                                        , MessageBoxIcon.Error);
+                                    return;
+                                }
+                                proc.Start();
+                            }
+                        }
+                    }
+                }
+                // #### actually PDF file
+                else if (_webBrowser4PDF.Visible)
+                {
+                    SaveFileDialog fd = new SaveFileDialog();
+                    fd.Filter = "Adobe Acrobat Reader (*.pdf)|*.pdf|All Files|*.*";
+                    fd.FilterIndex = 0;
+                    fd.DefaultExt = "pdf";
+                    fd.InitialDirectory = Settings.Default.FileExportDirectory;
+                    if (DialogResult.OK == fd.ShowDialog())
+                    {
+                        string filePath = _webBrowser4PDF.Url.AbsolutePath;
+                        System.IO.File.Copy(filePath, fd.FileName);
                     }
                 }
             }
@@ -587,7 +613,7 @@ namespace PicParam
                 toolStripButtonPalletization.Enabled = _pluginViewCtrl.Visible && _pluginViewCtrl.AllowPalletization;
                 toolStripButtonCaseOptimization.Enabled = _pluginViewCtrl.Visible && _pluginViewCtrl.AllowPalletization;
                 // enable export toolbar buttons
-                toolStripButtonExport.Enabled = buttonsEnabled;
+                toolStripButtonExport.Enabled = buttonsEnabled || _webBrowser4PDF.Visible;
                 toolStripButtonPicGEOM.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("PicGEOM");
                 toolStripButtonPicDecoup.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("PicDecoup");
                 toolStripButtonPicador3D.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("Picador3D");
