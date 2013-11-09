@@ -220,7 +220,10 @@ namespace PicParam
                 , node.Description
                 , node.Thumbnail.GetImage());
             treeNodeNew.ToolTipText = node.Description;
-            treeNodeNew.ContextMenuStrip = node.IsDocument ? GetLeafMenu() : GetBranchMenu();
+            if (node.IsDocument)
+                treeNodeNew.ContextMenuStrip = node.IsComponent ? GetComponentMenu() : GetLeafMenu();
+            else
+                treeNodeNew.ContextMenuStrip = GetBranchMenu();
             TreeNode treeNodeParent = parentObj as TreeNode;
             
             if (null == treeNodeParent)
@@ -593,16 +596,18 @@ namespace PicParam
                 // create the ContextMenuStrip
                 _leafMenu = new ContextMenuStrip();
                 // create some menu items
-                // -> rename
+                // *** -> rename
                 ToolStripMenuItem renameBranchLabel = new ToolStripMenuItem();
                 renameBranchLabel.Text = string.Format(PicParam.Properties.Resources.ID_TREEMENURENAME, "");
                 renameBranchLabel.Click += new EventHandler(renameNode);
-                // -> separator1
+                // *** -> separator1
                 System.Windows.Forms.ToolStripSeparator separator1 = new System.Windows.Forms.ToolStripSeparator();
-                // -> delete
+                // *** -> delete
                 ToolStripMenuItem deleteLabel = new ToolStripMenuItem();
                 deleteLabel.Text = PicParam.Properties.Resources.ID_TREEMENUDELETE;
                 deleteLabel.Click += new EventHandler(deleteNode);
+                // ***
+                // add the menu items to the menu.
                 _leafMenu.Items.AddRange(
                     new ToolStripItem[]{
                         renameBranchLabel
@@ -610,18 +615,20 @@ namespace PicParam
                         , deleteLabel
                     }
                     );
+                // DEBUG MODE
                 if (Properties.Settings.Default.DebugMode)
                 {
-                    // -> separator 2
+                    // *** -> separator 2
                     System.Windows.Forms.ToolStripSeparator separator2 = new System.Windows.Forms.ToolStripSeparator();
-                    // -> send path to clipboard
+                    // *** -> send path to clipboard
                     ToolStripMenuItem menuItemSendPathToClipboard = new ToolStripMenuItem();
                     menuItemSendPathToClipboard.Text = PicParam.Properties.Resources.ID_TREEMENUSENDPATHTOCLIPBOARD;
                     menuItemSendPathToClipboard.Click += new EventHandler(sendPathToClipboard);
-                    // -> select in windows explorer
+                    // *** -> select in windows explorer
                     ToolStripMenuItem menuItemSelectInWindowsExplorer = new ToolStripMenuItem();
                     menuItemSelectInWindowsExplorer.Text = PicParam.Properties.Resources.ID_TREEMENUSELECTINEXPLORER;
                     menuItemSelectInWindowsExplorer.Click += new EventHandler(selectInWindowsExplorer);
+                    // *** 
                     // add the menu items to the menu.
                     _leafMenu.Items.AddRange(new ToolStripItem[]{
                         separator2
@@ -629,10 +636,74 @@ namespace PicParam
                         , menuItemSelectInWindowsExplorer
                     }
                     );
+                    // -> modify GUID
+                    ToolStripMenuItem menuItemModifyGUID = new ToolStripMenuItem();
+                    menuItemModifyGUID.Text = PicParam.Properties.Resources.ID_TREEMENUSETNEWGUID;
+                    menuItemModifyGUID.Click += new EventHandler(setNewComponentGuid);
+                    // 
                 }
             }
             return _leafMenu;
         }
+
+        protected ContextMenuStrip GetComponentMenu()
+        {
+            if (null == _componentMenu)
+            { 
+                // create the ContextMenuStrip
+                _componentMenu = new ContextMenuStrip();
+                // create some menu items
+                // *** -> rename
+                ToolStripMenuItem renameBranchLabel = new ToolStripMenuItem();
+                renameBranchLabel.Text = string.Format(PicParam.Properties.Resources.ID_TREEMENURENAME, "");
+                renameBranchLabel.Click += new EventHandler(renameNode);
+                // *** -> separator1
+                System.Windows.Forms.ToolStripSeparator separator1 = new System.Windows.Forms.ToolStripSeparator();
+                // *** -> delete
+                ToolStripMenuItem deleteLabel = new ToolStripMenuItem();
+                deleteLabel.Text = PicParam.Properties.Resources.ID_TREEMENUDELETE;
+                deleteLabel.Click += new EventHandler(deleteNode);
+                // ***
+                // add the menu items to the menu.
+                _componentMenu.Items.AddRange(
+                    new ToolStripItem[]{
+                        renameBranchLabel
+                        , separator1
+                        , deleteLabel
+                    }
+                    );
+                // DEBUG MODE
+                if (Properties.Settings.Default.DebugMode)
+                {
+                    // *** -> separator 2
+                    System.Windows.Forms.ToolStripSeparator separator2 = new System.Windows.Forms.ToolStripSeparator();
+                    // *** -> send path to clipboard
+                    ToolStripMenuItem menuItemSendPathToClipboard = new ToolStripMenuItem();
+                    menuItemSendPathToClipboard.Text = PicParam.Properties.Resources.ID_TREEMENUSENDPATHTOCLIPBOARD;
+                    menuItemSendPathToClipboard.Click += new EventHandler(sendPathToClipboard);
+                    // *** -> select in windows explorer
+                    ToolStripMenuItem menuItemSelectInWindowsExplorer = new ToolStripMenuItem();
+                    menuItemSelectInWindowsExplorer.Text = PicParam.Properties.Resources.ID_TREEMENUSELECTINEXPLORER;
+                    menuItemSelectInWindowsExplorer.Click += new EventHandler(selectInWindowsExplorer);
+                    // *** -> modify GUID
+                    ToolStripMenuItem menuItemModifyGUID = new ToolStripMenuItem();
+                    menuItemModifyGUID.Text = PicParam.Properties.Resources.ID_TREEMENUSETNEWGUID;
+                    menuItemModifyGUID.Click += new EventHandler(setNewComponentGuid);
+                    // ***
+                     // add the menu items to the menu.
+                    _componentMenu.Items.AddRange(new ToolStripItem[]{
+                        separator2
+                        , menuItemSendPathToClipboard
+                        , menuItemSelectInWindowsExplorer
+                        , menuItemModifyGUID
+                    }
+                    );
+               }
+            }
+            return _componentMenu;
+        }
+
+
         #endregion
 
         #region Context menu event handlers
@@ -677,6 +748,76 @@ namespace PicParam
             {
                 Debug.Fail(ex.ToString());
                 _log.Debug(ex.ToString());
+            }
+        }
+
+        void setNewComponentGuid(object sender, EventArgs e)
+        {
+            try
+            {
+                // get node
+                NodeTag tag = GetCurrentTag();
+                // retrieve database node
+                Pic.DAL.SQLite.PPDataContext db0 = new Pic.DAL.SQLite.PPDataContext();
+                Pic.DAL.SQLite.TreeNode tn = Pic.DAL.SQLite.TreeNode.GetById(db0, tag.TreeNode);
+                int parentNodeID = tn.ParentNodeID.Value;
+                // if not a component -> exit
+                if (!tn.IsComponent) return;
+                // get document
+                Pic.DAL.SQLite.Document doc = tn.Documents(db0)[0];
+                // get component
+                Pic.DAL.SQLite.Component comp = Pic.DAL.SQLite.Component.GetByDocumentID(db0, doc.ID);
+                // initial Guid
+                Guid initialGuid = comp.Guid;
+                string name = doc.Name;
+                string description = doc.Description;
+                // copy thumbnail
+                string originalThumbnailPath = tn.Thumbnail.File.Path(db0);
+                string newThumbnailPath = System.IO.Path.ChangeExtension(System.IO.Path.GetTempFileName(), "jpg");
+                System.IO.File.Copy(originalThumbnailPath, newThumbnailPath);
+
+                // store majoration temporarily
+                Dictionary<string, double> majSet = new Dictionary<string, double>();
+
+                // show dialog and ask for new Guid
+                FormDefineComponentGUID form = new FormDefineComponentGUID();
+                form.Guid = comp.Guid;
+                if (DialogResult.OK != form.ShowDialog() || form.Guid == initialGuid)
+                    return;
+
+                // ### 0 ### regenerate component with new guid
+                string outputPath = System.IO.Path.ChangeExtension(System.IO.Path.GetTempFileName(), "dll");
+                if (!Pic.Plugin.PluginGenerator.Regenerate(doc.File.Path(db0), outputPath, form.Guid, string.Empty, string.Empty))
+                {   // on failure -> exit
+                    _log.Error(string.Format("Failed to regenerate component {0} ({1})", doc.Name, outputPath));
+                    return;
+                }
+                // ### 1 ### try and delete existing component --------------------------------------------------
+                try
+                {
+                    using (Pic.DAL.SQLite.PPDataContext db1 = new Pic.DAL.SQLite.PPDataContext())
+                    {
+                        Pic.DAL.SQLite.Component compToDelete = Pic.DAL.SQLite.Component.GetByGuid(db1, initialGuid);
+                        compToDelete.Delete(db1, true);
+                    }
+                }
+                catch (Exception /*ex*/) { }
+
+                // ### 2 ### insert new component ---------------------------------------------------------------
+                using (Pic.DAL.SQLite.PPDataContext db2 = new Pic.DAL.SQLite.PPDataContext())
+                {
+                    Pic.DAL.SQLite.TreeNode parentTNode = Pic.DAL.SQLite.TreeNode.GetById(db2, parentNodeID);
+                    Pic.DAL.SQLite.Component comp2 = parentTNode.InsertComponent(db2, outputPath, form.Guid, name, description, newThumbnailPath);
+                }
+
+                // ### 3 ### recreate majorations if any
+
+
+                // ### 4 ### recreate default values if any
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.ToString());
             }
         }
 
@@ -871,6 +1012,7 @@ namespace PicParam
         #region Data members
         private ContextMenuStrip _branchMenu;
         private ContextMenuStrip _leafMenu;
+        private ContextMenuStrip _componentMenu;
         private TreeNode _draggedNode;
         #endregion
     }

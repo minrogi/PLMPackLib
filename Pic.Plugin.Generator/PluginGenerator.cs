@@ -204,8 +204,6 @@ namespace Pic.Plugin
                 sw.WriteLine("\t} // class Plugin");
                 sw.WriteLine("}");
 
-                
-
                 // close file
                 sw.Close();
             }
@@ -351,6 +349,50 @@ namespace Pic.Plugin
         private string _thumbnailPath;
 
         private Guid _guid;
+        #endregion
+
+        #region Static methods
+        public static bool Regenerate(string inputPath, string outputPath, Guid guid, string name, string description)
+        {
+            // load existing component
+            Pic.Plugin.IComponentSearchMethod searchMethod = null;
+            ComponentLoader componentLoader = new ComponentLoader();
+            componentLoader.SearchMethod = searchMethod;
+            Component comp = componentLoader.LoadComponent(inputPath);
+
+            // instantiate PluginGenerator
+            PluginGenerator generator = new PluginGenerator();
+            generator.AssemblyCompany = comp.Author;
+            generator.AssemblyDescription = comp.Description;
+            generator.AssemblyVersion = comp.Version;
+            generator.DrawingName = string.IsNullOrEmpty(name) ? comp.Name : name;
+            generator.DrawingDescription = string.IsNullOrEmpty(description) ? comp.Description : description;
+            generator.Guid = guid != Guid.Empty ? guid : Guid.NewGuid();
+            generator.DrawingCode = comp.SourceCode;
+            if (comp.HasEmbeddedThumbnail)
+            {
+                // get thumbnail image
+                Bitmap bmp = comp.Thumbnail;
+                // save thumbnail image as bmp
+                string bitmapPath = Path.ChangeExtension(Path.GetTempFileName(), "bmp");
+                bmp.Save(bitmapPath, System.Drawing.Imaging.ImageFormat.Bmp);
+                // set thumbnail path in generator
+                generator.ThumbnailPath = bitmapPath;
+            }
+            generator.OutputDirectory = Path.GetTempPath();
+            CompilerResults res = generator.Build();
+            if (res.Errors.Count > 0)
+                return false;
+
+            // copy compiler output to new path
+            File.Copy(
+                res.PathToAssembly
+                , outputPath
+                , true /*overwrite*/
+                );
+
+            return true;
+        }
         #endregion
     }
 }

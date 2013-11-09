@@ -124,6 +124,12 @@
     <Compile Include="FormEditDatabasePath.Designer.cs">
       <DependentUpon>FormEditDatabasePath.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDefineComponentGUID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDefineComponentGUID.Designer.cs">
+      <DependentUpon>FormDefineComponentGUID.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormWorkerThreadTask.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -360,6 +366,9 @@
       <DependentUpon>FormCreateDocument.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDefineComponentGUID.resx">
+      <DependentUpon>FormDefineComponentGUID.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormWorkerThreadTask.resx">
       <DependentUpon>FormWorkerThreadTask.cs</DependentUpon>
     </EmbeddedResource>
@@ -515,6 +524,10 @@
     <ProjectReference Include="..\Pic.Plugin.GeneratorCtrl1\Pic.Plugin.GeneratorCtrl.csproj">
       <Project>{48F945EB-35D7-4052-8DA1-16A62A725FBC}</Project>
       <Name>Pic.Plugin.GeneratorCtrl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pic.Plugin.Generator\Pic.Plugin.Generator.csproj">
+      <Project>{013D495C-FD49-4568-8472-11CBF544093D}</Project>
+      <Name>Pic.Plugin.Generator</Name>
     </ProjectReference>
     <ProjectReference Include="..\Pic.Plugin.Host\Pic.Plugin.Host.csproj">
       <Project>{120B7826-6403-41BF-AEF9-61FE400CF0F9}</Project>
