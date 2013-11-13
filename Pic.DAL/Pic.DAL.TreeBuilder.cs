@@ -114,8 +114,7 @@ namespace Pic.DAL.SQLite
         public void Populate(TreeInterface treeImplementation, int nodeId)
         {
             PPDataContext db = new PPDataContext();
-            TreeNode tn = TreeNode.GetById(db, nodeId);
-            
+            TreeNode tn = TreeNode.GetById(db, nodeId);            
         }
         #endregion
 

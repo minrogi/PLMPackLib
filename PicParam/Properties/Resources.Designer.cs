@@ -222,6 +222,15 @@ namespace PicParam.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Duplicate document.
+        /// </summary>
+        internal static string ID_TREEMENUCOPY {
+            get {
+                return ResourceManager.GetString("ID_TREEMENUCOPY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
         internal static string ID_TREEMENUDELETE {

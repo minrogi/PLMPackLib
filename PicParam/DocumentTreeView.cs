@@ -602,6 +602,10 @@ namespace PicParam
                 renameBranchLabel.Click += new EventHandler(renameNode);
                 // *** -> separator1
                 System.Windows.Forms.ToolStripSeparator separator1 = new System.Windows.Forms.ToolStripSeparator();
+                // *** -> copy
+                ToolStripMenuItem duplicateLabel = new ToolStripMenuItem();
+                duplicateLabel.Text = PicParam.Properties.Resources.ID_TREEMENUCOPY;
+                duplicateLabel.Click += new EventHandler(duplicateLabel_Click);
                 // *** -> delete
                 ToolStripMenuItem deleteLabel = new ToolStripMenuItem();
                 deleteLabel.Text = PicParam.Properties.Resources.ID_TREEMENUDELETE;
@@ -612,6 +616,7 @@ namespace PicParam
                     new ToolStripItem[]{
                         renameBranchLabel
                         , separator1
+                        , duplicateLabel
                         , deleteLabel
                     }
                     );
@@ -640,7 +645,6 @@ namespace PicParam
                     ToolStripMenuItem menuItemModifyGUID = new ToolStripMenuItem();
                     menuItemModifyGUID.Text = PicParam.Properties.Resources.ID_TREEMENUSETNEWGUID;
                     menuItemModifyGUID.Click += new EventHandler(setNewComponentGuid);
-                    // 
                 }
             }
             return _leafMenu;
@@ -659,6 +663,10 @@ namespace PicParam
                 renameBranchLabel.Click += new EventHandler(renameNode);
                 // *** -> separator1
                 System.Windows.Forms.ToolStripSeparator separator1 = new System.Windows.Forms.ToolStripSeparator();
+                // *** -> copy
+                ToolStripMenuItem duplicateLabel = new ToolStripMenuItem();
+                duplicateLabel.Text = PicParam.Properties.Resources.ID_TREEMENUCOPY;
+                duplicateLabel.Click += new EventHandler(duplicateLabel_Click);
                 // *** -> delete
                 ToolStripMenuItem deleteLabel = new ToolStripMenuItem();
                 deleteLabel.Text = PicParam.Properties.Resources.ID_TREEMENUDELETE;
@@ -669,6 +677,7 @@ namespace PicParam
                     new ToolStripItem[]{
                         renameBranchLabel
                         , separator1
+                        , duplicateLabel
                         , deleteLabel
                     }
                     );
@@ -702,8 +711,6 @@ namespace PicParam
             }
             return _componentMenu;
         }
-
-
         #endregion
 
         #region Context menu event handlers
@@ -771,14 +778,14 @@ namespace PicParam
                 Guid initialGuid = comp.Guid;
                 string name = doc.Name;
                 string description = doc.Description;
+                // store majoration sets
+                Dictionary<string, Dictionary<string, double>> majoSets = comp.GetAllMajorationSets(db0);
+                // store parameter default values
+                Dictionary<string, double> paramDefaultValues = comp.GetParamDefaultValues();
                 // copy thumbnail
                 string originalThumbnailPath = tn.Thumbnail.File.Path(db0);
                 string newThumbnailPath = System.IO.Path.ChangeExtension(System.IO.Path.GetTempFileName(), "jpg");
                 System.IO.File.Copy(originalThumbnailPath, newThumbnailPath);
-
-                // store majoration temporarily
-                Dictionary<string, double> majSet = new Dictionary<string, double>();
-
                 // show dialog and ask for new Guid
                 FormDefineComponentGUID form = new FormDefineComponentGUID();
                 form.Guid = comp.Guid;
@@ -811,14 +818,101 @@ namespace PicParam
                 }
 
                 // ### 3 ### recreate majorations if any
-
+                using (Pic.DAL.SQLite.PPDataContext db3 = new Pic.DAL.SQLite.PPDataContext())
+                {
+                    Pic.DAL.SQLite.Component comp3 = Pic.DAL.SQLite.Component.GetByGuid(db3, form.Guid);
+                    comp3.InsertMajorationSets(db3, majoSets);
+                }
 
                 // ### 4 ### recreate default values if any
+                using (Pic.DAL.SQLite.PPDataContext db4 = new Pic.DAL.SQLite.PPDataContext())
+                {
+                    Pic.DAL.SQLite.Component comp4 = Pic.DAL.SQLite.Component.GetByGuid(db4, form.Guid);
+                    comp4.InsertNewParamDefaultValues(db4, paramDefaultValues);
+                }
             }
             catch (Exception ex)
             {
                 _log.Error(ex.ToString());
             }
+        }
+
+        void duplicateLabel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // ### 1 ### Build new document name
+                // get node
+                NodeTag tag = GetCurrentTag();
+                // retrieve database tree node
+                Pic.DAL.SQLite.PPDataContext db0 = new Pic.DAL.SQLite.PPDataContext();
+                Pic.DAL.SQLite.TreeNode tn = Pic.DAL.SQLite.TreeNode.GetById(db0, tag.TreeNode);
+                Pic.DAL.SQLite.TreeNode tnParent = tn.GetParent(db0);
+                if (!tn.IsDocument) return;
+                // document name
+                Pic.DAL.SQLite.Document doc = tn.Documents(db0)[0];
+                int i = 1;
+                string docNameCopy = string.Format("{0} ({1})", doc.Name, i++);
+                while (!tnParent.AllowChildCreation(db0, docNameCopy))
+                    docNameCopy = string.Format("{0} ({1})", doc.Name, i++);
+                // ### 2 ### retrieve document file path
+                string docFilePath = tn.Documents(db0)[0].File.Path(db0);
+                string newDocFilePath = System.IO.Path.ChangeExtension(System.IO.Path.GetTempFileName(), System.IO.Path.GetExtension(docFilePath));
+                // copy thumbnail
+                string originalThumbnailPath = tn.Thumbnail.File.Path(db0);
+                string newThumbnailPath = System.IO.Path.ChangeExtension(System.IO.Path.GetTempFileName(), "jpg");
+                System.IO.File.Copy(originalThumbnailPath, newThumbnailPath);
+                if (tn.IsComponent)
+                {   // *** COMPONENT
+                    // get component
+                    Pic.DAL.SQLite.Component comp = Pic.DAL.SQLite.Component.GetByDocumentID(db0, doc.ID);
+                    // store parameter default values
+                    Dictionary<string, double> paramDefaultValues = comp.GetParamDefaultValues();
+                    // store majoration sets
+                    Dictionary<string, Dictionary<string, double>> majoSets = comp.GetAllMajorationSets(db0);
+                    // regenerate plugin file rather than just make a copy
+                    Guid guid = Guid.NewGuid();
+                    if (!Pic.Plugin.PluginGenerator.Regenerate(doc.File.Path(db0), newDocFilePath, guid, string.Empty, string.Empty))
+                    {   // on failure -> exit
+                        _log.Error(string.Format("Failed to regenerate component {0} ({1})", doc.Name, docFilePath));
+                        return; 
+                    }
+                    tnParent.InsertComponent(db0, newDocFilePath, guid, docNameCopy, doc.Description, newThumbnailPath);
+                    // insert default values
+                    using (Pic.DAL.SQLite.PPDataContext db1 = new Pic.DAL.SQLite.PPDataContext())
+                    {
+                        Pic.DAL.SQLite.Component comp1 = Pic.DAL.SQLite.Component.GetByGuid(db1, guid);
+                        comp1.InsertNewParamDefaultValues(db1, paramDefaultValues);
+                    }
+                    // insert majorations
+                    using (Pic.DAL.SQLite.PPDataContext db2 = new Pic.DAL.SQLite.PPDataContext())
+                    {
+                        Pic.DAL.SQLite.Component comp2 = Pic.DAL.SQLite.Component.GetByGuid(db2, guid);
+                        comp2.InsertMajorationSets(db2, majoSets);
+                    }
+                    // *** COMPONENT
+                }
+                else
+                {   // *** OTHER DOCUMENT
+                    // copy document itself
+                    System.IO.File.Copy(docFilePath, newDocFilePath);
+                    // insert new document
+                    tnParent.InsertDocument(db0, newDocFilePath, docNameCopy, doc.Description, doc.DocumentType.Name, newThumbnailPath);
+                    // *** OTHER DOCUMENT
+                }
+                try
+                {
+                    // delete copied document + thumbnail
+                    System.IO.File.Delete(newDocFilePath);
+                    System.IO.File.Delete(newThumbnailPath);
+                }
+                catch (Exception /*ex*/) { }
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.ToString());
+            }
+            CollapseRoot();
         }
 
         private void deleteNode(object sender, EventArgs e)

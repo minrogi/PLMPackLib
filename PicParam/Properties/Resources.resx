@@ -222,6 +222,9 @@
   <data name="ID_TREEMENUBACKUP" xml:space="preserve">
     <value>Backup branch {0}</value>
   </data>
+  <data name="ID_TREEMENUCOPY" xml:space="preserve">
+    <value>Duplicate document</value>
+  </data>
   <data name="ID_TREEMENUDELETE" xml:space="preserve">
     <value>Delete</value>
   </data>

@@ -828,6 +828,11 @@
             return childrens;
         }
 
+        public bool AllowChildCreation(PPDataContext db, string name)
+        {
+            return 0 == db.TreeNodes.Count(tn => tn.Name.ToLower() == name.ToLower());
+        }
+
         public List<Document> Documents(PPDataContext db)
         {
             // get list of documents
@@ -1057,6 +1062,19 @@
             return dict;
         }
 
+        public Dictionary<string, Dictionary<string, double>> GetAllMajorationSets(PPDataContext db)
+        {
+            Dictionary<string, Dictionary<string, double>> majorationSets = new Dictionary<string, Dictionary<string, double>>();
+            foreach (MajorationSet majoSet in this.MajorationSets)
+            {
+                Dictionary<string, double> majoDict = new Dictionary<string, double>();
+                foreach (Majoration majo in majoSet.Majorations)
+                    majoDict.Add(majo.Name, majo.Value);
+                majorationSets.Add(majoSet.CardboardProfile.Name, majoDict);
+            }
+            return majorationSets;
+        }
+
         public static Dictionary<string, double> GetParamDefaultValues(PPDataContext db, Guid guid)
         {
             // retrieve component from ID
@@ -1082,6 +1100,12 @@
             if (null == paramDefaultValue)
                 throw new ExceptionDAL(string.Format("Database : Failed to load parameter {0} for component {1}({2})", name, this.Document.Name, this.Guid.ToString()));
             return paramDefaultValue.Value;
+        }
+
+        public void InsertMajorationSets(PPDataContext db, Dictionary<string, Dictionary<string, double>> majoSets)
+        {
+            foreach (string profileName in majoSets.Keys)
+                InsertNewMajorationSet(db, profileName, majoSets[profileName]);            
         }
 
         public void InsertNewMajorationSet(PPDataContext db, string profileName, Dictionary<string, double> majorations)
