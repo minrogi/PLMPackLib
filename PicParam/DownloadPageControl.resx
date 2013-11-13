@@ -187,7 +187,7 @@
     <value>89, 59</value>
   </data>
   <data name="&gt;&gt;listBoxLibraries.Type" xml:space="preserve">
-    <value>ListBoxLibraries, PLMPackLib, Version=6.0.29.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ListBoxLibraries, PLMPackLib, Version=6.2.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="bnMerge.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
