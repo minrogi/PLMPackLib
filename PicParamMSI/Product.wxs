@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?include $(sys.CURRENTDIR)\Config.wxi?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension" xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
     <!--definitions : beg-->
     <?define SkuName = "PLMPackLib"?>
@@ -8,24 +9,37 @@
     <!--Major, Minor, Build-->
     <?define RTMProductVersion="0.0.0"?>
     <?define UpgradeCode="85B2DB64-71DA-437b-BD2F-6A1511265E15"?>
-    <?define Manufacturer="treeDiM"?>
-    <?define AppName="PLMPackLib"?>
 
     <!--definitions : end-->
-    <Product Id="*" Name="PLMPackLib" Language="1033" Version="$(var.Version)" Manufacturer="$(var.Manufacturer)" UpgradeCode="$(var.UpgradeCode)">
-        <Package Id="*" Description="PLMPackLib : Parametric cardboard design" InstallerVersion="500" Compressed="yes" Manufacturer="$(var.Manufacturer)" Comments="$(var.Version)" Platform="x86" ReadOnly="yes" ShortNames="no" Keywords="Installer,MSI,Database" />
+    <Product Id="*"
+             Name="$(var.ProductName)"
+             Language="1033"
+             Version="$(var.ProductVersion)"
+             Manufacturer="$(var.ProductManufacturer)"
+             UpgradeCode="$(var.UpgradeCode)"
+             >
+        <Package Id="*"
+                 Description="$(var.Package_Description)"
+                 InstallerVersion="300"
+                 Compressed="yes"
+                 Manufacturer="$(var.ProductManufacturer)"
+                 Comments="$(var.Package_Comments)"
+                 Platform="x86"
+                 ReadOnly="yes"
+                 ShortNames="no"
+                 Keywords="Installer,MSI,Database" />
         <Media Id="1" Cabinet="media1.cab" EmbedCab="yes" />
         <!-- Launch conditions -->
-        <Condition Message="You have to be a local administrator to install $(var.AppName).">Privileged</Condition>
+        <Condition Message="You have to be a local administrator to install $(var.ProductName).">Privileged</Condition>
         <Condition Message="Windows XP or Windows Server 2003 or later is required."><![CDATA[VersionNT >= 501]]></Condition>
         <Condition Message="This setup requires the .NET Framework 4.0 or higher."><![CDATA[MsiNetAssemblySupport >= "4.0.0.0"]]></Condition>
         <!--Application files-->
         <Property Id="ROOTDRIVE"><![CDATA[C:\]]></Property>
         <Directory Id="TARGETDIR" Name="SourceDir">
             <Directory Id="ProgramFilesFolder">
-                <Directory Id="CompanyDir" Name="$(var.Manufacturer)">
+                <Directory Id="CompanyDir" Name="$(var.ProductManufacturer)">
                     <Directory Id="PLMPackDir" Name="PLMPack">
-                        <Directory Id="INSTALLLOCATION" Name="PLMPackLib">
+                        <Directory Id="INSTALLLOCATION" Name="$(var.ProductName)">
                             <Merge Id="PLMPackLibMSM" Language="1033" DiskId="1" SourceFile="..\PicParamMSM\bin\Release\PLMPackLibMSM.msm" />
                             <Merge Id="StackBuilderGUIExtMSM" Language="1033" DiskId="1" SourceFile="..\..\..\..\StackBuilder\StackBuilderGUIExtMSM\bin\release\StackBuilderGUIExtMSM.msm" />
                         </Directory>

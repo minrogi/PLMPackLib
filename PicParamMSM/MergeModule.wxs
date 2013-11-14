@@ -9,7 +9,7 @@
              Comments="$(var.Package_Comments)"
              Languages="1033"
              Manufacturer="$(var.ProductManufacturer)" 
-             InstallerVersion="200" />
+             InstallerVersion="300" />
     <!-- Forcibly overwriting preexisting files during installation -->
     <Property Id="REINSTALLMODE" Value="amus" />
     <!-- Performs a file search on  PicParam.db

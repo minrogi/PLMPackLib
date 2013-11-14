@@ -40,6 +40,9 @@
       <Name>WixUIExtension</Name>
     </WixExtension>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config.wxi" />
+  </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
   <PropertyGroup>
     <PostBuildEvent>"$(DevEnvDir)..\..\..\WiX Toolset v3.7\bin\setupbld.exe" -out $(TargetDir)PLMPackLibSetup.exe -ms "$(TargetPath)" -setup "$(ProjectDir)setup.exe" -title $(SolutionName)</PostBuildEvent>
