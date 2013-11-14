@@ -35,6 +35,8 @@ namespace PicParam
                     comboBoxProfile.SelectedIndex = 0;
                 // ComponentSearchMethodDB
                 pluginViewCtrl.SearchMethod = new ComponentSearchMethodDB();
+                // Localizer
+                pluginViewCtrl.Localizer = LocalizerImpl.Instance;
             }
             catch (Exception ex)
             {

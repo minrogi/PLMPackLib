@@ -117,23 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CursorPan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CursorPan.cur;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="STR_CLOSE" xml:space="preserve">
-    <value>Close</value>
+    <value>Fermer</value>
   </data>
   <data name="STR_PROFILE" xml:space="preserve">
     <value>Profile</value>
   </data>
   <data name="STR_THICKNESS" xml:space="preserve">
-    <value>Thickness</value>
+    <value>Epaisseur</value>
   </data>
   <data name="STR_TOL" xml:space="preserve">
-    <value>Tol...</value>
+    <value>Majo</value>
   </data>
   <data name="STR_VALIDATE" xml:space="preserve">
-    <value>Validate</value>
+    <value>Valider</value>
   </data>
 </root>

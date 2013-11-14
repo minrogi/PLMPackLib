@@ -53,6 +53,7 @@ namespace Pic.Plugin.ViewCtrl
         private List<ImpositionSolution> _solutions;
 
         private double _thickness = 0.0;
+        private ILocalizer _localizer = null;
         /// <summary>
         /// 
         /// </summary>
@@ -755,7 +756,7 @@ namespace Pic.Plugin.ViewCtrl
 
                     // lbl 
                     Label lbl = new Label();
-                    lbl.Text = "Profile";
+                    lbl.Text = Pic.Plugin.ViewCtrl.Properties.Resource.STR_PROFILE;
                     lbl.Location = new System.Drawing.Point(lblX, posY);
                     lbl.Size = new Size(nudX - cbSize.Width + nudSize.Width - lblX, lblSize.Height);
                     lbl.TabIndex = ++tabIndex;
@@ -774,7 +775,7 @@ namespace Pic.Plugin.ViewCtrl
                     posY += incY;
                     // create edit majorations button
                     Button bt = new Button();
-                    bt.Text = "Tol...";
+                    bt.Text = Pic.Plugin.ViewCtrl.Properties.Resource.STR_TOL;
                     bt.Location = new System.Drawing.Point(nudX, posY);
                     bt.Size = new Size(nudSize.Width, cbSize.Height);
                     bt.Click += new EventHandler(btEditMajorations_Click);
@@ -794,7 +795,7 @@ namespace Pic.Plugin.ViewCtrl
 
                 // lbl
                 Label lbl = new Label();
-                lbl.Text = "Thickness";
+                lbl.Text = Pic.Plugin.ViewCtrl.Properties.Resource.STR_THICKNESS;
                 lbl.Location = new System.Drawing.Point(lblX, posY);
                 lbl.Size = new Size(nudX - cbSize.Width + nudSize.Width - lblX, lblSize.Height);
                 lbl.TabIndex = ++tabIndex;
@@ -838,7 +839,7 @@ namespace Pic.Plugin.ViewCtrl
                         continue;
 
                     Label lbl = new Label();
-                    lbl.Text = paramDouble.Description + " (" + paramDouble.Name + ")";
+                    lbl.Text = Translate(paramDouble.Description) + " (" + Translate(paramDouble.Name) + ")";
                     lbl.Location = new System.Drawing.Point(lblX + param.IndentValue, posY);
                     lbl.Size = lblSize;
                     lbl.TabIndex = ++tabIndex;
@@ -868,7 +869,7 @@ namespace Pic.Plugin.ViewCtrl
                     ParameterInt paramInt = param as ParameterInt;
 
                     Label lbl = new Label();
-                    lbl.Text = paramInt.Description + " (" + paramInt.Name + ")";
+                    lbl.Text = Translate(paramInt.Description) + " (" + Translate(paramInt.Name) + ")";
                     lbl.Location = new System.Drawing.Point(lblX + param.IndentValue, posY);
                     lbl.Size = lblSize;
                     lbl.TabIndex = ++tabIndex;
@@ -894,7 +895,7 @@ namespace Pic.Plugin.ViewCtrl
 
                     CheckBox chkb = new CheckBox();
                     chkb.Name = "chkb" + paramBool.Name;
-                    chkb.Text = paramBool.Description + " (" + paramBool.Name + ")";
+                    chkb.Text = Translate(paramBool.Description) + " (" + Translate(paramBool.Name) + ")";
                     chkb.Location = new System.Drawing.Point(lblX + param.IndentValue, posY);
                     chkb.Size = chkbSize;
                     chkb.Checked = paramBool.Value;
@@ -907,7 +908,7 @@ namespace Pic.Plugin.ViewCtrl
                     ParameterMulti paramMulti = param as ParameterMulti;
 
                     Label lbl = new Label();
-                    lbl.Text = paramMulti.Description + " (" + paramMulti.Name + ")";
+                    lbl.Text = Translate(paramMulti.Description) + " (" + Translate(paramMulti.Name) + ")";
                     lbl.Location = new System.Drawing.Point(lblX + param.IndentValue, posY);
                     lbl.Size = new Size(nudX - cbSize.Width + nudSize.Width - lblX, lblSize.Height);
                     lbl.TabIndex = ++tabIndex;
@@ -919,7 +920,7 @@ namespace Pic.Plugin.ViewCtrl
                     combo.Location = new System.Drawing.Point(nudX - cbSize.Width + nudSize.Width+param.IndentValue, posY);
                     combo.Size = cbSize;
                     combo.TabIndex = ++tabIndex;
-                    combo.Items.AddRange(paramMulti.DisplayList);
+                    combo.Items.AddRange(Translate(paramMulti.DisplayList));
                     combo.SelectedIndex = paramMulti.Value;
                     combo.SelectedIndexChanged += new EventHandler(ParameterChanged_WithRecreate);
                     Panel2.Controls.Add(combo);
@@ -945,7 +946,7 @@ namespace Pic.Plugin.ViewCtrl
             btValidate.Anchor = (System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
             btValidate.Click += new EventHandler(onValidate);
             btValidate.Name = "ValidateButton";
-            btValidate.Text = "Validate";
+            btValidate.Text = Properties.Resource.STR_VALIDATE;
             btValidate.Location = new System.Drawing.Point(this.Panel2.Width - 80, this.Panel2.Height - 50);
             btValidate.Size = new Size(70, 20);
             btValidate.Visible = _buttonValidateVisible;
@@ -955,7 +956,7 @@ namespace Pic.Plugin.ViewCtrl
             btClose = new Button();
             btClose.Anchor = (System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
             btClose.Name = "CloseButton";
-            btClose.Text = "Close";
+            btClose.Text = Properties.Resource.STR_CLOSE;
             btClose.Location = new System.Drawing.Point(this.Panel2.Width - 80, this.Panel2.Height - 25);
             btClose.Size = new Size(70, 20);
             btClose.Visible = _buttonCloseVisible;
@@ -1278,6 +1279,7 @@ namespace Pic.Plugin.ViewCtrl
                     parameterValue = _parameterInitialValue + iStep * 2;
 
                 tempParameterStack.SetDoubleParameter(_parameterName, parameterValue);
+                _computeBbox = true;
                 Panel1.Invalidate();
             }
             else
@@ -1286,6 +1288,33 @@ namespace Pic.Plugin.ViewCtrl
                 timer.Stop();
                 // redraw a last timer
                 Panel1.Invalidate();
+            }
+        }
+        #endregion
+
+        #region Parameter translation
+        public ILocalizer Localizer
+        {
+            get { return _localizer; }
+            set { _localizer = value; }
+        }
+        private string Translate(string term)
+        {
+            if (null == _localizer)
+                return term;
+            else
+                return _localizer.GetTranslation(term);
+        }
+        private string[] Translate(string[] terms)
+        {
+            if (null == _localizer)
+                return terms;
+            else
+            {
+                List<string> sArray = new List<string>();
+                foreach (string s in terms)
+                    sArray.Add(Translate(s));
+                return sArray.ToArray();
             }
         }
         #endregion

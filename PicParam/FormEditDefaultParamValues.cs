@@ -22,6 +22,8 @@ namespace PicParam
         {
             InitializeComponent();
 
+            _pluginViewCtrl.Localizer = LocalizerImpl.Instance;
+
             // fill combo
             Pic.DAL.SQLite.PPDataContext db = new Pic.DAL.SQLite.PPDataContext();
             // load component from Guids

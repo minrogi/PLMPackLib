@@ -146,6 +146,7 @@
       <DependentUpon>ComponentLoaderControl.cs</DependentUpon>
     </Compile>
     <Compile Include="ComponentSearchMethod.cs" />
+    <Compile Include="LocalizerImpl.cs" />
     <Compile Include="OptionPanelComponentViewer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -400,6 +401,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelComputing.resx">
       <DependentUpon>OptionPanelComputing.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelDatabase.fr-FR.resx">
       <DependentUpon>OptionPanelDatabase.cs</DependentUpon>
@@ -412,12 +414,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelDebug.resx">
       <DependentUpon>OptionPanelDebug.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelMajorations.fr-FR.resx">
       <DependentUpon>OptionPanelMajorations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelMajorations.resx">
       <DependentUpon>OptionPanelMajorations.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelOutputFileOpening.fr-FR.resx">
       <DependentUpon>OptionPanelOutputFileOpening.cs</DependentUpon>

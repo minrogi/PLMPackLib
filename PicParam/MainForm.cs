@@ -39,6 +39,7 @@ namespace PicParam
             ApplicationAvailabilityChecker.AppendApplication("PicDecoupe", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppPicDecoupeDES);
             ApplicationAvailabilityChecker.AppendApplication("Picador3D", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppPic3DDES);
 
+            _pluginViewCtrl.Localizer = LocalizerImpl.Instance;
             _pluginViewCtrl.DependancyStatusChanged += new Pic.Plugin.ViewCtrl.PluginViewCtrl.DependancyStatusChangedHandler(DependancyStatusChanged);
         }
         #endregion
