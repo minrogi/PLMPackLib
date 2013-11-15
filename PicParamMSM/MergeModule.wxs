@@ -68,9 +68,15 @@
       </Component>
       <!--Localisation-->
       <Component Id="Localisation" Guid="41F34E2A-9182-4DFB-AC50-D86B6874F97C">
-        <File Source="..\Localisation\Localisation_FRA.txt"/>
-        <File Source="..\Localisation\Localisation_JPN.txt"/>
-        <File Source="..\Localisation\Localisation_ESP.txt"/>
+        <File Source="..\Localisation\Localisation_FRA.txt">
+          <Permission ChangePermission="yes" GenericAll="yes" User="Everyone" TakeOwnership="yes" Write="yes" WriteAttributes="yes" WriteExtendedAttributes="yes" />
+        </File>
+        <File Source="..\Localisation\Localisation_JPN.txt">
+          <Permission ChangePermission="yes" GenericAll="yes" User="Everyone" TakeOwnership="yes" Write="yes" WriteAttributes="yes" WriteExtendedAttributes="yes" />
+        </File>
+        <File Source="..\Localisation\Localisation_ESP.txt">
+          <Permission ChangePermission="yes" GenericAll="yes" User="Everyone" TakeOwnership="yes" Write="yes" WriteAttributes="yes" WriteExtendedAttributes="yes" />
+        </File>
         <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
       </Component>
       <!-- SQLite -->
