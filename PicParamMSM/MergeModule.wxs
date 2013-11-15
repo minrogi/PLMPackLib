@@ -66,6 +66,13 @@
         <File Source="..\PicParam\bin\x86\Release\Pic.Plugin.ViewCtrl.dll" KeyPath="yes" />
         <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
       </Component>
+      <!--Localisation-->
+      <Component Id="Localisation" Guid="41F34E2A-9182-4DFB-AC50-D86B6874F97C">
+        <File Source="..\Localisation\Localisation_FRA.txt"/>
+        <File Source="..\Localisation\Localisation_JPN.txt"/>
+        <File Source="..\Localisation\Localisation_ESP.txt"/>
+        <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
+      </Component>
       <!-- SQLite -->
       <Component Id="SQLite" Guid="1415A3ED-72E6-4631-85EC-75A5948C846B">
         <File Source="..\ThirdPartyComponents\System.Data.SQLite.dll" KeyPath="yes" />

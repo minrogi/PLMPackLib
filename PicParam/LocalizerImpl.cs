@@ -72,8 +72,14 @@ namespace PicParam
         }
         public void AddTerm(string term)
         {
-            if (!_dict.ContainsKey(term))
-                _dict.Add(term.Trim(), string.Empty);
+            try
+            {
+                if (!_dict.ContainsKey(term))
+                    _dict.Add(term.Trim(), string.Empty);
+            }
+            catch (Exception)
+            {
+            }
         }
         public bool HasTerm(string sText)
         {
@@ -144,8 +150,19 @@ namespace PicParam
                 string filePath = string.Empty;
                 using (StreamWriter sw = new StreamWriter(LocalisationFileName, false, Encoding.Unicode))
                 {
-                    foreach (string sKey in _dict.Keys)
-                        sw.WriteLine(string.Format("{0} = {1}", sKey, _dict[sKey]));
+                    // we need to find a cleaner way to sort dictionary on both key and value
+                    // first already translated strings
+                    foreach (KeyValuePair<string, string> kvPair in _dict.OrderBy(key => key.Key))
+                    {
+                        if (!string.IsNullOrEmpty( kvPair.Value.Trim() ))
+                            sw.WriteLine(string.Format("{0} = {1}", kvPair.Key, kvPair.Value));
+                    }
+                    // then new (hence not translated yet) strings
+                    foreach (KeyValuePair<string, string> kvPair in _dict.OrderBy(key => key.Key))
+                    {
+                        if (string.IsNullOrEmpty(kvPair.Value.Trim()))
+                            sw.WriteLine(string.Format("{0} = {1}", kvPair.Key, kvPair.Value));
+                    }
                 }
             }
             catch (Exception /*ex*/)
