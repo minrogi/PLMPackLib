@@ -117,13 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;checkBoxAllowParameterAnimation.Parent" xml:space="preserve">
+  <data name="&gt;&gt;nudNoStepsAnimation.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="nudNoStepsAnimation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 20</value>
-  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -136,20 +133,14 @@
   <data name="&gt;&gt;checkBoxAllowParameterAnimation.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lbNoStepsAnimation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 13</value>
+  <data name="nudNoStepsAnimation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 20</value>
   </data>
   <data name="&gt;&gt;nudNoStepsAnimation.Name" xml:space="preserve">
     <value>nudNoStepsAnimation</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>OptionPanelComponentViewer</value>
-  </data>
-  <data name="&gt;&gt;nudNoStepsAnimation.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;checkBoxAllowParameterAnimation.Name" xml:space="preserve">
-    <value>checkBoxAllowParameterAnimation</value>
   </data>
   <data name="&gt;&gt;lbNoStepsAnimation.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -170,6 +161,15 @@
   <data name="checkBoxAllowParameterAnimation.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lbNoStepsAnimation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 13</value>
+  </data>
+  <data name="checkBoxAllowParameterAnimation.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>GLib.Options.OptionsPanel, OptionsLib, Version=6.0.29.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="lbNoStepsAnimation.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 31</value>
   </data>
@@ -182,17 +182,17 @@
   <data name="&gt;&gt;lbNoStepsAnimation.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="checkBoxAllowParameterAnimation.AccessibleName" xml:space="preserve">
+    <value>Allow parameter animation</value>
+  </data>
   <data name="lbNoStepsAnimation.AccessibleName" xml:space="preserve">
     <value>Number of steps of animation</value>
   </data>
   <data name="nudNoStepsAnimation.AccessibleDescription" xml:space="preserve">
     <value>Number of steps of animation</value>
   </data>
-  <data name="nudNoStepsAnimation.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="checkBoxAllowParameterAnimation.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;checkBoxAllowParameterAnimation.Name" xml:space="preserve">
+    <value>checkBoxAllowParameterAnimation</value>
   </data>
   <data name="checkBoxAllowParameterAnimation.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 17</value>
@@ -200,8 +200,8 @@
   <data name="&gt;&gt;nudNoStepsAnimation.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>GLib.Options.OptionsPanel, OptionsLib, Version=6.2.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;checkBoxAllowParameterAnimation.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="lbNoStepsAnimation.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -215,8 +215,8 @@
   <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="checkBoxAllowParameterAnimation.AccessibleName" xml:space="preserve">
-    <value>Allow parameter animation</value>
+  <data name="nudNoStepsAnimation.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;nudNoStepsAnimation.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

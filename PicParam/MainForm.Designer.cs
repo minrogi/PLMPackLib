@@ -66,6 +66,8 @@
             this.layoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.customizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
+            this.updateLocalisationFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutTreeDimPicParamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMain = new System.Windows.Forms.ToolStrip();
@@ -185,6 +187,7 @@
             this._pluginViewCtrl.CloseButtonVisible = false;
             resources.ApplyResources(this._pluginViewCtrl, "_pluginViewCtrl");
             this._pluginViewCtrl.HasDependancies = false;
+            this._pluginViewCtrl.Localizer = null;
             this._pluginViewCtrl.Name = "_pluginViewCtrl";
             this._pluginViewCtrl.ParamValues = null;
             this._pluginViewCtrl.ReflectionX = false;
@@ -368,7 +371,9 @@
             this.toolStripSeparator4,
             this.layoutToolStripMenuItem,
             this.toolStripSeparator9,
-            this.customizeToolStripMenuItem});
+            this.customizeToolStripMenuItem,
+            this.toolStripSeparator13,
+            this.updateLocalisationFileToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             resources.ApplyResources(this.toolsToolStripMenuItem, "toolsToolStripMenuItem");
             // 
@@ -404,6 +409,17 @@
             this.customizeToolStripMenuItem.Name = "customizeToolStripMenuItem";
             resources.ApplyResources(this.customizeToolStripMenuItem, "customizeToolStripMenuItem");
             this.customizeToolStripMenuItem.Click += new System.EventHandler(this.customizeToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator13
+            // 
+            this.toolStripSeparator13.Name = "toolStripSeparator13";
+            resources.ApplyResources(this.toolStripSeparator13, "toolStripSeparator13");
+            // 
+            // updateLocalisationFileToolStripMenuItem
+            // 
+            this.updateLocalisationFileToolStripMenuItem.Name = "updateLocalisationFileToolStripMenuItem";
+            resources.ApplyResources(this.updateLocalisationFileToolStripMenuItem, "updateLocalisationFileToolStripMenuItem");
+            this.updateLocalisationFileToolStripMenuItem.Click += new System.EventHandler(this.tools_updateLocalisationFile);
             // 
             // helpToolStripMenuItem
             // 
@@ -764,6 +780,8 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonDownload;
         private System.Windows.Forms.ToolStrip toolStripDebug;
         private System.Windows.Forms.ToolStripButton toolStripEditDLL;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
+        private System.Windows.Forms.ToolStripMenuItem updateLocalisationFileToolStripMenuItem;
     }
 }
 

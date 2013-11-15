@@ -1003,6 +1003,31 @@ namespace PicParam
                 catch (Exception /*ex*/) {}
             }
         }
+        private void tools_updateLocalisationFile(object sender, EventArgs e)
+        {
+            try
+            {
+                // backup branch
+                FormWorkerThreadTask.Execute(new TPTCollectPluginParameterNames());
+
+                // open localisation file
+                ProcessStartInfo startInfo = new ProcessStartInfo();
+                startInfo.UseShellExecute = true;
+                startInfo.Verb = "Open";
+                startInfo.CreateNoWindow = false;
+                startInfo.WindowStyle = ProcessWindowStyle.Normal;
+                startInfo.FileName = LocalizerImpl.Instance.LocalisationFileName;
+                using (Process p = new Process())
+                {
+                    p.StartInfo = startInfo;
+                    p.Start();
+                }
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.ToString());
+            }
+        }
         #endregion
 
         #region Data members

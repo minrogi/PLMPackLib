@@ -41,12 +41,12 @@
             // 
             // gbAnnotations
             // 
+            resources.ApplyResources(this.gbAnnotations, "gbAnnotations");
             this.gbAnnotations.Controls.Add(this.nudFontSize);
             this.gbAnnotations.Controls.Add(this.lbFontSize);
             this.gbAnnotations.Controls.Add(this.rbAnnotations3);
             this.gbAnnotations.Controls.Add(this.rbAnnotations2);
             this.gbAnnotations.Controls.Add(this.rbAnnotations1);
-            resources.ApplyResources(this.gbAnnotations, "gbAnnotations");
             this.gbAnnotations.Name = "gbAnnotations";
             this.gbAnnotations.TabStop = false;
             // 
@@ -100,9 +100,9 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CategoryPath = "Options\\Thumbnails";
+            this.CategoryPath = "Paramètres\\Miniatures";
             this.Controls.Add(this.gbAnnotations);
-            this.DisplayName = "Thumbnails";
+            this.DisplayName = "Miniatures";
             this.Name = "OptionPanelThumbnail";
             this.Load += new System.EventHandler(this.OptionPanelThumbnail_Load);
             this.gbAnnotations.ResumeLayout(false);

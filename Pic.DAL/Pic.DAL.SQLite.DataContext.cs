@@ -946,6 +946,16 @@
                 db.SubmitChanges();
             }
         }
+
+        public bool ProcessVisitor(PPDataContext db, TreeNodeVisitor visitor)
+        {
+            if (!visitor.Process(db, this))
+                return false;
+            foreach (TreeNode tn in Childrens(db))
+                if (!tn.ProcessVisitor(db, visitor))
+                    return false;
+            return true;
+        }
     }
     #endregion
 

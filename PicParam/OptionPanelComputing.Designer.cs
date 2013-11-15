@@ -63,7 +63,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CategoryPath = "Options\\Performance";
+            this.CategoryPath = "Paramètres\\Performance";
             this.Controls.Add(this.nudMaxNumberOfEntities);
             this.Controls.Add(this.lbMaximumNumberOfEntities);
             this.DisplayName = "Performance";

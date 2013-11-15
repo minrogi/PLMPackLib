@@ -74,7 +74,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CategoryPath = "Options\\Fichiers exportés";
+            this.CategoryPath = "Paramètres\\Fichiers exportés";
             this.Controls.Add(this.fileSelectOutputCF2);
             this.Controls.Add(this.checkBoxAppCF2);
             this.Controls.Add(this.fileSelectOutputAI);

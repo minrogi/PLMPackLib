@@ -117,6 +117,61 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="checkBoxAppDXF.AccessibleDescription" xml:space="preserve">
+    <value>Ouverture des fichiers DXF</value>
+  </data>
+  <data name="checkBoxAppDXF.AccessibleName" xml:space="preserve">
+    <value>Ouverture des fichiers DXF</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="checkBoxAppDXF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 17</value>
+  </data>
+  <data name="checkBoxAppDXF.Text" xml:space="preserve">
+    <value>Application ouvrant les fichiers DXF</value>
+  </data>
+  <data name="fileSelectOutputDXF.AccessibleDescription" xml:space="preserve">
+    <value>Chemin vers l'application ouvrant les fichiers DXF</value>
+  </data>
+  <data name="fileSelectOutputDXF.AccessibleName" xml:space="preserve">
+    <value>Chemin vers l'application ouvrant les fichiers DXF</value>
+  </data>
+  <data name="checkBoxAppAI.AccessibleDescription" xml:space="preserve">
+    <value>Ouverture des fichiers Adobe Illustrator</value>
+  </data>
+  <data name="checkBoxAppAI.AccessibleName" xml:space="preserve">
+    <value>Ouverture des fichiers Adobe Illustrator</value>
+  </data>
+  <data name="checkBoxAppAI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 17</value>
+  </data>
+  <data name="checkBoxAppAI.Text" xml:space="preserve">
+    <value>Application ouvrant les fichiers AI</value>
+  </data>
+  <data name="fileSelectOutputAI.AccessibleDescription" xml:space="preserve">
+    <value>Path to Chemin vers l'application ouvrant les fichiers AI</value>
+  </data>
+  <data name="fileSelectOutputAI.AccessibleName" xml:space="preserve">
+    <value>Path to Chemin vers l'application ouvrant les fichiers AI</value>
+  </data>
+  <data name="checkBoxAppCF2.AccessibleDescription" xml:space="preserve">
+    <value>Ouverture des fichiers CFF2</value>
+  </data>
+  <data name="checkBoxAppCF2.AccessibleName" xml:space="preserve">
+    <value>Ouverture des fichiers CFF2</value>
+  </data>
+  <data name="checkBoxAppCF2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 17</value>
+  </data>
+  <data name="checkBoxAppCF2.Text" xml:space="preserve">
+    <value>Application ouvrant les fichiers CFF2</value>
+  </data>
+  <data name="fileSelectOutputCF2.AccessibleDescription" xml:space="preserve">
+    <value>Chemin vers l'application ouvrant les fichiers CFF2</value>
+  </data>
+  <data name="fileSelectOutputCF2.AccessibleName" xml:space="preserve">
+    <value>Chemin vers l'application ouvrant les fichiers CFF2</value>
+  </data>
   <data name="$this.AccessibleDescription" xml:space="preserve">
     <value>Applications ouvrant les fichiers exportés</value>
   </data>

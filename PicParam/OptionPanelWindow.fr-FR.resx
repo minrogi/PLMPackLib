@@ -117,23 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="checkBoxDebug.AccessibleDescription" xml:space="preserve">
-    <value>Activer les outils de débogage</value>
+  <data name="checkBoxCenteredTitleBar.AccessibleDescription" xml:space="preserve">
+    <value>Cocher pour que le titre apparaisse centré</value>
   </data>
-  <data name="checkBoxDebug.AccessibleName" xml:space="preserve">
-    <value>Outils de débogage</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="checkBoxDebug.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 17</value>
-  </data>
-  <data name="checkBoxDebug.Text" xml:space="preserve">
-    <value>Activer les fonctions de débogage</value>
-  </data>
-  <data name="$this.AccessibleDescription" xml:space="preserve">
-    <value>Activer les fonctions de débogage</value>
-  </data>
-  <data name="$this.AccessibleName" xml:space="preserve">
-    <value>Fonctions de débogage</value>
+  <data name="checkBoxCenteredTitleBar.AccessibleName" xml:space="preserve">
+    <value>Cocher pour que le titre apparaisse centré</value>
   </data>
 </root>

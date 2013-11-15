@@ -51,7 +51,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CategoryPath = "Options\\Base de données";
+            this.CategoryPath = "Paramètres\\Base de données";
             this.Controls.Add(this.label1);
             this.Controls.Add(this.fileSelect);
             this.DisplayName = "Base de données";

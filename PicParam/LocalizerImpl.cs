@@ -75,6 +75,10 @@ namespace PicParam
             if (!_dict.ContainsKey(term))
                 _dict.Add(term.Trim(), string.Empty);
         }
+        public bool HasTerm(string sText)
+        {
+            return _dict.ContainsKey(sText);
+        }
         #endregion
 
         #region Implement IDisposable
@@ -92,7 +96,7 @@ namespace PicParam
         /// Localisation file path
         /// One file for each different language
         /// </summary>
-        private string LocalisationFileName
+        public string LocalisationFileName
         {
             get
             { 

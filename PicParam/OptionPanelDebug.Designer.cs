@@ -42,9 +42,9 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CategoryPath = "Options\\Outils de débogage";
+            this.CategoryPath = "Paramètres\\Outils de débogage";
             this.Controls.Add(this.checkBoxDebug);
-            this.DisplayName = "Outils de débogage";
+            this.DisplayName = "Outils de débogages";
             this.Name = "OptionPanelDebug";
             this.Load += new System.EventHandler(this.OptionPanelDebug_Load);
             this.ResumeLayout(false);

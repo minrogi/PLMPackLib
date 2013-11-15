@@ -61,7 +61,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CategoryPath = "Options\\Afficheur composants paramétriques";
+            this.CategoryPath = "Paramètres\\Afficheur composants paramétriques";
             this.Controls.Add(this.nudNoStepsAnimation);
             this.Controls.Add(this.lbNoStepsAnimation);
             this.Controls.Add(this.checkBoxAllowParameterAnimation);
