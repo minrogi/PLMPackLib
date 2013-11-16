@@ -188,6 +188,9 @@
           <File Id="Pic.Factory2D.Control.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\Pic.Factory2D.Control.resources.dll" />
           <File Id="OptionsLib.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\OptionsLib.resources.dll" />
           <File Id="TreeDim.UserControls.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\TreeDim.UserControls.resources.dll" />
+          <File Id="Pic.Plugin.Viewer.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\Pic.Plugin.ViewCtrl.resources.dll" />
+          <File Id="Pic.DAL.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\Pic.DAL.resources.dll" />
+          <File Id="TreeDim.StackBuilder.GUIExtension.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\TreeDim.StackBuilder.GUIExtension.resources.dll" />
           <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
         </Component>
       </Directory>
@@ -199,6 +202,8 @@
           <File Id="Pic.Factory2D.Control.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\Pic.Factory2D.Control.resources.dll" />
           <File Id="OptionsLib.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\OptionsLib.resources.dll" />
           <File Id="TreeDim.UserControls.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\TreeDim.UserControls.resources.dll" />
+          <File Id="Pic.Plugin.Viewer.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\Pic.Plugin.ViewCtrl.resources.dll" />
+          <File Id="Pic.DAL.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\Pic.DAL.resources.dll" />
           <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
         </Component>
       </Directory>
