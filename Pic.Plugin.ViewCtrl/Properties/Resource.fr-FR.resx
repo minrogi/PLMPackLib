@@ -127,7 +127,7 @@
     <value>Epaisseur</value>
   </data>
   <data name="STR_TOL" xml:space="preserve">
-    <value>Majo</value>
+    <value>Majorations</value>
   </data>
   <data name="STR_VALIDATE" xml:space="preserve">
     <value>Valider</value>
