@@ -28,19 +28,26 @@ namespace PicParam
         #region Constructor
         public MainForm()
         {
-            InitializeComponent();
-            this.Text = Application.ProductName;
+            try
+            {
+                InitializeComponent();
+                this.Text = Application.ProductName;
 
-            _startPageCtrl.TreeViewCtrl = _treeViewCtrl;
-            _downloadPageCtrl.TreeViewCtrl = _treeViewCtrl;
+                _startPageCtrl.TreeViewCtrl = _treeViewCtrl;
+                _downloadPageCtrl.TreeViewCtrl = _treeViewCtrl;
 
-            // set export application
-            ApplicationAvailabilityChecker.AppendApplication("PicGEOM", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppDES);
-            ApplicationAvailabilityChecker.AppendApplication("PicDecoupe", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppPicDecoupeDES);
-            ApplicationAvailabilityChecker.AppendApplication("Picador3D", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppPic3DDES);
+                // set export application
+                ApplicationAvailabilityChecker.AppendApplication("PicGEOM", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppDES);
+                ApplicationAvailabilityChecker.AppendApplication("PicDecoupe", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppPicDecoupeDES);
+                ApplicationAvailabilityChecker.AppendApplication("Picador3D", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppPic3DDES);
 
-            _pluginViewCtrl.Localizer = LocalizerImpl.Instance;
-            _pluginViewCtrl.DependancyStatusChanged += new Pic.Plugin.ViewCtrl.PluginViewCtrl.DependancyStatusChangedHandler(DependancyStatusChanged);
+                _pluginViewCtrl.Localizer = LocalizerImpl.Instance;
+                _pluginViewCtrl.DependancyStatusChanged += new Pic.Plugin.ViewCtrl.PluginViewCtrl.DependancyStatusChangedHandler(DependancyStatusChanged);
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.ToString());
+            }
         }
         #endregion
 
