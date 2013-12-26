@@ -347,6 +347,36 @@ namespace Pic.Plugin.ViewCtrl
 
         #region Public properties
         /// <summary>
+        /// set/get the current component
+        /// </summary>
+        [Browsable(false)]
+        [Category("PluginViewCtrl")]
+        [Description("Access component object")]
+        [DisplayName("Component")]
+        public Pic.Plugin.Component Component
+        {
+            get
+            {
+                return _component;
+            }
+            set
+            {
+                // recomputation of parameter list
+                ClearParameterStack();
+                // set dependancies
+                HasDependancies = false;
+
+                _component = value;
+
+                // update panel2 controls
+                this.Panel2.AutoScroll = true;
+                CreatePluginControls();
+                // fit view
+                FitView();
+            }
+        }
+
+        /// <summary>
         ///  set the plugin path
         /// </summary>
         [Browsable(true)]
@@ -374,9 +404,8 @@ namespace Pic.Plugin.ViewCtrl
                 // update panel2 controls
                 this.Panel2.AutoScroll = true;
                 CreatePluginControls();
-                // force bbox
-                _computeBbox = true;
-                Panel1.Invalidate();
+                // fit view
+                FitView();
             }
             get { return ""; }  // is needed to have "PluginPath" appear as a property of the control
         }
@@ -536,25 +565,8 @@ namespace Pic.Plugin.ViewCtrl
         #region FitView method
         public void FitView()
         {
-            _picGraphics.DrawingBox = this.BoundingBox;
+            _computeBbox = true;
             Panel1.Invalidate();
-        }
-        #endregion
-
-        #region Private properties
-        /// <summary>
-        /// get the current plugin
-        /// </summary>
-        [Browsable(false)]
-        [Category("PluginViewCtrl")]
-        [Description("Access plugin object")]
-        [DisplayName("Component")]
-        private Pic.Plugin.Component Component
-        {
-            get
-            {
-                return _component;
-            }
         }
         #endregion
 
@@ -1084,8 +1096,10 @@ namespace Pic.Plugin.ViewCtrl
             SetParametersDirty();
             Panel2.Controls.Clear();
         }
-
-        private ParameterStack CurrentParameterStack
+        /// <summary>
+        /// Current parameter stack
+        /// </summary>
+        public ParameterStack CurrentParameterStack
         {
             get
             {
@@ -1110,6 +1124,16 @@ namespace Pic.Plugin.ViewCtrl
         {
             _dirtyParameters = true;
             _computeBbox = true;
+        }
+
+        public void SetParameterValue(string paramName, double paramValue)
+        {
+            if (null == _paramStackCurrent)
+               _paramStackCurrent = Component.BuildParameterStack(_paramStackCurrent);
+            _paramStackCurrent.SetDoubleParameter(paramName, paramValue);
+
+            _picGraphics.DrawingBox = BoundingBox;
+            FitView();
         }
         #endregion
 
@@ -1156,8 +1180,7 @@ namespace Pic.Plugin.ViewCtrl
                     nud.Increment = (nud.Value < 10.0m) ? 0.5m : 1.0m;
 
                 _picGraphics.DrawingBox = BoundingBox;
-                _computeBbox = true;
-                Panel1.Invalidate();
+                FitView();
             }
             catch (Exception /*ex*/)
             {
@@ -1178,8 +1201,7 @@ namespace Pic.Plugin.ViewCtrl
                 CreatePluginControls();
 
                 _picGraphics.DrawingBox = BoundingBox;
-                _computeBbox = true;
-                Panel1.Invalidate();
+                FitView();
             }
             catch (Exception ex)
             {
@@ -1191,9 +1213,7 @@ namespace Pic.Plugin.ViewCtrl
         {
             try
             {
-                _picGraphics.DrawingBox = BoundingBox;
-                _computeBbox = true;
-                Panel1.Invalidate();
+                FitView();
             }
             catch (Exception ex)
             {
@@ -1224,8 +1244,7 @@ namespace Pic.Plugin.ViewCtrl
                 if (null != _profileLoader)
                     _profileLoader.Selected = _comboProfile.SelectedItem as Profile;
                 SetParametersDirty();
-                _computeBbox = true;
-                Panel1.Invalidate();
+                FitView();
             }
             catch (Exception ex)
             {
@@ -1249,21 +1268,23 @@ namespace Pic.Plugin.ViewCtrl
         #endregion
 
         #region Nud enter event handler
-        void nud_MouseEnter(object sender, EventArgs e)
+        private void nud_MouseEnter(object sender, EventArgs e)
         {
             NumericUpDown nudControl = sender as NumericUpDown;
             if (null != nudControl && null != timer)
-            {
-                // copies parameter stack
-                tempParameterStack = CurrentParameterStack.Clone();
-                // retrieve parameter name
-                _parameterName = nudControl.Name.Substring(3);
-                // retrieve initial value for parameter
-                _parameterInitialValue = tempParameterStack.GetDoubleParameterValue(_parameterName);
-                // start timer
-                _timerStep = 0;
-                timer.Start();
-            }
+                AnimateParameterName( nudControl.Name.Substring(3) );
+        }
+
+        public void AnimateParameterName(string parameterName)
+        {
+            _parameterName = parameterName;
+            // copies parameter stack
+            tempParameterStack = CurrentParameterStack.Clone();
+            // retrieve initial value for parameter
+            _parameterInitialValue = tempParameterStack.GetDoubleParameterValue(_parameterName);
+            // start timer
+            _timerStep = 0;
+            timer.Start();
         }
 
         void _timer_Tick(object sender, EventArgs e)
@@ -1279,7 +1300,7 @@ namespace Pic.Plugin.ViewCtrl
                     parameterValue = _parameterInitialValue + iStep * 2;
 
                 tempParameterStack.SetDoubleParameter(_parameterName, parameterValue);
-                _computeBbox = true;
+                _computeBbox = false;
                 Panel1.Invalidate();
             }
             else

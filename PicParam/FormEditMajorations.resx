@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bnEditProfiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>418, 13</value>
+    <value>618, 13</value>
   </data>
   <data name="bnEditProfiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -145,7 +145,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bnEditProfiles.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="lblProfile.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -172,7 +172,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblProfile.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="comboBoxProfile.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -181,7 +181,7 @@
     <value>96, 13</value>
   </data>
   <data name="comboBoxProfile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>313, 21</value>
+    <value>513, 21</value>
   </data>
   <data name="comboBoxProfile.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -196,13 +196,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;comboBoxProfile.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="bnOK.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="bnOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>505, 13</value>
+    <value>705, 13</value>
   </data>
   <data name="bnOK.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -223,13 +223,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bnOK.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="bnApply.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="bnApply.Location" type="System.Drawing.Point, System.Drawing">
-    <value>505, 40</value>
+    <value>705, 40</value>
   </data>
   <data name="bnApply.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -250,13 +250,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bnApply.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="bnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="bnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>505, 68</value>
+    <value>705, 68</value>
   </data>
   <data name="bnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -277,6 +277,30 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bnCancel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_pb.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="_pb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 248</value>
+  </data>
+  <data name="_pb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 414</value>
+  </data>
+  <data name="_pb.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;_pb.Name" xml:space="preserve">
+    <value>_pb</value>
+  </data>
+  <data name="&gt;&gt;_pb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_pb.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;_pb.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -286,13 +310,13 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>584, 262</value>
+    <value>784, 662</value>
   </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>600, 300</value>
+    <value>800, 700</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>600, 300</value>
+    <value>800, 300</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Edit majorations...</value>

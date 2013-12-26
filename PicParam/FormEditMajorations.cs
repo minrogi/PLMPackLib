@@ -26,6 +26,19 @@ namespace PicParam
             _componentId = compId;
             _profileLoader = profileLoader;
 
+            if (!DesignMode)
+            {
+                // plugin viewer
+                _pluginViewCtrl = new PluginViewCtrl();
+                _pluginViewCtrl.Size = _pb.Size;
+                _pluginViewCtrl.Location = _pb.Location;
+                _pluginViewCtrl.Visible = true;
+                this.Controls.Add(_pluginViewCtrl);
+
+                // hide
+                _pb.Visible = false;
+            }
+
             // fill combo box
             FillProfileComboBox(currentProfile.ToString());
 
@@ -37,6 +50,8 @@ namespace PicParam
                 Pic.DAL.SQLite.Component comp = Pic.DAL.SQLite.Component.GetById(db, _componentId);
                 Pic.Plugin.Component component = loader.LoadComponent(comp.Document.File.Path(db));
                 stack = component.BuildParameterStack(null);
+                // load component in pluginviewer
+                _pluginViewCtrl.Component = component;
             }
 
             // insert majoration label and textbox controls
@@ -125,7 +140,11 @@ namespace PicParam
                 NumericUpDown nud = ctrl as NumericUpDown;
                 if ( null == nud || !nud.Name.StartsWith("nud_"))
                     continue;
-                nud.Value = (decimal)dictMajo[nud.Name.Substring(4)];
+                if (dictMajo.ContainsKey(nud.Name.Substring(4)))
+                    nud.Value = (decimal)dictMajo[nud.Name.Substring(4)];
+
+                nud.MouseEnter += new EventHandler(nud_MouseEnter);
+                nud.ValueChanged += new EventHandler(nud_ValueChanged);
             }
             _dirty = false;
         }
@@ -178,7 +197,18 @@ namespace PicParam
             form.ShowDialog();
             // refill combo box has some profile might have been added
             FillProfileComboBox(_profile.Name);
-
+        }
+        private void nud_MouseEnter(object sender, EventArgs e)
+        {
+            NumericUpDown nudControl = sender as NumericUpDown;
+            if (null != nudControl)
+                _pluginViewCtrl.AnimateParameterName(nudControl.Name.Substring(4));
+        }
+        private void nud_ValueChanged(object sender, EventArgs e)
+        {
+            NumericUpDown nudControl = sender as NumericUpDown;
+            if (null != nudControl)
+                _pluginViewCtrl.SetParameterValue(nudControl.Name.Substring(4), (double)nudControl.Value);
         }
         #endregion
 
@@ -187,6 +217,10 @@ namespace PicParam
         private CardboardProfile _profile;
         private bool _dirty;
         private ProfileLoader _profileLoader;
+        /// <summary>
+        /// Component viewer
+        /// </summary>
+        private Pic.Plugin.ViewCtrl.PluginViewCtrl _pluginViewCtrl;
         #endregion
     }
 }

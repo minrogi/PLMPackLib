@@ -35,6 +35,8 @@
             this.bnOK = new System.Windows.Forms.Button();
             this.bnApply = new System.Windows.Forms.Button();
             this.bnCancel = new System.Windows.Forms.Button();
+            this._pb = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this._pb)).BeginInit();
             this.SuspendLayout();
             // 
             // bnEditProfiles
@@ -79,12 +81,19 @@
             this.bnCancel.Name = "bnCancel";
             this.bnCancel.UseVisualStyleBackColor = true;
             // 
+            // _pb
+            // 
+            resources.ApplyResources(this._pb, "_pb");
+            this._pb.Name = "_pb";
+            this._pb.TabStop = false;
+            // 
             // FormEditMajorations
             // 
             this.AcceptButton = this.bnOK;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.bnCancel;
+            this.Controls.Add(this._pb);
             this.Controls.Add(this.bnCancel);
             this.Controls.Add(this.bnApply);
             this.Controls.Add(this.bnOK);
@@ -96,11 +105,11 @@
             this.Name = "FormEditMajorations";
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.EditMajorationsForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this._pb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
-
         #endregion
 
         private System.Windows.Forms.Button bnEditProfiles;
@@ -109,5 +118,6 @@
         private System.Windows.Forms.Button bnOK;
         private System.Windows.Forms.Button bnApply;
         private System.Windows.Forms.Button bnCancel;
+        private System.Windows.Forms.PictureBox _pb;
     }
 }
