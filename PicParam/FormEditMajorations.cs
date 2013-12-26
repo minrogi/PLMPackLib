@@ -74,11 +74,14 @@ namespace PicParam
                 lbl.TabIndex = ++tabIndex;
                 this.Controls.Add(lbl);
 
+
+                ParameterDouble paramDouble = param as ParameterDouble;
+
                 NumericUpDown nud = new NumericUpDown();
                 nud.Name = string.Format("nud_{0}", param.Name);
                 nud.Increment = 0.1M;
-                nud.Minimum = 0.0M;
-                nud.Maximum = 10000.0M;
+                nud.Minimum = /*paramDouble.HasValueMin ? (decimal)paramDouble.ValueMin :*/ -10000.0M;
+                nud.Maximum = paramDouble.HasValueMax ? (decimal)paramDouble.ValueMax : 10000.0M;
                 nud.DecimalPlaces = 1;
                 nud.Value = (decimal)stack.GetDoubleParameterValue(param.Name);
                 nud.Location = new Point(
