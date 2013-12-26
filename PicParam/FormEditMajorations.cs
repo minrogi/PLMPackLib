@@ -34,7 +34,6 @@ namespace PicParam
                 _pluginViewCtrl.Location = _pb.Location;
                 _pluginViewCtrl.Visible = true;
                 this.Controls.Add(_pluginViewCtrl);
-
                 // hide
                 _pb.Visible = false;
             }
@@ -63,7 +62,8 @@ namespace PicParam
             {
                 // only shows majorations
                 if (!param.IsMajoration) continue;
-
+                ParameterDouble paramDouble = param as ParameterDouble;
+                // create Label control
                 Label lbl = new Label();
                 lbl.Name = string.Format("lbl_{0}", param.Name);
                 lbl.Text = param.Name;
@@ -73,23 +73,22 @@ namespace PicParam
                 lbl.Size = new Size(30, 13);
                 lbl.TabIndex = ++tabIndex;
                 this.Controls.Add(lbl);
-
-
-                ParameterDouble paramDouble = param as ParameterDouble;
-
+                // create NumericUpDown control
                 NumericUpDown nud = new NumericUpDown();
                 nud.Name = string.Format("nud_{0}", param.Name);
                 nud.Increment = 0.1M;
                 nud.Minimum = paramDouble.HasValueMin ? (decimal)paramDouble.ValueMin : -10000.0M;
                 nud.Maximum = paramDouble.HasValueMax ? (decimal)paramDouble.ValueMax : 10000.0M;
                 nud.DecimalPlaces = 1;
-                nud.Value = (decimal)stack.GetDoubleParameterValue(param.Name);
+                nud.Value = (decimal)paramDouble.Value;
                 nud.Location = new Point(
                     lblX + (iCount / 5) * offsetX + lbl.Size.Width + 1
                     , lblY + (iCount % 5) * offsetY);
                 nud.Size = new Size(60, 20);
                 nud.TabIndex = ++tabIndex;
                 nud.ValueChanged += new EventHandler(nudValueChanged);
+                nud.GotFocus += new EventHandler(nud_GotFocus);
+                nud.Click += new EventHandler(nud_GotFocus);
                 this.Controls.Add(nud);
 
                 ++iCount;
@@ -144,7 +143,11 @@ namespace PicParam
                 if ( null == nud || !nud.Name.StartsWith("nud_"))
                     continue;
                 if (dictMajo.ContainsKey(nud.Name.Substring(4)))
-                    nud.Value = (decimal)dictMajo[nud.Name.Substring(4)];
+                {
+                    decimal v = (decimal)dictMajo[nud.Name.Substring(4)];
+                    if (nud.Minimum < v && v < nud.Maximum)     
+                        nud.Value = v;
+                }
 
                 nud.MouseEnter += new EventHandler(nud_MouseEnter);
                 nud.ValueChanged += new EventHandler(nud_ValueChanged);
@@ -201,6 +204,9 @@ namespace PicParam
             // refill combo box has some profile might have been added
             FillProfileComboBox(_profile.Name);
         }
+        #endregion
+
+        #region NUD event handlers
         private void nud_MouseEnter(object sender, EventArgs e)
         {
             NumericUpDown nudControl = sender as NumericUpDown;
@@ -212,6 +218,11 @@ namespace PicParam
             NumericUpDown nudControl = sender as NumericUpDown;
             if (null != nudControl)
                 _pluginViewCtrl.SetParameterValue(nudControl.Name.Substring(4), (double)nudControl.Value);
+        }
+        private void nud_GotFocus(object sender, EventArgs e)
+        {
+            NumericUpDown nud = sender as NumericUpDown;
+            nud.Select(0, nud.ToString().Length);
         }
         #endregion
 

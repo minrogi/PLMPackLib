@@ -1005,13 +1005,13 @@ namespace Pic.Plugin.ViewCtrl
             }
         }
 
-        void nud_GotFocus(object sender, EventArgs e)
+        private void nud_GotFocus(object sender, EventArgs e)
         {
             NumericUpDown nud = sender as NumericUpDown;
             nud.Select(0, nud.ToString().Length);
         }
 
-        void factoryDataCtrl_TabChanged(int currentIndex)
+        private void factoryDataCtrl_TabChanged(int currentIndex)
         {
             _computeBbox = true;
             Panel1.Invalidate();
@@ -1021,7 +1021,7 @@ namespace Pic.Plugin.ViewCtrl
         /// Save control values in parameter stack
         /// </summary>
         /// <param name="stack">Parameter stack passed as ref</param>
-        bool SaveControlValues(ref Pic.Plugin.ParameterStack stack)
+        private bool SaveControlValues(ref Pic.Plugin.ParameterStack stack)
         {
             if (null == stack) return false;
             // load some parameters from majorations

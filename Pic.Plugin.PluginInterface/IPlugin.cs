@@ -197,8 +197,18 @@ namespace Pic.Plugin
 
         public double Value
         {
-            get { return _value; }
-            set { _value = value; }
+            get
+            {
+                if (_hasValueMin && _value < _valueMin) return _valueMin;
+                if (_hasValueMax && _value > _valueMax) return _valueMax;
+                return _value; 
+            }
+            set
+            {
+                _value = value;
+                if (_hasValueMin && _value < _valueMin) _value = _valueMin;
+                if (_hasValueMax && _value > _valueMax) _value = _valueMax;
+            }
 		}
 
         public bool HasValueMin
