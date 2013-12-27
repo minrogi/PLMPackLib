@@ -67,10 +67,13 @@ namespace PicParam
             if (null == _majorationList)
             {
                 PPDataContext db = new PPDataContext();
-                _majorationList = Pic.DAL.SQLite.Component.GetDefaultMajorations(db,
+                _majorationList = Pic.DAL.SQLite.Component.GetDefaultMajorations(
+                    db,
                     _comp.ID,
                     _cardboardProfiles[Selected.ToString()]
-                    , Pic.DAL.SQLite.Component.MajoRounding.ROUDING_FIRSTDECIMALNEAREST);
+                    // rounding to be applied while building majoration dictionary
+                    , Pic.DAL.SQLite.Component.IntToMajoRounding(Properties.Settings.Default.MajorationRounding)
+                    );
             }
             return _majorationList;
         }

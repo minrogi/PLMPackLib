@@ -989,6 +989,21 @@
             , ROUNDING_HALFTOP
             , ROUDING_INT
         }
+
+        public static MajoRounding IntToMajoRounding(int index)
+        {
+            // rounding to be applied while building majoration dictionary
+            Pic.DAL.SQLite.Component.MajoRounding majoRounding = Pic.DAL.SQLite.Component.MajoRounding.ROUDING_FIRSTDECIMALNEAREST;
+            switch (index)
+            {
+                case 0: majoRounding = Pic.DAL.SQLite.Component.MajoRounding.ROUDING_FIRSTDECIMALNEAREST; break;
+                case 1: majoRounding = Pic.DAL.SQLite.Component.MajoRounding.ROUNDING_HALFNEAREST; break;
+                case 2: majoRounding = Pic.DAL.SQLite.Component.MajoRounding.ROUNDING_HALFTOP; break;
+                case 3: majoRounding = Pic.DAL.SQLite.Component.MajoRounding.ROUDING_INT; break;
+                default: break;
+            }
+            return majoRounding;
+        }
         #endregion
 
         public static Component GetById(PPDataContext db, int id)
