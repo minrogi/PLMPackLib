@@ -8,6 +8,7 @@ using log4net;
 using log4net.Config;
 
 using Microsoft.VisualBasic.ApplicationServices; // WindowsFormsApplicationBase
+using System.Threading;
 #endregion
 
 namespace PicParam
@@ -25,7 +26,22 @@ namespace PicParam
             // set up a simple configuration
             try
             {
-                _log.Info("Starting " + Application.ProductName);
+                // force CultureToUse culture if specified in config file
+                string specifiedCulture = PicParam.Properties.Settings.Default.CultureToUse;
+                if (!string.IsNullOrEmpty(specifiedCulture))
+                {
+                    try
+                    {
+                        Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(specifiedCulture);
+                        Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(specifiedCulture);
+                    }
+                    catch (Exception ex)
+                    {
+                        _log.Error(string.Format("Specified culture in config file ({0}) appears to be invalid: {1}", specifiedCulture, ex.Message));
+                    }
+                }
+
+                _log.Info(string.Format("Starting {0} with culture {1}", Application.ProductName, Thread.CurrentThread.CurrentUICulture));
 
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);

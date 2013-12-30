@@ -6,7 +6,9 @@ using System.Text;
 // Path
 using System.IO;
 // Assembly
-using System.Reflection; 
+using System.Reflection;
+// logging
+using log4net;
 #endregion
 
 namespace PicParam
@@ -16,6 +18,10 @@ namespace PicParam
     /// </summary>
     public class LocalizerImpl : Pic.Plugin.ViewCtrl.ILocalizer, IDisposable
     {
+        #region Logging
+        protected static readonly ILog _log = LogManager.GetLogger(typeof(LocalizerImpl));
+        #endregion
+
         #region Instantiation
         /// <summary>
         /// Static singleton instantiator
@@ -105,12 +111,19 @@ namespace PicParam
         public string LocalisationFileName
         {
             get
-            { 
-                string assemblyFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-                return Path.Combine(
-                    assemblyFolder
-                    , string.Format("Localisation_{0}.txt", System.Globalization.CultureInfo.CurrentCulture.ThreeLetterWindowsLanguageName)
-                    );            
+            {
+                // using variable _localizationFilePath in order to prevent changing culture
+                // when new threads are created
+                // for .NET framework 4.5 and above set property CultureInfo.DefaultThreadCurrentCulture
+                if (string.IsNullOrEmpty(_localizationFilePath))
+                {
+                    string assemblyFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                    _localizationFilePath = Path.Combine(
+                        assemblyFolder
+                        , string.Format("Localisation_{0}.txt", System.Globalization.CultureInfo.CurrentCulture.ThreeLetterWindowsLanguageName)
+                        );
+                }
+                return _localizationFilePath;
             }
         }
         /// <summary>
@@ -136,8 +149,11 @@ namespace PicParam
                     }
                 }
             }
-            catch (Exception /*ex*/)
+            catch (Exception ex)
             {
+                _log.Error(string.Format("Failed loading translation strings from  file {0} with message: {1}"
+                    , LocalisationFileName
+                    ,  ex.Message));
             }
         }
         /// <summary>
@@ -147,8 +163,7 @@ namespace PicParam
         {
             try
             {
-                string filePath = string.Empty;
-                using (StreamWriter sw = new StreamWriter(LocalisationFileName, false, Encoding.Unicode))
+               using (StreamWriter sw = new StreamWriter(LocalisationFileName, false, Encoding.Unicode))
                 {
                     // we need to find a cleaner way to sort dictionary on both key and value
                     // first already translated strings
@@ -165,13 +180,18 @@ namespace PicParam
                     }
                 }
             }
-            catch (Exception /*ex*/)
-            { 
+            catch (Exception ex)
+            {
+                _log.Error(string.Format("Failed saving translation string as file {0} with message : {1}", LocalisationFileName,  ex.Message));
             }
         }
         #endregion
 
         #region Data members
+        /// <summary>
+        /// localisation
+        /// </summary>
+        private string _localizationFilePath; 
         /// <summary>
         /// static singleton instance reference
         /// </summary>

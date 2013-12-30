@@ -851,7 +851,7 @@ namespace Pic.Plugin.ViewCtrl
                         continue;
 
                     Label lbl = new Label();
-                    lbl.Text = Translate(paramDouble.Description) + " (" + Translate(paramDouble.Name) + ")";
+                    lbl.Text = Translate(paramDouble.Description) + " (" + paramDouble.Name + ")";
                     lbl.Location = new System.Drawing.Point(lblX + param.IndentValue, posY);
                     lbl.Size = lblSize;
                     lbl.TabIndex = ++tabIndex;

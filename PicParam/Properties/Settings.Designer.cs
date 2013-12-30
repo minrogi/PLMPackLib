@@ -182,5 +182,14 @@ namespace PicParam.Properties {
                 this["DebugMode"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CultureToUse {
+            get {
+                return ((string)(this["CultureToUse"]));
+            }
+        }
     }
 }

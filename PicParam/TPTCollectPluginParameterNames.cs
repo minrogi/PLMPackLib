@@ -65,9 +65,7 @@ namespace PicParam
                 {
                     if (param.IsMajoration)
                         continue;
-                    // parameter name
-                    TryAndAddString( param.Name );
-                    // parameter description
+                    // only add parameter description
                     TryAndAddString( param.Description );
                     // ParameterMulti ? 
                     Pic.Plugin.ParameterMulti paramMulti = param as Pic.Plugin.ParameterMulti;
