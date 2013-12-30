@@ -115,7 +115,7 @@
     </ProjectReference>
     <ProjectReference Include="..\Sharp3D.Math\Sharp3D.Math.csproj">
       <Project>{24D95CE6-335E-4B4B-95C9-AAC4D89E4D93}</Project>
-      <Name>Sharp3D.Math %28Common\Sharp3D.Math%29</Name>
+      <Name>Sharp3D.Math</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -158,7 +158,7 @@
     </ProjectReference>
     <ProjectReference Include="..\Sharp3D.Math\Sharp3D.Math.csproj">
       <Project>{24D95CE6-335E-4B4B-95C9-AAC4D89E4D93}</Project>
-      <Name>Sharp3D.Math %28Common\Sharp3D.Math%29</Name>
+      <Name>Sharp3D.Math</Name>
     </ProjectReference>
     <ProjectReference Include="..\TreeDim.UserControls\TreeDim.UserControls.csproj">
       <Project>{D75634E3-34AA-4418-A6B6-3647BFF90606}</Project>

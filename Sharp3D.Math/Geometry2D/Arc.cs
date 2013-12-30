@@ -143,7 +143,7 @@ namespace Sharp3D.Math.Geometry2D
         public Vector2D PointAtAngle(double angle)
         {
             double angleRad = angle * System.Math.PI / 180.0;
-            return _pCenter + _radius * (new Vector2D(System.Math.Cos(-angleRad), System.Math.Sin(-angleRad)));
+            return _pCenter + _radius * (new Vector2D(System.Math.Cos(angleRad), System.Math.Sin(angleRad)));
         }
 
         public double AngleAtPoint(Vector2D p)
