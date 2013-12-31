@@ -35,6 +35,7 @@ namespace Pic.Plugin.GeneratorCtrl
         private string _outputPath = string.Empty;
         private bool _outputPathInitialized = false;
         private string _pluginVersion = "2.0.0.0";
+        private FindAndReplaceForm _findForm = new FindAndReplaceForm();
         #endregion
 
         #region PluginValidated event (+ associated delegate)
@@ -58,6 +59,68 @@ namespace Pic.Plugin.GeneratorCtrl
             txtCompany.Text = (string)Registry.GetValue(@"HKEY_CURRENT_USER\Software\TreeDim\PicSharp", "PluginCompany", "");
             txtName.Text = "";
             txtDescription.Text = "";
+         }
+
+        protected override bool ProcessKeyPreview(ref Message m)
+        {
+            const int WM_KEYDOWN = 0x100;
+            const int WM_CHAR = 0x102;
+            const int WM_SYSCHAR = 0x106;
+            const int WM_SYSKEYDOWN = 0x104;
+            const int WM_IME_CHAR = 0x286;
+            KeyEventArgs e = null;
+            if ((m.Msg != WM_CHAR) && (m.Msg != WM_SYSCHAR) && (m.Msg != WM_IME_CHAR))
+            {
+                e = new KeyEventArgs(((Keys)((int)((long)m.WParam))) | ModifierKeys);
+                if ((m.Msg == WM_KEYDOWN) || (m.Msg == WM_SYSKEYDOWN))
+                {
+                    TrappedKeyDown(e);
+                }
+
+                if (e.Handled)
+                    return e.Handled;
+            }
+            return base.ProcessKeyPreview(ref m);
+        }
+
+        public void TrappedKeyDown(KeyEventArgs e)
+        {
+            if (e.Control)
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.F:
+                        _findForm.ShowFor(codeEditorCtrl, false);
+                        break;
+                    case Keys.H:
+                        _findForm.ShowFor(codeEditorCtrl, true);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                switch (e.KeyCode)
+                { 
+                    case Keys.F3:
+                        _findForm.FindNext(true, false, string.Format("Search text «{0}» not found.", _findForm.LookFor));
+                        break;
+                    default:
+                        break;
+                }
+            }
+            if (e.Shift)
+            {
+                switch (e.KeyCode)
+                { 
+                    case Keys.F3:
+                        _findForm.FindNext(true, true, string.Format("Search text «{0}» not found.", _findForm.LookFor));
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
         #endregion
 
@@ -109,6 +172,7 @@ namespace Pic.Plugin.GeneratorCtrl
                 // source
                 codeEditorCtrl.Document.HighlightingStrategy = ICSharpCode.TextEditor.Document.HighlightingStrategyFactory.CreateHighlightingStrategyForFile(@"PluginCode.cs");
                 codeEditorCtrl.Text = pluginTools.SourceCode;
+
                 // version
                 PluginVersion = pluginTools.Version;
             }
@@ -410,6 +474,25 @@ namespace Pic.Plugin.GeneratorCtrl
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+        #endregion
+
+        #region Find & replace methods
+        public void Find()
+        {
+            _findForm.ShowFor(codeEditorCtrl, false);
+        }
+        public void FindAndReplace()
+        {
+            _findForm.ShowFor(codeEditorCtrl, true);
+        }
+        public void RepeatFind()
+        {
+            _findForm.FindNext(true, false, string.Format("Search text «{0}» not found.", _findForm.LookFor));
+        }
+        public void RepeatFindBackward()
+        {
+            _findForm.FindNext(true, true, string.Format("Search text «{0}» not found.", _findForm.LookFor)); 
         }
         #endregion
 
