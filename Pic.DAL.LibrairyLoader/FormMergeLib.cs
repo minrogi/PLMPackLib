@@ -134,7 +134,7 @@ namespace Pic.DAL.LibraryLoader
                 string uriPackLib = Settings.Default.UriPlmPackLib;
                 if (!uriPackLib.EndsWith("/"))
                     uriPackLib += "/";
-                return Settings.Default.UriPlmPackLib + "lib/" + _fileName;
+                return uriPackLib + "lib/" + _fileName;
             }
         }
         #endregion

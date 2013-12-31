@@ -30,6 +30,7 @@
       <xs:attribute name="Name" type="string" use="required"/>
       <xs:attribute name="Description" type="string" use="required"/>
       <xs:attribute name="Author" type="string" use="optional"/>
+      <xs:attribute name="InfoUrl" type="string" use="optional"/>
       <xs:attribute name="FileName" type="string" use="required"/>
       <xs:attribute name="ThumbnailPath" type="string" use="required"/>
       <xs:attribute name="DateCreated" type="date" use="required"/>

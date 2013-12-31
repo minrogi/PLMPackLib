@@ -89,6 +89,19 @@ namespace Pic.DAL.LibraryLoader
             // success
             return true;
         }
+        public string GetInfoUrl(int iSel)
+        {
+            // sanity check
+            if (-1 == iSel) return string.Empty;
+            // get library
+            Library lib = _libraries[iSel];
+            // lib uri
+            string uriPackLib = Pic.DAL.LibraryLoader.Settings.Default.UriPlmPackLib;
+            if (!uriPackLib.EndsWith("/"))
+                uriPackLib += "/";
+            // url
+            return uriPackLib + @"lib/" + lib.InfoUrl;
+        }
         #endregion
         
         #region Data members

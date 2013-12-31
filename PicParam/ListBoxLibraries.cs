@@ -61,7 +61,6 @@ public class ListBoxLibraries : ListBox
             TextRenderer.DrawText(e.Graphics, lib.Description, e.Font, itemRect2, e.ForeColor, flags); itemRect2.Y += itemRect2.Height;
             TextRenderer.DrawText(e.Graphics, lib.Author, e.Font, itemRect2, e.ForeColor, flags); itemRect2.Y += itemRect2.Height;
             TextRenderer.DrawText(e.Graphics, lib.DateCreated.ToShortDateString(), e.Font, itemRect2, e.ForeColor, flags); itemRect2.Y += itemRect2.Height;
-
        }
     }
 

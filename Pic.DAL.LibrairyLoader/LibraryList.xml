@@ -4,58 +4,85 @@
     DateCreated="2013-03-06"
     DateModified="2013-03-06"
     xmlns="http://www.treedim.com/LibraryList.xsd">
-  <Library Name="PackLib_ECMA A"
-    Description="ECMA A"
+	
+  <Library Name="Packlib_Starter (pre-requisites)"
+    Description="Update before downloading any other library !!!"
     Author="treeDiM"
-    FileName="PackLib_ECMA A.zip"
-    ThumbnailPath="Group A.png"
-    DateCreated="2013-02-21"/>
-  <Library Name="PackLib_ECMA B"
-    Description="ECMA B"
+    InfoUrl="PackLib_Plugin_Components_full.html"
+    FileName="PackLib_Plugin_Components_full.zip"
+    ThumbnailPath="Packlib_Starter.png"
+    DateCreated="2013-12-20"/>  
+
+  <Library Name="FEFCO standards"
+    Description="FEFCO Full catalogue of designs "
     Author="treeDiM"
-    FileName="PackLib_ECMA B.zip"
-    ThumbnailPath="Group B.png"
-    DateCreated="2013-02-21"/>
-  <Library Name="PackLib_ECMA C"
-    Description="ECMA C"
+    InfoUrl="PackLib_FEFCO_full.html"
+    FileName="PackLib_FEFCO_full.zip"
+    ThumbnailPath="FEFCO.png"
+    DateCreated="2013-12-20"/>
+	
+  <Library Name="ECMA standards"
+    Description="ECMA Full catalogue of designs "
     Author="treeDiM"
-    FileName="PackLib_ECMA C.zip"
-    ThumbnailPath="Group C.png"
-    DateCreated="2013-02-21"/>
-  <Library Name="PackLib_ECMA D"
-    Description="ECMA D"
+    InfoUrl="PackLib_ECMA_full.html"
+    FileName="PackLib_ECMA_full.zip"
+    ThumbnailPath="ECMA.png"
+    DateCreated="2013-12-20"/>
+
+  <Library Name="POS-Display_Library"
+    Description="POS-Display_Library_1"
     Author="treeDiM"
-    FileName="PackLib_ECMA D.zip"
-    ThumbnailPath="Group D.png"
-    DateCreated="2013-02-21"/>
-  <Library Name="PackLib_ECMA E"
-    Description="ECMA E"
+    InfoUrl="PackLib_POS-Display_Library_1.html"
+    FileName="PackLib_POS-Display_Library_1.zip"
+    ThumbnailPath="Packaging_POS-Display_Demo.png"
+    DateCreated="2013-12-20"/>
+
+  <Library Name="Packaging_Library_Demo"
+    Description="Packaging_Library_Demo"
     Author="treeDiM"
-    FileName="PackLib_ECMA E.zip"
-    ThumbnailPath="Group E.png"
-    DateCreated="2013-02-21"/>
-  <Library Name="PackLib_ECMA F"
-    Description="ECMA F"
+    InfoUrl="PackLib_Packaging_Library_1.html"
+    FileName="PackLib_Packaging_Library_1.zip"
+    ThumbnailPath="Packaging_Library_Demo.png"
+    DateCreated="2013-12-20"/>
+
+  <Library Name="Office Accessories"
+    Description="Make your own office accessories with your cutting table"
     Author="treeDiM"
-    FileName="PackLib_ECMA F.zip"
-    ThumbnailPath="Group F.png"
-    DateCreated="2013-02-21"/>
+    InfoUrl="PackLib_Office_Accessories.html"
+    FileName="PackLib_Office_Accessories.zip"
+    ThumbnailPath="Office accessories.png"
+    DateCreated="2013-12-20"/>
+	
+  <Library Name="Labels / Etiquettes"
+    Description="Select the shape of your label, choose the dimensions, make the step and repeat."
+    Author="treeDiM"
+    InfoUrl="PackLib_Labels.html"
+    FileName="PackLib_Labels.zip"
+    ThumbnailPath="Labels.jpg"
+    DateCreated="2013-12-20"/>
+	
   <Library Name="PackLib_Furnitures"
      Description="Cardboard furnitures"
      Author="treeDiM"
+     InfoUrl="PackLib_Furnitures.html"
      FileName="PackLib_Furnitures.zip"
      ThumbnailPath="PackLib_Furnitures.png"
      DateCreated="2013-02-21"/>
-  <Library Name="PackLib_PLV-DISPLAY"
-     Description="Various cardboard displays"
+	 
+  <Library Name="Smart Assembly"
+     Description="Smart assembly allows building complex samples"
      Author="treeDiM"
-     FileName="PackLib_PLV-DISPLAY.zip"
-     ThumbnailPath="PackLib_PLV-DISPLAY.png"
-     DateCreated="2013-02-21"/>
-  <Library Name="PackLib_SmartAssembly"
-     Description="Smart assembly allows building "
-     Author="treeDiM"
-     FileName="PackLib_SmartAssembly.zip"
+     InfoUrl="PackLib_Smart_Assembly.html"
+     FileName="PackLib_Smart_Assembly.zip"
      ThumbnailPath="PackLib_SmartAssembly.png"
-     DateCreated="2013-02-21"/>
+     DateCreated="2013-12-20"/>
+	 
+<Library Name="Install Library"
+    Description="What is in the last Packlib 6.2"
+    Author="treeDiM"
+    InfoUrl="PackLib_DB_Install.html"
+    FileName="PackLib_DB_Install.zip"
+    ThumbnailPath="DB_Install.png"
+    DateCreated="2013-12-20"/>
+	 
 </ListOfLibraries>

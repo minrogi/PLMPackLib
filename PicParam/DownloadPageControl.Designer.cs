@@ -32,6 +32,7 @@
             this.bnMerge = new System.Windows.Forms.Button();
             this.bnOverwrite = new System.Windows.Forms.Button();
             this.listBoxLibraries = new ListBoxLibraries();
+            this.bnInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bnMerge
@@ -56,10 +57,18 @@
             this.listBoxLibraries.MinimumSize = new System.Drawing.Size(20, 20);
             this.listBoxLibraries.Name = "listBoxLibraries";
             // 
+            // bnInfo
+            // 
+            resources.ApplyResources(this.bnInfo, "bnInfo");
+            this.bnInfo.Name = "bnInfo";
+            this.bnInfo.UseVisualStyleBackColor = true;
+            this.bnInfo.Click += new System.EventHandler(this.bnInfo_Click);
+            // 
             // DownloadPageControl
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.bnInfo);
             this.Controls.Add(this.listBoxLibraries);
             this.Controls.Add(this.bnOverwrite);
             this.Controls.Add(this.bnMerge);
@@ -73,5 +82,6 @@
         private ListBoxLibraries listBoxLibraries;
         private System.Windows.Forms.Button bnMerge;
         private System.Windows.Forms.Button bnOverwrite;
+        private System.Windows.Forms.Button bnInfo;
     }
 }

@@ -78,6 +78,20 @@ namespace PicParam
                 _log.Error(ex.ToString());
             }
         }
+
+        private void bnInfo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // get url                
+                string infoUrl = libFetcher.GetInfoUrl(listBoxLibraries.SelectedIndex);
+                System.Diagnostics.Process.Start(infoUrl);
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message);
+            }
+        }
         #endregion
 
         #region User control override
