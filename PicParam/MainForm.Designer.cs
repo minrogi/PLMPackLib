@@ -66,8 +66,6 @@
             this.layoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.customizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
-            this.updateLocalisationFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutTreeDimPicParamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMain = new System.Windows.Forms.ToolStrip();
@@ -86,8 +84,6 @@
             this.toolStripButtonLayout = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonHelp = new System.Windows.Forms.ToolStripButton();
-            this.toolStripDebug = new System.Windows.Forms.ToolStrip();
-            this.toolStripEditDLL = new System.Windows.Forms.ToolStripButton();
             this.toolStripExport = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonPicGEOM = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPicDecoup = new System.Windows.Forms.ToolStripButton();
@@ -100,6 +96,8 @@
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonCaseOptimization = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPalletization = new System.Windows.Forms.ToolStripButton();
+            this.toolStripDebug = new System.Windows.Forms.ToolStrip();
+            this.toolStripEditDLL = new System.Windows.Forms.ToolStripButton();
             this.openFileDialogRestore = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogBackup = new System.Windows.Forms.SaveFileDialog();
             this.toolStripContainerDefault.BottomToolStripPanel.SuspendLayout();
@@ -114,8 +112,8 @@
             this._pluginViewCtrl.SuspendLayout();
             this.menuStripMain.SuspendLayout();
             this.toolStripMain.SuspendLayout();
-            this.toolStripDebug.SuspendLayout();
             this.toolStripExport.SuspendLayout();
+            this.toolStripDebug.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripContainerDefault
@@ -169,6 +167,9 @@
             this._treeViewCtrl.AllowDrop = true;
             resources.ApplyResources(this._treeViewCtrl, "_treeViewCtrl");
             this._treeViewCtrl.Name = "_treeViewCtrl";
+            this._treeViewCtrl.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            ((System.Windows.Forms.TreeNode)(resources.GetObject("_treeViewCtrl.Nodes"))),
+            ((System.Windows.Forms.TreeNode)(resources.GetObject("_treeViewCtrl.Nodes1")))});
             this._treeViewCtrl.ShowNodeToolTips = true;
             // 
             // _webBrowser4PDF
@@ -185,6 +186,7 @@
             // _pluginViewCtrl
             // 
             this._pluginViewCtrl.CloseButtonVisible = false;
+            this._pluginViewCtrl.Component = null;
             resources.ApplyResources(this._pluginViewCtrl, "_pluginViewCtrl");
             this._pluginViewCtrl.HasDependancies = false;
             this._pluginViewCtrl.Localizer = null;
@@ -371,9 +373,7 @@
             this.toolStripSeparator4,
             this.layoutToolStripMenuItem,
             this.toolStripSeparator9,
-            this.customizeToolStripMenuItem,
-            this.toolStripSeparator13,
-            this.updateLocalisationFileToolStripMenuItem});
+            this.customizeToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             resources.ApplyResources(this.toolsToolStripMenuItem, "toolsToolStripMenuItem");
             // 
@@ -409,17 +409,6 @@
             this.customizeToolStripMenuItem.Name = "customizeToolStripMenuItem";
             resources.ApplyResources(this.customizeToolStripMenuItem, "customizeToolStripMenuItem");
             this.customizeToolStripMenuItem.Click += new System.EventHandler(this.customizeToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator13
-            // 
-            this.toolStripSeparator13.Name = "toolStripSeparator13";
-            resources.ApplyResources(this.toolStripSeparator13, "toolStripSeparator13");
-            // 
-            // updateLocalisationFileToolStripMenuItem
-            // 
-            this.updateLocalisationFileToolStripMenuItem.Name = "updateLocalisationFileToolStripMenuItem";
-            resources.ApplyResources(this.updateLocalisationFileToolStripMenuItem, "updateLocalisationFileToolStripMenuItem");
-            this.updateLocalisationFileToolStripMenuItem.Click += new System.EventHandler(this.tools_updateLocalisationFile);
             // 
             // helpToolStripMenuItem
             // 
@@ -558,24 +547,6 @@
             this.toolStripButtonHelp.Name = "toolStripButtonHelp";
             this.toolStripButtonHelp.Click += new System.EventHandler(this.toolStripButtonHelp_Click);
             // 
-            // toolStripDebug
-            // 
-            resources.ApplyResources(this.toolStripDebug, "toolStripDebug");
-            this.toolStripDebug.AllowItemReorder = true;
-            this.toolStripDebug.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.toolStripDebug.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripEditDLL});
-            this.toolStripDebug.Name = "toolStripDebug";
-            this.toolStripDebug.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStripDebug.TabStop = true;
-            // 
-            // toolStripEditDLL
-            // 
-            this.toolStripEditDLL.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.toolStripEditDLL, "toolStripEditDLL");
-            this.toolStripEditDLL.Name = "toolStripEditDLL";
-            this.toolStripEditDLL.Click += new System.EventHandler(this.toolStripEditDLL_Click);
-            // 
             // toolStripExport
             // 
             resources.ApplyResources(this.toolStripExport, "toolStripExport");
@@ -668,6 +639,24 @@
             this.toolStripButtonPalletization.Name = "toolStripButtonPalletization";
             this.toolStripButtonPalletization.Click += new System.EventHandler(this.toolStripButtonPalletization_Click);
             // 
+            // toolStripDebug
+            // 
+            resources.ApplyResources(this.toolStripDebug, "toolStripDebug");
+            this.toolStripDebug.AllowItemReorder = true;
+            this.toolStripDebug.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.toolStripDebug.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripEditDLL});
+            this.toolStripDebug.Name = "toolStripDebug";
+            this.toolStripDebug.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStripDebug.TabStop = true;
+            // 
+            // toolStripEditDLL
+            // 
+            this.toolStripEditDLL.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.toolStripEditDLL, "toolStripEditDLL");
+            this.toolStripEditDLL.Name = "toolStripEditDLL";
+            this.toolStripEditDLL.Click += new System.EventHandler(this.toolStripEditDLL_Click);
+            // 
             // saveFileDialogBackup
             // 
             resources.ApplyResources(this.saveFileDialogBackup, "saveFileDialogBackup");
@@ -699,10 +688,10 @@
             this.menuStripMain.PerformLayout();
             this.toolStripMain.ResumeLayout(false);
             this.toolStripMain.PerformLayout();
-            this.toolStripDebug.ResumeLayout(false);
-            this.toolStripDebug.PerformLayout();
             this.toolStripExport.ResumeLayout(false);
             this.toolStripExport.PerformLayout();
+            this.toolStripDebug.ResumeLayout(false);
+            this.toolStripDebug.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -780,8 +769,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonDownload;
         private System.Windows.Forms.ToolStrip toolStripDebug;
         private System.Windows.Forms.ToolStripButton toolStripEditDLL;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
-        private System.Windows.Forms.ToolStripMenuItem updateLocalisationFileToolStripMenuItem;
     }
 }
 

@@ -286,7 +286,7 @@ namespace PicParam
             }
         }
         #endregion
-        #region toolStripMenuItemClick
+        #region Tools
         private void editProfilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormEditProfiles form = new FormEditProfiles();
@@ -1008,31 +1008,6 @@ namespace PicParam
                 // try and delete copy file
                 try { System.IO.File.Delete(filePathCopy); }
                 catch (Exception /*ex*/) {}
-            }
-        }
-        private void tools_updateLocalisationFile(object sender, EventArgs e)
-        {
-            try
-            {
-                // backup branch
-                FormWorkerThreadTask.Execute(new TPTCollectPluginParameterNames());
-
-                // open localisation file
-                ProcessStartInfo startInfo = new ProcessStartInfo();
-                startInfo.UseShellExecute = true;
-                startInfo.Verb = "Open";
-                startInfo.CreateNoWindow = false;
-                startInfo.WindowStyle = ProcessWindowStyle.Normal;
-                startInfo.FileName = LocalizerImpl.Instance.LocalisationFileName;
-                using (Process p = new Process())
-                {
-                    p.StartInfo = startInfo;
-                    p.Start();
-                }
-            }
-            catch (Exception ex)
-            {
-                _log.Error(ex.ToString());
             }
         }
         #endregion

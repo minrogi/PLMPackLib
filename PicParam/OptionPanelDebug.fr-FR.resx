@@ -130,6 +130,9 @@
   <data name="checkBoxDebug.Text" xml:space="preserve">
     <value>Activer les fonctions de débogage</value>
   </data>
+  <data name="bnUpdateLocalisationFile.Text" xml:space="preserve">
+    <value>Mise à jour fichier de traduction</value>
+  </data>
   <data name="$this.AccessibleDescription" xml:space="preserve">
     <value>Activer les fonctions de débogage</value>
   </data>
