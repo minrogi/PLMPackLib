@@ -4,24 +4,19 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>3.5</ProductVersion>
-    <ProjectGuid>{721a8edc-28bd-4a84-85b7-c4382d8e2e92}</ProjectGuid>
+    <ProjectGuid>{25C173B1-2151-4135-BAEF-8F8CCDC23EC6}</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
-    <OutputName>PLMPackLibMSM</OutputName>
+    <OutputName>PLMPackLibMSM_woDatabase</OutputName>
     <OutputType>Module</OutputType>
     <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
     <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
-    <Name>PicParamMSM</Name>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <OutputPath>bin\$(Configuration)\</OutputPath>
-    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
-    <DefineConstants>Debug</DefineConstants>
+    <Name>PicParamMSM_woDatabase</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <OutputPath>bin\$(Configuration)\</OutputPath>
-    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <OutputPath>bin\$(Configuration)\woDatabase\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\woDatabase\</IntermediateOutputPath>
     <SuppressSpecificWarnings>1072;1076</SuppressSpecificWarnings>
-    <DefineConstants>DatabaseEmbedded=True;</DefineConstants>
+    <DefineConstants></DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="asm_fragment.wxs" />

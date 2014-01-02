@@ -8,7 +8,7 @@
              Description="$(var.Package_Description)"
              Comments="$(var.Package_Comments)"
              Languages="1033"
-             Manufacturer="$(var.ProductManufacturer)" 
+             Manufacturer="$(var.ProductManufacturer)"
              InstallerVersion="300" />
     <!-- Forcibly overwriting preexisting files during installation -->
     <Property Id="REINSTALLMODE" Value="amus" />
@@ -228,12 +228,14 @@
         <File Source="..\PicSharpDb\PicParamEmpty.db" KeyPath="yes" Checksum="yes" />
       </Component>
     </DirectoryRef>
+    <?ifdef DatabaseEmbedded ?>
     <DirectoryRef Id="Data">
       <Component Id="FileRepository" Guid="BEEA8E6F-43CB-451A-B205-4BB68C7BA57C">
         <File Source="..\PicSharpDb\PackLib_DB_Install.zip" />
         <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
       </Component>
     </DirectoryRef>
+    <?endif?>
     <!-- ProgramMenuFolder -->
     <DirectoryRef Id="DesktopFolder">
       <Component Id="DesktopShortcutComp" Guid="{28CF1E86-4236-4cd8-8AED-0CB95B579C25}">
@@ -245,9 +247,11 @@
     <ComponentRef Id="cmp021B803BA0D718F306F7F4F945D49351" />
     <ComponentRef Id="cmp59BC269C61774B2F844FC5C7A1044574" />
     <!--********** Application files : END *********************************-->
+    <?ifdef DatabaseEmbedded ?>
     <CustomAction Id="ZipExtractCA" FileKey="ZipExtractExe" Execute="deferred" ExeCommand="/m restore /f &quot;[Data]PackLib_DB_Install.zip&quot; /d &quot;[Data]\&quot;" />
     <InstallExecuteSequence>
       <Custom Action="ZipExtractCA" Before="InstallFinalize">$DataInstall&gt;2 AND (Installed OR NETFRAMEWORK40FULL) AND (NOT DATABASEEXISTS)</Custom>
     </InstallExecuteSequence>
+    <?endif?>
   </Module>
 </Wix>
