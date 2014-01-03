@@ -19,11 +19,12 @@ using log4net;
 using PicParam.Properties;
 
 using TreeDim.StackBuilder.GUIExtension;
+using MRU;
 #endregion
 
 namespace PicParam
 {
-    public partial class MainForm : Form
+    public partial class MainForm : Form, IMRUClient
     {
         #region Constructor
         public MainForm()
@@ -285,6 +286,20 @@ namespace PicParam
                 MessageBox.Show(string.Format(ex.Message));
             }
         }
+
+
+        private void defineDatabasePathToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FormEditDatabasePath form = new FormEditDatabasePath();
+                form.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.ToString());
+            }
+        }
         #endregion
         #region Tools
         private void editProfilesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -340,6 +355,27 @@ namespace PicParam
             }
         }
         #endregion
+        #endregion
+
+        #region IMRUClient
+        public void OpenMRUFile(string fileName)
+        {
+            if (!System.IO.File.Exists(fileName))
+            {
+                mruManager.Remove(fileName);
+                return;
+            }
+            if (Path.Equals(Pic.DAL.ApplicationConfiguration.CustomSection.DatabasePath, fileName))
+                return;
+
+            // warn user that database path will be changed
+            MessageBox.Show(string.Format(PicParam.Properties.Resources.ID_APPLICATIONEXITING, Application.ProductName));
+            // change database
+            Pic.DAL.ApplicationConfiguration.SaveDatabasePath(fileName);
+            // close and restart application
+            Application.Restart();
+            Application.ExitThread();
+        }
         #endregion
 
         #region Export toolbar event handler
@@ -751,18 +787,7 @@ namespace PicParam
                 _log.Error(ex.ToString());
             }
         }
-        private void defineDatabasePathToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                FormEditDatabasePath form = new FormEditDatabasePath();
-                form.ShowDialog();
-            }
-            catch (Exception ex)
-            {
-                _log.Error(ex.ToString());
-            }
-        }
+
         private void toolStripButtonHelp_Click(object sender, EventArgs e)
         {
 
@@ -858,6 +883,16 @@ namespace PicParam
                 ShowStartPage(this);
                 // update tool bars
                 UpdateToolCommands();
+
+                // Most recently used databases
+                mruManager = new MRUManager();
+                mruManager.Initialize(
+                    this,                              // owner form
+                    databaseToolStripMenuItem,         // Recent Files menu item
+                    mnuFileMRU,                        // Recent Files menu item
+                    "Software\\treeDiM\\PLMPackLib");  // Registry path to keep MRU list
+
+                mruManager.Add(Pic.DAL.ApplicationConfiguration.CustomSection.DatabasePath);
             }
             catch (System.Exception ex)
             {
@@ -1016,6 +1051,7 @@ namespace PicParam
         protected static readonly ILog _log = LogManager.GetLogger(typeof(MainForm));
         [NonSerialized]protected ProfileLoaderImpl _profileLoaderImpl;
         protected string _docName;
+        private MRUManager mruManager;
         #endregion
     }
 }

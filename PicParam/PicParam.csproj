@@ -147,6 +147,7 @@
     </Compile>
     <Compile Include="ComponentSearchMethod.cs" />
     <Compile Include="LocalizerImpl.cs" />
+    <Compile Include="MruManager.cs" />
     <Compile Include="OptionPanelComponentViewer.cs">
       <SubType>UserControl</SubType>
     </Compile>
