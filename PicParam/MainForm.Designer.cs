@@ -46,9 +46,9 @@
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItemBrowseFile = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cotationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cotationShortLinesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemView = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemCotations = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemCotationShortLines = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.reflectionXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reflectionYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,14 +62,14 @@
             this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuFileMRU = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editprofilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editmaterialsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemEditprofiles = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemEditCardboardFormats = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.layoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-            this.customizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemCustomize = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutTreeDimPicParamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemAboutTreeDimPicParam = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMain = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonRoot = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonDownload = new System.Windows.Forms.ToolStripButton();
@@ -243,7 +243,7 @@
             resources.ApplyResources(this.menuStripMain, "menuStripMain");
             this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.viewToolStripMenuItem,
+            this.toolStripMenuItemView,
             this.databaseToolStripMenuItem,
             this.toolsToolStripMenuItem,
             this.helpToolStripMenuItem});
@@ -288,35 +288,35 @@
             // 
             resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItemExit_Click);
             // 
             // viewToolStripMenuItem
             // 
-            resources.ApplyResources(this.viewToolStripMenuItem, "viewToolStripMenuItem");
-            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cotationsToolStripMenuItem,
-            this.cotationShortLinesToolStripMenuItem,
+            resources.ApplyResources(this.toolStripMenuItemView, "viewToolStripMenuItem");
+            this.toolStripMenuItemView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemCotations,
+            this.toolStripMenuItemCotationShortLines,
             this.toolStripSeparator2,
             this.reflectionXToolStripMenuItem,
             this.reflectionYToolStripMenuItem});
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.toolStripMenuItemView.Name = "viewToolStripMenuItem";
             // 
             // cotationsToolStripMenuItem
             // 
-            resources.ApplyResources(this.cotationsToolStripMenuItem, "cotationsToolStripMenuItem");
-            this.cotationsToolStripMenuItem.Checked = true;
-            this.cotationsToolStripMenuItem.CheckOnClick = true;
-            this.cotationsToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cotationsToolStripMenuItem.Name = "cotationsToolStripMenuItem";
-            this.cotationsToolStripMenuItem.Click += new System.EventHandler(this.toolStripButtonCotations_Click);
+            resources.ApplyResources(this.toolStripMenuItemCotations, "cotationsToolStripMenuItem");
+            this.toolStripMenuItemCotations.Checked = true;
+            this.toolStripMenuItemCotations.CheckOnClick = true;
+            this.toolStripMenuItemCotations.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripMenuItemCotations.Name = "cotationsToolStripMenuItem";
+            this.toolStripMenuItemCotations.Click += new System.EventHandler(this.toolStripButtonCotations_Click);
             // 
             // cotationShortLinesToolStripMenuItem
             // 
-            resources.ApplyResources(this.cotationShortLinesToolStripMenuItem, "cotationShortLinesToolStripMenuItem");
-            this.cotationShortLinesToolStripMenuItem.Checked = true;
-            this.cotationShortLinesToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cotationShortLinesToolStripMenuItem.Name = "cotationShortLinesToolStripMenuItem";
-            this.cotationShortLinesToolStripMenuItem.Click += new System.EventHandler(this.cotationShortLinesToolStripMenuItem_Click);
+            resources.ApplyResources(this.toolStripMenuItemCotationShortLines, "cotationShortLinesToolStripMenuItem");
+            this.toolStripMenuItemCotationShortLines.Checked = true;
+            this.toolStripMenuItemCotationShortLines.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripMenuItemCotationShortLines.Name = "cotationShortLinesToolStripMenuItem";
+            this.toolStripMenuItemCotationShortLines.Click += new System.EventHandler(this.cotationShortLinesToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -384,7 +384,7 @@
             // 
             resources.ApplyResources(this.defineDatabasePathToolStripMenuItem, "defineDatabasePathToolStripMenuItem");
             this.defineDatabasePathToolStripMenuItem.Name = "defineDatabasePathToolStripMenuItem";
-            this.defineDatabasePathToolStripMenuItem.Click += new System.EventHandler(this.defineDatabasePathToolStripMenuItem_Click);
+            this.defineDatabasePathToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItemDefineDatabasePath_Click);
             // 
             // toolStripSeparator13
             // 
@@ -400,24 +400,25 @@
             // 
             resources.ApplyResources(this.toolsToolStripMenuItem, "toolsToolStripMenuItem");
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editprofilesToolStripMenuItem,
-            this.editmaterialsToolStripMenuItem,
+            this.toolStripMenuItemEditprofiles,
+            this.toolStripMenuItemEditCardboardFormats,
             this.toolStripSeparator4,
             this.layoutToolStripMenuItem,
             this.toolStripSeparator9,
-            this.customizeToolStripMenuItem});
+            this.toolStripMenuItemCustomize});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             // 
             // editprofilesToolStripMenuItem
             // 
-            resources.ApplyResources(this.editprofilesToolStripMenuItem, "editprofilesToolStripMenuItem");
-            this.editprofilesToolStripMenuItem.Name = "editprofilesToolStripMenuItem";
-            this.editprofilesToolStripMenuItem.Click += new System.EventHandler(this.editProfilesToolStripMenuItem_Click);
+            resources.ApplyResources(this.toolStripMenuItemEditprofiles, "editprofilesToolStripMenuItem");
+            this.toolStripMenuItemEditprofiles.Name = "editprofilesToolStripMenuItem";
+            this.toolStripMenuItemEditprofiles.Click += new System.EventHandler(this.toolStripMenuItemEditProfiles_Click);
             // 
             // editmaterialsToolStripMenuItem
             // 
-            resources.ApplyResources(this.editmaterialsToolStripMenuItem, "editmaterialsToolStripMenuItem");
-            this.editmaterialsToolStripMenuItem.Name = "editmaterialsToolStripMenuItem";
+            resources.ApplyResources(this.toolStripMenuItemEditCardboardFormats, "toolStripMenuItemEditCardboardFormats");
+            this.toolStripMenuItemEditCardboardFormats.Name = "toolStripMenuItemEditCardboardFormats";
+            this.toolStripMenuItemEditCardboardFormats.Click += new System.EventHandler(toolStripMenuItemEditCardboardFormats_Click);
             // 
             // toolStripSeparator4
             // 
@@ -437,22 +438,22 @@
             // 
             // customizeToolStripMenuItem
             // 
-            resources.ApplyResources(this.customizeToolStripMenuItem, "customizeToolStripMenuItem");
-            this.customizeToolStripMenuItem.Name = "customizeToolStripMenuItem";
-            this.customizeToolStripMenuItem.Click += new System.EventHandler(this.customizeToolStripMenuItem_Click);
+            resources.ApplyResources(this.toolStripMenuItemCustomize, "customizeToolStripMenuItem");
+            this.toolStripMenuItemCustomize.Name = "customizeToolStripMenuItem";
+            this.toolStripMenuItemCustomize.Click += new System.EventHandler(this.toolStripMenuItemCustomize_Click);
             // 
             // helpToolStripMenuItem
             // 
             resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutTreeDimPicParamToolStripMenuItem});
+            this.toolStripMenuItemAboutTreeDimPicParam});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             // 
             // aboutTreeDimPicParamToolStripMenuItem
             // 
-            resources.ApplyResources(this.aboutTreeDimPicParamToolStripMenuItem, "aboutTreeDimPicParamToolStripMenuItem");
-            this.aboutTreeDimPicParamToolStripMenuItem.Name = "aboutTreeDimPicParamToolStripMenuItem";
-            this.aboutTreeDimPicParamToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            resources.ApplyResources(this.toolStripMenuItemAboutTreeDimPicParam, "aboutTreeDimPicParamToolStripMenuItem");
+            this.toolStripMenuItemAboutTreeDimPicParam.Name = "aboutTreeDimPicParamToolStripMenuItem";
+            this.toolStripMenuItemAboutTreeDimPicParam.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // toolStripMain
             // 
@@ -730,6 +731,7 @@
             this.ResumeLayout(false);
 
         }
+
         #endregion
 
         private Pic.Plugin.ViewCtrl.PluginViewCtrl _pluginViewCtrl;
@@ -746,14 +748,14 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.SplitContainer _splitContainer;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutTreeDimPicParamToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAboutTreeDimPicParam;
         private System.Windows.Forms.ToolStrip toolStripMain;
         private System.Windows.Forms.ToolStripButton toolStripButtonCotations;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cotationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemView;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCotations;
         private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editprofilesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editmaterialsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemEditprofiles;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemEditCardboardFormats;
         private System.Windows.Forms.ToolStripButton toolStripButtonReflectionX;
         private System.Windows.Forms.ToolStripButton toolStripButtonReflectionY;
         private System.Windows.Forms.ToolStripMenuItem reflectionXToolStripMenuItem;
@@ -768,12 +770,12 @@
         private System.Windows.Forms.ToolStripMenuItem layoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemPicGEOM;
         private System.Windows.Forms.ToolStripButton toolStripEditComponentCode;
-        private System.Windows.Forms.ToolStripMenuItem cotationShortLinesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCotationShortLines;
         private System.Windows.Forms.ToolStripButton toolStripButtonEditParameters;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemBrowseFile;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
-        private System.Windows.Forms.ToolStripMenuItem customizeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCustomize;
         private System.Windows.Forms.ToolStripButton toolStripButtonPalletization;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
         private System.Windows.Forms.ToolStripMenuItem databaseToolStripMenuItem;

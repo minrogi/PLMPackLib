@@ -323,11 +323,11 @@
   <data name="editprofilesToolStripMenuItem.Text" xml:space="preserve">
     <value>Editer les &amp;profils</value>
   </data>
-  <data name="editmaterialsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="toolStripMenuItemEditCardboardFormats.Size" type="System.Drawing.Size, System.Drawing">
     <value>176, 22</value>
   </data>
-  <data name="editmaterialsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Editer les &amp;materiaux</value>
+  <data name="toolStripMenuItemEditCardboardFormats.Text" xml:space="preserve">
+    <value>Editer les formats cartons</value>
   </data>
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
     <value>173, 6</value>

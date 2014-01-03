@@ -270,10 +270,10 @@
 	<data name="editprofilesToolStripMenuItem.Text" xml:space="preserve">
     <value>プロファイル編集</value>
   </data>
-	<data name="editmaterialsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+	<data name="toolStripMenuItemEditCardboardFormats.Size" type="System.Drawing.Size, System.Drawing">
 		<value>203, 22</value>
 	</data>
-	<data name="editmaterialsToolStripMenuItem.Text" xml:space="preserve">
+	<data name="toolStripMenuItemEditCardboardFormats.Text" xml:space="preserve">
     <value>材料の編集</value>
   </data>
 	<data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">

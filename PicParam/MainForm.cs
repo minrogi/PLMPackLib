@@ -96,7 +96,7 @@ namespace PicParam
             toolStripButtonReflectionY.Enabled = true;
             toolStripButtonExport.Enabled = true;
             exportToolStripMenuItem.Enabled = true;
-            cotationsToolStripMenuItem.Enabled = true;
+            toolStripMenuItemCotations.Enabled = true;
         }
 
         private void LoadPicadorFile(string filePath, string fileFormat)
@@ -206,9 +206,27 @@ namespace PicParam
 
         #region Menu event handlers
         #region File
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripMenuItemExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        private void toolStripMenuItemBrowseFile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog fd = new OpenFileDialog();
+                fd.Filter = "Picador file|*.des|Autocad dxf|*.dxf|All Files|*.*";
+                if (DialogResult.OK == fd.ShowDialog())
+                {
+                    FormBrowseFile form = new FormBrowseFile(fd.FileName);
+                    form.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+				Debug.Fail(ex.ToString());
+				_log.Error(ex.ToString());                
+            }
         }
         #endregion
         #region Help
@@ -288,7 +306,7 @@ namespace PicParam
         }
 
 
-        private void defineDatabasePathToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripMenuItemDefineDatabasePath_Click(object sender, EventArgs e)
         {
             try
             {
@@ -302,30 +320,12 @@ namespace PicParam
         }
         #endregion
         #region Tools
-        private void editProfilesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripMenuItemEditProfiles_Click(object sender, EventArgs e)
         {
             FormEditProfiles form = new FormEditProfiles();
             form.ShowDialog();
         }
-        private void toolStripMenuItemBrowseFile_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                OpenFileDialog fd = new OpenFileDialog();
-                fd.Filter = "Picador file|*.des|Autocad dxf|*.dxf|All Files|*.*";
-                if (DialogResult.OK == fd.ShowDialog())
-                {
-                    FormBrowseFile form = new FormBrowseFile(fd.FileName);
-                    form.ShowDialog();
-                }
-            }
-            catch (Exception ex)
-            {
-				Debug.Fail(ex.ToString());
-				_log.Error(ex.ToString());                
-            }
-        }
-        private void customizeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripMenuItemCustomize_Click(object sender, EventArgs e)
         {
             try
             {
@@ -347,6 +347,20 @@ namespace PicParam
                         Application.Exit();
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                Debug.Fail(ex.ToString());
+                _log.Error(ex.ToString());
+            }
+        }
+        void toolStripMenuItemEditCardboardFormats_Click(object sender, System.EventArgs e)
+        {
+            try
+            {
+                FormEditCardboardFormats form = new FormEditCardboardFormats();
+                if (DialogResult.OK == form.ShowDialog())
+                { }
             }
             catch (Exception ex)
             {
@@ -645,14 +659,14 @@ namespace PicParam
                 // enable toolbar buttons
                 bool buttonsEnabled = _pluginViewCtrl.Visible || _factoryViewCtrl.Visible;
                 toolStripButtonCotations.Enabled = buttonsEnabled;
-                cotationsToolStripMenuItem.Enabled = buttonsEnabled;
+                toolStripMenuItemCotations.Enabled = buttonsEnabled;
                 toolStripButtonReflectionX.Enabled = buttonsEnabled;
                 reflectionXToolStripMenuItem.Enabled = buttonsEnabled;
                 toolStripButtonReflectionY.Enabled = buttonsEnabled;
                 reflectionYToolStripMenuItem.Enabled = buttonsEnabled;
                 toolStripButtonLayout.Enabled = buttonsEnabled;
                 layoutToolStripMenuItem.Enabled = buttonsEnabled;
-                cotationShortLinesToolStripMenuItem.Enabled = buttonsEnabled;
+                toolStripMenuItemCotationShortLines.Enabled = buttonsEnabled;
                 // only allow palletization / case optimisation when a component is selected
                 toolStripButtonPalletization.Enabled = _pluginViewCtrl.Visible && _pluginViewCtrl.AllowPalletization;
                 toolStripButtonCaseOptimization.Enabled = _pluginViewCtrl.Visible && _pluginViewCtrl.AllowPalletization;
@@ -685,7 +699,7 @@ namespace PicParam
                 }
 
                 toolStripButtonCotations.CheckState = showCotations ? CheckState.Checked : CheckState.Unchecked;
-                cotationsToolStripMenuItem.CheckState = showCotations ? CheckState.Checked : CheckState.Unchecked;
+                toolStripMenuItemCotations.CheckState = showCotations ? CheckState.Checked : CheckState.Unchecked;
                 toolStripButtonReflectionX.CheckState = reflectionX ? CheckState.Checked : CheckState.Unchecked;
                 reflectionXToolStripMenuItem.CheckState = reflectionX ? CheckState.Checked : CheckState.Unchecked;
                 toolStripButtonReflectionY.CheckState = reflectionY ? CheckState.Checked : CheckState.Unchecked;
@@ -761,7 +775,7 @@ namespace PicParam
             PicGlobalCotationProperties.ShowShortCotationLines = !PicGlobalCotationProperties.ShowShortCotationLines;
             _log.Info(string.Format("Switched cotation short lines. New value : {0}", PicGlobalCotationProperties.ShowShortCotationLines.ToString()));
             // update menu
-            cotationShortLinesToolStripMenuItem.Checked = PicGlobalCotationProperties.ShowShortCotationLines;
+            toolStripMenuItemCotationShortLines.Checked = PicGlobalCotationProperties.ShowShortCotationLines;
             // save setting
             PicParam.Properties.Settings.Default.UseCotationShortLines = PicGlobalCotationProperties.ShowShortCotationLines;
         }
@@ -877,7 +891,7 @@ namespace PicParam
                 // initialize menu state
                 PicGlobalCotationProperties.ShowShortCotationLines = PicParam.Properties.Settings.Default.UseCotationShortLines;
                 _log.Info(string.Format("ShowShortCotationLines initialized with value : {0}", PicParam.Properties.Settings.Default.UseCotationShortLines.ToString()));
-                cotationShortLinesToolStripMenuItem.Checked = PicGlobalCotationProperties.ShowShortCotationLines;
+                toolStripMenuItemCotationShortLines.Checked = PicGlobalCotationProperties.ShowShortCotationLines;
 
                 // show start page
                 ShowStartPage(this);

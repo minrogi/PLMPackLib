@@ -18,7 +18,9 @@ namespace PicParam
 {
     public partial class FormEditCardboardFormats : Form
     {
+        #region Data members
         protected static readonly ILog _log = LogManager.GetLogger(typeof(FormEditCardboardFormats));
+        #endregion
 
         #region Constructor
         public FormEditCardboardFormats()

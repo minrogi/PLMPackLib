@@ -359,7 +359,7 @@
   <data name="&gt;&gt;toolStripButtonCFF2.Name" xml:space="preserve">
     <value>toolStripButtonCFF2</value>
   </data>
-  <data name="editmaterialsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="toolStripMenuItemEditCardboardFormats.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 22</value>
   </data>
   <data name="&gt;&gt;_pluginViewCtrl.ZOrder" xml:space="preserve">
@@ -1401,7 +1401,7 @@
   <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;editmaterialsToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolStripMenuItemEditCardboardFormats.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="aboutTreeDimPicParamToolStripMenuItem.Text" xml:space="preserve">
@@ -1678,8 +1678,8 @@
   <data name="&gt;&gt;toolStripMain.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="editmaterialsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Edit materials</value>
+  <data name="toolStripMenuItemEditCardboardFormats.Text" xml:space="preserve">
+    <value>Edit cardboard formats</value>
   </data>
   <data name="&gt;&gt;menuStripMain.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1759,8 +1759,8 @@
   <data name="_branchViewCtrl.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="&gt;&gt;editmaterialsToolStripMenuItem.Name" xml:space="preserve">
-    <value>editmaterialsToolStripMenuItem</value>
+  <data name="&gt;&gt;toolStripMenuItemEditCardboardFormats.Name" xml:space="preserve">
+    <value>toolStripMenuItemEditCardboardFormats</value>
   </data>
   <data name="toolStripEditComponentCode.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
