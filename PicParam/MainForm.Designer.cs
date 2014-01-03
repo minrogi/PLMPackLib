@@ -166,26 +166,11 @@
             resources.ApplyResources(this._splitContainer.Panel1, "_splitContainer.Panel1");
             this._splitContainer.Panel1.Controls.Add(this._treeViewCtrl);
             // 
-            // _splitContainer.Panel2
-            // 
-            resources.ApplyResources(this._splitContainer.Panel2, "_splitContainer.Panel2");
-            this._splitContainer.Panel2.Controls.Add(this._webBrowser4PDF);
-            this._splitContainer.Panel2.Controls.Add(this._branchViewCtrl);
-            this._splitContainer.Panel2.Controls.Add(this._pluginViewCtrl);
-            this._splitContainer.Panel2.Controls.Add(this._factoryViewCtrl);
-            this._splitContainer.Panel2.Controls.Add(this._startPageCtrl);
-            this._splitContainer.Panel2.Controls.Add(this._downloadPageCtrl);
-            // 
             // _treeViewCtrl
             // 
             resources.ApplyResources(this._treeViewCtrl, "_treeViewCtrl");
             this._treeViewCtrl.AllowDrop = true;
             this._treeViewCtrl.Name = "_treeViewCtrl";
-            this._treeViewCtrl.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            ((System.Windows.Forms.TreeNode)(resources.GetObject("_treeViewCtrl.Nodes"))),
-            ((System.Windows.Forms.TreeNode)(resources.GetObject("_treeViewCtrl.Nodes1"))),
-            ((System.Windows.Forms.TreeNode)(resources.GetObject("_treeViewCtrl.Nodes2"))),
-            ((System.Windows.Forms.TreeNode)(resources.GetObject("_treeViewCtrl.Nodes3")))});
             this._treeViewCtrl.ShowNodeToolTips = true;
             // 
             // _webBrowser4PDF
@@ -242,6 +227,16 @@
             // 
             resources.ApplyResources(this._downloadPageCtrl, "_downloadPageCtrl");
             this._downloadPageCtrl.Name = "_downloadPageCtrl";
+            // 
+            // _splitContainer.Panel2
+            // 
+            resources.ApplyResources(this._splitContainer.Panel2, "_splitContainer.Panel2");
+            this._splitContainer.Panel2.Controls.Add(this._webBrowser4PDF);
+            this._splitContainer.Panel2.Controls.Add(this._branchViewCtrl);
+            this._splitContainer.Panel2.Controls.Add(this._pluginViewCtrl);
+            this._splitContainer.Panel2.Controls.Add(this._factoryViewCtrl);
+            this._splitContainer.Panel2.Controls.Add(this._startPageCtrl);
+            this._splitContainer.Panel2.Controls.Add(this._downloadPageCtrl);
             // 
             // menuStripMain
             // 
