@@ -316,7 +316,7 @@
             this.toolStripMenuItemCotationShortLines.Checked = true;
             this.toolStripMenuItemCotationShortLines.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItemCotationShortLines.Name = "cotationShortLinesToolStripMenuItem";
-            this.toolStripMenuItemCotationShortLines.Click += new System.EventHandler(this.cotationShortLinesToolStripMenuItem_Click);
+            this.toolStripMenuItemCotationShortLines.Click += new System.EventHandler(this.toolStripMenuItemCotationShortLines_Click);
             // 
             // toolStripSeparator2
             // 
@@ -793,7 +793,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonCaseOptimization;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private DocumentTreeView _treeViewCtrl;
         private System.Windows.Forms.ToolStripButton toolStripButtonHelp;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripContainer toolStripContainerDefault;
@@ -808,6 +807,7 @@
         private System.Windows.Forms.ToolStripButton toolStripEditDLL;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
         private System.Windows.Forms.ToolStripMenuItem mnuFileMRU;
+        private DocumentTreeView _treeViewCtrl;
     }
 }
 

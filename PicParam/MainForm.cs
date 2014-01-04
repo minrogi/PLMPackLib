@@ -173,6 +173,10 @@ namespace PicParam
 
             PPDataContext db = new PPDataContext();
             Pic.DAL.SQLite.TreeNode treeNode = Pic.DAL.SQLite.TreeNode.GetById(db, nodeTag.TreeNode);
+            if (null == treeNode)
+                return null;    // failed to retrieve valid document
+            if (!treeNode.IsDocument)
+                return null;    // not a document
             return treeNode.Documents(db)[0];
         }
 
@@ -407,7 +411,14 @@ namespace PicParam
                         if (_pluginViewCtrl.Visible)
                             _pluginViewCtrl.WriteExportFile(form.FilePath, form.ActualFileExtension);
                         else if (_factoryViewCtrl.Visible)
-                            _factoryViewCtrl.WriteExportFile(form.FilePath, form.ActualFileExtension);
+                        {
+                            // at first, attempt to copy original file
+                            // rather than exporting _factoryViewCtrl content
+                            if ("des" == form.ActualFileExtension && System.IO.File.Exists(DocumentPath))
+                                System.IO.File.Copy(DocumentPath, form.FilePath, true);
+                            else
+                                _factoryViewCtrl.WriteExportFile(form.FilePath, form.ActualFileExtension);
+                        }
                         else if (_webBrowser4PDF.Visible)
                         {
                             if (null != _treeViewCtrl.SelectedNode)
@@ -576,7 +587,6 @@ namespace PicParam
                     ExportAndOpen(fd.FileName, string.Empty );
                 // save directory
                 Settings.Default.FileExportDirectory = Path.GetDirectoryName(fd.FileName);
-
             }
             catch (Exception ex)
             {
@@ -769,15 +779,22 @@ namespace PicParam
                 _log.Error(ex.ToString());
             }
         }
-        private void cotationShortLinesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripMenuItemCotationShortLines_Click(object sender, EventArgs e)
         {
-            // update static flag
-            PicGlobalCotationProperties.ShowShortCotationLines = !PicGlobalCotationProperties.ShowShortCotationLines;
-            _log.Info(string.Format("Switched cotation short lines. New value : {0}", PicGlobalCotationProperties.ShowShortCotationLines.ToString()));
-            // update menu
-            toolStripMenuItemCotationShortLines.Checked = PicGlobalCotationProperties.ShowShortCotationLines;
-            // save setting
-            PicParam.Properties.Settings.Default.UseCotationShortLines = PicGlobalCotationProperties.ShowShortCotationLines;
+            try
+            {
+                // update static flag
+                PicGlobalCotationProperties.ShowShortCotationLines = !PicGlobalCotationProperties.ShowShortCotationLines;
+                _log.Info(string.Format("Switched cotation short lines. New value : {0}", PicGlobalCotationProperties.ShowShortCotationLines.ToString()));
+                // update menu
+                toolStripMenuItemCotationShortLines.Checked = PicGlobalCotationProperties.ShowShortCotationLines;
+                // save setting
+                PicParam.Properties.Settings.Default.UseCotationShortLines = PicGlobalCotationProperties.ShowShortCotationLines;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.ToString());
+            }
         }
         private void toolStripButtonRoot_Click(object sender, EventArgs e)
         {
@@ -804,7 +821,6 @@ namespace PicParam
 
         private void toolStripButtonHelp_Click(object sender, EventArgs e)
         {
-
         }
         #endregion
 
@@ -849,6 +865,11 @@ namespace PicParam
         {
             get { return _docName; }
             set { _docName = value; }
+        }
+        private string DocumentPath
+        {
+            get { return _docPath; }
+            set { _docPath = value; }
         }
         #endregion
 
@@ -948,6 +969,9 @@ namespace PicParam
                 // select document handler depending on document type
                 string docTypeName = doc.DocumentType.Name;
                 string filePath = doc.File.Path(db);
+
+                DocumentPath = filePath;
+
                 if (string.Equals("Parametric Component", docTypeName, StringComparison.CurrentCultureIgnoreCase))
                 {
                     if (doc.Components.Count > 0)
@@ -1064,7 +1088,17 @@ namespace PicParam
         #region Data members
         protected static readonly ILog _log = LogManager.GetLogger(typeof(MainForm));
         [NonSerialized]protected ProfileLoaderImpl _profileLoaderImpl;
+        /// <summary>
+        /// current document name
+        /// </summary>
         protected string _docName;
+        /// <summary>
+        /// cached document path
+        /// </summary>
+        protected string _docPath;
+        /// <summary>
+        /// Most Recently Used (database) manager
+        /// </summary>
         private MRUManager mruManager;
         #endregion
     }
