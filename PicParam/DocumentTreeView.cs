@@ -434,6 +434,7 @@ namespace PicParam
         public void PopulateAndSelectNode(NodeTag tag)
         {
             TreeNode nodeSelected = FindNode(null, tag);
+            BeginUpdate();  // this disables redrawing of tree
             if (null == nodeSelected)
             {
                 _log.Error(string.Format("Failed to retrieve valid node from NodeTag {0}", tag.ToString()));
@@ -448,15 +449,19 @@ namespace PicParam
                     return; // -> complete failure
                 }
             }
-            _preventEventTriggering = true;
             if (null != nodeSelected)
             {
+                _preventEventTriggering = true;
                 // ################## --> needed to update tree
                 nodeSelected.Expand();
                 // ################## --> needed to update tree
                 SelectedNode = nodeSelected;
+                EndUpdate(); // enables the redrawing of the treeview
+                _preventEventTriggering = false;
+                SelectedNode = nodeSelected;
             }
-            _preventEventTriggering = false;
+            else
+                EndUpdate(); // enables the redrawing of the treeview
         }
 
         // recursive insertion mathod
@@ -476,7 +481,7 @@ namespace PicParam
             return FindNode(null, new NodeTag(NodeTag.NodeType.NT_TREENODE, tn.ID));
         }
 
-        protected TreeNode FindNode(TreeNode node, NodeTag tag)
+        public TreeNode FindNode(TreeNode node, NodeTag tag)
         {
             // check with node itself
             if (null != node)

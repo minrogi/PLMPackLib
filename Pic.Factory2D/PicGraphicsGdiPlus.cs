@@ -51,7 +51,7 @@ namespace Pic.Factory2D
             _ltToPen.Add(LT.LT_AXIS, new Pen(System.Drawing.ColorTranslator.FromWin32(16711680), 1.0f));
             float[] dashValuesAxis = { 3.0f, 4.0f, 10.0f, 4.0f };
             _ltToPen[LT.LT_AXIS].DashPattern = dashValuesAxis;
-            _ltToPen.Add(LT.LT_COTATION, new Pen(System.Drawing.ColorTranslator.FromWin32(8453888), 1.0f));
+            _ltToPen.Add(LT.LT_COTATION, new Pen(System.Drawing.Color.FromArgb(0, 140, 0), 1.0f));
             _ltToPen.Add(LT.LT_GRID, new Pen(System.Drawing.ColorTranslator.FromWin32(8388608), 1.0f));
 
 
@@ -131,7 +131,7 @@ namespace Pic.Factory2D
             switch (font)
             { 
                 case TextType.FT_COTATION:
-                    tb = new SolidBrush(System.Drawing.ColorTranslator.FromWin32(8453888));
+                    tb = new SolidBrush(System.Drawing.Color.FromArgb(0,140,0));
                     break;
                 default:
                     throw new Exception("Unknown text type");

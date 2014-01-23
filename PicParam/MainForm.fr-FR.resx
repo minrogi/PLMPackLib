@@ -133,16 +133,13 @@
   <data name="toolStripExport.Text" xml:space="preserve">
     <value>Outils export</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="toolStripDebug.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 102</value>
-  </data>
   <data name="toolStripDebug.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="toolStripDebug.Text" xml:space="preserve">
     <value>Débogage</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 20</value>
   </data>
@@ -202,23 +199,17 @@
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>Quitter</value>
   </data>
-  <data name="viewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 20</value>
-  </data>
-  <data name="viewToolStripMenuItem.Text" xml:space="preserve">
-    <value>Vue</value>
-  </data>
-  <data name="cotationsToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="toolStripMenuItemCotations.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA7SURBVDhPYxi84K2Myn8okzwwOAyAYagQHQAxtuFUg+xk
-        YjBUGyrAKYEE8KkhqBkJkKKWeDAyXcDAAAC8GTXDojc5nwAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA5SURBVDhPYxi8QGmjz38okzwwOAyAYagQHQAxtuFUg+xk
+        YjBUGyrAKYEEKNIMA6SoJR6MWBcwMAAAAl87SRSv5rsAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="cotationsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 22</value>
+  <data name="toolStripMenuItemCotations.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 22</value>
   </data>
-  <data name="cotationShortLinesToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="toolStripMenuItemCotationShortLines.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABVSURBVDhPYxi8QGmjz38okzwwOAyAYagQHQAxtuFUg+xk
@@ -226,14 +217,11 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="cotationShortLinesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 22</value>
-  </data>
-  <data name="cotationShortLinesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Traits de cotation courts</value>
+  <data name="toolStripMenuItemCotationShortLines.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 22</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 6</value>
+    <value>129, 6</value>
   </data>
   <data name="reflectionXToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -244,7 +232,7 @@
 </value>
   </data>
   <data name="reflectionXToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 22</value>
+    <value>132, 22</value>
   </data>
   <data name="reflectionXToolStripMenuItem.Text" xml:space="preserve">
     <value>Reflexion X</value>
@@ -258,7 +246,7 @@
 </value>
   </data>
   <data name="reflectionYToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 22</value>
+    <value>132, 22</value>
   </data>
   <data name="reflectionYToolStripMenuItem.Text" xml:space="preserve">
     <value>Reflexion Y</value>
@@ -317,20 +305,17 @@
   <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
     <value>Outils</value>
   </data>
-  <data name="editprofilesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 22</value>
-  </data>
-  <data name="editprofilesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Editer les &amp;profils</value>
+  <data name="toolStripMenuItemEditprofiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 22</value>
   </data>
   <data name="toolStripMenuItemEditCardboardFormats.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 22</value>
+    <value>207, 22</value>
   </data>
   <data name="toolStripMenuItemEditCardboardFormats.Text" xml:space="preserve">
     <value>Editer les formats cartons</value>
   </data>
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 6</value>
+    <value>204, 6</value>
   </data>
   <data name="layoutToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -341,31 +326,22 @@
 </value>
   </data>
   <data name="layoutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 22</value>
+    <value>207, 22</value>
   </data>
   <data name="layoutToolStripMenuItem.Text" xml:space="preserve">
     <value>Imposition...</value>
   </data>
   <data name="toolStripSeparator9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 6</value>
+    <value>204, 6</value>
   </data>
-  <data name="customizeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 22</value>
-  </data>
-  <data name="customizeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Personnaliser...</value>
+  <data name="toolStripMenuItemCustomize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 22</value>
   </data>
   <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 20</value>
   </data>
   <data name="helpToolStripMenuItem.Text" xml:space="preserve">
     <value>Aide</value>
-  </data>
-  <data name="aboutTreeDimPicParamToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 22</value>
-  </data>
-  <data name="aboutTreeDimPicParamToolStripMenuItem.Text" xml:space="preserve">
-    <value>A propos de TreeDim PLM PackLib...</value>
   </data>
   <data name="toolStripButtonRoot.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -398,6 +374,42 @@
   </data>
   <data name="toolStripButtonDownload.Text" xml:space="preserve">
     <value>Afficher la page téléchargement</value>
+  </data>
+  <data name="toolStripButtonStartPageWeb.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGzSURBVFhH7ZUxb4MwEIXzmxmz8htYM2ZlZWVlZM2aNWtW
+        2s/Kh67GSRja0kpYevL5fH737ozMoaqqaUvsAnYB/0fA8XiczufzNI7jdLvdpkM28LFHDLEljhLeCoBs
+        GIZFwsvlkhIC7Id7HpxZI+SlAKq53++JnPl6vSabhICqgWv2iIln4Chxi6cCTA4hsBNUbEzXdQmu2bNy
+        z8HRtu0ck6MogORU0Pd9mlk3TZPItAHJgGtFa+ccpVwLAXVdJ5LYUtutX+RXAIjRx1k49MOd51sIiFVB
+        pJ9KYrtBfgX6iHUNR+xWjAULAShGKSSRiCogirElAcQQ61oeOOGOseCLg8O0DRuS0+k07+FfK0AOAIeC
+        ShwLAbQMUmZaZhLUawuIQe6PsXBEzr8vYNMrSI7PsdlHCGgZgIiW6YckT1YSwDoKt+3yxliwEIBSHg3U
+        fudY/RABn1TecA/yvuckeQcUT6y2HKufYuFBPhzwqz8jYSdsIYTYfGSA+wWu2TMpNvOzysVLAcDKIYyD
+        hFQMTB6HnShxRrwVICCjGhJS9SPPPPCxR8yaxGK1gJ/CLmAXsLGAavoAs9HFL7cU4MkAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="toolStripButtonStartPageWeb.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="toolStripButtonStartPageWeb.Text" xml:space="preserve">
+    <value>Ouvrir la page web PLMPackLib</value>
+  </data>
+  <data name="toolStripButtonSearch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGeSURBVFhH7ZYxj4MwDEb7mxlZWVlZO7KysrIysrKysrLm
+        9NC5ygU7hBYOnXSWPlUoxn5xHJdHlmXuTv0D/B2Aqqpc27YvPZ9Pl+e56ntEuwBN07h5nt1DsWVZXNd1
+        H4GYAAQdx/GVGIi+79fdk3Saph9rZVmqcfZkAkhydkkVNB+ORaqD3zuVUAFIKEH3dkZSqcYwDKpPTCoA
+        iQlo7TwUkPhjR49iA0BZCURpw7WY6A/eo0e0dUsbAAIQiIDhWkx1Xa/v0TvauiUT4OhOpHK3ATCYTgGQ
+        QHR2uBYTs4H3+NXWLW0AuFYEwihruK6Jd+TmsAHNx9IGAElHU4WU4cL9x//ozUEqgL8jIIqi2PiIn8Bi
+        qRXzpQIgBopAYCSivCRBnLW/jvH88SDyxc79PyTNKLscAQaEVTFNUQARu+JaAiOiAtJwMoTEUnsHJQGk
+        6F2I0wCQ35BYylA6FQCFEDxrfqLTAZDflFgM4hIAzp4e+M6/mvVtcQkA0iBo1NDvMgAEhHwzYsyI0OdS
+        ACQT1RrplwMgIKyZ8CsAMd0MkLkviQQXFCpVuYMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="toolStripButtonSearch.Text" xml:space="preserve">
+    <value>Rechercher...</value>
   </data>
   <data name="toolStripButtonExport.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -829,5 +841,9 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAHz3AAAFhwAAf/cAAMA4AADAPQAAgAUAAAAHAAAABwAAAAQAAAAG
         AAAABwAAAAUAAIAFAADAPQAAwDgAAP//AAA=
 </value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
   </data>
 </root>

@@ -696,6 +696,17 @@
             db.SubmitChanges();
         }
 
+        public static List<TreeNode> SearchTreeNodeNames(PPDataContext db, string searchText, bool searchNamesOnly, bool documentsFirst)
+        {
+            List<TreeNode> tnList = (
+                db.TreeNodes.Where(
+                tn => tn.Name.ToLower().Contains(searchText) || (!searchNamesOnly && tn.Description.ToLower().Contains(searchText))
+                )
+                ).ToList();
+            tnList.Sort(new ComparerSearchedTreeNode(searchText, documentsFirst));
+            return tnList;
+        }
+
         public static TreeNode GetById(PPDataContext db, int id)
         {
             TreeNode treeNode = db.TreeNodes.SingleOrDefault(tn => tn.ID == id);
@@ -959,7 +970,7 @@
     }
     #endregion
 
-    #region ComparerTreeNode
+    #region IComparers
     public class ComparerTreeNode
         : IComparer<TreeNode>
     {
@@ -974,6 +985,50 @@
         {
             return string.Compare(treeNode1.Name, treeNode2.Name);
         }
+        #endregion
+    }
+
+    public class ComparerSearchedTreeNode
+        : IComparer<TreeNode>
+    {
+        #region Constructor
+        public ComparerSearchedTreeNode(string searchedText, bool documentFirst)
+        {
+            _searchedText = searchedText; _documentFirst = documentFirst;
+        }
+        #endregion
+        #region IComparer<TreeNode> Members
+        public int Compare(TreeNode treeNode1, TreeNode treeNode2)
+        {
+            if (_documentFirst && (treeNode1.IsDocument != treeNode2.IsDocument))
+                return (treeNode1.IsDocument ? 1 : 0) < (treeNode2.IsDocument ? 1 : 0) ? 1 : -1;
+
+            // test on names
+            int iCompName1 = treeNode1.Name.IndexOf(_searchedText, StringComparison.CurrentCultureIgnoreCase);
+            int iCompName2 = treeNode2.Name.IndexOf(_searchedText, StringComparison.CurrentCultureIgnoreCase);
+            if (iCompName1 >= 0 && iCompName2 >= 0)
+            {
+                if (iCompName1 == iCompName2) return 0;
+                else return iCompName1 > iCompName2 ? 1 : -1;
+            }
+
+            // test on descriptions
+            int iCompDesc1 = treeNode1.Description.IndexOf(_searchedText, StringComparison.CurrentCultureIgnoreCase);
+            int iCompDesc2 = treeNode2.Description.IndexOf(_searchedText, StringComparison.CurrentCultureIgnoreCase);
+            if (iCompDesc1 >= 0 && iCompDesc2 >= 0)
+            {
+                if (iCompDesc1 == iCompDesc2) return 0;
+                else return iCompDesc1 > iCompDesc2 ? 1 : -1;
+            }
+            if (iCompName1 >= 0 && iCompName2 < 0)
+                return -1;
+            else
+                return 1;
+        }
+        #endregion
+        #region Data members
+        public string _searchedText;
+        public bool _documentFirst;
         #endregion
     }
     #endregion

@@ -130,6 +130,12 @@
     <Compile Include="FormDefineComponentGUID.Designer.cs">
       <DependentUpon>FormDefineComponentGUID.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearch.Designer.cs">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormWorkerThreadTask.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -371,6 +377,12 @@
     <EmbeddedResource Include="FormDefineComponentGUID.resx">
       <DependentUpon>FormDefineComponentGUID.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSearch.fr-FR.resx">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSearch.resx">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormWorkerThreadTask.resx">
       <DependentUpon>FormWorkerThreadTask.cs</DependentUpon>
     </EmbeddedResource>
@@ -556,6 +568,10 @@
     <ProjectReference Include="..\Pic.Plugin.ViewCtrl\Pic.Plugin.ViewCtrl.csproj">
       <Project>{14D171D4-D040-446D-9F24-B8D48E63B4BA}</Project>
       <Name>Pic.Plugin.ViewCtrl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sharp3D.Math\Sharp3D.Math.csproj">
+      <Project>{24D95CE6-335E-4B4B-95C9-AAC4D89E4D93}</Project>
+      <Name>Sharp3D.Math</Name>
     </ProjectReference>
     <ProjectReference Include="..\TreeDim.UserControls\TreeDim.UserControls.csproj">
       <Project>{D75634E3-34AA-4418-A6B6-3647BFF90606}</Project>
@@ -763,6 +779,7 @@
     <None Include="Resources\toolStripButtonLayout.Image.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Search.ico" />
     <None Include="Resources\splashpic.png" />
     <None Include="Resources\splashpic_ocecanon.png" />
     <None Include="Resources\writer_small.png" />

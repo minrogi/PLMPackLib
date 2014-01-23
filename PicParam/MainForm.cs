@@ -206,6 +206,7 @@ namespace PicParam
             }
             this.Text = tmp + this.Text.Trim();
         }
+
         #endregion
 
         #region Menu event handlers
@@ -807,6 +808,9 @@ namespace PicParam
                 _log.Error(ex.ToString());
             }
         }
+        /// <summary>
+        /// Download
+        /// </summary>
         private void toolStripButtonDownload_Click(object sender, EventArgs e)
         {
             try
@@ -818,9 +822,42 @@ namespace PicParam
                 _log.Error(ex.ToString());
             }
         }
-
+        /// <summary>
+        /// Search
+        /// </summary>
+        private void toolStripButtonSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FormSearch form = new FormSearch();
+                if (DialogResult.OK == form.ShowDialog())
+                {
+                     // show selected node
+                    _treeViewCtrl.PopulateAndSelectNode(new NodeTag(NodeTag.NodeType.NT_TREENODE, form.ResultNodeId));
+                }
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.ToString());
+            }
+        }
+        private void toolStripButtonStartPageWeb_Click(object sender, EventArgs e)
+        {
+            try { Process.Start(PicParam.Properties.Settings.Default.StartPageUrl); }
+            catch (Exception ex) { _log.Error(ex.ToString()); }
+        }
+        /// <summary>
+        /// Help
+        /// </summary>
         private void toolStripButtonHelp_Click(object sender, EventArgs e)
         {
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.ToString());
+            }
         }
         #endregion
 
@@ -1101,5 +1138,7 @@ namespace PicParam
         /// </summary>
         private MRUManager mruManager;
         #endregion
+
+
     }
 }

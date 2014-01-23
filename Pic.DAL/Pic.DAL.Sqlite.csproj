@@ -123,6 +123,7 @@
     <Compile Include="FFormatManager.cs" />
     <Compile Include="IProcessingCallback.cs" />
     <Compile Include="Pic.DAL.BackupRestore.cs" />
+    <Compile Include="Pic.DAL.Search.cs" />
     <Compile Include="Pic.DAL.SQLite.DataContext.cs" />
     <Compile Include="Pic.DAL.SQLite.DataContext.designer.cs">
       <DependentUpon>Pic.DAL.SQLite.DataContext.cs</DependentUpon>
