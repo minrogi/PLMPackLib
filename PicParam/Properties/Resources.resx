@@ -210,6 +210,9 @@
   <data name="ID_FILENOTFOUND_PDFTHUMBNAILIMAGE" xml:space="preserve">
     <value>Pdf thumb image file could not be found at the following path: {0}</value>
   </data>
+  <data name="ID_INFO_RUNASADMIN" xml:space="preserve">
+    <value>To perform this operation, the application must be run as administrator.</value>
+  </data>
   <data name="ID_MERGEFAILURE" xml:space="preserve">
     <value>Failed to merge database for the following reason: {0}</value>
   </data>

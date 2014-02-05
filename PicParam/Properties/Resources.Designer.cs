@@ -186,6 +186,15 @@ namespace PicParam.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to To perform this operation, the application must be run as administrator..
+        /// </summary>
+        internal static string ID_INFO_RUNASADMIN {
+            get {
+                return ResourceManager.GetString("ID_INFO_RUNASADMIN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to merge database for the following reason: {0}.
         /// </summary>
         internal static string ID_MERGEFAILURE {

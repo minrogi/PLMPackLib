@@ -48,6 +48,7 @@ namespace PicParam
                 ImageList.Images.Add((System.Drawing.Image)(resources.GetObject("WRITER"))); // 13
                 ImageList.Images.Add((System.Drawing.Image)(resources.GetObject("CALC"))); // 14
                 ImageList.Images.Add((System.Drawing.Image)(resources.GetObject("ARD"))); // 15
+                ImageList.Images.Add((System.Drawing.Image)(resources.GetObject("ROOT"))); // 16
 
                 // events
                 AfterExpand += new TreeViewEventHandler(DocumentTreeView_AfterExpand);
@@ -528,7 +529,12 @@ namespace PicParam
                 if (format2iconDictionnary.ContainsKey(docTypeName))
                     return format2iconDictionnary[docTypeName];
                 else
-                    return 0;
+                {
+                    if (string.Equals(tn.Name, "Root", StringComparison.CurrentCultureIgnoreCase))
+                        return 16; // Root
+                    else
+                        return 0;
+                }
             }
             else
                 return 0;
@@ -538,7 +544,12 @@ namespace PicParam
             if (tn.IsDocument)
                 return GetImageIndex(tn);
             else
-                return 1;
+            {
+                if (string.Equals(tn.Name, "Root", StringComparison.CurrentCultureIgnoreCase))
+                    return 16; // Root
+                else
+                    return 1;
+            }
         }
         #endregion
 

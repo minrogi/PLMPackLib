@@ -142,6 +142,7 @@
     <Compile Include="FormWorkerThreadTask.Designer.cs">
       <DependentUpon>FormWorkerThreadTask.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers.cs" />
     <Compile Include="ListBoxLibraries.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -779,7 +780,9 @@
     <None Include="Resources\toolStripButtonLayout.Image.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Root_16_16.png" />
     <Content Include="Resources\Search.ico" />
+    <None Include="Resources\StartPage_16_16.png" />
     <None Include="Resources\splashpic.png" />
     <None Include="Resources\splashpic_ocecanon.png" />
     <None Include="Resources\writer_small.png" />

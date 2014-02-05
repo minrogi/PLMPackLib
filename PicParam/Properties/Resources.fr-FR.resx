@@ -186,4 +186,7 @@
   <data name="ID_TREEMENUSENDPATHTOCLIPBOARD" xml:space="preserve">
     <value>Envoyer le chemin fichier vers le presse-papier</value>
   </data>
+  <data name="ID_INFO_RUNASADMIN" xml:space="preserve">
+    <value>Pour effectuer cette opération, l'application doit être exécutée en tant qu'administrateur.</value>
+  </data>
 </root>

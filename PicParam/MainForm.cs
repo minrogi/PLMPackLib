@@ -310,18 +310,22 @@ namespace PicParam
             }
         }
 
-
         private void toolStripMenuItemDefineDatabasePath_Click(object sender, EventArgs e)
         {
             try
             {
+                // first check
+                if (!Helpers.IsUserAdministrator)
+                {
+                    MessageBox.Show(PicParam.Properties.Resources.ID_INFO_RUNASADMIN, Application.ProductName, MessageBoxButtons.OK);
+                    return;
+                }
+                // edit database path
                 FormEditDatabasePath form = new FormEditDatabasePath();
                 form.ShowDialog();
             }
             catch (Exception ex)
-            {
-                _log.Error(ex.ToString());
-            }
+            {   _log.Error(ex.ToString());  }
         }
         #endregion
         #region Tools
@@ -818,9 +822,7 @@ namespace PicParam
                 _treeViewCtrl.SelectedNode = _treeViewCtrl.Nodes[1];
             }
             catch (Exception ex)
-            {
-                _log.Error(ex.ToString());
-            }
+            {    _log.Error(ex.ToString());   }
         }
         /// <summary>
         /// Search
@@ -843,8 +845,12 @@ namespace PicParam
         }
         private void toolStripButtonStartPageWeb_Click(object sender, EventArgs e)
         {
-            try { Process.Start(PicParam.Properties.Settings.Default.StartPageUrl); }
-            catch (Exception ex) { _log.Error(ex.ToString()); }
+            try
+            {
+                _treeViewCtrl.SelectedNode = _treeViewCtrl.Nodes[1];
+            }
+            catch (Exception ex)
+            { _log.Error(ex.ToString()); }
         }
         /// <summary>
         /// Help
