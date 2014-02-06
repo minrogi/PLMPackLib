@@ -847,7 +847,7 @@ namespace PicParam
         {
             try
             {
-                _treeViewCtrl.SelectedNode = _treeViewCtrl.Nodes[1];
+                _treeViewCtrl.SelectedNode = _treeViewCtrl.Nodes[0];
             }
             catch (Exception ex)
             { _log.Error(ex.ToString()); }

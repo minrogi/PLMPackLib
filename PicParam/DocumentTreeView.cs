@@ -529,15 +529,15 @@ namespace PicParam
                 if (format2iconDictionnary.ContainsKey(docTypeName))
                     return format2iconDictionnary[docTypeName];
                 else
-                {
-                    if (string.Equals(tn.Name, "Root", StringComparison.CurrentCultureIgnoreCase))
-                        return 16; // Root
-                    else
-                        return 0;
-                }
+                    return 0;
             }
             else
-                return 0;
+            {
+                if (string.Equals(tn.Name, "Root", StringComparison.CurrentCultureIgnoreCase))
+                    return 16; // Root
+                else
+                    return 0;
+            }
         }
         protected int GetSelectedImageIndex(Pic.DAL.SQLite.TreeNode tn)
         {
