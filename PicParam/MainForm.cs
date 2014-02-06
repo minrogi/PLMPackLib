@@ -921,11 +921,9 @@ namespace PicParam
         {
             try
             {
+                // load settings only if not in debug mode
                 if (!Properties.Settings.Default.DebugMode)
-                {
-                    // load settings
-                    ToolStripManager.LoadSettings(this, this.Name);
-                }
+                     ToolStripManager.LoadSettings(this, this.Name);
                 toolStripDebug.Visible = Properties.Settings.Default.DebugMode;
 
                 // --- instantiate and start splach screen thread
@@ -1144,7 +1142,5 @@ namespace PicParam
         /// </summary>
         private MRUManager mruManager;
         #endregion
-
-
     }
 }
