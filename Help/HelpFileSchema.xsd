@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="HelpFileSchema"
+    targetNamespace="http://treeDiM/PLMPackLib/HelpFileSchema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://treeDiM/PLMPackLib/HelpFileSchema.xsd"
+    xmlns:mstns="http://treeDiM/PLMPackLib/HelpFileSchema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <!-- PLMPackLib documentation format -->
+  <xs:annotation>
+    <xs:documentation>
+      PLMPackLib input Schema
+      Version 6.4.0.0
+    </xs:documentation>
+  </xs:annotation>
+
+  <!-- simple types-->
+
+  <!-- complex types -->
+  <xs:complexType name="parameter">
+    <xs:annotation>
+      <xs:documentation>
+        A parameter is defined by its name and description.
+        This type is never implemented itself but is rather extended by other types
+        such as parameterDouble, parameterBool, parameterInt, parameterMulti...
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="description" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="parameterDouble">
+    <xs:annotation>
+      <xs:documentation>
+        A double parameter (edit box) extends the parameter type
+        and has a double default value field
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="parameter">
+        <xs:sequence>
+          <xs:element name="defaultValue" type="xs:double"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="parameterBool">
+    <xs:annotation>
+      <xs:documentation>
+        A boolean parameter (check box) extends the parameter type
+        and has a boolean default value field
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="parameter">
+        <xs:sequence>
+          <xs:element name="defaultValue" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="parameterInt">
+    <xs:annotation>
+      <xs:documentation>
+        An integer parameter (spinner) extends the parameter type
+        and has an int default value field.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="parameter">
+        <xs:sequence>
+          <xs:element name="defaultValue" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="parameterMulti">
+    <xs:annotation>
+      <xs:documentation>
+        A parameter multi (combo box) extends the parameter type
+        and shows a list of possible values and a default value.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="parameter">
+        <xs:sequence>
+          <xs:element name="value" maxOccurs="unbounded">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="description" type="xs:string"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="defaultValue" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="dependancy">
+    <xs:attribute name="docGuid" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="note">
+    <xs:attribute name="title" type="xs:string" use="optional"/>
+    <xs:attribute name="text" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <!-- root element -->
+  <xs:element name="helpData">
+    <xs:annotation>
+      <xs:documentation>
+        This is the ROOT element of an help file.
+        It holds:
+        * basic properties of the document such as Guid, name and description,
+        * a list of parameters,
+        * a list of dependancies,
+        * a list of notes.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+         <xs:element name="parameters" maxOccurs="1">
+          <xs:annotation>
+            <xs:documentation>
+              A list of parameters.
+            </xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="parameter" type="mstns:parameter" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dependancies" maxOccurs="1">
+          <xs:annotation>
+            <xs:documentation>
+              A list of the dependancies.
+              These dependancies may be converted to hyperlink so that the user can easily visit
+              subpart documentation.
+            </xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dependancy" type="mstns:dependancy" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="notes" maxOccurs="1">
+          <xs:annotation>
+            <xs:documentation>
+              A list of notes and observations.
+              Each note as a text block and may have a title.
+              There is no dependancy relationship between each note.
+            </xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="note" type="mstns:note"  maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="docGUID" type="xs:string"/>
+      <xs:attribute name="docName" type="xs:string"/>
+      <xs:attribute name="docDescription" type="xs:string"/>
+      <xs:attribute name="docAuthor" type="xs:string"/>
+      <xs:attribute name="dateCreation" type="xs:dateTime"/>
+      <xs:attribute name="dateModified" type="xs:dateTime"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
