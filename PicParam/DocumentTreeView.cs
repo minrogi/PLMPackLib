@@ -63,8 +63,6 @@ namespace PicParam
                 DragDrop += new DragEventHandler(DocumentTreeView_DragDrop);
                 NodeDropped += new NodeDroppedHandler(DocumentTreeView_NodeDropped);
 
-                // construct tree
-                RefreshTree();
                 // show tool tips
                 ShowNodeToolTips = true;
                 // allow drag and drop

@@ -893,7 +893,7 @@ namespace PicParam
                 if (_pluginViewCtrl.GetDimensions(ref length, ref width, ref height))
                 {
                     TreeDim.StackBuilder.GUIExtension.Palletization palletization = new Palletization();
-                    //palletization.StartCaseOptimization(_pluginViewCtrl.LoadedComponentName, length, width, height);
+                    palletization.StartCaseOptimization(_pluginViewCtrl.LoadedComponentName, length, width, height);
                 }
             }
             catch (Exception ex)
@@ -921,6 +921,11 @@ namespace PicParam
         {
             try
             {
+                // construct tree
+                // this line was moved here from the treeview contructor
+                // to avoid running this code while in design mode
+                _treeViewCtrl.RefreshTree();
+
                 // load settings only if not in debug mode
                 if (!Properties.Settings.Default.DebugMode)
                      ToolStripManager.LoadSettings(this, this.Name);
