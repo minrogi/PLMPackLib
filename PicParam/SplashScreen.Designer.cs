@@ -30,14 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashScreen));
             this.lblVersion = new System.Windows.Forms.Label();
+            this.lbBrand = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblVersion
             // 
             resources.ApplyResources(this.lblVersion, "lblVersion");
             this.lblVersion.BackColor = System.Drawing.Color.Transparent;
-            this.lblVersion.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblVersion.ForeColor = System.Drawing.Color.White;
             this.lblVersion.Name = "lblVersion";
+            // 
+            // lbBrand
+            // 
+            resources.ApplyResources(this.lbBrand, "lbBrand");
+            this.lbBrand.BackColor = System.Drawing.Color.Transparent;
+            this.lbBrand.ForeColor = System.Drawing.Color.White;
+            this.lbBrand.Name = "lbBrand";
             // 
             // SplashScreen
             // 
@@ -45,6 +53,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ControlBox = false;
+            this.Controls.Add(this.lbBrand);
             this.Controls.Add(this.lblVersion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -62,5 +71,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblVersion;
+        private System.Windows.Forms.Label lbBrand;
     }
 }
