@@ -315,55 +315,61 @@ namespace DesLib4NET
             _br.Write(25); // cot distance
             // x
             WriteCode(2);
-            _br.Write(cotation._x); // segment X
+            _br.Write(cotation._x);     // cotation X
             // y
             WriteCode(3);
-            _br.Write(cotation._y); // segment Y
+            _br.Write(cotation._y);     // cotation Y
             // direction
             WriteCode(4);
-            _br.Write(cotation._dir);
+            _br.Write(cotation._dir);   // dir
             // dim
             WriteCode(5);
-            _br.Write(cotation._dim);
+            _br.Write(cotation._dim);   // dim
             // pen
             WriteCode(150);
-            _br.Write(cotation._pen);
+            _br.Write(cotation._pen);   // pen
             // level
             WriteCode(151);
-            _br.Write(cotation._layer);
+            _br.Write(cotation._layer); // layer
             // group
             WriteCode(152);
-            _br.Write(cotation._grp);
+            _br.Write(cotation._grp);   // grp
             // lock
             WriteCode(153);
-            _br.Write(cotation._lock);
+            _br.Write(cotation._lock);  // lock
             // espace
             WriteCode(20);
-            _br.Write(0);
+            _br.Write(0);               // FALSE espace
             // text
             WriteCode(21);
-            _br.Write(0);
+            _br.Write(0);               // FALSE text
             // tol
-            WriteCode(22);
-            _br.Write(0);
+            WriteCode(22);              
+            _br.Write(0);               // FALSE tolerance
             // offset
             WriteCode(23);
-            _br.Write((float)cotation._offset);
+            _br.Write((float)cotation._offset);     // deport
             // inf
             WriteCode(24);
-            _br.Write(0.0f);
+            _br.Write(0.0f);            // ecart inf
             // sup
             WriteCode(25);
-            _br.Write(0.0f);
+            _br.Write(0.0f);            // ecart sup
             // houv
             WriteCode(155);
-            _br.Write(2);
+            _br.Write((char)2);         // char houv
             // inverse deport
             WriteCode(26);
             _br.Write(0);
             // nb digit
             WriteCode(101);
-            _br.Write(1);
+            _br.Write((short)1);
+            // reduction
+            WriteCode(27);
+            _br.Write(0.0f);
+            // texte cote
+            WriteCode(217);
+            _br.Write(0);
         }
 
         public void WriteBlockRef(DES_Pose pose)
