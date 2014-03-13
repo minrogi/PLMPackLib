@@ -27,6 +27,7 @@
     <Compile Include="asm_fragment.wxs" />
     <Compile Include="DirectoryTree.wxs" />
     <Compile Include="MergeModule.wxs" />
+    <Compile Include="PLMPackLib_exe_config.wxs" />
     <Compile Include="tlb_fragment.wxs" />
   </ItemGroup>
   <ItemGroup>
