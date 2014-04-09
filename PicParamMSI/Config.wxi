@@ -4,12 +4,15 @@
 <!-- Product manufacturer -->
 <?define ProductManufacturer = "treeDiM"?>
 <!-- Product version -->
-<?define ProductVersion = "6.4.2.0"?>
+<?define ProductVersion = "6.4.3.0"?>
 <!-- Company URL -->
 <?define CompanyURL = "http://www.picador.fr/" ?>
 <!-- Package_Description -->
 <?define Package_Description = "PLMPackLib installer" ?>
 <!-- Package_Comments -->
 <?define Package_Comments = "Requires .NET 4.0 framework"?>
+<!-- Merge module directory -->
+<?define MergeModuleDir="C:\Program Files (x86)\Common Files\Merge Modules"?>
+
 <Include>
 </Include>

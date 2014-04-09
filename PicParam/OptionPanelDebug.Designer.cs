@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionPanelDebug));
             this.checkBoxDebug = new System.Windows.Forms.CheckBox();
             this.bnUpdateLocalisationFile = new System.Windows.Forms.Button();
+            this.bnOpenConfigDirectory = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // checkBoxDebug
@@ -46,11 +47,19 @@
             this.bnUpdateLocalisationFile.UseVisualStyleBackColor = true;
             this.bnUpdateLocalisationFile.Click += new System.EventHandler(this.bnUpdateLocalisationFile_Click);
             // 
+            // bnOpenConfigDirectory
+            // 
+            resources.ApplyResources(this.bnOpenConfigDirectory, "bnOpenConfigDirectory");
+            this.bnOpenConfigDirectory.Name = "bnOpenConfigDirectory";
+            this.bnOpenConfigDirectory.UseVisualStyleBackColor = true;
+            this.bnOpenConfigDirectory.Click += new System.EventHandler(this.bnOpenConfigDirectory_Click);
+            // 
             // OptionPanelDebug
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CategoryPath = "Paramètres\\Outils de débogage";
+            this.Controls.Add(this.bnOpenConfigDirectory);
             this.Controls.Add(this.bnUpdateLocalisationFile);
             this.Controls.Add(this.checkBoxDebug);
             this.DisplayName = "Outils de débogages";
@@ -65,5 +74,6 @@
 
         private System.Windows.Forms.CheckBox checkBoxDebug;
         private System.Windows.Forms.Button bnUpdateLocalisationFile;
+        private System.Windows.Forms.Button bnOpenConfigDirectory;
     }
 }

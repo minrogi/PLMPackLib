@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.toolStripContainerDefault = new System.Windows.Forms.ToolStripContainer();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -104,6 +105,8 @@
             this.toolStripEditDLL = new System.Windows.Forms.ToolStripButton();
             this.openFileDialogRestore = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogBackup = new System.Windows.Forms.SaveFileDialog();
+            this.toolStripButtonPDF3D = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripContainerDefault.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainerDefault.ContentPanel.SuspendLayout();
             this.toolStripContainerDefault.TopToolStripPanel.SuspendLayout();
@@ -176,7 +179,6 @@
             // _webBrowser4PDF
             // 
             resources.ApplyResources(this._webBrowser4PDF, "_webBrowser4PDF");
-            this._webBrowser4PDF.MinimumSize = new System.Drawing.Size(20, 20);
             this._webBrowser4PDF.Name = "_webBrowser4PDF";
             // 
             // _branchViewCtrl
@@ -596,7 +598,9 @@
             this.toolStripButtonOceProCut,
             this.toolStripSeparator7,
             this.toolStripButtonCaseOptimization,
-            this.toolStripButtonPalletization});
+            this.toolStripButtonPalletization,
+            this.toolStripSeparator14,
+            this.toolStripButtonPDF3D});
             this.toolStripExport.Name = "toolStripExport";
             this.toolStripExport.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             // 
@@ -694,6 +698,18 @@
             // saveFileDialogBackup
             // 
             resources.ApplyResources(this.saveFileDialogBackup, "saveFileDialogBackup");
+            // 
+            // toolStripButtonPDF3D
+            // 
+            this.toolStripButtonPDF3D.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.toolStripButtonPDF3D, "toolStripButtonPDF3D");
+            this.toolStripButtonPDF3D.Name = "toolStripButtonPDF3D";
+            this.toolStripButtonPDF3D.Click += new System.EventHandler(this.toolStripButtonPDF3D_Click);
+            // 
+            // toolStripSeparator14
+            // 
+            this.toolStripSeparator14.Name = "toolStripSeparator14";
+            resources.ApplyResources(this.toolStripSeparator14, "toolStripSeparator14");
             // 
             // MainForm
             // 
@@ -808,6 +824,8 @@
         private DocumentTreeView _treeViewCtrl;
         private System.Windows.Forms.ToolStripButton toolStripButtonSearch;
         private System.Windows.Forms.ToolStripButton toolStripButtonStartPageWeb;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
+        private System.Windows.Forms.ToolStripButton toolStripButtonPDF3D;
     }
 }
 

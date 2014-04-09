@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--definitions : beg-->
 <?define SkuName = "PLMPackLib"?>
-<?define ProductVersion = "6.4.2.0"?>
+<?define ProductVersion = "6.4.3.0"?>
 <?define Manufacturer="treeDiM"?>
 <?define ProductName = "PLMPackLib"?>
 <?define UpgradeCode="f3313d35-58c7-42ff-b5ad-817d10cc21eb"?>
@@ -19,14 +19,14 @@
           AboutUrl="http://www.picador.fr"
           HelpUrl="http://www.picador.fr"
           Condition="(VersionNT >= v5.0)">
-    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense">
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.HyperlinkLicense">
       <bal:WixStandardBootstrapperApplication
         SuppressOptionsUI="no"
-        LicenseFile="License.rtf"
+        LicenseUrl=""
         ThemeFile="RtfTheme.xml"/>
     </BootstrapperApplicationRef>
     <WixVariable Id="WixStdbaLogo" Value="WixUIBanner.png" />
-    <Variable Name="InstallFolder" Type="string" Value="[ProgramFilesFolder]treeDiM\PLMPackLib" />
+    <Variable Name="InstallFolder" Type="string" Value="[ProgramFilesFolder]treeDiM\PLMPack\PLMPackLib" />
     <Variable Name="LaunchTarget" Value="[InstallFolder]\Bin32\PLMPackLib.exe"/>
     <Chain>
       <PackageGroupRef Id="Netfx4Full"/>

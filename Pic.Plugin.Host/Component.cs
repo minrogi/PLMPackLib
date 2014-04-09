@@ -90,6 +90,28 @@ namespace Pic.Plugin
                     return null;
             }
         }
+        public bool IsSupportingAutomaticFolding
+        {
+            get
+            {
+                if (null != _ext1)
+                    return false;
+                else
+                    return _ext2.IsSupportingAutomaticFolding;
+            }
+        }
+
+        public Sharp3D.Math.Core.Vector2D ReferencePoint(ParameterStack stack)
+        {
+            if (null != _ext2)
+            {
+                List<Vector2D> l = _ext2.ReferencePoints(stack);
+                if (l.Count > 0)
+                    return l[0];
+            }
+            return Vector2D.Zero;
+        }
+
         public Vector2D ImpositionOffset(ParameterStack stack)
         {
             if (null != _ext1)

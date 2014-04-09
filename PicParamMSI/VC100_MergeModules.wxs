@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?include $(sys.CURRENTDIR)\Config.wxi?>
+  <!-- VC100 merge modules-->
+  <Fragment>
+    <DirectoryRef Id="INSTALLLOCATION">
+      <?if $(var.Platform) = x64 ?>
+      <Merge Id="Microsoft_VC100_CRT_x64" Language="1033" DiskId="1" SourceFile="$(var.MergeModuleDir)\Microsoft_VC100_CRT_x64.msm" />
+      <Merge Id="Microsoft_VC100_ATL_x64" Language="1033" DiskId="1" SourceFile="$(var.MergeModuleDir)\Microsoft_VC100_ATL_x64.msm" />
+      <Merge Id="Microsoft_VC100_MFC_x64" Language="0" DiskId="1" SourceFile="$(var.MergeModuleDir)\Microsoft_VC100_MFC_x64.msm" />
+      <?else?>
+      <Merge Id="Microsoft_VC100_CRT_x86" Language="1033" DiskId="1" SourceFile="$(var.MergeModuleDir)\Microsoft_VC100_CRT_x86.msm" />
+      <Merge Id="Microsoft_VC100_ATL_x86" Language="1033" DiskId="1" SourceFile="$(var.MergeModuleDir)\Microsoft_VC100_ATL_x86.msm" />
+      <Merge Id="Microsoft_VC100_MFC_x86" Language="0" DiskId="1" SourceFile="$(var.MergeModuleDir)\Microsoft_VC100_MFC_x86.msm" />
+      <?endif ?>
+    </DirectoryRef>
+    <Feature  Id="VC100Redist" AllowAdvertise="no" Display="hidden" Level="1" Title="Visual C++ 10.0 Runtime">
+      <?if $(var.Platform) = x64 ?>
+      <MergeRef Id="Microsoft_VC100_CRT_x64"/>
+      <MergeRef Id="Microsoft_VC100_ATL_x64"/>
+      <MergeRef Id="Microsoft_VC100_MFC_x64"/>
+      <?else?>
+      <MergeRef Id="Microsoft_VC100_CRT_x86"/>
+      <MergeRef Id="Microsoft_VC100_ATL_x86"/>
+      <MergeRef Id="Microsoft_VC100_MFC_x86"/>
+      <?endif?>
+    </Feature>
+  </Fragment>
+</Wix>

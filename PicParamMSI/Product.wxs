@@ -37,8 +37,10 @@
                 <Directory Id="CompanyDir" Name="$(var.ProductManufacturer)">
                     <Directory Id="PLMPackDir" Name="PLMPack">
                         <Directory Id="INSTALLLOCATION" Name="$(var.ProductName)">
-                            <Merge Id="PLMPackLibMSM" Language="1033" DiskId="1" SourceFile="..\PicParamMSM\bin\Release\PLMPackLibMSM.msm" />
-                            <Merge Id="StackBuilderGUIExtMSM" Language="1033" DiskId="1" SourceFile="..\..\..\..\StackBuilder\StackBuilderGUIExtMSM\bin\release\StackBuilderGUIExtMSM.msm" />
+                          <Merge Id="PLMPackLibMSM" Language="1033" DiskId="1" SourceFile="..\PicParamMSM\bin\Release\PLMPackLibMSM.msm"/>
+                          <Merge Id="StackBuilderGUIExtMSM" Language="1033" DiskId="1" SourceFile="..\..\..\..\StackBuilder\StackBuilderGUIExtMSM\bin\release\StackBuilderGUIExtMSM.msm" />
+                          <Merge Id="Pic3DExporterMSM" Language="1033" DiskId="1" SourceFile="K:\Codesion\Picador3D_Global\trunk\Pic3DExporterMSM\bin\Release\Pic3DExporterMSM.msm"/>
+                          <Directory Id="Data" Name="Data"/>
                         </Directory>
                     </Directory>
                 </Directory>
@@ -47,11 +49,15 @@
         <Feature Id="PLMPackLib" Title="PLMPackLib" Level="1" Absent="disallow" Display="expand" ConfigurableDirectory="INSTALLLOCATION">
             <MergeRef Id="PLMPackLibMSM" Primary="yes" />
             <MergeRef Id="StackBuilderGUIExtMSM" Primary="yes" />
+            <MergeRef Id="Pic3DExporterMSM" Primary="yes"/>
         </Feature>
         <!--Properties-->
         <Property Id="INSTALLDESKTOPSHORTCUT" Value="1" />
         <Property Id="WIXUI_INSTALLDIR" Value="INSTALLLOCATION" />
         <Property Id="ALLUSERS" Value="1" />
+
+        <Property Id="URIPLMPACKLIB.PLMPackLibMSM" Value="http://www.plmpack.com/packlib/"/>
+        <Property Id="STARTPAGEURL.PLMPackLibMSM" Value="http://www.plmpack.com/packlib/packlib_start_page.htm"/>
         <!--Upgrade table-->
         <Property Id="PROJECT_UPGRADE" Secure="yes" />
         <Property Id="PROJECT_DOWNGRADE" Secure="yes" />

@@ -193,7 +193,7 @@
     <value>_treeViewCtrl</value>
   </data>
   <data name="&gt;&gt;_treeViewCtrl.Type" xml:space="preserve">
-    <value>PicParam.DocumentTreeView, PLMPackLib, Version=6.4.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>PicParam.DocumentTreeView, PLMPackLib, Version=6.4.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_treeViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel1</value>
@@ -218,6 +218,9 @@
   </data>
   <data name="_webBrowser4PDF.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
+  </data>
+  <data name="_webBrowser4PDF.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
   </data>
   <data name="_webBrowser4PDF.Size" type="System.Drawing.Size, System.Drawing">
     <value>425, 317</value>
@@ -256,7 +259,7 @@
     <value>_branchViewCtrl</value>
   </data>
   <data name="&gt;&gt;_branchViewCtrl.Type" xml:space="preserve">
-    <value>PicParam.DocumentTreeBranchView, PLMPackLib, Version=6.4.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>PicParam.DocumentTreeBranchView, PLMPackLib, Version=6.4.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_branchViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -316,7 +319,7 @@
     <value>_pluginViewCtrl</value>
   </data>
   <data name="&gt;&gt;_pluginViewCtrl.Type" xml:space="preserve">
-    <value>Pic.Plugin.ViewCtrl.PluginViewCtrl, Pic.Plugin.ViewCtrl, Version=6.4.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>Pic.Plugin.ViewCtrl.PluginViewCtrl, Pic.Plugin.ViewCtrl, Version=6.4.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_pluginViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -340,7 +343,7 @@
     <value>_factoryViewCtrl</value>
   </data>
   <data name="&gt;&gt;_factoryViewCtrl.Type" xml:space="preserve">
-    <value>Pic.Factory2D.Control.FactoryViewerBase, Pic.Factory2D.Control, Version=6.4.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>Pic.Factory2D.Control.FactoryViewerBase, Pic.Factory2D.Control, Version=6.4.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_factoryViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -367,7 +370,7 @@
     <value>_startPageCtrl</value>
   </data>
   <data name="&gt;&gt;_startPageCtrl.Type" xml:space="preserve">
-    <value>PicParam.StartPageControl, PLMPackLib, Version=6.4.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>PicParam.StartPageControl, PLMPackLib, Version=6.4.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_startPageCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -391,7 +394,7 @@
     <value>_downloadPageCtrl</value>
   </data>
   <data name="&gt;&gt;_downloadPageCtrl.Type" xml:space="preserve">
-    <value>PicParam.DownloadPageControl, PLMPackLib, Version=6.4.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>PicParam.DownloadPageControl, PLMPackLib, Version=6.4.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_downloadPageCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -1367,11 +1370,53 @@
   <data name="toolStripButtonPalletization.ToolTipText" xml:space="preserve">
     <value>Perform Case/Pallet analysis with StackBuilder</value>
   </data>
+  <data name="toolStripSeparator14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 39</value>
+  </data>
+  <data name="toolStripButtonPDF3D.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="toolStripButtonPDF3D.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="toolStripButtonPDF3D.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripButtonPDF3D.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="toolStripButtonPDF3D.ToolTipText" xml:space="preserve">
+    <value>Generate PDF 3D file</value>
+  </data>
   <data name="toolStripExport.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 63</value>
   </data>
   <data name="toolStripExport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>348, 39</value>
+    <value>421, 39</value>
   </data>
   <data name="toolStripExport.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1982,6 +2027,18 @@
   </data>
   <data name="&gt;&gt;saveFileDialogBackup.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripButtonPDF3D.Name" xml:space="preserve">
+    <value>toolStripButtonPDF3D</value>
+  </data>
+  <data name="&gt;&gt;toolStripButtonPDF3D.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator14.Name" xml:space="preserve">
+    <value>toolStripSeparator14</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>

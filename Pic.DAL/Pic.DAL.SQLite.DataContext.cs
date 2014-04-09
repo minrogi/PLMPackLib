@@ -782,6 +782,29 @@
                 return TreeNode.GetById(db, this.ParentNodeID.Value);
         }
 
+        public List<Document> GetBrothersWithExtension(PPDataContext db, string sExt)
+        {
+            List<Document> documents = new List<Document>();
+
+            TreeNode parentNode = GetParent(db);
+            var childNodes = db.TreeNodes.Where(tn => tn.ParentNodeID == parentNode.ID);
+            foreach (TreeNode cNode in childNodes)
+            {
+                if ((cNode.ID != ID) && cNode.IsDocument)
+                {
+                    FormatHandler fh = FFormatManager.GetFormatHandlerFromFileExt(sExt);
+                    if (null != fh)
+                    {
+                        Document nodeDocument = cNode.Documents(db)[0];
+                        if (nodeDocument.DocumentType == Pic.DAL.SQLite.DocumentType.GetByName(db, fh.Name))
+                            documents.Add(nodeDocument);
+                    }
+                }
+            }
+
+            return documents;
+        }
+
         public string GetPath(PPDataContext db)
         {
             TreeNode parentNode = GetParent(db);

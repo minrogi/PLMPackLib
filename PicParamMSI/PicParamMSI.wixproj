@@ -25,6 +25,7 @@
   <ItemGroup>
     <Compile Include="Product.wxs" />
     <Compile Include="RegistDlg.wxs" />
+    <Compile Include="VC100_MergeModules.wxs" />
   </ItemGroup>
   <ItemGroup>
     <WixExtension Include="WixUtilExtension">
@@ -45,7 +46,7 @@
   </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
   <PropertyGroup>
-    <PostBuildEvent>"$(DevEnvDir)..\..\..\WiX Toolset v3.7\bin\setupbld.exe" -out $(TargetDir)PLMPackLibSetup.exe -ms "$(TargetPath)" -setup "$(ProjectDir)setup.exe" -title $(SolutionName)</PostBuildEvent>
+    <PostBuildEvent />
   </PropertyGroup>
   <!--
 	To modify your build process, add your task inside one of the targets below and uncomment it.

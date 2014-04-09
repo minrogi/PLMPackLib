@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.treedim.com/Pic3DExporter"
+    xmlns:exp="http://www.treedim.com/Pic3DExporter"
+    elementFormDefault="qualified"
+>
+  <!-- BEGIN Pic3DExporter Format Schema-->
+  <xs:annotation>
+    <xs:documentation>
+      Pic3DExporter input file schema
+      Version 6.4.3.0
+    </xs:documentation>
+  </xs:annotation>
+  <!-- Simple Types-->
+  <!-- Primitive Types-->
+  <xs:simpleType name="bool">
+    <xs:restriction base="xs:boolean"/>
+  </xs:simpleType>
+  <xs:simpleType name="dateTime">
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+  <xs:simpleType name="float">
+    <xs:restriction base="xs:float"/>
+  </xs:simpleType>
+  <xs:simpleType name="double">
+    <xs:restriction base="xs:double"/>
+  </xs:simpleType>
+  <xs:simpleType name="int">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:simpleType name="uint">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Name">
+    <xs:restriction base="xs:Name"/>
+  </xs:simpleType>
+  <xs:simpleType name="string">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <!-- Container types -->
+  <xs:simpleType name="ListOfIDREFs">
+    <xs:list itemType="xs:IDREF"/>
+  </xs:simpleType>
+  <xs:simpleType name="ListOfInts">
+    <xs:list itemType="exp:int"/>
+  </xs:simpleType>
+  <xs:simpleType name="int2">
+    <xs:restriction base="exp:ListOfInts">
+      <xs:minLength value="2"/>
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ListOfFloats">
+    <xs:list itemType="exp:float"/>
+  </xs:simpleType>
+  <xs:simpleType name="float2">
+    <xs:restriction base="exp:ListOfFloats">
+      <xs:minLength value="2"/>
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="float3">
+    <xs:restriction base ="exp:ListOfFloats">
+      <xs:minLength value="3"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Matrix">
+    <xs:restriction base="exp:ListOfFloats">
+      <xs:minLength value="12"/>
+      <xs:maxLength value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="RelativePosition">
+    <xs:annotation>
+      <xs:documentation>
+        An enumerated type to describe relative position.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TOP">
+        <xs:annotation>
+          <xs:documentation>Top position</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BOTTOM">
+        <xs:annotation>
+          <xs:documentation>Bottom position</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LEFT">
+        <xs:annotation>
+          <xs:documentation>Left toolbar position</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RIGHT">
+        <xs:annotation>
+          <xs:documentation>Right toolbar position</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+  <xs:simpleType name="taskType">
+    <xs:annotation>
+      <xs:documentation>
+        An enumerated type specifying the task to be performed.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DES3_TO_U3D"/>
+      <xs:enumeration value="U3D_TO_PDF"/>
+      <xs:enumeration value="DES3_TO_COLLADA"/>
+      <xs:enumeration value="COLLADA_TO_ZAE"/>
+      <xs:enumeration value="ZAE_TO_AUGMENT"/>
+      <xs:enumeration value="2D_TO_DES3"/>
+      <xs:enumeration value="DES3_EXTRACTTEXTURES"/>
+      <xs:enumeration value="DES3_INSERTTEXTURES"/>
+      <xs:enumeration value="OPEN_PDF_ADOBEREADER"/>
+      <xs:enumeration value="OPEN_COLLADA_CHROME"/>
+    </xs:restriction>
+  </xs:simpleType>
+  -->
+  <xs:simpleType name="imgFormat">
+    <xs:annotation>
+      <xs:documentation>
+        An enumerated type specifying image formats.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="bmp"/>
+      <xs:enumeration value="jpg"/>
+      <xs:enumeration value="png"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- units-->
+  <xs:simpleType name="units">
+    <xs:annotation>
+      <xs:documentation>
+        An enumerated type specifying units.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="mm">
+        <xs:annotation>
+          <xs:documentation>Millimeters</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cm">
+        <xs:annotation>
+          <xs:documentation>Centimeters</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="m">
+        <xs:annotation>
+          <xs:documentation>Meters</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+<!-- path types-->
+  <xs:simpleType name="pathType">
+    <xs:annotation>
+      <xs:documentation>
+        File or Directory.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FILE">
+        <xs:annotation>
+          <xs:documentation>File path</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DIR">
+        <xs:annotation>
+          <xs:documentation>Directory path</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- Complex types -->
+  <!-- File -->
+  <xs:element name="PathItem">
+    <xs:annotation>
+      <xs:documentation>
+        Defines a file/directory as a path.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="pathID" type="xs:ID" use="required"/>
+      <xs:attribute name="path" type="exp:string" use="required"/>
+      <xs:attribute name="type" type="exp:pathType" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <!-- FileRef -->
+  <xs:element name="PathRef">
+    <xs:annotation>
+      <xs:documentation>
+        Refers to a file/directory.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="pathID" type="xs:IDREF" use="required">
+        <xs:annotation>
+          <xs:documentation>
+            Refers to a Path.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="role" type="exp:string" use="optional">
+        <xs:annotation>
+          <xs:documentation>
+            Defines the role during the task.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:attribute>      
+      <xs:attribute name="deleteAfterUsing" type="exp:bool" use="optional" default="false">
+        <xs:annotation>
+          <xs:documentation>
+            Delete the file/directory after processing the task?
+          </xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <!-- Task -->
+  <xs:complexType name="TaskBase" abstract="true">
+    <xs:annotation>
+      <xs:documentation>
+        Defines a task with input and output files.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <!-- Dependancies -->
+      <xs:element name="Dependencies" type="exp:ListOfIDREFs" minOccurs="0" maxOccurs="1"/>
+      <!-- Input files -->
+      <xs:element name="Inputs" minOccurs="1" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="exp:PathRef" minOccurs="1" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!-- Output files -->
+      <xs:element name="Outputs" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="exp:PathRef" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+  </xs:complexType>
+  <!-- Task_DES3_To_U3D -->
+  <xs:complexType name="task_DES3_TO_U3D" >
+    <xs:annotation>
+      <xs:documentation>
+        Defines a task to convert .des3 file to .u3D .
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="exp:TaskBase">
+        <xs:sequence>
+          <!-- Parameters -->
+          <xs:element name="Parameters">
+            <xs:complexType>
+              <xs:sequence>
+                <!-- Material -->
+                <xs:element name="Material">
+                  <xs:complexType>
+                    <xs:attribute name="opacity" type="exp:float"/>
+                    <xs:attribute name="reflectivity" type="exp:float"/>
+                  </xs:complexType>
+                </xs:element>
+                <!-- Qualities -->
+                <xs:element name="Qualities">
+                  <xs:complexType>
+                    <xs:attribute name="meshDefault" type="exp:int"/>
+                    <xs:attribute name="meshPosition" type="exp:int"/>
+                    <xs:attribute name="shaderQuality" type="exp:int"/>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="freezedAtStep" type="exp:int" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- pdf annotation parameters-->
+  <xs:complexType name="viewNode">
+    <xs:attribute name="name" type="xs:NCName"/>
+    <xs:attribute name="matrix" type="exp:Matrix"/>
+    <xs:attribute name="CO" type="exp:float"/>
+    <xs:attribute name="lightingScheme" type="xs:NCName"/>
+    <xs:attribute name="backgroundColor" type="exp:float3"/>
+  </xs:complexType>
+  <xs:complexType name="PdfAnnotation">
+    <xs:sequence>
+      <xs:element name="ViewNodes" minOccurs="1" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ViewNode" type="exp:viewNode" minOccurs="1" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="pageNumber" type="exp:int"/>
+    <xs:attribute name="position" type="exp:int2"/>
+    <xs:attribute name="dimensions" type="exp:int2"/>
+    <xs:attribute name="buttonPositions" type="exp:RelativePosition"/>
+    <xs:attribute name="freezed" type="exp:bool" use="optional"/>
+    <xs:attribute name="comment" type="xs:string"/>
+  </xs:complexType>
+  <!-- Task_U3D_TO_PDF -->
+  <xs:complexType name="task_U3D_TO_PDF">
+    <xs:annotation>
+      <xs:documentation>
+        Defines a task to convert .u3d file to .pdf .
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="exp:TaskBase">
+        <xs:sequence>
+          <xs:element name="pdfAnnotation" type="exp:PdfAnnotation" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- TextureParameters -->
+  <xs:complexType name="textureParameters">
+    <xs:attribute name="textureSize" type="exp:int" default="1024"/>
+    <xs:attribute name="textureQuality" type="exp:int" default="0"/>
+    <xs:attribute name="textureFormat" type="exp:imgFormat" default="jpg"/>
+  </xs:complexType>
+  <!-- Task_DES3_TO_COLLADA -->
+  <xs:complexType name="task_DES3_TO_COLLADA">
+    <xs:annotation>
+      <xs:documentation>
+        Defines a task to convert .des3 file to .dae (COLLADA).
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="exp:TaskBase">
+        <xs:sequence>
+          <xs:element name="TextureParameters" type="exp:textureParameters" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="defaultTime" type="exp:float" use="optional" default="1.0"/>
+        <xs:attribute name="freezedAtStep" type="exp:int" use="optional" default="-1"/>
+        <xs:attribute name="forAssimp" type="exp:bool" use="optional" default="false"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- Task_COLLADA_TO_ZAE -->
+  <xs:complexType name="task_COLLADA_TO_ZAE">
+    <xs:annotation>
+      <xs:documentation>
+        Defines a task to convert .dae (COLLADA) file to .zae (zipped COLLADA).
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base ="exp:TaskBase">
+        <xs:sequence>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- AugmentParameters-->
+  <xs:complexType name="AugmentParameters">
+    <xs:annotation>
+      <xs:documentation>
+        Parameters used to upload zae file on the Augment server.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="apiKey" type="xs:string"/>
+    <xs:attribute name="webLink" type="xs:string"/>
+    <xs:attribute name="modelName" type="xs:string"/>
+    <xs:attribute name="modelDescription" type="xs:string"/>
+    <xs:attribute name="modelKeywords" type="xs:string"/>
+    <xs:attribute name="modelProductSKU" type="xs:string"/>
+    <xs:attribute name="modelDimensions" type="exp:float3"/>
+    <xs:attribute name="modelUnit" type="exp:units"/>
+    <xs:attribute name="modelOpenWebPage" type="exp:bool"/>
+  </xs:complexType>
+  <!-- Task_ZAE_TO_AUGMENT -->
+  <xs:complexType name="task_ZAE_TO_AUGMENT">
+    <xs:annotation>
+      <xs:documentation>
+        Defines a task to upload a .zae (zipped COLLADA) to AUGMENT server.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="exp:TaskBase">
+        <xs:sequence>
+          <xs:element name="augmentParameters" type="exp:AugmentParameters" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- AutoParameters -->
+  <xs:complexType name="AutoParameters">
+    <xs:sequence>
+      <xs:element name="modelFiles" minOccurs="1" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="exp:PathRef" minOccurs="1" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="thickness" type="exp:float"/>
+    <xs:attribute name="foldPosition" type="exp:float"/>
+    <xs:attribute name="pointRef" type="exp:float2"/>
+  </xs:complexType>
+  <!-- Task_2D_TO_DES3 -->
+  <xs:complexType name="task_2D_TO_DES3">
+    <xs:annotation>
+      <xs:documentation>
+        Defines a task to convert 2D file (*.des/*.dxf ) to des3.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="exp:TaskBase">
+        <xs:sequence>
+          <xs:element name="autoparameters" type="exp:AutoParameters" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- Task_DES3_EXTRACTTEXTURES -->
+  <xs:complexType name="task_DES3_EXTRACTTEXTURES">
+    <xs:annotation>
+      <xs:documentation>
+        Defines a task to extract textures from a des3 file.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="exp:TaskBase">
+        <xs:sequence>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- Task_DES3_INSERTTEXTURES -->
+  <xs:complexType name="task_DES3_REPLACETEXTURES">
+    <xs:annotation>
+      <xs:documentation>
+        Defines a task to insert textures in a des3 file.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="exp:TaskBase">
+        <xs:sequence>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- Task_OPEN_PDF_ADOBEREADER -->
+  <xs:complexType name="task_OPEN_PDF_ADOBEREADER">
+    <xs:annotation>
+      <xs:documentation>
+        Defines a task to open a pdf file in Adobe Acrobat reader.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="exp:TaskBase">
+        <xs:sequence>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- Task_OPEN_COLLADA_CHROME -->
+  <xs:complexType name="task_OPEN_COLLADA_CHROME">
+    <xs:annotation>
+      <xs:documentation>
+        Defines a task to open a collada file in Chrome.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="exp:TaskBase">
+        <xs:sequence>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- Tasks -->
+  <xs:element name="Job">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Pathes">
+          <xs:annotation>
+            <xs:documentation>
+              Defines the list of files or directories used in tasks.
+            </xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="exp:PathItem" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tasks">
+          <xs:annotation>
+            <xs:documentation>
+              Defines a list of task to perform.
+              Uses XML Schema Runtime Polymorphism via xsi:type and Abstract Types (http://msdn.microsoft.com/en-us/library/aa468563.aspx#xmlschmachng_topic04)
+            </xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Task" type="exp:TaskBase" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="dateCreated" type="exp:dateTime"/>
+      <xs:attribute name="authoringTool" type="xs:NCName"/>
+      <xs:attribute name="authoringToolVersion" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

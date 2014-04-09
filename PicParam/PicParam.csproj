@@ -305,6 +305,7 @@
     <Compile Include="OptionsFormPLMPackLib.Designer.cs">
       <DependentUpon>OptionsFormPLMPackLib.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pic3DExporter\Pic3DExporter.designer.cs" />
     <Compile Include="ProfileLoaderImpl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

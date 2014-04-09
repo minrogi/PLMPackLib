@@ -731,6 +731,17 @@ namespace Pic.Plugin.ViewCtrl
             else
                 throw new Exception("Invalid file format:" + fileFormat);
         }
+
+        public bool GetReferencePointAndThickness(ref Vector2D v, ref double thickness)
+        {
+            if (!Component.IsSupportingAutomaticFolding)
+                return false;
+            ParameterStack stack = CurrentParameterStack;
+            thickness = stack.GetDoubleParameterValue("th1");
+            v = Component.ReferencePoint(stack);
+            return true;
+        }
+
         #endregion
 
         #region Plugin parameter controls

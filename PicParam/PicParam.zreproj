@@ -14,8 +14,8 @@
     <globalSetting name="autoTranslateForm.languagesToTranslateCheckListBox">1</globalSetting>
     <globalSetting name="projectMruItems">&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;items /&gt;</globalSetting>
     <globalSetting name="sendFileToTranslator.destinationFilePathTextEdit.Text">K:\Github\PLMPackLib\PLMPackLib.ja-JP.xls</globalSetting>
-    <globalSetting name="sendFileToTranslator.fileGroupsListBox">..\OptionsLib\OptionsForm###{{{}}}###..\OptionsLib\Properties\Resources###{{{}}}###..\Pic.DAL.LibrairyLoader\FormMergeLib###{{{}}}###..\Pic.DAL\Properties\Resource###{{{}}}###..\Pic.DAL\Properties\Resources###{{{}}}###..\Pic.Factory2D.Control\AboutBox###{{{}}}###..\Pic.Factory2D.Control\FactoryDataCtrl###{{{}}}###..\Pic.Factory2D.Control\FactoryViewer###{{{}}}###..\Pic.Factory2D.Control\FactoryViewerBase###{{{}}}###..\Pic.Factory2D.Control\FormImposition###{{{}}}###..\Pic.Factory2D.Control\FormImpositionSettings###{{{}}}###..\Pic.Factory2D.Control\Properties\Resources###{{{}}}###..\Pic.Factory2D.Control\Resource###{{{}}}###..\Pic.Plugin.GeneratorCtrl1\Properties\Resources###{{{}}}###..\Pic.Plugin.ViewCtrl\PluginViewCtrl###{{{}}}###..\Pic.Plugin.ViewCtrl\Properties\Resource###{{{}}}###..\TreeDim.UserControls\ProgressWindow###{{{}}}###AboutBoxForm###{{{}}}###ComponentLoaderControl###{{{}}}###DocumentTreeBranchView###{{{}}}###DocumentTreeView###{{{}}}###FormBrowseFile###{{{}}}###FormCreateBranch###{{{}}}###FormCreateCardboardFormat###{{{}}}###FormCreateCardboardProfile###{{{}}}###FormCreateDocument###{{{}}}###FormEditCardboardFormats###{{{}}}###FormEditDefaultParamValues###{{{}}}###FormEditMajorations###{{{}}}###FormEditMaterials###{{{}}}###FormEditProfiles###{{{}}}###FormExportFile###{{{}}}###FormPluginEditor###{{{}}}###FormRenameNode###{{{}}}###MainForm###{{{}}}###Properties\Resources###{{{}}}###SplashScreen</globalSetting>
-    <globalSetting name="sendFileToTranslator.languagesToExportCheckListBox">Japonais (Japon) (ja-jp)</globalSetting>
+    <globalSetting name="sendFileToTranslator.fileGroupsListBox">..\OptionsLib\OptionsForm###{{{}}}###..\OptionsLib\Properties\Resources###{{{}}}###..\Pic.DAL.LibrairyLoader\FormMergeLib###{{{}}}###..\Pic.DAL\Properties\Resource###{{{}}}###..\Pic.DAL\Properties\Resources###{{{}}}###..\Pic.Factory2D.Control\AboutBox###{{{}}}###..\Pic.Factory2D.Control\FactoryDataCtrl###{{{}}}###..\Pic.Factory2D.Control\FactoryViewer###{{{}}}###..\Pic.Factory2D.Control\FactoryViewerBase###{{{}}}###..\Pic.Factory2D.Control\FormImposition###{{{}}}###..\Pic.Factory2D.Control\FormImpositionSettings###{{{}}}###..\Pic.Factory2D.Control\Properties\Resources###{{{}}}###..\Pic.Factory2D.Control\Resource###{{{}}}###..\Pic.Plugin.GeneratorCtrl1\Properties\Resources###{{{}}}###..\Pic.Plugin.ViewCtrl\PluginViewCtrl###{{{}}}###..\Pic.Plugin.ViewCtrl\Properties\Resource###{{{}}}###..\TreeDim.UserControls\ProgressWindow###{{{}}}###ComponentLoaderControl###{{{}}}###DocumentTreeBranchView###{{{}}}###DocumentTreeView###{{{}}}###FormBrowseFile###{{{}}}###FormCreateBranch###{{{}}}###FormCreateCardboardFormat###{{{}}}###FormCreateCardboardProfile###{{{}}}###FormCreateDocument###{{{}}}###FormEditCardboardFormats###{{{}}}###FormEditDefaultParamValues###{{{}}}###FormEditMajorations###{{{}}}###FormEditMaterials###{{{}}}###FormEditProfiles###{{{}}}###FormExportFile###{{{}}}###FormPluginEditor###{{{}}}###FormRenameNode###{{{}}}###MainForm###{{{}}}###Properties\Resources###{{{}}}###SplashScreen</globalSetting>
+    <globalSetting name="sendFileToTranslator.languagesToExportCheckListBox">Français (fr)###{{{}}}###Français (France) (fr-fr)###{{{}}}###Japonais (Japon) (ja-jp)</globalSetting>
     <globalSetting name="sendFileToTranslator.referenceLanguageComboBoxEdit.SelectedIndex">0</globalSetting>
     <globalSetting name="sendFileToTranslator.openFileAfterGeneratingCheckEdit.Checked">False</globalSetting>
     <globalSetting name="sendFileToTranslator.openAfterGeneratingCheckEdit.Checked">True</globalSetting>
@@ -59,9 +59,9 @@ Kind regards</globalSetting>
       <remarks>
       </remarks>
     </fileGroup>
-    <fileGroup name="" projectFolderUniqueID="18702f82-8fdd-443d-9954-23d0f032f2dc" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="00000000-0000-0000-0000-000000000000">
-      <file filePath="..\OptionsLib\Properties\Resources.fr-FR.resx" absoluteFilePath="K:\GitHub\PLMPackLib\OptionsLib\Properties\Resources.fr-FR.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
-      <file filePath="..\OptionsLib\Properties\Resources.ja-JP.resx" absoluteFilePath="K:\GitHub\PLMPackLib\OptionsLib\Properties\Resources.ja-JP.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
+    <fileGroup name="" projectFolderUniqueID="18702f82-8fdd-443d-9954-23d0f032f2dc" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="ec145faa-7e08-4b6e-89b4-1419d73c4065">
+      <file filePath="..\OptionsLib\Properties\Resources.fr-FR.resx" absoluteFilePath="K:\GitHub\PLMPackLib\OptionsLib\Properties\Resources.fr-FR.resx" uniqueID="b3c9924d-f7b6-4ec7-8849-c5db07170b6f" />
+      <file filePath="..\OptionsLib\Properties\Resources.ja-JP.resx" absoluteFilePath="K:\GitHub\PLMPackLib\OptionsLib\Properties\Resources.ja-JP.resx" uniqueID="ee8cb39f-c77c-4a50-a1cb-990472789de4" />
       <remarks>
       </remarks>
     </fileGroup>
@@ -71,13 +71,13 @@ Kind regards</globalSetting>
       <remarks>
       </remarks>
     </fileGroup>
-    <fileGroup name="" projectFolderUniqueID="b9442bfa-0619-4581-84b5-ef11a783eb8c" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="00000000-0000-0000-0000-000000000000">
-      <file filePath="..\Pic.DAL\Properties\Resource.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.DAL\Properties\Resource.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
+    <fileGroup name="" projectFolderUniqueID="b9442bfa-0619-4581-84b5-ef11a783eb8c" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="55d496f3-9cdc-40c0-b147-a6ac03765cfb">
+      <file filePath="..\Pic.DAL\Properties\Resource.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.DAL\Properties\Resource.resx" uniqueID="5d976c58-ed96-4663-ae61-119330a7d7bb" />
       <remarks>
       </remarks>
     </fileGroup>
-    <fileGroup name="" projectFolderUniqueID="b9442bfa-0619-4581-84b5-ef11a783eb8c" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="00000000-0000-0000-0000-000000000000">
-      <file filePath="..\Pic.DAL\Properties\Resources.fr-FR.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.DAL\Properties\Resources.fr-FR.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
+    <fileGroup name="" projectFolderUniqueID="b9442bfa-0619-4581-84b5-ef11a783eb8c" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="a7829939-b577-4dfd-a81a-5738aab7fcc3">
+      <file filePath="..\Pic.DAL\Properties\Resources.fr-FR.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.DAL\Properties\Resources.fr-FR.resx" uniqueID="6ba6fab4-f78e-48a0-97da-5263e67e3406" />
       <remarks>
       </remarks>
     </fileGroup>
@@ -121,10 +121,10 @@ Kind regards</globalSetting>
       <remarks>
       </remarks>
     </fileGroup>
-    <fileGroup name="" projectFolderUniqueID="08cd78a1-5d25-4cd4-81c8-faf284cd596a" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="00000000-0000-0000-0000-000000000000">
-      <file filePath="..\Pic.Factory2D.Control\Properties\Resources.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.Factory2D.Control\Properties\Resources.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
-      <file filePath="..\Pic.Factory2D.Control\Properties\Resources.fr-FR.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.Factory2D.Control\Properties\Resources.fr-FR.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
-      <file filePath="..\Pic.Factory2D.Control\Properties\Resources.ja-JP.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.Factory2D.Control\Properties\Resources.ja-JP.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
+    <fileGroup name="" projectFolderUniqueID="08cd78a1-5d25-4cd4-81c8-faf284cd596a" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="c56dd846-3ebb-46df-abfb-d970f9fe0ecd">
+      <file filePath="..\Pic.Factory2D.Control\Properties\Resources.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.Factory2D.Control\Properties\Resources.resx" uniqueID="76476e1e-c2ca-43bf-9de9-2488b8ca49b2" />
+      <file filePath="..\Pic.Factory2D.Control\Properties\Resources.fr-FR.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.Factory2D.Control\Properties\Resources.fr-FR.resx" uniqueID="e1342533-af05-4e21-a9ed-44b0f11d8116" />
+      <file filePath="..\Pic.Factory2D.Control\Properties\Resources.ja-JP.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.Factory2D.Control\Properties\Resources.ja-JP.resx" uniqueID="9823c5ed-1cdb-4748-8792-ac6ece14b6be" />
       <remarks>
       </remarks>
     </fileGroup>
@@ -133,8 +133,8 @@ Kind regards</globalSetting>
       <remarks>
       </remarks>
     </fileGroup>
-    <fileGroup name="" projectFolderUniqueID="65a6191e-577b-4881-8c9f-4f5e52feaa3f" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="00000000-0000-0000-0000-000000000000">
-      <file filePath="..\Pic.Plugin.GeneratorCtrl1\Properties\Resources.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.Plugin.GeneratorCtrl1\Properties\Resources.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
+    <fileGroup name="" projectFolderUniqueID="65a6191e-577b-4881-8c9f-4f5e52feaa3f" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="96731cd8-1610-4316-95ed-49962928f93a">
+      <file filePath="..\Pic.Plugin.GeneratorCtrl1\Properties\Resources.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.Plugin.GeneratorCtrl1\Properties\Resources.resx" uniqueID="a685edff-4377-4a3a-b6bf-3bc09021c62d" />
       <remarks>
       </remarks>
     </fileGroup>
@@ -145,8 +145,8 @@ Kind regards</globalSetting>
       <remarks>
       </remarks>
     </fileGroup>
-    <fileGroup name="" projectFolderUniqueID="05e64324-3b21-42a3-bae9-345311fbfc61" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="00000000-0000-0000-0000-000000000000">
-      <file filePath="..\Pic.Plugin.ViewCtrl\Properties\Resource.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.Plugin.ViewCtrl\Properties\Resource.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
+    <fileGroup name="" projectFolderUniqueID="05e64324-3b21-42a3-bae9-345311fbfc61" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="13169026-f86b-486e-9f6f-7889978f322f">
+      <file filePath="..\Pic.Plugin.ViewCtrl\Properties\Resource.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.Plugin.ViewCtrl\Properties\Resource.resx" uniqueID="2917819e-b307-4373-ac33-7371da21489f" />
       <remarks>
       </remarks>
     </fileGroup>
@@ -154,13 +154,6 @@ Kind regards</globalSetting>
       <file filePath="..\TreeDim.UserControls\ProgressWindow.resx" absoluteFilePath="K:\GitHub\PLMPackLib\TreeDim.UserControls\ProgressWindow.resx" uniqueID="fc1787dd-e8b8-4ae2-84b2-60ab2bec10a0" />
       <file filePath="..\TreeDim.UserControls\ProgressWindow.fr-FR.resx" absoluteFilePath="K:\GitHub\PLMPackLib\TreeDim.UserControls\ProgressWindow.fr-FR.resx" uniqueID="7f66a07b-93f3-4a91-a7f9-17310db7caef" />
       <file filePath="..\TreeDim.UserControls\ProgressWindow.ja-JP.resx" absoluteFilePath="K:\GitHub\PLMPackLib\TreeDim.UserControls\ProgressWindow.ja-JP.resx" uniqueID="c39ffbf2-d520-40c6-84ef-8a86dfdc947a" />
-      <remarks>
-      </remarks>
-    </fileGroup>
-    <fileGroup name="" projectFolderUniqueID="00000000-0000-0000-0000-000000000000" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="7f98c0e8-c758-4da7-81df-6b584c984a6c">
-      <file filePath="AboutBoxForm.resx" absoluteFilePath="K:\GitHub\PLMPackLib\PicParam\AboutBoxForm.resx" uniqueID="8cc991e8-51e8-4aab-8c41-580379d8bfb5" />
-      <file filePath="AboutBoxForm.fr-FR.resx" absoluteFilePath="K:\GitHub\PLMPackLib\PicParam\AboutBoxForm.fr-FR.resx" uniqueID="27e43d12-5ed7-480f-b3b8-8339c0b2fddb" />
-      <file filePath="AboutBoxForm.ja-JP.resx" absoluteFilePath="K:\GitHub\PLMPackLib\PicParam\AboutBoxForm.ja-JP.resx" uniqueID="d427a04e-64c4-4513-befe-7ef80f349400" />
       <remarks>
       </remarks>
     </fileGroup>
@@ -287,6 +280,16 @@ Kind regards</globalSetting>
     </fileGroup>
   </fileGroups>
   <projectFolders>
+    <projectFolder uniqueID="61f4353a-df12-42d7-ba3c-80688a066c53" parentUniqueID="00000000-0000-0000-0000-000000000000" name="DesLib4NET" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
+    <projectFolder uniqueID="c3226fa8-765c-43e4-bff7-78d4b597d6c1" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Dxflib4NET" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
     <projectFolder uniqueID="18702f82-8fdd-443d-9954-23d0f032f2dc" parentUniqueID="00000000-0000-0000-0000-000000000000" name="OptionsLib" orderPosition="0">
       <remarks>
       </remarks>
@@ -310,6 +313,26 @@ Kind regards</globalSetting>
           <value>False</value>
         </setting>
       </dynSettings>
+    </projectFolder>
+    <projectFolder uniqueID="82100ecf-1479-49d3-b7cb-45eb7685c141" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.DAL.LibraryLoader" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
+    <projectFolder uniqueID="b9442bfa-0619-4581-84b5-ef11a783eb8c" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.DAL.Sqlite" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
+    <projectFolder uniqueID="72d28946-c16b-4320-96ff-b3a7bd693c2d" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Factory2D" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
+    <projectFolder uniqueID="08cd78a1-5d25-4cd4-81c8-faf284cd596a" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Factory2D.Control" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
     </projectFolder>
     <projectFolder uniqueID="07c3cb2d-eaad-4eab-8efe-3f787a0cdeb0" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Plugin.Factory2D" orderPosition="0">
       <remarks>
@@ -335,6 +358,31 @@ Kind regards</globalSetting>
         </setting>
       </dynSettings>
     </projectFolder>
+    <projectFolder uniqueID="bce1374d-fd2b-40eb-b8e8-c49d6ac5b40e" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Plugin.Generator" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
+    <projectFolder uniqueID="65a6191e-577b-4881-8c9f-4f5e52feaa3f" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Plugin.GeneratorCtrl" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
+    <projectFolder uniqueID="f8cfca45-1b73-429a-805c-22a1bf3ad1b5" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Plugin.Host" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
+    <projectFolder uniqueID="78262c44-4cff-44a3-bfb7-c87463f95772" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Plugin.PluginInterface" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
+    <projectFolder uniqueID="5fc709c1-2497-4b59-b950-1c54adf2b90f" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Plugin.Tools" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
     <projectFolder uniqueID="05e64324-3b21-42a3-bae9-345311fbfc61" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Plugin.ViewCtrl" orderPosition="0">
       <remarks>
       </remarks>
@@ -358,6 +406,16 @@ Kind regards</globalSetting>
           <value>False</value>
         </setting>
       </dynSettings>
+    </projectFolder>
+    <projectFolder uniqueID="bd7561af-6a0a-4603-bc92-b8078f7f27c2" parentUniqueID="00000000-0000-0000-0000-000000000000" name="PicParam" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
+    <projectFolder uniqueID="fee20714-c570-4e33-b56b-694eaad5d518" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Sharp3D.Math" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
     </projectFolder>
     <projectFolder uniqueID="b6ae9238-840c-481b-b407-ab5d95cd9dae" parentUniqueID="00000000-0000-0000-0000-000000000000" name="TreeDim.UserControls" orderPosition="0">
       <remarks>
@@ -383,72 +441,7 @@ Kind regards</globalSetting>
         </setting>
       </dynSettings>
     </projectFolder>
-    <projectFolder uniqueID="08cd78a1-5d25-4cd4-81c8-faf284cd596a" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Factory2D.Control" orderPosition="0">
-      <remarks>
-      </remarks>
-      <dynSettings />
-    </projectFolder>
-    <projectFolder uniqueID="78262c44-4cff-44a3-bfb7-c87463f95772" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Plugin.PluginInterface" orderPosition="0">
-      <remarks>
-      </remarks>
-      <dynSettings />
-    </projectFolder>
-    <projectFolder uniqueID="f8cfca45-1b73-429a-805c-22a1bf3ad1b5" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Plugin.Host" orderPosition="0">
-      <remarks>
-      </remarks>
-      <dynSettings />
-    </projectFolder>
-    <projectFolder uniqueID="5fc709c1-2497-4b59-b950-1c54adf2b90f" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Plugin.Tools" orderPosition="0">
-      <remarks>
-      </remarks>
-      <dynSettings />
-    </projectFolder>
-    <projectFolder uniqueID="c3226fa8-765c-43e4-bff7-78d4b597d6c1" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Dxflib4NET" orderPosition="0">
-      <remarks>
-      </remarks>
-      <dynSettings />
-    </projectFolder>
-    <projectFolder uniqueID="61f4353a-df12-42d7-ba3c-80688a066c53" parentUniqueID="00000000-0000-0000-0000-000000000000" name="DesLib4NET" orderPosition="0">
-      <remarks>
-      </remarks>
-      <dynSettings />
-    </projectFolder>
-    <projectFolder uniqueID="bce1374d-fd2b-40eb-b8e8-c49d6ac5b40e" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Plugin.Generator" orderPosition="0">
-      <remarks>
-      </remarks>
-      <dynSettings />
-    </projectFolder>
-    <projectFolder uniqueID="65a6191e-577b-4881-8c9f-4f5e52feaa3f" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Plugin.GeneratorCtrl" orderPosition="0">
-      <remarks>
-      </remarks>
-      <dynSettings />
-    </projectFolder>
-    <projectFolder uniqueID="b9442bfa-0619-4581-84b5-ef11a783eb8c" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.DAL.Sqlite" orderPosition="0">
-      <remarks>
-      </remarks>
-      <dynSettings />
-    </projectFolder>
-    <projectFolder uniqueID="bd7561af-6a0a-4603-bc92-b8078f7f27c2" parentUniqueID="00000000-0000-0000-0000-000000000000" name="PicParam" orderPosition="0">
-      <remarks>
-      </remarks>
-      <dynSettings />
-    </projectFolder>
     <projectFolder uniqueID="4c6fa6b6-5e85-4018-ade9-013dba1aa33d" parentUniqueID="00000000-0000-0000-0000-000000000000" name="ZipExtract" orderPosition="0">
-      <remarks>
-      </remarks>
-      <dynSettings />
-    </projectFolder>
-    <projectFolder uniqueID="72d28946-c16b-4320-96ff-b3a7bd693c2d" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Factory2D" orderPosition="0">
-      <remarks>
-      </remarks>
-      <dynSettings />
-    </projectFolder>
-    <projectFolder uniqueID="82100ecf-1479-49d3-b7cb-45eb7685c141" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.DAL.LibraryLoader" orderPosition="0">
-      <remarks>
-      </remarks>
-      <dynSettings />
-    </projectFolder>
-    <projectFolder uniqueID="fee20714-c570-4e33-b56b-694eaad5d518" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Sharp3D.Math" orderPosition="0">
       <remarks>
       </remarks>
       <dynSettings />

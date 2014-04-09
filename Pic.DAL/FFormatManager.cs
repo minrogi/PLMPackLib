@@ -43,14 +43,27 @@ namespace Pic.DAL
     public class FormatDES : FormatHandler
     {
         public override bool CanGenerateThumbnail { get { return true; } }
-        public override string ThumbnailName { get { return ""; } }
-        public override string FilterString { get { return "Picador (*.des)|*.des|Picador3D (*.des3)|*.des3|"; } }
-        public override string[] SupportedExtensions { get { return new string[] { "des", "des3" }; } }
+        public override string ThumbnailName { get { return "PicGEOM.bmp"; } }
+        public override string FilterString { get { return "Picador (*.des)|*.des|"; } }
+        public override string[] SupportedExtensions { get { return new string[] { "des" }; } }
         public override string Name { get { return "treeDim des"; } }
         public override string Description { get { return "treeDim des drawing"; } }
         public override string Application { get { return "Picador"; } }
         public override bool OpenInPLMPackLib { get { return true; } }
     }
+
+    public class FormatDES3 : FormatHandler
+    {
+        public override bool CanGenerateThumbnail { get { return true; } }
+        public override string ThumbnailName { get { return "Picador3D.bmp"; } }
+        public override string FilterString { get { return "Picador (*.des3)|*.des3|"; } }
+        public override string[] SupportedExtensions { get { return new string[] { "des3" }; } }
+        public override string Name { get { return "treeDim des3"; } }
+        public override string Description { get { return "treeDim des3 drawing"; } }
+        public override string Application { get { return "Picador3D"; } }
+        public override bool OpenInPLMPackLib { get { return true; } }
+    }
+
     public class FormatDXF : FormatHandler
     {
         public override bool CanGenerateThumbnail { get { return true; } }
@@ -243,6 +256,7 @@ namespace Pic.DAL
         {
             new FormatDLL()
             , new FormatDES()
+            , new FormatDES3()
             , new FormatDXF()
             , new FormatCF2()
             , new FormatAI()
