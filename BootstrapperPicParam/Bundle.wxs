@@ -10,7 +10,7 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
      xmlns:bal="http://schemas.microsoft.com/wix/BalExtension"
      xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
-	<Bundle Name="$(var.ProductName)"
+  <Bundle Name="$(var.ProductName)"
           Version="$(var.ProductVersion)"
           Manufacturer="$(var.Manufacturer)"
           UpgradeCode="$(var.UpgradeCode)"
@@ -30,18 +30,19 @@
     <Variable Name="LaunchTarget" Value="[InstallFolder]\Bin32\PLMPackLib.exe"/>
     <Chain>
       <PackageGroupRef Id="Netfx4Full"/>
+      <!-- Note: DisplayInternalUI is set to yes in order to show registration dialog -->
       <MsiPackage
         Compressed="yes"
         SourceFile="..\PicParamMSI\bin\Release\PLMPackLibMSI.msi"
         Vital="yes"
-        DisplayInternalUI="no"
+        DisplayInternalUI="yes"
         ForcePerMachine="yes"
         Visible="yes">
         <MsiProperty Name="ARPSYSTEMCOMPONENT" Value="1"/>
         <MsiProperty Name="INSTALLLOCATION" Value="[InstallFolder]" />
       </MsiPackage>
-		</Chain>
-	</Bundle>
+    </Chain>
+  </Bundle>
   <Fragment>
     <util:RegistrySearch
             Root="HKLM"
@@ -73,5 +74,5 @@
         <ExitCode Behavior="success" Value="3010"/>
       </ExePackage>
     </PackageGroup>
-  </Fragment>  
+  </Fragment>
 </Wix>
