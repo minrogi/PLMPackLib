@@ -33,9 +33,13 @@
             this.toolStripContainerDefault = new System.Windows.Forms.ToolStripContainer();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this._splitContainer = new System.Windows.Forms.SplitContainer();
+            this._treeViewCtrl = new PicParam.DocumentTreeView();
             this._webBrowser4PDF = new System.Windows.Forms.WebBrowser();
+            this._branchViewCtrl = new PicParam.DocumentTreeBranchView();
             this._pluginViewCtrl = new Pic.Plugin.ViewCtrl.PluginViewCtrl();
             this._factoryViewCtrl = new Pic.Factory2D.Control.FactoryViewerBase();
+            this._startPageCtrl = new PicParam.StartPageControl();
+            this._downloadPageCtrl = new PicParam.DownloadPageControl();
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,6 +93,7 @@
             this.toolStripButtonPicGEOM = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPicDecoup = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPicador3D = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonPDF = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonDXF = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonAI = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCFF2 = new System.Windows.Forms.ToolStripButton();
@@ -103,10 +108,6 @@
             this.toolStripEditDLL = new System.Windows.Forms.ToolStripButton();
             this.openFileDialogRestore = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogBackup = new System.Windows.Forms.SaveFileDialog();
-            this._treeViewCtrl = new PicParam.DocumentTreeView();
-            this._branchViewCtrl = new PicParam.DocumentTreeBranchView();
-            this._startPageCtrl = new PicParam.StartPageControl();
-            this._downloadPageCtrl = new PicParam.DownloadPageControl();
             this.toolStripContainerDefault.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainerDefault.ContentPanel.SuspendLayout();
             this.toolStripContainerDefault.TopToolStripPanel.SuspendLayout();
@@ -169,10 +170,22 @@
             this._splitContainer.Panel2.Controls.Add(this._startPageCtrl);
             this._splitContainer.Panel2.Controls.Add(this._downloadPageCtrl);
             // 
+            // _treeViewCtrl
+            // 
+            this._treeViewCtrl.AllowDrop = true;
+            resources.ApplyResources(this._treeViewCtrl, "_treeViewCtrl");
+            this._treeViewCtrl.Name = "_treeViewCtrl";
+            this._treeViewCtrl.ShowNodeToolTips = true;
+            // 
             // _webBrowser4PDF
             // 
             resources.ApplyResources(this._webBrowser4PDF, "_webBrowser4PDF");
             this._webBrowser4PDF.Name = "_webBrowser4PDF";
+            // 
+            // _branchViewCtrl
+            // 
+            resources.ApplyResources(this._branchViewCtrl, "_branchViewCtrl");
+            this._branchViewCtrl.Name = "_branchViewCtrl";
             // 
             // _pluginViewCtrl
             // 
@@ -202,6 +215,17 @@
             this._factoryViewCtrl.ShowAboutMenu = false;
             this._factoryViewCtrl.ShowCotations = false;
             this._factoryViewCtrl.ShowNestingMenu = false;
+            // 
+            // _startPageCtrl
+            // 
+            resources.ApplyResources(this._startPageCtrl, "_startPageCtrl");
+            this._startPageCtrl.Name = "_startPageCtrl";
+            this._startPageCtrl.Url = new System.Uri("about:blank", System.UriKind.Absolute);
+            // 
+            // _downloadPageCtrl
+            // 
+            resources.ApplyResources(this._downloadPageCtrl, "_downloadPageCtrl");
+            this._downloadPageCtrl.Name = "_downloadPageCtrl";
             // 
             // menuStripMain
             // 
@@ -569,8 +593,9 @@
             this.toolStripButtonPicDecoup,
             this.toolStripButtonPicador3D,
             this.toolStripButtonDXF,
-            this.toolStripButtonAI,
             this.toolStripButtonCFF2,
+            this.toolStripButtonAI,
+            this.toolStripButtonPDF,
             this.toolStripSeparator12,
             this.toolStripButtonOceProCut,
             this.toolStripSeparator7,
@@ -601,6 +626,13 @@
             resources.ApplyResources(this.toolStripButtonPicador3D, "toolStripButtonPicador3D");
             this.toolStripButtonPicador3D.Name = "toolStripButtonPicador3D";
             this.toolStripButtonPicador3D.Click += new System.EventHandler(this.toolStripButtonPicador3D_Click);
+            // 
+            // toolStripButtonPDF
+            // 
+            this.toolStripButtonPDF.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.toolStripButtonPDF, "toolStripButtonPDF");
+            this.toolStripButtonPDF.Name = "toolStripButtonPDF";
+            this.toolStripButtonPDF.Click += new System.EventHandler(this.toolStripButtonPDF_Click);
             // 
             // toolStripButtonDXF
             // 
@@ -687,29 +719,6 @@
             // saveFileDialogBackup
             // 
             resources.ApplyResources(this.saveFileDialogBackup, "saveFileDialogBackup");
-            // 
-            // _treeViewCtrl
-            // 
-            this._treeViewCtrl.AllowDrop = true;
-            resources.ApplyResources(this._treeViewCtrl, "_treeViewCtrl");
-            this._treeViewCtrl.Name = "_treeViewCtrl";
-            this._treeViewCtrl.ShowNodeToolTips = true;
-            // 
-            // _branchViewCtrl
-            // 
-            resources.ApplyResources(this._branchViewCtrl, "_branchViewCtrl");
-            this._branchViewCtrl.Name = "_branchViewCtrl";
-            // 
-            // _startPageCtrl
-            // 
-            resources.ApplyResources(this._startPageCtrl, "_startPageCtrl");
-            this._startPageCtrl.Name = "_startPageCtrl";
-            this._startPageCtrl.Url = new System.Uri("about:blank", System.UriKind.Absolute);
-            // 
-            // _downloadPageCtrl
-            // 
-            resources.ApplyResources(this._downloadPageCtrl, "_downloadPageCtrl");
-            this._downloadPageCtrl.Name = "_downloadPageCtrl";
             // 
             // MainForm
             // 
@@ -826,6 +835,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonStartPageWeb;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
         private System.Windows.Forms.ToolStripButton toolStripButtonPDF3D;
+        private System.Windows.Forms.ToolStripButton toolStripButtonPDF;
     }
 }
 

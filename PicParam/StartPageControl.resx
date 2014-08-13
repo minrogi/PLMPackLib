@@ -226,7 +226,7 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;listBoxLibraries.Type" xml:space="preserve">
-    <value>ListBoxLibraries, PLMPackLib, Version=6.4.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ListBoxLibraries, PLMPackLib, Version=6.4.4.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="bnMerge.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>

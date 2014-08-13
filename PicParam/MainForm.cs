@@ -188,7 +188,7 @@ namespace PicParam
         private void UpdateTextPosition(object sender, EventArgs e)
         {
             // exit when in design mode
-            if ((this.DesignMode)||!(Settings.Default.ShowCenteredTitle)) return;
+            if ((this.DesignMode) || !(Settings.Default.ShowCenteredTitle)) return;
             // measure text length and compute starting point of text
             Graphics g = this.CreateGraphics();
             double startingPoint = (this.Width / 2) - (g.MeasureString(this.Text.Trim(), this.Font).Width / 2);
@@ -229,8 +229,8 @@ namespace PicParam
             }
             catch (Exception ex)
             {
-				Debug.Fail(ex.ToString());
-				_log.Error(ex.ToString());                
+                Debug.Fail(ex.ToString());
+                _log.Error(ex.ToString());
             }
         }
         #endregion
@@ -325,7 +325,7 @@ namespace PicParam
                 form.ShowDialog();
             }
             catch (Exception ex)
-            {   _log.Error(ex.ToString());  }
+            { _log.Error(ex.ToString()); }
         }
         #endregion
         #region Tools
@@ -504,9 +504,13 @@ namespace PicParam
         {
             ExportAndOpenExtension("des", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppPicDecoupeDES);
         }
-        private void toolStripButtonPicador3D_Click(object sender, EventArgs e) 
+        private void toolStripButtonPicador3D_Click(object sender, EventArgs e)
         {
             ExportAndOpenExtension("des", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppPic3DDES);
+        }
+        private void toolStripButtonPDF_Click(object sender, EventArgs e)
+        {
+            ExportAndOpenExtension("pdf", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppPDF);
         }
         private void toolStripButtonDXF_Click(object sender, EventArgs e)
         {
@@ -589,7 +593,7 @@ namespace PicParam
                 fd.FilterIndex = 0;
                 // show save file dialog
                 if (DialogResult.OK == fd.ShowDialog())
-                    ExportAndOpen(fd.FileName, string.Empty );
+                    ExportAndOpen(fd.FileName, string.Empty);
                 // save directory
                 Settings.Default.FileExportDirectory = Path.GetDirectoryName(fd.FileName);
             }
@@ -606,16 +610,24 @@ namespace PicParam
                 _pluginViewCtrl.WriteExportFile(filePath, Path.GetExtension(filePath));
             else if (_factoryViewCtrl.Visible)
                 _factoryViewCtrl.WriteExportFile(filePath, Path.GetExtension(filePath));
-            // test if executing application is available
-            if (!string.IsNullOrEmpty(sPathExectable) && System.IO.File.Exists(sPathExectable))
+
+            // open using existing file path
+            using (System.Diagnostics.Process proc = new System.Diagnostics.Process())
             {
-                // open using existing file path
-                using (System.Diagnostics.Process proc = new System.Diagnostics.Process())
+                // test if executing application is available
+                if (!string.IsNullOrEmpty(sPathExectable) && System.IO.File.Exists(sPathExectable))
                 {
                     proc.StartInfo.FileName = sPathExectable;
                     proc.StartInfo.Arguments = "\"" + filePath + "\"";
-                    proc.Start();
                 }
+                else // no valid executable path -> attempting shell execute
+                {
+                    proc.StartInfo.FileName = filePath;
+                    proc.StartInfo.Verb = "open";
+                    proc.StartInfo.UseShellExecute = true;
+                }
+                // start process
+                proc.Start();
             }
         }
 
@@ -633,7 +645,7 @@ namespace PicParam
                 return;
             // get documents at the same lavel
             NodeTag nodeTag = _treeViewCtrl.SelectedNode.Tag as NodeTag;
-            if (null == nodeTag)  return;
+            if (null == nodeTag) return;
             PPDataContext db = new PPDataContext();
             Pic.DAL.SQLite.TreeNode treeNode = Pic.DAL.SQLite.TreeNode.GetById(db, nodeTag.TreeNode);
             List<Document> des3Docs = treeNode.GetBrothersWithExtension(db, "des3");
@@ -667,11 +679,11 @@ namespace PicParam
                     // #### job file
                     Pic3DExporter.Job job = new Pic3DExporter.Job();
                     // **** FILES BEGIN ****
-                    job.Pathes.Add(new Pic3DExporter.PathItem() { pathID = "FID-1", path = defaultPdfTemplate, type = Pic3DExporter.pathType.FILE});
+                    job.Pathes.Add(new Pic3DExporter.PathItem() { pathID = "FID-1", path = defaultPdfTemplate, type = Pic3DExporter.pathType.FILE });
                     job.Pathes.Add(new Pic3DExporter.PathItem() { pathID = "FID-2", path = desFile, type = Pic3DExporter.pathType.FILE });
                     job.Pathes.Add(new Pic3DExporter.PathItem() { pathID = "FID-3", path = des3File, type = Pic3DExporter.pathType.FILE });
-                    job.Pathes.Add(new Pic3DExporter.PathItem() { pathID = "FID-4", path = u3dFile, type = Pic3DExporter.pathType.FILE});
-                    job.Pathes.Add(new Pic3DExporter.PathItem() { pathID = "FID-5", path = pdfFile, type = Pic3DExporter.pathType.FILE});
+                    job.Pathes.Add(new Pic3DExporter.PathItem() { pathID = "FID-4", path = u3dFile, type = Pic3DExporter.pathType.FILE });
+                    job.Pathes.Add(new Pic3DExporter.PathItem() { pathID = "FID-5", path = pdfFile, type = Pic3DExporter.pathType.FILE });
 
                     int fid = 5;
                     foreach (string filePath in filePathes)
@@ -683,7 +695,7 @@ namespace PicParam
                     // **** TASKS BEGIN ****
                     // DES -> DES3
                     Pic3DExporter.task_2D_TO_DES3 task_2D_to_DES3 = new Pic3DExporter.task_2D_TO_DES3() { id = "TID-1" };
-                    task_2D_to_DES3.Inputs.Add(new Pic3DExporter.PathRef() { pathID = "FID-2", role="input des", deleteAfterUsing=false });
+                    task_2D_to_DES3.Inputs.Add(new Pic3DExporter.PathRef() { pathID = "FID-2", role = "input des", deleteAfterUsing = false });
                     task_2D_to_DES3.Outputs.Add(new Pic3DExporter.PathRef() { pathID = "FID-3", role = "output des3", deleteAfterUsing = false });
                     task_2D_to_DES3.autoparameters.thicknessSpecified = true;
                     task_2D_to_DES3.autoparameters.thickness = (float)thickness;
@@ -694,7 +706,7 @@ namespace PicParam
                     fid = 5;
                     foreach (string filePath in filePathes)
                     {
-                        task_2D_to_DES3.autoparameters.modelFiles.Add(new Pic3DExporter.PathRef() { pathID = string.Format("FID-{0}", ++fid), role = "model files", deleteAfterUsing = false }); 
+                        task_2D_to_DES3.autoparameters.modelFiles.Add(new Pic3DExporter.PathRef() { pathID = string.Format("FID-{0}", ++fid), role = "model files", deleteAfterUsing = false });
                     }
                     job.Tasks.Add(task_2D_to_DES3);
                     // DES3 -> U3D
@@ -711,7 +723,7 @@ namespace PicParam
                     // U3D -> PDF
                     float[] mat = { -0.768655F, -0.632503F, 0.0954455F, -0.220844F, 0.402444F, 0.888407F, -0.600332F, 0.661799F, -0.449025F, 1805.8F, -1990.7F, 1350.67F };
                     List<float> viewMatrix = new List<float>(mat);
-                    float[] bColor = {1.0f, 1.0f, 1.0f};
+                    float[] bColor = { 1.0f, 1.0f, 1.0f };
                     List<float> backColor = new List<float>(bColor);
 
                     Pic3DExporter.task_U3D_TO_PDF task_U3D_to_PDF = new Pic3DExporter.task_U3D_TO_PDF() { id = "TID-3" };
@@ -727,7 +739,7 @@ namespace PicParam
                     task_U3D_to_PDF.pdfAnnotation.position.Add(40);
                     task_U3D_to_PDF.pdfAnnotation.dimensions.Add(760);
                     task_U3D_to_PDF.pdfAnnotation.dimensions.Add(500);
-                    task_U3D_to_PDF.pdfAnnotation.ViewNodes.Add(new Pic3DExporter.viewNode() { name = "View_Step0", matrix = viewMatrix, backgroundColor = backColor , COSpecified = true, CO = 3000.0f, lightingScheme="CAD"} );
+                    task_U3D_to_PDF.pdfAnnotation.ViewNodes.Add(new Pic3DExporter.viewNode() { name = "View_Step0", matrix = viewMatrix, backgroundColor = backColor, COSpecified = true, CO = 3000.0f, lightingScheme = "CAD" });
                     job.Tasks.Add(task_U3D_to_PDF);
                     // 
                     // open PDF
@@ -791,7 +803,7 @@ namespace PicParam
                 _factoryViewCtrl.ReflectionY = !_factoryViewCtrl.ReflectionY;
             UpdateToolCommands();
         }
-         private void toolStripButtonLayout_Click(object sender, EventArgs e)
+        private void toolStripButtonLayout_Click(object sender, EventArgs e)
         {
             try
             {
@@ -830,6 +842,7 @@ namespace PicParam
                 toolStripButtonPicDecoup.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("PicDecoup");
                 toolStripButtonPicador3D.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("Picador3D");
                 toolStripButtonOceProCut.Enabled = buttonsEnabled;
+                toolStripButtonPDF.Enabled = buttonsEnabled;
                 toolStripButtonDXF.Enabled = buttonsEnabled;
                 toolStripButtonAI.Enabled = buttonsEnabled;
                 toolStripButtonCFF2.Enabled = buttonsEnabled;
@@ -911,7 +924,7 @@ namespace PicParam
         {
             try
             {
-                FormEditDefaultParamValues form = new FormEditDefaultParamValues( _pluginViewCtrl.Dependancies );
+                FormEditDefaultParamValues form = new FormEditDefaultParamValues(_pluginViewCtrl.Dependancies);
                 if (DialogResult.OK == form.ShowDialog())
                 {   // also see on Ok button handler
                     // clear plugin loader cache
@@ -947,7 +960,7 @@ namespace PicParam
         {
             try
             {
-                _treeViewCtrl.CollapseRootChildrens();                
+                _treeViewCtrl.CollapseRootChildrens();
             }
             catch (Exception ex)
             {
@@ -964,7 +977,7 @@ namespace PicParam
                 _treeViewCtrl.SelectedNode = _treeViewCtrl.Nodes[1];
             }
             catch (Exception ex)
-            {    _log.Error(ex.ToString());   }
+            { _log.Error(ex.ToString()); }
         }
         /// <summary>
         /// Search
@@ -976,7 +989,7 @@ namespace PicParam
                 FormSearch form = new FormSearch();
                 if (DialogResult.OK == form.ShowDialog())
                 {
-                     // show selected node
+                    // show selected node
                     _treeViewCtrl.PopulateAndSelectNode(new NodeTag(NodeTag.NodeType.NT_TREENODE, form.ResultNodeId));
                 }
             }
@@ -1041,7 +1054,7 @@ namespace PicParam
             catch (Exception ex)
             {
                 _log.Error(ex.ToString());
-            }            
+            }
         }
         #endregion
 
@@ -1070,7 +1083,7 @@ namespace PicParam
 
                 // load settings only if not in debug mode
                 if (!Properties.Settings.Default.DebugMode)
-                     ToolStripManager.LoadSettings(this, this.Name);
+                    ToolStripManager.LoadSettings(this, this.Name);
                 toolStripDebug.Visible = Properties.Settings.Default.DebugMode;
 
                 // --- instantiate and start splach screen thread
@@ -1087,7 +1100,7 @@ namespace PicParam
                 _pluginViewCtrl.SearchMethod = new ComponentSearchMethodDB();
 
                 _treeViewCtrl.StartPageSelected += new DocumentTreeView.StartPageSelectHandler(ShowStartPage);
-                _treeViewCtrl.DownloadPageSelected += new DocumentTreeView.DownloadPageSelectHandler(ShowDownloadPage); 
+                _treeViewCtrl.DownloadPageSelected += new DocumentTreeView.DownloadPageSelectHandler(ShowDownloadPage);
 
                 _treeViewCtrl.SelectionChanged += new DocumentTreeView.SelectionChangedHandler(_branchViewCtrl.OnSelectionChanged);
                 _treeViewCtrl.SelectionChanged += new DocumentTreeView.SelectionChangedHandler(OnSelectionChanged);
@@ -1140,12 +1153,12 @@ namespace PicParam
             UpdateTextPosition(null, null);
 
             // show/hide controls
-            _startPageCtrl.Visible      = false;
-            _downloadPageCtrl.Visible   = false;
-            _branchViewCtrl.Visible     = (NodeTag.NodeType.NT_TREENODE == e.Type);
-            _pluginViewCtrl.Visible     = false;
-            _factoryViewCtrl.Visible    = false;
-            _webBrowser4PDF.Visible     = false;
+            _startPageCtrl.Visible = false;
+            _downloadPageCtrl.Visible = false;
+            _branchViewCtrl.Visible = (NodeTag.NodeType.NT_TREENODE == e.Type);
+            _pluginViewCtrl.Visible = false;
+            _factoryViewCtrl.Visible = false;
+            _webBrowser4PDF.Visible = false;
             if (NodeTag.NodeType.NT_DOCUMENT == e.Type)
             {
                 PPDataContext db = new PPDataContext();
@@ -1265,17 +1278,18 @@ namespace PicParam
                 FormPluginEditor editorForm = new FormPluginEditor();
                 editorForm.PluginPath = filePathCopy;
                 editorForm.OutputPath = fd.FileName;
-                if (DialogResult.OK == editorForm.ShowDialog()) {}
+                if (DialogResult.OK == editorForm.ShowDialog()) { }
                 // try and delete copy file
                 try { System.IO.File.Delete(filePathCopy); }
-                catch (Exception /*ex*/) {}
+                catch (Exception /*ex*/) { }
             }
         }
         #endregion
 
         #region Data members
         protected static readonly ILog _log = LogManager.GetLogger(typeof(MainForm));
-        [NonSerialized]protected ProfileLoaderImpl _profileLoaderImpl;
+        [NonSerialized]
+        protected ProfileLoaderImpl _profileLoaderImpl;
         /// <summary>
         /// current document name
         /// </summary>
@@ -1289,5 +1303,6 @@ namespace PicParam
         /// </summary>
         private MRUManager mruManager;
         #endregion
+
     }
 }

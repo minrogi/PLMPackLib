@@ -9,7 +9,7 @@
       <Value Profile="(Default)">K:\Codesion\PicSharp\PicSharpDb\PicParamData\Database\PicParam.db</Value>
     </Setting>
     <Setting Name="EmptyDBFilePath" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">K:\Codeplex\PLMPackLib\PicSharpDb\PicParamEmpty.db</Value>
+      <Value Profile="(Default)">K:\GitHub\PLMPackLib\PicSharpDb\PicParamEmpty.db</Value>
     </Setting>
   </Settings>
 </SettingsFile>

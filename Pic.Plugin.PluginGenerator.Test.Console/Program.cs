@@ -26,8 +26,8 @@ namespace Pic.Plugin.Generator.Test.Console
             {
                 // sourceCode1
                 {
-                    string sourceCodePath = @"K:\Codeplex\PLMPackLib\Pic.Plugin.PluginGenerator.Test.Console\sourceCode1.cs";
-                    string outputPath = @"K:\Codeplex\PLMPackLib\PicPlugins\";
+                    string sourceCodePath = @"K:\GitHub\PLMPackLib\Pic.Plugin.PluginGenerator.Test.Console\sourceCode1.cs";
+                    string outputPath = @"K:\GitHub\PLMPackLib\PicPlugins\";
                     string thumbnailPath = string.Empty;
                     if (!File.Exists(sourceCodePath))
                     {
@@ -69,8 +69,8 @@ namespace Pic.Plugin.Generator.Test.Console
                 }
                 // sourceCode2
                 {
-                    string sourceCodePath = @"K:\Codeplex\PLMPackLib\Pic.Plugin.PluginGenerator.Test.Console\sourceCode2.cs";
-                    string outputPath = @"K:\Codeplex\PLMPackLib\PicPlugins\";
+                    string sourceCodePath = @"K:\GitHub\PLMPackLib\Pic.Plugin.PluginGenerator.Test.Console\sourceCode2.cs";
+                    string outputPath = @"K:\GitHub\PLMPackLib\PicPlugins\";
                     string thumbnailPath = string.Empty;
                     if (!File.Exists(sourceCodePath))
                     {

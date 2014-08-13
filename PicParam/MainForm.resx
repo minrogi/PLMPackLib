@@ -193,7 +193,7 @@
     <value>_treeViewCtrl</value>
   </data>
   <data name="&gt;&gt;_treeViewCtrl.Type" xml:space="preserve">
-    <value>PicParam.DocumentTreeView, PLMPackLib, Version=6.4.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>PicParam.DocumentTreeView, PLMPackLib, Version=6.4.4.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_treeViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel1</value>
@@ -259,7 +259,7 @@
     <value>_branchViewCtrl</value>
   </data>
   <data name="&gt;&gt;_branchViewCtrl.Type" xml:space="preserve">
-    <value>PicParam.DocumentTreeBranchView, PLMPackLib, Version=6.4.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>PicParam.DocumentTreeBranchView, PLMPackLib, Version=6.4.4.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_branchViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -319,7 +319,7 @@
     <value>_pluginViewCtrl</value>
   </data>
   <data name="&gt;&gt;_pluginViewCtrl.Type" xml:space="preserve">
-    <value>Pic.Plugin.ViewCtrl.PluginViewCtrl, Pic.Plugin.ViewCtrl, Version=6.4.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>Pic.Plugin.ViewCtrl.PluginViewCtrl, Pic.Plugin.ViewCtrl, Version=6.4.4.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_pluginViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -343,7 +343,7 @@
     <value>_factoryViewCtrl</value>
   </data>
   <data name="&gt;&gt;_factoryViewCtrl.Type" xml:space="preserve">
-    <value>Pic.Factory2D.Control.FactoryViewerBase, Pic.Factory2D.Control, Version=6.4.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>Pic.Factory2D.Control.FactoryViewerBase, Pic.Factory2D.Control, Version=6.4.4.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_factoryViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -370,7 +370,7 @@
     <value>_startPageCtrl</value>
   </data>
   <data name="&gt;&gt;_startPageCtrl.Type" xml:space="preserve">
-    <value>PicParam.StartPageControl, PLMPackLib, Version=6.4.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>PicParam.StartPageControl, PLMPackLib, Version=6.4.4.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_startPageCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -394,7 +394,7 @@
     <value>_downloadPageCtrl</value>
   </data>
   <data name="&gt;&gt;_downloadPageCtrl.Type" xml:space="preserve">
-    <value>PicParam.DownloadPageControl, PLMPackLib, Version=6.4.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>PicParam.DownloadPageControl, PLMPackLib, Version=6.4.4.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_downloadPageCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -1126,7 +1126,7 @@
     <value>3, 24</value>
   </data>
   <data name="toolStripMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>505, 39</value>
+    <value>474, 39</value>
   </data>
   <data name="toolStripMain.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1247,28 +1247,6 @@
   <data name="toolStripButtonDXF.Text" xml:space="preserve">
     <value>Open with DXF file editing application</value>
   </data>
-  <data name="toolStripButtonAI.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGtSURBVFhHY0AHqvNj/lOKFefH3NVaFcoGNZI0ADLAdFnG
-        /+jtLSTjkC31CEfMjnyiNSWUB2os8QCkOXNv338olyTw7vsnlJAA4hckO4ISB3z8+RVscfa+Cf+Nl6Yj
-        HDE7RAiqhDCghgNy90/6/+775/8my6COmBvzTm1mpAhUGX5ADQfA9H/9/f2/5Yps0hxBDQcgJ+LQLQ0Q
-        B4DwrJiPUKW4ASUO+PPv73+XtcUIC7FgqFLcAKSIXAfgAyAzRx1AtAPsV+ejlHDUwGbAhEm0A4yWpoIV
-        0wJDrcENQIoGvQOc1hSBDfrw8wuK+KNPL/93n1mBIoaOwZbgAyBFhBxQc3Tuf5DlIPXxO9vh4iDLkfnY
-        MNgSfACkiJADjj698n/b/ZNgH6+4uQ8uDtJP8xAwAdZyIHV5wApn5qXNYEfA5EDiNHcAyGKoUjiABTuI
-        TXMHgIL+8pt74IQIS4ygkADJgdg0dwBIDbIlsLSATQ4bBqnBC0CKCCVCSjDUGtwApGjAHWCzMve/78Yq
-        qmKYp6DW4AYgRaPV8agDRh1AbucUHwaZSbQDaImh1kABAwMAZgdUqJ+7JMIAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="toolStripButtonAI.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>White</value>
-  </data>
-  <data name="toolStripButtonAI.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 36</value>
-  </data>
-  <data name="toolStripButtonAI.Text" xml:space="preserve">
-    <value>Open with AI file editing application</value>
-  </data>
   <data name="toolStripButtonCFF2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -1292,6 +1270,51 @@
   </data>
   <data name="toolStripButtonCFF2.Text" xml:space="preserve">
     <value>Open with CFF2 file editing application</value>
+  </data>
+  <data name="toolStripButtonAI.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGtSURBVFhHY0AHqvNj/lOKFefH3NVaFcoGNZI0ADLAdFnG
+        /+jtLSTjkC31CEfMjnyiNSWUB2os8QCkOXNv338olyTw7vsnlJAA4hckO4ISB3z8+RVscfa+Cf+Nl6Yj
+        HDE7RAiqhDCghgNy90/6/+775/8my6COmBvzTm1mpAhUGX5ADQfA9H/9/f2/5Yps0hxBDQcgJ+LQLQ0Q
+        B4DwrJiPUKW4ASUO+PPv73+XtcUIC7FgqFLcAKSIXAfgAyAzRx1AtAPsV+ejlHDUwGbAhEm0A4yWpoIV
+        0wJDrcENQIoGvQOc1hSBDfrw8wuK+KNPL/93n1mBIoaOwZbgAyBFhBxQc3Tuf5DlIPXxO9vh4iDLkfnY
+        MNgSfACkiJADjj698n/b/ZNgH6+4uQ8uDtJP8xAwAdZyIHV5wApn5qXNYEfA5EDiNHcAyGKoUjiABTuI
+        TXMHgIL+8pt74IQIS4ygkADJgdg0dwBIDbIlsLSATQ4bBqnBC0CKCCVCSjDUGtwApGjAHWCzMve/78Yq
+        qmKYp6DW4AYgRaPV8agDRh1AbucUHwaZSbQDaImh1kABAwMAZgdUqJ+7JMIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="toolStripButtonAI.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="toolStripButtonAI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripButtonAI.Text" xml:space="preserve">
+    <value>Open with AI file editing application</value>
+  </data>
+  <data name="toolStripButtonPDF.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHhSURBVFhH7Ze/S8NAFMc7OTmJ/4Ho0NFfIAgurm7toHaV
+        KkUcHEQXHUQ3kaKDSO0gLVZRECoOUgUnOwnipi7iUBwCVWsp/jj7vd5rLyE5kzZFh3zhkd677733yeXa
+        Ep9RnfEQazQ64qEH/36wRZR0JhToS06y8dNlxxFIL9YgYmNP/o1gqyhrX1g8lVljYuhIWvFFtxPlyDmG
+        aAQgXyrwxpHzddaTCNcgtgNtwvK73ACYvogyrfjKepMCIhbSurZG24VNLTcAaH3ho8gG9iLOINwAkA9x
+        ML1UAahA5IXVWo0AfH5/seHD2VpDkxBWa8FUL4BKqOkB2AYYOpjR/cK5Ef3lg2kboDsxwc3NCNHGWjD9
+        O4BC6Z0vxDVzf6XLQbe5OxY+WeH51csdXROM5VoibS2YjADI716nq8XnzqLVXOBonmUfbzgQvJvZFJ9D
+        HiHXoVpKwWQGgMLyZzmHRhgDjObk9XJgTimYrHaAimO7cSUA8mBMHhKgjLWUgskMAMI2A4RyBGC2A017
+        BHIOMNgNHMLnN43nCUD2yoE5pWAyAzCeZvmbgUNId0sHVfbKgTmlYDICuBmijbVg+nOAwdQ0GzlecDXo
+        pkQba8Hk/R17AB5AvS+nqkBN2wDNDNFGyOf7AZu9PhF8ZCPKAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="toolStripButtonPDF.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="toolStripButtonPDF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripButtonPDF.Text" xml:space="preserve">
+    <value>Open with Adobe Acrobat Reader</value>
   </data>
   <data name="toolStripSeparator12.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 39</value>
@@ -1409,7 +1432,7 @@
     <value>36, 36</value>
   </data>
   <data name="toolStripButtonPDF3D.Text" xml:space="preserve">
-    <value>toolStripButton1</value>
+    <value>Generate PDF3D model</value>
   </data>
   <data name="toolStripButtonPDF3D.ToolTipText" xml:space="preserve">
     <value>Generate PDF 3D file</value>
@@ -1418,7 +1441,7 @@
     <value>3, 63</value>
   </data>
   <data name="toolStripExport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 39</value>
+    <value>457, 39</value>
   </data>
   <data name="toolStripExport.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1660,9 +1683,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAHz3AAAFhwAAf/cAAMA4AADAPQAAgAUAAAAHAAAABwAAAAQAAAAG
         AAAABwAAAAUAAIAFAADAPQAAwDgAAP//AAA=
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>PLMPackLib</value>
@@ -1965,6 +1985,12 @@
     <value>toolStripButtonPicador3D</value>
   </data>
   <data name="&gt;&gt;toolStripButtonPicador3D.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripButtonPDF.Name" xml:space="preserve">
+    <value>toolStripButtonPDF</value>
+  </data>
+  <data name="&gt;&gt;toolStripButtonPDF.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripButtonDXF.Name" xml:space="preserve">

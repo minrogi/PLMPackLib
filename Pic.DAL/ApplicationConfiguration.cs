@@ -58,7 +58,7 @@ namespace Pic.DAL
                 this["databaseFile"] = value;
             }
         }
-        [ConfigurationProperty("thumbnailsPath", DefaultValue = @"K:\Codeplex\PLMPackLib\Pic.DAL\Thumbnails", IsRequired = true, IsKey = false)]
+        [ConfigurationProperty("thumbnailsPath", DefaultValue = @"K:\GitHub\PLMPackLib\Pic.DAL\Thumbnails", IsRequired = true, IsKey = false)]
         [StringValidator(InvalidCharacters = "~!@#$%^&*[]{};'\"|", MinLength = 1, MaxLength = 255)]
         public string ThumbnailsPath
         {

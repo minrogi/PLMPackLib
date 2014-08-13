@@ -1,5 +1,5 @@
 ﻿namespace PicParam.Properties {
-    internal sealed partial class Settings {
+    public sealed partial class Settings {
         public Settings() {
         }
         #region Event handlers

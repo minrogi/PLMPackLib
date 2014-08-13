@@ -136,7 +136,7 @@
     <value>checkBoxAppCF2</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputCF2.Type" xml:space="preserve">
-    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=6.4.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=6.4.4.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;checkBoxAppAI.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -187,7 +187,7 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputDXF.Type" xml:space="preserve">
-    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=6.4.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=6.4.4.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="fileSelectOutputCF2.Size" type="System.Drawing.Size, System.Drawing">
     <value>468, 20</value>
@@ -202,7 +202,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputAI.Type" xml:space="preserve">
-    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=6.4.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=6.4.4.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
