@@ -49,6 +49,7 @@ namespace PicParam
                 ImageList.Images.Add((System.Drawing.Image)(resources.GetObject("CALC"))); // 14
                 ImageList.Images.Add((System.Drawing.Image)(resources.GetObject("ARD"))); // 15
                 ImageList.Images.Add((System.Drawing.Image)(resources.GetObject("ROOT"))); // 16
+                ImageList.Images.Add((System.Drawing.Image)(resources.GetObject("PICADOR3D"))); // 17
 
                 // events
                 AfterExpand += new TreeViewEventHandler(DocumentTreeView_AfterExpand);
@@ -521,7 +522,8 @@ namespace PicParam
                     {"ms powerpoint"        , 12},
                     {"open office write"    , 13},
                     {"open office calc"     , 14},
-                    {"artioscad"            , 15}
+                    {"artioscad"            , 15},
+                    {"treedim des3"         , 17}
                 };
 
                 if (format2iconDictionnary.ContainsKey(docTypeName))
