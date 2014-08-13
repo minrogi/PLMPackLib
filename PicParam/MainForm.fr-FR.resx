@@ -120,32 +120,7 @@
   <data name="statusStrip1.Text" xml:space="preserve">
     <value>Etat</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="toolStripMain.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="toolStripMain.Text" xml:space="preserve">
-    <value>Barre d'outils principale</value>
-  </data>
-  <data name="toolStripExport.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="toolStripExport.Text" xml:space="preserve">
-    <value>Outils export</value>
-  </data>
-  <data name="toolStripDebug.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="toolStripDebug.Text" xml:space="preserve">
-    <value>Débogage</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 20</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>Fichier</value>
-  </data>
   <data name="exportToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -199,6 +174,12 @@
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>Quitter</value>
   </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>Fichier</value>
+  </data>
   <data name="toolStripMenuItemCotations.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -207,7 +188,7 @@
 </value>
   </data>
   <data name="toolStripMenuItemCotations.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 22</value>
+    <value>167, 22</value>
   </data>
   <data name="toolStripMenuItemCotationShortLines.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -218,10 +199,13 @@
 </value>
   </data>
   <data name="toolStripMenuItemCotationShortLines.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 22</value>
+    <value>167, 22</value>
+  </data>
+  <data name="toolStripMenuItemCotationShortLines.Text" xml:space="preserve">
+    <value>Cotations courtes</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 6</value>
+    <value>164, 6</value>
   </data>
   <data name="reflectionXToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -232,7 +216,7 @@
 </value>
   </data>
   <data name="reflectionXToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 22</value>
+    <value>167, 22</value>
   </data>
   <data name="reflectionXToolStripMenuItem.Text" xml:space="preserve">
     <value>Reflexion X</value>
@@ -246,16 +230,16 @@
 </value>
   </data>
   <data name="reflectionYToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 22</value>
+    <value>167, 22</value>
   </data>
   <data name="reflectionYToolStripMenuItem.Text" xml:space="preserve">
     <value>Reflexion Y</value>
   </data>
-  <data name="databaseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 20</value>
+  <data name="toolStripMenuItemView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 20</value>
   </data>
-  <data name="databaseToolStripMenuItem.Text" xml:space="preserve">
-    <value>Base de données</value>
+  <data name="toolStripMenuItemView.Text" xml:space="preserve">
+    <value>Affichage</value>
   </data>
   <data name="backupToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>292, 22</value>
@@ -299,14 +283,17 @@
   <data name="mnuFileMRU.Text" xml:space="preserve">
     <value>Bases de données récemment utilisées...</value>
   </data>
-  <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
+  <data name="databaseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 20</value>
   </data>
-  <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Outils</value>
+  <data name="databaseToolStripMenuItem.Text" xml:space="preserve">
+    <value>Base de données</value>
   </data>
   <data name="toolStripMenuItemEditprofiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>207, 22</value>
+  </data>
+  <data name="toolStripMenuItemEditprofiles.Text" xml:space="preserve">
+    <value>Editer les profils cartons</value>
   </data>
   <data name="toolStripMenuItemEditCardboardFormats.Size" type="System.Drawing.Size, System.Drawing">
     <value>207, 22</value>
@@ -336,6 +323,21 @@
   </data>
   <data name="toolStripMenuItemCustomize.Size" type="System.Drawing.Size, System.Drawing">
     <value>207, 22</value>
+  </data>
+  <data name="toolStripMenuItemCustomize.Text" xml:space="preserve">
+    <value>Options...</value>
+  </data>
+  <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Outils</value>
+  </data>
+  <data name="toolStripMenuItemAboutTreeDimPicParam.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 22</value>
+  </data>
+  <data name="toolStripMenuItemAboutTreeDimPicParam.Text" xml:space="preserve">
+    <value>A propos de TreeDiM PLMPackLib...</value>
   </data>
   <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 20</value>
@@ -561,6 +563,13 @@
   <data name="toolStripButtonHelp.Text" xml:space="preserve">
     <value>Afficher l'aide en ligne</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="toolStripMain.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="toolStripMain.Text" xml:space="preserve">
+    <value>Barre d'outils principale</value>
+  </data>
   <data name="toolStripButtonPicGEOM.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -623,22 +632,6 @@
   <data name="toolStripButtonDXF.Text" xml:space="preserve">
     <value>Ouvrir avec une application d'édition DXF...</value>
   </data>
-  <data name="toolStripButtonAI.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGtSURBVFhHY0AHqvNj/lOKFefH3NVaFcoGNZI0ADLAdFnG
-        /+jtLSTjkC31CEfMjnyiNSWUB2os8QCkOXNv338olyTw7vsnlJAA4hckO4ISB3z8+RVscfa+Cf+Nl6Yj
-        HDE7RAiqhDCghgNy90/6/+775/8my6COmBvzTm1mpAhUGX5ADQfA9H/9/f2/5Yps0hxBDQcgJ+LQLQ0Q
-        B4DwrJiPUKW4ASUO+PPv73+XtcUIC7FgqFLcAKSIXAfgAyAzRx1AtAPsV+ejlHDUwGbAhEm0A4yWpoIV
-        0wJDrcENQIoGvQOc1hSBDfrw8wuK+KNPL/93n1mBIoaOwZbgAyBFhBxQc3Tuf5DlIPXxO9vh4iDLkfnY
-        MNgSfACkiJADjj698n/b/ZNgH6+4uQ8uDtJP8xAwAdZyIHV5wApn5qXNYEfA5EDiNHcAyGKoUjiABTuI
-        TXMHgIL+8pt74IQIS4ygkADJgdg0dwBIDbIlsLSATQ4bBqnBC0CKCCVCSjDUGtwApGjAHWCzMve/78Yq
-        qmKYp6DW4AYgRaPV8agDRh1AbucUHwaZSbQDaImh1kABAwMAZgdUqJ+7JMIAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="toolStripButtonAI.Text" xml:space="preserve">
-    <value>Ouvrir avec une application AI</value>
-  </data>
   <data name="toolStripButtonCFF2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -656,6 +649,36 @@
   </data>
   <data name="toolStripButtonCFF2.Text" xml:space="preserve">
     <value>Ouvrir avec une application CFF2</value>
+  </data>
+  <data name="toolStripButtonAI.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGtSURBVFhHY0AHqvNj/lOKFefH3NVaFcoGNZI0ADLAdFnG
+        /+jtLSTjkC31CEfMjnyiNSWUB2os8QCkOXNv338olyTw7vsnlJAA4hckO4ISB3z8+RVscfa+Cf+Nl6Yj
+        HDE7RAiqhDCghgNy90/6/+775/8my6COmBvzTm1mpAhUGX5ADQfA9H/9/f2/5Yps0hxBDQcgJ+LQLQ0Q
+        B4DwrJiPUKW4ASUO+PPv73+XtcUIC7FgqFLcAKSIXAfgAyAzRx1AtAPsV+ejlHDUwGbAhEm0A4yWpoIV
+        0wJDrcENQIoGvQOc1hSBDfrw8wuK+KNPL/93n1mBIoaOwZbgAyBFhBxQc3Tuf5DlIPXxO9vh4iDLkfnY
+        MNgSfACkiJADjj698n/b/ZNgH6+4uQ8uDtJP8xAwAdZyIHV5wApn5qXNYEfA5EDiNHcAyGKoUjiABTuI
+        TXMHgIL+8pt74IQIS4ygkADJgdg0dwBIDbIlsLSATQ4bBqnBC0CKCCVCSjDUGtwApGjAHWCzMve/78Yq
+        qmKYp6DW4AYgRaPV8agDRh1AbucUHwaZSbQDaImh1kABAwMAZgdUqJ+7JMIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="toolStripButtonAI.Text" xml:space="preserve">
+    <value>Ouvrir avec une application AI</value>
+  </data>
+  <data name="toolStripButtonPDF.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHhSURBVFhH7Ze9S8NAGMY7OTmJ/4CDDh39AkFwcXVrh2JW
+        qVKKg4PoooPoJlJ0kKIdpMUqCkLFQargZCdB3NRFHIpDoGosxY+zz3nXXkLuTNoUHfLAQ5r3nnvvl+u1
+        pQGrulMaadZdKe0+uBduYy3dCQ0GMpNk/GTJtUO5hTpEMvIYXA+3s7bOhclT+VXCbl1JLz+bdqLqomuI
+        ZgBKFYMuHDtbI33paB0iGepgkd/lBUD8PEH08gvpzzCILU3v2Yx0sphaXgDw+cZ7mQztxtxBeAEgHuJw
+        bvEHAE5qJRaVqxmAj69PMnowU1/QxiwqF0KNAqiEnj6AY4CR/WnTN5wXHqweTMcAvekJGm6F2TJyIfTv
+        AIzKG52Ia/7u0lSDboq3JHq8TOsrF9umRXAv9mJluRCyAqC+c5WrNZ89TdRqocM5Uni4pkDIbhSydAx1
+        WOzDeymFkB0AGouvxRoWwj3A+Jg4XzTGlEJItgO8ObYbVw7AM7jnGS5AWXsphZAdAIRtBgivcQC7HWjZ
+        WyDWAIPdwCF8etVpnQOIWdEYUwohOwDraRY/GTiE/Gn5QRWzojGmFEJWAC/NlpELoT8HGM7GydjRvKfm
+        D8WWkQsh/+fYB/ABGv1zqjJ6OgZopdkyTIHANxZ1PgifMDkJAAAAAElFTkSuQmCC
+</value>
   </data>
   <data name="toolStripButtonOceProCut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -703,6 +726,39 @@
   <data name="toolStripButtonPalletization.Text" xml:space="preserve">
     <value>Analyser caisse/palette avec StackBuilder...</value>
   </data>
+  <data name="toolStripButtonPDF3D.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAT3SURBVFhH7VVbbBRlFKavaqIGFOVWW6SoQLlYQC69UQVs
+        1So8mEYNimlitcGYUig8tFFfNMbbC7GQ6oOJpNq0SiVoADU+GslqhXZb2r11u+3szszu7Ha3u112P8/5
+        d2eZtTuwDTx6ki//7PnP951vzvyzs+C/0dbWhv7+/tuC1tZWpGXzDyamL285Jicn0dLSMj893cAly1+w
+        /D1wcwz8k/Wbeczv6ekRq8fjQUdHBwoKCvIzohsYuDyIK0NWc1iHcXl0DIOXLLgyPJzJM4/5fX19UFV/
+        xsTJkyfnZ+AyiQ0Nj5hi0GbD+NvHMX7oGAbHbJk885jPBiIzM/B6fRkTnZ2dNzehG7CS2MjVUVMMO51w
+        H26H/fuzGLE7MnnmMb+3t1esbEKfBJ+Jrq6uG5vQDYzQeEdtdlNcdbvhOfIupLoGXJ3wZPLMY77FYgGb
+        4Ekw9DOh65uGXjBGYnaH0xzuCbhPfAlvRT1skpTJ22gaPlk2bZK3ATuN2Dk+bg4ap/vcBfiq6uFQlaw9
+        h8sF5hsx5nAI3bwNuMbdcNNoTeGTMdX+AdRFqzExaIV7aip3XRqsZ9Q3Db3ATXfoIdGcoJF7pkNQSqsg
+        9Z+DXNtAv4OpfK56AusZ9U1DL5iSvJDoFcoJfwDeU19DfqUJ0mwMvreOwtfcBolOvKRpkAKMACRFhUST
+        Yg7rGfVNQy/ggyQrylyoKmRqqqzYCNnhghydgYwklE01UKpfgPzeRynQ45F//gWyFhA8/WDmbUChRqrf
+        PxfhaahfnYZSsw/KJyegHnsf6ptHoH76BdQz56DuexXKwhIojS1Q6l6CGgkLHusZ9U1DLwjQGDUteB3B
+        ELRoFAG6a5WefeDMT9C8ssgJ0Pi1CGF2Fhr98QQu/o7A+d+ghSOCz3pGfdPQC4KhEELT0ylEIgglEwi0
+        fwj//tegfX4KoWtxhMLh6zVGcJ4MCaRrWM+obxp6QZiIEWoskEjAf6AZwd4foVbWIwKI//nMfh5gPaO+
+        aegF0VgMGVBDHru/8nnESCxKd5+1nyeM+qahF8TjcWSQTCLmmsA1MhKnR5G1Nw8Y9U3jh4sXblxwi3FT
+        fesddwOVT2KIVutd95rjznty503AeqzL+ulWuWNo0YNAbT3shQ/DWVQC54qVcNy/FHbKO+5bAseSQjiX
+        F8NVskbkUvmlqfxDq+bWP7ACTtJiPdZl/XSr3CEMPP0cJqjB5CPr4Fm+MosQPt2NCRJO/8xEuPs7qi2G
+        Z1lR1t41+hJ6iumDRXqsm7cB37pNkEsfh69otSBI1FTd84y4VnftEat//4vw0h3Lazdi9o8/ETt/EV6a
+        BO9Ji5fBS419q9aIfdablwGtbBuCm7dDe7RUEDQyEtxQJq6nG14Wa/hgI4KbtlJ+C6YPHBS5QHpiWuEq
+        BB9bj+D6MgRJi/XmZSC6owrRndWIbtgsCPFvewB6l0EflZmStSIXa2xCdMsORMlo7PU3RG6G7phXPZgX
+        faJc6OVvYO+zSNTsTYHInE82NSP5zmEktlUiQU1F7uPPkGg6hMTR40jS5xb9Z5HYuFXsJUrLiFuBRHkN
+        EvTIWIt18zaAp2pToClwHtQYLGLIGQPfdIs8tlel6vla19CRlwE6bPy6CBOM3XVA9e7UaszRO42du4By
+        QkUNQHcJOqQ563Xwa5jjDcqKXxcuFkXs9LaDdFk/3er/oFiw4F8IX2/s3gX0fQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="toolStripExport.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="toolStripExport.Text" xml:space="preserve">
+    <value>Outils export</value>
+  </data>
   <data name="toolStripEditDLL.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -710,6 +766,12 @@
         AxEH+/8rKgEAAHiCxqB5Igoa1UiifLEuXQP5X4AkXA2rqGeAo3k7JgdQaw+bWYirkKmrcK1ND3Ai5HYH
         WqNStcKN4bgAuxCrpDdOwNpd70Bvx66voBcg8+o/AAAAH4doAZJYsQQQdnODAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="toolStripDebug.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="toolStripDebug.Text" xml:space="preserve">
+    <value>Débogage</value>
   </data>
   <data name="saveFileDialogBackup.Filter" xml:space="preserve">
     <value>Fichier de sauvegarde (*.zip)|*.zip</value>
@@ -844,6 +906,6 @@
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
+    <value>NoControl</value>
   </data>
 </root>

@@ -249,6 +249,15 @@
   <data name="ID_TREEMENUSETNEWGUID" xml:space="preserve">
     <value>Set new GUID for component...</value>
   </data>
+  <data name="ID_TREENODEDOWNLOAD" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="ID_TREENODEROOT" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="ID_TREENODESTARTPAGE" xml:space="preserve">
+    <value>Start page</value>
+  </data>
   <data name="ID_TREEWARNING_CANNOTMOVENODE" xml:space="preserve">
     <value>Node {0} can not be moved under node {1} as this last one is a child.  </value>
   </data>

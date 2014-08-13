@@ -33,9 +33,10 @@ namespace PicParam
             // 
             // DocumentTreeView
             // 
-            this.Name = "DocumentTreeCtrl";
             resources.ApplyResources(this, "$this");
+            this.Name = "DocumentTreeCtrl";
             this.ResumeLayout(false);
+
         }
         #endregion
     }

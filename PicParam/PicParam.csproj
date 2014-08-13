@@ -309,6 +309,9 @@
     <Compile Include="ProfileLoaderImpl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DocumentTreeBranchView.fr-FR.resx">
+      <DependentUpon>DocumentTreeBranchView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAboutBox.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FormAboutBox.cs</DependentUpon>

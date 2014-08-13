@@ -975,7 +975,7 @@ namespace PicParam
                 dlg.Filter = "Backup file (*.zip)|*.zip|"  + 
                             "All files (*.*)|*.*";
                 dlg.FilterIndex = 0;
-                dlg.Title = string.Format("Backup branch {0}", tn.Name);
+                dlg.Title = string.Format(PicParam.Properties.Resources.ID_TREEMENUBACKUP, tn.Name);
                 dlg.FileName = string.Format("{0}.zip", tn.Name);
 
                 if (DialogResult.OK == dlg.ShowDialog())

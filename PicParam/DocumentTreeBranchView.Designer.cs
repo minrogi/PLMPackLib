@@ -38,22 +38,22 @@
             // 
             // contextMenuStripDefault
             // 
+            resources.ApplyResources(this.contextMenuStripDefault, "contextMenuStripDefault");
             this.contextMenuStripDefault.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addNewBranchToolStripMenuItem,
             this.addNewDocumentToolStripMenuItem});
             this.contextMenuStripDefault.Name = "contextMenuStrip1";
-            resources.ApplyResources(this.contextMenuStripDefault, "contextMenuStripDefault");
             // 
             // addNewBranchToolStripMenuItem
             // 
-            this.addNewBranchToolStripMenuItem.Name = "addNewBranchToolStripMenuItem";
             resources.ApplyResources(this.addNewBranchToolStripMenuItem, "addNewBranchToolStripMenuItem");
+            this.addNewBranchToolStripMenuItem.Name = "addNewBranchToolStripMenuItem";
             this.addNewBranchToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItemNewBranch);
             // 
             // addNewDocumentToolStripMenuItem
             // 
-            this.addNewDocumentToolStripMenuItem.Name = "addNewDocumentToolStripMenuItem";
             resources.ApplyResources(this.addNewDocumentToolStripMenuItem, "addNewDocumentToolStripMenuItem");
+            this.addNewDocumentToolStripMenuItem.Name = "addNewDocumentToolStripMenuItem";
             this.addNewDocumentToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItemNewDocument);
             // 
             // DocumentTreeBranchView
@@ -64,6 +64,7 @@
             this.Name = "DocumentTreeBranchView";
             this.contextMenuStripDefault.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
         #endregion
 
