@@ -779,22 +779,24 @@
   <data name="toolStripButtonRoot.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
+        4wQp6TNMxj+KwAtYlMt4XwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="toolStripButtonRoot.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -1124,7 +1126,7 @@
     <value>3, 24</value>
   </data>
   <data name="toolStripMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>474, 39</value>
+    <value>505, 39</value>
   </data>
   <data name="toolStripMain.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1416,7 +1418,7 @@
     <value>3, 63</value>
   </data>
   <data name="toolStripExport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>421, 39</value>
+    <value>390, 39</value>
   </data>
   <data name="toolStripExport.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1658,6 +1660,9 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAHz3AAAFhwAAf/cAAMA4AADAPQAAgAUAAAAHAAAABwAAAAQAAAAG
         AAAABwAAAAUAAIAFAADAPQAAwDgAAP//AAA=
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>PLMPackLib</value>
@@ -2010,6 +2015,18 @@
   <data name="&gt;&gt;toolStripButtonPalletization.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;toolStripSeparator14.Name" xml:space="preserve">
+    <value>toolStripSeparator14</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripButtonPDF3D.Name" xml:space="preserve">
+    <value>toolStripButtonPDF3D</value>
+  </data>
+  <data name="&gt;&gt;toolStripButtonPDF3D.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolStripEditDLL.Name" xml:space="preserve">
     <value>toolStripEditDLL</value>
   </data>
@@ -2027,18 +2044,6 @@
   </data>
   <data name="&gt;&gt;saveFileDialogBackup.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripButtonPDF3D.Name" xml:space="preserve">
-    <value>toolStripButtonPDF3D</value>
-  </data>
-  <data name="&gt;&gt;toolStripButtonPDF3D.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator14.Name" xml:space="preserve">
-    <value>toolStripSeparator14</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>
