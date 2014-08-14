@@ -39,7 +39,7 @@
             <Directory Id="INSTALLLOCATION" Name="$(var.ProductName)">
               <Merge Id="PLMPackLibMSM" Language="1033" DiskId="1" SourceFile="..\PicParamMSM\bin\Release\PLMPackLibMSM.msm"/>
               <Merge Id="StackBuilderGUIExtMSM" Language="1033" DiskId="1" SourceFile="..\..\..\..\StackBuilder\StackBuilderGUIExtMSM\bin\release\StackBuilderGUIExtMSM.msm" />
-              <Merge Id="Pic3DExporterMSM" Language="1033" DiskId="1" SourceFile="K:\Codesion\Picador3D_Global\trunk\Pic3DExporterMSM\bin\Release\Pic3DExporterMSM.msm"/>
+              <Merge Id="Pic3DExporterMSM" Language="1033" DiskId="1" SourceFile="..\..\..\..\Picador3D\Pic3DExporterMSM\bin\Release\Pic3DExporterMSM.msm"/>
               <Directory Id="Data" Name="Data"/>
             </Directory>
           </Directory>
@@ -67,7 +67,6 @@
     <UI>
       <!-- Add UI to the installer -->
       <UIRef Id="WixUI_InstallDir" />
-      <DialogRef Id="UserRegistrationDlg" />
       <!-- Trigger custom action -->
       <Publish Dialog="ExitDialog" Control="Finish" Event="DoAction" Value="LaunchApplication">WIXUI_EXITDIALOGOPTIONALCHECKBOX = 1 and NOT Installed</Publish>
     </UI>

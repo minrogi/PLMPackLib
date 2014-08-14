@@ -131,23 +131,6 @@
         <RemoveFolder Id="DeleteShortcutFolder" Directory="ProgramMenuDir" On="uninstall" />
         <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
       </Component>
-      <Component Id="PLMPackLibExeConfigModif2" Guid="C1584FB5-AD1D-4CBF-9A08-1F435B38BB72">
-        <File Id="PLMPackLib.exe.config2" Source="..\PicParam\bin\x86\Release\PLMPackLib.exe.config" KeyPath="yes" Checksum="yes">
-          <Permission ChangePermission="yes" GenericAll="yes" User="Everyone" TakeOwnership="yes" Write="yes" WriteAttributes="yes" WriteExtendedAttributes="yes" />
-        </File>
-        <util:XmlFile Id="ModifyDDirPLMPackLibExeConfig2" Action="setValue"
-                      File="[Bin32]PLMPackLib.exe.config" ElementPath="/configuration/CustomSection/@databaseFile" Value="C:\wPicador\Data\Database\PicParam.db" />
-        <util:XmlFile Id="SetDatabasePath2" Action="setValue"
-                      File="[Bin32]PLMPackLib.exe.config" ElementPath="configuration/connectionStrings/add" Name="connectionString" Value="metadata=res://*/ModelSQLite.csdl|res://*/ModelSQLite.ssdl|res://*/ModelSQLite.msl;provider=System.Data.SQLite;provider connection string=&quot;data source=[Bin32]StackBuilder.db&quot;" />
-        <util:XmlFile Id="SetInitialReportTemplatePath2" Action="setValue"
-                      File="[Bin32]PLMPackLib.exe.config" ElementPath="/configuration/applicationSettings/TreeDim.StackBuilder.GUIExtension.Properties.Settings/setting[\[]@name='ReportTemplatePath'[\]]/value" Value="[REPORTTEMPLATES]" />
-        <!--update config file-->
-        <util:XmlFile Id="ModifyThumbsPLMPackLibExeConfig" Action="setValue"
-                      ElementPath="/configuration/CustomSection/@thumbnailsPath" File="[Bin32]PLMPackLib.exe.config" Value="[Thumbnails]" />
-        <util:XmlFile Id="ModifyEmptyDbPLMPackLibExeConfig" Action="setValue"
-                      ElementPath="/configuration/applicationSettings/Pic.DAL.Properties.Settings/setting[\[]@name='EmptyDBFilePath'[\]]/value" File="[Bin32]PLMPackLib.exe.config" Value="[Database]PicParamEmpty.db" />
-        <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
-      </Component>
       <!-- ComponentGeneratorCtrl -->
       <Component Id="ComponentGeneratorCtrl" Guid="BDB88E5F-CF98-4ac4-805D-2D880D258454">
         <File Id="GeneratorCtrl.dll.config" Source="..\Pic.Plugin.GeneratorCtrl1\bin\x86\Release\Pic.Plugin.GeneratorCtrl.dll.config" />
@@ -234,6 +217,9 @@
     </DirectoryRef>
     <ComponentRef Id="cmp021B803BA0D718F306F7F4F945D49351" />
     <ComponentRef Id="cmp59BC269C61774B2F844FC5C7A1044574" />
+    <ComponentRef Id="PLMPackLibExeConfigModif1"/>
+    <ComponentRef Id="PLMPackLibExeConfigModif2"/>
+    <ComponentRef Id="PLMPackLibExeConfigRebranding"/>
     <!--********** Application files : END *********************************-->
     <?ifdef DatabaseEmbedded ?>
     <CustomAction Id="ZipExtractCA" FileKey="ZipExtractExe" Execute="deferred" ExeCommand="/m restore /f &quot;[Data]PackLib_DB_Install.zip&quot; /d &quot;[Data]\&quot;" />
