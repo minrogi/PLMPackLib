@@ -196,11 +196,11 @@ namespace PicParam
             if (!this.DesignMode)
             {
                 // insert startpage node
-                TreeNode treeNodeStartPage = new TreeNode("Start Page", 6, 6);
+                TreeNode treeNodeStartPage = new TreeNode(PicParam.Properties.Resources.ID_TREENODESTARTPAGE, 6, 6);
                 treeNodeStartPage.Tag = new StartPageTag();
                 Nodes.Add(treeNodeStartPage);
                 // insert download node
-                TreeNode treeNodeDownloadPage = new TreeNode("Download", 7, 7);
+                TreeNode treeNodeDownloadPage = new TreeNode(PicParam.Properties.Resources.ID_TREENODEDOWNLOAD, 7, 7);
                 treeNodeDownloadPage.Tag = new DownloadPageTag();
                 Nodes.Add(treeNodeDownloadPage);
             }
