@@ -16,12 +16,14 @@
     <OutputPath>bin\$(Configuration)\woDatabase\</OutputPath>
     <IntermediateOutputPath>obj\$(Configuration)\woDatabase\</IntermediateOutputPath>
     <SuppressSpecificWarnings>1072;1076</SuppressSpecificWarnings>
-    <DefineConstants></DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="asm_fragment.wxs" />
     <Compile Include="DirectoryTree.wxs" />
     <Compile Include="MergeModule.wxs" />
+    <Compile Include="PLMPackLib_exe_config.wxs" />
     <Compile Include="tlb_fragment.wxs" />
   </ItemGroup>
   <ItemGroup>
