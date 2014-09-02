@@ -579,10 +579,19 @@ namespace PicParam
             }
         }
 
-        private void toolStripButtonOceProCut_Click(object sender, EventArgs e)
+        private void toolStripButtonPostProcessor_Click(object sender, EventArgs e)
         {
             try
             {
+                if (sender == toolStripButtonARISTO)
+                {
+                }
+                else if (sender == toolStripButtonOceProCut)
+                {
+                }
+                else if (sender == toolStripButtonZUND)
+                {
+                }
                 // set default file path
                 string filePath = Path.Combine(Settings.Default.FileExportDirectory, DocumentName);
                 filePath = Path.ChangeExtension(filePath, "ai");
@@ -1076,6 +1085,11 @@ namespace PicParam
         {
             try
             {
+                // make ToolStripButton available
+                toolStripButtonOceProCut.Available = Properties.Settings.Default.TSButtonAvailableOceProCut;
+                toolStripButtonARISTO.Available = Properties.Settings.Default.TSButtonAvailableARISTO;
+                toolStripButtonZUND.Available = Properties.Settings.Default.TSButtonAvailableZUND;
+
                 // construct tree
                 // this line was moved here from the treeview contructor
                 // to avoid running this code while in design mode

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--definitions : beg-->
 <?define SkuName = "PLMPackLib"?>
-<?define ProductVersion = "6.4.4.0"?>
+<?define ProductVersion = "7.0.0.0"?>
 <?define Manufacturer="treeDiM"?>
 <?define ProductName = "PLMPackLib"?>
 <?define UpgradeCode="f3313d35-58c7-42ff-b5ad-817d10cc21eb"?>
@@ -16,8 +16,8 @@
           UpgradeCode="$(var.UpgradeCode)"
           IconSourceFile="PackLib.ico"
           Copyright="Copyright© 2014, treeDiM"
-          AboutUrl="http://www.picador.fr"
-          HelpUrl="http://www.picador.fr"
+          AboutUrl="http://www.treedim.com"
+          HelpUrl="http://www.treedim.com"
           Condition="(VersionNT >= v5.0)">
     <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.HyperlinkLicense">
       <bal:WixStandardBootstrapperApplication

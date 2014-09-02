@@ -191,5 +191,32 @@ namespace PicParam.Properties {
                 return ((string)(this["CultureToUse"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool TSButtonAvailableOceProCut {
+            get {
+                return ((bool)(this["TSButtonAvailableOceProCut"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool TSButtonAvailableZUND {
+            get {
+                return ((bool)(this["TSButtonAvailableZUND"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool TSButtonAvailableARISTO {
+            get {
+                return ((bool)(this["TSButtonAvailableARISTO"]));
+            }
+        }
     }
 }
