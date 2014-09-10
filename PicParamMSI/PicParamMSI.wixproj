@@ -24,6 +24,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Product.wxs" />
+    <Compile Include="RegistDlg.wxs" />
     <Compile Include="VC100_MergeModules.wxs" />
   </ItemGroup>
   <ItemGroup>

@@ -164,10 +164,10 @@ namespace PicParam.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool UseRebrandedVersion {
+        [global::System.Configuration.DefaultSettingValueAttribute("TREEDIM")]
+        public string UseRebrandedVersion {
             get {
-                return ((bool)(this["UseRebrandedVersion"]));
+                return ((string)(this["UseRebrandedVersion"]));
             }
         }
         

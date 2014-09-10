@@ -1,0 +1,899 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PLMPackLibModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CardboardFormat">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Length" Type="float" Nullable="false" />
+          <Property Name="Width" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CardboardProfile">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Thickness" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CardboardQuality">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CardboardProfileID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="SurfacicMass" Type="float" Nullable="false" />
+          <Property Name="RigidityX" Type="float" Nullable="false" />
+          <Property Name="RigidityY" Type="float" Nullable="false" />
+          <Property Name="YoungModulus" Type="float" Nullable="false" />
+          <Property Name="ECT" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Component">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DocumentID" Type="int" Nullable="false" />
+          <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="DocumentTypeID" Type="int" Nullable="false" />
+          <Property Name="FileID" Type="int" Nullable="false" />
+          <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DocumentType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Application" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="File">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Extension" Type="nvarchar" MaxLength="10" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Majoration">
+          <Key>
+            <PropertyRef Name="MajorationSetID" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="MajorationSetID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Value" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MajorationSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ComponentID" Type="int" Nullable="false" />
+          <Property Name="CardboardProfileID" Type="int" Nullable="false" />
+          <Property Name="Order" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ParamDefaultComponent">
+          <Key>
+            <PropertyRef Name="ComponentID" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="ComponentID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Value" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Thumbnail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Width" Type="int" />
+          <Property Name="Height" Type="int" />
+          <Property Name="MimeType" Type="nvarchar" MaxLength="10" />
+          <Property Name="FileID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TreeNode">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="ParentNodeID" Type="int" Nullable="false" />
+          <Property Name="ThumbnailID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TreeNodeDocument">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DocumentID" Type="int" Nullable="false" />
+          <Property Name="TreeNodeID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_CardboardQuality_ToCardboardProfile">
+          <End Role="CardboardProfile" Type="Self.CardboardProfile" Multiplicity="1" />
+          <End Role="CardboardQuality" Type="Self.CardboardQuality" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CardboardProfile">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CardboardQuality">
+              <PropertyRef Name="CardboardProfileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Component_ToDocument">
+          <End Role="Document" Type="Self.Document" Multiplicity="1" />
+          <End Role="Component" Type="Self.Component" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Document">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Component">
+              <PropertyRef Name="DocumentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Document_ToDocumentType">
+          <End Role="DocumentType" Type="Self.DocumentType" Multiplicity="1" />
+          <End Role="Document" Type="Self.Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DocumentType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="DocumentTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Document_ToFile">
+          <End Role="File" Type="Self.File" Multiplicity="1" />
+          <End Role="Document" Type="Self.Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="File">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="FileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Majoration_ToMajorationSet">
+          <End Role="MajorationSet" Type="Self.MajorationSet" Multiplicity="1" />
+          <End Role="Majoration" Type="Self.Majoration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MajorationSet">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Majoration">
+              <PropertyRef Name="MajorationSetID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MajorationSet_ToCardboardProfile">
+          <End Role="CardboardProfile" Type="Self.CardboardProfile" Multiplicity="1" />
+          <End Role="MajorationSet" Type="Self.MajorationSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CardboardProfile">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MajorationSet">
+              <PropertyRef Name="CardboardProfileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MajorationSet_ToComponent">
+          <End Role="Component" Type="Self.Component" Multiplicity="1" />
+          <End Role="MajorationSet" Type="Self.MajorationSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Component">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MajorationSet">
+              <PropertyRef Name="ComponentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ParamDefaultComponent_ToComponent">
+          <End Role="Component" Type="Self.Component" Multiplicity="1" />
+          <End Role="ParamDefaultComponent" Type="Self.ParamDefaultComponent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Component">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ParamDefaultComponent">
+              <PropertyRef Name="ComponentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Thumbnail_ToFile">
+          <End Role="File" Type="Self.File" Multiplicity="1" />
+          <End Role="Thumbnail" Type="Self.Thumbnail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="File">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Thumbnail">
+              <PropertyRef Name="FileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreeNode_ToThumbnail">
+          <End Role="Thumbnail" Type="Self.Thumbnail" Multiplicity="1" />
+          <End Role="TreeNode" Type="Self.TreeNode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Thumbnail">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TreeNode">
+              <PropertyRef Name="ThumbnailID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreeNode_ToTreeNode">
+          <End Role="TreeNode" Type="Self.TreeNode" Multiplicity="1" />
+          <End Role="TreeNode1" Type="Self.TreeNode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TreeNode">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TreeNode1">
+              <PropertyRef Name="ParentNodeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreeNodeDocument_ToDocument">
+          <End Role="Document" Type="Self.Document" Multiplicity="1" />
+          <End Role="TreeNodeDocument" Type="Self.TreeNodeDocument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Document">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TreeNodeDocument">
+              <PropertyRef Name="DocumentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreeNodeDocument_ToTreeNode">
+          <End Role="TreeNode" Type="Self.TreeNode" Multiplicity="1" />
+          <End Role="TreeNodeDocument" Type="Self.TreeNodeDocument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TreeNode">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TreeNodeDocument">
+              <PropertyRef Name="TreeNodeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PLMPackLibModelStoreContainer">
+          <EntitySet Name="CardboardFormat" EntityType="Self.CardboardFormat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CardboardProfile" EntityType="Self.CardboardProfile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CardboardQuality" EntityType="Self.CardboardQuality" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Component" EntityType="Self.Component" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Document" EntityType="Self.Document" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DocumentType" EntityType="Self.DocumentType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="File" EntityType="Self.File" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Majoration" EntityType="Self.Majoration" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MajorationSet" EntityType="Self.MajorationSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ParamDefaultComponent" EntityType="Self.ParamDefaultComponent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Thumbnail" EntityType="Self.Thumbnail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TreeNode" EntityType="Self.TreeNode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TreeNodeDocument" EntityType="Self.TreeNodeDocument" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CardboardQuality_ToCardboardProfile" Association="Self.FK_CardboardQuality_ToCardboardProfile">
+            <End Role="CardboardProfile" EntitySet="CardboardProfile" />
+            <End Role="CardboardQuality" EntitySet="CardboardQuality" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Component_ToDocument" Association="Self.FK_Component_ToDocument">
+            <End Role="Document" EntitySet="Document" />
+            <End Role="Component" EntitySet="Component" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Document_ToDocumentType" Association="Self.FK_Document_ToDocumentType">
+            <End Role="DocumentType" EntitySet="DocumentType" />
+            <End Role="Document" EntitySet="Document" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Document_ToFile" Association="Self.FK_Document_ToFile">
+            <End Role="File" EntitySet="File" />
+            <End Role="Document" EntitySet="Document" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Majoration_ToMajorationSet" Association="Self.FK_Majoration_ToMajorationSet">
+            <End Role="MajorationSet" EntitySet="MajorationSet" />
+            <End Role="Majoration" EntitySet="Majoration" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MajorationSet_ToCardboardProfile" Association="Self.FK_MajorationSet_ToCardboardProfile">
+            <End Role="CardboardProfile" EntitySet="CardboardProfile" />
+            <End Role="MajorationSet" EntitySet="MajorationSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MajorationSet_ToComponent" Association="Self.FK_MajorationSet_ToComponent">
+            <End Role="Component" EntitySet="Component" />
+            <End Role="MajorationSet" EntitySet="MajorationSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ParamDefaultComponent_ToComponent" Association="Self.FK_ParamDefaultComponent_ToComponent">
+            <End Role="Component" EntitySet="Component" />
+            <End Role="ParamDefaultComponent" EntitySet="ParamDefaultComponent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Thumbnail_ToFile" Association="Self.FK_Thumbnail_ToFile">
+            <End Role="File" EntitySet="File" />
+            <End Role="Thumbnail" EntitySet="Thumbnail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreeNode_ToThumbnail" Association="Self.FK_TreeNode_ToThumbnail">
+            <End Role="Thumbnail" EntitySet="Thumbnail" />
+            <End Role="TreeNode" EntitySet="TreeNode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreeNode_ToTreeNode" Association="Self.FK_TreeNode_ToTreeNode">
+            <End Role="TreeNode" EntitySet="TreeNode" />
+            <End Role="TreeNode1" EntitySet="TreeNode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreeNodeDocument_ToDocument" Association="Self.FK_TreeNodeDocument_ToDocument">
+            <End Role="Document" EntitySet="Document" />
+            <End Role="TreeNodeDocument" EntitySet="TreeNodeDocument" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreeNodeDocument_ToTreeNode" Association="Self.FK_TreeNodeDocument_ToTreeNode">
+            <End Role="TreeNode" EntitySet="TreeNode" />
+            <End Role="TreeNodeDocument" EntitySet="TreeNodeDocument" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PLMPackLibModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CardboardFormat">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Length" Type="Double" Nullable="false" />
+          <Property Name="Width" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CardboardProfile">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Thickness" Type="Double" Nullable="false" />
+          <NavigationProperty Name="CardboardQualities" Relationship="Self.FK_CardboardQuality_ToCardboardProfile" FromRole="CardboardProfile" ToRole="CardboardQuality" />
+          <NavigationProperty Name="MajorationSets" Relationship="Self.FK_MajorationSet_ToCardboardProfile" FromRole="CardboardProfile" ToRole="MajorationSet" />
+        </EntityType>
+        <EntityType Name="CardboardQuality">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="CardboardProfileID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SurfacicMass" Type="Double" Nullable="false" />
+          <Property Name="RigidityX" Type="Double" Nullable="false" />
+          <Property Name="RigidityY" Type="Double" Nullable="false" />
+          <Property Name="YoungModulus" Type="Double" Nullable="false" />
+          <Property Name="ECT" Type="Double" Nullable="false" />
+          <NavigationProperty Name="CardboardProfile" Relationship="Self.FK_CardboardQuality_ToCardboardProfile" FromRole="CardboardQuality" ToRole="CardboardProfile" />
+        </EntityType>
+        <EntityType Name="Component">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="DocumentID" Type="Int32" Nullable="false" />
+          <Property Name="Guid" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="Document" Relationship="Self.FK_Component_ToDocument" FromRole="Component" ToRole="Document" />
+          <NavigationProperty Name="MajorationSets" Relationship="Self.FK_MajorationSet_ToComponent" FromRole="Component" ToRole="MajorationSet" />
+          <NavigationProperty Name="ParamDefaultComponents" Relationship="Self.FK_ParamDefaultComponent_ToComponent" FromRole="Component" ToRole="ParamDefaultComponent" />
+        </EntityType>
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DocumentTypeID" Type="Int32" Nullable="false" />
+          <Property Name="FileID" Type="Int32" Nullable="false" />
+          <Property Name="Guid" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="Components" Relationship="Self.FK_Component_ToDocument" FromRole="Document" ToRole="Component" />
+          <NavigationProperty Name="DocumentType" Relationship="Self.FK_Document_ToDocumentType" FromRole="Document" ToRole="DocumentType" />
+          <NavigationProperty Name="File" Relationship="Self.FK_Document_ToFile" FromRole="Document" ToRole="File" />
+          <NavigationProperty Name="TreeNodeDocuments" Relationship="Self.FK_TreeNodeDocument_ToDocument" FromRole="Document" ToRole="TreeNodeDocument" />
+        </EntityType>
+        <EntityType Name="DocumentType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Application" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Documents" Relationship="Self.FK_Document_ToDocumentType" FromRole="DocumentType" ToRole="Document" />
+        </EntityType>
+        <EntityType Name="File">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Guid" Type="Guid" Nullable="false" />
+          <Property Name="Extension" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Documents" Relationship="Self.FK_Document_ToFile" FromRole="File" ToRole="Document" />
+          <NavigationProperty Name="Thumbnails" Relationship="Self.FK_Thumbnail_ToFile" FromRole="File" ToRole="Thumbnail" />
+        </EntityType>
+        <EntityType Name="Majoration">
+          <Key>
+            <PropertyRef Name="MajorationSetID" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="MajorationSetID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Value" Type="Double" Nullable="false" />
+          <NavigationProperty Name="MajorationSet" Relationship="Self.FK_Majoration_ToMajorationSet" FromRole="Majoration" ToRole="MajorationSet" />
+        </EntityType>
+        <EntityType Name="MajorationSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ComponentID" Type="Int32" Nullable="false" />
+          <Property Name="CardboardProfileID" Type="Int32" Nullable="false" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CardboardProfile" Relationship="Self.FK_MajorationSet_ToCardboardProfile" FromRole="MajorationSet" ToRole="CardboardProfile" />
+          <NavigationProperty Name="Component" Relationship="Self.FK_MajorationSet_ToComponent" FromRole="MajorationSet" ToRole="Component" />
+          <NavigationProperty Name="Majorations" Relationship="Self.FK_Majoration_ToMajorationSet" FromRole="MajorationSet" ToRole="Majoration" />
+        </EntityType>
+        <EntityType Name="ParamDefaultComponent">
+          <Key>
+            <PropertyRef Name="ComponentID" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="ComponentID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Value" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Component" Relationship="Self.FK_ParamDefaultComponent_ToComponent" FromRole="ParamDefaultComponent" ToRole="Component" />
+        </EntityType>
+        <EntityType Name="Thumbnail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Width" Type="Int32" />
+          <Property Name="Height" Type="Int32" />
+          <Property Name="MimeType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="FileID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="File" Relationship="Self.FK_Thumbnail_ToFile" FromRole="Thumbnail" ToRole="File" />
+          <NavigationProperty Name="TreeNodes" Relationship="Self.FK_TreeNode_ToThumbnail" FromRole="Thumbnail" ToRole="TreeNode" />
+        </EntityType>
+        <EntityType Name="TreeNode">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ParentNodeID" Type="Int32" Nullable="false" />
+          <Property Name="ThumbnailID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Thumbnail" Relationship="Self.FK_TreeNode_ToThumbnail" FromRole="TreeNode" ToRole="Thumbnail" />
+          <NavigationProperty Name="TreeNode1" Relationship="Self.FK_TreeNode_ToTreeNode" FromRole="TreeNode" ToRole="TreeNode1" />
+          <NavigationProperty Name="TreeNode2" Relationship="Self.FK_TreeNode_ToTreeNode" FromRole="TreeNode1" ToRole="TreeNode" />
+          <NavigationProperty Name="TreeNodeDocuments" Relationship="Self.FK_TreeNodeDocument_ToTreeNode" FromRole="TreeNode" ToRole="TreeNodeDocument" />
+        </EntityType>
+        <EntityType Name="TreeNodeDocument">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="DocumentID" Type="Int32" Nullable="false" />
+          <Property Name="TreeNodeID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Document" Relationship="Self.FK_TreeNodeDocument_ToDocument" FromRole="TreeNodeDocument" ToRole="Document" />
+          <NavigationProperty Name="TreeNode" Relationship="Self.FK_TreeNodeDocument_ToTreeNode" FromRole="TreeNodeDocument" ToRole="TreeNode" />
+        </EntityType>
+        <Association Name="FK_CardboardQuality_ToCardboardProfile">
+          <End Role="CardboardProfile" Type="Self.CardboardProfile" Multiplicity="1" />
+          <End Role="CardboardQuality" Type="Self.CardboardQuality" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CardboardProfile">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CardboardQuality">
+              <PropertyRef Name="CardboardProfileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MajorationSet_ToCardboardProfile">
+          <End Role="CardboardProfile" Type="Self.CardboardProfile" Multiplicity="1" />
+          <End Role="MajorationSet" Type="Self.MajorationSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CardboardProfile">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MajorationSet">
+              <PropertyRef Name="CardboardProfileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Component_ToDocument">
+          <End Role="Document" Type="Self.Document" Multiplicity="1" />
+          <End Role="Component" Type="Self.Component" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Document">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Component">
+              <PropertyRef Name="DocumentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MajorationSet_ToComponent">
+          <End Role="Component" Type="Self.Component" Multiplicity="1" />
+          <End Role="MajorationSet" Type="Self.MajorationSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Component">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MajorationSet">
+              <PropertyRef Name="ComponentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ParamDefaultComponent_ToComponent">
+          <End Role="Component" Type="Self.Component" Multiplicity="1" />
+          <End Role="ParamDefaultComponent" Type="Self.ParamDefaultComponent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Component">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ParamDefaultComponent">
+              <PropertyRef Name="ComponentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Document_ToDocumentType">
+          <End Role="DocumentType" Type="Self.DocumentType" Multiplicity="1" />
+          <End Role="Document" Type="Self.Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DocumentType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="DocumentTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Document_ToFile">
+          <End Role="File" Type="Self.File" Multiplicity="1" />
+          <End Role="Document" Type="Self.Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="File">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="FileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreeNodeDocument_ToDocument">
+          <End Role="Document" Type="Self.Document" Multiplicity="1" />
+          <End Role="TreeNodeDocument" Type="Self.TreeNodeDocument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Document">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TreeNodeDocument">
+              <PropertyRef Name="DocumentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Thumbnail_ToFile">
+          <End Role="File" Type="Self.File" Multiplicity="1" />
+          <End Role="Thumbnail" Type="Self.Thumbnail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="File">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Thumbnail">
+              <PropertyRef Name="FileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Majoration_ToMajorationSet">
+          <End Role="MajorationSet" Type="Self.MajorationSet" Multiplicity="1" />
+          <End Role="Majoration" Type="Self.Majoration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MajorationSet">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Majoration">
+              <PropertyRef Name="MajorationSetID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreeNode_ToThumbnail">
+          <End Role="Thumbnail" Type="Self.Thumbnail" Multiplicity="1" />
+          <End Role="TreeNode" Type="Self.TreeNode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Thumbnail">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TreeNode">
+              <PropertyRef Name="ThumbnailID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreeNode_ToTreeNode">
+          <End Role="TreeNode" Type="Self.TreeNode" Multiplicity="1" />
+          <End Role="TreeNode1" Type="Self.TreeNode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TreeNode">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TreeNode1">
+              <PropertyRef Name="ParentNodeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreeNodeDocument_ToTreeNode">
+          <End Role="TreeNode" Type="Self.TreeNode" Multiplicity="1" />
+          <End Role="TreeNodeDocument" Type="Self.TreeNodeDocument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TreeNode">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TreeNodeDocument">
+              <PropertyRef Name="TreeNodeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PLMPackLibDb" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CardboardFormats" EntityType="Self.CardboardFormat" />
+          <EntitySet Name="CardboardProfiles" EntityType="Self.CardboardProfile" />
+          <EntitySet Name="CardboardQualities" EntityType="Self.CardboardQuality" />
+          <EntitySet Name="Components" EntityType="Self.Component" />
+          <EntitySet Name="Documents" EntityType="Self.Document" />
+          <EntitySet Name="DocumentTypes" EntityType="Self.DocumentType" />
+          <EntitySet Name="Files" EntityType="Self.File" />
+          <EntitySet Name="Majorations" EntityType="Self.Majoration" />
+          <EntitySet Name="MajorationSets" EntityType="Self.MajorationSet" />
+          <EntitySet Name="ParamDefaultComponents" EntityType="Self.ParamDefaultComponent" />
+          <EntitySet Name="Thumbnails" EntityType="Self.Thumbnail" />
+          <EntitySet Name="TreeNodes" EntityType="Self.TreeNode" />
+          <EntitySet Name="TreeNodeDocuments" EntityType="Self.TreeNodeDocument" />
+          <AssociationSet Name="FK_CardboardQuality_ToCardboardProfile" Association="Self.FK_CardboardQuality_ToCardboardProfile">
+            <End Role="CardboardProfile" EntitySet="CardboardProfiles" />
+            <End Role="CardboardQuality" EntitySet="CardboardQualities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MajorationSet_ToCardboardProfile" Association="Self.FK_MajorationSet_ToCardboardProfile">
+            <End Role="CardboardProfile" EntitySet="CardboardProfiles" />
+            <End Role="MajorationSet" EntitySet="MajorationSets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Component_ToDocument" Association="Self.FK_Component_ToDocument">
+            <End Role="Document" EntitySet="Documents" />
+            <End Role="Component" EntitySet="Components" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MajorationSet_ToComponent" Association="Self.FK_MajorationSet_ToComponent">
+            <End Role="Component" EntitySet="Components" />
+            <End Role="MajorationSet" EntitySet="MajorationSets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ParamDefaultComponent_ToComponent" Association="Self.FK_ParamDefaultComponent_ToComponent">
+            <End Role="Component" EntitySet="Components" />
+            <End Role="ParamDefaultComponent" EntitySet="ParamDefaultComponents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Document_ToDocumentType" Association="Self.FK_Document_ToDocumentType">
+            <End Role="DocumentType" EntitySet="DocumentTypes" />
+            <End Role="Document" EntitySet="Documents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Document_ToFile" Association="Self.FK_Document_ToFile">
+            <End Role="File" EntitySet="Files" />
+            <End Role="Document" EntitySet="Documents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreeNodeDocument_ToDocument" Association="Self.FK_TreeNodeDocument_ToDocument">
+            <End Role="Document" EntitySet="Documents" />
+            <End Role="TreeNodeDocument" EntitySet="TreeNodeDocuments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Thumbnail_ToFile" Association="Self.FK_Thumbnail_ToFile">
+            <End Role="File" EntitySet="Files" />
+            <End Role="Thumbnail" EntitySet="Thumbnails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Majoration_ToMajorationSet" Association="Self.FK_Majoration_ToMajorationSet">
+            <End Role="MajorationSet" EntitySet="MajorationSets" />
+            <End Role="Majoration" EntitySet="Majorations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreeNode_ToThumbnail" Association="Self.FK_TreeNode_ToThumbnail">
+            <End Role="Thumbnail" EntitySet="Thumbnails" />
+            <End Role="TreeNode" EntitySet="TreeNodes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreeNode_ToTreeNode" Association="Self.FK_TreeNode_ToTreeNode">
+            <End Role="TreeNode" EntitySet="TreeNodes" />
+            <End Role="TreeNode1" EntitySet="TreeNodes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreeNodeDocument_ToTreeNode" Association="Self.FK_TreeNodeDocument_ToTreeNode">
+            <End Role="TreeNode" EntitySet="TreeNodes" />
+            <End Role="TreeNodeDocument" EntitySet="TreeNodeDocuments" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PLMPackLibModelStoreContainer" CdmEntityContainer="PLMPackLibDb">
+          <EntitySetMapping Name="CardboardFormats">
+            <EntityTypeMapping TypeName="PLMPackLibModel.CardboardFormat">
+              <MappingFragment StoreEntitySet="CardboardFormat">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Length" ColumnName="Length" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CardboardProfiles">
+            <EntityTypeMapping TypeName="PLMPackLibModel.CardboardProfile">
+              <MappingFragment StoreEntitySet="CardboardProfile">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Thickness" ColumnName="Thickness" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CardboardQualities">
+            <EntityTypeMapping TypeName="PLMPackLibModel.CardboardQuality">
+              <MappingFragment StoreEntitySet="CardboardQuality">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CardboardProfileID" ColumnName="CardboardProfileID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="SurfacicMass" ColumnName="SurfacicMass" />
+                <ScalarProperty Name="RigidityX" ColumnName="RigidityX" />
+                <ScalarProperty Name="RigidityY" ColumnName="RigidityY" />
+                <ScalarProperty Name="YoungModulus" ColumnName="YoungModulus" />
+                <ScalarProperty Name="ECT" ColumnName="ECT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Components">
+            <EntityTypeMapping TypeName="PLMPackLibModel.Component">
+              <MappingFragment StoreEntitySet="Component">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+                <ScalarProperty Name="Guid" ColumnName="Guid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Documents">
+            <EntityTypeMapping TypeName="PLMPackLibModel.Document">
+              <MappingFragment StoreEntitySet="Document">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DocumentTypeID" ColumnName="DocumentTypeID" />
+                <ScalarProperty Name="FileID" ColumnName="FileID" />
+                <ScalarProperty Name="Guid" ColumnName="Guid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DocumentTypes">
+            <EntityTypeMapping TypeName="PLMPackLibModel.DocumentType">
+              <MappingFragment StoreEntitySet="DocumentType">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Application" ColumnName="Application" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Files">
+            <EntityTypeMapping TypeName="PLMPackLibModel.File">
+              <MappingFragment StoreEntitySet="File">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Guid" ColumnName="Guid" />
+                <ScalarProperty Name="Extension" ColumnName="Extension" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Majorations">
+            <EntityTypeMapping TypeName="PLMPackLibModel.Majoration">
+              <MappingFragment StoreEntitySet="Majoration">
+                <ScalarProperty Name="MajorationSetID" ColumnName="MajorationSetID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MajorationSets">
+            <EntityTypeMapping TypeName="PLMPackLibModel.MajorationSet">
+              <MappingFragment StoreEntitySet="MajorationSet">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ComponentID" ColumnName="ComponentID" />
+                <ScalarProperty Name="CardboardProfileID" ColumnName="CardboardProfileID" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ParamDefaultComponents">
+            <EntityTypeMapping TypeName="PLMPackLibModel.ParamDefaultComponent">
+              <MappingFragment StoreEntitySet="ParamDefaultComponent">
+                <ScalarProperty Name="ComponentID" ColumnName="ComponentID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Thumbnails">
+            <EntityTypeMapping TypeName="PLMPackLibModel.Thumbnail">
+              <MappingFragment StoreEntitySet="Thumbnail">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="MimeType" ColumnName="MimeType" />
+                <ScalarProperty Name="FileID" ColumnName="FileID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TreeNodes">
+            <EntityTypeMapping TypeName="PLMPackLibModel.TreeNode">
+              <MappingFragment StoreEntitySet="TreeNode">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ParentNodeID" ColumnName="ParentNodeID" />
+                <ScalarProperty Name="ThumbnailID" ColumnName="ThumbnailID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TreeNodeDocuments">
+            <EntityTypeMapping TypeName="PLMPackLibModel.TreeNodeDocument">
+              <MappingFragment StoreEntitySet="TreeNodeDocument">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+                <ScalarProperty Name="TreeNodeID" ColumnName="TreeNodeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

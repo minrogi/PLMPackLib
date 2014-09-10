@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e16bdfd574eb4a94ae3ac80aba57601d" Name="Diagram1">
+        <EntityTypeShape EntityType="PLMPackLibModel.CardboardFormat" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMPackLibModel.CardboardProfile" Width="1.5" PointX="5.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMPackLibModel.CardboardQuality" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMPackLibModel.Component" Width="1.5" PointX="5.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMPackLibModel.Document" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMPackLibModel.DocumentType" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMPackLibModel.File" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMPackLibModel.Majoration" Width="1.5" PointX="9.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMPackLibModel.MajorationSet" Width="1.5" PointX="7.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMPackLibModel.ParamDefaultComponent" Width="1.5" PointX="7.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMPackLibModel.Thumbnail" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMPackLibModel.TreeNode" Width="1.5" PointX="5.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PLMPackLibModel.TreeNodeDocument" Width="1.5" PointX="10.5" PointY="7.75" IsExpanded="true" />
+        <AssociationConnector Association="PLMPackLibModel.FK_CardboardQuality_ToCardboardProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMPackLibModel.FK_MajorationSet_ToCardboardProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMPackLibModel.FK_Component_ToDocument" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMPackLibModel.FK_MajorationSet_ToComponent" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMPackLibModel.FK_ParamDefaultComponent_ToComponent" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMPackLibModel.FK_Document_ToDocumentType" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMPackLibModel.FK_Document_ToFile" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMPackLibModel.FK_TreeNodeDocument_ToDocument" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMPackLibModel.FK_Thumbnail_ToFile" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMPackLibModel.FK_Majoration_ToMajorationSet" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMPackLibModel.FK_TreeNode_ToThumbnail" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMPackLibModel.FK_TreeNode_ToTreeNode" ManuallyRouted="false" />
+        <AssociationConnector Association="PLMPackLibModel.FK_TreeNodeDocument_ToTreeNode" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

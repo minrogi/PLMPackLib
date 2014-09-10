@@ -67,6 +67,7 @@
     <UI>
       <!-- Add UI to the installer -->
       <UIRef Id="WixUI_InstallDir" />
+      <DialogRef Id="UserRegistrationDlg" />
       <!-- Trigger custom action -->
       <Publish Dialog="ExitDialog" Control="Finish" Event="DoAction" Value="LaunchApplication">WIXUI_EXITDIALOGOPTIONALCHECKBOX = 1 and NOT Installed</Publish>
     </UI>

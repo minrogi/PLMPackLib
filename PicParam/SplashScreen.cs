@@ -27,9 +27,16 @@ namespace PicParam
 
             if (null != this.BackgroundImage)
             {
-                Bitmap b = PicParam.Properties.Settings.Default.UseRebrandedVersion
-                    ? PicParam.Properties.Resources.splashpic_ocecanon
-                    : PicParam.Properties.Resources.splashpic;
+                string rebrandedVersion = PicParam.Properties.Settings.Default.UseRebrandedVersion;
+                Bitmap b = null;
+                if (string.Equals(rebrandedVersion, "CANON", StringComparison.CurrentCultureIgnoreCase))
+                    b = PicParam.Properties.Resources.splash_canon;
+                else if (string.Equals(rebrandedVersion, "ARISTO", StringComparison.CurrentCultureIgnoreCase))
+                    b = PicParam.Properties.Resources.splash_aristo;
+                else if (string.Equals(rebrandedVersion, "ZUND", StringComparison.CurrentCultureIgnoreCase))
+                    b = PicParam.Properties.Resources.splash_zund;
+                else
+                    b = PicParam.Properties.Resources.splashpic;
                 // make lower right pixel color transparent
                 if (Transparent)
                     b.MakeTransparent(b.GetPixel(1, 1));

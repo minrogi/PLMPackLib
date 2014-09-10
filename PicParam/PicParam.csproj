@@ -784,6 +784,9 @@
     <None Include="Resources\toolStripButtonLayout.Image.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\splash_zund.png" />
+    <None Include="Resources\splash_canon.png" />
+    <None Include="Resources\splash_aristo.png" />
     <None Include="Resources\Root_16_16.png" />
     <None Include="Resources\Picador3D.png" />
     <Content Include="Resources\Search.ico" />

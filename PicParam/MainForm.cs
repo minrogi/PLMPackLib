@@ -851,6 +851,8 @@ namespace PicParam
                 toolStripButtonPicDecoup.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("PicDecoup");
                 toolStripButtonPicador3D.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("Picador3D");
                 toolStripButtonOceProCut.Enabled = buttonsEnabled;
+                toolStripButtonARISTO.Enabled = buttonsEnabled;
+                toolStripButtonZUND.Enabled = buttonsEnabled;
                 toolStripButtonPDF.Enabled = buttonsEnabled;
                 toolStripButtonDXF.Enabled = buttonsEnabled;
                 toolStripButtonAI.Enabled = buttonsEnabled;
