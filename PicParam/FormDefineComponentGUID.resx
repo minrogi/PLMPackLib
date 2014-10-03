@@ -117,31 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbGUID.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbGUID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 7</value>
+  <data name="tbGUID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 20</value>
   </data>
-  <data name="lbGUID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
-  <data name="lbGUID.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbGUID.Text" xml:space="preserve">
-    <value>GUID</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
   <data name="&gt;&gt;lbGUID.Name" xml:space="preserve">
     <value>lbGUID</value>
   </data>
-  <data name="&gt;&gt;lbGUID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbGUID.Parent" xml:space="preserve">
+  <data name="&gt;&gt;bnOK.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="bnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>320, 35</value>
   </data>
   <data name="&gt;&gt;lbGUID.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -149,38 +139,8 @@
   <data name="bnOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>320, 7</value>
   </data>
-  <data name="bnOK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="bnOK.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="bnOK.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="&gt;&gt;bnOK.Name" xml:space="preserve">
-    <value>bnOK</value>
-  </data>
-  <data name="&gt;&gt;bnOK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bnOK.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;bnOK.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="bnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>320, 35</value>
-  </data>
-  <data name="bnCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="bnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="bnCancel.Text" xml:space="preserve">
-    <value>Cancel</value>
+  <data name="&gt;&gt;tbGUID.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;bnCancel.Name" xml:space="preserve">
     <value>bnCancel</value>
@@ -191,46 +151,89 @@
   <data name="&gt;&gt;bnCancel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;bnCancel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tbGUID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 7</value>
-  </data>
-  <data name="tbGUID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 20</value>
-  </data>
-  <data name="tbGUID.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;tbGUID.Name" xml:space="preserve">
-    <value>tbGUID</value>
-  </data>
-  <data name="&gt;&gt;tbGUID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbGUID.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tbGUID.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="lbGUID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 7</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>402, 72</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Set component GUID</value>
+  <data name="bnOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormDefineComponentGUID</value>
+  <data name="&gt;&gt;bnOK.Name" xml:space="preserve">
+    <value>bnOK</value>
+  </data>
+  <data name="tbGUID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 7</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tbGUID.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;bnCancel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tbGUID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbGUID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbGUID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbGUID.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbGUID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="bnOK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="bnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="lbGUID.Text" xml:space="preserve">
+    <value>GUID</value>
+  </data>
+  <data name="lbGUID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
+  </data>
+  <data name="bnCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="lbGUID.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;bnOK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="bnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="bnOK.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;bnOK.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Set component GUID</value>
+  </data>
+  <data name="&gt;&gt;tbGUID.Name" xml:space="preserve">
+    <value>tbGUID</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormDefineComponentGUID</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>ja-JP</value>
+  </metadata>
 </root>

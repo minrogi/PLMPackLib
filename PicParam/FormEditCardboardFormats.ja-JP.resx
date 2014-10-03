@@ -137,13 +137,13 @@
     <value>名前</value>
   </data>
 	<data name="colDescription.Text" xml:space="preserve">
-    <value>詳細</value>
+    <value>説明</value>
   </data>
 	<data name="colWidth.Text" xml:space="preserve">
-    <value>長さ</value>
+    <value>幅</value>
   </data>
 	<data name="colHeight.Text" xml:space="preserve">
-    <value>幅</value>
+    <value>高さ</value>
   </data>
 	<data name="listViewCardboardFormats.Location" type="System.Drawing.Point, System.Drawing">
 		<value>8, 7</value>

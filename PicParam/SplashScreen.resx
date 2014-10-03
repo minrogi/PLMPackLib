@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+	<!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,138 +59,138 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>2.0</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblVersion.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblVersion.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="lblVersion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>207, 114</value>
-  </data>
-  <data name="lblVersion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 20</value>
-  </data>
-  <data name="lblVersion.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblVersion.Text" xml:space="preserve">
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+	<data name="lblVersion.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+	<data name="lblVersion.Font" type="System.Drawing.Font, System.Drawing">
+		<value>Microsoft Sans Serif, 12pt, style=Bold</value>
+	</data>
+	<data name="lblVersion.Location" type="System.Drawing.Point, System.Drawing">
+		<value>207, 114</value>
+	</data>
+	<data name="lblVersion.Size" type="System.Drawing.Size, System.Drawing">
+		<value>70, 20</value>
+	</data>
+	<data name="lblVersion.TabIndex" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="lblVersion.Text" xml:space="preserve">
     <value>Version</value>
   </data>
-  <data name="&gt;&gt;lblVersion.Name" xml:space="preserve">
+	<data name="&gt;&gt;lblVersion.Name" xml:space="preserve">
     <value>lblVersion</value>
   </data>
-  <data name="&gt;&gt;lblVersion.Type" xml:space="preserve">
+	<data name="&gt;&gt;lblVersion.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblVersion.Parent" xml:space="preserve">
+	<data name="&gt;&gt;lblVersion.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lblVersion.ZOrder" xml:space="preserve">
+	<data name="&gt;&gt;lblVersion.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="lbBrand.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbBrand.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbBrand.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Disable</value>
-  </data>
-  <data name="lbBrand.Location" type="System.Drawing.Point, System.Drawing">
-    <value>207, 140</value>
-  </data>
-  <data name="lbBrand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 16</value>
-  </data>
-  <data name="lbBrand.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lbBrand.Text" xml:space="preserve">
+	<data name="lbBrand.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="lbBrand.Font" type="System.Drawing.Font, System.Drawing">
+		<value>Microsoft Sans Serif, 9.75pt</value>
+	</data>
+	<assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+	<data name="lbBrand.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+		<value>Disable</value>
+	</data>
+	<data name="lbBrand.Location" type="System.Drawing.Point, System.Drawing">
+		<value>207, 140</value>
+	</data>
+	<data name="lbBrand.Size" type="System.Drawing.Size, System.Drawing">
+		<value>110, 16</value>
+	</data>
+	<data name="lbBrand.TabIndex" type="System.Int32, mscorlib">
+		<value>1</value>
+	</data>
+	<data name="lbBrand.Text" xml:space="preserve">
     <value>treeDiM Software</value>
   </data>
-  <data name="&gt;&gt;lbBrand.Name" xml:space="preserve">
+	<data name="&gt;&gt;lbBrand.Name" xml:space="preserve">
     <value>lbBrand</value>
   </data>
-  <data name="&gt;&gt;lbBrand.Type" xml:space="preserve">
+	<data name="&gt;&gt;lbBrand.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbBrand.Parent" xml:space="preserve">
+	<data name="&gt;&gt;lbBrand.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lbBrand.ZOrder" xml:space="preserve">
+	<data name="&gt;&gt;lbBrand.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+		<value>True</value>
+	</metadata>
+	<data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+		<value>6, 13</value>
+	</data>
+	<data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAAmwAAADICAYAAABVh730AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAOwwAA
         DsMBx2+oZAAAG2hJREFUeF7t3d2vbVdZx/H+B9544xWRyPbKwEXjrZJ4R0JNTLyxpRSkwAGLGKKNLyCQ
@@ -312,23 +312,23 @@
         sBFCCCFk9hlTLLUQCjZCCCGEkMZDwUYIIYQQ0ngo2AghhBBCGg8FGyGEEEJI46FgI4QQQghpPBRshBBC
         CCFNJ4T/BxOxRcKPtEynAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>623, 200</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Disable</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
+	</data>
+	<data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+		<value>623, 200</value>
+	</data>
+	<data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+		<value>Disable</value>
+	</data>
+	<data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+		<value>CenterScreen</value>
+	</data>
+	<data name="$this.Text" xml:space="preserve">
     <value>SplashScreen</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+	<data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>SplashScreen</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+	<data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

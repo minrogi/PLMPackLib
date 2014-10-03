@@ -125,7 +125,7 @@
 		<value>31, 13</value>
 	</data>
 	<data name="label_description.Text" xml:space="preserve">
-    <value>詳細</value>
+    <value>説明</value>
   </data>
 	<data name="label_name.Size" type="System.Drawing.Size, System.Drawing">
 		<value>31, 13</value>
@@ -138,5 +138,8 @@
   </data>
 	<data name="chkCustomImage.Text" xml:space="preserve">
 		<value>カスタム・サムネイル</value>
+	</data>
+	<data name="bnOk.Text" xml:space="preserve">
+		<value>[OK]</value>
 	</data>
 </root>

@@ -117,44 +117,77 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="bnMerge.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bnMerge.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="bnMerge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 59</value>
+  <data name="&gt;&gt;bnInfo.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="bnMerge.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="bnMerge.Text" xml:space="preserve">
-    <value>Download and add</value>
+  <data name="bnInfo.Text" xml:space="preserve">
+    <value>Info</value>
   </data>
-  <data name="&gt;&gt;bnMerge.Name" xml:space="preserve">
-    <value>bnMerge</value>
-  </data>
-  <data name="&gt;&gt;bnMerge.Type" xml:space="preserve">
+  <data name="&gt;&gt;bnOverwrite.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="listBoxLibraries.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 0</value>
+  </data>
+  <data name="&gt;&gt;listBoxLibraries.Name" xml:space="preserve">
+    <value>listBoxLibraries</value>
+  </data>
+  <data name="&gt;&gt;bnInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>DownloadPageControl</value>
   </data>
   <data name="&gt;&gt;bnMerge.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;bnMerge.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;listBoxLibraries.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="bnOverwrite.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="listBoxLibraries.Size" type="System.Drawing.Size, System.Drawing">
+    <value>424, 500</value>
   </data>
-  <data name="bnOverwrite.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 65</value>
+  <data name="&gt;&gt;bnOverwrite.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bnMerge.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bnOverwrite.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="bnOverwrite.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 59</value>
+  </data>
+  <data name="bnInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="listBoxLibraries.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="listBoxLibraries.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;bnOverwrite.Name" xml:space="preserve">
+    <value>bnOverwrite</value>
+  </data>
+  <data name="bnInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 59</value>
+  </data>
+  <data name="listBoxLibraries.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="bnMerge.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="bnMerge.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="bnOverwrite.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -162,88 +195,61 @@
   <data name="bnOverwrite.Text" xml:space="preserve">
     <value>Download and update</value>
   </data>
-  <data name="&gt;&gt;bnOverwrite.Name" xml:space="preserve">
-    <value>bnOverwrite</value>
+  <data name="bnMerge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 59</value>
   </data>
-  <data name="&gt;&gt;bnOverwrite.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bnOverwrite.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;bnOverwrite.ZOrder" xml:space="preserve">
+  <data name="bnMerge.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="listBoxLibraries.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="bnOverwrite.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 65</value>
   </data>
-  <data name="listBoxLibraries.IntegralHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;bnMerge.Name" xml:space="preserve">
+    <value>bnMerge</value>
   </data>
   <data name="listBoxLibraries.ItemHeight" type="System.Int32, mscorlib">
     <value>153</value>
   </data>
-  <data name="listBoxLibraries.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 0</value>
-  </data>
-  <data name="listBoxLibraries.Size" type="System.Drawing.Size, System.Drawing">
-    <value>424, 500</value>
-  </data>
-  <data name="listBoxLibraries.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;listBoxLibraries.Name" xml:space="preserve">
-    <value>listBoxLibraries</value>
-  </data>
   <data name="&gt;&gt;listBoxLibraries.Type" xml:space="preserve">
-    <value>ListBoxLibraries, PLMPackLib, Version=7.0.1.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;listBoxLibraries.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>ListBoxLibraries, PLMPackLib, Version=7.0.2.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;listBoxLibraries.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="bnInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 128</value>
-  </data>
-  <data name="bnInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 59</value>
-  </data>
-  <data name="bnInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="bnInfo.Text" xml:space="preserve">
-    <value>Info</value>
-  </data>
   <data name="&gt;&gt;bnInfo.Name" xml:space="preserve">
     <value>bnInfo</value>
   </data>
-  <data name="&gt;&gt;bnInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bnInfo.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="bnInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 128</value>
   </data>
   <data name="&gt;&gt;bnInfo.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>524, 500</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>DownloadPageControl</value>
+  <data name="&gt;&gt;bnMerge.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="bnMerge.Text" xml:space="preserve">
+    <value>Download and add</value>
+  </data>
+  <data name="listBoxLibraries.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>524, 500</value>
+  </data>
+  <data name="bnOverwrite.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>es-ES</value>
+  </metadata>
 </root>

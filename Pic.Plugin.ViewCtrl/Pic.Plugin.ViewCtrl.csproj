@@ -126,7 +126,13 @@
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="PluginViewCtrl.es-ES.resx">
+      <DependentUpon>PluginViewCtrl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PluginViewCtrl.fr-FR.resx">
+      <DependentUpon>PluginViewCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PluginViewCtrl.it-IT.resx">
       <DependentUpon>PluginViewCtrl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PluginViewCtrl.ja-JP.resx">

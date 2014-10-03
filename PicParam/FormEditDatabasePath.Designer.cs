@@ -47,16 +47,16 @@
             // 
             // bnOK
             // 
-            this.bnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             resources.ApplyResources(this.bnOK, "bnOK");
+            this.bnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.bnOK.Name = "bnOK";
             this.bnOK.UseVisualStyleBackColor = true;
             this.bnOK.Click += new System.EventHandler(this.bnOK_Click);
             // 
             // bnCancel
             // 
-            this.bnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this.bnCancel, "bnCancel");
+            this.bnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bnCancel.Name = "bnCancel";
             this.bnCancel.UseVisualStyleBackColor = true;
             // 

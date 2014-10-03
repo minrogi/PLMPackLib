@@ -150,4 +150,10 @@
 	<data name="ID.Text" xml:space="preserve">
 		<value>ID</value>
 	</data>
+	<data name="colThickness.Text" xml:space="preserve">
+		<value>厚み</value>
+	</data>
+	<data name="colName.Text" xml:space="preserve">
+		<value>名前</value>
+	</data>
 </root>

@@ -63,25 +63,21 @@
             // labelProductName
             // 
             resources.ApplyResources(this.labelProductName, "labelProductName");
-            this.labelProductName.MaximumSize = new System.Drawing.Size(0, 17);
             this.labelProductName.Name = "labelProductName";
             // 
             // labelVersion
             // 
             resources.ApplyResources(this.labelVersion, "labelVersion");
-            this.labelVersion.MaximumSize = new System.Drawing.Size(0, 17);
             this.labelVersion.Name = "labelVersion";
             // 
             // labelCopyright
             // 
             resources.ApplyResources(this.labelCopyright, "labelCopyright");
-            this.labelCopyright.MaximumSize = new System.Drawing.Size(0, 17);
             this.labelCopyright.Name = "labelCopyright";
             // 
             // labelCompanyName
             // 
             resources.ApplyResources(this.labelCompanyName, "labelCompanyName");
-            this.labelCompanyName.MaximumSize = new System.Drawing.Size(0, 17);
             this.labelCompanyName.Name = "labelCompanyName";
             // 
             // textBoxDescription
@@ -97,7 +93,7 @@
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.okButton.Name = "okButton";
             // 
-            // AboutBoxForm
+            // FormAboutBox
             // 
             this.AcceptButton = this.okButton;
             resources.ApplyResources(this, "$this");
@@ -106,7 +102,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "AboutBoxForm";
+            this.Name = "FormAboutBox";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.tableLayoutPanel.ResumeLayout(false);

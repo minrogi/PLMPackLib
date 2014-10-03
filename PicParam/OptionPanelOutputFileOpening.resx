@@ -128,21 +128,20 @@
   <data name="$this.AccessibleName" xml:space="preserve">
     <value>Applications exported files</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="fileSelectOutputAI.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="&gt;&gt;fileSelectOutputCF2.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBoxAppCF2.Name" xml:space="preserve">
     <value>checkBoxAppCF2</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputCF2.Type" xml:space="preserve">
-    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=7.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=7.0.2.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;checkBoxAppAI.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>OptionPanelOutputFileOpening</value>
+  <data name="checkBoxAppAI.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;checkBoxAppDXF.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -156,23 +155,24 @@
   <data name="fileSelectOutputCF2.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 132</value>
   </data>
-  <data name="fileSelectOutputAI.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 83</value>
+  <data name="&gt;&gt;fileSelectOutputDXF.Type" xml:space="preserve">
+    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=7.0.2.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;checkBoxAppAI.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="fileSelectOutputDXF.AccessibleDescription" xml:space="preserve">
-    <value>Path to application used to open generated DXF files</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="fileSelectOutputAI.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
   <data name="fileSelectOutputDXF.AccessibleName" xml:space="preserve">
     <value>Path to application used to open generated DXF files</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputAI.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;checkBoxAppCF2.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputDXF.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -186,14 +186,17 @@
   <data name="&gt;&gt;fileSelectOutputCF2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;fileSelectOutputDXF.Type" xml:space="preserve">
-    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=7.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="$this.AccessibleDescription" xml:space="preserve">
+    <value>Applications to open exported files</value>
   </data>
   <data name="fileSelectOutputCF2.Size" type="System.Drawing.Size, System.Drawing">
     <value>468, 20</value>
   </data>
-  <data name="$this.AccessibleDescription" xml:space="preserve">
-    <value>Applications to open exported files</value>
+  <data name="fileSelectOutputDXF.AccessibleDescription" xml:space="preserve">
+    <value>Path to application used to open generated DXF files</value>
+  </data>
+  <data name="fileSelectOutputCF2.AccessibleDescription" xml:space="preserve">
+    <value>Path to application used to open generated DXF files</value>
   </data>
   <data name="fileSelectOutputAI.Size" type="System.Drawing.Size, System.Drawing">
     <value>468, 20</value>
@@ -202,16 +205,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputAI.Type" xml:space="preserve">
-    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=7.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=7.0.2.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>GLib.Options.OptionsPanel, OptionsLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAppCF2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="fileSelectOutputDXF.Size" type="System.Drawing.Size, System.Drawing">
     <value>468, 20</value>
-  </data>
-  <data name="fileSelectOutputCF2.AccessibleDescription" xml:space="preserve">
-    <value>Path to application used to open generated DXF files</value>
   </data>
   <data name="checkBoxAppCF2.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -219,8 +222,8 @@
   <data name="checkBoxAppAI.Size" type="System.Drawing.Size, System.Drawing">
     <value>151, 17</value>
   </data>
-  <data name="&gt;&gt;fileSelectOutputCF2.Name" xml:space="preserve">
-    <value>fileSelectOutputCF2</value>
+  <data name="fileSelectOutputAI.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 83</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputDXF.Name" xml:space="preserve">
     <value>fileSelectOutputDXF</value>
@@ -237,26 +240,23 @@
   <data name="&gt;&gt;checkBoxAppDXF.Name" xml:space="preserve">
     <value>checkBoxAppDXF</value>
   </data>
+  <data name="&gt;&gt;fileSelectOutputCF2.Name" xml:space="preserve">
+    <value>fileSelectOutputCF2</value>
+  </data>
   <data name="&gt;&gt;checkBoxAppCF2.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="checkBoxAppAI.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
   <data name="checkBoxAppCF2.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 17</value>
-  </data>
-  <data name="checkBoxAppCF2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;fileSelectOutputCF2.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="checkBoxAppDXF.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;fileSelectOutputDXF.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>OptionPanelOutputFileOpening</value>
   </data>
   <data name="checkBoxAppAI.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 61</value>
@@ -294,6 +294,9 @@
   <data name="checkBoxAppAI.Text" xml:space="preserve">
     <value>Application to open AI files</value>
   </data>
+  <data name="checkBoxAppCF2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="fileSelectOutputDXF.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 34</value>
   </data>
@@ -312,13 +315,10 @@
   <data name="checkBoxAppCF2.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 109</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>GLib.Options.OptionsPanel, OptionsLib, Version=6.0.29.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>fr-FR</value>
+    <value>es-ES</value>
   </metadata>
 </root>

@@ -118,7 +118,7 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<data name="bnOk.Text" xml:space="preserve">
-    <value>OK</value>
+    <value>[OK]</value>
   </data>
 	<data name="label_fileFormat.Text" xml:space="preserve">
 		<value>ファイルフォーマット</value>
@@ -131,5 +131,8 @@
 	</data>
 	<data name="$this.Text" xml:space="preserve">
 		<value>ファイルフォーマットとパスの選択</value>
+	</data>
+	<data name="bnCancel.Text" xml:space="preserve">
+		<value>キャンセル</value>
 	</data>
 </root>

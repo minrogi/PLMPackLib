@@ -309,8 +309,47 @@
     <Compile Include="ProfileLoaderImpl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ComponentLoaderControl.es-ES.resx">
+      <DependentUpon>ComponentLoaderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentLoaderControl.it-IT.resx">
+      <DependentUpon>ComponentLoaderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentTreeBranchView.es-ES.resx">
+      <DependentUpon>DocumentTreeBranchView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DocumentTreeBranchView.fr-FR.resx">
       <DependentUpon>DocumentTreeBranchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentTreeBranchView.it-IT.resx">
+      <DependentUpon>DocumentTreeBranchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentTreeView.es-ES.resx">
+      <DependentUpon>DocumentTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentTreeView.fr-FR.resx">
+      <DependentUpon>DocumentTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentTreeView.it-IT.resx">
+      <DependentUpon>DocumentTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentTreeView.ja-JP.resx">
+      <DependentUpon>DocumentTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadPageControl.es-ES.resx">
+      <DependentUpon>DownloadPageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadPageControl.it-IT.resx">
+      <DependentUpon>DownloadPageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadPageControl.ja-JP.resx">
+      <DependentUpon>DownloadPageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAboutBox.es-ES.resx">
+      <DependentUpon>FormAboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAboutBox.it-IT.resx">
+      <DependentUpon>FormAboutBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAboutBox.resx">
       <SubType>Designer</SubType>
@@ -332,35 +371,128 @@
       <DependentUpon>DownloadPageControl.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormBrowseFile.es-ES.resx">
+      <DependentUpon>FormBrowseFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBrowseFile.fr-FR.resx">
+      <DependentUpon>FormBrowseFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBrowseFile.it-IT.resx">
+      <DependentUpon>FormBrowseFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBrowseFile.ja-JP.resx">
+      <DependentUpon>FormBrowseFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateBranch.es-ES.resx">
+      <DependentUpon>FormCreateBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateBranch.it-IT.resx">
+      <DependentUpon>FormCreateBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateCardboardFormat.es-ES.resx">
+      <DependentUpon>FormCreateCardboardFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateCardboardFormat.it-IT.resx">
+      <DependentUpon>FormCreateCardboardFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateCardboardProfile.es-ES.resx">
+      <DependentUpon>FormCreateCardboardProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateCardboardProfile.it-IT.resx">
+      <DependentUpon>FormCreateCardboardProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateDocument.es-ES.resx">
+      <DependentUpon>FormCreateDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateDocument.it-IT.resx">
+      <DependentUpon>FormCreateDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDefineComponentGUID.es-ES.resx">
+      <DependentUpon>FormDefineComponentGUID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDefineComponentGUID.fr-FR.resx">
+      <DependentUpon>FormDefineComponentGUID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDefineComponentGUID.it-IT.resx">
+      <DependentUpon>FormDefineComponentGUID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDefineComponentGUID.ja-JP.resx">
+      <DependentUpon>FormDefineComponentGUID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditCardboardFormats.es-ES.resx">
+      <DependentUpon>FormEditCardboardFormats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditCardboardFormats.it-IT.resx">
+      <DependentUpon>FormEditCardboardFormats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditDatabasePath.es-ES.resx">
+      <DependentUpon>FormEditDatabasePath.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditDatabasePath.fr-FR.resx">
+      <DependentUpon>FormEditDatabasePath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditDatabasePath.it-IT.resx">
+      <DependentUpon>FormEditDatabasePath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditDatabasePath.ja-JP.resx">
       <DependentUpon>FormEditDatabasePath.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditDatabasePath.resx">
       <DependentUpon>FormEditDatabasePath.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEditDefaultParamValues.es-ES.resx">
+      <DependentUpon>FormEditDefaultParamValues.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditDefaultParamValues.fr-FR.resx">
+      <DependentUpon>FormEditDefaultParamValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditDefaultParamValues.it-IT.resx">
       <DependentUpon>FormEditDefaultParamValues.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditDefaultParamValues.ja-JP.resx">
       <DependentUpon>FormEditDefaultParamValues.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEditMajorations.es-ES.resx">
+      <DependentUpon>FormEditMajorations.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditMajorations.fr-FR.resx">
+      <DependentUpon>FormEditMajorations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditMajorations.it-IT.resx">
       <DependentUpon>FormEditMajorations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditMajorations.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FormEditMajorations.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEditMaterials.es-ES.resx">
+      <DependentUpon>FormEditMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditMaterials.it-IT.resx">
+      <DependentUpon>FormEditMaterials.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditMaterials.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FormEditMaterials.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEditProfiles.es-ES.resx">
+      <DependentUpon>FormEditProfiles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditProfiles.fr.resx">
+      <DependentUpon>FormEditProfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditProfiles.it-IT.resx">
       <DependentUpon>FormEditProfiles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditProfiles.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FormEditProfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportFile.es-ES.resx">
+      <DependentUpon>FormExportFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportFile.it-IT.resx">
+      <DependentUpon>FormExportFile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormExportFile.resx">
       <SubType>Designer</SubType>
@@ -382,7 +514,28 @@
     <EmbeddedResource Include="FormDefineComponentGUID.resx">
       <DependentUpon>FormDefineComponentGUID.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPluginEditor.es-ES.resx">
+      <DependentUpon>FormPluginEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPluginEditor.it-IT.resx">
+      <DependentUpon>FormPluginEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRenameNode.es-ES.resx">
+      <DependentUpon>FormRenameNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRenameNode.it-IT.resx">
+      <DependentUpon>FormRenameNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSearch.es-ES.resx">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSearch.fr-FR.resx">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSearch.it-IT.resx">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSearch.ja-JP.resx">
       <DependentUpon>FormSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSearch.resx">
@@ -390,6 +543,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormWorkerThreadTask.resx">
       <DependentUpon>FormWorkerThreadTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.es-ES.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.it-IT.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <SubType>Designer</SubType>
@@ -404,14 +563,29 @@
       <DependentUpon>DocumentTreeBranchView.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelComponentViewer.es-ES.resx">
+      <DependentUpon>OptionPanelComponentViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelComponentViewer.fr-FR.resx">
+      <DependentUpon>OptionPanelComponentViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelComponentViewer.it-IT.resx">
+      <DependentUpon>OptionPanelComponentViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelComponentViewer.ja-JP.resx">
       <DependentUpon>OptionPanelComponentViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelComponentViewer.resx">
       <DependentUpon>OptionPanelComponentViewer.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelComputing.es-ES.resx">
+      <DependentUpon>OptionPanelComputing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelComputing.fr-FR.resx">
+      <DependentUpon>OptionPanelComputing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelComputing.it-IT.resx">
       <DependentUpon>OptionPanelComputing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelComputing.ja-JP.resx">
@@ -421,47 +595,92 @@
       <DependentUpon>OptionPanelComputing.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelDatabase.es-ES.resx">
+      <DependentUpon>OptionPanelDatabase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelDatabase.fr-FR.resx">
+      <DependentUpon>OptionPanelDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelDatabase.it-IT.resx">
       <DependentUpon>OptionPanelDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelDatabase.ja-JP.resx">
       <DependentUpon>OptionPanelDatabase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelDebug.es-ES.resx">
+      <DependentUpon>OptionPanelDebug.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelDebug.fr-FR.resx">
+      <DependentUpon>OptionPanelDebug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelDebug.it-IT.resx">
+      <DependentUpon>OptionPanelDebug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelDebug.ja-JP.resx">
       <DependentUpon>OptionPanelDebug.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelDebug.resx">
       <DependentUpon>OptionPanelDebug.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelMajorations.es-ES.resx">
+      <DependentUpon>OptionPanelMajorations.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelMajorations.fr-FR.resx">
+      <DependentUpon>OptionPanelMajorations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelMajorations.it-IT.resx">
+      <DependentUpon>OptionPanelMajorations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelMajorations.ja-JP.resx">
       <DependentUpon>OptionPanelMajorations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelMajorations.resx">
       <DependentUpon>OptionPanelMajorations.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelOutputFileOpening.es-ES.resx">
+      <DependentUpon>OptionPanelOutputFileOpening.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelOutputFileOpening.fr-FR.resx">
+      <DependentUpon>OptionPanelOutputFileOpening.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelOutputFileOpening.it-IT.resx">
+      <DependentUpon>OptionPanelOutputFileOpening.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelOutputFileOpening.ja-JP.resx">
       <DependentUpon>OptionPanelOutputFileOpening.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelOutputFileOpening.resx">
       <DependentUpon>OptionPanelOutputFileOpening.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelThumbnail.es-ES.resx">
+      <DependentUpon>OptionPanelThumbnail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelThumbnail.fr-FR.resx">
       <DependentUpon>OptionPanelThumbnail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OptionPanelThumbnail.fr.resx">
+    <EmbeddedResource Include="OptionPanelThumbnail.it-IT.resx">
+      <DependentUpon>OptionPanelThumbnail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelThumbnail.ja-JP.resx">
       <DependentUpon>OptionPanelThumbnail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelThumbnail.resx">
       <DependentUpon>OptionPanelThumbnail.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelWindow.es-ES.resx">
+      <DependentUpon>OptionPanelWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelWindow.fr-FR.resx">
       <DependentUpon>OptionPanelWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OptionPanelWindow.fr.resx">
+    <EmbeddedResource Include="OptionPanelWindow.it-IT.resx">
+      <DependentUpon>OptionPanelWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPanelWindow.ja-JP.resx">
       <DependentUpon>OptionPanelWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionPanelWindow.resx">
@@ -481,6 +700,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SplashScreen.es-ES.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.fr-FR.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.it-IT.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.ja-JP.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>

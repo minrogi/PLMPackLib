@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+	<data name="bnOk.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+		<value>Top, Right</value>
+	</data>
+	<data name="bnOk.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+		<value>NoControl</value>
+	</data>
+	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+	<data name="bnOk.Location" type="System.Drawing.Point, System.Drawing">
+		<value>411, 12</value>
+	</data>
+	<data name="bnOk.Size" type="System.Drawing.Size, System.Drawing">
+		<value>75, 23</value>
+	</data>
+	<assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+	<data name="bnOk.TabIndex" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="&gt;&gt;bnOk.Name" xml:space="preserve">
+    <value>bnOk</value>
+  </data>
+	<data name="&gt;&gt;bnOk.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;bnOk.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+	<data name="&gt;&gt;bnOk.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+	<data name="bnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+		<value>Top, Right</value>
+	</data>
+	<data name="bnCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+		<value>NoControl</value>
+	</data>
+	<data name="bnCancel.Location" type="System.Drawing.Point, System.Drawing">
+		<value>411, 41</value>
+	</data>
+	<data name="bnCancel.Size" type="System.Drawing.Size, System.Drawing">
+		<value>75, 23</value>
+	</data>
+	<data name="bnCancel.TabIndex" type="System.Int32, mscorlib">
+		<value>1</value>
+	</data>
+	<data name="&gt;&gt;bnCancel.Name" xml:space="preserve">
+    <value>bnCancel</value>
+  </data>
+	<data name="&gt;&gt;bnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;bnCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+	<data name="&gt;&gt;bnCancel.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+	<data name="labelName.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="labelName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+		<value>NoControl</value>
+	</data>
+	<data name="labelName.Location" type="System.Drawing.Point, System.Drawing">
+		<value>6, 12</value>
+	</data>
+	<data name="labelName.Size" type="System.Drawing.Size, System.Drawing">
+		<value>35, 13</value>
+	</data>
+	<data name="labelName.TabIndex" type="System.Int32, mscorlib">
+		<value>2</value>
+	</data>
+	<data name="&gt;&gt;labelName.Name" xml:space="preserve">
+    <value>labelName</value>
+  </data>
+	<data name="&gt;&gt;labelName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;labelName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+	<data name="&gt;&gt;labelName.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+	<data name="labelDescription.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="labelDescription.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+		<value>NoControl</value>
+	</data>
+	<data name="labelDescription.Location" type="System.Drawing.Point, System.Drawing">
+		<value>6, 41</value>
+	</data>
+	<data name="labelDescription.Size" type="System.Drawing.Size, System.Drawing">
+		<value>60, 13</value>
+	</data>
+	<data name="labelDescription.TabIndex" type="System.Int32, mscorlib">
+		<value>3</value>
+	</data>
+	<data name="&gt;&gt;labelDescription.Name" xml:space="preserve">
+    <value>labelDescription</value>
+  </data>
+	<data name="&gt;&gt;labelDescription.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;labelDescription.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+	<data name="&gt;&gt;labelDescription.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+	<data name="labelFile.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="labelFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+		<value>NoControl</value>
+	</data>
+	<data name="labelFile.Location" type="System.Drawing.Point, System.Drawing">
+		<value>6, 69</value>
+	</data>
+	<data name="labelFile.Size" type="System.Drawing.Size, System.Drawing">
+		<value>23, 13</value>
+	</data>
+	<data name="labelFile.TabIndex" type="System.Int32, mscorlib">
+		<value>4</value>
+	</data>
+	<data name="&gt;&gt;labelFile.Name" xml:space="preserve">
+    <value>labelFile</value>
+  </data>
+	<data name="&gt;&gt;labelFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;labelFile.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+	<data name="&gt;&gt;labelFile.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+	<data name="textBoxName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+		<value>Top, Left, Right</value>
+	</data>
+	<data name="textBoxName.Location" type="System.Drawing.Point, System.Drawing">
+		<value>86, 12</value>
+	</data>
+	<data name="textBoxName.Size" type="System.Drawing.Size, System.Drawing">
+		<value>300, 20</value>
+	</data>
+	<data name="textBoxName.TabIndex" type="System.Int32, mscorlib">
+		<value>5</value>
+	</data>
+	<data name="&gt;&gt;textBoxName.Name" xml:space="preserve">
+    <value>textBoxName</value>
+  </data>
+	<data name="&gt;&gt;textBoxName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;textBoxName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+	<data name="&gt;&gt;textBoxName.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+	<data name="textBoxDescription.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+		<value>Top, Left, Right</value>
+	</data>
+	<data name="textBoxDescription.Location" type="System.Drawing.Point, System.Drawing">
+		<value>86, 40</value>
+	</data>
+	<data name="textBoxDescription.Size" type="System.Drawing.Size, System.Drawing">
+		<value>300, 20</value>
+	</data>
+	<data name="textBoxDescription.TabIndex" type="System.Int32, mscorlib">
+		<value>6</value>
+	</data>
+	<data name="&gt;&gt;textBoxDescription.Name" xml:space="preserve">
+    <value>textBoxDescription</value>
+  </data>
+	<data name="&gt;&gt;textBoxDescription.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;textBoxDescription.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+	<data name="&gt;&gt;textBoxDescription.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+	<data name="fileSelectCtrl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+		<value>Top, Left, Right</value>
+	</data>
+	<data name="fileSelectCtrl.Location" type="System.Drawing.Point, System.Drawing">
+		<value>86, 69</value>
+	</data>
+	<data name="fileSelectCtrl.Size" type="System.Drawing.Size, System.Drawing">
+		<value>400, 20</value>
+	</data>
+	<data name="fileSelectCtrl.TabIndex" type="System.Int32, mscorlib">
+		<value>7</value>
+	</data>
+	<data name="&gt;&gt;fileSelectCtrl.Name" xml:space="preserve">
+    <value>fileSelectCtrl</value>
+  </data>
+	<data name="&gt;&gt;fileSelectCtrl.Type" xml:space="preserve">
+    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=1.0.4940.18855, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+	<data name="&gt;&gt;fileSelectCtrl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+	<data name="&gt;&gt;fileSelectCtrl.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+	<data name="pictureBoxFileView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+		<value>Top, Bottom, Left, Right</value>
+	</data>
+	<data name="pictureBoxFileView.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+		<value>NoControl</value>
+	</data>
+	<data name="pictureBoxFileView.Location" type="System.Drawing.Point, System.Drawing">
+		<value>12, 158</value>
+	</data>
+	<data name="pictureBoxFileView.Size" type="System.Drawing.Size, System.Drawing">
+		<value>474, 506</value>
+	</data>
+	<data name="pictureBoxFileView.TabIndex" type="System.Int32, mscorlib">
+		<value>8</value>
+	</data>
+	<data name="&gt;&gt;pictureBoxFileView.Name" xml:space="preserve">
+    <value>pictureBoxFileView</value>
+  </data>
+	<data name="&gt;&gt;pictureBoxFileView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;pictureBoxFileView.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+	<data name="&gt;&gt;pictureBoxFileView.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+	<data name="thumbnailSelectCtrl.Location" type="System.Drawing.Point, System.Drawing">
+		<value>86, 97</value>
+	</data>
+	<data name="thumbnailSelectCtrl.Size" type="System.Drawing.Size, System.Drawing">
+		<value>400, 20</value>
+	</data>
+	<data name="thumbnailSelectCtrl.TabIndex" type="System.Int32, mscorlib">
+		<value>11</value>
+	</data>
+	<data name="&gt;&gt;thumbnailSelectCtrl.Name" xml:space="preserve">
+    <value>thumbnailSelectCtrl</value>
+  </data>
+	<data name="&gt;&gt;thumbnailSelectCtrl.Type" xml:space="preserve">
+    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=1.0.4940.18855, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+	<data name="&gt;&gt;thumbnailSelectCtrl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+	<data name="&gt;&gt;thumbnailSelectCtrl.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+	<data name="chkThumbnail.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="chkThumbnail.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+		<value>NoControl</value>
+	</data>
+	<data name="chkThumbnail.Location" type="System.Drawing.Point, System.Drawing">
+		<value>6, 97</value>
+	</data>
+	<data name="chkThumbnail.Size" type="System.Drawing.Size, System.Drawing">
+		<value>75, 17</value>
+	</data>
+	<data name="chkThumbnail.TabIndex" type="System.Int32, mscorlib">
+		<value>12</value>
+	</data>
+	<data name="&gt;&gt;chkThumbnail.Name" xml:space="preserve">
+    <value>chkThumbnail</value>
+  </data>
+	<data name="&gt;&gt;chkThumbnail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;chkThumbnail.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+	<data name="&gt;&gt;chkThumbnail.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+	<data name="chkDefaultParameters.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="chkDefaultParameters.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+		<value>NoControl</value>
+	</data>
+	<data name="chkDefaultParameters.Location" type="System.Drawing.Point, System.Drawing">
+		<value>6, 125</value>
+	</data>
+	<data name="chkDefaultParameters.Size" type="System.Drawing.Size, System.Drawing">
+		<value>170, 17</value>
+	</data>
+	<data name="chkDefaultParameters.TabIndex" type="System.Int32, mscorlib">
+		<value>13</value>
+	</data>
+	<data name="&gt;&gt;chkDefaultParameters.Name" xml:space="preserve">
+    <value>chkDefaultParameters</value>
+  </data>
+	<data name="&gt;&gt;chkDefaultParameters.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;chkDefaultParameters.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+	<data name="&gt;&gt;chkDefaultParameters.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="factoryViewer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+		<value>Top, Bottom, Left, Right</value>
+	</data>
+	<data name="factoryViewer.Location" type="System.Drawing.Point, System.Drawing">
+		<value>12, 158</value>
+	</data>
+	<data name="factoryViewer.Size" type="System.Drawing.Size, System.Drawing">
+		<value>474, 506</value>
+	</data>
+	<data name="factoryViewer.TabIndex" type="System.Int32, mscorlib">
+		<value>10</value>
+	</data>
+	<data name="factoryViewer.Visible" type="System.Boolean, mscorlib">
+		<value>False</value>
+	</data>
+	<data name="&gt;&gt;factoryViewer.Name" xml:space="preserve">
+    <value>factoryViewer</value>
+  </data>
+	<data name="&gt;&gt;factoryViewer.Type" xml:space="preserve">
+    <value>Pic.Factory2D.Control.FactoryViewerBase, Pic.Factory2D.Control, Version=1.0.4944.20200, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+	<data name="&gt;&gt;factoryViewer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+	<data name="&gt;&gt;factoryViewer.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+	<data name="webBrowser4PDF.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+		<value>Top, Bottom, Left, Right</value>
+	</data>
+	<data name="webBrowser4PDF.Location" type="System.Drawing.Point, System.Drawing">
+		<value>-1, 125</value>
+	</data>
+	<data name="webBrowser4PDF.Size" type="System.Drawing.Size, System.Drawing">
+		<value>501, 549</value>
+	</data>
+	<data name="webBrowser4PDF.TabIndex" type="System.Int32, mscorlib">
+		<value>14</value>
+	</data>
+	<data name="&gt;&gt;webBrowser4PDF.Name" xml:space="preserve">
+    <value>webBrowser4PDF</value>
+  </data>
+	<data name="&gt;&gt;webBrowser4PDF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.WebBrowser, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;webBrowser4PDF.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+	<data name="&gt;&gt;webBrowser4PDF.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="componentLoaderControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+		<value>Top, Bottom, Left, Right</value>
+	</data>
+	<data name="componentLoaderControl.Location" type="System.Drawing.Point, System.Drawing">
+		<value>12, 158</value>
+	</data>
+	<data name="componentLoaderControl.Size" type="System.Drawing.Size, System.Drawing">
+		<value>474, 506</value>
+	</data>
+	<data name="componentLoaderControl.TabIndex" type="System.Int32, mscorlib">
+		<value>9</value>
+	</data>
+	<data name="componentLoaderControl.Visible" type="System.Boolean, mscorlib">
+		<value>False</value>
+	</data>
+	<data name="&gt;&gt;componentLoaderControl.Name" xml:space="preserve">
+    <value>componentLoaderControl</value>
+  </data>
+	<data name="&gt;&gt;componentLoaderControl.Type" xml:space="preserve">
+    <value>PicParam.ComponentLoaderControl, PLMPackLib, Version=7.0.2.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+	<data name="&gt;&gt;componentLoaderControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+	<data name="&gt;&gt;componentLoaderControl.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+	<data name="pb4ImageFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+		<value>Top, Bottom, Left, Right</value>
+	</data>
+	<data name="pb4ImageFiles.Location" type="System.Drawing.Point, System.Drawing">
+		<value>-1, 125</value>
+	</data>
+	<data name="pb4ImageFiles.Size" type="System.Drawing.Size, System.Drawing">
+		<value>501, 549</value>
+	</data>
+	<data name="pb4ImageFiles.TabIndex" type="System.Int32, mscorlib">
+		<value>15</value>
+	</data>
+	<data name="&gt;&gt;pb4ImageFiles.Name" xml:space="preserve">
+    <value>pb4ImageFiles</value>
+  </data>
+	<data name="&gt;&gt;pb4ImageFiles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;pb4ImageFiles.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+	<data name="&gt;&gt;pb4ImageFiles.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+		<value>True</value>
+	</metadata>
+	<data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+		<value>6, 13</value>
+	</data>
+	<data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+		<value>499, 676</value>
+	</data>
+	<data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormCreateDocument</value>
+  </data>
+	<data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

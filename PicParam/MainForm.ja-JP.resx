@@ -622,4 +622,7 @@
 	<data name="saveFileDialogBackup.Filter" xml:space="preserve">
 		<value>バックアップ ファイル(*.zip)|*.zip</value>
 	</data>
+	<data name="toolStripButtonHelp.Text" xml:space="preserve">
+		<value>ヘルプ</value>
+	</data>
 </root>

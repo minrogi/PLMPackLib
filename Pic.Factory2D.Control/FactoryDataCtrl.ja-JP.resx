@@ -283,4 +283,7 @@
 	<data name="lblAreaValue.Text" xml:space="preserve">
 		<value>: 0.0 m²</value>
 	</data>
+	<data name="tabArea.Text" xml:space="preserve">
+		<value>面積</value>
+	</data>
 </root>

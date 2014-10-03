@@ -54,7 +54,6 @@
             resources.ApplyResources(this.listBoxLibraries, "listBoxLibraries");
             this.listBoxLibraries.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.listBoxLibraries.FormattingEnabled = true;
-            this.listBoxLibraries.MinimumSize = new System.Drawing.Size(20, 20);
             this.listBoxLibraries.Name = "listBoxLibraries";
             // 
             // bnInfo

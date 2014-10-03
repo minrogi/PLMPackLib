@@ -118,87 +118,36 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="labelDatabasePath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 8</value>
-  </data>
   <data name="labelDatabasePath.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 21</value>
+  </data>
+  <data name="&gt;&gt;bnOK.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;labelDatabasePath.Name" xml:space="preserve">
+    <value>labelDatabasePath</value>
+  </data>
+  <data name="bnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>503, 33</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="labelDatabasePath.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="labelDatabasePath.Text" xml:space="preserve">
-    <value>Database file path</value>
-  </data>
-  <data name="&gt;&gt;labelDatabasePath.Name" xml:space="preserve">
-    <value>labelDatabasePath</value>
-  </data>
-  <data name="&gt;&gt;labelDatabasePath.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelDatabasePath.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;labelDatabasePath.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="fileSelect.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 8</value>
-  </data>
-  <data name="fileSelect.Size" type="System.Drawing.Size, System.Drawing">
-    <value>392, 20</value>
-  </data>
   <data name="fileSelect.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
-  </data>
-  <data name="&gt;&gt;fileSelect.Name" xml:space="preserve">
-    <value>fileSelect</value>
-  </data>
-  <data name="&gt;&gt;fileSelect.Type" xml:space="preserve">
-    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=1.0.4983.21522, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;fileSelect.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;fileSelect.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="bnOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>503, 6</value>
   </data>
-  <data name="bnOK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 24</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormEditDatabasePath</value>
   </data>
-  <data name="bnOK.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="bnOK.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="&gt;&gt;bnOK.Name" xml:space="preserve">
-    <value>bnOK</value>
-  </data>
-  <data name="&gt;&gt;bnOK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bnOK.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;bnOK.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="bnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>503, 33</value>
-  </data>
-  <data name="bnCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 24</value>
-  </data>
-  <data name="bnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="bnCancel.Text" xml:space="preserve">
-    <value>Cancel</value>
+  <data name="&gt;&gt;fileSelect.Name" xml:space="preserve">
+    <value>fileSelect</value>
   </data>
   <data name="&gt;&gt;bnCancel.Name" xml:space="preserve">
     <value>bnCancel</value>
@@ -206,28 +155,82 @@
   <data name="&gt;&gt;bnCancel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;bnCancel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;bnCancel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="fileSelect.Location" type="System.Drawing.Point, System.Drawing">
+    <value>106, 8</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>584, 62</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Define database path...</value>
+  <data name="bnOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 24</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormEditDatabasePath</value>
+  <data name="&gt;&gt;bnOK.Name" xml:space="preserve">
+    <value>bnOK</value>
+  </data>
+  <data name="labelDatabasePath.Text" xml:space="preserve">
+    <value>Database file path</value>
+  </data>
+  <data name="&gt;&gt;bnCancel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;labelDatabasePath.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="labelDatabasePath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 8</value>
+  </data>
+  <data name="bnOK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="bnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 24</value>
+  </data>
+  <data name="&gt;&gt;fileSelect.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="bnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;fileSelect.Type" xml:space="preserve">
+    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=7.0.2.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;fileSelect.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelDatabasePath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="bnCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;bnOK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bnCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="bnOK.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;bnOK.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Define database path...</value>
+  </data>
+  <data name="&gt;&gt;labelDatabasePath.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="fileSelect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>392, 20</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>it-IT</value>
+  </metadata>
 </root>

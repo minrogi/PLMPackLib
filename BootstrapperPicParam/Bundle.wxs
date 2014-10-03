@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--definitions : beg-->
 <?define SkuName = "PLMPackLib"?>
-<?define ProductVersion = "7.0.1.0"?>
+<?define ProductVersion = "7.0.2.0"?>
 <?define Manufacturer="treeDiM"?>
 <?define ProductName = "PLMPackLib"?>
 <?define UpgradeCode="f3313d35-58c7-42ff-b5ad-817d10cc21eb"?>

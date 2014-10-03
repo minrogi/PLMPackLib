@@ -188,18 +188,21 @@
 		<value>左</value>
 	</data>
 	<data name="cbRightLeft.Items1" xml:space="preserve">
-		<value>右</value>
+		<value>Right</value>
 	</data>
 	<data name="cbRightLeft.Items2" xml:space="preserve">
-		<value>割り当て</value>
+		<value>Distributed</value>
 	</data>
 	<data name="cbTopBottom.Items" xml:space="preserve">
-		<value>地</value>
+		<value>下</value>
 	</data>
 	<data name="cbTopBottom.Items1" xml:space="preserve">
-		<value>天</value>
+		<value>トップ</value>
 	</data>
 	<data name="tabMargins.Text" xml:space="preserve">
 		<value>余白</value>
+	</data>
+	<data name="cbTopBottom.Items2" xml:space="preserve">
+		<value>Distributed</value>
 	</data>
 </root>

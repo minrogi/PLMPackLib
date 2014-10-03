@@ -118,7 +118,7 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<data name="bnOk.Text" xml:space="preserve">
-    <value>OK</value>
+    <value>[OK]</value>
   </data>
 	<assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
 	<data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -151,5 +151,11 @@
 	</data>
 	<data name="$this.Text" xml:space="preserve">
 		<value>新規ブランチ…</value>
+	</data>
+	<data name="bnCancel.Text" xml:space="preserve">
+		<value>キャンセル</value>
+	</data>
+	<data name="label_description.Text" xml:space="preserve">
+		<value>説明</value>
 	</data>
 </root>

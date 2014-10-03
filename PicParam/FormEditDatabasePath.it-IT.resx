@@ -117,29 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="checkBoxMaximized.AccessibleDescription" xml:space="preserve">
-    <value>Cocher pour que l'application s'ouvre maximisée</value>
-  </data>
-  <data name="checkBoxMaximized.AccessibleName" xml:space="preserve">
-    <value>Cocher pour que l'application s'ouvre maximisée</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="checkBoxMaximized.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 17</value>
-  </data>
-  <data name="checkBoxMaximized.Text" xml:space="preserve">
-    <value>Maximiser au démarrage</value>
-  </data>
-  <data name="checkBoxCenteredTitleBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 17</value>
-  </data>
-  <data name="checkBoxCenteredTitleBar.Text" xml:space="preserve">
-    <value>Affichage du titre centré</value>
-  </data>
-  <data name="$this.AccessibleDescription" xml:space="preserve">
-    <value>Paramétrage de l'affichage</value>
-  </data>
-  <data name="$this.AccessibleName" xml:space="preserve">
-    <value>Paramétrage de l'affichage</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Define database path... </value>
   </data>
 </root>
