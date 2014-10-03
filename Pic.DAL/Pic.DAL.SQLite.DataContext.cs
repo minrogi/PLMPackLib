@@ -671,7 +671,7 @@
             // insert TreeNode
             db.TreeNodes.InsertOnSubmit(treeNode);
             db.SubmitChanges();
-            // retrieve new ly created thumbnail
+            // retrieve newly created thumbnail
             return treeNode;
         }
 
