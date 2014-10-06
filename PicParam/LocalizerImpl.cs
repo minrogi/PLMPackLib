@@ -75,7 +75,10 @@ namespace PicParam
         }
         public void SetTranslation(string term, string translation)
         {
-            _dict.Add(term.Trim(), translation.Trim());
+            if (_dict.Keys.Contains(term.Trim()))
+                _dict[term.Trim()] = translation.Trim();
+            else
+                _dict.Add(term.Trim(), translation.Trim());
         }
         public void AddTerm(string term)
         {
@@ -144,9 +147,18 @@ namespace PicParam
 
                     while ((line = readFile.ReadLine()) != null)
                     {
-                        row = line.Split('=');
-                        if (row.Length == 2 && !_dict.ContainsKey(row[0]))
-                            _dict.Add(row[0].Trim(), row[1].Trim());
+                        try
+                        {
+                            row = line.Split('=');
+                            if (row.Length == 2)
+                                SetTranslation(row[0], row[1]);
+                        }
+                        catch (Exception ex)
+                        {
+                            _log.Error(string.Format("Translation string dictionnary -> Skipping line: {0} with message: {1}"
+                                , line
+                                , ex.Message));
+                        }
                     }
                 }
             }
@@ -200,7 +212,7 @@ namespace PicParam
         /// <summary>
         /// term/translation dictionnary
         /// </summary>
-        private Dictionary<string, string> _dict = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+        private Dictionary<string, string> _dict = new Dictionary<string, string>(StringComparer.InvariantCultureIgnoreCase);
         // delegates
         public delegate void TranslationHandler(string term);
         // events
