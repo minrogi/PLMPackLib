@@ -124,6 +124,6 @@
     <value>材料の編集...</value>
   </data>
 	<data name="bnOK.Text" xml:space="preserve">
-		<value>[OK]</value>
+		<value>OK</value>
 	</data>
 </root>

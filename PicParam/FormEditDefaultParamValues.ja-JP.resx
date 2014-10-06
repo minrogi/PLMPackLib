@@ -118,12 +118,18 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<data name="$this.Text" xml:space="preserve">
-    <value>Set  component parameters default values...</value>
+    <value>コンポーネントのパラメータを既定値にする</value>
   </data>
 	<data name="bnOk.Text" xml:space="preserve">
-		<value>[OK]</value>
+		<value>OK</value>
 	</data>
 	<data name="bnCancel.Text" xml:space="preserve">
 		<value>キャンセル</value>
+	</data>
+	<data name="lbComponent.Text" xml:space="preserve">
+		<value>コンポーネント</value>
+	</data>
+	<data name="lbDescription.Text" xml:space="preserve">
+		<value>(詳細)</value>
 	</data>
 </root>

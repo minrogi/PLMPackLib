@@ -183,6 +183,11 @@ $RECYCLE.BIN/
 .DS_Store
 
 #############
+# Excel files
+#############
+*.xls
+
+#############
 # PLMPackLib sample file
 #############
 *.des

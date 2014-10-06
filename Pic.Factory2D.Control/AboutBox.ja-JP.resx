@@ -998,16 +998,16 @@
     <value>{0} について...</value>
   </data>
 	<data name="okButton.Text" xml:space="preserve">
-		<value>[OK]</value>
+		<value>OK</value>
 	</data>
 	<data name="textBoxDescription.Text" xml:space="preserve">
-		<value>説明</value>
+		<value>詳細</value>
 	</data>
 	<data name="labelProductName.Text" xml:space="preserve">
 		<value>製品名</value>
 	</data>
 	<data name="labelCopyright.Text" xml:space="preserve">
-		<value>Copyright treeDim 2010</value>
+		<value>Copyright treeDim 2010-2014</value>
 	</data>
 	<data name="labelCompanyName.Text" xml:space="preserve">
 		<value>treeDim</value>

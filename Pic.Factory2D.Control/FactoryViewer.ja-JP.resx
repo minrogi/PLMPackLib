@@ -199,4 +199,10 @@
 	<data name="showCotationsToolStripMenuItem.Text" xml:space="preserve">
 		<value>寸法線の表示</value>
 	</data>
+	<data name="aiToolStripMenuItem.Text" xml:space="preserve">
+		<value>AI</value>
+	</data>
+	<data name="cf2ToolStripMenuItem.Text" xml:space="preserve">
+		<value>CF2</value>
+	</data>
 </root>

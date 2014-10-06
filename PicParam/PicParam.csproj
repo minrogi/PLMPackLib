@@ -403,9 +403,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCreateDocument.es-ES.resx">
       <DependentUpon>FormCreateDocument.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCreateDocument.it-IT.resx">
       <DependentUpon>FormCreateDocument.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDefineComponentGUID.es-ES.resx">
       <DependentUpon>FormDefineComponentGUID.cs</DependentUpon>
@@ -439,6 +441,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditDatabasePath.resx">
       <DependentUpon>FormEditDatabasePath.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditDefaultParamValues.es-ES.resx">
       <DependentUpon>FormEditDefaultParamValues.cs</DependentUpon>
@@ -516,9 +519,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPluginEditor.es-ES.resx">
       <DependentUpon>FormPluginEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPluginEditor.it-IT.resx">
       <DependentUpon>FormPluginEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRenameNode.es-ES.resx">
       <DependentUpon>FormRenameNode.cs</DependentUpon>

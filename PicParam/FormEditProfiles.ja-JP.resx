@@ -156,4 +156,7 @@
 	<data name="colName.Text" xml:space="preserve">
 		<value>名前</value>
 	</data>
+	<data name="colCode.Text" xml:space="preserve">
+		<value>コード</value>
+	</data>
 </root>

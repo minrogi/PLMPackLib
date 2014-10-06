@@ -118,6 +118,18 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<data name="showCotationsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Show cotations</value>
+    <value>寸法線の表示</value>
   </data>
+	<data name="reflectionYToolStripMenuItem.Text" xml:space="preserve">
+		<value>Y方向ミラー</value>
+	</data>
+	<data name="reflectionXToolStripMenuItem.Text" xml:space="preserve">
+		<value>X方向ミラー</value>
+	</data>
+	<data name="impositionToolStripMenuItem.Text" xml:space="preserve">
+		<value>面付けの表示</value>
+	</data>
+	<data name="fitViewToolStripMenuItem.Text" xml:space="preserve">
+		<value>画面をフィット</value>
+	</data>
 </root>

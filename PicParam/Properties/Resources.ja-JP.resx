@@ -118,7 +118,7 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<data name="ID_TREEMENUDELETE" xml:space="preserve">
-		<value>Delete</value>
+		<value>削除</value>
 	</data>
 	<data name="ID_APPLICATIONEXITING" xml:space="preserve">
 		<value>{0} を終了します...</value>
@@ -151,7 +151,7 @@
 		<value>新規ブランチ…</value>
 	</data>
 	<data name="ID_TREEMENUNEWDOCUMENT" xml:space="preserve">
-		<value>新規図面…</value>
+		<value>新規書類…</value>
 	</data>
 	<data name="ID_TREEMENURENAME" xml:space="preserve">
 		<value>名前変更…</value>
@@ -167,5 +167,44 @@
 	</data>
 	<data name="ID_TREEWARNING_MOVENODE" xml:space="preserve">
 		<value>ノード "{0}" を "{1}" の下に移動しますか　?</value>
+	</data>
+	<data name="ID_ABOUT" xml:space="preserve">
+		<value>{0} について...</value>
+	</data>
+	<data name="ID_CLEARDATABASEWARNING" xml:space="preserve">
+		<value>データベースをクリアして良いですか?</value>
+	</data>
+	<data name="ID_EDITCOMPONENT" xml:space="preserve">
+		<value>コンポーネントの編集 {0}... </value>
+	</data>
+	<data name="ID_INFO_RUNASADMIN" xml:space="preserve">
+		<value>この作業を実施するには、アプリケーションを管理者で実行してください。</value>
+	</data>
+	<data name="ID_TREEMENUBACKUP" xml:space="preserve">
+		<value>バックアップ・ブランチ {0}</value>
+	</data>
+	<data name="ID_TREEMENUCOPY" xml:space="preserve">
+		<value>ドキュメントの複製</value>
+	</data>
+	<data name="ID_TREEMENUSELECTINEXPLORER" xml:space="preserve">
+		<value>フォルダーを開く</value>
+	</data>
+	<data name="ID_TREEMENUSENDPATHTOCLIPBOARD" xml:space="preserve">
+		<value>ドキュメントのパスをクリップボードに送る</value>
+	</data>
+	<data name="ID_TREEMENUSETNEWGUID" xml:space="preserve">
+		<value>コンポーネントに新しい GUID を設定...</value>
+	</data>
+	<data name="ID_TREENODEDOWNLOAD" xml:space="preserve">
+		<value>ダウンロード</value>
+	</data>
+	<data name="ID_TREENODEROOT" xml:space="preserve">
+		<value>ルート</value>
+	</data>
+	<data name="ID_TREENODESTARTPAGE" xml:space="preserve">
+		<value>スタートページ</value>
+	</data>
+	<data name="ID_VERSION" xml:space="preserve">
+		<value>Version {0}</value>
 	</data>
 </root>

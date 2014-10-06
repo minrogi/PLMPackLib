@@ -286,4 +286,16 @@
 	<data name="tabArea.Text" xml:space="preserve">
 		<value>面積</value>
 	</data>
+	<data name="lblValueLengthTotal.Text" xml:space="preserve">
+		<value>: 0.0 m</value>
+	</data>
+	<data name="lblValueLength.Text" xml:space="preserve">
+		<value>: 0.0 m</value>
+	</data>
+	<data name="lblValueLengthFold.Text" xml:space="preserve">
+		<value>: 0.0 m</value>
+	</data>
+	<data name="lblValueLengthCut.Text" xml:space="preserve">
+		<value>: 0.0 m</value>
+	</data>
 </root>

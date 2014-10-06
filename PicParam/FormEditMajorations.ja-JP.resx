@@ -131,12 +131,15 @@
 		<value>60, 13</value>
 	</data>
 	<data name="lblProfile.Text" xml:space="preserve">
-    <value>プロフィール</value>
+    <value>プロファイル</value>
   </data>
 	<data name="$this.Text" xml:space="preserve">
     <value>majorationsの編集...</value>
   </data>
 	<data name="bnOK.Text" xml:space="preserve">
-		<value>[OK]</value>
+		<value>OK</value>
+	</data>
+	<data name="bnEditProfiles.Text" xml:space="preserve">
+		<value>編集…</value>
 	</data>
 </root>

@@ -379,9 +379,12 @@
 		<value>495, 226</value>
 	</data>
 	<data name="lblVersion.Text" xml:space="preserve">
-		<value>バージョン</value>
+		<value>Version</value>
 	</data>
 	<data name="$this.Text" xml:space="preserve">
 		<value>SplashScreen</value>
+	</data>
+	<data name="lbBrand.Text" xml:space="preserve">
+		<value>treeDiM Software</value>
 	</data>
 </root>

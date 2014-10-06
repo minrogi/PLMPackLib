@@ -39,7 +39,7 @@
 To send me the translated files back, simply use https://www.zeta-uploader.com
 
 Kind regards</globalSetting>
-    <globalSetting name="receiveFileFromTranslator.sourceFilePathTextEdit.Text">K:\GitHub\StackBuilder\TreeDiM.StackBuilder_ja-JP.xls</globalSetting>
+    <globalSetting name="receiveFileFromTranslator.sourceFilePathTextEdit.Text">K:\GitHub\PLMPackLib\PLMPackLib_ja-JP.xls</globalSetting>
     <globalSetting name="receiveFileFromTranslator.fileGroupsListBox">
     </globalSetting>
     <globalSetting name="receiveFileFromTranslator.languagesToImportCheckListBox">1</globalSetting>

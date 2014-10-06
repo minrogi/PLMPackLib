@@ -123,4 +123,13 @@
 	<data name="STR_THICKNESS" xml:space="preserve">
 		<value>厚み</value>
 	</data>
+	<data name="STR_PROFILE" xml:space="preserve">
+		<value>プロファイル</value>
+	</data>
+	<data name="STR_TOL" xml:space="preserve">
+		<value>誤差…</value>
+	</data>
+	<data name="STR_VALIDATE" xml:space="preserve">
+		<value>有効にする</value>
+	</data>
 </root>

@@ -131,7 +131,7 @@
 		<value>31, 13</value>
 	</data>
 	<data name="label2.Text" xml:space="preserve">
-    <value>説明</value>
+    <value>詳細</value>
   </data>
 	<data name="label3.Size" type="System.Drawing.Size, System.Drawing">
 		<value>27, 13</value>
@@ -143,12 +143,12 @@
 		<value>19, 13</value>
 	</data>
 	<data name="label4.Text" xml:space="preserve">
-    <value>高さ</value>
+    <value>幅</value>
   </data>
 	<data name="$this.Text" xml:space="preserve">
     <value>板紙サイズの登録...</value>
   </data>
 	<data name="bnOk.Text" xml:space="preserve">
-		<value>[OK]</value>
+		<value>OK</value>
 	</data>
 </root>

@@ -525,4 +525,55 @@
         AAAA/wAA//AAAAH/AAD/+AAAA/8AAP//8AAH/wAA///wAD//AAD///AH//8AAA==
 </value>
 	</data>
+	<data name="CatHeader.Text" xml:space="preserve">
+		<value>カテゴリー:</value>
+	</data>
+	<data name="CatDescr.AccessibleDescription" xml:space="preserve">
+		<value>この箱の詳細は、それぞれのカテゴリーに表示されます</value>
+	</data>
+	<data name="CatHeader.AccessibleDescription" xml:space="preserve">
+		<value>カテゴリー・ツリー・ヘッダー</value>
+	</data>
+	<data name="AppRestartLabel.AccessibleDescription" xml:space="preserve">
+		<value>この箱の変更を適用するには、アプリケーションの再起動が必要です</value>
+	</data>
+	<data name="CancelBtn.AccessibleDescription" xml:space="preserve">
+		<value>変更をキャンセルしてオプションのフォームを閉じます</value>
+	</data>
+	<data name="OptionsPanelPath.Text" xml:space="preserve">
+		<value>オプション &gt;&gt; パス</value>
+	</data>
+	<data name="CatTree.AccessibleDescription" xml:space="preserve">
+		<value>オプションカテゴリー</value>
+	</data>
+	<data name="CatDescr.Text" xml:space="preserve">
+		<value>詳細</value>
+	</data>
+	<data name="OptionsPanelPath.AccessibleDescription" xml:space="preserve">
+		<value>この箱は現在のオプションパネルのオプションパスを表示します</value>
+	</data>
+	<data name="OptionDescrLabel.AccessibleDescription" xml:space="preserve">
+		<value>この箱は、それぞれのコントロールの詳細(概要)を表示します</value>
+	</data>
+	<data name="ApplyBtn.Text" xml:space="preserve">
+		<value>適用</value>
+	</data>
+	<data name="$this.Text" xml:space="preserve">
+		<value>オプション</value>
+	</data>
+	<data name="CancelBtn.Text" xml:space="preserve">
+		<value>キャンセル</value>
+	</data>
+	<data name="OptionDescrLabel.Text" xml:space="preserve">
+		<value>詳細</value>
+	</data>
+	<data name="ApplyBtn.AccessibleDescription" xml:space="preserve">
+		<value>変更を適用</value>
+	</data>
+	<data name="AppRestartLabel.Text" xml:space="preserve">
+		<value>変更を適用するには、アプリケーションの再起動が必要です</value>
+	</data>
+	<data name="OKBtn.AccessibleDescription" xml:space="preserve">
+		<value>変更を適用してオプションのフォームを閉じます</value>
+	</data>
 </root>

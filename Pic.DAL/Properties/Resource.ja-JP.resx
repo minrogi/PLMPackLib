@@ -117,4 +117,25 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
+	<data name="COMPONENTDEFAULTPARAMETERVALUES" xml:space="preserve">
+		<value>既定値: {0}</value>
+	</data>
+	<data name="FAILEDTOEXTRACTFILE" xml:space="preserve">
+		<value>ファイル {0} の解凍に失敗しました。</value>
+	</data>
+	<data name="FILENOTFOUND" xml:space="preserve">
+		<value>ファイル {0} が見つかりません。</value>
+	</data>
+	<data name="INSERTEDCOMPONENT" xml:space="preserve">
+		<value>コンポーネント {0} を挿入</value>
+	</data>
+	<data name="INSERTEDDOCUMENT" xml:space="preserve">
+		<value>ドキュメント {0} を挿入</value>
+	</data>
+	<data name="INSERTEDNODE" xml:space="preserve">
+		<value>ノード {0} を挿入</value>
+	</data>
+	<data name="NODEALREADYINSERTED" xml:space="preserve">
+		<value>ノード {0} は、既に存在するのでsキップします。</value>
+	</data>
 </root>

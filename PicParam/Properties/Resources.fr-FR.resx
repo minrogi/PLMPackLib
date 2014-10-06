@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+	<!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,146 +59,146 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>2.0</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <data name="ID_ABOUT" xml:space="preserve">
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="ID_ABOUT" xml:space="preserve">
     <value>A propos de {0}...</value>
   </data>
-  <data name="ID_APPLICATIONEXITING" xml:space="preserve">
+	<data name="ID_APPLICATIONEXITING" xml:space="preserve">
     <value>{0} will now exit...</value>
   </data>
-  <data name="ID_APPLICATIONMUSTRESTART" xml:space="preserve">
+	<data name="ID_APPLICATIONMUSTRESTART" xml:space="preserve">
     <value>{0} will need to be restarted. Now closing...</value>
   </data>
-  <data name="ID_DATABASENOTFOUND" xml:space="preserve">
+	<data name="ID_DATABASENOTFOUND" xml:space="preserve">
     <value>Database file could not be found at the following path: {0}\n Would you like to restore a database archive?</value>
   </data>
-  <data name="ID_FILENOTFOUND_DEFAULTIMAGE" xml:space="preserve">
+	<data name="ID_FILENOTFOUND_DEFAULTIMAGE" xml:space="preserve">
     <value>Default image file could not be found at the following path: {0}</value>
   </data>
-  <data name="ID_FILENOTFOUND_PDFTHUMBNAILIMAGE" xml:space="preserve">
+	<data name="ID_FILENOTFOUND_PDFTHUMBNAILIMAGE" xml:space="preserve">
     <value>Pdf thumb image file could not be found at the following path: {0}</value>
   </data>
-  <data name="ID_MERGEFAILURE" xml:space="preserve">
+	<data name="ID_MERGEFAILURE" xml:space="preserve">
     <value>Echec de la fusion de la base de données pour la raison suivante: {0}</value>
   </data>
-  <data name="ID_RESTOREFAILURE" xml:space="preserve">
+	<data name="ID_RESTOREFAILURE" xml:space="preserve">
     <value>Echec de la restauration de la base de donnée pour la raison suivante: {0}</value>
   </data>
-  <data name="ID_RESTOREWARNING" xml:space="preserve">
+	<data name="ID_RESTOREWARNING" xml:space="preserve">
     <value>Cette opération va entrainer l'écrasement de votre base de données courante. Continuer?</value>
   </data>
-  <data name="ID_TREEMENUDELETE" xml:space="preserve">
+	<data name="ID_TREEMENUDELETE" xml:space="preserve">
     <value>Supprimer</value>
   </data>
-  <data name="ID_TREEMENUNEWBRANCH" xml:space="preserve">
+	<data name="ID_TREEMENUNEWBRANCH" xml:space="preserve">
     <value>Nouvelle branche...</value>
   </data>
-  <data name="ID_TREEMENUNEWDOCUMENT" xml:space="preserve">
+	<data name="ID_TREEMENUNEWDOCUMENT" xml:space="preserve">
     <value>Nouveau document...</value>
   </data>
-  <data name="ID_TREEMENURENAME" xml:space="preserve">
+	<data name="ID_TREEMENURENAME" xml:space="preserve">
     <value>Renommer...</value>
   </data>
-  <data name="ID_TREEWARNING_DELETEBRANCH" xml:space="preserve">
+	<data name="ID_TREEWARNING_DELETEBRANCH" xml:space="preserve">
     <value>Supprimer la branche {0}?</value>
   </data>
-  <data name="ID_TREEWARNING_DELETEDOCUMENT" xml:space="preserve">
+	<data name="ID_TREEWARNING_DELETEDOCUMENT" xml:space="preserve">
     <value>Supprimer le  document {0}?</value>
   </data>
-  <data name="ID_TREEWARNING_MOVENODE" xml:space="preserve">
+	<data name="ID_TREEWARNING_MOVENODE" xml:space="preserve">
     <value>Souhaitez vous déplacer le noeud "{0}" sous le noeud "{1}"?</value>
   </data>
-  <data name="ID_TREEWARNING_CANNOTMOVENODE" xml:space="preserve">
+	<data name="ID_TREEWARNING_CANNOTMOVENODE" xml:space="preserve">
     <value>Le noeud {0} ne peut être déplacé sous le noeud {1} car celui-ci est un enfant.</value>
   </data>
-  <data name="ID_VERSION" xml:space="preserve">
+	<data name="ID_VERSION" xml:space="preserve">
     <value>Version {0}</value>
   </data>
-  <data name="ID_CANCELTOOLONG" xml:space="preserve">
+	<data name="ID_CANCELTOOLONG" xml:space="preserve">
     <value>Ce modèle comprend plus de {0} segments. Le calcul va demander trop de temps. Pour augmenter le nombre maximum de segments, utiliser Outils&gt;Options&gt;Options de calcul...</value>
   </data>
-  <data name="ID_DATABASEOVERWRITE" xml:space="preserve">
+	<data name="ID_DATABASEOVERWRITE" xml:space="preserve">
     <value>Les documents se trouvant à la même position dans l'arbre actuel et dans la librairie en cours d'installation seront écrasés.  Toutes les modifications seront perdues. Continuer?</value>
   </data>
-  <data name="ID_CLEARDATABASEWARNING" xml:space="preserve">
+	<data name="ID_CLEARDATABASEWARNING" xml:space="preserve">
     <value>Vous êtes sur le point d'effacer le contenu de la base de données. Etes vous sûr?</value>
   </data>
-  <data name="ID_TREEMENUSELECTINEXPLORER" xml:space="preserve">
+	<data name="ID_TREEMENUSELECTINEXPLORER" xml:space="preserve">
     <value>Sélectionner dans le dossier</value>
   </data>
-  <data name="ID_TREEMENUSENDPATHTOCLIPBOARD" xml:space="preserve">
+	<data name="ID_TREEMENUSENDPATHTOCLIPBOARD" xml:space="preserve">
     <value>Envoyer le chemin fichier vers le presse-papier</value>
   </data>
-  <data name="ID_INFO_RUNASADMIN" xml:space="preserve">
+	<data name="ID_INFO_RUNASADMIN" xml:space="preserve">
     <value>Pour effectuer cette opération, l'application doit être exécutée en tant qu'administrateur.</value>
   </data>
-  <data name="ID_TREEMENUBACKUP" xml:space="preserve">
+	<data name="ID_TREEMENUBACKUP" xml:space="preserve">
     <value>Sauvegarder branche {0}</value>
   </data>
-  <data name="ID_TREENODEDOWNLOAD" xml:space="preserve">
+	<data name="ID_TREENODEDOWNLOAD" xml:space="preserve">
     <value>Téléchargement</value>
   </data>
-  <data name="ID_TREENODEROOT" xml:space="preserve">
+	<data name="ID_TREENODEROOT" xml:space="preserve">
     <value>Racine</value>
   </data>
-  <data name="ID_TREENODESTARTPAGE" xml:space="preserve">
+	<data name="ID_TREENODESTARTPAGE" xml:space="preserve">
     <value>Accueil</value>
   </data>
 </root>
