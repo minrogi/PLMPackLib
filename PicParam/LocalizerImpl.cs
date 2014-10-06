@@ -55,21 +55,22 @@ namespace PicParam
         #region Implement ILocalizer
         public string GetTranslation(string term)
         {
-            if (_dict.ContainsKey(term))
+            string trimmedTerm = term.Trim();
+            if (_dict.ContainsKey(trimmedTerm))
             {
-                string sText = _dict[term];
-                return string.IsNullOrEmpty(sText) ? term : sText;
+                string sText = _dict[trimmedTerm];
+                return string.IsNullOrEmpty(sText) ? trimmedTerm : sText;
             }
             else
             {
                 if (null != TranslationNotFound)
                 {
-                    TranslationNotFound(term);
-                    if (_dict.Keys.Contains(term) && !string.IsNullOrEmpty(_dict[term]))
-                        return _dict[term];
+                    TranslationNotFound(trimmedTerm);
+                    if (_dict.Keys.Contains(trimmedTerm) && !string.IsNullOrEmpty(_dict[trimmedTerm]))
+                        return _dict[trimmedTerm];
                 }
                 AddTerm(term);
-                return term;                
+                return trimmedTerm;                
             }
         }
         public void SetTranslation(string term, string translation)
@@ -80,7 +81,7 @@ namespace PicParam
         {
             try
             {
-                if (!_dict.ContainsKey(term))
+                if (!_dict.ContainsKey(term.Trim()))
                     _dict.Add(term.Trim(), string.Empty);
             }
             catch (Exception)
@@ -199,7 +200,7 @@ namespace PicParam
         /// <summary>
         /// term/translation dictionnary
         /// </summary>
-        private Dictionary<string, string> _dict = new Dictionary<string, string>();
+        private Dictionary<string, string> _dict = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
         // delegates
         public delegate void TranslationHandler(string term);
         // events

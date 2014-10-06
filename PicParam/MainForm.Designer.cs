@@ -98,7 +98,9 @@
             this.toolStripButtonAI = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPDF = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButtonARISTO = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonOceProCut = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonZUND = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonCaseOptimization = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPalletization = new System.Windows.Forms.ToolStripButton();
@@ -108,8 +110,6 @@
             this.toolStripEditDLL = new System.Windows.Forms.ToolStripButton();
             this.openFileDialogRestore = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogBackup = new System.Windows.Forms.SaveFileDialog();
-            this.toolStripButtonARISTO = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonZUND = new System.Windows.Forms.ToolStripButton();
             this.toolStripContainerDefault.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainerDefault.ContentPanel.SuspendLayout();
             this.toolStripContainerDefault.TopToolStripPanel.SuspendLayout();
@@ -664,13 +664,6 @@
             this.toolStripSeparator12.Name = "toolStripSeparator12";
             resources.ApplyResources(this.toolStripSeparator12, "toolStripSeparator12");
             // 
-            // toolStripButtonOceProCut
-            // 
-            this.toolStripButtonOceProCut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.toolStripButtonOceProCut, "toolStripButtonOceProCut");
-            this.toolStripButtonOceProCut.Name = "toolStripButtonOceProCut";
-            this.toolStripButtonOceProCut.Click += new System.EventHandler(this.toolStripButtonPostProcessor_Click);
-            // 
             // toolStripButtonARISTO
             // 
             this.toolStripButtonARISTO.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -678,13 +671,19 @@
             this.toolStripButtonARISTO.Name = "toolStripButtonARISTO";
             this.toolStripButtonARISTO.Click += new System.EventHandler(this.toolStripButtonPostProcessor_Click);
             // 
+            // toolStripButtonOceProCut
+            // 
+            this.toolStripButtonOceProCut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.toolStripButtonOceProCut, "toolStripButtonOceProCut");
+            this.toolStripButtonOceProCut.Name = "toolStripButtonOceProCut";
+            this.toolStripButtonOceProCut.Click += new System.EventHandler(this.toolStripButtonPostProcessor_Click);
+            // 
             // toolStripButtonZUND
             // 
             this.toolStripButtonZUND.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.toolStripButtonZUND, "toolStripButtonZUND");
             this.toolStripButtonZUND.Name = "toolStripButtonZUND";
             this.toolStripButtonZUND.Click += new System.EventHandler(this.toolStripButtonPostProcessor_Click);
-
             // 
             // toolStripSeparator7
             // 
@@ -738,7 +737,6 @@
             // saveFileDialogBackup
             // 
             resources.ApplyResources(this.saveFileDialogBackup, "saveFileDialogBackup");
-
             // 
             // MainForm
             // 
