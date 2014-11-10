@@ -554,6 +554,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.it-IT.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <SubType>Designer</SubType>

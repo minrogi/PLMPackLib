@@ -416,7 +416,6 @@ namespace PicParam
 
                 if (this.Nodes.Count > 0)
                     SelectedNode = this.Nodes[0];
-
             }
             catch (System.Exception ex)
             {

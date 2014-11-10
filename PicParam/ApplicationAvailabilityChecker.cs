@@ -23,6 +23,11 @@ namespace PicParam
         {
             _appNameToPath.Add(appName, appPath);
         }
+
+        public static string GetPath(string appName)
+        { 
+            return _appNameToPath[appName];
+        }
         /// <summary>
         /// actually check application availability
         /// </summary>

@@ -110,6 +110,7 @@
             this.toolStripEditDLL = new System.Windows.Forms.ToolStripButton();
             this.openFileDialogRestore = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogBackup = new System.Windows.Forms.SaveFileDialog();
+            this.toolStripButtonDES3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripContainerDefault.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainerDefault.ContentPanel.SuspendLayout();
             this.toolStripContainerDefault.TopToolStripPanel.SuspendLayout();
@@ -606,6 +607,7 @@
             this.toolStripButtonCaseOptimization,
             this.toolStripButtonPalletization,
             this.toolStripSeparator14,
+            this.toolStripButtonDES3,
             this.toolStripButtonPDF3D});
             this.toolStripExport.Name = "toolStripExport";
             this.toolStripExport.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -738,6 +740,13 @@
             // 
             resources.ApplyResources(this.saveFileDialogBackup, "saveFileDialogBackup");
             // 
+            // toolStripButtonDES3
+            // 
+            this.toolStripButtonDES3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.toolStripButtonDES3, "toolStripButtonDES3");
+            this.toolStripButtonDES3.Name = "toolStripButtonDES3";
+            this.toolStripButtonDES3.Click += new System.EventHandler(this.toolStripButtonDES3_Click);
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -856,6 +865,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonPDF;
         private System.Windows.Forms.ToolStripButton toolStripButtonARISTO;
         private System.Windows.Forms.ToolStripButton toolStripButtonZUND;
+        private System.Windows.Forms.ToolStripButton toolStripButtonDES3;
     }
 }
 

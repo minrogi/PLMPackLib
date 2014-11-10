@@ -39,7 +39,7 @@ namespace PicParam
 
                 // set export application
                 ApplicationAvailabilityChecker.AppendApplication("PicGEOM", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppDES);
-                ApplicationAvailabilityChecker.AppendApplication("PicDecoupe", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppPicDecoupeDES);
+                ApplicationAvailabilityChecker.AppendApplication("PicDecoup", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppPicDecoupeDES);
                 ApplicationAvailabilityChecker.AppendApplication("Picador3D", Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppPic3DDES);
 
                 _pluginViewCtrl.Localizer = LocalizerImpl.Instance;
@@ -206,7 +206,6 @@ namespace PicParam
             }
             this.Text = tmp + this.Text.Trim();
         }
-
         #endregion
 
         #region Menu event handlers
@@ -611,7 +610,14 @@ namespace PicParam
                 MessageBox.Show(ex.Message);
             }
         }
-
+        private void Export(string filePath)
+        {
+            // write file
+            if (_pluginViewCtrl.Visible)
+                _pluginViewCtrl.WriteExportFile(filePath, Path.GetExtension(filePath));
+            else if (_factoryViewCtrl.Visible)
+                _factoryViewCtrl.WriteExportFile(filePath, Path.GetExtension(filePath));        
+        }
         private void ExportAndOpen(string filePath, string sPathExectable)
         {
             // write file
@@ -646,7 +652,6 @@ namespace PicParam
             string tempFilePath = System.IO.Path.ChangeExtension(System.IO.Path.GetTempFileName(), sExt);
             ExportAndOpen(tempFilePath, sPathExectable);
         }
-
         private void toolStripButtonPDF3D_Click(object sender, EventArgs e)
         {
             Pic.Plugin.Component comp = _pluginViewCtrl.Component;
@@ -658,6 +663,8 @@ namespace PicParam
             PPDataContext db = new PPDataContext();
             Pic.DAL.SQLite.TreeNode treeNode = Pic.DAL.SQLite.TreeNode.GetById(db, nodeTag.TreeNode);
             List<Document> des3Docs = treeNode.GetBrothersWithExtension(db, "des3");
+            if (0 == des3Docs.Count)
+            {   MessageBox.Show("Missing des3 for sample pattern files");   return; }
             List<string> filePathes = new List<string>();
             foreach (Document d in des3Docs)
                 filePathes.Add(d.File.Path(db));
@@ -679,7 +686,7 @@ namespace PicParam
                 string defaultPdfTemplate = Path.Combine(currentDir, "DefaultTemplate.pdf");
 
                 // generate des file
-                ExportAndOpen(desFile, string.Empty);
+                Export(desFile);
                 // reference point
                 double thickness = 0.0;
                 Sharp3D.Math.Core.Vector2D v = Sharp3D.Math.Core.Vector2D.Zero;
@@ -785,6 +792,127 @@ namespace PicParam
                 }
             }
         }
+        private void toolStripButtonDES3_Click(object sender, EventArgs e)
+        {
+            Pic.Plugin.Component comp = _pluginViewCtrl.Component;
+            if (!_pluginViewCtrl.Visible || null == comp || !comp.IsSupportingAutomaticFolding)
+                return;
+            // get documents at the same lavel
+            NodeTag nodeTag = _treeViewCtrl.SelectedNode.Tag as NodeTag;
+            if (null == nodeTag) return;
+            PPDataContext db = new PPDataContext();
+            Pic.DAL.SQLite.TreeNode treeNode = Pic.DAL.SQLite.TreeNode.GetById(db, nodeTag.TreeNode);
+            List<Document> des3Docs = treeNode.GetBrothersWithExtension(db, "des3");
+            if (0 == des3Docs.Count)
+            {   MessageBox.Show("Missing des3 for sample pattern files");   return; }
+            List<string> filePathes = new List<string>();
+            foreach (Document d in des3Docs)
+                filePathes.Add(d.File.Path(db));
+
+            SaveFileDialog fd = new SaveFileDialog();
+            fd.Filter = "Picador 3D files (*.des3)|*.des3|All files (*.*)|*.*";
+            fd.FilterIndex = 0;
+            fd.DefaultExt = "des3";
+            fd.FileName = treeNode.Name + ".des3";
+
+            if (DialogResult.OK == fd.ShowDialog())
+            {
+                string des3File = fd.FileName;
+                string desFile = Path.ChangeExtension(des3File, "des");
+                string xmlFile = Path.ChangeExtension(des3File, "xml");
+                string currentDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+                string defaultPdfTemplate = Path.Combine(currentDir, "DefaultTemplate.pdf");
+
+                // generate des file
+                Export(desFile);
+                // reference point
+                double thickness = 0.0;
+                Sharp3D.Math.Core.Vector2D v = Sharp3D.Math.Core.Vector2D.Zero;
+                if (_pluginViewCtrl.GetReferencePointAndThickness(ref v, ref thickness))
+                {
+                    // #### job file
+                    Pic3DExporter.Job job = new Pic3DExporter.Job();
+                    // **** FILES BEGIN ****
+                    job.Pathes.Add(new Pic3DExporter.PathItem() { pathID = "FID-1", path = defaultPdfTemplate, type = Pic3DExporter.pathType.FILE });
+                    job.Pathes.Add(new Pic3DExporter.PathItem() { pathID = "FID-2", path = desFile, type = Pic3DExporter.pathType.FILE });
+                    job.Pathes.Add(new Pic3DExporter.PathItem() { pathID = "FID-3", path = des3File, type = Pic3DExporter.pathType.FILE });
+
+                    int fid = 5;
+                    foreach (string filePath in filePathes)
+                    {
+                        job.Pathes.Add(new Pic3DExporter.PathItem() { pathID = string.Format("FID-{0}", ++fid), path = filePath, type = Pic3DExporter.pathType.FILE });
+                    }
+
+                    // **** FILES END ****
+                    // **** TASKS BEGIN ****
+                    // DES -> DES3
+                    Pic3DExporter.task_2D_TO_DES3 task_2D_to_DES3 = new Pic3DExporter.task_2D_TO_DES3() { id = "TID-1" };
+                    task_2D_to_DES3.Inputs.Add(new Pic3DExporter.PathRef() { pathID = "FID-2", role = "input des", deleteAfterUsing = false });
+                    task_2D_to_DES3.Outputs.Add(new Pic3DExporter.PathRef() { pathID = "FID-3", role = "output des3", deleteAfterUsing = false });
+                    task_2D_to_DES3.autoparameters.thicknessSpecified = true;
+                    task_2D_to_DES3.autoparameters.thickness = (float)thickness;
+                    task_2D_to_DES3.autoparameters.foldPositionSpecified = true;
+                    task_2D_to_DES3.autoparameters.foldPosition = (float)0.5;
+                    task_2D_to_DES3.autoparameters.pointRef.Add((float)v.X);
+                    task_2D_to_DES3.autoparameters.pointRef.Add((float)v.Y);
+                    fid = 5;
+                    foreach (string filePath in filePathes)
+                    {
+                        task_2D_to_DES3.autoparameters.modelFiles.Add(new Pic3DExporter.PathRef() { pathID = string.Format("FID-{0}", ++fid), role = "model files", deleteAfterUsing = false });
+                    }
+                    job.Tasks.Add(task_2D_to_DES3);
+                    // **** TASKS END ****
+                    job.SaveToFile(xmlFile);
+
+                    // #### execute Pic3DExporter
+                    string exePath = Path.Combine(currentDir, "Pic3DExporter.exe");
+                    if (!System.IO.File.Exists(exePath))
+                    {
+                        MessageBox.Show(string.Format("File {0} could not be found!", exePath));
+                        return;
+                    }
+
+                    var procExporter = new Process
+                    {
+                        StartInfo = new ProcessStartInfo
+                        {
+                            FileName = exePath,
+                            Arguments = string.Format(" /t \"{0}\"", xmlFile),
+                            UseShellExecute = false,
+                            CreateNoWindow = true,
+                            RedirectStandardOutput = false,
+                            RedirectStandardError = false
+                        }
+                    };
+                    procExporter.Start();
+                    procExporter.WaitForExit();
+                    Thread.Sleep(1000);
+                }
+                if (System.IO.File.Exists(des3File))
+                {
+                    if (ApplicationAvailabilityChecker.IsAvailable("Picador3D"))
+                    {
+                        var procPic3D = new Process
+                        {
+                            StartInfo = new ProcessStartInfo
+                            {
+                                FileName = ApplicationAvailabilityChecker.GetPath("Picador3D"),
+                                Arguments = des3File,
+                                UseShellExecute = false,
+                                CreateNoWindow = false,
+                                RedirectStandardInput = false,
+                                RedirectStandardError = false
+                            }
+                        };
+                        procPic3D.Start();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(string.Format("Failed to generate {0}", des3File));
+                }
+            }
+        }
         #endregion
 
         #region Toolbar event handlers
@@ -887,7 +1015,9 @@ namespace PicParam
                 toolStripButtonEditParameters.Enabled = _pluginViewCtrl.Visible && _pluginViewCtrl.HasDependancies;
 
                 // PDF3D button
-                toolStripButtonPDF3D.Enabled = _pluginViewCtrl.Visible && (null != _pluginViewCtrl.Component) && _pluginViewCtrl.Component.IsSupportingAutomaticFolding;
+                bool tools3DGenerate = _pluginViewCtrl.Visible && (null != _pluginViewCtrl.Component) && _pluginViewCtrl.Component.IsSupportingAutomaticFolding;
+                toolStripButtonPDF3D.Enabled = tools3DGenerate;
+                toolStripButtonDES3.Enabled = tools3DGenerate;
             }
             catch (Exception ex)
             {
@@ -1319,6 +1449,7 @@ namespace PicParam
         /// </summary>
         private MRUManager mruManager;
         #endregion
+
 
     }
 }

@@ -181,7 +181,7 @@ namespace Pic.Factory2D.Control.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\wpicador\\Bin\\Picador3D.exe")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\wpicador\\Bin32\\Picador3D.exe")]
         public string FileOutputAppPic3DDES {
             get {
                 return ((string)(this["FileOutputAppPic3DDES"]));
