@@ -747,14 +747,14 @@ namespace PicParam
                     task_U3D_to_PDF.Inputs.Add(new Pic3DExporter.PathRef() { pathID = "FID-4", role = "input u3d", deleteAfterUsing = false });
                     task_U3D_to_PDF.Inputs.Add(new Pic3DExporter.PathRef() { pathID = "FID-1", role = "pdf template", deleteAfterUsing = false });
                     task_U3D_to_PDF.Outputs.Add(new Pic3DExporter.PathRef() { pathID = "FID-5", role = "output pdf", deleteAfterUsing = false });
-                    task_U3D_to_PDF.pdfAnnotation.buttonPositionsSpecified = true;
-                    task_U3D_to_PDF.pdfAnnotation.buttonPositions = Pic3DExporter.RelativePosition.LEFT;
-                    task_U3D_to_PDF.pdfAnnotation.pageNumberSpecified = true;
-                    task_U3D_to_PDF.pdfAnnotation.pageNumber = 1;
-                    task_U3D_to_PDF.pdfAnnotation.position.Add(40);
-                    task_U3D_to_PDF.pdfAnnotation.position.Add(40);
-                    task_U3D_to_PDF.pdfAnnotation.dimensions.Add(760);
-                    task_U3D_to_PDF.pdfAnnotation.dimensions.Add(500);
+                    task_U3D_to_PDF.pdfAnnotation.PageLayout.buttonPositionsSpecified = true;
+                    task_U3D_to_PDF.pdfAnnotation.PageLayout.buttonPositions = Pic3DExporter.RelativePosition.LEFT;
+                    task_U3D_to_PDF.pdfAnnotation.PageLayout.pageNumberSpecified = true;
+                    task_U3D_to_PDF.pdfAnnotation.PageLayout.pageNumber = 1;
+                    task_U3D_to_PDF.pdfAnnotation.PageLayout.position.Add(40);
+                    task_U3D_to_PDF.pdfAnnotation.PageLayout.position.Add(40);
+                    task_U3D_to_PDF.pdfAnnotation.PageLayout.dimensions.Add(760);
+                    task_U3D_to_PDF.pdfAnnotation.PageLayout.dimensions.Add(500);
                     task_U3D_to_PDF.pdfAnnotation.ViewNodes.Add(new Pic3DExporter.viewNode() { name = "View_Step0", matrix = viewMatrix, backgroundColor = backColor, COSpecified = true, CO = 3000.0f, lightingScheme = "CAD" });
                     job.Tasks.Add(task_U3D_to_PDF);
                     // 
@@ -779,7 +779,7 @@ namespace PicParam
                         StartInfo = new ProcessStartInfo
                         {
                             FileName = exePath,
-                            Arguments = string.Format(" /t \"{0}\"", xmlFile),
+                            Arguments = string.Format(" -t \"{0}\"", xmlFile),
                             UseShellExecute = false,
                             CreateNoWindow = true,
                             RedirectStandardOutput = false,

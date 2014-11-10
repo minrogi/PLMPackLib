@@ -4,8 +4,6 @@
 //    <NameSpace>Pic3DExporter</NameSpace><Collection>List</Collection><codeType>CSharp</codeType><EnableDataBinding>False</EnableDataBinding><EnableLazyLoading>False</EnableLazyLoading><TrackingChangesEnable>False</TrackingChangesEnable><GenTrackingClasses>False</GenTrackingClasses><HidePrivateFieldInIDE>False</HidePrivateFieldInIDE><EnableSummaryComment>False</EnableSummaryComment><VirtualProp>False</VirtualProp><IncludeSerializeMethod>True</IncludeSerializeMethod><UseBaseClass>False</UseBaseClass><GenBaseClass>False</GenBaseClass><GenerateCloneMethod>False</GenerateCloneMethod><GenerateDataContracts>False</GenerateDataContracts><CodeBaseTag>Net40</CodeBaseTag><SerializeMethodName>Serialize</SerializeMethodName><DeserializeMethodName>Deserialize</DeserializeMethodName><SaveToFileMethodName>SaveToFile</SaveToFileMethodName><LoadFromFileMethodName>LoadFromFile</LoadFromFileMethodName><GenerateXMLAttributes>True</GenerateXMLAttributes><EnableEncoding>False</EnableEncoding><AutomaticProperties>False</AutomaticProperties><GenerateShouldSerialize>False</GenerateShouldSerialize><DisableDebug>False</DisableDebug><PropNameSpecified>Default</PropNameSpecified><Encoder>UTF8</Encoder><CustomUsings></CustomUsings><ExcludeIncludedTypes>False</ExcludeIncludedTypes><EnableInitializeFields>True</EnableInitializeFields>
 //  </auto-generated>
 // ------------------------------------------------------------------------------
-#pragma warning disable 0108, 0114
-
 namespace Pic3DExporter
 {
     using System;
@@ -518,6 +516,565 @@ namespace Pic3DExporter
             }
         }
         #endregion
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.treedim.com/Pic3DExporter")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.treedim.com/Pic3DExporter", IsNullable = false)]
+    public partial class PageLayouts
+    {
+
+        private List<pageLayout> pageLayoutField;
+
+        private static System.Xml.Serialization.XmlSerializer serializer;
+
+        public PageLayouts()
+        {
+            this.pageLayoutField = new List<pageLayout>();
+        }
+
+        [System.Xml.Serialization.XmlElementAttribute("PageLayout", Order = 0)]
+        public List<pageLayout> PageLayout
+        {
+            get
+            {
+                return this.pageLayoutField;
+            }
+            set
+            {
+                this.pageLayoutField = value;
+            }
+        }
+
+        private static System.Xml.Serialization.XmlSerializer Serializer
+        {
+            get
+            {
+                if ((serializer == null))
+                {
+                    serializer = new System.Xml.Serialization.XmlSerializer(typeof(PageLayouts));
+                }
+                return serializer;
+            }
+        }
+
+        #region Serialize/Deserialize
+        /// <summary>
+        /// Serializes current PageLayouts object into an XML document
+        /// </summary>
+        /// <returns>string XML value</returns>
+        public virtual string Serialize()
+        {
+            System.IO.StreamReader streamReader = null;
+            System.IO.MemoryStream memoryStream = null;
+            try
+            {
+                memoryStream = new System.IO.MemoryStream();
+                Serializer.Serialize(memoryStream, this);
+                memoryStream.Seek(0, System.IO.SeekOrigin.Begin);
+                streamReader = new System.IO.StreamReader(memoryStream);
+                return streamReader.ReadToEnd();
+            }
+            finally
+            {
+                if ((streamReader != null))
+                {
+                    streamReader.Dispose();
+                }
+                if ((memoryStream != null))
+                {
+                    memoryStream.Dispose();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Deserializes workflow markup into an PageLayouts object
+        /// </summary>
+        /// <param name="xml">string workflow markup to deserialize</param>
+        /// <param name="obj">Output PageLayouts object</param>
+        /// <param name="exception">output Exception value if deserialize failed</param>
+        /// <returns>true if this XmlSerializer can deserialize the object; otherwise, false</returns>
+        public static bool Deserialize(string xml, out PageLayouts obj, out System.Exception exception)
+        {
+            exception = null;
+            obj = default(PageLayouts);
+            try
+            {
+                obj = Deserialize(xml);
+                return true;
+            }
+            catch (System.Exception ex)
+            {
+                exception = ex;
+                return false;
+            }
+        }
+
+        public static bool Deserialize(string xml, out PageLayouts obj)
+        {
+            System.Exception exception = null;
+            return Deserialize(xml, out obj, out exception);
+        }
+
+        public static PageLayouts Deserialize(string xml)
+        {
+            System.IO.StringReader stringReader = null;
+            try
+            {
+                stringReader = new System.IO.StringReader(xml);
+                return ((PageLayouts)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+            }
+            finally
+            {
+                if ((stringReader != null))
+                {
+                    stringReader.Dispose();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Serializes current PageLayouts object into file
+        /// </summary>
+        /// <param name="fileName">full path of outupt xml file</param>
+        /// <param name="exception">output Exception value if failed</param>
+        /// <returns>true if can serialize and save into file; otherwise, false</returns>
+        public virtual bool SaveToFile(string fileName, out System.Exception exception)
+        {
+            exception = null;
+            try
+            {
+                SaveToFile(fileName);
+                return true;
+            }
+            catch (System.Exception e)
+            {
+                exception = e;
+                return false;
+            }
+        }
+
+        public virtual void SaveToFile(string fileName)
+        {
+            System.IO.StreamWriter streamWriter = null;
+            try
+            {
+                string xmlString = Serialize();
+                System.IO.FileInfo xmlFile = new System.IO.FileInfo(fileName);
+                streamWriter = xmlFile.CreateText();
+                streamWriter.WriteLine(xmlString);
+                streamWriter.Close();
+            }
+            finally
+            {
+                if ((streamWriter != null))
+                {
+                    streamWriter.Dispose();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Deserializes xml markup from file into an PageLayouts object
+        /// </summary>
+        /// <param name="fileName">string xml file to load and deserialize</param>
+        /// <param name="obj">Output PageLayouts object</param>
+        /// <param name="exception">output Exception value if deserialize failed</param>
+        /// <returns>true if this XmlSerializer can deserialize the object; otherwise, false</returns>
+        public static bool LoadFromFile(string fileName, out PageLayouts obj, out System.Exception exception)
+        {
+            exception = null;
+            obj = default(PageLayouts);
+            try
+            {
+                obj = LoadFromFile(fileName);
+                return true;
+            }
+            catch (System.Exception ex)
+            {
+                exception = ex;
+                return false;
+            }
+        }
+
+        public static bool LoadFromFile(string fileName, out PageLayouts obj)
+        {
+            System.Exception exception = null;
+            return LoadFromFile(fileName, out obj, out exception);
+        }
+
+        public static PageLayouts LoadFromFile(string fileName)
+        {
+            System.IO.FileStream file = null;
+            System.IO.StreamReader sr = null;
+            try
+            {
+                file = new System.IO.FileStream(fileName, FileMode.Open, FileAccess.Read);
+                sr = new System.IO.StreamReader(file);
+                string xmlString = sr.ReadToEnd();
+                sr.Close();
+                file.Close();
+                return Deserialize(xmlString);
+            }
+            finally
+            {
+                if ((file != null))
+                {
+                    file.Dispose();
+                }
+                if ((sr != null))
+                {
+                    sr.Dispose();
+                }
+            }
+        }
+        #endregion
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.treedim.com/Pic3DExporter")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.treedim.com/Pic3DExporter", IsNullable = true)]
+    public partial class pageLayout
+    {
+
+        private string nameField;
+
+        private int pageNumberField;
+
+        private bool pageNumberFieldSpecified;
+
+        private List<int> positionField;
+
+        private List<int> dimensionsField;
+
+        private RelativePosition buttonPositionsField;
+
+        private bool buttonPositionsFieldSpecified;
+
+        private bool showToolBarField;
+
+        private static System.Xml.Serialization.XmlSerializer serializer;
+
+        public pageLayout()
+        {
+            this.dimensionsField = new List<int>();
+            this.positionField = new List<int>();
+            this.showToolBarField = true;
+        }
+
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string name
+        {
+            get
+            {
+                return this.nameField;
+            }
+            set
+            {
+                this.nameField = value;
+            }
+        }
+
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public int pageNumber
+        {
+            get
+            {
+                return this.pageNumberField;
+            }
+            set
+            {
+                this.pageNumberField = value;
+            }
+        }
+
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool pageNumberSpecified
+        {
+            get
+            {
+                return this.pageNumberFieldSpecified;
+            }
+            set
+            {
+                this.pageNumberFieldSpecified = value;
+            }
+        }
+
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public List<int> position
+        {
+            get
+            {
+                return this.positionField;
+            }
+            set
+            {
+                this.positionField = value;
+            }
+        }
+
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public List<int> dimensions
+        {
+            get
+            {
+                return this.dimensionsField;
+            }
+            set
+            {
+                this.dimensionsField = value;
+            }
+        }
+
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public RelativePosition buttonPositions
+        {
+            get
+            {
+                return this.buttonPositionsField;
+            }
+            set
+            {
+                this.buttonPositionsField = value;
+            }
+        }
+
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool buttonPositionsSpecified
+        {
+            get
+            {
+                return this.buttonPositionsFieldSpecified;
+            }
+            set
+            {
+                this.buttonPositionsFieldSpecified = value;
+            }
+        }
+
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DefaultValueAttribute(true)]
+        public bool showToolBar
+        {
+            get
+            {
+                return this.showToolBarField;
+            }
+            set
+            {
+                this.showToolBarField = value;
+            }
+        }
+
+        private static System.Xml.Serialization.XmlSerializer Serializer
+        {
+            get
+            {
+                if ((serializer == null))
+                {
+                    serializer = new System.Xml.Serialization.XmlSerializer(typeof(pageLayout));
+                }
+                return serializer;
+            }
+        }
+
+        #region Serialize/Deserialize
+        /// <summary>
+        /// Serializes current pageLayout object into an XML document
+        /// </summary>
+        /// <returns>string XML value</returns>
+        public virtual string Serialize()
+        {
+            System.IO.StreamReader streamReader = null;
+            System.IO.MemoryStream memoryStream = null;
+            try
+            {
+                memoryStream = new System.IO.MemoryStream();
+                Serializer.Serialize(memoryStream, this);
+                memoryStream.Seek(0, System.IO.SeekOrigin.Begin);
+                streamReader = new System.IO.StreamReader(memoryStream);
+                return streamReader.ReadToEnd();
+            }
+            finally
+            {
+                if ((streamReader != null))
+                {
+                    streamReader.Dispose();
+                }
+                if ((memoryStream != null))
+                {
+                    memoryStream.Dispose();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Deserializes workflow markup into an pageLayout object
+        /// </summary>
+        /// <param name="xml">string workflow markup to deserialize</param>
+        /// <param name="obj">Output pageLayout object</param>
+        /// <param name="exception">output Exception value if deserialize failed</param>
+        /// <returns>true if this XmlSerializer can deserialize the object; otherwise, false</returns>
+        public static bool Deserialize(string xml, out pageLayout obj, out System.Exception exception)
+        {
+            exception = null;
+            obj = default(pageLayout);
+            try
+            {
+                obj = Deserialize(xml);
+                return true;
+            }
+            catch (System.Exception ex)
+            {
+                exception = ex;
+                return false;
+            }
+        }
+
+        public static bool Deserialize(string xml, out pageLayout obj)
+        {
+            System.Exception exception = null;
+            return Deserialize(xml, out obj, out exception);
+        }
+
+        public static pageLayout Deserialize(string xml)
+        {
+            System.IO.StringReader stringReader = null;
+            try
+            {
+                stringReader = new System.IO.StringReader(xml);
+                return ((pageLayout)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+            }
+            finally
+            {
+                if ((stringReader != null))
+                {
+                    stringReader.Dispose();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Serializes current pageLayout object into file
+        /// </summary>
+        /// <param name="fileName">full path of outupt xml file</param>
+        /// <param name="exception">output Exception value if failed</param>
+        /// <returns>true if can serialize and save into file; otherwise, false</returns>
+        public virtual bool SaveToFile(string fileName, out System.Exception exception)
+        {
+            exception = null;
+            try
+            {
+                SaveToFile(fileName);
+                return true;
+            }
+            catch (System.Exception e)
+            {
+                exception = e;
+                return false;
+            }
+        }
+
+        public virtual void SaveToFile(string fileName)
+        {
+            System.IO.StreamWriter streamWriter = null;
+            try
+            {
+                string xmlString = Serialize();
+                System.IO.FileInfo xmlFile = new System.IO.FileInfo(fileName);
+                streamWriter = xmlFile.CreateText();
+                streamWriter.WriteLine(xmlString);
+                streamWriter.Close();
+            }
+            finally
+            {
+                if ((streamWriter != null))
+                {
+                    streamWriter.Dispose();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Deserializes xml markup from file into an pageLayout object
+        /// </summary>
+        /// <param name="fileName">string xml file to load and deserialize</param>
+        /// <param name="obj">Output pageLayout object</param>
+        /// <param name="exception">output Exception value if deserialize failed</param>
+        /// <returns>true if this XmlSerializer can deserialize the object; otherwise, false</returns>
+        public static bool LoadFromFile(string fileName, out pageLayout obj, out System.Exception exception)
+        {
+            exception = null;
+            obj = default(pageLayout);
+            try
+            {
+                obj = LoadFromFile(fileName);
+                return true;
+            }
+            catch (System.Exception ex)
+            {
+                exception = ex;
+                return false;
+            }
+        }
+
+        public static bool LoadFromFile(string fileName, out pageLayout obj)
+        {
+            System.Exception exception = null;
+            return LoadFromFile(fileName, out obj, out exception);
+        }
+
+        public static pageLayout LoadFromFile(string fileName)
+        {
+            System.IO.FileStream file = null;
+            System.IO.StreamReader sr = null;
+            try
+            {
+                file = new System.IO.FileStream(fileName, FileMode.Open, FileAccess.Read);
+                sr = new System.IO.StreamReader(file);
+                string xmlString = sr.ReadToEnd();
+                sr.Close();
+                file.Close();
+                return Deserialize(xmlString);
+            }
+            finally
+            {
+                if ((file != null))
+                {
+                    file.Dispose();
+                }
+                if ((sr != null))
+                {
+                    sr.Dispose();
+                }
+            }
+        }
+        #endregion
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.treedim.com/Pic3DExporter")]
+    public enum RelativePosition
+    {
+
+        /// <remarks/>
+        TOP,
+
+        /// <remarks/>
+        BOTTOM,
+
+        /// <remarks/>
+        LEFT,
+
+        /// <remarks/>
+        RIGHT,
     }
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
@@ -1684,7 +2241,28 @@ namespace Pic3DExporter
     public partial class task_DES3_EXTRACTTEXTURES : TaskBase
     {
 
+        private imgFormat imageFormatField;
+
         private static System.Xml.Serialization.XmlSerializer serializer;
+
+        public task_DES3_EXTRACTTEXTURES()
+        {
+            this.imageFormatField = imgFormat.png;
+        }
+
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DefaultValueAttribute(imgFormat.png)]
+        public imgFormat imageFormat
+        {
+            get
+            {
+                return this.imageFormatField;
+            }
+            set
+            {
+                this.imageFormatField = value;
+            }
+        }
 
         private static System.Xml.Serialization.XmlSerializer Serializer
         {
@@ -1870,6 +2448,22 @@ namespace Pic3DExporter
             }
         }
         #endregion
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.treedim.com/Pic3DExporter")]
+    public enum imgFormat
+    {
+
+        /// <remarks/>
+        bmp,
+
+        /// <remarks/>
+        jpg,
+
+        /// <remarks/>
+        png,
     }
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
@@ -3695,22 +4289,6 @@ namespace Pic3DExporter
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.treedim.com/Pic3DExporter")]
-    public enum imgFormat
-    {
-
-        /// <remarks/>
-        bmp,
-
-        /// <remarks/>
-        jpg,
-
-        /// <remarks/>
-        png,
-    }
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
-    [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.treedim.com/Pic3DExporter")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.treedim.com/Pic3DExporter", IsNullable = true)]
@@ -3935,17 +4513,7 @@ namespace Pic3DExporter
 
         private List<viewNode> viewNodesField;
 
-        private int pageNumberField;
-
-        private bool pageNumberFieldSpecified;
-
-        private List<int> positionField;
-
-        private List<int> dimensionsField;
-
-        private RelativePosition buttonPositionsField;
-
-        private bool buttonPositionsFieldSpecified;
+        private pageLayout pageLayoutField;
 
         private bool freezedField;
 
@@ -3957,8 +4525,7 @@ namespace Pic3DExporter
 
         public PdfAnnotation()
         {
-            this.dimensionsField = new List<int>();
-            this.positionField = new List<int>();
+            this.pageLayoutField = new pageLayout();
             this.viewNodesField = new List<viewNode>();
         }
 
@@ -3976,81 +4543,16 @@ namespace Pic3DExporter
             }
         }
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public int pageNumber
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
+        public pageLayout PageLayout
         {
             get
             {
-                return this.pageNumberField;
+                return this.pageLayoutField;
             }
             set
             {
-                this.pageNumberField = value;
-            }
-        }
-
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool pageNumberSpecified
-        {
-            get
-            {
-                return this.pageNumberFieldSpecified;
-            }
-            set
-            {
-                this.pageNumberFieldSpecified = value;
-            }
-        }
-
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public List<int> position
-        {
-            get
-            {
-                return this.positionField;
-            }
-            set
-            {
-                this.positionField = value;
-            }
-        }
-
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public List<int> dimensions
-        {
-            get
-            {
-                return this.dimensionsField;
-            }
-            set
-            {
-                this.dimensionsField = value;
-            }
-        }
-
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public RelativePosition buttonPositions
-        {
-            get
-            {
-                return this.buttonPositionsField;
-            }
-            set
-            {
-                this.buttonPositionsField = value;
-            }
-        }
-
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool buttonPositionsSpecified
-        {
-            get
-            {
-                return this.buttonPositionsFieldSpecified;
-            }
-            set
-            {
-                this.buttonPositionsFieldSpecified = value;
+                this.pageLayoutField = value;
             }
         }
 
@@ -4573,25 +5075,6 @@ namespace Pic3DExporter
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.treedim.com/Pic3DExporter")]
-    public enum RelativePosition
-    {
-
-        /// <remarks/>
-        TOP,
-
-        /// <remarks/>
-        BOTTOM,
-
-        /// <remarks/>
-        LEFT,
-
-        /// <remarks/>
-        RIGHT,
-    }
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
-    [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.treedim.com/Pic3DExporter")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.treedim.com/Pic3DExporter", IsNullable = true)]
@@ -4847,10 +5330,13 @@ namespace Pic3DExporter
 
         private task_DES3_TO_U3DParametersQualities qualitiesField;
 
+        private task_DES3_TO_U3DParametersTextures texturesField;
+
         private static System.Xml.Serialization.XmlSerializer serializer;
 
         public task_DES3_TO_U3DParameters()
         {
+            this.texturesField = new task_DES3_TO_U3DParametersTextures();
             this.qualitiesField = new task_DES3_TO_U3DParametersQualities();
             this.materialField = new task_DES3_TO_U3DParametersMaterial();
         }
@@ -4878,6 +5364,19 @@ namespace Pic3DExporter
             set
             {
                 this.qualitiesField = value;
+            }
+        }
+
+        [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
+        public task_DES3_TO_U3DParametersTextures Textures
+        {
+            get
+            {
+                return this.texturesField;
+            }
+            set
+            {
+                this.texturesField = value;
             }
         }
 
@@ -5580,6 +6079,231 @@ namespace Pic3DExporter
         }
 
         public static task_DES3_TO_U3DParametersQualities LoadFromFile(string fileName)
+        {
+            System.IO.FileStream file = null;
+            System.IO.StreamReader sr = null;
+            try
+            {
+                file = new System.IO.FileStream(fileName, FileMode.Open, FileAccess.Read);
+                sr = new System.IO.StreamReader(file);
+                string xmlString = sr.ReadToEnd();
+                sr.Close();
+                file.Close();
+                return Deserialize(xmlString);
+            }
+            finally
+            {
+                if ((file != null))
+                {
+                    file.Dispose();
+                }
+                if ((sr != null))
+                {
+                    sr.Dispose();
+                }
+            }
+        }
+        #endregion
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.treedim.com/Pic3DExporter")]
+    public partial class task_DES3_TO_U3DParametersTextures
+    {
+
+        private int sizeField;
+
+        private bool sizeFieldSpecified;
+
+        private static System.Xml.Serialization.XmlSerializer serializer;
+
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public int size
+        {
+            get
+            {
+                return this.sizeField;
+            }
+            set
+            {
+                this.sizeField = value;
+            }
+        }
+
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool sizeSpecified
+        {
+            get
+            {
+                return this.sizeFieldSpecified;
+            }
+            set
+            {
+                this.sizeFieldSpecified = value;
+            }
+        }
+
+        private static System.Xml.Serialization.XmlSerializer Serializer
+        {
+            get
+            {
+                if ((serializer == null))
+                {
+                    serializer = new System.Xml.Serialization.XmlSerializer(typeof(task_DES3_TO_U3DParametersTextures));
+                }
+                return serializer;
+            }
+        }
+
+        #region Serialize/Deserialize
+        /// <summary>
+        /// Serializes current task_DES3_TO_U3DParametersTextures object into an XML document
+        /// </summary>
+        /// <returns>string XML value</returns>
+        public virtual string Serialize()
+        {
+            System.IO.StreamReader streamReader = null;
+            System.IO.MemoryStream memoryStream = null;
+            try
+            {
+                memoryStream = new System.IO.MemoryStream();
+                Serializer.Serialize(memoryStream, this);
+                memoryStream.Seek(0, System.IO.SeekOrigin.Begin);
+                streamReader = new System.IO.StreamReader(memoryStream);
+                return streamReader.ReadToEnd();
+            }
+            finally
+            {
+                if ((streamReader != null))
+                {
+                    streamReader.Dispose();
+                }
+                if ((memoryStream != null))
+                {
+                    memoryStream.Dispose();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Deserializes workflow markup into an task_DES3_TO_U3DParametersTextures object
+        /// </summary>
+        /// <param name="xml">string workflow markup to deserialize</param>
+        /// <param name="obj">Output task_DES3_TO_U3DParametersTextures object</param>
+        /// <param name="exception">output Exception value if deserialize failed</param>
+        /// <returns>true if this XmlSerializer can deserialize the object; otherwise, false</returns>
+        public static bool Deserialize(string xml, out task_DES3_TO_U3DParametersTextures obj, out System.Exception exception)
+        {
+            exception = null;
+            obj = default(task_DES3_TO_U3DParametersTextures);
+            try
+            {
+                obj = Deserialize(xml);
+                return true;
+            }
+            catch (System.Exception ex)
+            {
+                exception = ex;
+                return false;
+            }
+        }
+
+        public static bool Deserialize(string xml, out task_DES3_TO_U3DParametersTextures obj)
+        {
+            System.Exception exception = null;
+            return Deserialize(xml, out obj, out exception);
+        }
+
+        public static task_DES3_TO_U3DParametersTextures Deserialize(string xml)
+        {
+            System.IO.StringReader stringReader = null;
+            try
+            {
+                stringReader = new System.IO.StringReader(xml);
+                return ((task_DES3_TO_U3DParametersTextures)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+            }
+            finally
+            {
+                if ((stringReader != null))
+                {
+                    stringReader.Dispose();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Serializes current task_DES3_TO_U3DParametersTextures object into file
+        /// </summary>
+        /// <param name="fileName">full path of outupt xml file</param>
+        /// <param name="exception">output Exception value if failed</param>
+        /// <returns>true if can serialize and save into file; otherwise, false</returns>
+        public virtual bool SaveToFile(string fileName, out System.Exception exception)
+        {
+            exception = null;
+            try
+            {
+                SaveToFile(fileName);
+                return true;
+            }
+            catch (System.Exception e)
+            {
+                exception = e;
+                return false;
+            }
+        }
+
+        public virtual void SaveToFile(string fileName)
+        {
+            System.IO.StreamWriter streamWriter = null;
+            try
+            {
+                string xmlString = Serialize();
+                System.IO.FileInfo xmlFile = new System.IO.FileInfo(fileName);
+                streamWriter = xmlFile.CreateText();
+                streamWriter.WriteLine(xmlString);
+                streamWriter.Close();
+            }
+            finally
+            {
+                if ((streamWriter != null))
+                {
+                    streamWriter.Dispose();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Deserializes xml markup from file into an task_DES3_TO_U3DParametersTextures object
+        /// </summary>
+        /// <param name="fileName">string xml file to load and deserialize</param>
+        /// <param name="obj">Output task_DES3_TO_U3DParametersTextures object</param>
+        /// <param name="exception">output Exception value if deserialize failed</param>
+        /// <returns>true if this XmlSerializer can deserialize the object; otherwise, false</returns>
+        public static bool LoadFromFile(string fileName, out task_DES3_TO_U3DParametersTextures obj, out System.Exception exception)
+        {
+            exception = null;
+            obj = default(task_DES3_TO_U3DParametersTextures);
+            try
+            {
+                obj = LoadFromFile(fileName);
+                return true;
+            }
+            catch (System.Exception ex)
+            {
+                exception = ex;
+                return false;
+            }
+        }
+
+        public static bool LoadFromFile(string fileName, out task_DES3_TO_U3DParametersTextures obj)
+        {
+            System.Exception exception = null;
+            return LoadFromFile(fileName, out obj, out exception);
+        }
+
+        public static task_DES3_TO_U3DParametersTextures LoadFromFile(string fileName)
         {
             System.IO.FileStream file = null;
             System.IO.StreamReader sr = null;

@@ -193,7 +193,7 @@
     <value>_treeViewCtrl</value>
   </data>
   <data name="&gt;&gt;_treeViewCtrl.Type" xml:space="preserve">
-    <value>PicParam.DocumentTreeView, PLMPackLib, Version=7.0.4.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>PicParam.DocumentTreeView, PLMPackLib, Version=7.0.5.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_treeViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel1</value>
@@ -259,7 +259,7 @@
     <value>_branchViewCtrl</value>
   </data>
   <data name="&gt;&gt;_branchViewCtrl.Type" xml:space="preserve">
-    <value>PicParam.DocumentTreeBranchView, PLMPackLib, Version=7.0.4.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>PicParam.DocumentTreeBranchView, PLMPackLib, Version=7.0.5.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_branchViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -319,7 +319,7 @@
     <value>_pluginViewCtrl</value>
   </data>
   <data name="&gt;&gt;_pluginViewCtrl.Type" xml:space="preserve">
-    <value>Pic.Plugin.ViewCtrl.PluginViewCtrl, Pic.Plugin.ViewCtrl, Version=7.0.4.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>Pic.Plugin.ViewCtrl.PluginViewCtrl, Pic.Plugin.ViewCtrl, Version=7.0.5.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_pluginViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -343,7 +343,7 @@
     <value>_factoryViewCtrl</value>
   </data>
   <data name="&gt;&gt;_factoryViewCtrl.Type" xml:space="preserve">
-    <value>Pic.Factory2D.Control.FactoryViewerBase, Pic.Factory2D.Control, Version=7.0.4.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>Pic.Factory2D.Control.FactoryViewerBase, Pic.Factory2D.Control, Version=7.0.5.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_factoryViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -370,7 +370,7 @@
     <value>_startPageCtrl</value>
   </data>
   <data name="&gt;&gt;_startPageCtrl.Type" xml:space="preserve">
-    <value>PicParam.StartPageControl, PLMPackLib, Version=7.0.4.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>PicParam.StartPageControl, PLMPackLib, Version=7.0.5.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_startPageCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -394,7 +394,7 @@
     <value>_downloadPageCtrl</value>
   </data>
   <data name="&gt;&gt;_downloadPageCtrl.Type" xml:space="preserve">
-    <value>PicParam.DownloadPageControl, PLMPackLib, Version=7.0.4.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>PicParam.DownloadPageControl, PLMPackLib, Version=7.0.5.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_downloadPageCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>

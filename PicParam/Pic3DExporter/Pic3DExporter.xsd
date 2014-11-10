@@ -283,6 +283,11 @@
                     <xs:attribute name="shaderQuality" type="exp:int"/>
                   </xs:complexType>
                 </xs:element>
+                <xs:element name="Textures">
+                  <xs:complexType>
+                    <xs:attribute name="size" type="exp:int"/>
+                  </xs:complexType> 
+                </xs:element>
               </xs:sequence>
             </xs:complexType>
           </xs:element>
@@ -291,6 +296,23 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <!-- page layout -->
+  <xs:complexType name="pageLayout">
+    <xs:attribute name="name" type="exp:string"/>
+    <xs:attribute name="pageNumber" type="exp:int"/>
+    <xs:attribute name="position" type="exp:int2"/>
+    <xs:attribute name="dimensions" type="exp:int2"/>
+    <xs:attribute name="buttonPositions" type="exp:RelativePosition"/>
+    <xs:attribute name="showToolBar" type="exp:bool" use="optional" default="true"/>    
+  </xs:complexType>
+  <!-- page layouts -->
+  <xs:element name="PageLayouts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PageLayout" type="exp:pageLayout" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <!-- pdf annotation parameters-->
   <xs:complexType name="viewNode">
     <xs:attribute name="name" type="xs:NCName"/>
@@ -308,11 +330,8 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
+      <xs:element name="PageLayout" type="exp:pageLayout" minOccurs="1" maxOccurs="1"/>
     </xs:sequence>
-    <xs:attribute name="pageNumber" type="exp:int"/>
-    <xs:attribute name="position" type="exp:int2"/>
-    <xs:attribute name="dimensions" type="exp:int2"/>
-    <xs:attribute name="buttonPositions" type="exp:RelativePosition"/>
     <xs:attribute name="freezed" type="exp:bool" use="optional"/>
     <xs:attribute name="comment" type="xs:string"/>
   </xs:complexType>
@@ -442,10 +461,11 @@
       <xs:extension base="exp:TaskBase">
         <xs:sequence>
         </xs:sequence>
+        <xs:attribute name="imageFormat" type="exp:imgFormat" use="optional" default="png"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <!-- Task_DES3_INSERTTEXTURES -->
+  <!-- task_DES3_REPLACETEXTURES -->
   <xs:complexType name="task_DES3_REPLACETEXTURES">
     <xs:annotation>
       <xs:documentation>
