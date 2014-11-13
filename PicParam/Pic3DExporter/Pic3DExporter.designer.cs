@@ -3867,7 +3867,7 @@ namespace Pic3DExporter
         /// Serializes current task_DES3_TO_COLLADA object into an XML document
         /// </summary>
         /// <returns>string XML value</returns>
-        public virtual string Serialize()
+        public override string Serialize()
         {
             System.IO.StreamReader streamReader = null;
             System.IO.MemoryStream memoryStream = null;
@@ -3944,7 +3944,7 @@ namespace Pic3DExporter
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
         /// <returns>true if can serialize and save into file; otherwise, false</returns>
-        public virtual bool SaveToFile(string fileName, out System.Exception exception)
+        public override bool SaveToFile(string fileName, out System.Exception exception)
         {
             exception = null;
             try
@@ -3959,7 +3959,7 @@ namespace Pic3DExporter
             }
         }
 
-        public virtual void SaveToFile(string fileName)
+        public override void SaveToFile(string fileName)
         {
             System.IO.StreamWriter streamWriter = null;
             try
@@ -4334,7 +4334,7 @@ namespace Pic3DExporter
         /// Serializes current task_U3D_TO_PDF object into an XML document
         /// </summary>
         /// <returns>string XML value</returns>
-        public virtual string Serialize()
+        public override string Serialize()
         {
             System.IO.StreamReader streamReader = null;
             System.IO.MemoryStream memoryStream = null;
@@ -4411,7 +4411,7 @@ namespace Pic3DExporter
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
         /// <returns>true if can serialize and save into file; otherwise, false</returns>
-        public virtual bool SaveToFile(string fileName, out System.Exception exception)
+        public override bool SaveToFile(string fileName, out System.Exception exception)
         {
             exception = null;
             try
@@ -5150,7 +5150,7 @@ namespace Pic3DExporter
         /// Serializes current task_DES3_TO_U3D object into an XML document
         /// </summary>
         /// <returns>string XML value</returns>
-        public virtual string Serialize()
+        public override string Serialize()
         {
             System.IO.StreamReader streamReader = null;
             System.IO.MemoryStream memoryStream = null;
@@ -5242,7 +5242,7 @@ namespace Pic3DExporter
             }
         }
 
-        public virtual void SaveToFile(string fileName)
+        public override void SaveToFile(string fileName)
         {
             System.IO.StreamWriter streamWriter = null;
             try

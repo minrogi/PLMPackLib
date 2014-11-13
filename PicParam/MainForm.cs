@@ -734,7 +734,7 @@ namespace PicParam
                     task_DES3_to_U3D.Parameters.Material.reflectivity = 0.0F;
                     task_DES3_to_U3D.Parameters.Qualities.meshDefault = 1000;
                     task_DES3_to_U3D.Parameters.Qualities.meshPosition = 1000;
-                    task_DES3_to_U3D.Parameters.Qualities.shaderQuality = 1;
+                    task_DES3_to_U3D.Parameters.Qualities.shaderQuality = 1000;
                     job.Tasks.Add(task_DES3_to_U3D);
                     // U3D -> PDF
                     float[] mat = { -0.768655F, -0.632503F, 0.0954455F, -0.220844F, 0.402444F, 0.888407F, -0.600332F, 0.661799F, -0.449025F, 1805.8F, -1990.7F, 1350.67F };
@@ -789,6 +789,10 @@ namespace PicParam
                     procExporter.Start();
                     procExporter.WaitForExit();
                     Thread.Sleep(1000);
+
+                    // delete xml task file
+                    try { System.IO.File.Delete(xmlFile); }
+                    catch (Exception) { }
                 }
             }
         }
@@ -821,7 +825,6 @@ namespace PicParam
                 string desFile = Path.ChangeExtension(des3File, "des");
                 string xmlFile = Path.ChangeExtension(des3File, "xml");
                 string currentDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-                string defaultPdfTemplate = Path.Combine(currentDir, "DefaultTemplate.pdf");
 
                 // generate des file
                 Export(desFile);
@@ -833,11 +836,10 @@ namespace PicParam
                     // #### job file
                     Pic3DExporter.Job job = new Pic3DExporter.Job();
                     // **** FILES BEGIN ****
-                    job.Pathes.Add(new Pic3DExporter.PathItem() { pathID = "FID-1", path = defaultPdfTemplate, type = Pic3DExporter.pathType.FILE });
-                    job.Pathes.Add(new Pic3DExporter.PathItem() { pathID = "FID-2", path = desFile, type = Pic3DExporter.pathType.FILE });
-                    job.Pathes.Add(new Pic3DExporter.PathItem() { pathID = "FID-3", path = des3File, type = Pic3DExporter.pathType.FILE });
+                    job.Pathes.Add(new Pic3DExporter.PathItem() { pathID = "FID-1", path = desFile, type = Pic3DExporter.pathType.FILE });
+                    job.Pathes.Add(new Pic3DExporter.PathItem() { pathID = "FID-2", path = des3File, type = Pic3DExporter.pathType.FILE });
 
-                    int fid = 5;
+                    int fid = 2;
                     foreach (string filePath in filePathes)
                     {
                         job.Pathes.Add(new Pic3DExporter.PathItem() { pathID = string.Format("FID-{0}", ++fid), path = filePath, type = Pic3DExporter.pathType.FILE });
@@ -847,15 +849,15 @@ namespace PicParam
                     // **** TASKS BEGIN ****
                     // DES -> DES3
                     Pic3DExporter.task_2D_TO_DES3 task_2D_to_DES3 = new Pic3DExporter.task_2D_TO_DES3() { id = "TID-1" };
-                    task_2D_to_DES3.Inputs.Add(new Pic3DExporter.PathRef() { pathID = "FID-2", role = "input des", deleteAfterUsing = false });
-                    task_2D_to_DES3.Outputs.Add(new Pic3DExporter.PathRef() { pathID = "FID-3", role = "output des3", deleteAfterUsing = false });
+                    task_2D_to_DES3.Inputs.Add(new Pic3DExporter.PathRef() { pathID = "FID-1", role = "input des", deleteAfterUsing = false });
+                    task_2D_to_DES3.Outputs.Add(new Pic3DExporter.PathRef() { pathID = "FID-2", role = "output des3", deleteAfterUsing = false });
                     task_2D_to_DES3.autoparameters.thicknessSpecified = true;
                     task_2D_to_DES3.autoparameters.thickness = (float)thickness;
                     task_2D_to_DES3.autoparameters.foldPositionSpecified = true;
                     task_2D_to_DES3.autoparameters.foldPosition = (float)0.5;
                     task_2D_to_DES3.autoparameters.pointRef.Add((float)v.X);
                     task_2D_to_DES3.autoparameters.pointRef.Add((float)v.Y);
-                    fid = 5;
+                    fid = 2;
                     foreach (string filePath in filePathes)
                     {
                         task_2D_to_DES3.autoparameters.modelFiles.Add(new Pic3DExporter.PathRef() { pathID = string.Format("FID-{0}", ++fid), role = "model files", deleteAfterUsing = false });
@@ -877,7 +879,7 @@ namespace PicParam
                         StartInfo = new ProcessStartInfo
                         {
                             FileName = exePath,
-                            Arguments = string.Format(" /t \"{0}\"", xmlFile),
+                            Arguments = string.Format(" -t \"{0}\"", xmlFile),
                             UseShellExecute = false,
                             CreateNoWindow = true,
                             RedirectStandardOutput = false,
@@ -887,6 +889,10 @@ namespace PicParam
                     procExporter.Start();
                     procExporter.WaitForExit();
                     Thread.Sleep(1000);
+
+                    // delete xml task file
+                    try { System.IO.File.Delete(xmlFile); }
+                    catch (Exception) { }
                 }
                 if (System.IO.File.Exists(des3File))
                 {
