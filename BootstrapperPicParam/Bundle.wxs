@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--definitions : beg-->
 <?define SkuName = "PLMPackLib"?>
-<?define ProductVersion = "7.0.6.0"?>
+<?define ProductVersion = "7.0.7.0"?>
 <?define Manufacturer="treeDiM"?>
 <?define ProductName = "PLMPackLib"?>
 <?define UpgradeCode="f3313d35-58c7-42ff-b5ad-817d10cc21eb"?>
@@ -35,7 +35,7 @@
         Compressed="yes"
         SourceFile="..\PicParamMSI\bin\Release\PLMPackLibMSI.msi"
         Vital="yes"
-        DisplayInternalUI="no"
+        DisplayInternalUI="yes"
         ForcePerMachine="yes"
         Visible="yes">
         <MsiProperty Name="ARPSYSTEMCOMPONENT" Value="1"/>

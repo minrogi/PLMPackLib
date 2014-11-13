@@ -131,7 +131,7 @@
     <value>label1</value>
   </data>
   <data name="&gt;&gt;fileSelect.Type" xml:space="preserve">
-    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=7.0.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=7.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label1.AccessibleDescription" xml:space="preserve">
     <value>Database file path</value>

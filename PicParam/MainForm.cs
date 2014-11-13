@@ -730,10 +730,15 @@ namespace PicParam
                     task_DES3_to_U3D.Dependencies = "TID-1";
                     task_DES3_to_U3D.Inputs.Add(new Pic3DExporter.PathRef() { pathID = "FID-3", role = "input des3", deleteAfterUsing = false });
                     task_DES3_to_U3D.Outputs.Add(new Pic3DExporter.PathRef() { pathID = "FID-4", role = "output u3d", deleteAfterUsing = false });
+                    task_DES3_to_U3D.Parameters.Material.opacitySpecified = true;
                     task_DES3_to_U3D.Parameters.Material.opacity = 1.0F;
+                    task_DES3_to_U3D.Parameters.Material.reflectivitySpecified = true;
                     task_DES3_to_U3D.Parameters.Material.reflectivity = 0.0F;
+                    task_DES3_to_U3D.Parameters.Qualities.meshDefaultSpecified = true;
                     task_DES3_to_U3D.Parameters.Qualities.meshDefault = 1000;
+                    task_DES3_to_U3D.Parameters.Qualities.meshPositionSpecified = true;
                     task_DES3_to_U3D.Parameters.Qualities.meshPosition = 1000;
+                    task_DES3_to_U3D.Parameters.Qualities.shaderQualitySpecified = true;
                     task_DES3_to_U3D.Parameters.Qualities.shaderQuality = 1000;
                     job.Tasks.Add(task_DES3_to_U3D);
                     // U3D -> PDF
@@ -791,7 +796,11 @@ namespace PicParam
                     Thread.Sleep(1000);
 
                     // delete xml task file
-                    try { System.IO.File.Delete(xmlFile); }
+                    try
+                    {
+                        if (!Properties.Settings.Default.DebugMode)
+                            System.IO.File.Delete(xmlFile); 
+                    }
                     catch (Exception) { }
                 }
             }
@@ -891,7 +900,11 @@ namespace PicParam
                     Thread.Sleep(1000);
 
                     // delete xml task file
-                    try { System.IO.File.Delete(xmlFile); }
+                    try
+                    {
+                        if (!Properties.Settings.Default.DebugMode)
+                            System.IO.File.Delete(xmlFile); 
+                    }
                     catch (Exception) { }
                 }
                 if (System.IO.File.Exists(des3File))
@@ -902,12 +915,11 @@ namespace PicParam
                         {
                             StartInfo = new ProcessStartInfo
                             {
-                                FileName = ApplicationAvailabilityChecker.GetPath("Picador3D"),
-                                Arguments = des3File,
-                                UseShellExecute = false,
+                                FileName = des3File,
+                                UseShellExecute = true,
                                 CreateNoWindow = false,
-                                RedirectStandardInput = false,
-                                RedirectStandardError = false
+                                Verb = "open",
+                                WindowStyle = ProcessWindowStyle.Normal
                             }
                         };
                         procPic3D.Start();
