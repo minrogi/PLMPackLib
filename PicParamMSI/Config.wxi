@@ -4,15 +4,16 @@
 <!-- Product manufacturer -->
 <?define ProductManufacturer = "treeDiM"?>
 <!-- Product version -->
-<?define ProductVersion = "7.0.7.0"?>
+<?define ProductVersion = "7.0.8.0"?>
 <!-- Company URL -->
 <?define CompanyURL = "http://www.picador.fr/" ?>
 <!-- Package_Description -->
-<?define Package_Description = "PLMPackLib installer" ?>
+<?define PackageDescription = "PLMPackLib installer" ?>
 <!-- Package_Comments -->
-<?define Package_Comments = "Requires .NET 4.0 framework"?>
+<?define PackageComments = "Requires .NET 4.0 framework"?>
 <!-- Merge module directory -->
 <?define MergeModuleDir="C:\Program Files (x86)\Common Files\Merge Modules"?>
-
+<!-- Upgrade code -->
+<?define UpgradeCode="85B2DB64-71DA-437b-BD2F-6A1511265E15"?>
 <Include>
 </Include>

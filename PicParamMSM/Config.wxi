@@ -2,7 +2,7 @@
 <!-- Product manufacturer -->
 <?define ProductManufacturer = "treeDiM"?>
 <!-- Product version -->
-<?define ProductVersion = "7.0.7.0"?>
+<?define ProductVersion = "7.0.8.0"?>
 <!-- Company URL -->
 <?define CompanyURL = "http://www.picador.fr/" ?>
 <!-- Package_Description -->
