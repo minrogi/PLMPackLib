@@ -112,7 +112,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ProgressWindow.es-ES.resx">
+      <DependentUpon>ProgressWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProgressWindow.fr-FR.resx">
+      <DependentUpon>ProgressWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressWindow.it-IT.resx">
       <DependentUpon>ProgressWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressWindow.ja-JP.resx">

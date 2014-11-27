@@ -262,5 +262,14 @@ namespace Pic.Factory2D.Control.Properties {
                 this["LayoutMode"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool TSButtonAvailableOceProCut {
+            get {
+                return ((bool)(this["TSButtonAvailableOceProCut"]));
+            }
+        }
     }
 }

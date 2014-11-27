@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,138 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="buttonClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonClose.Text" xml:space="preserve">
-    <value>&amp;Fermer</value>
-  </data>
-  <data name="lblSolutions.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblNameNumbers.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="lblNameNumbers.Text" xml:space="preserve">
-    <value>Nombres</value>
-  </data>
-  <data name="lblNameTotal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pbFold.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pbCut.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblValueLengthTotal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblValueLengthFold.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblValueLengthCut.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="grpbLengthes.Text" xml:space="preserve">
-    <value>Longueurs</value>
-  </data>
-  <data name="lblNameEfficiency.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblNameEfficiency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 13</value>
-  </data>
-  <data name="lblNameEfficiency.Text" xml:space="preserve">
-    <value>Efficacité</value>
-  </data>
-  <data name="lblValueFormat.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblValueEfficiency.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblNameFormat.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblNameArea.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblNameArea.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 13</value>
-  </data>
-  <data name="lblNameArea.Text" xml:space="preserve">
-    <value>Superficie</value>
-  </data>
-  <data name="lblValueArea.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="grpbArea.Text" xml:space="preserve">
-    <value>Surface de coupe</value>
-  </data>
-  <data name="lblValueNumbers.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblValueNumbers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 13</value>
-  </data>
-  <data name="lblValueNumbers.Text" xml:space="preserve">
-    <value>: 0 (0 x 0)</value>
-  </data>
-  <data name="lblValueCardboardEfficiency.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblValueCardboardEfficiency.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblValueCardboardEfficiency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 13</value>
-  </data>
-  <data name="lblValueCardboardEfficiency.Text" xml:space="preserve">
-    <value>: 0.0 %</value>
-  </data>
-  <data name="lblCardboardEfficiency.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="lblCardboardEfficiency.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblCardboardEfficiency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 13</value>
-  </data>
-  <data name="lblCardboardEfficiency.Text" xml:space="preserve">
-    <value>Efficacité</value>
-  </data>
-  <data name="lblValueCardboardFormat.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="lblFormat.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="lblFormat.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="grpbCardboardFormat.Text" xml:space="preserve">
-    <value>Format carton</value>
-  </data>
-  <data name="toolStripExportDES.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 22</value>
-  </data>
-  <data name="toolStripExportDXF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 22</value>
-  </data>
-  <data name="toolStripExportPDF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 22</value>
-  </data>
-  <data name="toolStriExportAI.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 22</value>
-  </data>
-  <data name="toolStripExportCF2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 22</value>
-  </data>
   <data name="toolStripButtonExport.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -295,60 +164,48 @@
         hM1fTTTOsiJe7VqWD1WhgO1EzumEAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="toolStripButtonPicGEOM.Text" xml:space="preserve">
-    <value>Ouvrir avec PicGEOM</value>
-  </data>
   <data name="toolStripButtonDXF.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH4SURBVFhH7Ze/S0JRFMedmpqivyCowbEsCIIgWhsCHaQH
-        TVEhFtQWRQ1BQxARLZLipNivoZKiIZscgqZqaaggCgpC0hKRftze93WPXsX3ek9v1PC+cPC+e7/3nM87
-        7+JTR7mawwqrNZrCypVzw1PHU1oTErRHR9jAwbzlcMdnixBB751z1VPP05oXNo8eLTF+aUmpXKakE2o8
-        WIaoBSCdz2qFfYll1hYZLkKsuRu45WfJAPAfr7BU7oW5ohwipKRaAt5GbjOWDADan33Lsc6YzxqEDADx
-        EHvic98AiKCS5lZ91QLw/vnBercniwUrBLfqC6ZqAYyEnDaAaYDuzfGSbzgZ0aEeTNMArZEhzfwbwcvo
-        C6Z/BXCbedQ2Pedf2fnTNVs8jWnz+zcn2hrG/bszmmc6GdLWMSbFLhOFXAg+rS+YRADMBc72WM/WRCE5
-        PnFNYxGGPIOHCwwBH+WifIaCqRwASekad0TFAIbOwINimCMA8pcH1gwFkxGAWIC6QEDiOknci+DT+oLJ
-        CADtxlnAmLoBz5j6BsQcAUh9BGg1Dho+cY3DRgcPhekMuNTfAGKHKgXWDAWTCEB3iGedvL9gKI55jKkT
-        9CgAKB1AdvAy+oLpzwG61v2sb2dKatBN8TL6gsl+HdsANkC1f06NAjlNA/xm8DJcDscXp09VTG8VFvYA
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH4SURBVFhH7Ze/S0JRFMedmpqif6ChBseyIAiCaG0IdJAe
+        NEWFWFBbFDUEDUFEtJiIk2K/hkqKhmxyCJqqpaGCKCgISUtE+nF739c9ehXf6z29UcP7wsH77v3ecz7v
+        vItPHeVqDius1mgKK1fODU8dT2lNSNAeHWEDB/OWwx2fLUIEvXfOVU89T2te2Dx6tMT4pSWlcpmSTqjx
+        YBmiFoB0PqsV9iWWWVtkuAgRdDdwy8+SAeA/XmGp3AtzRTlESEm1BLyN3GYsGQC0P/uWY50xnzUIGQDi
+        IfbE574BEGtKmlv1VQvA++cH692eLBasENyqL5iqBTASctoApgG6N8dLvuFkRId6ME0DtEaGNPNvBC+j
+        L5j+FcBt5lHb9Jx/ZedP12zxNKbN79+caGsY9+/OaJ7pZEhbx5gUu0wUciH4tL5gEgEwFzjbYz1bE4Xk
+        +MQ1jUUY8gweLjAEfJSL8hkKpnIAJKVr3BEVAxg6Aw+KYY4AyF8eWDMUTEYAYgHqAgGJ6yRxL4JP6wsm
+        IwC0G2cBY+oGPGPqGxBzBCD1EaDVOGj4xDUOGx08FKYz4FJ/A4gdqhRYMxRMIgDdIZ518v6CoTjmMaZO
+        0KMAoHQA2cHL6AumPwfoWvezvp0pqUE3xcvoCyb7dWwD2ADV/jk1CuQ0DfCbwctwORxfX6FVR27b0Z0A
         AAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="toolStripButtonDXF.Text" xml:space="preserve">
-    <value>Ouvrir avec application DXF</value>
   </data>
   <data name="toolStripButtonAI.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGtSURBVFhHY0AHqvNj/lOKlebH3NVaFcoGNZI0ADLAdFnG
-        /+jtLSTjkC31CEfMiXyiNSWUB2os8QCkOXNv338olyTw7vsnlJAA4hckO4ISB3z8+RVscfa+Cf+Nl6Yj
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGtSURBVFhHY0AHqvNj/lOKFefH3NVaFcoGNZI0ADLAdFnG
+        /+jtLSTjkC31CEfMjnyiNSWUB2os8QCkOXNv338olyTw7vsnlJAA4hckO4ISB3z8+RVscfa+Cf+Nl6Yj
         HDE7RAiqhDCghgNy90/6/+775/8my6COmBvzTm1mpAhUGX5ADQfA9H/9/f2/5Yps0hxBDQcgJ+LQLQ0Q
-        B4DwnJiPUKW4ASUO+PPv73+XtcUIC7FgqFLcAKSIXAfgAyAzRx1AtAPsV+ejlHDUwGbAhEm0A4yWpoIV
+        B4DwrJiPUKW4ASUO+PPv73+XtcUIC7FgqFLcAKSIXAfgAyAzRx1AtAPsV+ejlHDUwGbAhEm0A4yWpoIV
         0wJDrcENQIoGvQOc1hSBDfrw8wuK+KNPL/93n1mBIoaOwZbgAyBFhBxQc3Tuf5DlIPXxO9vh4iDLkfnY
         MNgSfACkiJADjj698n/b/ZNgH6+4uQ8uDtJP8xAwAdZyIHV5wApn5qXNYEfA5EDiNHcAyGKoUjiABTuI
         TXMHgIL+8pt74IQIS4ygkADJgdg0dwBIDbIlsLSATQ4bBqnBC0CKCCVCSjDUGtwApGjAHWCzMve/78Yq
-        qmKYp6DW4AYgRaPV8agDRh1AbucUHwaZSbQDaImh1kABAwMArbVUrX7reS8AAAAASUVORK5CYII=
+        qmKYp6DW4AYgRaPV8agDRh1AbucUHwaZSbQDaImh1kABAwMAZgdUqJ+7JMIAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="toolStripButtonAI.Text" xml:space="preserve">
-    <value>Ouvrir avec application AI</value>
   </data>
   <data name="toolStripButtonCFF2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH2SURBVFhHY0AHqvNj/lOKlebH3NVaFcoGNZI0ADLAdFnG
-        /+jtLSTjkC31CEfMiXyiNSWUB2os8QCkOXNv338olyTw7vsnlJAA4hckO4ISB3z8+RVscfa+Cf+Nl6Yj
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH2SURBVFhHY0AHqvNj/lOKFefH3NVaFcoGNZI0ADLAdFnG
+        /+jtLSTjkC31CEfMjnyiNSWUB2os8QCkOXNv338olyTw7vsnlJAA4hckO4ISB3z8+RVscfa+Cf+Nl6Yj
         HDE7RAiqhDCghgNy90/6/+775/8my6COmBvzTm1mpAhUGX5ADQfA9H/9/f2/5Yps0hxBDQcgJ+LQLQ0Q
-        B4DwnJiPUKW4ASUO+PPv73+XtcUIC7FgqFLcAKSIXAfgAyAzRx1AtAPsV+ejlHDUwGbAhEm0A4yWpoIV
+        B4DwrJiPUKW4ASUO+PPv73+XtcUIC7FgqFLcAKSIXAfgAyAzRx1AtAPsV+ejlHDUwGbAhEm0A4yWpoIV
         0wJDrcENQIoGhQNMgEXpipv7/n/4+QWsCcRGN+DRp5dYxWqOzv0PokF8mD4YBivCB0CKQA44+vQK2JA8
         YLEav7MdjGEGzLy0GcwP3FSLVQxZD0gOppdoB4ASDYgNswAZg8RBPiQkBsKgUATJgRwEEwPx8QKQopaT
         i8EKYZqQMVgRFIBCCZcYCINCBRSFIIdg048VgBTBygFcIUAoCkBiIF+DxJGDH6YWLwApAqUBUPxffnMP
         axogFAUwy7fdPwnW57SmCEUtXgBSBHIASBMoOKHCYB/CDECOU2xisBwAA91nVqCoxQtAigZFOYCukVoY
-        ag1uAFJkszL3v+/GKqpimKeg1uAGIEWj1fGoA0YdQG7nFB8GmUm0A2iJodZAAQMDACS5OmZv6EeMAAAA
+        ag1uAFJkszL3v+/GKqpimKeg1uAGIEWj1fGoA0YdQG7nFB8GmUm0A2iJodZAAQMDANz8OmETLqh6AAAA
         AElFTkSuQmCC
 </value>
-  </data>
-  <data name="toolStripButtonCFF2.Text" xml:space="preserve">
-    <value>Ouvrir avec application CF2</value>
   </data>
   <data name="toolStripButtonOceProCut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -364,10 +221,24 @@
         rkJggg==
 </value>
   </data>
-  <data name="toolStripButtonOceProCut.Text" xml:space="preserve">
-    <value>Ovrir avec Océ Pro Cut</value>
+  <data name="toolStripButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHhSURBVFhH7Ze/S8NAFMc7OTmJ/4Ho0NFfIAgurm7toHaV
+        KkUcHEQXHUQ3kaKDSO0gLVZRECoOUgUnOwnipi7iUBwCVWsp/jj7vd5rLyE5kzZFh3zhkd677733yeXa
+        Ep9RnfEQazQ64qEH/36wRZR0JhToS06y8dNlxxFIL9YgYmNP/o1gqyhrX1g8lVljYuhIWvFFtxPlyDmG
+        aAQgXyrwxpHzddaTCNcgtgNtwvK73ACYvogyrfjKepMCIhbSurZG24VNLTcAaH3ho8gG9iLOINwAkA9x
+        ML1UAahA5IXVWo0AfH5/seHD2VpDkxBWa8FUL4BKqOkB2AYYOpjR/cK5Ef3lg2kboDsxwc3NCNHGWjD9
+        O4BC6Z0vxDVzf6XLQbe5OxY+WeH51csdXROM5VoibS2YjADI716nq8XnzqLVXOBonmUfbzgQvJvZFJ9D
+        HiHXoVpKwWQGgMLyZzmHRhgDjObk9XJgTimYrHaAimO7cSUA8mBMHhKgjLWUgskMAMI2A4RyBGC2A017
+        BHIOMNgNHMLnN43nCUD2yoE5pWAyAzCeZvmbgUNId0sHVfbKgTmlYDICuBmijbVg+nOAwdQ0GzlecDXo
+        pkQba8Hk/R17AB5AvS+nqkBN2wDNDNFGyOf7AZu9PhF8ZCPKAAAAAElFTkSuQmCC
+</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Imposition...</value>
+  <data name="toolStripButton1.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="toolStripButton1.Text" xml:space="preserve">
+    <value>Open with Acrobat Reader</value>
   </data>
 </root>

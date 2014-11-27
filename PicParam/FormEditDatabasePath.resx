@@ -195,7 +195,7 @@
     <value>6</value>
   </data>
   <data name="&gt;&gt;fileSelect.Type" xml:space="preserve">
-    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=7.0.9.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=7.0.10.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;fileSelect.Parent" xml:space="preserve">
     <value>$this</value>

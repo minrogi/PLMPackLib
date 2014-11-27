@@ -42,10 +42,9 @@ namespace Pic.Factory2D.TestImposition
                 Program.CreateFactoryEntities(initialFactory, stack, Transform2D.Identity);
                 // imposition
                 double width = 1000.0, height = 1000.0;
-                ImpositionTool impositionTool = new ImpositionTool(initialFactory);
+                ImpositionTool impositionTool = new ImpositionToolCardboardFormat(initialFactory, new CardboardFormat(0, "Format1", "Format1", width, height));
                 impositionTool.SpaceBetween = new Vector2D(0.0, 0.0);
                 impositionTool.Margin = new Vector2D(0.0, 0.0);
-                impositionTool.CardboardFormat = new CardboardFormat(0, "Format1", "Format1", width, height); ;
 
                 List<ImpositionSolution> solutions;
                 impositionTool.GenerateSortedSolutionList(null, out solutions);

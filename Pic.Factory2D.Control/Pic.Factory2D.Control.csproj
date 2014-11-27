@@ -175,7 +175,13 @@
       <DependentUpon>DxfLineTypeConvertionCtrl.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FactoryDataCtrl.es-ES.resx">
+      <DependentUpon>FactoryDataCtrl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FactoryDataCtrl.fr-FR.resx">
+      <DependentUpon>FactoryDataCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FactoryDataCtrl.it-IT.resx">
       <DependentUpon>FactoryDataCtrl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FactoryDataCtrl.ja-JP.resx">
@@ -185,15 +191,21 @@
       <DependentUpon>FactoryDataCtrl.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FactoryViewer.es-ES.resx">
+      <DependentUpon>FactoryViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FactoryViewer.fr-FR.resx">
+      <DependentUpon>FactoryViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FactoryViewer.it-IT.resx">
       <DependentUpon>FactoryViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FactoryViewer.ja-JP.resx">
       <DependentUpon>FactoryViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FactoryViewer.resx">
-      <SubType>Designer</SubType>
       <DependentUpon>FactoryViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FactoryViewerBase.fr-FR.resx">
       <DependentUpon>FactoryViewerBase.cs</DependentUpon>
@@ -206,9 +218,15 @@
       <LastGenOutput>FactoryViewerBase1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormImposition.es-ES.resx">
+      <DependentUpon>FormImposition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormImposition.fr-FR.resx">
       <DependentUpon>FormImposition.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImposition.it-IT.resx">
+      <DependentUpon>FormImposition.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormImposition.ja-JP.resx">
       <DependentUpon>FormImposition.cs</DependentUpon>
@@ -217,9 +235,15 @@
       <DependentUpon>FormImposition.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormImpositionSettings.es-ES.resx">
+      <DependentUpon>FormImpositionSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormImpositionSettings.fr-FR.resx">
       <DependentUpon>FormImpositionSettings.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImpositionSettings.it-IT.resx">
+      <DependentUpon>FormImpositionSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormImpositionSettings.ja-JP.resx">
       <DependentUpon>FormImpositionSettings.cs</DependentUpon>
@@ -235,6 +259,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.fr-FR.resx" />
     <EmbeddedResource Include="Properties\Resources.ja-JP.resx" />
+    <EmbeddedResource Include="Properties\Resources.it-IT.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-ES.resx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\CursorPan.cur" />

@@ -85,6 +85,9 @@
         <File Source="..\Localisation\Localisation_ESP.txt">
           <Permission ChangePermission="yes" GenericAll="yes" User="Everyone" TakeOwnership="yes" Write="yes" WriteAttributes="yes" WriteExtendedAttributes="yes" />
         </File>
+        <File Source="..\Localisation\Localisation_ITA.txt">
+          <Permission ChangePermission="yes" GenericAll="yes" User="Everyone" TakeOwnership="yes" Write="yes" WriteAttributes="yes" WriteExtendedAttributes="yes" />
+        </File>
         <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
       </Component>
       <!-- SQLite -->
@@ -155,34 +158,44 @@
                       ElementPath="/configuration/CustomSection/@thumbnailsPath" Value="[Thumbnails]" />
         <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
       </Component>
-      <!-- French resources -->
-      <Directory Id="fr_FR" Name="fr-FR">
-        <Component Id="resources_fr" Guid="{4B44F047-B8CC-4eb3-A297-5CFB20E4FC81}">
-          <File Id="PLMPackLib.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\PLMPackLib.resources.dll" KeyPath="yes" Checksum="yes" />
-          <File Id="Pic.Factory2D.Control.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\Pic.Factory2D.Control.resources.dll" />
-          <File Id="OptionsLib.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\OptionsLib.resources.dll" />
-          <File Id="TreeDim.UserControls.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\TreeDim.UserControls.resources.dll" />
-          <File Id="Pic.Plugin.Viewer.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\Pic.Plugin.ViewCtrl.resources.dll" />
-          <File Id="Pic.DAL.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\Pic.DAL.resources.dll" />
-          <File Id="TreeDim.StackBuilder.GUIExtension.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\TreeDim.StackBuilder.GUIExtension.resources.dll" />
-          <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
-        </Component>
-      </Directory>
-      <!-- End french resources -->
-      <!-- Japanese resources-->
-      <Directory Id="ja_JP" Name="ja-JP">
-        <Component Id="resources_jp" Guid="{5832F6A8-4532-4CB6-A0BD-C0CC12A02E14}">
-          <File Id="PLMPackLib.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\PLMPackLib.resources.dll" KeyPath="yes" Checksum="yes" />
-          <File Id="Pic.Factory2D.Control.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\Pic.Factory2D.Control.resources.dll" />
-          <File Id="OptionsLib.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\OptionsLib.resources.dll" />
-          <File Id="TreeDim.UserControls.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\TreeDim.UserControls.resources.dll" />
-          <File Id="Pic.Plugin.Viewer.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\Pic.Plugin.ViewCtrl.resources.dll" />
-          <File Id="Pic.DAL.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\Pic.DAL.resources.dll" />
-          <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
-        </Component>
-      </Directory>
-      <!--End japanese resources-->
     </DirectoryRef>
+    <!-- French resources -->
+    <DirectoryRef Id="fr_FR">
+      <Component Id="resources_fr" Guid="{4B44F047-B8CC-4eb3-A297-5CFB20E4FC81}">
+        <File Id="PLMPackLib.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\PLMPackLib.resources.dll" KeyPath="yes" Checksum="yes" />
+        <File Id="Pic.Factory2D.Control.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\Pic.Factory2D.Control.resources.dll" />
+        <File Id="OptionsLib.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\OptionsLib.resources.dll" />
+        <File Id="TreeDim.UserControls.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\TreeDim.UserControls.resources.dll" />
+        <File Id="Pic.Plugin.Viewer.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\Pic.Plugin.ViewCtrl.resources.dll" />
+        <File Id="Pic.DAL.resources_fr.dll" Source="..\PicParam\bin\x86\Release\fr-FR\Pic.DAL.resources.dll" />
+        <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
+      </Component>
+    </DirectoryRef>
+    <!-- End french resources -->
+    <DirectoryRef Id="it_IT">
+      <Component Id="resources_it" Guid="{CC8BFEFC-229C-47A2-B974-ADE9FAD56B58}">
+        <File Id="PLMPackLib.resources_it.dll" Source="..\PicParam\bin\x86\Release\it-IT\PLMPackLib.resources.dll" KeyPath="yes" Checksum="yes" />
+        <File Id="Pic.Factory2D.Control.resources_it.dll" Source="..\PicParam\bin\x86\Release\it-IT\Pic.Factory2D.Control.resources.dll" />
+        <File Id="OptionsLib.resources_it.dll" Source="..\PicParam\bin\x86\Release\it-IT\OptionsLib.resources.dll" />
+        <File Id="TreeDim.UserControls.resources_it.dll" Source="..\PicParam\bin\x86\Release\it-IT\TreeDim.UserControls.resources.dll" />
+        <File Id="Pic.Plugin.Viewer.resources_it.dll" Source="..\PicParam\bin\x86\Release\it-IT\Pic.Plugin.ViewCtrl.resources.dll" />
+        <File Id="Pic.DAL.resources_it.dll" Source="..\PicParam\bin\x86\Release\it-IT\Pic.DAL.resources.dll" />
+        <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
+      </Component>
+    </DirectoryRef>    
+    <!-- Japanese resources-->
+    <DirectoryRef Id="ja_JP">
+      <Component Id="resources_jp" Guid="{5832F6A8-4532-4CB6-A0BD-C0CC12A02E14}">
+        <File Id="PLMPackLib.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\PLMPackLib.resources.dll" KeyPath="yes" Checksum="yes" />
+        <File Id="Pic.Factory2D.Control.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\Pic.Factory2D.Control.resources.dll" />
+        <File Id="OptionsLib.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\OptionsLib.resources.dll" />
+        <File Id="TreeDim.UserControls.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\TreeDim.UserControls.resources.dll" />
+        <File Id="Pic.Plugin.Viewer.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\Pic.Plugin.ViewCtrl.resources.dll" />
+        <File Id="Pic.DAL.resources_jp.dll" Source="..\PicParam\bin\x86\Release\ja-JP\Pic.DAL.resources.dll" />
+        <Condition>Installed OR NETFRAMEWORK40FULL</Condition>
+      </Component>
+    </DirectoryRef>
+    <!--End japanese resources-->
     <!--Data directory-->
     <DirectoryRef Id="Documents">
       <Component Id="DocumentsFolder" Guid="{290F30F9-D979-4794-8F94-0B338FE77BA0}">

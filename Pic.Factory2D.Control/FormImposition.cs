@@ -71,6 +71,9 @@ namespace Pic.Factory2D.Control
         #region System.windows.Forms.Form override
         protected override void OnLoad(EventArgs e)
         {
+            // make ToolStripButton available
+            toolStripButtonOceProCut.Available = Properties.Settings.Default.TSButtonAvailableOceProCut;
+
             if (listBoxSolutions.Items.Count > 0)
                 listBoxSolutions.SelectedIndex = 0;
             factoryViewer.Refresh();
@@ -131,8 +134,8 @@ namespace Pic.Factory2D.Control
             if (null == solution) return;
 
             // numbers
-            lblValueCardboardFormat.Text = string.Format(": {0:0.###} x {1:0.###}", _cardboardFormat.Width, _cardboardFormat.Height);
-            lblValueCardboardEfficiency.Text = string.Format(": {0:0.#} %", 100.0 * solution.Area / _cardboardFormat.Area);
+            lblValueCardboardFormat.Text = string.Format(": {0:0.###} x {1:0.###}", solution.CardboardDimensions.X, solution.CardboardDimensions.Y);
+            lblValueCardboardEfficiency.Text = string.Format(": {0:0.#} %", 100.0 * solution.Area / (solution.CardboardDimensions.X * solution.CardboardDimensions.Y));
             lblValueNumbers.Text = string.Format(": {0} ({1} x {2})", solution.PositionCount, solution.Rows, solution.Cols);
             // lengthes
             lblValueLengthCut.Text = string.Format(": {0:0.###} m", solution.LengthCut / 1000.0);
@@ -221,7 +224,10 @@ namespace Pic.Factory2D.Control
         {
             ExportAndOpenExtension("cf2");
         }
-
+        private void toolStripButtonPDF_Click(object sender, EventArgs e)
+        {
+            ExportAndOpenExtension("pdf");
+        }
         private void ExportAndOpenExtension(string fileExt)
         {
             try
@@ -272,6 +278,7 @@ namespace Pic.Factory2D.Control
                             + "|Autodesk dxf (*.dxf)|*.dxf"
                             + "|Adobe Illustrator (*.ai)|*.ai"
                             + "|Common File Format (*.cf2)|*.cf2"
+                            + "|Adobe Acrobat Reader (*.pdf)|*.pdf" 
                             + "|All Files|*.*";
                 switch (fileExt)
                 {
@@ -279,6 +286,7 @@ namespace Pic.Factory2D.Control
                     case "dxf": fd.FilterIndex  = 2; break;
                     case "ai": fd.FilterIndex   = 3; break;
                     case "cf2": fd.FilterIndex = 4; break;
+                    case "pdf": fd.FilterIndex = 5; break;
                     default: break;
                 }
                 // shaow SaveFileDialog
