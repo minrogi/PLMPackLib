@@ -104,6 +104,8 @@
     <Compile Include="FileFormat.cs" />
     <Compile Include="IEntityContainer.cs" />
     <Compile Include="ImpositionTool.cs" />
+    <Compile Include="ImpositionToolCardboardFormat.cs" />
+    <Compile Include="ImpositionToolXY.cs" />
     <Compile Include="PicAutoQuotation.cs" />
     <Compile Include="PicBlock.cs" />
     <Compile Include="PicBox2D.cs" />

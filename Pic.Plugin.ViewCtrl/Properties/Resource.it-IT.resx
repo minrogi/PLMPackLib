@@ -121,4 +121,19 @@
 	<data name="CursorPan" type="System.Resources.ResXFileRef, System.Windows.Forms">
 		<value>..\Resources\CursorPan.cur;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</data>
+	<data name="STR_CLOSE" xml:space="preserve">
+		<value>Chiudi</value>
+	</data>
+	<data name="STR_PROFILE" xml:space="preserve">
+		<value>Profilo</value>
+	</data>
+	<data name="STR_THICKNESS" xml:space="preserve">
+		<value>Spessore</value>
+	</data>
+	<data name="STR_TOL" xml:space="preserve">
+		<value>Tol...</value>
+	</data>
+	<data name="STR_VALIDATE" xml:space="preserve">
+		<value>Convalidare</value>
+	</data>
 </root>

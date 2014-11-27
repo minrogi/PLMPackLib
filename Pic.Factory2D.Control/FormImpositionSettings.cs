@@ -27,6 +27,8 @@ namespace Pic.Factory2D.Control
             InitializeComponent();
             // initialize format loader with default values
             FormatLoader = new CardboardFormatLoaderDefault();
+
+            Load +=new EventHandler(FormImpositionSettings_Load);
         }
         #endregion
 
@@ -83,8 +85,8 @@ namespace Pic.Factory2D.Control
         { get { return (double)nudTopBottomRemaining.Value; } }
         public double ImpRemainingMarginLeftRight
         { get { return (double)nudLeftRightRemaining.Value; } }
-        public double ImpSpaceBetween
-        { get { return (double)nudSpaceBetween.Value; } }
+        public double ImpSpaceX { get { return (double)nudSpaceX.Value; } }
+        public double ImpSpaceY { get { return (double)nudSpaceY.Value; } }
         public double OffsetX
         {
             get { return (double)nudOffsetX.Value; }
@@ -98,6 +100,18 @@ namespace Pic.Factory2D.Control
         public bool AllowRowRotation { get { return cbAllowRowRotation.Checked; } }
         public bool AllowColumnRotation { get { return cbAllowColumnRotation.Checked; } }
         public CardboardFormat CardboardFormat { get { return _cardboardFormat; } }
+        public int NumberDirX { get { return (int)nudNumberDirX.Value; } }
+        public int NumberDirY { get { return (int)nudNumberDirY.Value; } }
+        public int Mode
+        {
+            get
+            {
+                if (rbLayoutMode1.Checked)
+                    return 0;
+                else
+                    return 1;
+            }
+        }
         #endregion
 
         #region Private methods
@@ -144,10 +158,15 @@ namespace Pic.Factory2D.Control
                 nudTopBottomRemaining.Value = Properties.Settings.Default.ImpositionRemainingMarginTopBottom;
                 nudLeftRightMargin.Value = Properties.Settings.Default.ImpositionMarginLeftRight;
                 nudLeftRightRemaining.Value = Properties.Settings.Default.ImpositionRemainingMarginLeftRight;
-                nudSpaceBetween.Value = Properties.Settings.Default.ImpositionSpaceBetween;
-
+                nudSpaceX.Value = Properties.Settings.Default.ImpositionSpaceX;
+                nudSpaceY.Value = Properties.Settings.Default.ImpositionSpaceY;
+                nudNumberDirX.Value = Properties.Settings.Default.NumberDirX;
+                nudNumberDirY.Value = Properties.Settings.Default.NumberDirY;
                 // update combo results
                 cbPlacement_SelectedIndexChanged(this, null);
+                // layout mode
+                rbLayoutMode1.Checked = Properties.Settings.Default.LayoutMode == 0;
+                rbLayoutMode_CheckedChanged(this, null);
             }
             catch (Exception ex)
             {
@@ -165,7 +184,11 @@ namespace Pic.Factory2D.Control
             Properties.Settings.Default.ImpositionRemainingMarginTopBottom = nudTopBottomRemaining.Value;
             Properties.Settings.Default.ImpositionMarginLeftRight = nudLeftRightMargin.Value;
             Properties.Settings.Default.ImpositionRemainingMarginLeftRight = nudLeftRightRemaining.Value;
-            Properties.Settings.Default.ImpositionSpaceBetween = nudSpaceBetween.Value;
+            Properties.Settings.Default.ImpositionSpaceX = nudSpaceX.Value;
+            Properties.Settings.Default.ImpositionSpaceY = nudSpaceY.Value;
+            Properties.Settings.Default.NumberDirX = (int)nudNumberDirX.Value;
+            Properties.Settings.Default.NumberDirX = (int)nudNumberDirY.Value;
+            Properties.Settings.Default.LayoutMode = rbLayoutMode1.Checked ? 0 : 1;
         }
         
         private void cbPlacement_SelectedIndexChanged(object sender, EventArgs e)
@@ -191,6 +214,20 @@ namespace Pic.Factory2D.Control
             lbRemainingLeftRight.Visible = cbRightLeft.SelectedIndex != 2;
             nudLeftRightRemaining.Visible = cbRightLeft.SelectedIndex != 2;
             lbmm4.Visible = cbRightLeft.SelectedIndex != 2;
+        }
+
+        private void rbLayoutMode_CheckedChanged(object sender, EventArgs e)
+        {
+            // controls first mode
+            lblCardboardFormat.Enabled = rbLayoutMode1.Checked;
+            cbCardboardFormat.Enabled = rbLayoutMode1.Checked;
+            bnEditCardboardFormats.Enabled = rbLayoutMode1.Checked;
+
+            // controls second mode
+            lbDirX.Enabled = rbLayoutMode2.Checked;
+            nudNumberDirX.Enabled = rbLayoutMode2.Checked;
+            lbDirY.Enabled = rbLayoutMode2.Checked;
+            nudNumberDirY.Enabled = rbLayoutMode2.Checked;
         }
         #endregion
     }

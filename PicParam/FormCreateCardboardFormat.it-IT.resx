@@ -369,4 +369,25 @@
 	<data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+	<data name="bnOk.Text" xml:space="preserve">
+		<value>OK</value>
+	</data>
+	<data name="bnCancel.Text" xml:space="preserve">
+		<value>Cancella</value>
+	</data>
+	<data name="label1.Text" xml:space="preserve">
+		<value>Nome </value>
+	</data>
+	<data name="label2.Text" xml:space="preserve">
+		<value>Descrizione</value>
+	</data>
+	<data name="label3.Text" xml:space="preserve">
+		<value>Larghezza</value>
+	</data>
+	<data name="label4.Text" xml:space="preserve">
+		<value>Altezza</value>
+	</data>
+	<data name="$this.Text" xml:space="preserve">
+		<value>Definisci nuovo formato cartone…</value>
+	</data>
 </root>

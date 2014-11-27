@@ -86,12 +86,12 @@ namespace Pic.Factory2D.Control.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("5")]
-        public decimal ImpositionSpaceBetween {
+        public decimal ImpositionSpaceX {
             get {
-                return ((decimal)(this["ImpositionSpaceBetween"]));
+                return ((decimal)(this["ImpositionSpaceX"]));
             }
             set {
-                this["ImpositionSpaceBetween"] = value;
+                this["ImpositionSpaceX"] = value;
             }
         }
         
@@ -181,18 +181,6 @@ namespace Pic.Factory2D.Control.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\wpicador\\Bin32\\Picador3D.exe")]
-        public string FileOutputAppPic3DDES {
-            get {
-                return ((string)(this["FileOutputAppPic3DDES"]));
-            }
-            set {
-                this["FileOutputAppPic3DDES"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("C:\\wpicador\\Bin32\\PDecoup.exe")]
         public string FileOutputAppPicDecoupeDES {
             get {
@@ -212,6 +200,66 @@ namespace Pic.Factory2D.Control.Properties {
             }
             set {
                 this["FileOutputAppPDF"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\wpicador\\Bin\\Picador3D.exe")]
+        public string FileOutputAppPic3DDES {
+            get {
+                return ((string)(this["FileOutputAppPic3DDES"]));
+            }
+            set {
+                this["FileOutputAppPic3DDES"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public decimal ImpositionSpaceY {
+            get {
+                return ((decimal)(this["ImpositionSpaceY"]));
+            }
+            set {
+                this["ImpositionSpaceY"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4")]
+        public int NumberDirX {
+            get {
+                return ((int)(this["NumberDirX"]));
+            }
+            set {
+                this["NumberDirX"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4")]
+        public int NumberDirY {
+            get {
+                return ((int)(this["NumberDirY"]));
+            }
+            set {
+                this["NumberDirY"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int LayoutMode {
+            get {
+                return ((int)(this["LayoutMode"]));
+            }
+            set {
+                this["LayoutMode"] = value;
             }
         }
     }

@@ -213,4 +213,97 @@
 	<data name="splash_zund" type="System.Resources.ResXFileRef, System.Windows.Forms">
 		<value>..\Resources\splash_zund.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
 	</data>
+	<data name="ID_ABOUT" xml:space="preserve">
+		<value>A proposito di {0}...</value>
+	</data>
+	<data name="ID_APPLICATIONEXITING" xml:space="preserve">
+		<value>{0} verrà terminata...</value>
+	</data>
+	<data name="ID_APPLICATIONMUSTRESTART" xml:space="preserve">
+		<value>{0} dovrà essere riavviato. Chiudere ora ...</value>
+	</data>
+	<data name="ID_CANCELTOOLONG" xml:space="preserve">
+		<value>Questo modello contiene più di {0} segmenti. L'elaborazione richiede troppo tempo. Per aumentare il numero massimo di segmenti, usare Strumenti&gt; Opzioni&gt; Opzioni di calcolo ...</value>
+	</data>
+	<data name="ID_CLEARDATABASEWARNING" xml:space="preserve">
+		<value>Stai per cancellare il contenuto del database. Sei sicuro?</value>
+	</data>
+	<data name="ID_DATABASENOTFOUND" xml:space="preserve">
+		<value>Il file del database non è stato trovato nel percorso seguente: {0} \ n Vuoi ripristinare un archivio di database?</value>
+	</data>
+	<data name="ID_DATABASEOVERWRITE" xml:space="preserve">
+		<value>I documenti che condividono la stessa posizione nella struttura rispetto a quelli disponibili nella libreria, verranno sovrascritti. \ N Alcune modifice andranno perse. Vuoi continuare?</value>
+	</data>
+	<data name="ID_EDITCOMPONENT" xml:space="preserve">
+		<value>Modifica componente {0}...</value>
+	</data>
+	<data name="ID_FILENOTFOUND_DEFAULTIMAGE" xml:space="preserve">
+		<value>Il file predefinito dell' immagine non è stato trovato nel percorso seguente: {0}</value>
+	</data>
+	<data name="ID_FILENOTFOUND_PDFTHUMBNAILIMAGE" xml:space="preserve">
+		<value>Il file PDF della miniatura dell'immagine non è stato trovato nel percorso seguente: {0}</value>
+	</data>
+	<data name="ID_INFO_RUNASADMIN" xml:space="preserve">
+		<value>Per eseguire questa operazione, l'applicazione deve essere eseguita come amministratore.</value>
+	</data>
+	<data name="ID_MERGEFAILURE" xml:space="preserve">
+		<value>Impossibile unire il database per il seguente motivo: {0}</value>
+	</data>
+	<data name="ID_RESTOREFAILURE" xml:space="preserve">
+		<value>Impossibile ripristinare il database per il seguente motivo: {0}</value>
+	</data>
+	<data name="ID_RESTOREWARNING" xml:space="preserve">
+		<value>Si prega di fare attenzione perchè questa operazione sovrascrive il database corrente. Vuoi continuare?</value>
+	</data>
+	<data name="ID_TREEMENUBACKUP" xml:space="preserve">
+		<value>Backup cartella {0}</value>
+	</data>
+	<data name="ID_TREEMENUCOPY" xml:space="preserve">
+		<value>Duplica documento</value>
+	</data>
+	<data name="ID_TREEMENUDELETE" xml:space="preserve">
+		<value>Elimina</value>
+	</data>
+	<data name="ID_TREEMENUNEWBRANCH" xml:space="preserve">
+		<value>Nuova cartella…</value>
+	</data>
+	<data name="ID_TREEMENUNEWDOCUMENT" xml:space="preserve">
+		<value>Nuovo documento…</value>
+	</data>
+	<data name="ID_TREEMENURENAME" xml:space="preserve">
+		<value>Rinomina…</value>
+	</data>
+	<data name="ID_TREEMENUSELECTINEXPLORER" xml:space="preserve">
+		<value>Aprire la cartella contenente</value>
+	</data>
+	<data name="ID_TREEMENUSENDPATHTOCLIPBOARD" xml:space="preserve">
+		<value>Invia il percorso attuale del documento negli appunti</value>
+	</data>
+	<data name="ID_TREEMENUSETNEWGUID" xml:space="preserve">
+		<value>Impostare un nuovo GUID per il componente ...</value>
+	</data>
+	<data name="ID_TREENODEDOWNLOAD" xml:space="preserve">
+		<value>Download</value>
+	</data>
+	<data name="ID_TREENODEROOT" xml:space="preserve">
+		<value>Inizio</value>
+	</data>
+	<data name="ID_TREENODESTARTPAGE" xml:space="preserve">
+		<value>Pagina iniziale</value>
+	</data>
+	<data name="ID_TREEWARNING_CANNOTMOVENODE" xml:space="preserve">
+		<value>Node {0} can not be moved under node {1} as this last one is a child.  </value>
+	</data>
+	<data name="ID_TREEWARNING_DELETEBRANCH" xml:space="preserve">
+		<value>Elimina cartella {0}?</value>
+	</data>
+	<data name="ID_TREEWARNING_DELETEDOCUMENT" xml:space="preserve">
+		<value>Elimina documento {0}?</value>
+	</data>
+	<data name="ID_TREEWARNING_MOVENODE" xml:space="preserve">
+		<value>Sei sicuro di voler spostare il nodo "{0}" nel nodo "{1}"?</value>
+	</data>
+	<data name="ID_VERSION" xml:space="preserve">
+		<value>Versione {0}</value>
+	</data>
 </root>

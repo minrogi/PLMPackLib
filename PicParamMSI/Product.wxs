@@ -48,6 +48,7 @@
         </Directory>
       </Directory>
     </Directory>
+    <!-- Features -->
     <Feature Id="PLMPackLib" Title="PLMPackLib" Level="1" Absent="disallow" Display="expand" ConfigurableDirectory="INSTALLLOCATION">
       <MergeRef Id="PLMPackLibMSM" Primary="yes" />
       <MergeRef Id="StackBuilderGUIExtMSM" Primary="yes" />
@@ -58,10 +59,9 @@
     <Property Id="INSTALLDESKTOPSHORTCUT" Value="1" />
     <Property Id="WIXUI_INSTALLDIR" Value="INSTALLLOCATION" />
     <Property Id="ALLUSERS" Value="1" />
-
     <Property Id="URIPLMPACKLIB.PLMPackLibMSM" Value="http://www.plmpack.com/packlib/"/>
     <Property Id="STARTPAGEURL.PLMPackLibMSM" Value="http://www.plmpack.com/packlib/packlib_start_page.htm"/>
-
+    <!-- UI -->
     <UI>
       <!-- Add UI to the installer -->
       <UIRef Id="WixUI_InstallDir" />
@@ -77,14 +77,6 @@
     <!--Include 'Start' custom action-->
     <Property Id="WixShellExecTarget" Value="[#PLMPackLib.exe]" />
     <CustomAction Id="LaunchApplication" BinaryKey="WixCA" DllEntry="WixShellExec" Impersonate="yes" />
-    <!-- Prevent downgrade custom action -->
-    <CustomAction Id="NoDownGrade" Error="A later version of [ProductName] is already installed." />
-    <!-- Install execute sequence -->
-    <InstallExecuteSequence>
-      <LaunchConditions After="AppSearch" />
-      <Custom Action="NoDownGrade" After="FindRelatedProducts"><![CDATA[PROJECT_DOWNGRADE]]></Custom>
-    </InstallExecuteSequence>
-    <!-- Install execute sequence -->
     <!--Icon-->
     <Icon Id="PLMPackLib.ico" SourceFile="..\PicParam\Resources\PLMPackLib.ico" />
     <Property Id="ARPPRODUCTICON" Value="PLMPackLib.ico" />

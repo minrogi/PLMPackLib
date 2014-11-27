@@ -303,4 +303,22 @@
 	<data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+	<data name="label_fileFormat.Text" xml:space="preserve">
+		<value>Formato file</value>
+	</data>
+	<data name="bnOk.Text" xml:space="preserve">
+		<value>OK</value>
+	</data>
+	<data name="bnCancel.Text" xml:space="preserve">
+		<value>Cancella</value>
+	</data>
+	<data name="label_filePath.Text" xml:space="preserve">
+		<value>Percorso file</value>
+	</data>
+	<data name="checkBox_openFile.Text" xml:space="preserve">
+		<value>Aprire file generato…</value>
+	</data>
+	<data name="$this.Text" xml:space="preserve">
+		<value>Seleziona il formato e il percorso del file d'esportazione</value>
+	</data>
 </root>

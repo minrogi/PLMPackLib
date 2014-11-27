@@ -251,9 +251,16 @@ namespace Pic.Factory2D.Control
                 if (_reflectionY) _factory.ProcessVisitor(new PicVisitorTransform(Transform2D.ReflectionY));
 
                 // build imposition solutions
-                _impositionTool = new ImpositionTool(_factory);
+                if (formSettings.Mode == 0)
+                {
+                    _impositionTool = new ImpositionToolCardboardFormat(_factory, formSettings.CardboardFormat);
+                }
+                else
+                {
+                    _impositionTool = new ImpositionToolXY(_factory, formSettings.NumberDirX, formSettings.NumberDirY);
+                }
                 // -> margins
-                _impositionTool.SpaceBetween = new Vector2D(formSettings.ImpSpaceBetween, formSettings.ImpSpaceBetween);
+                _impositionTool.SpaceBetween = new Vector2D(formSettings.ImpSpaceX, formSettings.ImpSpaceX);
                 _impositionTool.Margin = new Vector2D(formSettings.ImpMarginLeftRight, formSettings.ImpMarginBottomTop);
                 _impositionTool.MinMargin = new Vector2D(formSettings.ImpRemainingMarginLeftRight, formSettings.ImpRemainingMarginBottomTop);
                 _impositionTool.HorizontalAlignment = formSettings.HorizontalAlignment;
@@ -263,8 +270,6 @@ namespace Pic.Factory2D.Control
                 _impositionTool.AllowRotationInRowDirection = formSettings.AllowRowRotation;
                 // -> offset
                 _impositionTool.ImpositionOffset = Vector2D.Zero;
-                // -> cardboard
-                _impositionTool.CardboardFormat = formSettings.CardboardFormat;
 
                 try
                 {

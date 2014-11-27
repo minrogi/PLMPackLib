@@ -1147,4 +1147,58 @@
 	<metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
 		<value>ja-JP</value>
 	</metadata>
+	<data name="CatHeader.Text" xml:space="preserve">
+		<value>Categorie:</value>
+	</data>
+	<data name="CatDescr.AccessibleDescription" xml:space="preserve">
+		<value>Questa casella mostra una descrizione per ogni categoria nella struttura.</value>
+	</data>
+	<data name="CatHeader.AccessibleDescription" xml:space="preserve">
+		<value>Categorie albero d'intestazione.</value>
+	</data>
+	<data name="AppRestartLabel.AccessibleDescription" xml:space="preserve">
+		<value>Questa casella indica che l'applicazione deve essere riavviata affinché le modifiche abbiano effetto.</value>
+	</data>
+	<data name="OKBtn.Text" xml:space="preserve">
+		<value>&amp;OK</value>
+	</data>
+	<data name="CancelBtn.AccessibleDescription" xml:space="preserve">
+		<value>Annulla le modifiche e chiudi le opzioni del modulo.</value>
+	</data>
+	<data name="OptionsPanelPath.Text" xml:space="preserve">
+		<value>Opzioni » Percorso</value>
+	</data>
+	<data name="CatTree.AccessibleDescription" xml:space="preserve">
+		<value>Categorie d'opzioni.</value>
+	</data>
+	<data name="CatDescr.Text" xml:space="preserve">
+		<value>Descrizione.</value>
+	</data>
+	<data name="OptionsPanelPath.AccessibleDescription" xml:space="preserve">
+		<value>Questa casella mostra il percorso delle opzioni nel pannello corrente delle opzioni.</value>
+	</data>
+	<data name="OptionDescrLabel.AccessibleDescription" xml:space="preserve">
+		<value>Questa casella mostra una breve descrizione per ogni controllo.</value>
+	</data>
+	<data name="ApplyBtn.Text" xml:space="preserve">
+		<value>&amp;Applica</value>
+	</data>
+	<data name="$this.Text" xml:space="preserve">
+		<value>Opzioni</value>
+	</data>
+	<data name="CancelBtn.Text" xml:space="preserve">
+		<value>&amp;Cancella</value>
+	</data>
+	<data name="OptionDescrLabel.Text" xml:space="preserve">
+		<value>Descrizione.</value>
+	</data>
+	<data name="ApplyBtn.AccessibleDescription" xml:space="preserve">
+		<value>Applica le modifiche.</value>
+	</data>
+	<data name="AppRestartLabel.Text" xml:space="preserve">
+		<value>L'applicazione deve essere riavviata per applicare le modifiche.</value>
+	</data>
+	<data name="OKBtn.AccessibleDescription" xml:space="preserve">
+		<value>Applica le modifiche e chiudi il modulo opzioni.</value>
+	</data>
 </root>

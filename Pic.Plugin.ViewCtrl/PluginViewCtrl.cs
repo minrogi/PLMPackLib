@@ -246,11 +246,14 @@ namespace Pic.Plugin.ViewCtrl
                     if (_reflectionX) factory.ProcessVisitor(new PicVisitorTransform(Transform2D.ReflectionX));
                     if (_reflectionY) factory.ProcessVisitor(new PicVisitorTransform(Transform2D.ReflectionY));
                     // build imposition solutions
-                    _impositionTool = new ImpositionTool(factory);
+                    if (formSettings.Mode == 0)
+                        _impositionTool = new ImpositionToolCardboardFormat(factory, formSettings.CardboardFormat);
+                    else
+                        _impositionTool = new ImpositionToolXY(factory, formSettings.NumberDirX, formSettings.NumberDirY);
                     // -> margins
                     _impositionTool.HorizontalAlignment = formSettings.HorizontalAlignment;
                     _impositionTool.VerticalAlignment = formSettings.VerticalAlignment;
-                    _impositionTool.SpaceBetween = new Vector2D(formSettings.ImpSpaceBetween, formSettings.ImpSpaceBetween);
+                    _impositionTool.SpaceBetween = new Vector2D(formSettings.ImpSpaceX, formSettings.ImpSpaceY);
                     _impositionTool.Margin = new Vector2D(formSettings.ImpMarginLeftRight, formSettings.ImpMarginBottomTop);
                     _impositionTool.MinMargin = new Vector2D(formSettings.ImpRemainingMarginLeftRight, formSettings.ImpRemainingMarginBottomTop);
                     // -> allowed patterns
@@ -258,8 +261,6 @@ namespace Pic.Plugin.ViewCtrl
                     _impositionTool.AllowRotationInRowDirection = formSettings.AllowRowRotation;
                     // -> offsets
                     _impositionTool.ImpositionOffset = new Vector2D(formSettings.OffsetX, formSettings.OffsetY);
-                    // -> cardboard format
-                    _impositionTool.CardboardFormat = formSettings.CardboardFormat;
                     // instantiate ProgressWindow and launch process
                     ProgressWindow progress = new ProgressWindow();
                     System.Threading.ThreadPool.QueueUserWorkItem(new System.Threading.WaitCallback(GenerateImpositionSolutions), progress);

@@ -44,11 +44,8 @@
             this.tabAllowedPatterns = new System.Windows.Forms.TabPage();
             this.tabOffsets = new System.Windows.Forms.TabPage();
             this.tabMargins = new System.Windows.Forms.TabPage();
-            this.lbmm5 = new System.Windows.Forms.Label();
             this.lbmm3 = new System.Windows.Forms.Label();
             this.lbmm1 = new System.Windows.Forms.Label();
-            this.nudSpaceBetween = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
             this.lbmm4 = new System.Windows.Forms.Label();
             this.lbmm2 = new System.Windows.Forms.Label();
             this.nudLeftRightMargin = new System.Windows.Forms.NumericUpDown();
@@ -61,17 +58,35 @@
             this.nudTopBottomMargin = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.cbTopBottom = new System.Windows.Forms.ComboBox();
+            this.rbLayoutMode1 = new System.Windows.Forms.RadioButton();
+            this.rbLayoutMode2 = new System.Windows.Forms.RadioButton();
+            this.lbDirX = new System.Windows.Forms.Label();
+            this.nudNumberDirX = new System.Windows.Forms.NumericUpDown();
+            this.lbDirY = new System.Windows.Forms.Label();
+            this.nudNumberDirY = new System.Windows.Forms.NumericUpDown();
+            this.tabSpacing = new System.Windows.Forms.TabPage();
+            this.lbmm6 = new System.Windows.Forms.Label();
+            this.nudSpaceY = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbmm5 = new System.Windows.Forms.Label();
+            this.nudSpaceX = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudOffsetY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudOffsetX)).BeginInit();
             this.tabControl.SuspendLayout();
             this.tabAllowedPatterns.SuspendLayout();
             this.tabOffsets.SuspendLayout();
             this.tabMargins.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSpaceBetween)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLeftRightMargin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTopBottomRemaining)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLeftRightRemaining)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTopBottomMargin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumberDirX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumberDirY)).BeginInit();
+            this.tabSpacing.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSpaceY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSpaceX)).BeginInit();
             this.SuspendLayout();
             // 
             // bnOk
@@ -171,6 +186,7 @@
             this.tabControl.Controls.Add(this.tabAllowedPatterns);
             this.tabControl.Controls.Add(this.tabOffsets);
             this.tabControl.Controls.Add(this.tabMargins);
+            this.tabControl.Controls.Add(this.tabSpacing);
             resources.ApplyResources(this.tabControl, "tabControl");
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -195,11 +211,8 @@
             // 
             // tabMargins
             // 
-            this.tabMargins.Controls.Add(this.lbmm5);
             this.tabMargins.Controls.Add(this.lbmm3);
             this.tabMargins.Controls.Add(this.lbmm1);
-            this.tabMargins.Controls.Add(this.nudSpaceBetween);
-            this.tabMargins.Controls.Add(this.label9);
             this.tabMargins.Controls.Add(this.lbmm4);
             this.tabMargins.Controls.Add(this.lbmm2);
             this.tabMargins.Controls.Add(this.nudLeftRightMargin);
@@ -216,11 +229,6 @@
             this.tabMargins.Name = "tabMargins";
             this.tabMargins.UseVisualStyleBackColor = true;
             // 
-            // lbmm5
-            // 
-            resources.ApplyResources(this.lbmm5, "lbmm5");
-            this.lbmm5.Name = "lbmm5";
-            // 
             // lbmm3
             // 
             resources.ApplyResources(this.lbmm3, "lbmm3");
@@ -230,22 +238,6 @@
             // 
             resources.ApplyResources(this.lbmm1, "lbmm1");
             this.lbmm1.Name = "lbmm1";
-            // 
-            // nudSpaceBetween
-            // 
-            this.nudSpaceBetween.DecimalPlaces = 1;
-            resources.ApplyResources(this.nudSpaceBetween, "nudSpaceBetween");
-            this.nudSpaceBetween.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.nudSpaceBetween.Name = "nudSpaceBetween";
-            // 
-            // label9
-            // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
             // 
             // lbmm4
             // 
@@ -345,12 +337,114 @@
             this.cbTopBottom.Name = "cbTopBottom";
             this.cbTopBottom.SelectedIndexChanged += new System.EventHandler(this.cbPlacement_SelectedIndexChanged);
             // 
+            // rbLayoutMode1
+            // 
+            resources.ApplyResources(this.rbLayoutMode1, "rbLayoutMode1");
+            this.rbLayoutMode1.Name = "rbLayoutMode1";
+            this.rbLayoutMode1.TabStop = true;
+            this.rbLayoutMode1.UseVisualStyleBackColor = true;
+            this.rbLayoutMode1.CheckedChanged += new System.EventHandler(this.rbLayoutMode_CheckedChanged);
+            // 
+            // rbLayoutMode2
+            // 
+            resources.ApplyResources(this.rbLayoutMode2, "rbLayoutMode2");
+            this.rbLayoutMode2.Name = "rbLayoutMode2";
+            this.rbLayoutMode2.TabStop = true;
+            this.rbLayoutMode2.UseVisualStyleBackColor = true;
+            this.rbLayoutMode2.CheckedChanged += new System.EventHandler(this.rbLayoutMode_CheckedChanged);
+            // 
+            // lbDirX
+            // 
+            resources.ApplyResources(this.lbDirX, "lbDirX");
+            this.lbDirX.Name = "lbDirX";
+            // 
+            // nudNumberDirX
+            // 
+            resources.ApplyResources(this.nudNumberDirX, "nudNumberDirX");
+            this.nudNumberDirX.Name = "nudNumberDirX";
+            // 
+            // lbDirY
+            // 
+            resources.ApplyResources(this.lbDirY, "lbDirY");
+            this.lbDirY.Name = "lbDirY";
+            // 
+            // nudNumberDirY
+            // 
+            resources.ApplyResources(this.nudNumberDirY, "nudNumberDirY");
+            this.nudNumberDirY.Name = "nudNumberDirY";
+            // 
+            // tabSpacing
+            // 
+            this.tabSpacing.Controls.Add(this.lbmm6);
+            this.tabSpacing.Controls.Add(this.nudSpaceY);
+            this.tabSpacing.Controls.Add(this.label3);
+            this.tabSpacing.Controls.Add(this.label1);
+            this.tabSpacing.Controls.Add(this.lbmm5);
+            this.tabSpacing.Controls.Add(this.nudSpaceX);
+            this.tabSpacing.Controls.Add(this.label9);
+            resources.ApplyResources(this.tabSpacing, "tabSpacing");
+            this.tabSpacing.Name = "tabSpacing";
+            this.tabSpacing.UseVisualStyleBackColor = true;
+            // 
+            // lbmm6
+            // 
+            resources.ApplyResources(this.lbmm6, "lbmm6");
+            this.lbmm6.Name = "lbmm6";
+            // 
+            // nudSpaceY
+            // 
+            this.nudSpaceY.DecimalPlaces = 1;
+            resources.ApplyResources(this.nudSpaceY, "nudSpaceY");
+            this.nudSpaceY.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudSpaceY.Name = "nudSpaceY";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // lbmm5
+            // 
+            resources.ApplyResources(this.lbmm5, "lbmm5");
+            this.lbmm5.Name = "lbmm5";
+            // 
+            // nudSpaceX
+            // 
+            this.nudSpaceX.DecimalPlaces = 1;
+            resources.ApplyResources(this.nudSpaceX, "nudSpaceX");
+            this.nudSpaceX.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudSpaceX.Name = "nudSpaceX";
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
+            // 
             // FormImpositionSettings
             // 
             this.AcceptButton = this.bnOk;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.bnCancel;
+            this.Controls.Add(this.nudNumberDirY);
+            this.Controls.Add(this.lbDirY);
+            this.Controls.Add(this.nudNumberDirX);
+            this.Controls.Add(this.lbDirX);
+            this.Controls.Add(this.rbLayoutMode2);
+            this.Controls.Add(this.rbLayoutMode1);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.bnEditCardboardFormats);
             this.Controls.Add(this.cbCardboardFormat);
@@ -373,11 +467,16 @@
             this.tabOffsets.PerformLayout();
             this.tabMargins.ResumeLayout(false);
             this.tabMargins.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSpaceBetween)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLeftRightMargin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTopBottomRemaining)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLeftRightRemaining)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTopBottomMargin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumberDirX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumberDirY)).EndInit();
+            this.tabSpacing.ResumeLayout(false);
+            this.tabSpacing.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSpaceY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSpaceX)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -412,10 +511,21 @@
         private System.Windows.Forms.NumericUpDown nudTopBottomMargin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbTopBottom;
-        private System.Windows.Forms.NumericUpDown nudSpaceBetween;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lbmm3;
         private System.Windows.Forms.Label lbmm1;
+        private System.Windows.Forms.RadioButton rbLayoutMode1;
+        private System.Windows.Forms.RadioButton rbLayoutMode2;
+        private System.Windows.Forms.Label lbDirX;
+        private System.Windows.Forms.NumericUpDown nudNumberDirX;
+        private System.Windows.Forms.Label lbDirY;
+        private System.Windows.Forms.NumericUpDown nudNumberDirY;
+        private System.Windows.Forms.TabPage tabSpacing;
+        private System.Windows.Forms.Label lbmm6;
+        private System.Windows.Forms.NumericUpDown nudSpaceY;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbmm5;
+        private System.Windows.Forms.NumericUpDown nudSpaceX;
+        private System.Windows.Forms.Label label9;
     }
 }

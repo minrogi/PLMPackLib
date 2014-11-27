@@ -112,15 +112,15 @@
 		<value>2.0</value>
 	</resheader>
 	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<data name="bnCancel.Text" xml:space="preserve">
     <value>&amp;Annuler</value>
   </data>
-	<assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
 	<data name="cbAllowRowRotation.Location" type="System.Drawing.Point, System.Drawing">
 		<value>7, 19</value>
 	</data>
@@ -145,15 +145,18 @@
 	<data name="lblCardboardFormat.Text" xml:space="preserve">
     <value>Format carton</value>
   </data>
+	<data name="cbCardboardFormat.Location" type="System.Drawing.Point, System.Drawing">
+		<value>127, 83</value>
+	</data>
+	<data name="cbCardboardFormat.Size" type="System.Drawing.Size, System.Drawing">
+		<value>313, 21</value>
+	</data>
 	<data name="bnEditCardboardFormats.Location" type="System.Drawing.Point, System.Drawing">
-		<value>210, 33</value>
+		<value>445, 82</value>
 	</data>
 	<data name="bnEditCardboardFormats.Size" type="System.Drawing.Size, System.Drawing">
-		<value>200, 23</value>
+		<value>76, 23</value>
 	</data>
-	<data name="bnEditCardboardFormats.Text" xml:space="preserve">
-    <value>&amp;Editer les formats de carton...</value>
-  </data>
 	<data name="nudOffsetY.Location" type="System.Drawing.Point, System.Drawing">
 		<value>77, 39</value>
 	</data>
@@ -166,85 +169,100 @@
 	<data name="lbOffsetY.Location" type="System.Drawing.Point, System.Drawing">
 		<value>9, 42</value>
 	</data>
+	<data name="lbOffsetY.Text" xml:space="preserve">
+    <value>Offset X</value>
+  </data>
 	<data name="lbOffsetX.Location" type="System.Drawing.Point, System.Drawing">
 		<value>9, 19</value>
 	</data>
+	<data name="lbOffsetX.Text" xml:space="preserve">
+    <value>Offset Y</value>
+  </data>
 	<data name="tabAllowedPatterns.Text" xml:space="preserve">
     <value>Placements autorisés</value>
   </data>
 	<data name="tabMargins.Text" xml:space="preserve">
     <value>Marges</value>
   </data>
-	<data name="nudMinDistance.Location" type="System.Drawing.Point, System.Drawing">
-		<value>194, 134</value>
-	</data>
-	<data name="nudMinDistance.Size" type="System.Drawing.Size, System.Drawing">
-		<value>68, 20</value>
-	</data>
-	<data name="nudMinDistance.TabIndex" type="System.Int32, mscorlib">
-		<value>15</value>
-	</data>
-	<data name="&gt;&gt;nudMinDistance.Name" xml:space="preserve">
-    <value>nudMinDistance</value>
-  </data>
 	<data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-		<value>70, 13</value>
+		<value>96, 13</value>
 	</data>
 	<data name="label9.Text" xml:space="preserve">
-    <value>Espace entre</value>
+    <value>Espace entre pose</value>
   </data>
-	<data name="labelLeastMarginRightLeft.Location" type="System.Drawing.Point, System.Drawing">
-		<value>266, 104</value>
+	<data name="lbRemainingLeftRight.Size" type="System.Drawing.Size, System.Drawing">
+		<value>109, 13</value>
 	</data>
-	<data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-		<value>100, 44</value>
+	<data name="lbRemainingLeftRight.Text" xml:space="preserve">
+    <value>Marge droite minimale</value>
+  </data>
+	<data name="lbRemainingBottomTop.Size" type="System.Drawing.Size, System.Drawing">
+		<value>110, 13</value>
 	</data>
-	<data name="nudLeftRightRemaining.Size" type="System.Drawing.Size, System.Drawing">
-		<value>68, 20</value>
+	<data name="lbRemainingBottomTop.Text" xml:space="preserve">
+    <value>Marge minimale haute</value>
+  </data>
+	<data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+		<value>36, 13</value>
+	</data>
+	<data name="label4.Text" xml:space="preserve">
+    <value>marge</value>
+  </data>
+	<data name="cbRightLeft.Items" xml:space="preserve">
+    <value>Gauche</value>
+  </data>
+	<data name="cbRightLeft.Items1" xml:space="preserve">
+    <value>Droite</value>
+  </data>
+	<data name="cbRightLeft.Items2" xml:space="preserve">
+    <value>Distribué</value>
+  </data>
+	<data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+		<value>36, 13</value>
+	</data>
+	<data name="label2.Text" xml:space="preserve">
+    <value>marge</value>
+  </data>
+	<data name="cbTopBottom.Items" xml:space="preserve">
+    <value>Bas</value>
+  </data>
+	<data name="cbTopBottom.Items1" xml:space="preserve">
+    <value>Haut</value>
+  </data>
+	<data name="cbTopBottom.Items2" xml:space="preserve">
+    <value>Distribué</value>
+  </data>
+	<data name="rbLayoutMode1.Size" type="System.Drawing.Size, System.Drawing">
+		<value>160, 17</value>
+	</data>
+	<data name="rbLayoutMode1.Text" xml:space="preserve">
+    <value>Sélectionner le format carton</value>
+  </data>
+	<data name="rbLayoutMode2.Size" type="System.Drawing.Size, System.Drawing">
+		<value>215, 17</value>
+	</data>
+	<data name="rbLayoutMode2.Text" xml:space="preserve">
+    <value>Nombre de pose dans la direction X et Y</value>
+  </data>
+	<data name="lbDirX.Size" type="System.Drawing.Size, System.Drawing">
+		<value>97, 13</value>
+	</data>
+	<data name="lbDirX.Text" xml:space="preserve">
+    <value>Nombre direction X</value>
+  </data>
+	<data name="nudNumberDirX.Location" type="System.Drawing.Point, System.Drawing">
+		<value>127, 136</value>
+	</data>
+	<data name="lbDirY.Size" type="System.Drawing.Size, System.Drawing">
+		<value>97, 13</value>
+	</data>
+	<data name="lbDirY.Text" xml:space="preserve">
+    <value>Nombre direction Y</value>
+  </data>
+	<data name="nudNumberDirY.Location" type="System.Drawing.Point, System.Drawing">
+		<value>127, 163</value>
 	</data>
 	<data name="$this.Text" xml:space="preserve">
     <value>Paramètres d'imposition...</value>
   </data>
-	<data name="lbRemainingLeftRight.Text" xml:space="preserve">
-		<value>Marge droite minimale</value>
-	</data>
-	<data name="lbRemainingBottomTop.Text" xml:space="preserve">
-		<value>Marge minimale haute</value>
-	</data>
-	<data name="label4.Text" xml:space="preserve">
-		<value>marge</value>
-	</data>
-	<data name="cbRightLeft.Items" xml:space="preserve">
-		<value>Gauche</value>
-	</data>
-	<data name="cbRightLeft.Items1" xml:space="preserve">
-		<value>Droite</value>
-	</data>
-	<data name="cbRightLeft.Items2" xml:space="preserve">
-		<value>Distribué</value>
-	</data>
-	<data name="label2.Text" xml:space="preserve">
-		<value>marge</value>
-	</data>
-	<data name="cbTopBottom.Items" xml:space="preserve">
-		<value>Bas</value>
-	</data>
-	<data name="cbTopBottom.Items1" xml:space="preserve">
-		<value>Haut</value>
-	</data>
-	<data name="cbTopBottom.Items2" xml:space="preserve">
-		<value>Distribué</value>
-	</data>
-	<data name="bnOk.Text" xml:space="preserve">
-		<value>&amp;OK</value>
-	</data>
-	<data name="lbOffsetY.Text" xml:space="preserve">
-		<value>Offset X</value>
-	</data>
-	<data name="lbOffsetX.Text" xml:space="preserve">
-		<value>Offset Y</value>
-	</data>
-	<data name="tabOffsets.Text" xml:space="preserve">
-		<value>Offsets</value>
-	</data>
 </root>

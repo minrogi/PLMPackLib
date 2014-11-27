@@ -279,4 +279,28 @@
 	<metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
 		<value>True</value>
 	</metadata>
+	<data name="colThickness.Text" xml:space="preserve">
+		<value>Spessore</value>
+	</data>
+	<data name="bnModify.Text" xml:space="preserve">
+		<value>Modifica </value>
+	</data>
+	<data name="btCreate.Text" xml:space="preserve">
+		<value>Crea nuovo profilo</value>
+	</data>
+	<data name="btClose.Text" xml:space="preserve">
+		<value>Chiudi</value>
+	</data>
+	<data name="colName.Text" xml:space="preserve">
+		<value>Nome </value>
+	</data>
+	<data name="btDelete.Text" xml:space="preserve">
+		<value>Elimina</value>
+	</data>
+	<data name="colCode.Text" xml:space="preserve">
+		<value>Codice</value>
+	</data>
+	<data name="$this.Text" xml:space="preserve">
+		<value>Modifica profili…</value>
+	</data>
 </root>

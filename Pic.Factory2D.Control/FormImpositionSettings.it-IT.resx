@@ -876,4 +876,88 @@
 	<data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+	<data name="bnOk.Text" xml:space="preserve">
+		<value>&amp;OK</value>
+	</data>
+	<data name="bnCancel.Text" xml:space="preserve">
+		<value>&amp;Cancella</value>
+	</data>
+	<data name="cbAllowRowRotation.Text" xml:space="preserve">
+		<value>Consenti rotazione riga</value>
+	</data>
+	<data name="cbAllowColumnRotation.Text" xml:space="preserve">
+		<value>Consenti rotazione colonnna</value>
+	</data>
+	<data name="lblCardboardFormat.Text" xml:space="preserve">
+		<value>Formato cartone</value>
+	</data>
+	<data name="lbOffsetY.Text" xml:space="preserve">
+		<value>Offset Y</value>
+	</data>
+	<data name="lbOffsetX.Text" xml:space="preserve">
+		<value>Offset X</value>
+	</data>
+	<data name="tabAllowedPatterns.Text" xml:space="preserve">
+		<value>Consenti patterns</value>
+	</data>
+	<data name="tabOffsets.Text" xml:space="preserve">
+		<value>Offsets</value>
+	</data>
+	<data name="lbmm3.Text" xml:space="preserve">
+		<value>mm</value>
+	</data>
+	<data name="lbmm1.Text" xml:space="preserve">
+		<value>mm</value>
+	</data>
+	<data name="lbmm4.Text" xml:space="preserve">
+		<value>mm</value>
+	</data>
+	<data name="lbmm2.Text" xml:space="preserve">
+		<value>mm</value>
+	</data>
+	<data name="lbRemainingLeftRight.Text" xml:space="preserve">
+		<value>Margine minimo di destra</value>
+	</data>
+	<data name="lbRemainingBottomTop.Text" xml:space="preserve">
+		<value>Margine minimo superiore</value>
+	</data>
+	<data name="label4.Text" xml:space="preserve">
+		<value>Margine</value>
+	</data>
+	<data name="cbRightLeft.Items" xml:space="preserve">
+		<value>Sinistra</value>
+	</data>
+	<data name="cbRightLeft.Items1" xml:space="preserve">
+		<value>Destra</value>
+	</data>
+	<data name="cbRightLeft.Items2" xml:space="preserve">
+		<value>Distribuito</value>
+	</data>
+	<data name="label2.Text" xml:space="preserve">
+		<value>Margine</value>
+	</data>
+	<data name="cbTopBottom.Items" xml:space="preserve">
+		<value>Parte inferiore</value>
+	</data>
+	<data name="cbTopBottom.Items1" xml:space="preserve">
+		<value>Parte superiore</value>
+	</data>
+	<data name="cbTopBottom.Items2" xml:space="preserve">
+		<value>Distribuito</value>
+	</data>
+	<data name="tabMargins.Text" xml:space="preserve">
+		<value>Margini</value>
+	</data>
+	<data name="lbmm6.Text" xml:space="preserve">
+		<value>mm</value>
+	</data>
+	<data name="lbmm5.Text" xml:space="preserve">
+		<value>mm</value>
+	</data>
+	<data name="label9.Text" xml:space="preserve">
+		<value>Spazio tra i tagli</value>
+	</data>
+	<data name="$this.Text" xml:space="preserve">
+		<value>Impostazioni d'imposizione…</value>
+	</data>
 </root>

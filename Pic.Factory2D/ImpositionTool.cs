@@ -43,14 +43,26 @@ namespace Pic.Factory2D
     internal abstract class ImpositionPattern
     {
         #region Data members
-        protected BPosition[,] _relativePositions;
-        protected Box2D[,] _bboxes;
+        public BPosition[,] _relativePositions;
+        public Box2D[,] _bboxes;
         protected Vector2D _patternStep;
         protected static readonly ILog _log = LogManager.GetLogger(typeof(ImpositionPattern));
+        protected static double EPSILON = 0.0001;
         #endregion
 
         #region Abstract methods
         abstract public void GeneratePattern(IEntityContainer container, Vector2D minDistance, Vector2D impositionOffset, bool ortho);
+        public Box2D BBox
+        {
+            get
+            {
+                Box2D boxGlobal = new Box2D();
+                for (int i = 0; i < NoRows; ++i)
+                    for (int j = 0; j < NoCols; ++j)
+                        boxGlobal.Extend(_bboxes[i, j]);
+                return boxGlobal;
+            }
+        }
         #endregion
 
         #region Abstract properties
@@ -62,118 +74,6 @@ namespace Pic.Factory2D
         #endregion
 
         #region Public methods
-        public ImpositionSolution GenerateSolution(ImpositionTool impositionTool
-            , IEntityContainer container, CardboardFormat format
-            , Vector2D margin, Vector2D minMargin, Vector2D spaceBetween
-            , Vector2D impositionOffset, bool ortho)
-        {
-            // generate pattern
-            try
-            {
-                double minSpacing = 0.0001;
-                Vector2D spacing = new Vector2D(
-                    impositionTool.SpaceBetween.X > minSpacing ? impositionTool.SpaceBetween.X : minSpacing
-                    , impositionTool.SpaceBetween.Y > minSpacing ? impositionTool.SpaceBetween.Y : minSpacing
-                    );
-                GeneratePattern(impositionTool.InitialEntities, spacing, impositionTool.ImpositionOffset, ortho);
-            }
-            catch (Exception ex)
-            {
-                _log.Error(ex.Message);
-                return null;
-            }
-            // instantiate solution
-            ImpositionSolution solution = new ImpositionSolution(impositionTool.InitialEntities, Name, RequiresRotationInRows, RequiresRotationInColumns);
-
-            // pattern global box
-            Box2D boxGlobal = new Box2D();
-            for (int i = 0; i < NoRows; ++i)
-                for (int j = 0; j < NoCols; ++j)
-                    boxGlobal.Extend(_bboxes[i, j]);
-
-            // compute max number of patterns
-            // in X direction
-            int noPatternX = (int)Math.Floor((impositionTool.UsableFormat.Width - boxGlobal.Width) / _patternStep.X) + 1;
-            // in Y direction
-            int noPatternY = (int)Math.Floor((impositionTool.UsableFormat.Height - boxGlobal.Height) / _patternStep.Y) + 1;
-
-            int[,] rowNumber = new int[NoRows, NoCols];
-            int[,] colNumber = new int[NoRows, NoCols];
-
-            int iMax = -1, jMax = -1;
-            for (int i = 0; i < NoRows; ++i)
-                for (int j=0; j < NoCols; ++j)
-                {
-                    if (_bboxes[i, j].XMax + noPatternX * _patternStep.X - boxGlobal.XMin < impositionTool.UsableFormat.Width)
-                    {
-                        rowNumber[i, j] = noPatternX + 1;
-                        iMax = i;
-                    }
-                    else
-                        rowNumber[i, j] = noPatternX;
-
-                    if (_bboxes[i, j].YMax + noPatternY * _patternStep.Y - boxGlobal.YMin < impositionTool.UsableFormat.Height)
-                    {
-                        colNumber[i, j] = noPatternY + 1;
-                        jMax = j;
-                    }
-                    else
-                        colNumber[i, j] = noPatternY;
-                }
-            
-            
-            // compute actual margin
-            double xMax = double.MinValue;
-            double yMax = double.MinValue;
-            for (int i=0; i<NoRows; ++i)
-                for (int j = 0; j < NoCols; ++j)
-                {
-                    xMax = Math.Max(xMax, _bboxes[i, j].XMax + (rowNumber[i, j] - 1) * _patternStep.X);
-                    yMax = Math.Max(yMax, _bboxes[i, j].YMax + (colNumber[i, j] - 1) * _patternStep.Y);
-                }
-
-            double xMargin = 0.0;
-            switch (impositionTool.HorizontalAlignment)
-            {
-                case ImpositionTool.HAlignment.HALIGN_LEFT: xMargin = impositionTool.UsableFormat.XMin; break;
-                case ImpositionTool.HAlignment.HALIGN_RIGHT: xMargin = format.Width - impositionTool.Margin.X - xMax + boxGlobal.XMin; break;
-                case ImpositionTool.HAlignment.HALIGN_CENTER: xMargin = (format.Width - xMax + boxGlobal.XMin) * 0.5; break;
-                default: break;
-            }
-
-            double yMargin = 0.0;
-            switch (impositionTool.VerticalAlignment)
-            {
-                case ImpositionTool.VAlignment.VALIGN_BOTTOM: yMargin = impositionTool.UsableFormat.YMin;   break;
-                case ImpositionTool.VAlignment.VALIGN_TOP: yMargin = format.Height - impositionTool.Margin.Y - yMax + boxGlobal.YMin; break;
-                case ImpositionTool.VAlignment.VALIGN_CENTER: yMargin = (format.Height - yMax + boxGlobal.YMin) * 0.5; break;
-                default: break;
-            }
-
-            // compute offsets
-            double xOffset = xMargin - boxGlobal.XMin;
-            double yOffset = yMargin - boxGlobal.YMin;
-
-            for (int i=0; i<NoRows; ++i)
-                for (int j = 0; j < NoCols; ++j)
-                {
-                    for (int k=0; k<rowNumber[i, j]; ++k)
-                        for (int l = 0; l < colNumber[i, j]; ++l)
-                        {
-                            BPosition pos = _relativePositions[i, j];
-                            pos._pt.X = xOffset + k * _patternStep.X + pos._pt.X;
-                            pos._pt.Y = yOffset + l * _patternStep.Y + pos._pt.Y;
-                            solution.Add(pos);
-                        }
-                }
-            // noRows / noCols
-            solution.Rows = NoCols * noPatternX + iMax + 1;
-            solution.Cols = NoRows * noPatternY + jMax + 1;
-            // cardboard position
-            solution.CardboardPosition = new Vector2D(xMargin, yMargin);
-            return solution;
-        }
-
         #endregion
 
         #region Public properties
@@ -227,7 +127,7 @@ namespace Pic.Factory2D
 
                 // bboxes
                 _bboxes = new Box2D[1, 1];
-                _bboxes[0, 0] = boxEntities;
+                _bboxes[0, 0] = blockRef00.Box;//boxEntities;
             }
         }
     }
@@ -281,7 +181,7 @@ namespace Pic.Factory2D
                 _relativePositions[0, 1] = new BPosition(vecPosition, ortho ? 270.0 : 180.0);
                 // bboxes
                 _bboxes = new Box2D[1, 2];
-                _bboxes[0, 0] = boxEntities;
+                _bboxes[0, 0] = blockRef00.Box;//boxEntities;
                 _bboxes[0, 1] = blockRef01.Box;
 
                 // compute Y step (row1 / row0)
@@ -385,7 +285,7 @@ namespace Pic.Factory2D
                 _relativePositions[1, 0] = new BPosition(vecPosition, ortho ? 270.0 : 180.0);
                 // bboxes
                 _bboxes = new Box2D[2, 1];
-                _bboxes[0, 0] = boxEntities;
+                _bboxes[0, 0] = blockRef00.Box;//boxEntities;
                 _bboxes[1, 0] = blockRef10.Box;
 
                 // compute X step (col1 / col0)
@@ -452,7 +352,7 @@ namespace Pic.Factory2D
         internal Bitmap _thumbnail;
         private Box2D _box;
         private static int _thumbnailWidth = 75;
-        private Vector2D _cardboardPosition;
+        private Vector2D _cardboardPosition, _cardboardDimensions;
         #endregion
 
         #region Constructor
@@ -471,7 +371,7 @@ namespace Pic.Factory2D
         #endregion
 
         #region Private methods
-        public void GenerateThumbnail(Vector2D dimensions)
+        public void GenerateThumbnail()
         {
             using (PicFactory factory = new PicFactory())
             {
@@ -481,7 +381,7 @@ namespace Pic.Factory2D
                 factory.ProcessVisitor(visitor0);
                 _box = visitor0.Box;
                 // insert format
-                factory.InsertCardboardFormat(CardboardPosition, dimensions);
+                factory.InsertCardboardFormat(CardboardPosition, CardboardDimensions);
                 // compute bounding box with format
                 PicVisitorBoundingBox visitor1 = new PicVisitorBoundingBox();
                 factory.ProcessVisitor(visitor1);
@@ -497,6 +397,12 @@ namespace Pic.Factory2D
         {
             get { return _cardboardPosition; }
             set { _cardboardPosition = value; }
+        }
+
+        public Vector2D CardboardDimensions
+        {
+            get { return _cardboardDimensions; }
+            set { _cardboardDimensions = value; }
         }
         #endregion
 
@@ -585,6 +491,24 @@ namespace Pic.Factory2D
 
         public double Width  { get { return _box.Width; } }
         public double Height { get { return _box.Height; } }
+        public Box2D Bbox
+        {
+            get
+            {
+                if (null == _box)
+                {
+                    using (PicFactory factory = new PicFactory())
+                    {
+                        CreateEntities(factory);
+                        // compute bounding box without format
+                        PicVisitorBoundingBox visitor0 = new PicVisitorBoundingBox();
+                        factory.ProcessVisitor(visitor0);
+                        _box = visitor0.Box;
+                    }
+                }
+                return _box; 
+            } 
+        }
         public double BBoxArea { get { return _box.Width * _box.Height; } }
         #endregion
 
@@ -599,7 +523,7 @@ namespace Pic.Factory2D
     /// <summary>
     /// Implementation of <see cref="System.Collections.Generic.IComparer"/> interface used to sort the list of <see cref="ImpositionSolution"/> solutions.
     /// </summary>
-    internal class SolutionComparer : IComparer<ImpositionSolution>
+    internal class SolutionComparerFormat : IComparer<ImpositionSolution>
     {
         #region IComparer<ImpositionSolution> Members
         /// <summary>
@@ -651,7 +575,7 @@ namespace Pic.Factory2D
     #endregion
 
     #region Imposition tool
-    public class ImpositionTool
+    public abstract class ImpositionTool
     {
         #region Alignment enums
         public enum VAlignment
@@ -669,16 +593,18 @@ namespace Pic.Factory2D
         #endregion
 
         #region Data members
-        IEntityContainer _initialEntities;
-        private Vector2D _margin = Vector2D.Zero;
-        private Vector2D _minMargin = Vector2D.Zero;
-        private Vector2D _spaceBetween = Vector2D.Zero;
-        private Vector2D _impositionOffset = Vector2D.Zero;
-        private bool _allowRotationInColumns=true, _allowRotationInRows=true, _allowOrthogonalImposition=true;
-        private double _unitLengthCut, _unitLengthFold, _unitArea;
-        private CardboardFormat _cardboardFormat;
-        private VAlignment _vAlignment = VAlignment.VALIGN_CENTER;
-        private HAlignment _hAlignment = HAlignment.HALIGN_CENTER;
+        protected IEntityContainer _initialEntities;
+        protected Vector2D _margin = Vector2D.Zero;
+        protected Vector2D _minMargin = Vector2D.Zero;
+        protected Vector2D _spaceBetween = Vector2D.Zero;
+        protected Vector2D _impositionOffset = Vector2D.Zero;
+        protected bool _allowRotationInColumns=true, _allowRotationInRows=true, _allowOrthogonalImposition=true;
+        protected double _unitLengthCut, _unitLengthFold, _unitArea;
+        protected VAlignment _vAlignment = VAlignment.VALIGN_CENTER;
+        protected HAlignment _hAlignment = HAlignment.HALIGN_CENTER;
+        protected const double EPSILON = 1.0E-06;
+
+        protected static readonly ILog _log = LogManager.GetLogger(typeof(ImpositionTool));
         #endregion
 
         #region Constructor
@@ -710,7 +636,7 @@ namespace Pic.Factory2D
         #endregion
 
         #region Private method to get list of patterns
-        private List<ImpositionPattern> GetPatternList()
+        internal List<ImpositionPattern> GetPatternList()
         {
             List<ImpositionPattern> list = new List<ImpositionPattern>();
             ImpositionPattern[] allPaterns = {
@@ -736,7 +662,8 @@ namespace Pic.Factory2D
             // get applicable pattern list
             List<ImpositionPattern> patternList = GetPatternList();
             // need to compute orthogonal positions ?
-            bool processOrthogonalImposition = _allowOrthogonalImposition && (_cardboardFormat.Width != _cardboardFormat.Height);
+            bool processOrthogonalImposition = AllowOrthogonalImposition;
+            /*_allowOrthogonalImposition && (_cardboardFormat.Width != _cardboardFormat.Height);*/
             // compute number of expected solutions
             if (null != callback)
                 callback.Begin(0, patternList.Count * (processOrthogonalImposition ? 4 : 2));
@@ -745,11 +672,19 @@ namespace Pic.Factory2D
             // process pattern list
             foreach (ImpositionPattern pattern in patternList)
             {
+                // generate pattern
+                try
+                {
+                    pattern.GeneratePattern(InitialEntities, SpaceBetween, ImpositionOffset, false);
+                }
+                catch (Exception ex)
+                {
+                    _log.Error(ex.Message);
+                    continue;
+                }
+
                 // default orientation
-                ImpositionSolution solution = pattern.GenerateSolution(this
-                    , _initialEntities, _cardboardFormat
-                    , _margin, _minMargin, _spaceBetween
-                    , _impositionOffset, false);
+                ImpositionSolution solution = GenerateSolution(pattern);
                 if (null != solution && solution.IsValid)
                 {
                     solution.UnitLengthCut = _unitLengthCut;
@@ -764,10 +699,17 @@ namespace Pic.Factory2D
                 // orthogonal direction
                 if (processOrthogonalImposition)
                 {
-                    solution = pattern.GenerateSolution(this
-                        , _initialEntities, _cardboardFormat
-                        , _margin, _minMargin, _spaceBetween
-                        , _impositionOffset, true);
+                    // generate pattern
+                    try
+                    {
+                        pattern.GeneratePattern(InitialEntities, SpaceBetween, ImpositionOffset, true);
+                    }
+                    catch (Exception ex)
+                    {
+                        _log.Error(ex.Message);
+                        continue;
+                    }
+                    solution = GenerateSolution(pattern);
                     if (null != solution && solution.IsValid)
                     {
                         solution.UnitLengthCut = _unitLengthCut;
@@ -784,20 +726,31 @@ namespace Pic.Factory2D
             // generate thumbnails
             foreach (ImpositionSolution sol in solutions)
             {
-                sol.GenerateThumbnail(_cardboardFormat.Dimensions);
+                sol.GenerateThumbnail();
                 // increment progress dialog?
                 if (null != callback)
                     callback.Increment(solutions.Count);
             }
 
             // sort solution list
-            solutions.Sort(new SolutionComparer());
+            solutions.Sort(new SolutionComparerFormat());
 
             if (null != callback)
                 callback.End();
 
             return solutions.Count > 0;
         }
+
+        abstract internal ImpositionSolution GenerateSolution(ImpositionPattern pattern);
+        virtual internal bool AllowOrthogonalImposition
+        {
+            get { return _allowOrthogonalImposition; }
+        }
+        #endregion
+
+        #region Abstract methods
+        abstract internal int NoPatternX(ImpositionPattern pattern);
+        abstract internal int NoPatternY(ImpositionPattern pattern);
         #endregion
 
         #region Public properties
@@ -827,7 +780,13 @@ namespace Pic.Factory2D
         }
         public Vector2D SpaceBetween
         {
-            get { return _spaceBetween; }
+            get
+            {
+                return new Vector2D(
+                    _spaceBetween.X > 0 ? _spaceBetween.X : 0,
+                    _spaceBetween.Y > 0 ? _spaceBetween.Y : 0
+                    );
+            }
             set { _spaceBetween = value; }
         }
         public bool AllowRotationInRowDirection
@@ -844,55 +803,6 @@ namespace Pic.Factory2D
         {
             get { return _impositionOffset; }
             set { _impositionOffset = value; }
-        }
-        public CardboardFormat CardboardFormat
-        {
-            set { _cardboardFormat = value; }
-            get { return _cardboardFormat; }
-        }
-
-        public Box2D UsableFormat
-        {
-            get
-            {
-                Box2D box = new Box2D();
-                switch (_hAlignment)
-                {
-                    case ImpositionTool.HAlignment.HALIGN_LEFT:
-                        box.XMin = _margin.X;
-                        box.XMax = _cardboardFormat.Width - _minMargin.X;
-                        break;
-                    case ImpositionTool.HAlignment.HALIGN_RIGHT:
-                        box.XMin = _minMargin.X;
-                        box.XMax = _cardboardFormat.Width - _margin.X;
-                        break;
-                    case ImpositionTool.HAlignment.HALIGN_CENTER:
-                        box.XMin = _margin.X;
-                        box.XMax = _cardboardFormat.Width - _margin.X;
-                        break;
-                    default:
-                        break;
-                }
-
-                switch (_vAlignment)
-                {
-                    case ImpositionTool.VAlignment.VALIGN_BOTTOM:
-                        box.YMin = _margin.Y;
-                        box.YMax = _cardboardFormat.Height - _minMargin.Y;
-                        break;
-                    case ImpositionTool.VAlignment.VALIGN_TOP:
-                        box.YMin = _minMargin.Y;
-                        box.YMax = _cardboardFormat.Height - _margin.Y;
-                        break;
-                    case ImpositionTool.VAlignment.VALIGN_CENTER:
-                        box.YMin = _margin.Y;
-                        box.YMax = _cardboardFormat.Height - _margin.Y;
-                        break;
-                    default:
-                        break;
-                }
-                return box;
-            }
         }
         #endregion
     }

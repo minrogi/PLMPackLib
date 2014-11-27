@@ -33,6 +33,15 @@ namespace Pic.Factory2D.Control
 
             InitializeComponent();
 
+            this.Load += new EventHandler(FactoryViewer_Load);
+        }
+
+        void FactoryViewer_Load(object sender, EventArgs e)
+        {
+            // do not process if design mode
+            if (this.DesignMode)
+                return;
+
             _picGraphics = new PicGraphicsControl(this);
 
             // define event handlers
@@ -301,11 +310,14 @@ namespace Pic.Factory2D.Control
                 try
                 {
                     // build imposition solutions
-                    _impositionTool = new ImpositionTool(_factory);
+                    if (formSettings.Mode == 0)
+                        _impositionTool = new ImpositionToolCardboardFormat(_factory, formSettings.CardboardFormat);
+                    else
+                        _impositionTool = new ImpositionToolXY(_factory, formSettings.NumberDirX, formSettings.NumberDirY);
                     // -> margins
                     _impositionTool.HorizontalAlignment = formSettings.HorizontalAlignment;
                     _impositionTool.VerticalAlignment = formSettings.VerticalAlignment;
-                    _impositionTool.SpaceBetween = new Vector2D(formSettings.ImpSpaceBetween, formSettings.ImpSpaceBetween);
+                    _impositionTool.SpaceBetween = new Vector2D(formSettings.ImpSpaceX, formSettings.ImpSpaceY);
                     _impositionTool.Margin = new Vector2D(formSettings.ImpMarginLeftRight, formSettings.ImpMarginBottomTop);
                     _impositionTool.MinMargin = new Vector2D(formSettings.ImpRemainingMarginLeftRight, formSettings.ImpRemainingMarginBottomTop);
                     // -> allowed patterns
@@ -313,8 +325,7 @@ namespace Pic.Factory2D.Control
                     _impositionTool.AllowRotationInRowDirection = formSettings.AllowRowRotation;
                     // -> offsets
                     _impositionTool.ImpositionOffset = new Vector2D(formSettings.OffsetX, formSettings.OffsetY);
-                    // -> cardboard
-                    _impositionTool.CardboardFormat = formSettings.CardboardFormat;
+             
                     _solutions = new List<ImpositionSolution>();
 
                     // instantiate ProgressWindow and launch process

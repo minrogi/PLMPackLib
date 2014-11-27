@@ -639,4 +639,55 @@
 	<metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
 		<value>fr-FR</value>
 	</metadata>
+	<data name="lblValueWidth.Text" xml:space="preserve">
+		<value>: 0.0 m</value>
+	</data>
+	<data name="lblNameArea.Text" xml:space="preserve">
+		<value>Area</value>
+	</data>
+	<data name="lblNameEfficiency.Text" xml:space="preserve">
+		<value>Efficienza</value>
+	</data>
+	<data name="lblValueLengthTotal.Text" xml:space="preserve">
+		<value>: 0.0 m</value>
+	</data>
+	<data name="lblValueLength.Text" xml:space="preserve">
+		<value>: 0.0 m</value>
+	</data>
+	<data name="tabArea.Text" xml:space="preserve">
+		<value>Area</value>
+	</data>
+	<data name="lblValueLengthFold.Text" xml:space="preserve">
+		<value>: 0.0 m</value>
+	</data>
+	<data name="lblValueLengthCut.Text" xml:space="preserve">
+		<value>: 0.0 m</value>
+	</data>
+	<data name="lblNameLength.Text" xml:space="preserve">
+		<value>Lunghezza</value>
+	</data>
+	<data name="tabLength.Text" xml:space="preserve">
+		<value>Lunghezze</value>
+	</data>
+	<data name="lblValueEfficiency.Text" xml:space="preserve">
+		<value>: 0.0%</value>
+	</data>
+	<data name="lblValueFormat.Text" xml:space="preserve">
+		<value>: 0.0 * 0.0</value>
+	</data>
+	<data name="lblNameWidth.Text" xml:space="preserve">
+		<value>Larghezza</value>
+	</data>
+	<data name="tabBoundingBox.Text" xml:space="preserve">
+		<value>Riquadro di selezione</value>
+	</data>
+	<data name="lblNameFormat.Text" xml:space="preserve">
+		<value>Formato</value>
+	</data>
+	<data name="lblAreaValue.Text" xml:space="preserve">
+		<value>: 0.0 m²</value>
+	</data>
+	<data name="lblNameTotal.Text" xml:space="preserve">
+		<value>Totale</value>
+	</data>
 </root>

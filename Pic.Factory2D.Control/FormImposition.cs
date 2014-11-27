@@ -46,7 +46,7 @@ namespace Pic.Factory2D.Control
             ImpositionSolution solution = listBoxSolutions.SelectedItem as ImpositionSolution;
             if (null == solution) return;
             solution.CreateEntities(factory);
-            factory.InsertCardboardFormat(solution.CardboardPosition, _cardboardFormat.Dimensions);
+            factory.InsertCardboardFormat(solution.CardboardPosition, solution.CardboardDimensions);
         }
         #endregion
 

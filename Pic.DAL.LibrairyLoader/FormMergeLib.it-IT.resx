@@ -231,4 +231,13 @@
 	<data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+	<data name="bnCancel.Text" xml:space="preserve">
+		<value>Cancella</value>
+	</data>
+	<data name="labelProgressBar.Text" xml:space="preserve">
+		<value>Avanzamento:</value>
+	</data>
+	<data name="$this.Text" xml:space="preserve">
+		<value>Installazione libreria…</value>
+	</data>
 </root>
