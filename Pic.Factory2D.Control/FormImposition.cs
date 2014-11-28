@@ -210,28 +210,15 @@ namespace Pic.Factory2D.Control
 
         #region ToolStrip / Menu
         private void toolStripButtonPicGEOM_Click(object sender, EventArgs e)
-        {
-            ExportAndOpenExtension("des");
-        }
-
+        {   ExportAndOpenExtension("des");   }
         private void toolStripButtonDXF_Click(object sender, EventArgs e)
-        {
-            ExportAndOpenExtension("dxf");
-        }
-
+        {   ExportAndOpenExtension("dxf");   }
         private void toolStripButtonAI_Click(object sender, EventArgs e)
-        {
-            ExportAndOpenExtension("ai");
-        }
-
+        {   ExportAndOpenExtension("ai");    }
         private void toolStripButtonCFF2_Click(object sender, EventArgs e)
-        {
-            ExportAndOpenExtension("cf2");
-        }
+        {   ExportAndOpenExtension("cf2");   }
         private void toolStripButtonPDF_Click(object sender, EventArgs e)
-        {
-            ExportAndOpenExtension("pdf");
-        }
+        {   ExportAndOpenExtension("pdf");   }
         private void ExportAndOpenExtension(string fileExt)
         {
             try
@@ -243,18 +230,15 @@ namespace Pic.Factory2D.Control
                     case "dxf": applicationPath = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppDXF; break;
                     case "ai": applicationPath = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppAI; break;
                     case "cf2": applicationPath = Pic.Factory2D.Control.Properties.Settings.Default.FileOutputAppCF2; break;
+                    case "pdf": break;
                     default: break;
                 }
                 ExportAndOpen(fileExt, applicationPath);
             }
             catch (Win32Exception ex)
-            {
-                MessageBox.Show(ex.Message, Application.ProductName);
-            }
+            {   MessageBox.Show(ex.Message, Application.ProductName); }
             catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }        
+            {   MessageBox.Show(ex.ToString()); }        
         }
 
         private void ExportAndOpen(string fileExt, string sPathExectable)

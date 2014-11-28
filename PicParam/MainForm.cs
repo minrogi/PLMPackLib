@@ -627,22 +627,29 @@ namespace PicParam
                 _factoryViewCtrl.WriteExportFile(filePath, Path.GetExtension(filePath));
 
             // open using existing file path
-            using (System.Diagnostics.Process proc = new System.Diagnostics.Process())
+            try
             {
-                // test if executing application is available
-                if (!string.IsNullOrEmpty(sPathExectable) && System.IO.File.Exists(sPathExectable))
+                using (System.Diagnostics.Process proc = new System.Diagnostics.Process())
                 {
-                    proc.StartInfo.FileName = sPathExectable;
-                    proc.StartInfo.Arguments = "\"" + filePath + "\"";
+                    // test if executing application is available
+                    if (!string.IsNullOrEmpty(sPathExectable) && System.IO.File.Exists(sPathExectable))
+                    {
+                        proc.StartInfo.FileName = sPathExectable;
+                        proc.StartInfo.Arguments = "\"" + filePath + "\"";
+                    }
+                    else // no valid executable path -> attempting shell execute
+                    {
+                        proc.StartInfo.FileName = filePath;
+                        proc.StartInfo.Verb = "open";
+                        proc.StartInfo.UseShellExecute = true;
+                    }
+                    // start process
+                    proc.Start();
                 }
-                else // no valid executable path -> attempting shell execute
-                {
-                    proc.StartInfo.FileName = filePath;
-                    proc.StartInfo.Verb = "open";
-                    proc.StartInfo.UseShellExecute = true;
-                }
-                // start process
-                proc.Start();
+            }
+            catch (Exception ex)
+            {
+                _log.WarnFormat("Failed to open file {0} with exception: {1}", filePath, ex.Message);
             }
         }
 
