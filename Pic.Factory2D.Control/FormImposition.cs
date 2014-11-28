@@ -134,9 +134,13 @@ namespace Pic.Factory2D.Control
             if (null == solution) return;
 
             // numbers
-            lblValueCardboardFormat.Text = string.Format(": {0:0.###} x {1:0.###}", solution.CardboardDimensions.X, solution.CardboardDimensions.Y);
-            lblValueCardboardEfficiency.Text = string.Format(": {0:0.#} %", 100.0 * solution.Area / (solution.CardboardDimensions.X * solution.CardboardDimensions.Y));
-            lblValueNumbers.Text = string.Format(": {0} ({1} x {2})", solution.PositionCount, solution.Rows, solution.Cols);
+            lblValueCardboardFormat.Text = string.Format(": {0} x {1}",
+                (int)Math.Ceiling(solution.CardboardDimensions.X),
+                (int)Math.Ceiling(solution.CardboardDimensions.Y));
+            lblValueCardboardEfficiency.Text = string.Format(": {0:0.#} %",
+                100.0 * solution.Area / (solution.CardboardDimensions.X * solution.CardboardDimensions.Y));
+            lblValueNumbers.Text = string.Format(": {0} ({1} x {2})",
+                solution.PositionCount, solution.Rows, solution.Cols);
             // lengthes
             lblValueLengthCut.Text = string.Format(": {0:0.###} m", solution.LengthCut / 1000.0);
             lblValueLengthFold.Text = string.Format(": {0:0.###} m ", solution.LengthFold / 1000.0);
