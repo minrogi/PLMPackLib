@@ -33,7 +33,8 @@
 
         #region Constructor
         public PPDataContext()
-            : base(new System.Data.SQLite.SQLiteConnection("DbLinqProvider=Sqlite;Data Source=" + Pic.DAL.ApplicationConfiguration.CustomSection.DatabasePath + ";FailIfMissing=false;"))
+            : base(new System.Data.SQLite.SQLiteConnection("DbLinqProvider=Sqlite;Data Source=" + Pic.DAL.ApplicationConfiguration.CustomSection.DatabasePath + ";FailIfMissing=false;",
+                Pic.DAL.ApplicationConfiguration.CustomSection.DatabasePath.StartsWith("\\\\")))
         {
             _repositoryPath = Pic.DAL.ApplicationConfiguration.CustomSection.RepositoryPath;
             this.OnCreated();

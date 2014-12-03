@@ -945,21 +945,25 @@ namespace TreeDim.IO
         /// <returns></returns>
         public System.Drawing.Icon GetIcon()
         {
-            string file = IconFileName;
-            if (file != null)
+            try
             {
-                if (File.Exists(file))
-                    return new System.Drawing.Icon(file);
-                else
+                string file = IconFileName;
+                if (file != null)
                 {
-                    int p = file.LastIndexOf(',');
-                    int i;
-                    if (p != -1 && int.TryParse(file.Substring(p + 1), out i))
+                    if (File.Exists(file))
+                        return new System.Drawing.Icon(file);
+                    else
                     {
-                        return FileExtension.ExtractIcon(file.Substring(0, p), i);
+                        int p = file.LastIndexOf(',');
+                        int i;
+                        if (p != -1 && int.TryParse(file.Substring(p + 1), out i))
+                        {
+                            return FileExtension.ExtractIcon(file.Substring(0, p), i);
+                        }
                     }
                 }
             }
+            catch (Exception /*ex*/) {}
             return FileExtension.GetDefaultIcon();
         }
         public RegKey GetIconEntry()

@@ -182,6 +182,9 @@
   <data name="labelDatabasePath.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 8</value>
   </data>
+  <data name="&gt;&gt;bnCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="bnOK.Text" xml:space="preserve">
     <value>OK</value>
   </data>
@@ -191,11 +194,8 @@
   <data name="&gt;&gt;fileSelect.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="bnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
   <data name="&gt;&gt;fileSelect.Type" xml:space="preserve">
-    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=7.0.11.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TreeDim.UserControls.FileSelect, TreeDim.UserControls, Version=7.0.4.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;fileSelect.Parent" xml:space="preserve">
     <value>$this</value>
@@ -209,8 +209,8 @@
   <data name="&gt;&gt;bnOK.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;bnCancel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="bnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="bnOK.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -229,8 +229,5 @@
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>it-IT</value>
   </metadata>
 </root>
