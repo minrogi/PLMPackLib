@@ -960,6 +960,74 @@ namespace Pic.Plugin
     }
     #endregion
 
+    #region IPluginExt3 (additional interface version3) --> Comes as a replacement of IPluginExt3
+    public interface IPluginExt3
+    {
+        #region Methods available in IPluginExt1
+        /// <summary>
+        /// source code used to build component
+        /// </summary>
+        string SourceCode { get; }
+        /// <summary>
+        /// return true if file has an embedded bitmap
+        /// </summary>
+        bool HasEmbeddedThumbnail { get; }
+        /// <summary>
+        /// embedded bitmap
+        /// </summary>
+        Bitmap Thumbnail { get; }
+        /// <summary>
+        /// Method called by destructor
+        /// </summary>
+        void Dispose();
+        /// <summary>
+        /// recommended X/Y offsets for imposition
+        /// </summary>
+        double ImpositionOffsetX(ParameterStack stack);
+        double ImpositionOffsetY(ParameterStack stack);
+        #endregion
+
+        #region Methods available in IPluginExt2
+        /// <summary>
+        /// Build / rebuild parameter stack 
+        /// </summary>
+        ParameterStack BuildParameterStack(ParameterStack stackIn);
+        /// <summary>
+        /// Is supporting palletization ?
+        /// </summary>
+        bool IsSupportingPalletization { get; }
+        /// <summary>
+        /// Outer dimensions
+        /// Method should only be called if component supports palletization
+        /// </summary>
+        void OuterDimensions(ParameterStack stack, out double[] dimensions);
+        /// <summary>
+        /// Returns case type to be used for ECT computation 
+        /// </summary>
+        int CaseType { get; }
+        /// <summary>
+        /// Is supporting automatic folding
+        /// </summary>
+        bool IsSupportingAutomaticFolding { get; }
+        /// <summary>
+        /// Reference point that defines anchored face
+        /// </summary>
+        List<Vector2D> ReferencePoints(ParameterStack stack);
+        #endregion
+
+        #region Additional methods & properties
+        /// <summary>
+        /// Is supporting bundling
+        /// </summary>
+        bool IsSupportingFlatPalletization { get; }
+        /// <summary>
+        /// Flat dimensions
+        /// <summary>
+        void FlatDimensions(ParameterStack stack, out double[] flatDimensions);
+        #endregion
+    }
+    #endregion
+
     #region IPluginHost
     public interface IPluginHost
     {

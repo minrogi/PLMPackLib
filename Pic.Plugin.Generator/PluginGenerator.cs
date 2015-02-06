@@ -88,11 +88,17 @@ namespace Pic.Plugin
             string sourceFilePath = Path.ChangeExtension( tempPath, "cs");
 
             // get version 
-            int iVersion = 1;
+            int iVersion = 3;
+            string assemblyVersionNew = "3.0.0.0";
+            /*
+            assemblyVersionNew = assemblyVersion;
             if (string.Equals(assemblyVersion, "1.0.0.0", StringComparison.InvariantCultureIgnoreCase))
                 iVersion = 1;
             else if (string.Equals(assemblyVersion, "2.0.0.0", StringComparison.InvariantCultureIgnoreCase))
                 iVersion = 2;
+            else if (string.Equals(assemblyVersion, "3.0.0.0", StringComparison.InvariantCultureIgnoreCase))
+                iVersion = 3;
+            */
 
             using (StreamWriter sw = File.CreateText(sourceFilePath))
             {
@@ -121,8 +127,8 @@ namespace Pic.Plugin
                 sw.WriteLine("[assembly: AssemblyTrademark(\"TreeDim\")]"); ++lineOffset;
                 sw.WriteLine("[assembly: AssemblyCulture(\"\")]"); ++lineOffset;
                 sw.WriteLine("[assembly: ComVisible(false)]"); ++lineOffset;
-                sw.WriteLine("[assembly: AssemblyVersion(\"{0}\")]", assemblyVersion); ++lineOffset;
-                sw.WriteLine("[assembly: AssemblyFileVersion(\"{0}\")]", assemblyVersion); ++lineOffset;
+                sw.WriteLine("[assembly: AssemblyVersion(\"{0}\")]", assemblyVersionNew); ++lineOffset;
+                sw.WriteLine("[assembly: AssemblyFileVersion(\"{0}\")]", assemblyVersionNew); ++lineOffset;
                 // write generic class code
                 sw.WriteLine("namespace Pic.Plugin.{0}", drawingName.Replace(' ', '_')); ++lineOffset;
                 sw.WriteLine("{"); ++lineOffset;
@@ -133,6 +139,10 @@ namespace Pic.Plugin
                 else if (2 == iVersion)
                 {
                     sw.WriteLine("\tpublic class Plugin : Pic.Plugin.IPlugin, Pic.Plugin.IPluginExt2"); 
+                }
+                else if (3 == iVersion)
+                {
+                    sw.WriteLine("\tpublic class Plugin : Pic.Plugin.IPlugin, Pic.Plugin.IPluginExt3");
                 }
                 ++lineOffset;
                 sw.WriteLine("\t{"); ++lineOffset;
@@ -197,8 +207,8 @@ namespace Pic.Plugin
                 sw.WriteLine("\t\tprivate double ASin(double x)  {  return Math.Asin(x)*rad2deg; }"); ++lineOffset;
                 sw.WriteLine("\t\tprivate double ACos(double x)  {  return Math.Acos(x)*rad2deg; }"); ++lineOffset;
                 sw.WriteLine("\t\tpublic Guid Guid { get {  return new Guid(\"" + _guid.ToString() + "\"); } }"); ++lineOffset;
-                if (2 == iVersion)
-                { sw.WriteLine("\t\tpublic ParameterStack Parameters { get { throw new NotImplementedException(\"Plugin.Parameters not supported with IPluginExt2\"); } }"); } ++lineOffset;
+                if (2 == iVersion || 3 == iVersion)
+                { sw.WriteLine("\t\tpublic ParameterStack Parameters { get { throw new NotImplementedException(\"Plugin.Parameters not supported with IPluginExt2 or IPluginExt3\"); } }"); } ++lineOffset;
                 // write generated code
                 sw.WriteLine(drawingCode);
                 sw.WriteLine("\t} // class Plugin");

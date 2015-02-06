@@ -23,7 +23,67 @@ namespace Pic.Plugin
         private IPlugin _instance = null;
         private IPluginExt1 _ext1 = null;
         private IPluginExt2 _ext2 = null;
-        List<Guid> _dependancyList = new List<Guid>();
+        private IPluginExt3 _ext3 = null;
+        private List<Guid> _dependancyList = new List<Guid>();
+        #endregion
+
+        #region Static data members
+        static string _SC1_to_SC3_ = 
+@"
+/// <summary>
+/// Is supporting palletization ?
+/// </summary>
+public bool IsSupportingPalletization { get { return false; } }
+/// <summary>
+/// Outer dimensions
+/// Method should only be called if component supports palletization
+/// </summary>
+public void OuterDimensions(ParameterStack stack, out double[] dimensions)
+{
+    dimensions = new double[3];    
+}
+/// <summary>
+/// Returns case type to be used for ECT computation 
+/// </summary>
+public int CaseType { get { return 0; } }
+/// <summary>
+/// Is supporting automatic folding
+/// </summary>
+public bool IsSupportingAutomaticFolding { get { return false; } }
+/// <summary>
+/// Reference point that defines anchored face
+/// </summary>
+public List<Vector2D> ReferencePoints(ParameterStack stack)
+{
+    List<Vector2D> ltPoints = new List<Vector2D>();
+    return ltPoints;
+}
+///
+/// flat palletization
+///
+public bool IsSupportingFlatPalletization
+{   get { return false; }   }
+///
+/// flat dimensions
+///
+public void FlatDimensions(ParameterStack stack, out double[] flatDimensions)
+{
+    flatDimensions = new double[3];
+}";
+        static string _SC2_to_SC3_ =
+@"
+///
+/// flat palletization
+///
+public bool IsSupportingFlatPalletization
+{   get { return false; }   }
+///
+/// flat dimensions
+///
+public void FlatDimensions(ParameterStack stack, out double[] flatDimensions)
+{
+    flatDimensions = new double[3];
+}";
         #endregion
 
         #region Private constructor
@@ -36,10 +96,12 @@ namespace Pic.Plugin
                 _ext1 = _instance as IPluginExt1;
             else if (_instance.GetType().GetInterface("Pic.Plugin.IPluginExt2") != null)
                 _ext2 = _instance as IPluginExt2;
+            else if (_instance.GetType().GetInterface("Pic.Plugin.IPluginExt3") != null)
+                _ext3 = _instance as IPluginExt3;
             else
                 throw new PluginException(string.Format("Failed to load plugin {0}\nOne of the following interface is expected: \n{1}"
                     , _instance.Name
-                    , "Pic.Plugin.IPluginExt1\nPic.Plugin.IPluginExt2"));
+                    , "Pic.Plugin.IPluginExt1\nPic.Plugin.IPluginExt2\nPic.Plugin.IPluginExt3"));
         }
         #endregion
 
@@ -59,9 +121,11 @@ namespace Pic.Plugin
             get
             {
                 if (null != _ext1)
-                    return _ext1.SourceCode;
+                    return UpgradeSC1(_ext1.SourceCode);
                 else if (null != _ext2)
-                    return _ext2.SourceCode;
+                    return UpgradeSC2(_ext2.SourceCode);
+                else if (null != _ext3)
+                    return _ext3.SourceCode;
                 else
                     return string.Empty;
             }
@@ -74,6 +138,8 @@ namespace Pic.Plugin
                     return _ext1.HasEmbeddedThumbnail;
                 else if (null != _ext2)
                     return _ext2.HasEmbeddedThumbnail;
+                else if (null != _ext3)
+                    return _ext3.HasEmbeddedThumbnail;
                 else
                     return false;
             }
@@ -86,6 +152,8 @@ namespace Pic.Plugin
                     return _ext1.Thumbnail;
                 else if (null != _ext2)
                     return _ext2.Thumbnail;
+                else if (null != _ext3)
+                    return _ext3.Thumbnail;
                 else
                     return null;
             }
@@ -96,20 +164,25 @@ namespace Pic.Plugin
             {
                 if (null != _ext1)
                     return false;
-                else
+                else if (null != _ext2)
                     return _ext2.IsSupportingAutomaticFolding;
+                else if (null != _ext3)
+                    return _ext3.IsSupportingAutomaticFolding;
+                else
+                    return false;
             }
         }
 
         public Sharp3D.Math.Core.Vector2D ReferencePoint(ParameterStack stack)
         {
+            List<Vector2D> l = null;
             if (null != _ext2)
-            {
-                List<Vector2D> l = _ext2.ReferencePoints(stack);
-                if (l.Count > 0)
-                    return l[0];
-            }
-            return Vector2D.Zero;
+                l = _ext2.ReferencePoints(stack);
+            else if (null != _ext3)
+                l = _ext3.ReferencePoints(stack);
+            if (null == l) return Vector2D.Zero;
+            else if (l.Count > 0) return l[0];
+            else return Vector2D.Zero;
         }
 
         public Vector2D ImpositionOffset(ParameterStack stack)
@@ -118,6 +191,8 @@ namespace Pic.Plugin
                 return new Vector2D(_ext1.ImpositionOffsetX(stack), _ext1.ImpositionOffsetY(stack));
             else if (null != _ext2)
                 return new Vector2D(_ext2.ImpositionOffsetX(stack), _ext2.ImpositionOffsetY(stack));
+            else if (null != _ext3)
+                return new Vector2D(_ext3.ImpositionOffsetX(stack), _ext3.ImpositionOffsetY(stack));
             else
                 return Vector2D.Zero;
         }
@@ -169,11 +244,18 @@ namespace Pic.Plugin
                     length = dim[0]; width = dim[1]; height = dim[2];
                     return true;
                 }
-                else
-                    return false;
             }
-            else
-                return false; 
+            else if (null != _ext3)
+            {
+                if (_ext3.IsSupportingPalletization)
+                {
+                    double[] dim;
+                    _ext3.OuterDimensions(stack, out dim);
+                    length = dim[0]; width = dim[1]; height = dim[2];
+                    return true;
+                }
+            }
+            return false; 
         }
         /// <summary>
         /// Internal plugin accessor
@@ -199,8 +281,11 @@ namespace Pic.Plugin
 			}
             else if (null != _ext2)
                 stackOut = _ext2.BuildParameterStack(stackIn);
+            else  if (null != _ext3)
+                stackOut = _ext3.BuildParameterStack(stackIn);
             else
                 stackOut = new ParameterStack();
+
 
             // adding thickness parameters 
             // these parameters are always available but are not shown in the list of parameters in the plugin viewer
@@ -273,6 +358,94 @@ namespace Pic.Plugin
         {
             if (!_dependancyList.Exists(g => g == pluginGuid))
                 _dependancyList.Add(pluginGuid);
+        }
+        #endregion
+
+        #region Private helper methods
+        private string UpgradeSC1(string sourceCode)
+        {
+            sourceCode = MoveSemiColumnsToPrevLine(sourceCode.Trim());
+
+            List<string> sList = new List<string>();
+            using (System.IO.StringReader reader = new System.IO.StringReader(sourceCode))
+            {
+                string line = null;
+                while (null != (line = reader.ReadLine()))
+                {
+                    if (line.Contains("public ParameterStack Parameters"))
+                    {
+                        while (!(line = reader.ReadLine()).Contains("new ParameterStack(")) ;
+                        sList.Add(@"public ParameterStack BuildParameterStack(ParameterStack stackIn)" );
+                        sList.Add(@"{");
+                        sList.Add(@"    ParameterStackUpdater paramUpdater = new ParameterStackUpdater(stackIn);");
+
+                        // change AddDoubleParameter / AddIntParameter / AddBoolParameter / AddMultiParameter
+                        while (!(line = reader.ReadLine()).Contains("}"))
+                        {
+                            if (line.Contains("}")) { /* do nothing */ }
+                            else if (line.Contains("AddDoubleParameter("))
+                            {
+                                string sEndLine = line.Substring(line.IndexOf("(") + 1);
+                                sList.Add(@"    paramUpdater.CreateDoubleParameter(" + sEndLine);
+                            }
+                            else if (line.Contains("AddIntParameter"))
+                            {
+                                string sEndLine = line.Substring(line.IndexOf("(") + 1);
+                                sList.Add(@"    paramUpdater.CreateIntParameter(" + sEndLine);
+                            }
+                            else if (line.Contains("AddBoolParameter"))
+                            {
+                                string sEndLine = line.Substring(line.IndexOf("(") + 1);
+                                sList.Add(@"    paramUpdater.CreateBoolParameter(" + sEndLine);
+                            }
+                            else if (line.Contains("AddMultiParameter"))
+                            {
+                                string sEndLine = line.Substring(line.IndexOf("(") + 1);
+                                sList.Add(@"    paramUpdater.CreateMultiParameter(" + sEndLine);
+                            }
+                        }
+                        sList.Add("    return paramUpdater.UpdatedStack;");
+                    }
+                    else
+                        sList.Add(line);
+                }
+            }
+            // rebuild string
+            System.IO.StringWriter sw = new StringWriter();
+            foreach (string s in sList)
+                sw.WriteLine(s);
+            sw.Write(_SC1_to_SC3_); // additional features
+            return sw.ToString();
+        }
+
+        private string UpgradeSC2(string sourceCode)
+        {
+            sourceCode = MoveSemiColumnsToPrevLine(sourceCode.Trim());
+            System.IO.StringWriter sw = new StringWriter();
+            sw.Write(sourceCode);
+            sw.Write(_SC2_to_SC3_); // additional features
+            return sw.ToString();
+        }
+
+        private string MoveSemiColumnsToPrevLine(string sourceCode)
+        {
+            List<string> sList = new List<string>();
+            using (System.IO.StringReader reader = new System.IO.StringReader(sourceCode))
+            {
+                string line = null;
+                while (null != (line = reader.ReadLine()))
+                {
+                    string trimmedLine = line.Trim();
+                    if (string.Equals(trimmedLine, ";"))
+                        sList[sList.Count - 1] = sList[sList.Count - 1] + ";";
+                    else
+                        sList.Add(line);
+                }
+            }
+            System.IO.StringWriter writer = new StringWriter();
+            foreach (string s in sList)
+                writer.WriteLine(s);
+            return writer.ToString();            
         }
         #endregion
 

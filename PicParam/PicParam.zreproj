@@ -288,17 +288,17 @@ Kind regards</globalSetting>
       <remarks>
       </remarks>
     </fileGroup>
-    <fileGroup name="" projectFolderUniqueID="b9442bfa-0619-4581-84b5-ef11a783eb8c" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="a7829939-b577-4dfd-a81a-5738aab7fcc3">
-      <file filePath="..\Pic.DAL\Properties\Resources.fr-FR.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.DAL\Properties\Resources.fr-FR.resx" uniqueID="6ba6fab4-f78e-48a0-97da-5263e67e3406" />
-      <remarks>
-      </remarks>
-    </fileGroup>
     <fileGroup name="" projectFolderUniqueID="b9442bfa-0619-4581-84b5-ef11a783eb8c" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="55d496f3-9cdc-40c0-b147-a6ac03765cfb">
       <file filePath="..\Pic.DAL\Properties\Resource.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.DAL\Properties\Resource.resx" uniqueID="5d976c58-ed96-4663-ae61-119330a7d7bb" />
       <file filePath="..\Pic.DAL\Properties\Resource.es-ES.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.DAL\Properties\Resource.es-ES.resx" uniqueID="1ea75b5a-2608-4556-9068-e8334a979aa1" />
       <file filePath="..\Pic.DAL\Properties\Resource.fr-FR.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.DAL\Properties\Resource.fr-FR.resx" uniqueID="abb02590-b28e-45a6-a6f8-10fe93f276c9" />
       <file filePath="..\Pic.DAL\Properties\Resource.it-IT.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.DAL\Properties\Resource.it-IT.resx" uniqueID="4ddb9314-8971-46d4-b603-6fa321c4671d" />
       <file filePath="..\Pic.DAL\Properties\Resource.ja-JP.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.DAL\Properties\Resource.ja-JP.resx" uniqueID="e699a0e9-a228-4909-bfd7-ecebb1704475" />
+      <remarks>
+      </remarks>
+    </fileGroup>
+    <fileGroup name="" projectFolderUniqueID="b9442bfa-0619-4581-84b5-ef11a783eb8c" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="a7829939-b577-4dfd-a81a-5738aab7fcc3">
+      <file filePath="..\Pic.DAL\Properties\Resources.fr-FR.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.DAL\Properties\Resources.fr-FR.resx" uniqueID="6ba6fab4-f78e-48a0-97da-5263e67e3406" />
       <remarks>
       </remarks>
     </fileGroup>
@@ -358,9 +358,7 @@ Kind regards</globalSetting>
     </fileGroup>
     <fileGroup name="" projectFolderUniqueID="07c3cb2d-eaad-4eab-8efe-3f787a0cdeb0" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="737ddddb-8440-4270-807c-c39de271ad19">
       <file filePath="..\Pic.Factory2D.Control\Resource.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.Factory2D.Control\Resource.resx" uniqueID="2a995e7b-87e0-485a-a18b-af576e0282d7" />
-      <file filePath="..\Pic.Factory2D.Control\Resource.es-ES.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.Factory2D.Control\Resource.es-ES.resx" uniqueID="48a96ffe-acea-45a2-99d5-f12d12cd284b" />
       <file filePath="..\Pic.Factory2D.Control\Resource.fr-FR.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.Factory2D.Control\Resource.fr-FR.resx" uniqueID="b866af51-cf0b-46e3-bd34-2a707c2bf352" />
-      <file filePath="..\Pic.Factory2D.Control\Resource.it-IT.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.Factory2D.Control\Resource.it-IT.resx" uniqueID="f08a8d97-8228-42f7-bde1-b29b8a50403e" />
       <file filePath="..\Pic.Factory2D.Control\Resource.ja-JP.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.Factory2D.Control\Resource.ja-JP.resx" uniqueID="7d911260-9e57-4b6e-b16a-9d414e94de75" />
       <remarks>
       </remarks>
