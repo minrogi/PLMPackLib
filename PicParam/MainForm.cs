@@ -1255,7 +1255,6 @@ namespace PicParam
                 // load settings only if not in debug mode
                 if (!Properties.Settings.Default.DebugMode)
                     ToolStripManager.LoadSettings(this, this.Name);
-                toolStripDebug.Visible = Properties.Settings.Default.DebugMode;
 
                 // --- instantiate and start splach screen thread
                 // cardboard format loader

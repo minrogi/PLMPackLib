@@ -127,18 +127,6 @@
 	<data name="toolStripMain.Text" xml:space="preserve">
     <value>Barre d'outils principale</value>
   </data>
-	<data name="toolStripExport.TabIndex" type="System.Int32, mscorlib">
-		<value>3</value>
-	</data>
-	<data name="toolStripExport.Text" xml:space="preserve">
-    <value>Outils export</value>
-  </data>
-	<data name="toolStripDebug.TabIndex" type="System.Int32, mscorlib">
-		<value>1</value>
-	</data>
-	<data name="toolStripDebug.Text" xml:space="preserve">
-    <value>Débogage</value>
-  </data>
 	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
 	<data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
 		<value>54, 20</value>

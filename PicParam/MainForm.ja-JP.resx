@@ -601,12 +601,6 @@
 	<data name="toolStripMain.Text" xml:space="preserve">
     <value>メイン・ツールバー</value>
   </data>
-	<data name="toolStripExport.AccessibleDescription" xml:space="preserve">
-    <value>書き出し・ツールバー</value>
-  </data>
-	<data name="toolStripExport.AccessibleName" xml:space="preserve">
-    <value>書き出し・ツールバー</value>
-  </data>
 	<data name="toolStripButtonPicGEOM.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
 		<value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -874,9 +868,6 @@
   </data>
 	<data name="toolStripButtonPDF3D.ToolTipText" xml:space="preserve">
     <value>PDF 3D ファイルを生成する</value>
-  </data>
-	<data name="toolStripExport.Text" xml:space="preserve">
-    <value>書き出し・ツールバー</value>
   </data>
 	<data name="toolStripEditDLL.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
 		<value>

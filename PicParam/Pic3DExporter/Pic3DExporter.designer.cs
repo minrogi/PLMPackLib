@@ -1672,7 +1672,7 @@ namespace Pic3DExporter
         /// Serializes current task_OPEN_COLLADA_CHROME object into an XML document
         /// </summary>
         /// <returns>string XML value</returns>
-        public virtual string Serialize()
+        public override string Serialize()
         {
             System.IO.StreamReader streamReader = null;
             System.IO.MemoryStream memoryStream = null;
@@ -1726,7 +1726,7 @@ namespace Pic3DExporter
             return Deserialize(xml, out obj, out exception);
         }
 
-        public static task_OPEN_COLLADA_CHROME Deserialize(string xml)
+        public static new task_OPEN_COLLADA_CHROME Deserialize(string xml)
         {
             System.IO.StringReader stringReader = null;
             try
@@ -1749,7 +1749,7 @@ namespace Pic3DExporter
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
         /// <returns>true if can serialize and save into file; otherwise, false</returns>
-        public virtual bool SaveToFile(string fileName, out System.Exception exception)
+        public override bool SaveToFile(string fileName, out System.Exception exception)
         {
             exception = null;
             try
@@ -1764,7 +1764,7 @@ namespace Pic3DExporter
             }
         }
 
-        public virtual void SaveToFile(string fileName)
+        public override void SaveToFile(string fileName)
         {
             System.IO.StreamWriter streamWriter = null;
             try
@@ -1813,7 +1813,7 @@ namespace Pic3DExporter
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static task_OPEN_COLLADA_CHROME LoadFromFile(string fileName)
+        public static new task_OPEN_COLLADA_CHROME LoadFromFile(string fileName)
         {
             System.IO.FileStream file = null;
             System.IO.StreamReader sr = null;
@@ -1868,7 +1868,7 @@ namespace Pic3DExporter
         /// Serializes current task_OPEN_PDF_ADOBEREADER object into an XML document
         /// </summary>
         /// <returns>string XML value</returns>
-        public virtual string Serialize()
+        public override string Serialize()
         {
             System.IO.StreamReader streamReader = null;
             System.IO.MemoryStream memoryStream = null;
@@ -1922,7 +1922,7 @@ namespace Pic3DExporter
             return Deserialize(xml, out obj, out exception);
         }
 
-        public static task_OPEN_PDF_ADOBEREADER Deserialize(string xml)
+        public static new task_OPEN_PDF_ADOBEREADER Deserialize(string xml)
         {
             System.IO.StringReader stringReader = null;
             try
@@ -1945,7 +1945,7 @@ namespace Pic3DExporter
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
         /// <returns>true if can serialize and save into file; otherwise, false</returns>
-        public virtual bool SaveToFile(string fileName, out System.Exception exception)
+        public override bool SaveToFile(string fileName, out System.Exception exception)
         {
             exception = null;
             try
@@ -1960,7 +1960,7 @@ namespace Pic3DExporter
             }
         }
 
-        public virtual void SaveToFile(string fileName)
+        public override void SaveToFile(string fileName)
         {
             System.IO.StreamWriter streamWriter = null;
             try
@@ -2009,7 +2009,7 @@ namespace Pic3DExporter
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static task_OPEN_PDF_ADOBEREADER LoadFromFile(string fileName)
+        public static new task_OPEN_PDF_ADOBEREADER LoadFromFile(string fileName)
         {
             System.IO.FileStream file = null;
             System.IO.StreamReader sr = null;
@@ -2064,7 +2064,7 @@ namespace Pic3DExporter
         /// Serializes current task_DES3_REPLACETEXTURES object into an XML document
         /// </summary>
         /// <returns>string XML value</returns>
-        public virtual string Serialize()
+        public override string Serialize()
         {
             System.IO.StreamReader streamReader = null;
             System.IO.MemoryStream memoryStream = null;
@@ -2118,7 +2118,7 @@ namespace Pic3DExporter
             return Deserialize(xml, out obj, out exception);
         }
 
-        public static task_DES3_REPLACETEXTURES Deserialize(string xml)
+        public static new task_DES3_REPLACETEXTURES Deserialize(string xml)
         {
             System.IO.StringReader stringReader = null;
             try
@@ -2141,7 +2141,7 @@ namespace Pic3DExporter
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
         /// <returns>true if can serialize and save into file; otherwise, false</returns>
-        public virtual bool SaveToFile(string fileName, out System.Exception exception)
+        public override bool SaveToFile(string fileName, out System.Exception exception)
         {
             exception = null;
             try
@@ -2156,7 +2156,7 @@ namespace Pic3DExporter
             }
         }
 
-        public virtual void SaveToFile(string fileName)
+        public override void SaveToFile(string fileName)
         {
             System.IO.StreamWriter streamWriter = null;
             try
@@ -2205,7 +2205,7 @@ namespace Pic3DExporter
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static task_DES3_REPLACETEXTURES LoadFromFile(string fileName)
+        public static new task_DES3_REPLACETEXTURES LoadFromFile(string fileName)
         {
             System.IO.FileStream file = null;
             System.IO.StreamReader sr = null;
@@ -2281,7 +2281,7 @@ namespace Pic3DExporter
         /// Serializes current task_DES3_EXTRACTTEXTURES object into an XML document
         /// </summary>
         /// <returns>string XML value</returns>
-        public virtual string Serialize()
+        public override string Serialize()
         {
             System.IO.StreamReader streamReader = null;
             System.IO.MemoryStream memoryStream = null;
@@ -2335,7 +2335,7 @@ namespace Pic3DExporter
             return Deserialize(xml, out obj, out exception);
         }
 
-        public static task_DES3_EXTRACTTEXTURES Deserialize(string xml)
+        public static new task_DES3_EXTRACTTEXTURES Deserialize(string xml)
         {
             System.IO.StringReader stringReader = null;
             try
@@ -2358,7 +2358,7 @@ namespace Pic3DExporter
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
         /// <returns>true if can serialize and save into file; otherwise, false</returns>
-        public virtual bool SaveToFile(string fileName, out System.Exception exception)
+        public override bool SaveToFile(string fileName, out System.Exception exception)
         {
             exception = null;
             try
@@ -2373,7 +2373,7 @@ namespace Pic3DExporter
             }
         }
 
-        public virtual void SaveToFile(string fileName)
+        public override void SaveToFile(string fileName)
         {
             System.IO.StreamWriter streamWriter = null;
             try
@@ -2422,7 +2422,7 @@ namespace Pic3DExporter
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static task_DES3_EXTRACTTEXTURES LoadFromFile(string fileName)
+        public static new task_DES3_EXTRACTTEXTURES LoadFromFile(string fileName)
         {
             System.IO.FileStream file = null;
             System.IO.StreamReader sr = null;
@@ -2513,7 +2513,7 @@ namespace Pic3DExporter
         /// Serializes current task_2D_TO_DES3 object into an XML document
         /// </summary>
         /// <returns>string XML value</returns>
-        public virtual string Serialize()
+        public override string Serialize()
         {
             System.IO.StreamReader streamReader = null;
             System.IO.MemoryStream memoryStream = null;
@@ -2567,7 +2567,7 @@ namespace Pic3DExporter
             return Deserialize(xml, out obj, out exception);
         }
 
-        public static task_2D_TO_DES3 Deserialize(string xml)
+        public static new task_2D_TO_DES3 Deserialize(string xml)
         {
             System.IO.StringReader stringReader = null;
             try
@@ -2590,7 +2590,7 @@ namespace Pic3DExporter
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
         /// <returns>true if can serialize and save into file; otherwise, false</returns>
-        public virtual bool SaveToFile(string fileName, out System.Exception exception)
+        public override bool SaveToFile(string fileName, out System.Exception exception)
         {
             exception = null;
             try
@@ -2605,7 +2605,7 @@ namespace Pic3DExporter
             }
         }
 
-        public virtual void SaveToFile(string fileName)
+        public override void SaveToFile(string fileName)
         {
             System.IO.StreamWriter streamWriter = null;
             try
@@ -2654,7 +2654,7 @@ namespace Pic3DExporter
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static task_2D_TO_DES3 LoadFromFile(string fileName)
+        public static new task_2D_TO_DES3 LoadFromFile(string fileName)
         {
             System.IO.FileStream file = null;
             System.IO.StreamReader sr = null;
@@ -3022,7 +3022,7 @@ namespace Pic3DExporter
         /// Serializes current task_ZAE_TO_AUGMENT object into an XML document
         /// </summary>
         /// <returns>string XML value</returns>
-        public virtual string Serialize()
+        public override string Serialize()
         {
             System.IO.StreamReader streamReader = null;
             System.IO.MemoryStream memoryStream = null;
@@ -3076,7 +3076,7 @@ namespace Pic3DExporter
             return Deserialize(xml, out obj, out exception);
         }
 
-        public static task_ZAE_TO_AUGMENT Deserialize(string xml)
+        public static new task_ZAE_TO_AUGMENT Deserialize(string xml)
         {
             System.IO.StringReader stringReader = null;
             try
@@ -3099,7 +3099,7 @@ namespace Pic3DExporter
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
         /// <returns>true if can serialize and save into file; otherwise, false</returns>
-        public virtual bool SaveToFile(string fileName, out System.Exception exception)
+        public override bool SaveToFile(string fileName, out System.Exception exception)
         {
             exception = null;
             try
@@ -3114,7 +3114,7 @@ namespace Pic3DExporter
             }
         }
 
-        public virtual void SaveToFile(string fileName)
+        public override void SaveToFile(string fileName)
         {
             System.IO.StreamWriter streamWriter = null;
             try
@@ -3163,7 +3163,7 @@ namespace Pic3DExporter
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static task_ZAE_TO_AUGMENT LoadFromFile(string fileName)
+        public static new task_ZAE_TO_AUGMENT LoadFromFile(string fileName)
         {
             System.IO.FileStream file = null;
             System.IO.StreamReader sr = null;
@@ -3600,7 +3600,7 @@ namespace Pic3DExporter
         /// Serializes current task_COLLADA_TO_ZAE object into an XML document
         /// </summary>
         /// <returns>string XML value</returns>
-        public virtual string Serialize()
+        public override string Serialize()
         {
             System.IO.StreamReader streamReader = null;
             System.IO.MemoryStream memoryStream = null;
@@ -3654,7 +3654,7 @@ namespace Pic3DExporter
             return Deserialize(xml, out obj, out exception);
         }
 
-        public static task_COLLADA_TO_ZAE Deserialize(string xml)
+        public static new task_COLLADA_TO_ZAE Deserialize(string xml)
         {
             System.IO.StringReader stringReader = null;
             try
@@ -3677,7 +3677,7 @@ namespace Pic3DExporter
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
         /// <returns>true if can serialize and save into file; otherwise, false</returns>
-        public virtual bool SaveToFile(string fileName, out System.Exception exception)
+        public override bool SaveToFile(string fileName, out System.Exception exception)
         {
             exception = null;
             try
@@ -3692,7 +3692,7 @@ namespace Pic3DExporter
             }
         }
 
-        public virtual void SaveToFile(string fileName)
+        public override void SaveToFile(string fileName)
         {
             System.IO.StreamWriter streamWriter = null;
             try
@@ -3741,7 +3741,7 @@ namespace Pic3DExporter
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static task_COLLADA_TO_ZAE LoadFromFile(string fileName)
+        public static new task_COLLADA_TO_ZAE LoadFromFile(string fileName)
         {
             System.IO.FileStream file = null;
             System.IO.StreamReader sr = null;
@@ -3921,7 +3921,7 @@ namespace Pic3DExporter
             return Deserialize(xml, out obj, out exception);
         }
 
-        public static task_DES3_TO_COLLADA Deserialize(string xml)
+        public static new task_DES3_TO_COLLADA Deserialize(string xml)
         {
             System.IO.StringReader stringReader = null;
             try
@@ -4008,7 +4008,7 @@ namespace Pic3DExporter
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static task_DES3_TO_COLLADA LoadFromFile(string fileName)
+        public static new task_DES3_TO_COLLADA LoadFromFile(string fileName)
         {
             System.IO.FileStream file = null;
             System.IO.StreamReader sr = null;
@@ -4388,7 +4388,7 @@ namespace Pic3DExporter
             return Deserialize(xml, out obj, out exception);
         }
 
-        public static task_U3D_TO_PDF Deserialize(string xml)
+        public static new task_U3D_TO_PDF Deserialize(string xml)
         {
             System.IO.StringReader stringReader = null;
             try
@@ -4426,7 +4426,7 @@ namespace Pic3DExporter
             }
         }
 
-        public virtual void SaveToFile(string fileName)
+        public override void SaveToFile(string fileName)
         {
             System.IO.StreamWriter streamWriter = null;
             try
@@ -4475,7 +4475,7 @@ namespace Pic3DExporter
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static task_U3D_TO_PDF LoadFromFile(string fileName)
+        public static new task_U3D_TO_PDF LoadFromFile(string fileName)
         {
             System.IO.FileStream file = null;
             System.IO.StreamReader sr = null;
@@ -5204,7 +5204,7 @@ namespace Pic3DExporter
             return Deserialize(xml, out obj, out exception);
         }
 
-        public static task_DES3_TO_U3D Deserialize(string xml)
+        public static new task_DES3_TO_U3D Deserialize(string xml)
         {
             System.IO.StringReader stringReader = null;
             try
@@ -5227,7 +5227,7 @@ namespace Pic3DExporter
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
         /// <returns>true if can serialize and save into file; otherwise, false</returns>
-        public virtual bool SaveToFile(string fileName, out System.Exception exception)
+        public override bool SaveToFile(string fileName, out System.Exception exception)
         {
             exception = null;
             try
@@ -5291,7 +5291,7 @@ namespace Pic3DExporter
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static task_DES3_TO_U3D LoadFromFile(string fileName)
+        public static new task_DES3_TO_U3D LoadFromFile(string fileName)
         {
             System.IO.FileStream file = null;
             System.IO.StreamReader sr = null;

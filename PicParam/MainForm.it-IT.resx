@@ -1014,12 +1014,6 @@
 	<data name="&gt;&gt;toolStripMain.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-	<metadata name="toolStripExport.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-		<value>126, 24</value>
-	</metadata>
-	<data name="toolStripExport.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-		<value>None</value>
-	</data>
 	<data name="toolStripButtonPicGEOM.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
 		<value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -1324,33 +1318,6 @@
 	<data name="toolStripButtonPDF3D.Size" type="System.Drawing.Size, System.Drawing">
 		<value>36, 36</value>
 	</data>
-	<data name="toolStripExport.Location" type="System.Drawing.Point, System.Drawing">
-		<value>3, 63</value>
-	</data>
-	<data name="toolStripExport.Size" type="System.Drawing.Size, System.Drawing">
-		<value>529, 39</value>
-	</data>
-	<data name="toolStripExport.TabIndex" type="System.Int32, mscorlib">
-		<value>2</value>
-	</data>
-	<data name="&gt;&gt;toolStripExport.Name" xml:space="preserve">
-    <value>toolStripExport</value>
-  </data>
-	<data name="&gt;&gt;toolStripExport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;toolStripExport.Parent" xml:space="preserve">
-    <value>toolStripContainerDefault.TopToolStripPanel</value>
-  </data>
-	<data name="&gt;&gt;toolStripExport.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-	<metadata name="toolStripDebug.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-		<value>256, 21</value>
-	</metadata>
-	<data name="toolStripDebug.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-		<value>None</value>
-	</data>
 	<data name="toolStripEditDLL.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
 		<value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -1365,27 +1332,6 @@
 	<data name="toolStripEditDLL.Size" type="System.Drawing.Size, System.Drawing">
 		<value>36, 36</value>
 	</data>
-	<data name="toolStripDebug.Location" type="System.Drawing.Point, System.Drawing">
-		<value>4, 102</value>
-	</data>
-	<data name="toolStripDebug.Size" type="System.Drawing.Size, System.Drawing">
-		<value>48, 39</value>
-	</data>
-	<data name="toolStripDebug.TabIndex" type="System.Int32, mscorlib">
-		<value>3</value>
-	</data>
-	<data name="&gt;&gt;toolStripDebug.Name" xml:space="preserve">
-    <value>toolStripDebug</value>
-  </data>
-	<data name="&gt;&gt;toolStripDebug.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;toolStripDebug.Parent" xml:space="preserve">
-    <value>toolStripContainerDefault.TopToolStripPanel</value>
-  </data>
-	<data name="&gt;&gt;toolStripDebug.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
 	<data name="&gt;&gt;toolStripContainerDefault.TopToolStripPanel.Name" xml:space="preserve">
     <value>toolStripContainerDefault.TopToolStripPanel</value>
   </data>
@@ -1973,12 +1919,6 @@
 	<data name="toolStripMain.Text" xml:space="preserve">
 		<value>Strumenti principali</value>
 	</data>
-	<data name="toolStripExport.AccessibleDescription" xml:space="preserve">
-		<value>Esposta strumenti</value>
-	</data>
-	<data name="toolStripExport.AccessibleName" xml:space="preserve">
-		<value>Esposta strumenti</value>
-	</data>
 	<data name="toolStripButtonPicGEOM.Text" xml:space="preserve">
 		<value>Apri con PicGEOM</value>
 	</data>
@@ -2029,18 +1969,6 @@
 	</data>
 	<data name="toolStripButtonPDF3D.ToolTipText" xml:space="preserve">
 		<value>Genera file PDF 3D</value>
-	</data>
-	<data name="toolStripExport.Text" xml:space="preserve">
-		<value>Esposta strumenti</value>
-	</data>
-	<data name="toolStripDebug.AccessibleDescription" xml:space="preserve">
-		<value>Strumenti per eliminare gli errori</value>
-	</data>
-	<data name="toolStripDebug.AccessibleName" xml:space="preserve">
-		<value>Strumenti per eliminare gli errori</value>
-	</data>
-	<data name="toolStripDebug.Text" xml:space="preserve">
-		<value>Strumenti per eliminare gli errori</value>
 	</data>
 	<data name="fileToolStripMenuItem.Text" xml:space="preserve">
 		<value>File</value>

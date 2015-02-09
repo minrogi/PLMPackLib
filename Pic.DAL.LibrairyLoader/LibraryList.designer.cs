@@ -24,19 +24,15 @@ namespace Pic.DAL.LibraryLoader
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.treedim.com/LibraryList.xsd", IsNullable = false)]
     public partial class Library
     {
+        /*
         private string nameField;
-
         private string descriptionField;
-
         private string authorField;
-
         private string infoUrlField;
-
         private string fileNameField;
-
         private string thumbnailPathField;
-
         private System.DateTime dateCreatedField;
+        */ 
 
         private static System.Xml.Serialization.XmlSerializer serializer;
 
@@ -258,11 +254,11 @@ namespace Pic.DAL.LibraryLoader
 
         private List<Library> libraryField;
 
+        /*
         private string authorField;
-
         private System.DateTime dateCreatedField;
-
         private System.DateTime dateModifiedField;
+        */
 
         private static System.Xml.Serialization.XmlSerializer serializer;
 

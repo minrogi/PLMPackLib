@@ -19,6 +19,9 @@
     <DefineConstants>
     </DefineConstants>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\$(Configuration)\woDatabase\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="asm_fragment.wxs" />
     <Compile Include="DirectoryTree.wxs" />
