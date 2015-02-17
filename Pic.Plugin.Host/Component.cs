@@ -257,6 +257,18 @@ public void FlatDimensions(ParameterStack stack, out double[] flatDimensions)
             }
             return false; 
         }
+
+        public bool GetFlatDimensions(ParameterStack stack, ref double length, ref double width, ref double height)
+        {
+            if (null != _ext3 && _ext3.IsSupportingFlatPalletization)
+            {
+                double[] dim;
+                _ext3.FlatDimensions(stack, out dim);
+                length = dim[0]; width = dim[1]; height = dim[2];
+                return true;
+            }
+            return false;
+        }
         /// <summary>
         /// Internal plugin accessor
         /// </summary>

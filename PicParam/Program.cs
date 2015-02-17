@@ -103,7 +103,7 @@ namespace PicParam
         protected override void OnCreateMainForm()
         {
             // Then create the main form, the splash screen will close automatically
-            this.MainForm = new MainForm();
+            this.MainForm = new FormMain();
         }
     }
 }

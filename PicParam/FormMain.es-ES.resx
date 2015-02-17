@@ -190,7 +190,7 @@
     <value>_treeViewCtrl</value>
   </data>
 	<data name="&gt;&gt;_treeViewCtrl.Type" xml:space="preserve">
-    <value>PicParam.DocumentTreeView, PLMPackLib, Version=7.0.12.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>PicParam.DocumentTreeView, PLMPackLib, Version=7.0.14.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 	<data name="&gt;&gt;_treeViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel1</value>
@@ -256,7 +256,7 @@
     <value>_branchViewCtrl</value>
   </data>
 	<data name="&gt;&gt;_branchViewCtrl.Type" xml:space="preserve">
-    <value>PicParam.DocumentTreeBranchView, PLMPackLib, Version=7.0.12.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>PicParam.DocumentTreeBranchView, PLMPackLib, Version=7.0.14.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 	<data name="&gt;&gt;_branchViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -316,7 +316,7 @@
     <value>_pluginViewCtrl</value>
   </data>
 	<data name="&gt;&gt;_pluginViewCtrl.Type" xml:space="preserve">
-    <value>Pic.Plugin.ViewCtrl.PluginViewCtrl, Pic.Plugin.ViewCtrl, Version=7.0.12.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>Pic.Plugin.ViewCtrl.PluginViewCtrl, Pic.Plugin.ViewCtrl, Version=7.0.14.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 	<data name="&gt;&gt;_pluginViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -340,7 +340,7 @@
     <value>_factoryViewCtrl</value>
   </data>
 	<data name="&gt;&gt;_factoryViewCtrl.Type" xml:space="preserve">
-    <value>Pic.Factory2D.Control.FactoryViewerBase, Pic.Factory2D.Control, Version=7.0.12.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>Pic.Factory2D.Control.FactoryViewerBase, Pic.Factory2D.Control, Version=7.0.14.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 	<data name="&gt;&gt;_factoryViewCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -367,7 +367,7 @@
     <value>_startPageCtrl</value>
   </data>
 	<data name="&gt;&gt;_startPageCtrl.Type" xml:space="preserve">
-    <value>PicParam.StartPageControl, PLMPackLib, Version=7.0.12.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>PicParam.StartPageControl, PLMPackLib, Version=7.0.14.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 	<data name="&gt;&gt;_startPageCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -391,7 +391,7 @@
     <value>_downloadPageCtrl</value>
   </data>
 	<data name="&gt;&gt;_downloadPageCtrl.Type" xml:space="preserve">
-    <value>PicParam.DownloadPageControl, PLMPackLib, Version=7.0.12.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>PicParam.DownloadPageControl, PLMPackLib, Version=7.0.14.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 	<data name="&gt;&gt;_downloadPageCtrl.Parent" xml:space="preserve">
     <value>_splitContainer.Panel2</value>
@@ -1901,196 +1901,4 @@
 	<data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-	<data name="statusStrip1.Text" xml:space="preserve">
-		<value>Stato</value>
-	</data>
-	<data name="toolStripContainerDefault.Text" xml:space="preserve">
-		<value>toolStripContainerDefault</value>
-	</data>
-	<data name="menuStripMain.Text" xml:space="preserve">
-		<value>Standard</value>
-	</data>
-	<data name="toolStripMain.AccessibleDescription" xml:space="preserve">
-		<value>Principale</value>
-	</data>
-	<data name="toolStripMain.AccessibleName" xml:space="preserve">
-		<value>Principale</value>
-	</data>
-	<data name="toolStripMain.Text" xml:space="preserve">
-		<value>Strumenti principali</value>
-	</data>
-	<data name="toolStripButtonPicGEOM.Text" xml:space="preserve">
-		<value>Apri con PicGEOM</value>
-	</data>
-	<data name="toolStripButtonPicDecoup.Text" xml:space="preserve">
-		<value>Apri con PicDecoup</value>
-	</data>
-	<data name="toolStripButtonPicDecoup.ToolTipText" xml:space="preserve">
-		<value>Apri con PicDecoup</value>
-	</data>
-	<data name="toolStripButtonPicador3D.Text" xml:space="preserve">
-		<value>Apri con Picador3D</value>
-	</data>
-	<data name="toolStripButtonDXF.Text" xml:space="preserve">
-		<value>Apri il file DXF con l'applicazione di modifica</value>
-	</data>
-	<data name="toolStripButtonCFF2.Text" xml:space="preserve">
-		<value>Apri il file CFF2 con l'applicazione di modifica</value>
-	</data>
-	<data name="toolStripButtonAI.Text" xml:space="preserve">
-		<value>Apri il file AI con l'applicazione di modifica</value>
-	</data>
-	<data name="toolStripButtonPDF.Text" xml:space="preserve">
-		<value>Apri con Adobe Acrobat Reader</value>
-	</data>
-	<data name="toolStripButtonARISTO.Text" xml:space="preserve">
-		<value>Invia ad ARISTO</value>
-	</data>
-	<data name="toolStripButtonOceProCut.Text" xml:space="preserve">
-		<value>Invia a Océ Pro Cut</value>
-	</data>
-	<data name="toolStripButtonZUND.Text" xml:space="preserve">
-		<value>Invia a ZUND</value>
-	</data>
-	<data name="toolStripButtonCaseOptimization.Text" xml:space="preserve">
-		<value>Ottimizzazione Scatola/Astuccio/Pallet</value>
-	</data>
-	<data name="toolStripButtonCaseOptimization.ToolTipText" xml:space="preserve">
-		<value>Eseguire ottimizzazione scatola/astuccio/pallet con StackBuilder</value>
-	</data>
-	<data name="toolStripButtonPalletization.Text" xml:space="preserve">
-		<value>Analisi Astuccio/Pallet</value>
-	</data>
-	<data name="toolStripButtonPalletization.ToolTipText" xml:space="preserve">
-		<value>Eseguire analisi Astuccio/Pallet con StackBuilder </value>
-	</data>
-	<data name="toolStripButtonPDF3D.Text" xml:space="preserve">
-		<value>Genera modello PDF3D</value>
-	</data>
-	<data name="toolStripButtonPDF3D.ToolTipText" xml:space="preserve">
-		<value>Genera file PDF 3D</value>
-	</data>
-	<data name="fileToolStripMenuItem.Text" xml:space="preserve">
-		<value>File</value>
-	</data>
-	<data name="exportToolStripMenuItem.Text" xml:space="preserve">
-		<value>Esportazione...</value>
-	</data>
-	<data name="toolStripMenuItemPicGEOM.Text" xml:space="preserve">
-		<value>Invia a PicGEOM</value>
-	</data>
-	<data name="toolStripMenuItemBrowseFile.Text" xml:space="preserve">
-		<value>Sfoglia i file…</value>
-	</data>
-	<data name="exitToolStripMenuItem.Text" xml:space="preserve">
-		<value>Esci</value>
-	</data>
-	<data name="toolStripMenuItemView.Text" xml:space="preserve">
-		<value>Vista</value>
-	</data>
-	<data name="toolStripMenuItemCotations.Text" xml:space="preserve">
-		<value>Quote</value>
-	</data>
-	<data name="toolStripMenuItemCotationShortLines.Text" xml:space="preserve">
-		<value>Linee corte</value>
-	</data>
-	<data name="reflectionXToolStripMenuItem.Text" xml:space="preserve">
-		<value>Riflessione X</value>
-	</data>
-	<data name="reflectionYToolStripMenuItem.Text" xml:space="preserve">
-		<value>Riflessione Y</value>
-	</data>
-	<data name="databaseToolStripMenuItem.Text" xml:space="preserve">
-		<value>Database</value>
-	</data>
-	<data name="backupToolStripMenuItem1.Text" xml:space="preserve">
-		<value>Backup...</value>
-	</data>
-	<data name="restoreToolStripMenuItem1.Text" xml:space="preserve">
-		<value>Ripristina…</value>
-	</data>
-	<data name="mergeDatabaseToolStripMenuItem1.Text" xml:space="preserve">
-		<value>Unisci database…</value>
-	</data>
-	<data name="clearDatabaseToolStripMenuItem.Text" xml:space="preserve">
-		<value>Pulisci database…</value>
-	</data>
-	<data name="defineDatabasePathToolStripMenuItem.Text" xml:space="preserve">
-		<value>Definisci percorso database…</value>
-	</data>
-	<data name="mnuFileMRU.Text" xml:space="preserve">
-		<value>Database recentemente usato…</value>
-	</data>
-	<data name="toolsToolStripMenuItem.Text" xml:space="preserve">
-		<value>Strumenti</value>
-	</data>
-	<data name="toolStripMenuItemEditprofiles.Text" xml:space="preserve">
-		<value>Modifica profili</value>
-	</data>
-	<data name="toolStripMenuItemEditCardboardFormats.Text" xml:space="preserve">
-		<value>Modifica formati cartone</value>
-	</data>
-	<data name="layoutToolStripMenuItem.Text" xml:space="preserve">
-		<value>Impaginazione…</value>
-	</data>
-	<data name="toolStripMenuItemCustomize.Text" xml:space="preserve">
-		<value>Personalizza…</value>
-	</data>
-	<data name="helpToolStripMenuItem.Text" xml:space="preserve">
-		<value>Aiuto</value>
-	</data>
-	<data name="toolStripMenuItemAboutTreeDimPicParam.Text" xml:space="preserve">
-		<value>A proposito di TreeDim PLMPackLib...</value>
-	</data>
-	<data name="toolStripButtonRoot.Text" xml:space="preserve">
-		<value>Vai al nodo iniziale</value>
-	</data>
-	<data name="toolStripButtonDownload.Text" xml:space="preserve">
-		<value>Vai alla pagina di download</value>
-	</data>
-	<data name="toolStripButtonStartPageWeb.Text" xml:space="preserve">
-		<value>Apri la pagina web di PLMPackLib</value>
-	</data>
-	<data name="toolStripButtonSearch.Text" xml:space="preserve">
-		<value>Cerca…</value>
-	</data>
-	<data name="toolStripButtonExport.Text" xml:space="preserve">
-		<value>Esportazione...</value>
-	</data>
-	<data name="toolStripButtonCotations.Text" xml:space="preserve">
-		<value>Mostra / nascondi quote…</value>
-	</data>
-	<data name="toolStripButtonCotations.ToolTipText" xml:space="preserve">
-		<value>Nascondi quote</value>
-	</data>
-	<data name="toolStripButtonReflectionX.Text" xml:space="preserve">
-		<value>Riflessione % X</value>
-	</data>
-	<data name="toolStripButtonReflectionY.Text" xml:space="preserve">
-		<value>Riflessione % Y</value>
-	</data>
-	<data name="toolStripEditComponentCode.Text" xml:space="preserve">
-		<value>Modifica codice componente</value>
-	</data>
-	<data name="toolStripButtonEditParameters.Text" xml:space="preserve">
-		<value>Modifica parametri…</value>
-	</data>
-	<data name="toolStripButtonLayout.Text" xml:space="preserve">
-		<value>Costruisci impaginazione</value>
-	</data>
-	<data name="toolStripButtonLayout.ToolTipText" xml:space="preserve">
-		<value>Impaginazione…</value>
-	</data>
-	<data name="toolStripButtonHelp.Text" xml:space="preserve">
-		<value>Aiuto</value>
-	</data>
-	<data name="toolStripEditDLL.Text" xml:space="preserve">
-		<value>Modifica i parametri dei componenti…</value>
-	</data>
-	<data name="saveFileDialogBackup.Filter" xml:space="preserve">
-		<value>Backup file (*.zip)|*.zip</value>
-	</data>
-	<data name="$this.Text" xml:space="preserve">
-		<value>PLMPackLib</value>
-	</data>
 </root>

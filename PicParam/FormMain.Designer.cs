@@ -1,6 +1,6 @@
 ﻿namespace PicParam
 {
-    partial class MainForm
+    partial class FormMain
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this._pluginViewCtrl = new Pic.Plugin.ViewCtrl.PluginViewCtrl();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this._splitContainer = new System.Windows.Forms.SplitContainer();
+            this._treeViewCtrl = new PicParam.DocumentTreeView();
             this._webBrowser4PDF = new System.Windows.Forms.WebBrowser();
+            this._branchViewCtrl = new PicParam.DocumentTreeBranchView();
             this._factoryViewCtrl = new Pic.Factory2D.Control.FactoryViewerBase();
+            this._startPageCtrl = new PicParam.StartPageControl();
+            this._downloadPageCtrl = new PicParam.DownloadPageControl();
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,6 +102,8 @@
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonCaseOptimization = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPalletization = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBundlePalletAnalysis = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBundleCaseAnalysis = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonDES3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPDF3D = new System.Windows.Forms.ToolStripButton();
@@ -105,10 +111,6 @@
             this.toolStripButtonHelp = new System.Windows.Forms.ToolStripButton();
             this.openFileDialogRestore = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogBackup = new System.Windows.Forms.SaveFileDialog();
-            this._treeViewCtrl = new PicParam.DocumentTreeView();
-            this._branchViewCtrl = new PicParam.DocumentTreeBranchView();
-            this._startPageCtrl = new PicParam.StartPageControl();
-            this._downloadPageCtrl = new PicParam.DownloadPageControl();
             ((System.ComponentModel.ISupportInitialize)(this._pluginViewCtrl)).BeginInit();
             this._pluginViewCtrl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._splitContainer)).BeginInit();
@@ -161,10 +163,22 @@
             this._splitContainer.Panel2.Controls.Add(this._startPageCtrl);
             this._splitContainer.Panel2.Controls.Add(this._downloadPageCtrl);
             // 
+            // _treeViewCtrl
+            // 
+            this._treeViewCtrl.AllowDrop = true;
+            resources.ApplyResources(this._treeViewCtrl, "_treeViewCtrl");
+            this._treeViewCtrl.Name = "_treeViewCtrl";
+            this._treeViewCtrl.ShowNodeToolTips = true;
+            // 
             // _webBrowser4PDF
             // 
             resources.ApplyResources(this._webBrowser4PDF, "_webBrowser4PDF");
             this._webBrowser4PDF.Name = "_webBrowser4PDF";
+            // 
+            // _branchViewCtrl
+            // 
+            resources.ApplyResources(this._branchViewCtrl, "_branchViewCtrl");
+            this._branchViewCtrl.Name = "_branchViewCtrl";
             // 
             // _factoryViewCtrl
             // 
@@ -175,6 +189,17 @@
             this._factoryViewCtrl.ShowAboutMenu = false;
             this._factoryViewCtrl.ShowCotations = false;
             this._factoryViewCtrl.ShowNestingMenu = false;
+            // 
+            // _startPageCtrl
+            // 
+            resources.ApplyResources(this._startPageCtrl, "_startPageCtrl");
+            this._startPageCtrl.Name = "_startPageCtrl";
+            this._startPageCtrl.Url = new System.Uri("about:blank", System.UriKind.Absolute);
+            // 
+            // _downloadPageCtrl
+            // 
+            resources.ApplyResources(this._downloadPageCtrl, "_downloadPageCtrl");
+            this._downloadPageCtrl.Name = "_downloadPageCtrl";
             // 
             // menuStripMain
             // 
@@ -440,6 +465,8 @@
             this.toolStripSeparator7,
             this.toolStripButtonCaseOptimization,
             this.toolStripButtonPalletization,
+            this.toolStripBundlePalletAnalysis,
+            this.toolStripBundleCaseAnalysis,
             this.toolStripSeparator14,
             this.toolStripButtonDES3,
             this.toolStripButtonPDF3D,
@@ -644,6 +671,20 @@
             this.toolStripButtonPalletization.Name = "toolStripButtonPalletization";
             this.toolStripButtonPalletization.Click += new System.EventHandler(this.toolStripButtonPalletization_Click);
             // 
+            // toolStripBundlePalletAnalysis
+            // 
+            this.toolStripBundlePalletAnalysis.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.toolStripBundlePalletAnalysis, "toolStripBundlePalletAnalysis");
+            this.toolStripBundlePalletAnalysis.Name = "toolStripBundlePalletAnalysis";
+            this.toolStripBundlePalletAnalysis.Click += new System.EventHandler(this.toolStripButtonBundlePallet_Click);
+            // 
+            // toolStripBundleCaseAnalysis
+            // 
+            this.toolStripBundleCaseAnalysis.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.toolStripBundleCaseAnalysis, "toolStripBundleCaseAnalysis");
+            this.toolStripBundleCaseAnalysis.Name = "toolStripBundleCaseAnalysis";
+            this.toolStripBundleCaseAnalysis.Click += new System.EventHandler(this.toolStripButtonBundleCase_Click);
+            // 
             // toolStripSeparator14
             // 
             this.toolStripSeparator14.Name = "toolStripSeparator14";
@@ -679,30 +720,7 @@
             // 
             resources.ApplyResources(this.saveFileDialogBackup, "saveFileDialogBackup");
             // 
-            // _treeViewCtrl
-            // 
-            this._treeViewCtrl.AllowDrop = true;
-            resources.ApplyResources(this._treeViewCtrl, "_treeViewCtrl");
-            this._treeViewCtrl.Name = "_treeViewCtrl";
-            this._treeViewCtrl.ShowNodeToolTips = true;
-            // 
-            // _branchViewCtrl
-            // 
-            resources.ApplyResources(this._branchViewCtrl, "_branchViewCtrl");
-            this._branchViewCtrl.Name = "_branchViewCtrl";
-            // 
-            // _startPageCtrl
-            // 
-            resources.ApplyResources(this._startPageCtrl, "_startPageCtrl");
-            this._startPageCtrl.Name = "_startPageCtrl";
-            this._startPageCtrl.Url = new System.Uri("about:blank", System.UriKind.Absolute);
-            // 
-            // _downloadPageCtrl
-            // 
-            resources.ApplyResources(this._downloadPageCtrl, "_downloadPageCtrl");
-            this._downloadPageCtrl.Name = "_downloadPageCtrl";
-            // 
-            // MainForm
+            // FormMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -710,7 +728,7 @@
             this.Controls.Add(this.menuStripMain);
             this.Controls.Add(this.toolStripMain);
             this.Controls.Add(this._splitContainer);
-            this.Name = "MainForm";
+            this.Name = "FormMain";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.SizeChanged += new System.EventHandler(this.UpdateTextPosition);
@@ -729,7 +747,6 @@
             this.PerformLayout();
 
         }
-
         #endregion
 
         private Pic.Plugin.ViewCtrl.PluginViewCtrl _pluginViewCtrl;
@@ -812,6 +829,8 @@
         private System.Windows.Forms.ToolStripMenuItem editComponentDllToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator16;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
+        private System.Windows.Forms.ToolStripButton toolStripBundlePalletAnalysis;
+        private System.Windows.Forms.ToolStripButton toolStripBundleCaseAnalysis;
     }
 }
 

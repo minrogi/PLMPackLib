@@ -24,10 +24,10 @@ using MRU;
 
 namespace PicParam
 {
-    public partial class MainForm : Form, IMRUClient
+    public partial class FormMain : Form, IMRUClient
     {
         #region Constructor
-        public MainForm()
+        public FormMain()
         {
             try
             {
@@ -998,6 +998,8 @@ namespace PicParam
                 // only allow palletization / case optimisation when a component is selected
                 toolStripButtonPalletization.Enabled = _pluginViewCtrl.Visible && _pluginViewCtrl.AllowPalletization;
                 toolStripButtonCaseOptimization.Enabled = _pluginViewCtrl.Visible && _pluginViewCtrl.AllowPalletization;
+                toolStripBundleCaseAnalysis.Enabled = _pluginViewCtrl.Visible && _pluginViewCtrl.AllowFlatPalletization;
+                toolStripBundlePalletAnalysis.Enabled = _pluginViewCtrl.Visible && _pluginViewCtrl.AllowFlatPalletization;
                 // enable export toolbar buttons
                 toolStripButtonExport.Enabled = buttonsEnabled || _webBrowser4PDF.Visible;
                 toolStripButtonPicGEOM.Enabled = buttonsEnabled && ApplicationAvailabilityChecker.IsAvailable("PicGEOM");
@@ -1195,10 +1197,7 @@ namespace PicParam
             {
                 double length = 0.0, width = 0.0, height = 0.0;
                 if (_pluginViewCtrl.GetDimensions(ref length, ref width, ref height))
-                {
-                    TreeDim.StackBuilder.GUIExtension.Palletization palletization = new Palletization();
-                    palletization.StartPalletization(_pluginViewCtrl.LoadedComponentName, length, width, height);
-                }
+                    Palletization.StartPalletization(_pluginViewCtrl.LoadedComponentName, length, width, height);
             }
             catch (Exception ex)
             {
@@ -1212,10 +1211,34 @@ namespace PicParam
             {
                 double length = 0.0, width = 0.0, height = 0.0;
                 if (_pluginViewCtrl.GetDimensions(ref length, ref width, ref height))
-                {
-                    TreeDim.StackBuilder.GUIExtension.Palletization palletization = new Palletization();
-                    palletization.StartCaseOptimization(_pluginViewCtrl.LoadedComponentName, length, width, height);
-                }
+                    Palletization.StartCaseOptimization(_pluginViewCtrl.LoadedComponentName, length, width, height);
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.ToString());
+            }
+        }
+        private void toolStripButtonBundlePallet_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double length = 0.0, width = 0.0, height = 0.0;
+                if (_pluginViewCtrl.GetFlatDimensions(ref length, ref width, ref height))
+                    Palletization.StartBundlePalletAnalysis(_pluginViewCtrl.LoadedComponentName, length, width, height);
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.ToString());
+            }
+        }
+
+        private void toolStripButtonBundleCase_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double length = 0.0, width = 0.0, height = 0.0;
+                if (_pluginViewCtrl.GetFlatDimensions(ref length, ref width, ref height))
+                    Palletization.StartBundleCaseAnalysis(_pluginViewCtrl.LoadedComponentName, length, width, height);
             }
             catch (Exception ex)
             {
@@ -1457,7 +1480,7 @@ namespace PicParam
         #endregion
 
         #region Data members
-        protected static readonly ILog _log = LogManager.GetLogger(typeof(MainForm));
+        protected static readonly ILog _log = LogManager.GetLogger(typeof(FormMain));
         [NonSerialized]
         protected ProfileLoaderImpl _profileLoaderImpl;
         /// <summary>
@@ -1473,6 +1496,8 @@ namespace PicParam
         /// </summary>
         private MRUManager mruManager;
         #endregion
+
+
 
 
     }

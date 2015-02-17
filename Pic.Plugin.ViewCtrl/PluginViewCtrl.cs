@@ -1006,6 +1006,13 @@ namespace Pic.Plugin.ViewCtrl
             return component.GetDimensions(CurrentParameterStack, ref length, ref width, ref height);
         }
 
+        public bool GetFlatDimensions(ref double length, ref double width, ref double height)
+        {
+            Component component = Component;
+            if (component == null) return false;
+            return component.GetFlatDimensions(CurrentParameterStack, ref length, ref width, ref height);
+        }
+
         public bool AllowPalletization
         {
             get
@@ -1014,6 +1021,17 @@ namespace Pic.Plugin.ViewCtrl
                 Component component = Component;
                 if (component == null) return false;
                 return component.GetDimensions(CurrentParameterStack, ref length, ref width, ref height);
+            }
+        }
+
+        public bool AllowFlatPalletization
+        {
+            get
+            { 
+                double length = 0.0, width = 0.0, height = 0.0;
+                Component component = Component;
+                if (component == null) return false;
+                return component.GetFlatDimensions(CurrentParameterStack, ref length, ref width, ref height);                
             }
         }
 
