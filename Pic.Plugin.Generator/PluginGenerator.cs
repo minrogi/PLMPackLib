@@ -90,15 +90,6 @@ namespace Pic.Plugin
             // get version 
             int iVersion = 3;
             string assemblyVersionNew = "3.0.0.0";
-            /*
-            assemblyVersionNew = assemblyVersion;
-            if (string.Equals(assemblyVersion, "1.0.0.0", StringComparison.InvariantCultureIgnoreCase))
-                iVersion = 1;
-            else if (string.Equals(assemblyVersion, "2.0.0.0", StringComparison.InvariantCultureIgnoreCase))
-                iVersion = 2;
-            else if (string.Equals(assemblyVersion, "3.0.0.0", StringComparison.InvariantCultureIgnoreCase))
-                iVersion = 3;
-            */
 
             using (StreamWriter sw = File.CreateText(sourceFilePath))
             {

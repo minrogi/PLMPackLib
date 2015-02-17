@@ -69,6 +69,27 @@ public bool IsSupportingFlatPalletization
 public void FlatDimensions(ParameterStack stack, out double[] flatDimensions)
 {
     flatDimensions = new double[3];
+}
+/// <summary>
+/// Number of parts
+/// </summary>
+int NoParts
+{   get { return 1; } }
+/// <summary>
+/// Part name
+/// </summary>
+string PartName(int i)
+{
+    string partNames[] = {\""Part0\""};
+    return partName[i];
+}
+/// <summary>
+/// Layer name
+/// </summary>
+string LayerName(int i)
+{
+    string layerName[] = {\""Layer0\""};
+    return layerName[i];
 }";
         static string _SC2_to_SC3_ =
 @"
@@ -83,6 +104,27 @@ public bool IsSupportingFlatPalletization
 public void FlatDimensions(ParameterStack stack, out double[] flatDimensions)
 {
     flatDimensions = new double[3];
+}
+/// <summary>
+/// Number of parts
+/// </summary>
+int NoParts
+{   get { return 1; } }
+/// <summary>
+/// Part name
+/// </summary>
+string PartName(int i)
+{
+    string partNames[] = {\""Part0\""};
+    return partName[i];
+}
+/// <summary>
+/// Layer name
+/// </summary>
+string LayerName(int i)
+{
+    string layerName[] = {\""Layer0\""};
+    return layerName[i];
 }";
         #endregion
 

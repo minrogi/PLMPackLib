@@ -241,6 +241,12 @@ namespace Pic.Plugin
                     if (null != pluginExt2)
                         stack = pluginExt2.BuildParameterStack(null);
                 }
+                else if (string.Equals(plugin.Version, "3.0.0.0", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    IPluginExt3 pluginExt3 = plugin as IPluginExt3;
+                    if (null != pluginExt3)
+                        stack = pluginExt3.BuildParameterStack(null);
+                }
                 foreach (Parameter param in stack)
                 {
                     try

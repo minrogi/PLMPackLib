@@ -1022,8 +1022,20 @@ namespace Pic.Plugin
         bool IsSupportingFlatPalletization { get; }
         /// <summary>
         /// Flat dimensions
-        /// <summary>
+        /// </summary>
         void FlatDimensions(ParameterStack stack, out double[] flatDimensions);
+        /// <summary>
+        /// Number of parts
+        /// </summary>
+        int NoParts { get; }
+        /// <summary>
+        /// Part name
+        /// </summary>
+        string PartName(int i);
+        /// <summary>
+        /// Layer name
+        /// </summary>
+        string LayerName(int i);
         #endregion
     }
     #endregion
