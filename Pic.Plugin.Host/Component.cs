@@ -73,22 +73,22 @@ public void FlatDimensions(ParameterStack stack, out double[] flatDimensions)
 /// <summary>
 /// Number of parts
 /// </summary>
-int NoParts
+public int NoParts
 {   get { return 1; } }
 /// <summary>
 /// Part name
 /// </summary>
-string PartName(int i)
+public string PartName(int i)
 {
-    string partNames[] = {\""Part0\""};
-    return partName[i];
+    string[] partNames = {""Part0""};
+    return partNames[i];
 }
 /// <summary>
 /// Layer name
 /// </summary>
-string LayerName(int i)
+public string LayerName(int i)
 {
-    string layerName[] = {\""Layer0\""};
+    string[] layerName = {""Layer0""};
     return layerName[i];
 }";
         static string _SC2_to_SC3_ =
@@ -108,22 +108,22 @@ public void FlatDimensions(ParameterStack stack, out double[] flatDimensions)
 /// <summary>
 /// Number of parts
 /// </summary>
-int NoParts
+public int NoParts
 {   get { return 1; } }
 /// <summary>
 /// Part name
 /// </summary>
-string PartName(int i)
+public string PartName(int i)
 {
-    string partNames[] = {\""Part0\""};
-    return partName[i];
+    string[] partNames = {""Part0""};
+    return partNames[i];
 }
 /// <summary>
 /// Layer name
 /// </summary>
-string LayerName(int i)
+public string LayerName(int i)
 {
-    string layerName[] = {\""Layer0\""};
+    string[] layerName = {""Layer0""};
     return layerName[i];
 }";
         #endregion

@@ -233,20 +233,22 @@ namespace Pic.Plugin
                 if (!(_searchMethod is IComponentSearchMethod))
                     throw new PluginException("Component loader was not initialized with a valid plugin search method.");
 
-                if (string.Equals(plugin.Version, "1.0.0.0", StringComparison.InvariantCultureIgnoreCase))
+                IPluginExt1 pluginExt1 = plugin as IPluginExt1;
+                IPluginExt2 pluginExt2 = plugin as IPluginExt2;
+                IPluginExt3 pluginExt3 = plugin as IPluginExt3;
+
+                // get parameter stack
+                if (null != pluginExt1)
                     stack = plugin.Parameters;
-                else if (string.Equals(plugin.Version, "2.0.0.0", StringComparison.InvariantCultureIgnoreCase))
-                {
-                    IPluginExt2 pluginExt2 = plugin as IPluginExt2;
-                    if (null != pluginExt2)
-                        stack = pluginExt2.BuildParameterStack(null);
-                }
-                else if (string.Equals(plugin.Version, "3.0.0.0", StringComparison.InvariantCultureIgnoreCase))
-                {
-                    IPluginExt3 pluginExt3 = plugin as IPluginExt3;
-                    if (null != pluginExt3)
-                        stack = pluginExt3.BuildParameterStack(null);
-                }
+                else if (null != pluginExt2)
+                    stack = pluginExt2.BuildParameterStack(null);
+                else if (null != pluginExt3)
+                    stack = pluginExt3.BuildParameterStack(null);
+                // check parameter stack
+                if (null == stack)
+                    throw new PluginException("Failed to build initial parameter stack.");
+
+                // load parameter values from plugins
                 foreach (Parameter param in stack)
                 {
                     try

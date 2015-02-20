@@ -142,7 +142,7 @@ namespace Pic.Plugin
                 sw.WriteLine("\t\tpublic string Description   { get { return \"" + drawingDescription + "\"; } }"); ++lineOffset;
                 sw.WriteLine("\t\tpublic string Author        { get { return \"" + assemblyCompany + "\"; } }"); ++lineOffset;
                 sw.WriteLine("\t\tpublic string Name          { get { return \"" + drawingName + "\"; } }"); ++lineOffset;
-                sw.WriteLine("\t\tpublic string Version       { get { return \"" + assemblyVersion + "\"; } }"); ++lineOffset;
+                sw.WriteLine("\t\tpublic string Version       { get { return \"" + assemblyVersionNew + "\"; } }"); ++lineOffset;
                 sw.WriteLine("\t\tpublic string SourceCode"); ++lineOffset;
                 sw.WriteLine("\t\t{"); ++lineOffset;
                 sw.WriteLine("\t\t\tget"); ++lineOffset;
