@@ -211,7 +211,7 @@
     <value>153</value>
   </data>
   <data name="&gt;&gt;listBoxLibraries.Type" xml:space="preserve">
-    <value>ListBoxLibraries, PLMPackLib, Version=7.0.14.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ListBoxLibraries, PLMPackLib, Version=7.0.15.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;listBoxLibraries.ZOrder" xml:space="preserve">
     <value>1</value>
