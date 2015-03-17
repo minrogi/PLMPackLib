@@ -1,7 +1,7 @@
 PLMPackLib
 ==========
 
-PLMPackLib allows consulting a list of parametric packaging plans (essentially corrugated cardboard). It is written in C# (.NET 4.0), and uses SQLite as database.
+PLMPackLib allows consulting a list of parametric packaging plans (essentially carton and corrugated, FEFCO, ECMA, POS). The parametric models can be exported in 2D (dxf, ai, pdf), in 3D (pdf 3d, collada, picador). Optimization of layout, packing and palettization is provide for each parametric models. It is written in C# (.NET 4.0), and uses SQLite as database.
 
 
 License
@@ -9,7 +9,7 @@ License
 
 The MIT License (MIT)
 
-Copyright (c) 2014 treeDiM
+Copyright (c) 2015 treeDiM
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
