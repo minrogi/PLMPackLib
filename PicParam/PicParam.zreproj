@@ -7,7 +7,6 @@
 &lt;/XtraSerializer&gt;</globalSetting>
     <globalSetting name="Sort-ResourceEditorGrid">&lt;XtraSerializer version="1.0" application="View"&gt;
   &lt;property name="#LayoutVersion" /&gt;
-  &lt;property name="SortInfo"&gt;~Xtra#Base64AAEAAAD/////AQAAAAAAAAAMAgAAAF5EZXZFeHByZXNzLlh0cmFHcmlkLnYxMS4xLCBWZXJzaW9uPTExLjEuMTIuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iODhkMTc1NGQ3MDBlNDlhBQEAAAA4RGV2RXhwcmVzcy5YdHJhR3JpZC5Db2x1bW5zLkdyaWRDb2x1bW5Tb3J0SW5mb0NvbGxlY3Rpb24EAAAACmdyb3VwQ291bnQFY2xvbmUPY2xvbmVHcm91cENvdW50E0NvbGxlY3Rpb25CYXNlK2xpc3QAAwADCLMBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuTGlzdGAxW1tEZXZFeHByZXNzLlh0cmFHcmlkLkNvbHVtbnMuR3JpZENvbHVtblNvcnRJbmZvLCBEZXZFeHByZXNzLlh0cmFHcmlkLnYxMS4xLCBWZXJzaW9uPTExLjEuMTIuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iODhkMTc1NGQ3MDBlNDlhXV0IHFN5c3RlbS5Db2xsZWN0aW9ucy5BcnJheUxpc3QCAAAAAAAAAAkDAAAAAAAAAAkEAAAABAMAAACzAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbRGV2RXhwcmVzcy5YdHJhR3JpZC5Db2x1bW5zLkdyaWRDb2x1bW5Tb3J0SW5mbywgRGV2RXhwcmVzcy5YdHJhR3JpZC52MTEuMSwgVmVyc2lvbj0xMS4xLjEyLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24EAAAwRGV2RXhwcmVzcy5YdHJhR3JpZC5Db2x1bW5zLkdyaWRDb2x1bW5Tb3J0SW5mb1tdAgAAAAgICQUAAAAAAAAAAAAAAAQEAAAAHFN5c3RlbS5Db2xsZWN0aW9ucy5BcnJheUxpc3QDAAAABl9pdGVtcwVfc2l6ZQhfdmVyc2lvbgUAAAgICQYAAAABAAAABAAAAAcFAAAAAAEAAAAAAAAABC5EZXZFeHByZXNzLlh0cmFHcmlkLkNvbHVtbnMuR3JpZENvbHVtblNvcnRJbmZvAgAAABAGAAAABAAAAAkHAAAADQMMCAAAABlEZXZFeHByZXNzLlh0cmFHcmlkLnYxMS4xBQcAAAAuRGV2RXhwcmVzcy5YdHJhR3JpZC5Db2x1bW5zLkdyaWRDb2x1bW5Tb3J0SW5mbwIAAAAJU29ydE9yZGVyCkNvbHVtbk5hbWUAAQgIAAAAAQAAAAYJAAAACGNvbGVuLVVTCw==&lt;/property&gt;
 &lt;/XtraSerializer&gt;</globalSetting>
     <globalSetting name="autoTranslateForm.prefixTextBox.Text">####</globalSetting>
     <globalSetting name="autoTranslateForm.prefixCheckBox.Checked">False</globalSetting>
@@ -264,15 +263,6 @@ Kind regards</globalSetting>
       <remarks>
       </remarks>
     </fileGroup>
-    <fileGroup name="" projectFolderUniqueID="00000000-0000-0000-0000-000000000000" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="4adabb25-eab7-46f0-931f-a1217b132141">
-      <file filePath="MainForm.resx" absoluteFilePath="K:\GitHub\PLMPackLib\PicParam\MainForm.resx" uniqueID="b0ec0e82-2131-41a4-a520-b92863345fd9" />
-      <file filePath="MainForm.es-ES.resx" absoluteFilePath="K:\GitHub\PLMPackLib\PicParam\MainForm.es-ES.resx" uniqueID="afda46dc-a269-487d-9ba3-13b7a5b28eaf" />
-      <file filePath="MainForm.fr-FR.resx" absoluteFilePath="K:\GitHub\PLMPackLib\PicParam\MainForm.fr-FR.resx" uniqueID="d39f1858-fe93-46ef-bcfe-5d1f5add7e3d" />
-      <file filePath="MainForm.it-IT.resx" absoluteFilePath="K:\GitHub\PLMPackLib\PicParam\MainForm.it-IT.resx" uniqueID="15e13195-d75a-4457-befe-e123b56f99e7" />
-      <file filePath="MainForm.ja-JP.resx" absoluteFilePath="K:\GitHub\PLMPackLib\PicParam\MainForm.ja-JP.resx" uniqueID="57509ed5-0b20-4afb-aa16-cbe5b5c63cc5" />
-      <remarks>
-      </remarks>
-    </fileGroup>
     <fileGroup name="" projectFolderUniqueID="18702f82-8fdd-443d-9954-23d0f032f2dc" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="01989186-fc63-48d9-bb66-0773b4f09756">
       <file filePath="..\OptionsLib\OptionsForm.resx" absoluteFilePath="K:\GitHub\PLMPackLib\OptionsLib\OptionsForm.resx" uniqueID="5ec3d662-a001-4afa-ba98-11d948f732dc" />
       <file filePath="..\OptionsLib\OptionsForm.es-ES.resx" absoluteFilePath="K:\GitHub\PLMPackLib\OptionsLib\OptionsForm.es-ES.resx" uniqueID="8872b439-4902-4055-bb08-f43c8924f2c6" />
@@ -288,17 +278,19 @@ Kind regards</globalSetting>
       <remarks>
       </remarks>
     </fileGroup>
+    <fileGroup name="" projectFolderUniqueID="b9442bfa-0619-4581-84b5-ef11a783eb8c" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="a7829939-b577-4dfd-a81a-5738aab7fcc3">
+      <file filePath="..\Pic.DAL\Properties\Resources.fr-FR.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.DAL\Properties\Resources.fr-FR.resx" uniqueID="6ba6fab4-f78e-48a0-97da-5263e67e3406" />
+      <file filePath="..\Pic.DAL\Properties\Resources.it-IT.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.DAL\Properties\Resources.it-IT.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
+      <file filePath="..\Pic.DAL\Properties\Resources.ja-JP.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.DAL\Properties\Resources.ja-JP.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
+      <remarks>
+      </remarks>
+    </fileGroup>
     <fileGroup name="" projectFolderUniqueID="b9442bfa-0619-4581-84b5-ef11a783eb8c" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="55d496f3-9cdc-40c0-b147-a6ac03765cfb">
       <file filePath="..\Pic.DAL\Properties\Resource.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.DAL\Properties\Resource.resx" uniqueID="5d976c58-ed96-4663-ae61-119330a7d7bb" />
       <file filePath="..\Pic.DAL\Properties\Resource.es-ES.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.DAL\Properties\Resource.es-ES.resx" uniqueID="1ea75b5a-2608-4556-9068-e8334a979aa1" />
       <file filePath="..\Pic.DAL\Properties\Resource.fr-FR.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.DAL\Properties\Resource.fr-FR.resx" uniqueID="abb02590-b28e-45a6-a6f8-10fe93f276c9" />
       <file filePath="..\Pic.DAL\Properties\Resource.it-IT.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.DAL\Properties\Resource.it-IT.resx" uniqueID="4ddb9314-8971-46d4-b603-6fa321c4671d" />
       <file filePath="..\Pic.DAL\Properties\Resource.ja-JP.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.DAL\Properties\Resource.ja-JP.resx" uniqueID="e699a0e9-a228-4909-bfd7-ecebb1704475" />
-      <remarks>
-      </remarks>
-    </fileGroup>
-    <fileGroup name="" projectFolderUniqueID="b9442bfa-0619-4581-84b5-ef11a783eb8c" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="a7829939-b577-4dfd-a81a-5738aab7fcc3">
-      <file filePath="..\Pic.DAL\Properties\Resources.fr-FR.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.DAL\Properties\Resources.fr-FR.resx" uniqueID="6ba6fab4-f78e-48a0-97da-5263e67e3406" />
       <remarks>
       </remarks>
     </fileGroup>
@@ -369,6 +361,26 @@ Kind regards</globalSetting>
       <file filePath="SplashScreen.fr-FR.resx" absoluteFilePath="K:\GitHub\PLMPackLib\PicParam\SplashScreen.fr-FR.resx" uniqueID="c2b0ff2e-4987-4cc4-bc47-e57850e8228c" />
       <file filePath="SplashScreen.it-IT.resx" absoluteFilePath="K:\GitHub\PLMPackLib\PicParam\SplashScreen.it-IT.resx" uniqueID="027934c2-a8d3-406e-accd-b9d8d665e9cc" />
       <file filePath="SplashScreen.ja-JP.resx" absoluteFilePath="K:\GitHub\PLMPackLib\PicParam\SplashScreen.ja-JP.resx" uniqueID="43ce104d-33c8-4891-bebe-ad4ff595738c" />
+      <remarks>
+      </remarks>
+    </fileGroup>
+    <fileGroup name="" projectFolderUniqueID="85ff24d4-acc7-40b2-a2fd-d5fef2491052" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="00000000-0000-0000-0000-000000000000">
+      <file filePath="..\Pic.Factory2D.Control.Test\Properties\Resources.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.Factory2D.Control.Test\Properties\Resources.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
+      <remarks>
+      </remarks>
+    </fileGroup>
+    <fileGroup name="" projectFolderUniqueID="4f2fd88b-297c-4b4a-8a2d-eb3ef0308f72" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="00000000-0000-0000-0000-000000000000">
+      <file filePath="..\Pic.Plugin.Host.Test.Windows\Properties\Resources.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.Plugin.Host.Test.Windows\Properties\Resources.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
+      <remarks>
+      </remarks>
+    </fileGroup>
+    <fileGroup name="" projectFolderUniqueID="3102b643-971a-4422-9245-4cb4a2b8d190" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="00000000-0000-0000-0000-000000000000">
+      <file filePath="..\Pic.Plugin.ViewCtrl.Test\Properties\Resources.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.Plugin.ViewCtrl.Test\Properties\Resources.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
+      <remarks>
+      </remarks>
+    </fileGroup>
+    <fileGroup name="" projectFolderUniqueID="bf9c6aa6-395b-4af6-a4a3-087a106dd3e7" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="00000000-0000-0000-0000-000000000000">
+      <file filePath="..\Pic.Plugin.GeneratorCtrl.Test\Properties\Resources.resx" absoluteFilePath="K:\GitHub\PLMPackLib\Pic.Plugin.GeneratorCtrl.Test\Properties\Resources.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
       <remarks>
       </remarks>
     </fileGroup>
@@ -536,6 +548,61 @@ Kind regards</globalSetting>
       </dynSettings>
     </projectFolder>
     <projectFolder uniqueID="4c6fa6b6-5e85-4018-ade9-013dba1aa33d" parentUniqueID="00000000-0000-0000-0000-000000000000" name="ZipExtract" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
+    <projectFolder uniqueID="a497802a-acf9-4fab-870f-5b7e91bcf853" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Factory2D.Test" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
+    <projectFolder uniqueID="c4445c2e-aeb1-4461-b736-7d74f882fb3f" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Factory2D.TestImposition" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
+    <projectFolder uniqueID="85ff24d4-acc7-40b2-a2fd-d5fef2491052" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Factory2D.Control.Test" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
+    <projectFolder uniqueID="85324b19-79cd-4207-be6a-ac1d59cb8d72" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Plugin.Host.Test.Console" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
+    <projectFolder uniqueID="4f2fd88b-297c-4b4a-8a2d-eb3ef0308f72" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Plugin.Host.Test.Windows" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
+    <projectFolder uniqueID="31620e79-21e0-4783-b29e-5ca4a06e0c44" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Plugin.Generator.Test.Console" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
+    <projectFolder uniqueID="3102b643-971a-4422-9245-4cb4a2b8d190" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Plugin.ViewCtrl.Test" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
+    <projectFolder uniqueID="bf9c6aa6-395b-4af6-a4a3-087a106dd3e7" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Plugin.GeneratorCtrl.Test" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
+    <projectFolder uniqueID="cd8baed7-c824-4b89-97aa-bf4c504b85ee" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.DAL.Sqlite.Test" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
+    <projectFolder uniqueID="1c9167df-110b-41d4-8960-69a180d4a46e" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Pic.Plugin.SleeveBoxArchitecture" orderPosition="0">
+      <remarks>
+      </remarks>
+      <dynSettings />
+    </projectFolder>
+    <projectFolder uniqueID="fd8e27c9-dd6a-4065-8136-a0e4b54992c3" parentUniqueID="00000000-0000-0000-0000-000000000000" name="Help" orderPosition="0">
       <remarks>
       </remarks>
       <dynSettings />

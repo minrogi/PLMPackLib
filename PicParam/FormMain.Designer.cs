@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this._pluginViewCtrl = new Pic.Plugin.ViewCtrl.PluginViewCtrl();
-            this.statusStrip = new System.Windows.Forms.StatusStrip();
             this._splitContainer = new System.Windows.Forms.SplitContainer();
             this._treeViewCtrl = new PicParam.DocumentTreeView();
             this._webBrowser4PDF = new System.Windows.Forms.WebBrowser();
@@ -39,6 +38,7 @@
             this._factoryViewCtrl = new Pic.Factory2D.Control.FactoryViewerBase();
             this._startPageCtrl = new PicParam.StartPageControl();
             this._downloadPageCtrl = new PicParam.DownloadPageControl();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -140,11 +140,6 @@
             this._pluginViewCtrl.ShowSummary = true;
             this._pluginViewCtrl.ValidateButtonVisible = false;
             // 
-            // statusStrip
-            // 
-            resources.ApplyResources(this.statusStrip, "statusStrip");
-            this.statusStrip.Name = "statusStrip";
-            // 
             // _splitContainer
             // 
             resources.ApplyResources(this._splitContainer, "_splitContainer");
@@ -200,6 +195,11 @@
             // 
             resources.ApplyResources(this._downloadPageCtrl, "_downloadPageCtrl");
             this._downloadPageCtrl.Name = "_downloadPageCtrl";
+            // 
+            // statusStrip
+            // 
+            resources.ApplyResources(this.statusStrip, "statusStrip");
+            this.statusStrip.Name = "statusStrip";
             // 
             // menuStripMain
             // 
@@ -405,6 +405,7 @@
             // 
             this.editComponentDllToolStripMenuItem.Name = "editComponentDllToolStripMenuItem";
             resources.ApplyResources(this.editComponentDllToolStripMenuItem, "editComponentDllToolStripMenuItem");
+            this.editComponentDllToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItemEditDLL_Click);
             // 
             // toolStripSeparator12
             // 

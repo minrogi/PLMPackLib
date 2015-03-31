@@ -56,8 +56,12 @@ namespace PicParam
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
-            _splitContainer.SplitterDistance = 200;
-            _downloadPageCtrl.Size = this._splitContainer.Panel2.Size;
+            try
+            {
+                _splitContainer.SplitterDistance = 200;
+                _downloadPageCtrl.Size = this._splitContainer.Panel2.Size;
+            }
+            catch (Exception /*ex*/) { }
         }
 
         /// <summary>
@@ -1456,7 +1460,7 @@ namespace PicParam
         #endregion
 
         #region Debug tools
-        private void toolStripEditDLL_Click(object sender, EventArgs e)
+        private void toolStripMenuItemEditDLL_Click(object sender, EventArgs e)
         {
             // open file dialog
             OpenFileDialog fd = new OpenFileDialog();

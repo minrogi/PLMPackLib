@@ -517,6 +517,9 @@
     <EmbeddedResource Include="FormDefineComponentGUID.resx">
       <DependentUpon>FormDefineComponentGUID.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.it-IT.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPluginEditor.es-ES.resx">
       <DependentUpon>FormPluginEditor.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -550,10 +553,6 @@
       <DependentUpon>FormWorkerThreadTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.es-ES.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.it-IT.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>

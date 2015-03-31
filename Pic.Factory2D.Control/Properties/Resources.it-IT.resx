@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
 	<!-- 
 		Microsoft ResX Schema
@@ -58,7 +58,6 @@
 			: using a System.ComponentModel.TypeConverter
 			: and then encoded with base64 encoding.
 	-->
-	
 	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
 		<xsd:element name="root" msdata:IsDataSet="true">
 			<xsd:complexType>
@@ -98,4 +97,22 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
+	<data name="ID_ABANDONPROCESSING" xml:space="preserve">
+		<value>Abbandonare il lavoro perché il numero di soggetti è superiore a {0}. Questo numero può essere modificato nelle preferenze degli utenti.</value>
+	</data>
+	<data name="ID_ABANDONPROCESSING_SHORT" xml:space="preserve">
+		<value>Non può essere calcolato: troppo lungo!</value>
+	</data>
+	<data name="ID_MINMARGINBOTTOM" xml:space="preserve">
+		<value>Margine minimo inferiore</value>
+	</data>
+	<data name="ID_MINMARGINLEFT" xml:space="preserve">
+		<value>Margine minimo di sinistra</value>
+	</data>
+	<data name="ID_MINMARGINRIGHT" xml:space="preserve">
+		<value>Margine minimo di destra</value>
+	</data>
+	<data name="ID_MINMARGINTOP" xml:space="preserve">
+		<value>Margine minimo superiore</value>
+	</data>
 </root>
