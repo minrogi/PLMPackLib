@@ -58,12 +58,6 @@
             this.nudTopBottomMargin = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.cbTopBottom = new System.Windows.Forms.ComboBox();
-            this.rbLayoutMode1 = new System.Windows.Forms.RadioButton();
-            this.rbLayoutMode2 = new System.Windows.Forms.RadioButton();
-            this.lbDirX = new System.Windows.Forms.Label();
-            this.nudNumberDirX = new System.Windows.Forms.NumericUpDown();
-            this.lbDirY = new System.Windows.Forms.Label();
-            this.nudNumberDirY = new System.Windows.Forms.NumericUpDown();
             this.tabSpacing = new System.Windows.Forms.TabPage();
             this.lbmm6 = new System.Windows.Forms.Label();
             this.nudSpaceY = new System.Windows.Forms.NumericUpDown();
@@ -72,6 +66,12 @@
             this.lbmm5 = new System.Windows.Forms.Label();
             this.nudSpaceX = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
+            this.rbLayoutMode1 = new System.Windows.Forms.RadioButton();
+            this.rbLayoutMode2 = new System.Windows.Forms.RadioButton();
+            this.lbDirX = new System.Windows.Forms.Label();
+            this.nudNumberDirX = new System.Windows.Forms.NumericUpDown();
+            this.lbDirY = new System.Windows.Forms.Label();
+            this.nudNumberDirY = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.nudOffsetY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudOffsetX)).BeginInit();
             this.tabControl.SuspendLayout();
@@ -82,11 +82,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudTopBottomRemaining)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLeftRightRemaining)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTopBottomMargin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudNumberDirX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudNumberDirY)).BeginInit();
             this.tabSpacing.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSpaceY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSpaceX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumberDirX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumberDirY)).BeginInit();
             this.SuspendLayout();
             // 
             // bnOk
@@ -141,8 +141,8 @@
             // 
             // nudOffsetY
             // 
-            this.nudOffsetY.DecimalPlaces = 1;
             resources.ApplyResources(this.nudOffsetY, "nudOffsetY");
+            this.nudOffsetY.DecimalPlaces = 1;
             this.nudOffsetY.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -157,8 +157,8 @@
             // 
             // nudOffsetX
             // 
-            this.nudOffsetX.DecimalPlaces = 1;
             resources.ApplyResources(this.nudOffsetX, "nudOffsetX");
+            this.nudOffsetX.DecimalPlaces = 1;
             this.nudOffsetX.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -183,34 +183,35 @@
             // 
             // tabControl
             // 
+            resources.ApplyResources(this.tabControl, "tabControl");
             this.tabControl.Controls.Add(this.tabAllowedPatterns);
             this.tabControl.Controls.Add(this.tabOffsets);
             this.tabControl.Controls.Add(this.tabMargins);
             this.tabControl.Controls.Add(this.tabSpacing);
-            resources.ApplyResources(this.tabControl, "tabControl");
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             // 
             // tabAllowedPatterns
             // 
+            resources.ApplyResources(this.tabAllowedPatterns, "tabAllowedPatterns");
             this.tabAllowedPatterns.Controls.Add(this.cbAllowColumnRotation);
             this.tabAllowedPatterns.Controls.Add(this.cbAllowRowRotation);
-            resources.ApplyResources(this.tabAllowedPatterns, "tabAllowedPatterns");
             this.tabAllowedPatterns.Name = "tabAllowedPatterns";
             this.tabAllowedPatterns.UseVisualStyleBackColor = true;
             // 
             // tabOffsets
             // 
+            resources.ApplyResources(this.tabOffsets, "tabOffsets");
             this.tabOffsets.Controls.Add(this.nudOffsetY);
             this.tabOffsets.Controls.Add(this.lbOffsetX);
             this.tabOffsets.Controls.Add(this.nudOffsetX);
             this.tabOffsets.Controls.Add(this.lbOffsetY);
-            resources.ApplyResources(this.tabOffsets, "tabOffsets");
             this.tabOffsets.Name = "tabOffsets";
             this.tabOffsets.UseVisualStyleBackColor = true;
             // 
             // tabMargins
             // 
+            resources.ApplyResources(this.tabMargins, "tabMargins");
             this.tabMargins.Controls.Add(this.lbmm3);
             this.tabMargins.Controls.Add(this.lbmm1);
             this.tabMargins.Controls.Add(this.lbmm4);
@@ -225,7 +226,6 @@
             this.tabMargins.Controls.Add(this.nudTopBottomMargin);
             this.tabMargins.Controls.Add(this.label2);
             this.tabMargins.Controls.Add(this.cbTopBottom);
-            resources.ApplyResources(this.tabMargins, "tabMargins");
             this.tabMargins.Name = "tabMargins";
             this.tabMargins.UseVisualStyleBackColor = true;
             // 
@@ -251,8 +251,8 @@
             // 
             // nudLeftRightMargin
             // 
-            this.nudLeftRightMargin.DecimalPlaces = 1;
             resources.ApplyResources(this.nudLeftRightMargin, "nudLeftRightMargin");
+            this.nudLeftRightMargin.DecimalPlaces = 1;
             this.nudLeftRightMargin.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -267,8 +267,8 @@
             // 
             // nudTopBottomRemaining
             // 
-            this.nudTopBottomRemaining.DecimalPlaces = 1;
             resources.ApplyResources(this.nudTopBottomRemaining, "nudTopBottomRemaining");
+            this.nudTopBottomRemaining.DecimalPlaces = 1;
             this.nudTopBottomRemaining.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -283,8 +283,8 @@
             // 
             // nudLeftRightRemaining
             // 
-            this.nudLeftRightRemaining.DecimalPlaces = 1;
             resources.ApplyResources(this.nudLeftRightRemaining, "nudLeftRightRemaining");
+            this.nudLeftRightRemaining.DecimalPlaces = 1;
             this.nudLeftRightRemaining.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -299,20 +299,20 @@
             // 
             // cbRightLeft
             // 
+            resources.ApplyResources(this.cbRightLeft, "cbRightLeft");
             this.cbRightLeft.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRightLeft.FormattingEnabled = true;
             this.cbRightLeft.Items.AddRange(new object[] {
             resources.GetString("cbRightLeft.Items"),
             resources.GetString("cbRightLeft.Items1"),
             resources.GetString("cbRightLeft.Items2")});
-            resources.ApplyResources(this.cbRightLeft, "cbRightLeft");
             this.cbRightLeft.Name = "cbRightLeft";
             this.cbRightLeft.SelectedIndexChanged += new System.EventHandler(this.cbPlacement_SelectedIndexChanged);
             // 
             // nudTopBottomMargin
             // 
-            this.nudTopBottomMargin.DecimalPlaces = 1;
             resources.ApplyResources(this.nudTopBottomMargin, "nudTopBottomMargin");
+            this.nudTopBottomMargin.DecimalPlaces = 1;
             this.nudTopBottomMargin.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -327,15 +327,75 @@
             // 
             // cbTopBottom
             // 
+            resources.ApplyResources(this.cbTopBottom, "cbTopBottom");
             this.cbTopBottom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTopBottom.FormattingEnabled = true;
             this.cbTopBottom.Items.AddRange(new object[] {
             resources.GetString("cbTopBottom.Items"),
             resources.GetString("cbTopBottom.Items1"),
             resources.GetString("cbTopBottom.Items2")});
-            resources.ApplyResources(this.cbTopBottom, "cbTopBottom");
             this.cbTopBottom.Name = "cbTopBottom";
             this.cbTopBottom.SelectedIndexChanged += new System.EventHandler(this.cbPlacement_SelectedIndexChanged);
+            // 
+            // tabSpacing
+            // 
+            resources.ApplyResources(this.tabSpacing, "tabSpacing");
+            this.tabSpacing.Controls.Add(this.lbmm6);
+            this.tabSpacing.Controls.Add(this.nudSpaceY);
+            this.tabSpacing.Controls.Add(this.label3);
+            this.tabSpacing.Controls.Add(this.label1);
+            this.tabSpacing.Controls.Add(this.lbmm5);
+            this.tabSpacing.Controls.Add(this.nudSpaceX);
+            this.tabSpacing.Controls.Add(this.label9);
+            this.tabSpacing.Name = "tabSpacing";
+            this.tabSpacing.UseVisualStyleBackColor = true;
+            // 
+            // lbmm6
+            // 
+            resources.ApplyResources(this.lbmm6, "lbmm6");
+            this.lbmm6.Name = "lbmm6";
+            // 
+            // nudSpaceY
+            // 
+            resources.ApplyResources(this.nudSpaceY, "nudSpaceY");
+            this.nudSpaceY.DecimalPlaces = 1;
+            this.nudSpaceY.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudSpaceY.Name = "nudSpaceY";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // lbmm5
+            // 
+            resources.ApplyResources(this.lbmm5, "lbmm5");
+            this.lbmm5.Name = "lbmm5";
+            // 
+            // nudSpaceX
+            // 
+            resources.ApplyResources(this.nudSpaceX, "nudSpaceX");
+            this.nudSpaceX.DecimalPlaces = 1;
+            this.nudSpaceX.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudSpaceX.Name = "nudSpaceX";
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
             // 
             // rbLayoutMode1
             // 
@@ -372,66 +432,6 @@
             // 
             resources.ApplyResources(this.nudNumberDirY, "nudNumberDirY");
             this.nudNumberDirY.Name = "nudNumberDirY";
-            // 
-            // tabSpacing
-            // 
-            this.tabSpacing.Controls.Add(this.lbmm6);
-            this.tabSpacing.Controls.Add(this.nudSpaceY);
-            this.tabSpacing.Controls.Add(this.label3);
-            this.tabSpacing.Controls.Add(this.label1);
-            this.tabSpacing.Controls.Add(this.lbmm5);
-            this.tabSpacing.Controls.Add(this.nudSpaceX);
-            this.tabSpacing.Controls.Add(this.label9);
-            resources.ApplyResources(this.tabSpacing, "tabSpacing");
-            this.tabSpacing.Name = "tabSpacing";
-            this.tabSpacing.UseVisualStyleBackColor = true;
-            // 
-            // lbmm6
-            // 
-            resources.ApplyResources(this.lbmm6, "lbmm6");
-            this.lbmm6.Name = "lbmm6";
-            // 
-            // nudSpaceY
-            // 
-            this.nudSpaceY.DecimalPlaces = 1;
-            resources.ApplyResources(this.nudSpaceY, "nudSpaceY");
-            this.nudSpaceY.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.nudSpaceY.Name = "nudSpaceY";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // lbmm5
-            // 
-            resources.ApplyResources(this.lbmm5, "lbmm5");
-            this.lbmm5.Name = "lbmm5";
-            // 
-            // nudSpaceX
-            // 
-            this.nudSpaceX.DecimalPlaces = 1;
-            resources.ApplyResources(this.nudSpaceX, "nudSpaceX");
-            this.nudSpaceX.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.nudSpaceX.Name = "nudSpaceX";
-            // 
-            // label9
-            // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
             // 
             // FormImpositionSettings
             // 
@@ -471,12 +471,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudTopBottomRemaining)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLeftRightRemaining)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTopBottomMargin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudNumberDirX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudNumberDirY)).EndInit();
             this.tabSpacing.ResumeLayout(false);
             this.tabSpacing.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSpaceY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSpaceX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumberDirX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumberDirY)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

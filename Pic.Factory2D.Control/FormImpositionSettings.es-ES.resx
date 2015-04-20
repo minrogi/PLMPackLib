@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-	<!-- 
+  <!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,821 +59,115 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="metadata">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" />
-							</xsd:sequence>
-							<xsd:attribute name="name" use="required" type="xsd:string" />
-							<xsd:attribute name="type" type="xsd:string" />
-							<xsd:attribute name="mimetype" type="xsd:string" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="assembly">
-						<xsd:complexType>
-							<xsd:attribute name="alias" type="xsd:string" />
-							<xsd:attribute name="name" type="xsd:string" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>2.0</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-	<data name="bnOk.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-		<value>Top, Right</value>
-	</data>
-	<assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-	<data name="bnOk.Location" type="System.Drawing.Point, System.Drawing">
-		<value>434, 8</value>
-	</data>
-	<data name="bnOk.Size" type="System.Drawing.Size, System.Drawing">
-		<value>73, 23</value>
-	</data>
-	<assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-	<data name="bnOk.TabIndex" type="System.Int32, mscorlib">
-		<value>7</value>
-	</data>
-	<data name="&gt;&gt;bnOk.Name" xml:space="preserve">
-    <value>bnOk</value>
-  </data>
-	<data name="&gt;&gt;bnOk.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;bnOk.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-	<data name="&gt;&gt;bnOk.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-	<data name="bnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-		<value>Top, Right</value>
-	</data>
-	<data name="bnCancel.Location" type="System.Drawing.Point, System.Drawing">
-		<value>434, 33</value>
-	</data>
-	<data name="bnCancel.Size" type="System.Drawing.Size, System.Drawing">
-		<value>73, 23</value>
-	</data>
-	<data name="bnCancel.TabIndex" type="System.Int32, mscorlib">
-		<value>0</value>
-	</data>
-	<data name="&gt;&gt;bnCancel.Name" xml:space="preserve">
-    <value>bnCancel</value>
-  </data>
-	<data name="&gt;&gt;bnCancel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;bnCancel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-	<data name="&gt;&gt;bnCancel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-	<data name="cbAllowRowRotation.AutoSize" type="System.Boolean, mscorlib">
-		<value>True</value>
-	</data>
-	<data name="cbAllowRowRotation.Location" type="System.Drawing.Point, System.Drawing">
-		<value>12, 13</value>
-	</data>
-	<data name="cbAllowRowRotation.Size" type="System.Drawing.Size, System.Drawing">
-		<value>120, 17</value>
-	</data>
-	<data name="cbAllowRowRotation.TabIndex" type="System.Int32, mscorlib">
-		<value>8</value>
-	</data>
-	<data name="&gt;&gt;cbAllowRowRotation.Name" xml:space="preserve">
-    <value>cbAllowRowRotation</value>
-  </data>
-	<data name="&gt;&gt;cbAllowRowRotation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;cbAllowRowRotation.Parent" xml:space="preserve">
-    <value>tabAllowedPatterns</value>
-  </data>
-	<data name="&gt;&gt;cbAllowRowRotation.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-	<data name="cbAllowColumnRotation.AutoSize" type="System.Boolean, mscorlib">
-		<value>True</value>
-	</data>
-	<data name="cbAllowColumnRotation.Location" type="System.Drawing.Point, System.Drawing">
-		<value>12, 37</value>
-	</data>
-	<data name="cbAllowColumnRotation.Size" type="System.Drawing.Size, System.Drawing">
-		<value>137, 17</value>
-	</data>
-	<data name="cbAllowColumnRotation.TabIndex" type="System.Int32, mscorlib">
-		<value>0</value>
-	</data>
-	<data name="&gt;&gt;cbAllowColumnRotation.Name" xml:space="preserve">
-    <value>cbAllowColumnRotation</value>
-  </data>
-	<data name="&gt;&gt;cbAllowColumnRotation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;cbAllowColumnRotation.Parent" xml:space="preserve">
-    <value>tabAllowedPatterns</value>
-  </data>
-	<data name="&gt;&gt;cbAllowColumnRotation.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-	<data name="lblCardboardFormat.AutoSize" type="System.Boolean, mscorlib">
-		<value>True</value>
-	</data>
-	<data name="lblCardboardFormat.Location" type="System.Drawing.Point, System.Drawing">
-		<value>7, 8</value>
-	</data>
-	<data name="lblCardboardFormat.Size" type="System.Drawing.Size, System.Drawing">
-		<value>88, 13</value>
-	</data>
-	<data name="lblCardboardFormat.TabIndex" type="System.Int32, mscorlib">
-		<value>0</value>
-	</data>
-	<data name="&gt;&gt;lblCardboardFormat.Name" xml:space="preserve">
-    <value>lblCardboardFormat</value>
-  </data>
-	<data name="&gt;&gt;lblCardboardFormat.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;lblCardboardFormat.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-	<data name="&gt;&gt;lblCardboardFormat.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-	<data name="cbCardboardFormat.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-		<value>Top, Left, Right</value>
-	</data>
-	<data name="cbCardboardFormat.Location" type="System.Drawing.Point, System.Drawing">
-		<value>115, 8</value>
-	</data>
-	<data name="cbCardboardFormat.Size" type="System.Drawing.Size, System.Drawing">
-		<value>296, 21</value>
-	</data>
-	<data name="cbCardboardFormat.TabIndex" type="System.Int32, mscorlib">
-		<value>1</value>
-	</data>
-	<data name="&gt;&gt;cbCardboardFormat.Name" xml:space="preserve">
-    <value>cbCardboardFormat</value>
-  </data>
-	<data name="&gt;&gt;cbCardboardFormat.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;cbCardboardFormat.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-	<data name="&gt;&gt;cbCardboardFormat.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-	<data name="bnEditCardboardFormats.Location" type="System.Drawing.Point, System.Drawing">
-		<value>248, 33</value>
-	</data>
-	<data name="bnEditCardboardFormats.Size" type="System.Drawing.Size, System.Drawing">
-		<value>162, 23</value>
-	</data>
-	<data name="bnEditCardboardFormats.TabIndex" type="System.Int32, mscorlib">
-		<value>2</value>
-	</data>
-	<data name="&gt;&gt;bnEditCardboardFormats.Name" xml:space="preserve">
-    <value>bnEditCardboardFormats</value>
-  </data>
-	<data name="&gt;&gt;bnEditCardboardFormats.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;bnEditCardboardFormats.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-	<data name="&gt;&gt;bnEditCardboardFormats.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-	<data name="nudOffsetY.Location" type="System.Drawing.Point, System.Drawing">
-		<value>136, 36</value>
-	</data>
-	<data name="nudOffsetY.Size" type="System.Drawing.Size, System.Drawing">
-		<value>65, 20</value>
-	</data>
-	<data name="nudOffsetY.TabIndex" type="System.Int32, mscorlib">
-		<value>2</value>
-	</data>
-	<data name="&gt;&gt;nudOffsetY.Name" xml:space="preserve">
-    <value>nudOffsetY</value>
-  </data>
-	<data name="&gt;&gt;nudOffsetY.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;nudOffsetY.Parent" xml:space="preserve">
-    <value>tabOffsets</value>
-  </data>
-	<data name="&gt;&gt;nudOffsetY.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-	<data name="nudOffsetX.Location" type="System.Drawing.Point, System.Drawing">
-		<value>136, 12</value>
-	</data>
-	<data name="nudOffsetX.Size" type="System.Drawing.Size, System.Drawing">
-		<value>66, 20</value>
-	</data>
-	<data name="nudOffsetX.TabIndex" type="System.Int32, mscorlib">
-		<value>0</value>
-	</data>
-	<data name="&gt;&gt;nudOffsetX.Name" xml:space="preserve">
-    <value>nudOffsetX</value>
-  </data>
-	<data name="&gt;&gt;nudOffsetX.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;nudOffsetX.Parent" xml:space="preserve">
-    <value>tabOffsets</value>
-  </data>
-	<data name="&gt;&gt;nudOffsetX.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-	<data name="lbOffsetY.AutoSize" type="System.Boolean, mscorlib">
-		<value>True</value>
-	</data>
-	<data name="lbOffsetY.Location" type="System.Drawing.Point, System.Drawing">
-		<value>11, 36</value>
-	</data>
-	<data name="lbOffsetY.Size" type="System.Drawing.Size, System.Drawing">
-		<value>45, 13</value>
-	</data>
-	<data name="lbOffsetY.TabIndex" type="System.Int32, mscorlib">
-		<value>1</value>
-	</data>
-	<data name="&gt;&gt;lbOffsetY.Name" xml:space="preserve">
-    <value>lbOffsetY</value>
-  </data>
-	<data name="&gt;&gt;lbOffsetY.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;lbOffsetY.Parent" xml:space="preserve">
-    <value>tabOffsets</value>
-  </data>
-	<data name="&gt;&gt;lbOffsetY.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-	<data name="lbOffsetX.AutoSize" type="System.Boolean, mscorlib">
-		<value>True</value>
-	</data>
-	<data name="lbOffsetX.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-		<value>NoControl</value>
-	</data>
-	<data name="lbOffsetX.Location" type="System.Drawing.Point, System.Drawing">
-		<value>11, 12</value>
-	</data>
-	<data name="lbOffsetX.Size" type="System.Drawing.Size, System.Drawing">
-		<value>45, 13</value>
-	</data>
-	<data name="lbOffsetX.TabIndex" type="System.Int32, mscorlib">
-		<value>0</value>
-	</data>
-	<data name="&gt;&gt;lbOffsetX.Name" xml:space="preserve">
-    <value>lbOffsetX</value>
-  </data>
-	<data name="&gt;&gt;lbOffsetX.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;lbOffsetX.Parent" xml:space="preserve">
-    <value>tabOffsets</value>
-  </data>
-	<data name="&gt;&gt;lbOffsetX.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-	<data name="tabAllowedPatterns.Location" type="System.Drawing.Point, System.Drawing">
-		<value>4, 22</value>
-	</data>
-	<data name="tabAllowedPatterns.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-		<value>3, 3, 3, 3</value>
-	</data>
-	<data name="tabAllowedPatterns.Size" type="System.Drawing.Size, System.Drawing">
-		<value>492, 165</value>
-	</data>
-	<data name="tabAllowedPatterns.TabIndex" type="System.Int32, mscorlib">
-		<value>0</value>
-	</data>
-	<data name="&gt;&gt;tabAllowedPatterns.Name" xml:space="preserve">
-    <value>tabAllowedPatterns</value>
-  </data>
-	<data name="&gt;&gt;tabAllowedPatterns.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;tabAllowedPatterns.Parent" xml:space="preserve">
-    <value>tabControl</value>
-  </data>
-	<data name="&gt;&gt;tabAllowedPatterns.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-	<data name="tabOffsets.Location" type="System.Drawing.Point, System.Drawing">
-		<value>4, 22</value>
-	</data>
-	<data name="tabOffsets.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-		<value>3, 3, 3, 3</value>
-	</data>
-	<data name="tabOffsets.Size" type="System.Drawing.Size, System.Drawing">
-		<value>492, 165</value>
-	</data>
-	<data name="tabOffsets.TabIndex" type="System.Int32, mscorlib">
-		<value>1</value>
-	</data>
-	<data name="&gt;&gt;tabOffsets.Name" xml:space="preserve">
-    <value>tabOffsets</value>
-  </data>
-	<data name="&gt;&gt;tabOffsets.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;tabOffsets.Parent" xml:space="preserve">
-    <value>tabControl</value>
-  </data>
-	<data name="&gt;&gt;tabOffsets.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-	<data name="lbmm5.AutoSize" type="System.Boolean, mscorlib">
-		<value>True</value>
-	</data>
-	<data name="lbmm5.Location" type="System.Drawing.Point, System.Drawing">
-		<value>268, 136</value>
-	</data>
-	<data name="lbmm5.Size" type="System.Drawing.Size, System.Drawing">
-		<value>23, 13</value>
-	</data>
-	<data name="lbmm5.TabIndex" type="System.Int32, mscorlib">
-		<value>18</value>
-	</data>
-	<data name="&gt;&gt;lbmm5.Name" xml:space="preserve">
-    <value>lbmm5</value>
-  </data>
-	<data name="&gt;&gt;lbmm5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;lbmm5.Parent" xml:space="preserve">
-    <value>tabMargins</value>
-  </data>
-	<data name="&gt;&gt;lbmm5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-	<data name="lbmm3.AutoSize" type="System.Boolean, mscorlib">
-		<value>True</value>
-	</data>
-	<data name="lbmm3.Location" type="System.Drawing.Point, System.Drawing">
-		<value>268, 76</value>
-	</data>
-	<data name="lbmm3.Size" type="System.Drawing.Size, System.Drawing">
-		<value>23, 13</value>
-	</data>
-	<data name="lbmm3.TabIndex" type="System.Int32, mscorlib">
-		<value>17</value>
-	</data>
-	<data name="&gt;&gt;lbmm3.Name" xml:space="preserve">
-    <value>lbmm3</value>
-  </data>
-	<data name="&gt;&gt;lbmm3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;lbmm3.Parent" xml:space="preserve">
-    <value>tabMargins</value>
-  </data>
-	<data name="&gt;&gt;lbmm3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-	<data name="lbmm1.AutoSize" type="System.Boolean, mscorlib">
-		<value>True</value>
-	</data>
-	<data name="lbmm1.Location" type="System.Drawing.Point, System.Drawing">
-		<value>268, 16</value>
-	</data>
-	<data name="lbmm1.Size" type="System.Drawing.Size, System.Drawing">
-		<value>23, 13</value>
-	</data>
-	<data name="lbmm1.TabIndex" type="System.Int32, mscorlib">
-		<value>16</value>
-	</data>
-	<data name="&gt;&gt;lbmm1.Name" xml:space="preserve">
-    <value>lbmm1</value>
-  </data>
-	<data name="&gt;&gt;lbmm1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;lbmm1.Parent" xml:space="preserve">
-    <value>tabMargins</value>
-  </data>
-	<data name="&gt;&gt;lbmm1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-	<data name="nudSpaceBetween.Location" type="System.Drawing.Point, System.Drawing">
-		<value>194, 134</value>
-	</data>
-	<data name="nudSpaceBetween.Size" type="System.Drawing.Size, System.Drawing">
-		<value>68, 20</value>
-	</data>
-	<data name="nudSpaceBetween.TabIndex" type="System.Int32, mscorlib">
-		<value>15</value>
-	</data>
-	<data name="&gt;&gt;nudSpaceBetween.Name" xml:space="preserve">
-    <value>nudSpaceBetween</value>
-  </data>
-	<data name="&gt;&gt;nudSpaceBetween.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;nudSpaceBetween.Parent" xml:space="preserve">
-    <value>tabMargins</value>
-  </data>
-	<data name="&gt;&gt;nudSpaceBetween.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-	<data name="label9.AutoSize" type="System.Boolean, mscorlib">
-		<value>True</value>
-	</data>
-	<data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-		<value>NoControl</value>
-	</data>
-	<data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-		<value>11, 136</value>
-	</data>
-	<data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-		<value>105, 13</value>
-	</data>
-	<data name="label9.TabIndex" type="System.Int32, mscorlib">
-		<value>14</value>
-	</data>
-	<data name="&gt;&gt;label9.Name" xml:space="preserve">
-    <value>label9</value>
-  </data>
-	<data name="&gt;&gt;label9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;label9.Parent" xml:space="preserve">
-    <value>tabMargins</value>
-  </data>
-	<data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-	<data name="lbmm4.AutoSize" type="System.Boolean, mscorlib">
-		<value>True</value>
-	</data>
-	<data name="lbmm4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-		<value>NoControl</value>
-	</data>
-	<data name="lbmm4.Location" type="System.Drawing.Point, System.Drawing">
-		<value>268, 103</value>
-	</data>
-	<data name="lbmm4.Size" type="System.Drawing.Size, System.Drawing">
-		<value>23, 13</value>
-	</data>
-	<data name="lbmm4.TabIndex" type="System.Int32, mscorlib">
-		<value>13</value>
-	</data>
-	<data name="&gt;&gt;lbmm4.Name" xml:space="preserve">
-    <value>lbmm4</value>
-  </data>
-	<data name="&gt;&gt;lbmm4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;lbmm4.Parent" xml:space="preserve">
-    <value>tabMargins</value>
-  </data>
-	<data name="&gt;&gt;lbmm4.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-	<data name="lbmm2.AutoSize" type="System.Boolean, mscorlib">
-		<value>True</value>
-	</data>
-	<data name="lbmm2.Location" type="System.Drawing.Point, System.Drawing">
-		<value>268, 42</value>
-	</data>
-	<data name="lbmm2.Size" type="System.Drawing.Size, System.Drawing">
-		<value>23, 13</value>
-	</data>
-	<data name="lbmm2.TabIndex" type="System.Int32, mscorlib">
-		<value>12</value>
-	</data>
-	<data name="&gt;&gt;lbmm2.Name" xml:space="preserve">
-    <value>lbmm2</value>
-  </data>
-	<data name="&gt;&gt;lbmm2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;lbmm2.Parent" xml:space="preserve">
-    <value>tabMargins</value>
-  </data>
-	<data name="&gt;&gt;lbmm2.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-	<data name="nudLeftRightMargin.Location" type="System.Drawing.Point, System.Drawing">
-		<value>194, 73</value>
-	</data>
-	<data name="nudLeftRightMargin.Size" type="System.Drawing.Size, System.Drawing">
-		<value>68, 20</value>
-	</data>
-	<data name="nudLeftRightMargin.TabIndex" type="System.Int32, mscorlib">
-		<value>11</value>
-	</data>
-	<data name="&gt;&gt;nudLeftRightMargin.Name" xml:space="preserve">
-    <value>nudLeftRightMargin</value>
-  </data>
-	<data name="&gt;&gt;nudLeftRightMargin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;nudLeftRightMargin.Parent" xml:space="preserve">
-    <value>tabMargins</value>
-  </data>
-	<data name="&gt;&gt;nudLeftRightMargin.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-	<data name="lbRemainingLeftRight.AutoSize" type="System.Boolean, mscorlib">
-		<value>True</value>
-	</data>
-	<data name="lbRemainingLeftRight.Location" type="System.Drawing.Point, System.Drawing">
-		<value>11, 101</value>
-	</data>
-	<data name="lbRemainingLeftRight.Size" type="System.Drawing.Size, System.Drawing">
-		<value>105, 13</value>
-	</data>
-	<data name="lbRemainingLeftRight.TabIndex" type="System.Int32, mscorlib">
-		<value>10</value>
-	</data>
-	<data name="&gt;&gt;lbRemainingLeftRight.Name" xml:space="preserve">
-    <value>lbRemainingLeftRight</value>
-  </data>
-	<data name="&gt;&gt;lbRemainingLeftRight.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;lbRemainingLeftRight.Parent" xml:space="preserve">
-    <value>tabMargins</value>
-  </data>
-	<data name="&gt;&gt;lbRemainingLeftRight.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-	<data name="nudTopBottomRemaining.Location" type="System.Drawing.Point, System.Drawing">
-		<value>194, 40</value>
-	</data>
-	<data name="nudTopBottomRemaining.Size" type="System.Drawing.Size, System.Drawing">
-		<value>68, 20</value>
-	</data>
-	<data name="nudTopBottomRemaining.TabIndex" type="System.Int32, mscorlib">
-		<value>9</value>
-	</data>
-	<data name="&gt;&gt;nudTopBottomRemaining.Name" xml:space="preserve">
-    <value>nudTopBottomRemaining</value>
-  </data>
-	<data name="&gt;&gt;nudTopBottomRemaining.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;nudTopBottomRemaining.Parent" xml:space="preserve">
-    <value>tabMargins</value>
-  </data>
-	<data name="&gt;&gt;nudTopBottomRemaining.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-	<data name="lbRemainingBottomTop.AutoSize" type="System.Boolean, mscorlib">
-		<value>True</value>
-	</data>
-	<data name="lbRemainingBottomTop.Location" type="System.Drawing.Point, System.Drawing">
-		<value>11, 42</value>
-	</data>
-	<data name="lbRemainingBottomTop.Size" type="System.Drawing.Size, System.Drawing">
-		<value>100, 13</value>
-	</data>
-	<data name="lbRemainingBottomTop.TabIndex" type="System.Int32, mscorlib">
-		<value>8</value>
-	</data>
-	<data name="&gt;&gt;lbRemainingBottomTop.Name" xml:space="preserve">
-    <value>lbRemainingBottomTop</value>
-  </data>
-	<data name="&gt;&gt;lbRemainingBottomTop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;lbRemainingBottomTop.Parent" xml:space="preserve">
-    <value>tabMargins</value>
-  </data>
-	<data name="&gt;&gt;lbRemainingBottomTop.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-	<data name="nudLeftRightRemaining.Location" type="System.Drawing.Point, System.Drawing">
-		<value>194, 101</value>
-	</data>
-	<data name="nudLeftRightRemaining.Size" type="System.Drawing.Size, System.Drawing">
-		<value>68, 20</value>
-	</data>
-	<data name="nudLeftRightRemaining.TabIndex" type="System.Int32, mscorlib">
-		<value>7</value>
-	</data>
-	<data name="&gt;&gt;nudLeftRightRemaining.Name" xml:space="preserve">
-    <value>nudLeftRightRemaining</value>
-  </data>
-	<data name="&gt;&gt;nudLeftRightRemaining.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;nudLeftRightRemaining.Parent" xml:space="preserve">
-    <value>tabMargins</value>
-  </data>
-	<data name="&gt;&gt;nudLeftRightRemaining.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-	<data name="label4.AutoSize" type="System.Boolean, mscorlib">
-		<value>True</value>
-	</data>
-	<data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-		<value>88, 76</value>
-	</data>
-	<data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-		<value>38, 13</value>
-	</data>
-	<data name="label4.TabIndex" type="System.Int32, mscorlib">
-		<value>6</value>
-	</data>
-	<data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-	<data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>tabMargins</value>
-  </data>
-	<data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-	<data name="cbRightLeft.Location" type="System.Drawing.Point, System.Drawing">
-		<value>11, 73</value>
-	</data>
-	<data name="cbRightLeft.Size" type="System.Drawing.Size, System.Drawing">
-		<value>71, 21</value>
-	</data>
-	<data name="cbRightLeft.TabIndex" type="System.Int32, mscorlib">
-		<value>5</value>
-	</data>
-	<data name="&gt;&gt;cbRightLeft.Name" xml:space="preserve">
-    <value>cbRightLeft</value>
-  </data>
-	<data name="&gt;&gt;cbRightLeft.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;cbRightLeft.Parent" xml:space="preserve">
-    <value>tabMargins</value>
-  </data>
-	<data name="&gt;&gt;cbRightLeft.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-	<data name="nudTopBottomMargin.Location" type="System.Drawing.Point, System.Drawing">
-		<value>194, 14</value>
-	</data>
-	<data name="nudTopBottomMargin.Size" type="System.Drawing.Size, System.Drawing">
-		<value>68, 20</value>
-	</data>
-	<data name="nudTopBottomMargin.TabIndex" type="System.Int32, mscorlib">
-		<value>3</value>
-	</data>
-	<data name="&gt;&gt;nudTopBottomMargin.Name" xml:space="preserve">
-    <value>nudTopBottomMargin</value>
-  </data>
-	<data name="&gt;&gt;nudTopBottomMargin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;nudTopBottomMargin.Parent" xml:space="preserve">
-    <value>tabMargins</value>
-  </data>
-	<data name="&gt;&gt;nudTopBottomMargin.ZOrder" xml:space="preserve">
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bnOk.Location" type="System.Drawing.Point, System.Drawing">
+    <value>434, 8</value>
+  </data>
+  <data name="bnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>434, 33</value>
+  </data>
+  <data name="lblCardboardFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 8</value>
+  </data>
+  <data name="cbCardboardFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 8</value>
+  </data>
+  <data name="cbCardboardFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>296, 21</value>
+  </data>
+  <data name="bnEditCardboardFormats.Location" type="System.Drawing.Point, System.Drawing">
+    <value>248, 33</value>
+  </data>
+  <data name="bnEditCardboardFormats.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 23</value>
+  </data>
+  <data name="tabAllowedPatterns.Size" type="System.Drawing.Size, System.Drawing">
+    <value>506, 165</value>
+  </data>
+  <data name="tabOffsets.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 165</value>
+  </data>
+  <data name="tabMargins.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 165</value>
+  </data>
+  <data name="lbmm5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 136</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbmm5.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 136</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-	<data name="label2.AutoSize" type="System.Boolean, mscorlib">
-		<value>True</value>
-	</data>
-	<data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-		<value>88, 16</value>
-	</data>
-	<data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-		<value>38, 13</value>
-	</data>
-	<data name="label2.TabIndex" type="System.Int32, mscorlib">
-		<value>2</value>
-	</data>
-	<data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
+  <data name="tabSpacing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 165</value>
   </data>
-	<data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>514, 191</value>
   </data>
-	<data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>tabMargins</value>
-  </data>
-	<data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-	<data name="cbTopBottom.Location" type="System.Drawing.Point, System.Drawing">
-		<value>11, 13</value>
-	</data>
-	<data name="cbTopBottom.Size" type="System.Drawing.Size, System.Drawing">
-		<value>71, 21</value>
-	</data>
-	<data name="cbTopBottom.TabIndex" type="System.Int32, mscorlib">
-		<value>1</value>
-	</data>
-	<data name="&gt;&gt;cbTopBottom.Name" xml:space="preserve">
-    <value>cbTopBottom</value>
-  </data>
-	<data name="&gt;&gt;cbTopBottom.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;cbTopBottom.Parent" xml:space="preserve">
-    <value>tabMargins</value>
-  </data>
-	<data name="&gt;&gt;cbTopBottom.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-	<data name="tabMargins.Location" type="System.Drawing.Point, System.Drawing">
-		<value>4, 22</value>
-	</data>
-	<data name="tabMargins.Size" type="System.Drawing.Size, System.Drawing">
-		<value>492, 165</value>
-	</data>
-	<data name="tabMargins.TabIndex" type="System.Int32, mscorlib">
-		<value>2</value>
-	</data>
-	<data name="&gt;&gt;tabMargins.Name" xml:space="preserve">
-    <value>tabMargins</value>
-  </data>
-	<data name="&gt;&gt;tabMargins.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;tabMargins.Parent" xml:space="preserve">
-    <value>tabControl</value>
-  </data>
-	<data name="&gt;&gt;tabMargins.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-	<data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
-		<value>6, 62</value>
-	</data>
-	<data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
-		<value>500, 191</value>
-	</data>
-	<data name="tabControl.TabIndex" type="System.Int32, mscorlib">
-		<value>8</value>
-	</data>
-	<data name="&gt;&gt;tabControl.Name" xml:space="preserve">
-    <value>tabControl</value>
-  </data>
-	<data name="&gt;&gt;tabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;tabControl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-	<data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-	<metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-		<value>True</value>
-	</metadata>
-	<data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-		<value>6, 13</value>
-	</data>
-	<data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-		<value>514, 260</value>
-	</data>
-	<data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormImpositionSettings</value>
-  </data>
-	<data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>514, 392</value>
   </data>
 </root>
