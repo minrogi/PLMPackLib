@@ -71,7 +71,9 @@ namespace treeDiM.DrawingQuery.Test
                 string question = "Client";
                 string answer = string.Empty;
                 if (querier.GetQuestionAnswer(question, ref answer))
-                    Console.WriteLine("Answer to question \"{0}\" is \"{1}\"", question, answer);
+                    Console.WriteLine("Question \"{0}\" has answer \"{1}\"", question, answer);
+                else
+                    Console.WriteLine("No question \"{0}\"", question);
 
                 // Computed data
                 Console.WriteLine();

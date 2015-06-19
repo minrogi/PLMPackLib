@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Pic.Factory2D;
 #endregion
 
 namespace TreeDim.UserControls

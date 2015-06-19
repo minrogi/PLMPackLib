@@ -7,7 +7,7 @@ using System.Text;
 using Sharp3D.Math.Core;
 using log4net;
 
-using TreeDim.UserControls;
+//using TreeDim.UserControls;
 #endregion
 
 namespace Pic.Factory2D

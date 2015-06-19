@@ -9,7 +9,7 @@ using System.Drawing;
 using log4net;
 using log4net.Config;
 
-using TreeDim.UserControls;
+//using TreeDim.UserControls;
 #endregion
 
 namespace Pic.Factory2D

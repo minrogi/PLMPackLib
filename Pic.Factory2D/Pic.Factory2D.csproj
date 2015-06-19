@@ -50,7 +50,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -106,6 +106,7 @@
     <Compile Include="ImpositionTool.cs" />
     <Compile Include="ImpositionToolCardboardFormat.cs" />
     <Compile Include="ImpositionToolXY.cs" />
+    <Compile Include="IProgressCallback.cs" />
     <Compile Include="PicAutoQuotation.cs" />
     <Compile Include="PicBlock.cs" />
     <Compile Include="PicBox2D.cs" />
@@ -161,10 +162,6 @@
     <ProjectReference Include="..\Sharp3D.Math\Sharp3D.Math.csproj">
       <Project>{24D95CE6-335E-4B4B-95C9-AAC4D89E4D93}</Project>
       <Name>Sharp3D.Math</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TreeDim.UserControls\TreeDim.UserControls.csproj">
-      <Project>{D75634E3-34AA-4418-A6B6-3647BFF90606}</Project>
-      <Name>TreeDim.UserControls</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
