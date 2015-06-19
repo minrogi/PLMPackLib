@@ -823,7 +823,7 @@
     <value>factoryViewer</value>
   </data>
   <data name="&gt;&gt;factoryViewer.Type" xml:space="preserve">
-    <value>Pic.Factory2D.Control.FactoryViewer, Pic.Factory2D.Control, Version=7.0.17.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>Pic.Factory2D.Control.FactoryViewer, Pic.Factory2D.Control, Version=7.0.18.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;factoryViewer.Parent" xml:space="preserve">
     <value>$this</value>
