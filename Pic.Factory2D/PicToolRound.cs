@@ -111,9 +111,9 @@ namespace Pic.Factory2D
 
             // create new arc of circle
             if (Vector2D.KrossProduct(pt0 - ptCenter, pt1 - ptCenter) > 0) // go from pt0 to pt1
-                factory.AddArc(_picSeg0.LineType, ptCenter, pt0, pt1);
+                factory.AddArc(_picSeg0.LineType, _picSeg0.Group, _picSeg0.Layer, ptCenter, pt0, pt1);
             else // from pt1 to pt0
-                factory.AddArc(_picSeg0.LineType, ptCenter, pt1, pt0);
+                factory.AddArc(_picSeg0.LineType, _picSeg0.Group, _picSeg0.Layer, ptCenter, pt1, pt0);
         }
         #endregion
 

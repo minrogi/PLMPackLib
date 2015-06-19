@@ -52,11 +52,9 @@ namespace Pic.Factory2D
         public void AddSegment(DES_Segment segment)
         {
             PicSegment picSegment = _factory.AddSegment(
-                DesPenToLineType(segment._pen),
+                DesPenToLineType(segment._pen), segment._grp, segment._layer,
                 new Vector2D(segment.X1, segment.Y1),
                 new Vector2D(segment.X2, segment.Y2));
-            picSegment.Group = segment._grp;
-            picSegment.Layer = segment._layer;
         }
         /// <summary>
         /// insert new arc
@@ -83,14 +81,12 @@ namespace Pic.Factory2D
 	        }
 
             PicArc picArc = _factory.AddArc(
-                DesPenToLineType(arc._pen),
+                DesPenToLineType(arc._pen), arc._grp, arc._layer,
                 new Vector2D(arc._x, arc._y),
                 (double)arc._dim,
                 (double)angle0,
                 (double)angle1
                 );
-            picArc.Group = arc._grp;
-            picArc.Layer = arc._layer;
         }
         public void AddBezier(DES_Bezier bezier)
         { 
@@ -106,6 +102,47 @@ namespace Pic.Factory2D
         }
         public void AddSurface(DES_Surface surface)
         { 
+        }
+        public void AddDimensionOuterRadius()
+        { 
+        }
+        public void AddDimensionInnerRadius()
+        { 
+        }
+        public void AddDimensionOuterDiameter()
+        {        
+        }
+        public void AddDimensionInnerDiameter()
+        { 
+        }
+        public void AddDimensionDistance(DES_CotationDistance dimension)
+        {
+            PicCotation.CotType type = PicCotation.CotType.COT_DISTANCE;
+            if (Math.Abs(dimension._dir) < 1.0)
+                type = PicCotation.CotType.COT_HORIZONTAL;
+            else if (Math.Abs(dimension._dir - 90.0) < 1.0)
+                type = PicCotation.CotType.COT_VERTICAL;
+            else
+                type = PicCotation.CotType.COT_DISTANCE;
+
+            _factory.AddCotation(
+                type
+                , dimension._grp, dimension._layer
+                , new Vector2D( dimension.X1, dimension.Y1)
+                , new Vector2D( dimension.X2, dimension.Y2)
+                , dimension._offset
+                , dimension._text
+                , dimension._noDecimals);
+        }
+        public void AddDimensionAngle()
+        { 
+        }
+        public void AddDimensionArrow()
+        { 
+        }
+        public void UpdateQuestionnaire(Dictionary<string, string> questions)
+        {
+            _factory.UpdateQuestions(questions);
         }
         #endregion
 
@@ -172,7 +209,9 @@ namespace Pic.Factory2D
             // points
             foreach (netDxf.Entities.Point pt in _dxf.Points)
             {
-                PicPoint picPoint = _factory.AddPoint(DxfLineType2PicLT(pt.LineType), new Vector2D(pt.Location.X, pt.Location.Y));
+                PicPoint picPoint = _factory.AddPoint(
+                    DxfLineType2PicLT(pt.LineType), 0, 0
+                    , new Vector2D(pt.Location.X, pt.Location.Y));
                 picPoint.Group = DxfLineType2PicGrp(pt.LineType);
             }
 
@@ -180,7 +219,7 @@ namespace Pic.Factory2D
             foreach (netDxf.Entities.Line line in _dxf.Lines)
             {
                 PicSegment picSegment = _factory.AddSegment(
-                    DxfLineType2PicLT(line.LineType)
+                    DxfLineType2PicLT(line.LineType), 0, 0
                     , new Vector2D(line.StartPoint.X, line.StartPoint.Y)
                     , new Vector2D(line.EndPoint.X, line.EndPoint.Y)
                     );
@@ -191,18 +230,17 @@ namespace Pic.Factory2D
             foreach (netDxf.Entities.Arc arc in _dxf.Arcs)
             {
                 PicArc picArc = _factory.AddArc(
-                    DxfLineType2PicLT(arc.LineType)
+                    DxfLineType2PicLT(arc.LineType), DxfLineType2PicGrp(arc.LineType), 0
                     , new Vector2D(arc.Center.X, arc.Center.Y)
                     , arc.Radius
                     , 360.0 - arc.EndAngle, 360.0 - arc.StartAngle
                     );
-                picArc.Group = DxfLineType2PicGrp(arc.LineType);
             }
 
             foreach (netDxf.Entities.Circle circle in _dxf.Circles)
             {
                 PicArc picArc = _factory.AddArc(
-                    DxfLineType2PicLT(circle.LineType)
+                    DxfLineType2PicLT(circle.LineType), 0, 0
                     , new Vector2D(circle.Center.X, circle.Center.Y)
                     , circle.Radius
                     , 0.0, 360.0);
@@ -222,7 +260,7 @@ namespace Pic.Factory2D
                     if (iVertexCount > 0)
                     {
                         PicSegment picSegment = _factory.AddSegment(
-                            DxfLineType2PicLT(polyLine.LineType)
+                            DxfLineType2PicLT(polyLine.LineType), 0, 0
                             , startPoint
                             , endPoint);
                     }

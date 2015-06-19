@@ -139,6 +139,41 @@ namespace Pic.Factory2D
         }
         private short _grp;
     }
+
+    public class PicFilterListGroup
+        : PicFilter
+    {
+        public PicFilterListGroup(List<short> grps)
+        {
+            _grps = grps;
+        }
+        public override bool Accept(PicEntity entity)
+        {
+            if (null == _grps) return true;
+            PicTypedDrawable typedDrawable = entity as PicTypedDrawable;
+            if (null == typedDrawable) return false;
+            return _grps.Contains(typedDrawable.Group);
+        }
+        private List<short> _grps;
+    }
+
+    public class PicFilterListLayer
+        : PicFilter
+    {
+        public PicFilterListLayer(List<short> layers)
+        {
+            _layers = layers;
+        }
+        public override bool Accept(PicEntity entity)
+        {
+            if (null == _layers) return true;
+            PicTypedDrawable typedDrawable = entity as PicTypedDrawable;
+            if (null == typedDrawable) return false;
+            return _layers.Contains(typedDrawable.Layer);
+        }
+        private List<short> _layers;
+    }
+
     /// <summary>
     /// Filter out very zero length entities
     /// </summary>

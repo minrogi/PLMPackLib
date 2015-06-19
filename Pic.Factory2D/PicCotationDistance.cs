@@ -20,8 +20,8 @@ namespace Pic
             #endregion
 
             #region Protected constructor
-            protected PicCotationDistance(uint id, Vector2D pt0, Vector2D pt1, double offset)
-                : base(id)
+            protected PicCotationDistance(uint id, Vector2D pt0, Vector2D pt1, double offset, short noDecimals)
+                : base(id, noDecimals)
             {
                 _pt0 = pt0;
                 _pt1 = pt1;
@@ -71,8 +71,13 @@ namespace Pic
             #region Protected virtual methods
             protected virtual void GetOffsetPoints(out Vector2D pt2, out Vector2D pt3)
             {
-                pt2 = new Vector2D(_pt0);
-                pt3 = new Vector2D(_pt1);
+                // build normal
+                Vector2D vI = (_pt1 - _pt0); vI.Normalize();
+                Vector2D vJ = new Vector2D(vI.Y, -vI.X);
+                double delta = -_globalCotationProperties._hrap;
+
+                pt2 = new Vector2D(_pt0 + vJ * _offset + Math.Sign(_offset) * delta * vJ);
+                pt3 = new Vector2D(_pt1 + vJ * _offset + Math.Sign(_offset) * delta * vJ);
             }
             protected virtual bool IsMiddleQuotation(Vector2D pt2, Vector2D pt3, double textWidth, double textHeight)
             {
@@ -140,9 +145,9 @@ namespace Pic
             #endregion
 
             #region Public creation method
-            public static PicCotation CreateNewCotation(uint id, Vector2D pt0, Vector2D pt1, double offset)
+            public static PicCotation CreateNewCotation(uint id, Vector2D pt0, Vector2D pt1, double offset, short noDecimals)
             {
-                return new PicCotationDistance(id, pt0, pt1, offset);
+                return new PicCotationDistance(id, pt0, pt1, offset, noDecimals);
             }
             #endregion
 
@@ -191,7 +196,7 @@ namespace Pic
                 Vector2D ptText;
                 DrawArrowLine(graphics, pt2, pt3, textWidth, textHeight, out ptText, out middle);
                 // draw text
-                graphics.DrawText(Text, PicGraphics.TextType.FT_COTATION, ptText, PicGraphics.HAlignment.VA_CENTER, PicGraphics.VAlignment.VA_MIDDLE);
+                graphics.DrawText(Text, PicGraphics.TextType.FT_COTATION, ptText, PicGraphics.HAlignment.HA_CENTER, PicGraphics.VAlignment.VA_MIDDLE, TextDirection);
                 // draw arrows heads
                 DrawArrowHead(graphics, pt2, (middle ? 1.0 : -1.0) * (pt2 - pt3));
                 DrawArrowHead(graphics, pt3, (middle ? 1.0 : -1.0) * (pt3 - pt2));
@@ -207,7 +212,7 @@ namespace Pic
             }
             public override PicEntity Clone(IEntityContainer factory)
             {
-                return new PicCotationDistance(factory.GetNewEntityId(), new Vector2D(_pt0), new Vector2D(_pt1), _offset);
+                return new PicCotationDistance(factory.GetNewEntityId(), new Vector2D(_pt0), new Vector2D(_pt1), _offset, _noDecimals);
             }
             protected override PicEntity.eCode GetCode()
             {

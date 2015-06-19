@@ -12,16 +12,16 @@ namespace Pic
         public class PicCotationVertical : PicCotationDistance
         {
             #region Protected constructor
-            protected PicCotationVertical(uint id, Vector2D pt0, Vector2D pt1, double offset)
-                : base(id, pt0, pt1, offset)
+            protected PicCotationVertical(uint id, Vector2D pt0, Vector2D pt1, double offset, short noDecimals)
+                : base(id, pt0, pt1, offset, noDecimals)
             { 
             }
             #endregion
 
             #region Public creation method
-            public static new PicCotation CreateNewCotation(uint id, Vector2D pt0, Vector2D pt1, double offset)
+            public static new PicCotation CreateNewCotation(uint id, Vector2D pt0, Vector2D pt1, double offset, short noDecimals)
             {
-                return new PicCotationVertical(id, pt0, pt1, offset);
+                return new PicCotationVertical(id, pt0, pt1, offset, noDecimals);
             }
             #endregion
 
@@ -43,19 +43,25 @@ namespace Pic
                 double length = (pt3 - pt2).GetLength();
                 middle = length > textHeight * _globalCotationProperties._lengthCoef;
 
+                double textX = (TextDirection == 270.0f) ? textHeight : textWidth;
+                double textY = (TextDirection == 270.0f) ? textWidth : textHeight;
+
                 if (middle)
                 {
                     ptText = 0.5 * (pt2 + pt3);
-                    graphics.DrawLine(LineType, pt2, pt2 + (pt3 - pt2) * 0.5 * (length - textHeight) / length);
-                    graphics.DrawLine(LineType, pt2 + (pt3 - pt2) * 0.5 * (length + textHeight) / length, pt3);
+                    graphics.DrawLine(LineType, pt2, pt2 + (pt3 - pt2) * 0.5 * (length - textY) / length);
+                    graphics.DrawLine(LineType, pt2 + (pt3 - pt2) * 0.5 * (length + textY) / length, pt3);
                 }
                 else
                 {
                     // text is on top
                     graphics.DrawLine(LineType, pt2, pt2 + (pt3 - pt2) * _globalCotationProperties._lengthCoef);
-                    ptText = pt2 + (pt3 - pt2) * ((_globalCotationProperties._lengthCoef * length + 0.5 * textWidth) / length);
+                    ptText = pt2 + (pt3 - pt2) * ((_globalCotationProperties._lengthCoef * length + 0.5 * textX) / length);
                 }
             }
+
+            public override float TextDirection
+            { get { return 270.0f; } }
             #endregion
 
             #region PicCotation override
@@ -69,7 +75,7 @@ namespace Pic
             /// <returns>An entity to be saved in a new factory</returns>
             public override Pic.Factory2D.PicEntity Clone(IEntityContainer factory)
             {
-                return new PicCotationVertical(factory.GetNewEntityId(), new Vector2D(_pt0), new Vector2D(_pt1), _offset);
+                return new PicCotationVertical(factory.GetNewEntityId(), new Vector2D(_pt0), new Vector2D(_pt1), _offset, 1);
             }
             /// <returns>A value of enum eCode</returns>
             protected override Pic.Factory2D.PicEntity.eCode GetCode()

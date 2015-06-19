@@ -88,25 +88,25 @@ namespace Pic.Factory2D
             _gdiGraphics.DrawArc(ToPen(lineType)
                 , X(ptCenter.X) - DX(radius)
                 , Y(ptCenter.Y) - DY(radius)
-                , (float)(2.0*DX(radius))	// width
-                , (float)(2.0*DY(radius))	// height
-                , -(float)angle0			// start angle
-                , -(float)(angle1-angle0));	// sweep angle
+                , (float)(2.0*DX(radius))	    // width
+                , (float)(2.0*DY(radius))	    // height
+                , -(float)angle0			    // start angle
+                , -(float)(angle1-angle0));	    // sweep angle
 		}
 
-        public override void DrawText(string text, TextType font, Vector2D pt, HAlignment hAlignment, VAlignment vAlignment)
+        public override void DrawText(string text, TextType font, Vector2D pt, HAlignment hAlignment, VAlignment vAlignment, float fAngle)
         {
             // string format
             StringFormat sf = new StringFormat();
             switch (hAlignment)
             {
-                case HAlignment.VA_RIGHT:
+                case HAlignment.HA_RIGHT:
                     sf.LineAlignment = StringAlignment.Far;
                     break;
-                case HAlignment.VA_CENTER:
+                case HAlignment.HA_CENTER:
                     sf.LineAlignment = StringAlignment.Center;
                     break;
-                case HAlignment.VA_LEFT:
+                case HAlignment.HA_LEFT:
                     sf.LineAlignment = StringAlignment.Near;
                     break;
                 default:
@@ -136,9 +136,14 @@ namespace Pic.Factory2D
                 default:
                     throw new Exception("Unknown text type");
             }
+
+            _gdiGraphics.TranslateTransform(ToPointF(pt).X, ToPointF(pt).Y);
+            _gdiGraphics.RotateTransform(fAngle); 
             
             // draw text
-            _gdiGraphics.DrawString(text, ToFont(font), tb, ToPointF(pt), sf);
+            _gdiGraphics.DrawString(text, ToFont(font), tb, new PointF(0, 0), sf);
+
+            _gdiGraphics.ResetTransform();
          }
 
         public override void GetTextSize(string text, TextType font, out double width, out double height)

@@ -14,8 +14,8 @@ namespace Pic
         public class PicCotationRadius : PicCotation
         {
             #region Protected constructor
-            protected PicCotationRadius(uint id)
-                : base(id)
+            protected PicCotationRadius(uint id, short noDecimals)
+                : base(id, noDecimals)
             { 
             }
             #endregion

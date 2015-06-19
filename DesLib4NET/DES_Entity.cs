@@ -219,47 +219,57 @@ namespace DesLib4NET
     public class DES_CotationDistance : DES_Entity
     { 
         #region Constructor
-        public DES_CotationDistance(float x1, float y1, float x2, float y2, float offset, byte grp, byte layer)
-            : base(8 /* cotation */, grp, layer)
+        public DES_CotationDistance(
+            float x, float y, float dir, float dim
+            , byte pen, byte grp, byte layer
+            , float offset, float reduction
+            , float ecartSup, float ecartInf, bool invDep
+            , bool aText, bool aTolerance, bool aEspace
+            , short noDecimals, string text, char houv)
+            : base(pen, grp, layer)
         {
-            _offset = offset;
+            _x = x;
+            _y = y;
+            _dir = dir;
+            _dim = dim;
 
-            // dim
-            double length = Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-            base._x = 0.5f * (x1 + x2);
-            base._y = 0.5f * (y1 + y2);
-            base._dim = 0.5f * (float)length;
-            // dir
-            double vecx = (x2 - x1) / length;
-            double vecy = (y2 - y1) / length;
-            double angleRad = 0.0;
-            if (vecy > 1.0) vecy = 1.0;
-            if (vecy < -1.0) vecy = -1.0;
-            if (vecx >= 0.0)
-            {
-                if (vecy >= 0.0)
-                    angleRad = Math.Asin(vecy);
-                else
-                    angleRad = 2 * Math.PI - Math.Asin(-vecy);
-            }
-            else
-            {
-                if (vecy >= 0.0)
-                    angleRad = Math.PI - Math.Asin(vecy);
-                else
-                    angleRad = Math.PI + Math.Asin(-vecy);
-            }
-            base._dir = (float)(angleRad * 180.0 / Math.PI);
+            _offset = offset;
+            _reduction = reduction;
+
+            _ecarSup = ecartSup;
+            _ecartInf = ecartInf;
+            _invDep = invDep;
+
+            _noDecimals = noDecimals;
+            _text = text;
+            _houv = houv;
+             
         }
         #endregion
+
+        #region Public properties
+        public float X1 { get { return _x - _dim * (float)Math.Cos(_dir * Math.PI / 180.0); } }
+        public float Y1 { get { return _y - _dim * (float)Math.Sin(_dir * Math.PI / 180.0); } }
+        public float X2 { get { return _x + _dim * (float)Math.Cos(_dir * Math.PI / 180.0); } }
+        public float Y2 { get { return _y + _dim * (float)Math.Sin(_dir * Math.PI / 180.0); } }
+        #endregion
+
         #region Object overrides
         public override string ToString()
         {
-            return string.Format("Cotation distance: Coord = ({0}, {1})) Dim = {2} Dir = {3} Offset = {4}", _x, _y, _dim, _dir, _offset);
+            return string.Format("Cotation distance: Coord = ({0}, {1})) Dim = {2} Dir = {3} Offset = {4}"
+                , _x, _y, _dim, _dir
+                , _offset);
         }
         #endregion
+
         #region Data members
-        public float _offset;
+        public float _offset, _reduction;
+        public float _ecarSup, _ecartInf;
+        public bool _invDep;
+        public short _noDecimals;
+        public string _text;
+        public char _houv;
         #endregion
     }
 }

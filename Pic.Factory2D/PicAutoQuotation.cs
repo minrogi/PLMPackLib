@@ -259,9 +259,9 @@ namespace Pic.Factory2D
         {
             if (!box.IsValid) return;
             double delta = 0.1 * Math.Max(box.Width, box.Height);
-            PicCotationDistance cotH = factory.AddCotation(PicCotation.CotType.COT_HORIZONTAL, grp, 0, box.PtMin, new Vector2D(box.XMax, box.YMin), -delta, "") as PicCotationDistance;
+            PicCotationDistance cotH = factory.AddCotation(PicCotation.CotType.COT_HORIZONTAL, grp, 0, box.PtMin, new Vector2D(box.XMax, box.YMin), -delta, "", 1) as PicCotationDistance;
             cotH.UseShortLines = true;
-            PicCotationDistance cotV = factory.AddCotation(PicCotation.CotType.COT_VERTICAL, grp, 0, box.PtMin, new Vector2D(box.XMin, box.YMax), delta, "") as PicCotationDistance;
+            PicCotationDistance cotV = factory.AddCotation(PicCotation.CotType.COT_VERTICAL, grp, 0, box.PtMin, new Vector2D(box.XMin, box.YMax), delta, "", 1) as PicCotationDistance;
             cotV.UseShortLines = true;
         }
         #endregion
@@ -269,11 +269,11 @@ namespace Pic.Factory2D
         #region Create quotation
         private void CreateQuotationH(PicFactory factory, Vector2D pt0, Vector2D pt1, double ypos, short grp)
         {
-            factory.AddCotation(PicCotation.CotType.COT_HORIZONTAL, grp, 0, pt0, pt1, ypos-pt0.Y, string.Empty);
+            factory.AddCotation(PicCotation.CotType.COT_HORIZONTAL, grp, 0, pt0, pt1, ypos-pt0.Y, string.Empty, 1);
         }
         private void CreateQuotationV(PicFactory factory, Vector2D pt0, Vector2D pt1, double xpos, short grp)
         {
-            factory.AddCotation(PicCotation.CotType.COT_VERTICAL, grp, 0, pt0, pt1, pt0.X - xpos, string.Empty);
+            factory.AddCotation(PicCotation.CotType.COT_VERTICAL, grp, 0, pt0, pt1, pt0.X - xpos, string.Empty, 1);
         }
         #endregion
 

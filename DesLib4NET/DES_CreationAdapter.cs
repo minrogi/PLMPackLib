@@ -15,8 +15,16 @@ namespace DesLib4NET
         void AddArc(DES_Arc arc);
         void AddBezier(DES_Bezier bezier);
         void AddNurbs(DES_Nurbs nurbs);
+        void AddDimensionInnerRadius();
+        void AddDimensionOuterRadius();
+        void AddDimensionInnerDiameter();
+        void AddDimensionOuterDiameter();
+        void AddDimensionDistance(DES_CotationDistance dimension);
+        void AddDimensionAngle();
+        void AddDimensionArrow();
         void AddText(DES_Text text);
         void AddPose(DES_Pose pose);
         void AddSurface(DES_Surface surface);
+        void UpdateQuestionnaire(Dictionary<string, string> questions);
     }
 }

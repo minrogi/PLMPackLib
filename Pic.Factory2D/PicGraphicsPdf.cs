@@ -93,7 +93,7 @@ namespace Pic.Factory2D
                 );
             _cb.Stroke();
         }
-        public override void DrawText(string text, TextType font, Vector2D pt, HAlignment hAlignment, VAlignment vAlignment)
+        public override void DrawText(string text, TextType font, Vector2D pt, HAlignment hAlignment, VAlignment vAlignment, float fAngle)
         {
             int alignment = 0;
             switch (hAlignment)
@@ -150,7 +150,7 @@ namespace Pic.Factory2D
         }
         #endregion
 
-        #region Helpers
+#region Helpers
 
         private float DX(double x)
         {
@@ -214,7 +214,7 @@ namespace Pic.Factory2D
 
         #endregion
 
-        #region Public properties
+#region Public properties
         public string Author
         {
             get { return author; }
@@ -227,7 +227,7 @@ namespace Pic.Factory2D
         }
         #endregion
 
-        #region Public method
+#region Public method
         /// <summary>
         /// Access the result byte array
         /// </summary>
@@ -310,14 +310,14 @@ namespace Pic.Factory2D
                 , DL(2 * radius), DL(2 * radius)
                 , -angleBeg, -angleEnd + angleBeg);
         }
-        public override void DrawText(string text, TextType font, Vector2D pt, HAlignment hAlignment, VAlignment vAlignment)
+        public override void DrawText(string text, TextType font, Vector2D pt, HAlignment hAlignment, VAlignment vAlignment, float fAngle)
         {
             XStringFormat format = new XStringFormat();
             switch (hAlignment)
             {
-                case HAlignment.VA_CENTER: format.Alignment = XStringAlignment.Center; break;
-                case HAlignment.VA_LEFT: format.Alignment = XStringAlignment.Near; break;
-                case HAlignment.VA_RIGHT: format.Alignment = XStringAlignment.Far; break;
+                case HAlignment.HA_CENTER: format.Alignment = XStringAlignment.Center; break;
+                case HAlignment.HA_LEFT: format.Alignment = XStringAlignment.Near; break;
+                case HAlignment.HA_RIGHT: format.Alignment = XStringAlignment.Far; break;
                 default: break;
             }
             switch (vAlignment)

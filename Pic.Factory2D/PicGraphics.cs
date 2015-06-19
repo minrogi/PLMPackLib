@@ -62,9 +62,9 @@ namespace Pic
             /// </summary>
             public enum HAlignment
             {
-                VA_RIGHT,
-                VA_CENTER,
-                VA_LEFT
+                HA_RIGHT,
+                HA_CENTER,
+                HA_LEFT
             }
             /// <summary>
             /// Vertical alignment
@@ -93,7 +93,7 @@ namespace Pic
 			public abstract void DrawPoint(LT lineType, Vector2D pt);
 			public abstract void DrawLine(LT lineType, Vector2D ptBeg, Vector2D ptEnd);
 			public abstract void DrawArc(LT lineType, Vector2D ptCenter, double radius, double angleBeg, double angleEnd);
-            public abstract void DrawText(string text, TextType font, Vector2D pt, HAlignment hAlignment, VAlignment vAlignment);
+            public abstract void DrawText(string text, TextType font, Vector2D pt, HAlignment hAlignment, VAlignment vAlignment, float fAngle);
             public abstract void GetTextSize(string text, TextType font, out double width, out double height);
 			public abstract void Finish();
             public virtual void ShowMessage(string message) { }

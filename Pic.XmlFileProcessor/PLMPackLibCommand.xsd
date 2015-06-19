@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PLMPackLibCommand"
+    targetNamespace="http://tempuri.org/PLMPackLibCommand.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/PLMPackLibCommand.xsd"
+    xmlns:mstns="http://tempuri.org/PLMPackLibCommand.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <!--BEGIN PLMPackLib Format Schema -->
+  <xs:annotation>
+    <xs:documentation>
+      PLMPackLib input Schema
+      Version (June 2015)
+
+      Note that this software document is distributed on an "AS IS" basis, with ALL EXPRESS AND
+      IMPLIED WARRANTIES AND CONDITIONS DISCLAIMED, INCLUDING, WITHOUT LIMITATION, ANY IMPLIED
+      WARRANTIES AND CONDITIONS OF MERCHANTABILITY, SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR
+      PURPOSE, AND NON-INFRINGEMENT.
+    </xs:documentation>
+  </xs:annotation>
+  <!-- import needed for xml:base attribute-->
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/03/xml.xsd"/>
+  <!-- Simple types -->
+  <!-- Primitive Types-->
+  <xs:simpleType name="bool">
+    <xs:restriction base="xs:boolean"/>
+  </xs:simpleType>
+  <xs:simpleType name="dateTime">
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+  <xs:simpleType name="float">
+    <xs:restriction base="xs:double"/>
+  </xs:simpleType>
+  <xs:simpleType name="double">
+    <xs:restriction base="xs:double"/>
+  </xs:simpleType>
+  <xs:simpleType name="int">
+    <xs:restriction base="xs:long"/>
+  </xs:simpleType>
+  <xs:simpleType name="Name">
+    <xs:restriction base="xs:Name"/>
+  </xs:simpleType>
+  <xs:simpleType name="string">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <!-- Container types -->
+  <xs:simpleType name="listOfBools">
+    <xs:list itemType="bool"/>
+  </xs:simpleType>
+  <xs:simpleType name="listOfFloats">
+    <xs:list itemType="float"/>
+  </xs:simpleType>
+  <xs:simpleType name="listOfHexBinary">
+    <xs:list itemType="xs:hexBinary"/>
+  </xs:simpleType>
+  <xs:simpleType name="listOfInts">
+    <xs:list itemType="int"/>
+  </xs:simpleType>
+  <xs:simpleType name="listOfString">
+    <xs:list itemType="string"/>
+  </xs:simpleType>
+  <xs:simpleType name="listOfNames">
+    <xs:list itemType="Name"/>
+  </xs:simpleType>
+  <xs:simpleType name="int2">
+    <xs:restriction base="listOfInts">
+      <xs:minLength value="2"/>
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="float2">
+    <xs:restriction base="listOfFloats">
+      <xs:minLength value="2"/>
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="float3">
+    <xs:restriction base="listOfFloats">
+      <xs:minLength value="3"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- Model identifier -->
+  <xs:simpleType name="modelId">
+    <xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- Parameter -->
+  <xs:complexType name ="parameter">
+    <xs:annotation>
+      <xs:documentation>
+        Defines a component parameter.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="name" type="string" use ="required"/>
+    <xs:attribute name="description" type="string" use="optional"/>
+  </xs:complexType>
+  <!-- parameterDouble -->
+  <xs:complexType name="parameterDouble">
+    <xs:annotation>
+      <xs:documentation>
+        Double parameter
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base ="parameter">
+        <xs:sequence>
+          <xs:element name="value" type="double"/>
+          <xs:element name="valueMin" type="double" />
+          <xs:element name="valueMax" type="double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- parameterInt -->
+  <xs:complexType name="parameterInt">
+    <xs:annotation>
+      <xs:documentation>
+        Int parameter
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="parameter">
+        <xs:sequence>
+          <xs:element name="value" type="int"/>
+          <xs:element name="valueMin" type="int"/>
+          <xs:element name="valueMax" type="int"/>  
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- parameterBool -->
+  <xs:complexType name="parameterBool">
+    <xs:annotation>
+      <xs:documentation>
+        Bool parameter
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="parameter">
+        <xs:sequence>
+          <xs:element name="value" type="bool"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- parameter string -->
+  <xs:complexType name="parameterString">
+    <xs:annotation>
+      <xs:documentation>
+        String parameter
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="parameter">
+        <xs:sequence>
+          <xs:element name="value" type="string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- parameter multi -->
+  <xs:complexType name="parameterMulti">
+    <xs:annotation>
+      <xs:documentation>
+        Parameter multi
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="parameter">
+        <xs:sequence>
+          <xs:element name="value" type="int"/>
+          <xs:element name="valueList" type="listOfString"/>
+          <xs:element name="displayList" type="listOfString"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- component -->
+  
+  <!-- requests-->
+  <xs:element name="request">
+    
+  </xs:element>
+  <!-- outputs -->
+  
+</xs:schema>
+

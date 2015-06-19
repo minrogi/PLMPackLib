@@ -233,13 +233,13 @@ namespace DesLib4NET
                             // direction
                             if (br.ReadByte() != 4) continue;
                             float dir = br.ReadSingle();
-                            // dimention
+                            // dimension
                             if (br.ReadByte() != 5) continue;
                             float dim = br.ReadSingle();
                             // pen
                             if (br.ReadByte() != 150) continue;
                             byte pen = br.ReadByte();
-                            // level
+                            // layer
                             if (br.ReadByte() != 151) continue;
                             byte layer = br.ReadByte();
                             // group
@@ -305,6 +305,210 @@ namespace DesLib4NET
                     case 15: // surface
                         break;
                     case 16: // pose
+                        break;
+                    case 20: // C_COT_RAYINT
+                        {
+                            creationAdapter.AddDimensionInnerRadius();
+                        }
+                        break;
+                    case 21: // C_COT_RAYEXT
+                        {
+                            creationAdapter.AddDimensionOuterRadius();
+                        }
+                        break;
+                    case 22: // C_COT_DIAINT
+                        {
+                            creationAdapter.AddDimensionInnerDiameter();
+                        }
+                        break;
+                    case 23: // C_COT_DIAEXT
+                        {
+                            creationAdapter.AddDimensionOuterDiameter();
+                        }
+                        break;
+                    case 24: // C_COT_CYL
+                        {
+
+                        }
+                        break;
+                    case 25: // C_COT_DIS
+                        {
+                            // entity code
+                            if (br.ReadByte() != 1) continue;
+                            int code = br.ReadInt32();
+                            // x
+                            if (br.ReadByte() != 2) continue;
+                            float x = br.ReadSingle();
+                            // y
+                            if (br.ReadByte() != 3) continue;
+                            float y = br.ReadSingle();
+                            // direction
+                            if (br.ReadByte() != 4) continue;
+                            float dir = br.ReadSingle();
+                            // dimension
+                            if (br.ReadByte() != 5) continue;
+                            float dim = br.ReadSingle();
+                            // pen
+                            if (br.ReadByte() != 150) continue;
+                            byte pen = br.ReadByte();
+                            // layer
+                            if (br.ReadByte() != 151) continue;
+                            byte layer = br.ReadByte();
+                            // group
+                            if (br.ReadByte() != 152) continue;
+                            byte grp = br.ReadByte();
+                            // lock
+                            if (br.ReadByte() != 153) continue;
+                            byte loc = br.ReadByte();
+                            // association
+                            byte byteCode = br.ReadByte();
+                            if (byteCode == 200)
+                            {
+                                int size = br.ReadInt32();
+                                int noAssociations = br.ReadInt32();
+                                for (int i = 0; i < noAssociations; ++i)
+                                {
+                                    br.ReadChar();
+                                    br.ReadInt32();
+                                }
+                                // next
+                                byteCode = br.ReadByte();
+                            }
+                            // aEspace
+                            if (byteCode != 20) continue;
+                            bool aEspace = (br.ReadInt32() == 1);
+                            // aText
+                            if (br.ReadByte() != 21) continue;
+                            bool aText = (br.ReadInt32() == 1);
+                            // aTolerance
+                            if (br.ReadByte() != 22) continue;
+                            bool aTolerance = (br.ReadInt32() == 1);
+                            // offset
+                            if (br.ReadByte() != 23) continue;
+                            float offset = br.ReadSingle();
+                            // ecart inf
+                            if (br.ReadByte() != 24) continue;
+                            float ecartInf = br.ReadSingle();
+                            // ecart sup
+                            if (br.ReadByte() != 25) continue;
+                            float ecartSup = br.ReadSingle();
+                            // houv
+                            if (br.ReadByte() != 155) continue;
+                            char houv = br.ReadChar();
+                            // invDep
+                            if (br.ReadByte() != 26) continue;
+                            bool invDep = (br.ReadInt32() == 1);
+                            // noDecimals
+                            if (br.ReadByte() != 101) continue;
+                            short noDecimals = br.ReadInt16();
+                            // reduction
+                            if (br.ReadByte() != 27) continue;
+                            float reduction = br.ReadSingle();
+                            // text
+                            if (br.ReadByte() != 217) continue;
+                            string text = ReadString(br);
+
+                            DES_CotationDistance dimension = new DES_CotationDistance(
+                                x, y, dir, dim
+                                , pen, grp, layer
+                                , offset, reduction
+                                , ecartSup, ecartInf, invDep
+                                , aText, aTolerance, aEspace
+                                , noDecimals, text, houv);
+                            creationAdapter.AddDimensionDistance(dimension);
+                        }
+                        break;
+                    case 26: // C_COT_ANGLE
+                        {
+                            creationAdapter.AddDimensionAngle();
+                        }
+                        break;
+                    case 29: // C_COT_FLECHE
+                        {
+                            creationAdapter.AddDimensionArrow();
+                        }
+                        break;
+                    case 34: // C_TEXTE
+                        {
+                            // entity code
+                            if (br.ReadByte() != 1) continue;
+                            int code = br.ReadInt32();
+                            // x
+                            if (br.ReadByte() != 2) continue;
+                            float x = br.ReadSingle();
+                            // y
+                            if (br.ReadByte() != 3) continue;
+                            float y = br.ReadSingle();
+                            // direction
+                            if (br.ReadByte() != 4) continue;
+                            float dir = br.ReadSingle();
+                            // dimention
+                            if (br.ReadByte() != 5) continue;
+                            float dim = br.ReadSingle();
+                            // pen
+                            if (br.ReadByte() != 150) continue;
+                            byte pen = br.ReadByte();
+                            // level
+                            if (br.ReadByte() != 151) continue;
+                            byte layer = br.ReadByte();
+                            // group
+                            if (br.ReadByte() != 152) continue;
+                            byte grp = br.ReadByte();
+
+
+                            DES_Text text = new DES_Text(pen, grp, layer);
+                            creationAdapter.AddText(text);
+                        }
+                        break;
+                    case 4000: // questionnaire
+                        {
+                            // entity code
+                            if (br.ReadByte() != 1) continue;
+                            int code = br.ReadInt32();
+                            // x
+                            if (br.ReadByte() != 2) continue;
+                            float x = br.ReadSingle();
+                            // y
+                            if (br.ReadByte() != 3) continue;
+                            float y = br.ReadSingle();
+                            // direction
+                            if (br.ReadByte() != 4) continue;
+                            float dir = br.ReadSingle();
+                            // dimention
+                            if (br.ReadByte() != 5) continue;
+                            float dim = br.ReadSingle();
+                            // assos
+                            byte byteCode = br.ReadByte();
+                            if (byteCode == 200)
+                            {
+                                int size = br.ReadInt32();
+                                int noAssociations = br.ReadInt32();
+                                for (int i = 0; i < noAssociations; ++i)
+                                {
+                                    br.ReadChar();
+                                    br.ReadInt32();
+                                }
+                                // next
+                                byteCode = br.ReadByte();
+                            }
+                            // number of questions
+                            if (byteCode != 29) continue;
+                            int iNoQuest = br.ReadInt32();
+                            if (iNoQuest > 200) continue;
+
+                            Dictionary<string, string> questions = new Dictionary<string,string>();
+                            for (int i = 0; i < iNoQuest; ++i)
+                            {
+                                if (br.ReadByte() != 218) continue;
+                                string quest = ReadString(br);
+                                if (br.ReadByte() != 219) continue;
+                                string answer = ReadString(br);
+                                if (br.ReadByte() != 30) continue;
+                                int index = br.ReadInt32();
+                                questions.Add(quest, answer);
+                            }
+                            creationAdapter.UpdateQuestionnaire(questions);
+                        }
                         break;
                     default:
                         break;

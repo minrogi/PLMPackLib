@@ -13,7 +13,7 @@ namespace Pic
         {
             #region Constructor
             public PicGlobalCotationProperties()
-            { 
+            {
                 _hrap = 10.0;
                 _arrowLength = 5.0F;
                 _arrowHeadAngle = 30.0;
@@ -75,6 +75,7 @@ namespace Pic
 
             #region Private fields
             private string _text;
+            protected short _noDecimals;
             #endregion
 
             #region Global cotation properties
@@ -82,16 +83,17 @@ namespace Pic
             #endregion
 
             #region Protected Constructors
-            protected PicCotation(uint id)
+            protected PicCotation(uint id, short noDecimals)
                 : base(id, PicGraphics.LT.LT_COTATION)
             {
+                _noDecimals = noDecimals;
             }
             #endregion
 
             #region Helpers
             protected void DrawArrowHead(Pic.Factory2D.PicGraphics graphics, Vector2D pt, double angle)
-            { 
-                DrawArrowHead( graphics, pt, new Vector2D( Math.Cos(angle * Math.PI / 180.0), Math.Sin(angle * Math.PI / 180.0) ) );
+            {
+                DrawArrowHead(graphics, pt, new Vector2D(Math.Cos(angle * Math.PI / 180.0), Math.Sin(angle * Math.PI / 180.0)));
             }
             protected void DrawArrowHead(Pic.Factory2D.PicGraphics graphics, Vector2D pt, Vector2D director)
             {
@@ -108,7 +110,7 @@ namespace Pic
                 // upper part of arrow head
                 graphics.DrawLine(LineType
                     , pt - arrowLength * (Math.Cos(angleRad) * director - Math.Sin(angleRad) * normal)
-                    , pt);     
+                    , pt);
             }
             #endregion
 
@@ -123,16 +125,19 @@ namespace Pic
                         return _text;
                     else
                     {
+                        string pSpecifier = String.Format("f{0}", _noDecimals);
                         double value = Value();
-                        if (value - Math.Round(value) < 0.1)
-                            return string.Format("{0:0}", Value());
-                        else
-                            return string.Format("{0:0.0}", Value());
+                        return value.ToString(pSpecifier); 
                     }
                 }
                 set { _text = value; }
             }
-           #endregion
+
+            public virtual float TextDirection
+            {
+                get { return 0.0f; }
+            }
+            #endregion
         }
     }
 }

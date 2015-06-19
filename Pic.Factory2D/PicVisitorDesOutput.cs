@@ -112,6 +112,7 @@ namespace Pic.Factory2D
                 case PicEntity.eCode.PE_COTATIONDISTANCE:
                     {
                         PicCotationDistance cotation = entity as PicCotationDistance;
+                        /*
                         _desWriter.WriteCotationDistance(
                             new DES_CotationDistance(
                                 (float)cotation.Pt0.X
@@ -123,6 +124,7 @@ namespace Pic.Factory2D
                                 , (byte)cotation.Layer
                                 )
                             );
+                         */ 
                     }
                     break;
                 case PicEntity.eCode.PE_COTATIONHORIZONTAL:

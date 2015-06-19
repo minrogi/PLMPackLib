@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Sharp3D.Math.Core;
+
+using System.Drawing;
 #endregion
 
 namespace Pic.Factory2D
@@ -227,6 +229,42 @@ namespace Pic.Factory2D
             box.Extend( transf.transform(_ptMin) );
             box.Extend( transf.transform(_ptMax) );
             return box;
+        }
+        #endregion
+
+        #region Get image size
+        public Size GetSizeFromWidth(int width, int maxHeight)
+        {
+            if (!IsValid)
+                throw new InvalidBoxException("Can not compute Size");
+            Size s = new Size(width, (int)(width * (Height / Width)));
+            if (s.Height > maxHeight)
+            {
+                s.Height = maxHeight;
+                s.Width = (int)(maxHeight * (Width / Height));
+            }
+            return s;
+        }
+
+        public Size GetSizeFromHeight(int height, int maxWidth)
+        {
+            if (!IsValid)
+                throw new InvalidBoxException("Can not compute Size");
+            Size s = new Size( (int)(height * (Width / Height)), height);
+            if (s.Width > maxWidth)
+            {
+                s.Width = maxWidth;
+                s.Height = (int)(maxWidth * (Height / Width));
+            }
+            return s;
+        }
+
+        public Size GetSizeFromLeading(int maxDim)
+        {
+            if (Width > Height)
+                return GetSizeFromWidth(maxDim, maxDim);
+            else
+                return GetSizeFromHeight(maxDim, maxDim);
         }
         #endregion
 

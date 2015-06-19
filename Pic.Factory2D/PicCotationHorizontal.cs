@@ -12,16 +12,16 @@ namespace Pic
         public class PicCotationHorizontal : PicCotationDistance
         {
             #region Protected constructor
-            protected PicCotationHorizontal(uint id, Vector2D pt0, Vector2D pt1, double offset)
-                : base(id, pt0, pt1, offset)
+            protected PicCotationHorizontal(uint id, Vector2D pt0, Vector2D pt1, double offset, short noDecimals)
+                : base(id, pt0, pt1, offset, noDecimals)
             {
             }
             #endregion
 
             #region Public creation method
-            public static new PicCotationHorizontal CreateNewCotation(uint id, Vector2D pt0, Vector2D pt1, double offset)
+            public static new PicCotationHorizontal CreateNewCotation(uint id, Vector2D pt0, Vector2D pt1, double offset, short noDecimals)
             {
-                return new PicCotationHorizontal(id, pt0, pt1, offset);
+                return new PicCotationHorizontal(id, pt0, pt1, offset, noDecimals);
             }
             #endregion
 
@@ -62,7 +62,7 @@ namespace Pic
             /// <returns>An entity to be saved in a new factory</returns>
             public override Pic.Factory2D.PicEntity Clone(IEntityContainer factory)
             {
-                return new PicCotationHorizontal(factory.GetNewEntityId(), new Vector2D(_pt0), new Vector2D(_pt1), _offset);
+                return new PicCotationHorizontal(factory.GetNewEntityId(), new Vector2D(_pt0), new Vector2D(_pt1), _offset, 1);
             }
             /// <returns>A value of enum eCode</returns>
             protected override Pic.Factory2D.PicEntity.eCode GetCode()
