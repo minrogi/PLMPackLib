@@ -240,5 +240,16 @@
       <Custom Action="ZipExtractCA" Before="InstallFinalize">$DataInstall&gt;2 AND (Installed OR NETFRAMEWORK40FULL) AND (NOT DATABASEEXISTS)</Custom>
     </InstallExecuteSequence>
     <?endif?>
+
+    <!--*********** Registry entries : BEGIN *******************************-->
+    <!--Registry entry for Acrobat Reader (enable 3D content)-->
+    <DirectoryRef Id="TARGETDIR">
+      <Component Id="RegistryEntries" Guid="{7F48E35F-0FEC-47EF-8C4E-505753DE5FF1}">
+        <RegistryKey Root="HKCU" Key="SOFTWARE\Adobe\Acrobat Reader\DC\3D">
+          <RegistryValue Type="integer" Name="b3DEnableContent" Value="1" KeyPath="yes"/>
+        </RegistryKey>
+      </Component>
+    </DirectoryRef>
+    <!--*********** Registry entries : END *********************************-->
   </Module>
 </Wix>

@@ -1056,15 +1056,6 @@
     <None Include="Resources\PICGEOM.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="Acrobat">
-      <Guid>{E64169B3-3592-47D2-816E-602C5C13F328}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>1</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
     <COMReference Include="FileViewLib">
       <Guid>{BE79C475-D632-4A57-91B3-DA044FA27CDA}</Guid>
       <VersionMajor>1</VersionMajor>

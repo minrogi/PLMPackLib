@@ -136,7 +136,7 @@
     <value>_generatorCtrl</value>
   </data>
 	<data name="&gt;&gt;_generatorCtrl.Type" xml:space="preserve">
-    <value>Pic.Plugin.GeneratorCtrl.GeneratorCtrl, Pic.Plugin.GeneratorCtrl, Version=7.0.18.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>Pic.Plugin.GeneratorCtrl.GeneratorCtrl, Pic.Plugin.GeneratorCtrl, Version=7.0.19.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 	<data name="&gt;&gt;_generatorCtrl.Parent" xml:space="preserve">
     <value>$this</value>

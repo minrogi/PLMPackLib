@@ -730,8 +730,8 @@
             this.Controls.Add(this.toolStripMain);
             this.Controls.Add(this._splitContainer);
             this.Name = "FormMain";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
-            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.SizeChanged += new System.EventHandler(this.UpdateTextPosition);
             ((System.ComponentModel.ISupportInitialize)(this._pluginViewCtrl)).EndInit();
             this._pluginViewCtrl.ResumeLayout(false);

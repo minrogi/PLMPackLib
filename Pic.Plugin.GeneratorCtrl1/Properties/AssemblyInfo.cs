@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("treeDiM")]
 [assembly: AssemblyProduct("Pic.Plugin.GeneratorCtrl")]
-[assembly: AssemblyCopyright("Copyright ©  2011")]
+[assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("treeDiM")]
 [assembly: AssemblyCulture("")]
 

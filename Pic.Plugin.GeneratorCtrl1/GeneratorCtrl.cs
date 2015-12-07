@@ -26,6 +26,7 @@ namespace Pic.Plugin.GeneratorCtrl
     [Guid("AE77B256-5C3E-47ce-96A5-8E1852E2403F")]
     [ClassInterface(ClassInterfaceType.None)]
     [ProgId("Pic.Plugin.GeneratorCtrl.GeneratorCtrl")]
+    [ComVisible(true)]
     public partial class GeneratorCtrl : UserControl, IGeneratorCtrl
     {
         #region Data members
@@ -538,6 +539,7 @@ namespace Pic.Plugin.GeneratorCtrl
     /// </summary>
     [Guid("7DCC2AC8-85C6-4ede-860B-6B793B0C4F89")]
     [InterfaceType(ComInterfaceType.InterfaceIsDual)]
+    [ComVisible(true)]
     public interface IGeneratorCtrl
     {
         void setDrawingName(String strDrawingName);

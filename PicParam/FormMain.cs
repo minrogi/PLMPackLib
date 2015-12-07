@@ -18,7 +18,7 @@ using GLib.Options;
 using log4net;
 using PicParam.Properties;
 
-using TreeDim.StackBuilder.GUIExtension;
+using treeDiM.StackBuilder.GUIExtension;
 using MRU;
 #endregion
 
@@ -988,6 +988,11 @@ namespace PicParam
         {
             try
             {
+                // for some unknown reasons these data may be changed to 'False' in the user.config file 
+                toolStripMain.Visible = true;
+                menuStripMain.Visible = true;
+                statusStrip.Visible = true;
+
                 // enable toolbar buttons
                 bool buttonsEnabled = _pluginViewCtrl.Visible || _factoryViewCtrl.Visible;
                 toolStripButtonCotations.Enabled = buttonsEnabled;
@@ -1265,7 +1270,7 @@ namespace PicParam
         #endregion
 
         #region MainForm Load/Close event handling
-        private void MainForm_Load(object sender, EventArgs e)
+        private void FormMain_Load(object sender, EventArgs e)
         {
             try
             {
@@ -1326,6 +1331,10 @@ namespace PicParam
                     "Software\\treeDiM\\PLMPackLib");  // Registry path to keep MRU list
 
                 mruManager.Add(Pic.DAL.ApplicationConfiguration.CustomSection.DatabasePath);
+
+
+
+
             }
             catch (System.Exception ex)
             {
@@ -1393,7 +1402,7 @@ namespace PicParam
             _treeViewCtrl.Select();
         }
 
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             // save toolstrip settings
             ToolStripManager.SaveSettings(this, this.Name);
