@@ -27,7 +27,7 @@ namespace PicParam
     public partial class FormMain : Form, IMRUClient
     {
         #region Constructor
-        public FormMain()
+        public FormMain(bool showRoot)
         {
             try
             {
@@ -44,6 +44,8 @@ namespace PicParam
 
                 _pluginViewCtrl.Localizer = LocalizerImpl.Instance;
                 _pluginViewCtrl.DependancyStatusChanged += new Pic.Plugin.ViewCtrl.PluginViewCtrl.DependancyStatusChangedHandler(DependancyStatusChanged);
+
+                _showRoot = showRoot;
             }
             catch (Exception ex)
             {
@@ -1318,7 +1320,10 @@ namespace PicParam
                 toolStripMenuItemCotationShortLines.Checked = PicGlobalCotationProperties.ShowShortCotationLines;
 
                 // show start page
-                ShowStartPage(this);
+                if (_showRoot)
+                    _treeViewCtrl.CollapseRootChildrens();
+                else
+                    ShowStartPage(this);
                 // update tool bars
                 UpdateToolCommands();
 
@@ -1331,10 +1336,6 @@ namespace PicParam
                     "Software\\treeDiM\\PLMPackLib");  // Registry path to keep MRU list
 
                 mruManager.Add(Pic.DAL.ApplicationConfiguration.CustomSection.DatabasePath);
-
-
-
-
             }
             catch (System.Exception ex)
             {
@@ -1508,6 +1509,8 @@ namespace PicParam
         /// Most Recently Used (database) manager
         /// </summary>
         private MRUManager mruManager;
+
+        private bool _showRoot;
         #endregion
 
 

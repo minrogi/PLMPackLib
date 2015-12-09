@@ -1,6 +1,7 @@
 ﻿#region Using directives
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Windows.Forms;
 using System.Diagnostics;
 
@@ -96,6 +97,7 @@ namespace PicParam
 
     class PLMPackLibApp : WindowsFormsApplicationBase
     {
+        #region Overrides WindowsFormsApplicationBase
         protected override void OnCreateSplashScreen()
         {
             this.SplashScreen = new SplashScreen();
@@ -103,7 +105,21 @@ namespace PicParam
         protected override void OnCreateMainForm()
         {
             // Then create the main form, the splash screen will close automatically
-            this.MainForm = new FormMain();
+            this.MainForm = new FormMain(_showRoot);
         }
+        protected override bool OnInitialize(ReadOnlyCollection<string> commandLineArgs)
+        {
+            _showRoot = false;
+            foreach (string arg in commandLineArgs)
+            {
+                if (arg.Contains("/r") || arg.Contains("--root"))
+                    _showRoot = true;
+            }
+            return true;
+        }
+        #endregion
+        #region Data members
+        public bool _showRoot = false;
+        #endregion
     }
 }
