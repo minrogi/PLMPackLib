@@ -89,9 +89,6 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonLayout = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButtonPicGEOM = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonPicDecoup = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonPicador3D = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonDXF = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCFF2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonAI = new System.Windows.Forms.ToolStripButton();
@@ -105,6 +102,9 @@
             this.toolStripBundlePalletAnalysis = new System.Windows.Forms.ToolStripButton();
             this.toolStripBundleCaseAnalysis = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButtonPicGEOM = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonPicador3D = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonPicDecoup = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonDES3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPDF3D = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
@@ -459,9 +459,6 @@
             this.toolStripSeparator5,
             this.toolStripButtonLayout,
             this.toolStripSeparator6,
-            this.toolStripButtonPicGEOM,
-            this.toolStripButtonPicDecoup,
-            this.toolStripButtonPicador3D,
             this.toolStripButtonDXF,
             this.toolStripButtonCFF2,
             this.toolStripButtonAI,
@@ -475,6 +472,9 @@
             this.toolStripBundlePalletAnalysis,
             this.toolStripBundleCaseAnalysis,
             this.toolStripSeparator14,
+            this.toolStripButtonPicGEOM,
+            this.toolStripButtonPicador3D,
+            this.toolStripButtonPicDecoup,
             this.toolStripButtonDES3,
             this.toolStripButtonPDF3D,
             this.toolStripSeparator16,
@@ -589,27 +589,6 @@
             resources.ApplyResources(this.toolStripSeparator6, "toolStripSeparator6");
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             // 
-            // toolStripButtonPicGEOM
-            // 
-            resources.ApplyResources(this.toolStripButtonPicGEOM, "toolStripButtonPicGEOM");
-            this.toolStripButtonPicGEOM.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonPicGEOM.Name = "toolStripButtonPicGEOM";
-            this.toolStripButtonPicGEOM.Click += new System.EventHandler(this.toolStripButtonPicGEOM_Click);
-            // 
-            // toolStripButtonPicDecoup
-            // 
-            resources.ApplyResources(this.toolStripButtonPicDecoup, "toolStripButtonPicDecoup");
-            this.toolStripButtonPicDecoup.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonPicDecoup.Name = "toolStripButtonPicDecoup";
-            this.toolStripButtonPicDecoup.Click += new System.EventHandler(this.toolStripButtonPicDecoup_Click);
-            // 
-            // toolStripButtonPicador3D
-            // 
-            resources.ApplyResources(this.toolStripButtonPicador3D, "toolStripButtonPicador3D");
-            this.toolStripButtonPicador3D.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonPicador3D.Name = "toolStripButtonPicador3D";
-            this.toolStripButtonPicador3D.Click += new System.EventHandler(this.toolStripButtonPicador3D_Click);
-            // 
             // toolStripButtonDXF
             // 
             resources.ApplyResources(this.toolStripButtonDXF, "toolStripButtonDXF");
@@ -696,6 +675,27 @@
             // 
             resources.ApplyResources(this.toolStripSeparator14, "toolStripSeparator14");
             this.toolStripSeparator14.Name = "toolStripSeparator14";
+            // 
+            // toolStripButtonPicGEOM
+            // 
+            resources.ApplyResources(this.toolStripButtonPicGEOM, "toolStripButtonPicGEOM");
+            this.toolStripButtonPicGEOM.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonPicGEOM.Name = "toolStripButtonPicGEOM";
+            this.toolStripButtonPicGEOM.Click += new System.EventHandler(this.toolStripButtonPicGEOM_Click);
+            // 
+            // toolStripButtonPicador3D
+            // 
+            resources.ApplyResources(this.toolStripButtonPicador3D, "toolStripButtonPicador3D");
+            this.toolStripButtonPicador3D.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonPicador3D.Name = "toolStripButtonPicador3D";
+            this.toolStripButtonPicador3D.Click += new System.EventHandler(this.toolStripButtonPicador3D_Click);
+            // 
+            // toolStripButtonPicDecoup
+            // 
+            resources.ApplyResources(this.toolStripButtonPicDecoup, "toolStripButtonPicDecoup");
+            this.toolStripButtonPicDecoup.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonPicDecoup.Name = "toolStripButtonPicDecoup";
+            this.toolStripButtonPicDecoup.Click += new System.EventHandler(this.toolStripButtonPicDecoup_Click);
             // 
             // toolStripButtonDES3
             // 
