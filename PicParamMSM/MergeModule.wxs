@@ -230,9 +230,11 @@
     </DirectoryRef>
     <ComponentRef Id="cmp021B803BA0D718F306F7F4F945D49351" />
     <ComponentRef Id="cmp59BC269C61774B2F844FC5C7A1044574" />
+    <?ifdef DatabaseEmbedded?>
     <ComponentRef Id="PLMPackLibExeConfigModif1"/>
     <ComponentRef Id="PLMPackLibExeConfigModif2"/>
     <ComponentRef Id="PLMPackLibExeConfigRebranding"/>
+    <?endif?>
     <!--********** Application files : END *********************************-->
     <?ifdef DatabaseEmbedded ?>
     <CustomAction Id="ZipExtractCA" FileKey="ZipExtractExe" Execute="deferred" ExeCommand="/m restore /f &quot;[Data]PackLib_DB_Install.zip&quot; /d &quot;[Data]\&quot;" />

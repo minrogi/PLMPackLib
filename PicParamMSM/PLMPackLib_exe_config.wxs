@@ -4,6 +4,7 @@
      >
 	<Fragment>
     <DirectoryRef Id="Bin32">
+      <?ifdef DatabaseEmbedded ?>
       <Component Id="PLMPackLibExeConfigModif1" Guid="CF9F9E4A-7608-45B4-9625-A83789819896">
         <File Id="PLMPackLib.exe.config1" Source="..\PicParam\bin\x86\Release\PLMPackLib.exe.config" KeyPath="yes" Checksum="yes">
           <Permission ChangePermission="yes" GenericAll="yes" User="Everyone" TakeOwnership="yes" Write="yes" WriteAttributes="yes" WriteExtendedAttributes="yes" />
@@ -41,6 +42,7 @@
         <util:XmlFile Id="ModifyRebrandedPLMPackLibExeConfig" Action="setValue"
                      File="[Bin32]PLMPackLib.exe.config" ElementPath="/configuration/applicationSettings/PicParam.Properties.Settings/setting[\[]@name='UseRebrandedVersion'[\]]/value" Value="True" />
       </Component>
+      <?endif?>
     </DirectoryRef>
 	</Fragment>
 </Wix>
