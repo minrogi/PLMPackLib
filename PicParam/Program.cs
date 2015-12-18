@@ -100,7 +100,8 @@ namespace PicParam
         #region Overrides WindowsFormsApplicationBase
         protected override void OnCreateSplashScreen()
         {
-            this.SplashScreen = new SplashScreen();
+            if (!_showRoot)
+                this.SplashScreen = new SplashScreen();
         }
         protected override void OnCreateMainForm()
         {
@@ -115,7 +116,7 @@ namespace PicParam
                 if (arg.Contains("/r") || arg.Contains("--root"))
                     _showRoot = true;
             }
-            return true;
+            return base.OnInitialize(commandLineArgs);
         }
         #endregion
         #region Data members

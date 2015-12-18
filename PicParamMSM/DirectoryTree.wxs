@@ -8,14 +8,14 @@
         <Directory Id="REPORTTEMPLATES" Name="ReportTemplates" />
         <Directory Id="SAMPLES" Name="Samples" />
         <?ifdef DatabaseEmbedded?>
-        <Directory Id="Bin32" Name="Bin8_32">
+        <Directory Id="Bin32" Name="Bin32">
           <Directory Id="fr_FR" Name="fr-FR"/>
           <Directory Id="ja_JP" Name="ja-JP"/>
           <Directory Id="it_IT" Name="it-IT"/>
           <Directory Id="Log" Name="Log"/>
         </Directory>
         <?else?>
-        <Directory Id="Bin32" Name="Bin32">
+        <Directory Id="Bin32" Name="Bin8_2D">
           <Directory Id="fr_FR" Name="fr-FR"/>
           <Directory Id="ja_JP" Name="ja-JP"/>
           <Directory Id="it_IT" Name="it-IT"/>
